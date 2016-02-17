@@ -1,0 +1,263 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\usepackage{enumitem}
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{Evaluation --- Usability Analysis}
+\author{Dr Michael Scott}
+
+\begin{document}
+
+\maketitle
+\begin{marginquote}
+    ``My mantras: focus and simplicity. Simple can be harder than complex. You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains.''
+    
+    --- Steve Jobs
+\end{marginquote}
+\marginpicture{MakeyMakey.jpg}{
+    The \emph{MaKey~MaKey} allows a multitude of materials to be used to create videogame controllers.
+}
+\section*{Introduction}
+
+In this assignment, you will evaluate the play interface for your COMP140 game and novel input device. For this evaluation, you will deploy a heuristic analysis technique. You will present the results of your analysis as a 500-word report.
+
+Design is both an art and a science. Humans, being mimetic creatures that share much physiology, infer the affordances of artefacts (e.g., a handle can be grasped with a hand). Such affordances provide a framework for creating ergonomic play interfaces, addressing usability concerns that impede commercial success. Hence, an ability to evaluate usability of a design is important for success in the industry.
+
+This assessment has three components, A, B, and C as follows:
+
+\begin{enumerate}[label=(\alph*)]
+    \item Conduct a heuristic analysis with the support of four peers:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{Define} a set of heuristics appropriate for the evaluation;
+    		\item \textbf{Supervise} a team of four peers use your heuristics to evaluate your game and controller;
+    		\item \textbf{Record} the feedback from the four peers;
+    		\item and then \textbf{analyse} the feedback.
+	\end{enumerate}
+    \item Prepare a draft 500-word report that must:
+    	\begin{enumerate}[label=\roman*.]
+    	          \item \textbf{Tabulate} the heuristics; 
+    	          \item \textbf{Briefly explain} the heuristics \textbf{and how} they have been adapted; 
+    		\item \textbf{Briefly describe} the analysis procedure \textbf{and} the results;    	
+    		\item and then \textbf{recommend TWO} design improvements, \textbf{briefly outlining} their justification.
+	\end{enumerate}
+    \item Prepare a final 500-word report that must:
+    	\begin{enumerate}[label=\roman*.]
+    	          \item \textbf{Revise} any concerns raised by peers and tutors. 
+	\end{enumerate}
+\end{enumerate}
+
+Part A consists of a \textbf{single formative group activity}. This work will be assessed on a \textbf{threshold} basis. The threshold is set at 10\%. This means that 10\% of the total marks available for the coursework overall are awarded on a pass or fail basis. In other words, satisfactory completion is worth 10\%. However, unsatisfactory completions will receive 0\%. The following criteria are used to determine a pass or fail for each submission in Part A:
+
+\begin{enumerate}[label=(\alph*)]
+	\item An appropriate set of heurstics has been defined;
+	\item Evaluators were provided sufficient guidence and time to do reviews;
+	\item Evidence (e.g. photographs or a video) are provided to show the analysis was conducted in a professional manner.
+\end{enumerate}
+
+You may request the presence of the tutor for immediate feedback, or your tutor will review your evidence in a personal tutorial and provide feedback.
+
+Part B is a \textbf{single individual formative} submission and will be assessed on a \textbf{threshold} basis. The threshold is set at 5\%. This means that 5\% of the total marks available for the coursework overall are awarded on a pass or fail basis. In other words, satisfactory submissions will be awarded 5\%. However, unsatisfactory submissions will receive 0\%.
+
+A pass is determined through attendence to the peer-review session with a draft and submission of a satisfactory peer-review.
+
+Part C is a \textbf{single individual summative submission} and will be assessed on a \textbf{criterion-referenced} basis. This submission is expected to take students from the threshold of 15\% (F) up to the maximum of 100\% (A*). This means that 85\% of the total marks available for the coursework overall will be awarded.
+
+The following criteria are used to allocate marks:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Appropriateness of Heuristics;
+	\item Adequacy of Procedure;
+	\item Depth of Analysis;
+	\item Appropriateness of Design Recommendations;
+	\item Adequacy of Use of Figures and Tables;
+	\item Quality of Academic Writing;
+\end{enumerate}
+
+\section*{Submission Instructions}
+
+\subsection*{Part A}
+
+After completing the heuristic analysis, meet with your tutor with your evidence.
+
+You will receive immediate feedback.
+
+\subsection*{Part B}
+
+Part B must be completed as a single PDF document, prepared in LaTeX.  Fork the GitHub project at the following URL:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp150-evaluation}
+
+You will need to create a pull-request prior to the review session. 
+
+You will receive feedback shortly after the session.
+
+\subsection*{Part C}
+
+Part C must be completed as a single PDF document, prepared in LaTeX. The LaTeX source files should be hosted on GitHub in the \texttt{comp150-evaluation} repository. A single PDF document must be submitted to the LearningSpace by the final submission deadline shown on LearningSpace. Please note that the LearningSpace will only accept a single PDF document.
+
+You will receive formal feedback three weeks after the submission deadline shown on LearningSpace.
+
+\begin{marginquote}
+    ``If it costs \$1 to make a change on paper, then it costs \$10 in code and \$100 when the [game] is up.''
+    
+    --- Theresa Cunnington
+    
+        \marginquoterule
+        
+    ``The dumbest mistake is viewing design as something you do at the end of the process to `tidy up' the mess, as opposed to understanding it is a `day one' issue and part of everything.''
+    
+    --- Tom Peters 
+\end{marginquote}
+\marginpicture{guitarhero}{
+    Rhythm games such as \emph{Guitar Hero} and \emph{Rock Band} are excellent examples of games
+    which make use of unique input devices to enhance gameplay.
+}
+\section*{Additional Guidance}
+
+This assignment has been designed to encourage greater independence and self-organisation. As part of the university experience, you will be given more and more independence in order to facilitate your transition into a self-regulated life-long learner. As such, you are being expected to identify peers who can assist with your work and, likewise, you will organise your time in order to support peers who request your support. However, if you are struggling to find reviewers able to participate in your heuristic analysis, your tutor is available to facilitate and help shepard groups together.
+
+Normally, reviewers are usability experts. They will likely have used heuristics in the past and will be familiar with them. In the university context, reviewers are novices who perhaps have never conducted such an analysis before. It is the responsibility of the supervisor to provide support to reviewers in understanding the heuristics they propose the reviewers should use. This has the benefit of sharing good practice and perhaps helping each other identify flaws in the way the heuristics themselves are being interpreted.
+
+It is worthwhile helping out your peers at the same time they are helping you out. In small groups of five, you can rotate responsibilities as reviewer and supervisor. This can be done one meeting at a time, or even asyncronously by sharing the game and the controller. If there are any concerns, tutors may be invited along to facilitate. However, their availability is not guarenteed.
+
+A key difficulty with this assignment is identifying appropriate heuristics and adapting them to the games domain. Many heuristics do not require any change at all to be applicable to games, while others may require removal or a minor tweak in terminology. If you propose additional heuristics, ensure that there is sufficient rationale to do so. That is, cite relevant research and construct a sound argument for their inclusion.
+
+The analysis itself is quite formulaic. Refer to and follow the guidelines published by Jakob Nielsen. Although his book chapter and website are not a how-to guide, they are quite comprehensive. Create a diagram to ilustrate this procedure. This will not only aid in its correct application, but will help you to reflect on the rationale of the exercise, the \textit{how} and \textit{why}, which will be useful to include in the report. Particularly, as it will help to reduce the wordcount. 
+
+So long as you follow the procedure accurately, it should be straightforward to identify several design flaws. It only takes four reviewers to catch most well-known flaws. You only need to address one of these flaws through the recommended design changes, as the same flaw could be targetted through several changes. Do not attempt to fix everything in such a short essay.
+
+\begin{marginquote}
+    ``A bad web site [design] is like a grumpy salesperson.''
+    
+    --- Jakob Nielsen
+    
+    \marginquoterule
+
+        ``Make it idiot-proof and someone will make a better idiot!''
+    
+    --- Anonymous
+\end{marginquote}
+\marginpicture{fishing}{
+    The \emph{Dreamcast Fishing Controller}, released as a peripheral for the game \emph{Sega Bass Fishing}.
+    Even peripherals which appeal to only a small audience can enjoy moderate commercial success.
+}
+\section*{Additional Resources}
+
+\begin{itemize}
+    \item Norman, D. (2013) The Design of Everyday Things. Revised Edition. MIT Press.
+    \item Przybylski, A.K., Deci, E.L., Rigby, C.S., and Ryan, R. M. (2014) Competence-Impeding Electronic Games and Players' Aggressive Feelings, Thoughts, and Behaviors. Journal of Personality and Social Psychology, 106(3), pp. 441-457.
+    \item Nielsen, J. (2002) Heuristic Evaluation. Usability Inspection Methods, 17(1), pp. 25-62. 
+    \item Peters, T. (2008) Design: Tom Peters Essentials. Gabal Verlag GBMH.
+    \item \url{https://www.nngroup.com/topic/heuristic-evaluation/}
+    \item \url{http://gameaccessibilityguidelines.com/}
+\end{itemize}
+
+\begin{markingrubric}
+%
+    \firstcriterion{Satisfactory Completion of Heuristic Analysis Procedure}{10\%}
+        \gradespan{5}{\fail Analysis has not been signed-off by your tutor.}
+        \grade 		Analysis has been signed-off by your tutor.
+%
+    \criterion{Satisfactory Preparation of Draft for Peer-Review}{5\%}
+        \gradespan{5}{\fail Either no draft is available for review or the review provided is unsatisfactory.}
+        \grade 		Participated in peer review and provided an appropriate review.
+%
+    \criterion{Appropriateness of Heuristics}{20\%}
+        \grade\fail 	No heuristics are listed.
+        \grade 		A set of heuristics is listed.
+        \par 		It is not clear how the heuristics have been derived, or there is a lack of academic rigor.
+        \grade 		A set of heuristics is listed.
+        \par 		The heuristics have been copied verbatim from a scholarly source, or has been adapted poorly.
+        \grade 		An appropriate set of heuristics is listed.
+        \par 		The heuristics have been adapted from one or more scholarly sources.
+        \grade 		An appropriate set of heuristics is listed.
+        \par 		The heuristics have been adapted from one or more scholarly sources.
+        \par 		Appropriately justified adaptation for use in a games domain has been attempted.        
+        \grade 		An appropriate set of heuristics is listed.
+        \par 		The heuristics have been adapted from one or more scholarly sources.
+        \par 		Rigorously justified adaptation for use in a games domain has been attempted.    
+%
+    \criterion{Adequacy of Procedure}{5\%}
+        \grade\fail 	No description of procedure.
+        \grade 		A very weak procedure is evidenced.
+        \grade 		A weak weak procedure.
+        \grade 		A sufficient procedure is evidenced.
+        \grade 		An appropriate procedure is evidenced.
+        \grade 		An well-conducted procedure is evidenced.
+%
+    \criterion{Depth of Analysis}{20\%}
+        \grade\fail 	No analysis.
+        \grade 		Little analysis.
+        \grade 		Some analysis.
+        \grade 		Much analysis.
+        \par 		Some depth of insight is demonstrated.
+        \grade 		Significant analysis.
+        \par 		Much depth of insight is demonstrated.
+        \grade 		Exemplary analysis.
+        \par 		Significant depth of insight is demonstrated.
+%
+    \criterion{Appropriateness of Design Recommendations}{20\%}
+        \grade\fail 	No design changes are recommended.
+        \grade 		At least one generally appropriate design change is proposed.
+        \grade 		At least one specific and achievable design changes are proposed. 
+        \grade 		At least two generally appropriate design changes are proposed.
+        \par  		At least one specific and achievable design changes are proposed. 
+        \grade 		At least two specific and achievable design changes are proposed. 
+        \par  		At least one of the proposed changes is a significant improvement and well-justified.
+        \grade 		At least two specific and achievable design changes are proposed. 
+        \par  		The proposed changes are both significant improvements and well-justified.
+%
+    \criterion{Adequacy of Use of Figures and Tables}{5\%}
+        \grade\fail 	No tables or figures are used.
+        \grade 		Very poor tables or figures are present.
+        \grade 		Poor tables or figures are present. 
+        \grade 		Sufficiently designed tables and figures are present. 
+        \grade 		Appropriately designed tables and figures are present.
+        \grade 		Well designed tables and figures are present. 
+%
+    \criterion{Appropriateness of Academic Writing}{5\%}
+        \grade\fail 	No evidence for partial-mastery of academic writing.
+        \par 		The reference section is missing.
+        \grade 		Some evidence for partial-mastery of academic writing.
+        \par 		The reference section is incomplete and/or malformed.
+        \grade 		Much evidence for partial-mastery of academic writing.
+        \par 		The reference section is complete and well-formed in either ACM or IEEE format.
+        \par 		Most in-text citations and quotations are correct.
+        \grade 		Some evidence for mastery of academic writing.
+        \par 		The reference section is complete and well-formed in either ACM or IEEE format.
+        \par 		All in-text citations and quotations are correct.
+        \grade 		Much evidence for mastery of academic writing.
+        \par 		The reference section is complete and well-formed in either ACM or IEEE format.
+        \par 		All in-text citations and quotations are correct.
+        \grade 		Significant evidence for mastery of academic writing.
+        \par 		The reference section is complete and well-formed in either ACM or IEEE format.
+        \par 		All in-text citations and quotations are correct.
+%
+    \criterion{Appropriateness of Spelling and Grammar}{5\%}
+        \grade\fail 	Substantial spelling and/or grammar errors.
+        \grade 		Many spelling and/or grammar errors.
+        \grade 		Some spelling and/or grammar errors.  
+        \grade 		Few spelling and/or grammar errors.
+        \grade 		Almost no spelling and/or grammar errors.
+        \grade 		No spelling or grammar errors.
+%
+    \criterion{Appropriateness of Report Structure}{5\%}
+        \grade\fail 	There is no structure, or the structure is unclear.
+        \grade 		There is little structure.
+        \grade 		There is some structure.
+        \par 		A few sentences and paragraphs are well constructed.
+        \grade 		There is much structure.
+        \par 		Some sentences and paragraphs are well constructed.
+        \par 		There is a clear introduction and conclusion.
+        \grade 		There is much structure, highlighting the recommendations.
+        \par 		Most sentences and paragraphs are well constructed.
+        \par 		There is a clear and well-constructed introduction and conclusion.
+        \grade 		There is much structure, highlighting the recommendations.
+        \par 		All sentences and paragraphs are well constructed.
+        \par 		There is a clear and well-constructed introduction and conclusion.
+\end{markingrubric}
+
+\end{document}
