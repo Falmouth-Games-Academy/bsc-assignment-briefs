@@ -2,6 +2,7 @@
 \graphicspath{ {../} }
 
 \usepackage{enumitem}
+\setlist{nosep}
 \usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
 \usepackage{url}
 \usepackage{todonotes}
@@ -22,114 +23,118 @@
 }
 \section*{Introduction}
 
-In this assignment, you are required to critically reflect on your teamwork and team dynamic across the COMP150 group project, using this as a lense to review how your teamwork-related skills influenced the quality of the work that the team produced. You will also develop a plan of action to mitigate any obstacles, and overcome any challenges, that you may have encountered; thereby, improving the quality of your team output in future assignments.
+In this assignment, you critically reflect on your teamwork and team dynamic across the group project, using this as a lens to review you own team-working skills. You will also develop a plan of action to overcome any challenges; thereby, improving the quality of your output in future group projects.
 
-Such reflection and planning is an extremely important part of learning games development, and in particular computer programming within a small team. They are key components in a technique known as deliberate practice, which research has shown to be very successful at nurturing expertise in software engineering. Everyone that properly adopts this technique eventually succeeds, despite the challenging nature of the subject. It is, therefore, very important that reflection and planning are not dismissed as an afterthought at the end of the course. For this reason, this assessment has two components, A and B, as follows:
+Such reflection and planning is an extremely important part of learning games development. Research shows that deliberate practice is very effective at nurturing expertise in software engineering. Everyone properly adopting this technique eventually succeeds, despite the challenging nature of the subject.
+
+This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\alph*)]
-    \item A weekly team blog that must:
+    \item \textbf{Write} a weekly team blog, authored \textbf{collaboratively}, that must:
     	\begin{enumerate}[label=\roman*.]
-    		\item be authored \textbf{collaboratively};
     		\item \textbf{describe} the progress of the team project;
     		\item \textbf{assess} any obstacles or challenges that the team has encountered;
-    		\item and then \textbf{outline} some specific actions to take to overcome them.
+    		\item and \textbf{outline} specific actions to take to overcome them.
 	\end{enumerate}
-    \item A final 500-word report that must:
+    \item \textbf{Write} a draft 500-word report that must:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{identify three} key teamwork skills that you consider weaknesses;
-    		\item \textbf{assess} your application of \textbf{each} of these skills, \textbf{describing how} they affected the quality of your submissions \textbf{and suggesting why} they became challenges;
+    		\item \textbf{identify two} key teamwork skills that you consider weaknesses;
+    		\item \textbf{assess} your application of \textbf{each} of these skills, \textbf{describing how} they affected your work \textbf{and suggesting why} they arose;
     		\item and then \textbf{identify how} to improve \textbf{each} of these skills, with reference to SMART actions.
 	\end{enumerate}
+    \item \textbf{Write} a final 500-word report that must:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{revise} any issues raised by your tutor or your peers.
+	\end{enumerate}
 \end{enumerate}
 
-Part A consists of \textbf{multiple formative collaborative submissions} with deadlines at the end of each sprint review across the Semester. This work will be assessed on a \textbf{threshold} basis. The threshold is set at 15\%. This means that 15\% of the total marks available for the coursework overall are awarded on a pass or fail basis. In other words, satisfactory submissions will be awarded 15\%. However, unsatisfactory submissions will receive 0\%.
+\subsection*{Assignment Setup}
 
-The following criteria are used to determine a pass or fail for each submission in Part A:
+This assignment is a \textbf{reflective writing task} and so regular reflection is expected. Use the existing \texttt{comp150-game} repository for your weekly blog. Also, fork the GitHub repository at the following URL:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp110-evaluation}
+
+Use the existing directory structure and, as required, extend this structure with sub-directories. The \texttt{readme.md} file is not needed. 
+
+Modify the \texttt{.gitignore} to the defaults for \textbf{TeX}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+
+\subsection*{Part A}
+
+Part A consists of a \textbf{multiple formative submissions}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
 \begin{enumerate}[label=(\alph*)]
-	\item Progress has been described with adequate detail;
-	\item Obstacles and challenges have been clearly explained and assessed;
-	\item There is balance between teamwork-related issues as well as technical issues;
-	\item No witch-hunting and appropriate anonymitiy afforded for genuine absences (e.g. illness);
-	\item At least one SMART action, appropriate for resolving the issue, has been outlined;
+	\item Progress is described with adequate detail;
+	\item Challenges are clearly explained;
+	\item Both team-related and technical challenges are addressed;
+	\item All reports afford appropriate anonymity;
+	\item Reflections are constructive rather than blaming and/or punitive;
+	\item Proposed actions to overcome challenges are SMART.
 \end{enumerate}
 
-You will receive ongoing feedback at the end of each sprint review and you will have the opportunity to revise the work prior to the final deadline. It is especially important that work that is not yet satisfactory is revised based on the feedback provided as \textbf{all reports must be satisfactory to pass}.
+To complete Part A, one member of the team should write a brief report each term-time week in the \texttt{readme.md} document hosted in the existing \texttt{comp150-game} repository. Separate each week with a heading. It is recommended that the team discuss the content of the report together and that the scribe be changed each week.  Ensure that the report is pushed to GitHub prior to each scheduled sprint review session. Then, attend the scheduled code review session.
 
-Part B is a \textbf{single individual summative submission} and will be assessed on a \textbf{criterion-referenced} basis. This submission is expected to take students from the threshold of 15\% (F) up to the maximum of 100\% (A*). This means that 85\% of the total marks available for the coursework overall will be awarded.
+You will receive immediate \textbf{informal feedback}.
 
-The following criteria are used to allocate marks:
+\subsection*{Part B}
+
+Part B is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
+
+To complete Part B, prepare a draft version of the report. Use the marking rubric to inform the structure of the document. Ensure that the TeX source and compiled \texttt{*.pdf} are pushed to GitHub and a pull request is made prior to the scheduled review session. Then, attend the scheduled review session.
+
+You will receive \textbf{peer feedback} within 3 working days after the code review session.
+
+\subsection*{Part C}
+
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. The following criteria are used to allocate marks:
 
 \begin{enumerate}[label=(\alph*)]
 	\item Appropriateness and Specificity of Selection of Key Teamwork Skills;
 	\item Adequacy of Self-Appraisal in Relation to Key Teamwork Skills;
 	\item Depth of Reflection on Key Teamwork Skills;
 	\item Appropriateness of Plan for the Future;
-	\item Quality of Academic Writing;
+	\item Quality of Academic Writing.
 \end{enumerate}
 
-\section*{Submission Instructions}
+You will receive \textbf{formal feedback} three weeks after the final deadline.
 
-\subsection*{Part A}
-
-Part A must be completed as a formative submission on GitHub. Fork the GitHub project at the following URL:
-
-\indent \url{https://github.com/Falmouth-Games-Academy/comp150-evaluation}
-
-Provide a link to your weekly blog in the \texttt{readme.md} file. The blog itself should be in Markdown format (i.e., *.md file) hosted within the main comp150-game repository. Use the comp150-game repository for any other digital assets you create (e.g.\ images), checking them in regularly as you work on your projects. For the reports, images should be embedded directly in the relevant \texttt{readme.md} file. Videos should be uploaded to a video sharing site (e.g.\ YouTube, Vimeo, Vine) and linked from the \texttt{readme.md} file.
-
-You will need to show your most recent reports to your tutor during each of your sprint review sessions, at which point they will be signed-off.
-
-\subsection*{Part B}
-
-Part B must be completed as a single PDF document, prepared in LaTeX. The LaTeX source files should be hosted on GitHub in the comp150-evaluation repository. A single PDF document must be submitted to the LearningSpace by the final submission deadline shown on LearningSpace. Please note that the LearningSpace will only accept a single PDF document.
-
-You will receive formal feedback three weeks after the submission deadline shown on LearningSpace.
-
-\begin{marginquote}
-    ``Individual commitment to a group effort--that is what makes a team work, a company work, a society work, a civilization work.''
-    
-    --- Vince Lombardi
-    
-        \marginquoterule
-        
-    ``Coming together is a beginning. Keeping together is progress. Working together is success.''
-    
-    --- Henry Ford 
-\end{marginquote}
-\marginpicture{guitarhero}{
-    Rhythm games such as \emph{Guitar Hero} and \emph{Rock Band} are excellent examples of games
-    which make use of unique input devices to enhance gameplay.
-}
 \section*{Additional Guidance}
 
-In previous evaluative reports, you have been expected to write in a reflective style. Please continue to use first-person and follow a similar style. However, take great care to assume an as objective position as possible. There must be sufficient analysis and reference to evidence in order to support your claims. More so than would be expected in a general reflective report.
+This is a reflective writing task, and as such you are expected to write in a reflective style. Make use of first-person plural and follow a similar style. However, take care to assume an as objective position as possible. There must be sufficient analysis and reference to evidence in order to support your claims. More so than would be expected in a personal reflective report.
 
-On this note, the teamwork analysis is \textbf{not} the place where you indulge in witch-hunting. That is, a blame game. While it is inevitable that incidents occur and these may block progress (e.g. due to illness, due to different levels of productivity as a consequence of differing levels of skill or differing levels of extra-curricular committments, due to technical mishaps or unforseeable circumstances), this is not an excuse to blame other students for shortcomings in a project. This is not only poor form, but is indicative of the report's author having poor teamworking skills. Incidents should be taken as an opportunity for reflection. Why wasn't a contingency in place? Why had nobody shared responsibility for a critical user story? Why wasn't there a backup? These are opportunities for reflection and growth.
+Teamwork analysis is \textbf{not} the place where you indulge in witch-hunts and blame-games. While it is inevitable that incidents occur, this is not an excuse to blame other students for shortcomings in a project. This is not only poor form, but is indicative of the report's author themself having poor teamworking skills. Incidents should be taken as an opportunity for reflection. Why wasn't a contingency in place? Why had nobody pair programmed a critical user story? Why wasn't there a backup? Where was the collective responsibility? These are opportunities for growth and personal development.
 
-A common type of concern is lack of engagement by other members of the team. Such concerns must be sufficiently anonymised, such that no other student is identified in either the report or the blog. Moreover, the concern must be sufficiently evidenced and analysed (e.g. by the scrum-master keeping an attendence record). For example, why was the design of the game not re-scoped if it became clear that one of the specialists on the team was unlikely to deliver key components upon which a proposed design relied?
+A common concern is lack of engagement by other members of the team. Such concerns can be discussed, but must be anonymous. No other student should be identified in either the report or the blog. Moreover, concerns must be sufficiently analysed. For example, why was the design of the game not re-scoped if it became clear that one of the specialists on the team was unlikely to deliver key components upon which a proposed design relied?
 
-As you author your reports, this contributes to the continuous cycle of reflection and planning that forms the cornerstone of deliberate practice. Just as you should avoid treating this reflection as an afterthought, you should avoid delegating the blog to one member of the team to produce. The blog should be the output from a team discussion and review that takes place at the end of each week. 
+The continuous cycle of reflection and planning is the cornerstone of deliberate practice. It is extremely important to help you learn. Avoid treating this activity as an afterthought. Further to this, avoid delegating the blog a single member of the team. It should represent the output from a team discussion that occurs at the end of each week. 
 
-Furthermore, do not pay too much attention on the end-product (i.e., the game itself) in the blog. A short description alongside some screenshorts or pseudocode illustrating work-in-progress is more than sufficient. It is the reflection upon and analysis of your working practice that is important. Namely, \textit{how} and \textit{why} influence quality in more abstract terms. As such, presenting your work in terms of `lessons learned' is appropriate. This will likely lead to higher quality submissions in the future and such lessons could form some of the components of your final report. Critically, however, lessons learned form a strong foundation for improving your teamwork.
+Furthermore, do not pay too much attention on the end-product (i.e., the game itself). A short description alongside some screenshots and pseudocode is more than sufficient. It is the reflection and analysis that is important. Namely, \textit{how} and \textit{why} your team's working practice is influencing the quality of the game in more abstract terms. As such, presenting your work in terms of `lessons learned' can be appropriate. This will likely lead to higher quality submissions in the future and such lessons could form some of the components of your final report. Critically, however, lessons learned form a strong foundation for improving your teamwork.
 
 As with previous evaluations, the most common mistake when planning future actions to take is being too general. It is, therefore, important to consider SMART goals: specific; measurable; achievable; relevant; and time-bound. Teamwork is critically important in the games industry, whether this be through an out-sourcing, remote collaboration, or indeed pair-programming. So, do ensure that you engage with this process of reflection and planning to improve your teamworking skills.
 
-\begin{marginquote}
-    ``Remember, teamwork begins by building trust. And the only way to do that is to overcome our need for invulnerability.''
-    
-    --- Patrick Lencioni
-    
-    \marginquoterule
+\section*{FAQ}
 
-        ``Talent wins games, but teamwork and intelligence win championships.''
-    
-    --- Michael Jordan
-\end{marginquote}
-\marginpicture{fishing}{
-    The \emph{Dreamcast Fishing Controller}, released as a peripheral for the game \emph{Sega Bass Fishing}.
-    Even peripherals which appeal to only a small audience can enjoy moderate commercial success.
-}
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on LearningSpace. Please examine the assignment area where you located this document.
+    			    		
+	\item 	\textbf{When do I need to get my weekly reports signed-off?} \\ 
+    		At the end of each Sprint. The blog must be up to date in order to achieve the threshold marks for that Sprint.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
 \section*{Additional Resources}
 
 \begin{itemize}
