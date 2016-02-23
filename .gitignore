@@ -1,3 +1,9 @@
+# Windows thumbnail files
+Thumbs.db
+
+# TeXnicCenter session files
+*.tps
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
