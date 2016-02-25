@@ -26,7 +26,10 @@
 
 \section*{Introduction}
 
-In this assignment, you are required to propose and write a game component for an existing game. You will then present a demonstration of your work.
+In this assignment, you are required to propose and write a game component for an existing game.
+You may target one of the games being developed by BA Digital Games students, or your own game
+from your COMP150 group project or COMP130 app development project.
+You will then present a demonstration of your work.
 
 Games are often comprised of a rich architecture incorporating many components. As such, coding tasks in the games industry may require you to develop bespoke code on a particular aspect of a game. Examples include: level generators; event triggers; conflict mechanics; character behaviours; physics; and so on. Through this project, you will become acquainted with techniques and methods that help you to work effectively to write such components; thereby, gaining knowledge of coding and its various aspects.
 
@@ -56,15 +59,15 @@ This assignment is formed of several parts:
 
 \subsection*{Assignment Setup}
 
-This assignment is a \textbf{programming task} and so regular pushes to a GitHub repository is expected. Fork the GitHub repository at the following URL:
+This assignment is a \textbf{programming task} and so regular pushes to a GitHub repository are expected. Fork the GitHub repository at the following URL:
 
 \indent \url{https://github.com/Falmouth-Games-Academy/comp110-coding-task-2}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file. Optionally, a \texttt{changelog.md} may be created.
 
-Modify the \texttt{.gitignore} to the defaults for either \textbf{Python} or \textbf{C++} depending on which language you wish to use for this assignment. Please, also ensure that you add IDE-specific files and folders to \texttt{.gitignore}. 
+Modify the \texttt{.gitignore} to the defaults for either \textbf{Python} or \textbf{Visual Studio} depending on which programming environment you wish to use for this assignment. Please, also ensure that you add IDE-specific files and folders to \texttt{.gitignore}. 
 
-You may use pull requests to seek additional feedback and support from the community at Falmouth University Games Academy.
+%You may use pull requests to seek additional feedback and support from the community at Falmouth University Games Academy.
 
 Setup a Trello board to manage this assignment. 
 
@@ -109,7 +112,7 @@ Part C is a \textbf{single summative submission}. This work is \textbf{individua
 	\item Professional Practice.
 \end{enumerate}
 
-To complete Part C, revise the source code for your game component based on the feedback you have received. Integrate your source code into the existing game. Then, upload the source code and related assets to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file (and the \texttt{.rar} format must not be used).
+To complete Part C, revise the source code for your game component based on the feedback you have received. Integrate your source code into the existing game. Then, upload the source code and related assets to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file, and will not accept any other compression formats.
 
 You will receive \textbf{formal feedback} three weeks after the final deadline.
 
@@ -118,11 +121,11 @@ You will receive \textbf{formal feedback} three weeks after the final deadline.
 Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
 \begin{enumerate}[label=(\alph*)]
-	\item The poster describes the algorithm appropriately;
+	\item The poster describes the component appropriately;
 	\item The coding task is demonstrated with a working executable.
 \end{enumerate}
 
-To complete Part D, firstly prepare executable demo of your game component. Secodnly, prepare a research-style poster that describes your algorithm. This poster should be A3 in portrait format. Then, attend the scheduled demo session. Ensure that the poster and executable has been pushed into GitHub prior to this session. 
+To complete Part D, firstly prepare executable demo of your game component. Secondly, prepare a research-style poster that describes your component. This poster should be A3 in portrait format. Then, attend the scheduled demo session. Ensure that the poster (in \texttt{*.pdf} format) and executable have been pushed to GitHub prior to this session.
 
 You will receive immediate \textbf{informal feedback}.
 
@@ -130,11 +133,13 @@ You will receive immediate \textbf{informal feedback}.
 
 Do not begin programming the game component until your tutor has reviewed your proposal. It is important that the main requirements are firmly specified and are not too broad. This will help ensure that you do not overburden yourself with too much work. 
 
-Please remember to commit frequently and to push your source code and related assets to the GitHub repository. This will make it easier for you to maintain a backup of your work. It will also help you to measure your productivity.
+Please remember to commit frequently and to push your source code and related assets to the GitHub repository. This will make it easier for you to maintain a backup of your work. It will also help you to measure your productivity. GitHub should be an essential part of your workflow, not merely a place to submit your work for feedback.
 
-Poor planning and poor time management can have a significant impact on this assignment. It is very easy to underestimate how much work is involved in first learning programming concepts and then actually applying them in order to write a computer program. As some of you may have already discovered, programming is quite unlike other subjects in that it cannot be ``crammed'' into a last minute deluge. Sustain a steady pace across the duration of the course. Do a little programming every day, if you can!
+Poor planning and poor time management can have a significant impact on this assignment.
+%It is very easy to underestimate how much work is involved in first learning programming concepts and then actually applying them in order to write a computer program.
+As some of you may have already discovered, programming is quite unlike other subjects in that it cannot be ``crammed'' into a last minute deluge. Sustain a steady pace across the duration of the course. Do a little programming every day, if you can!
 
-In order to obtain higher marks, you are being expected to focus on the quality of your code, rather than just its functionality. This can be supported through disciplined working practices. Such practice may include regular peer review. It may also include the use of lint tools and reference to style guidelines.
+In order to obtain higher marks, you are being expected to focus on the \textbf{quality} of your code, rather than just its functionality. Pay specific attention to \textbf{maintainability} (formatting, naming, comments, etc.) and \textbf{sophistication} (appropriate use of language constructs, data structures, algorithms, design patterns, etc.). This can be supported through disciplined working practices. Such practice may include regular peer review. It may also include the use of ``lint'' code analysis tools and reference to style guidelines.
 
 If you encounter difficulty, please email your tutor for support. For problems relating specifically to source code, please make a pull request on GitHub.
 
@@ -168,7 +173,7 @@ If you encounter difficulty, please email your tutor for support. For problems r
 %
     \firstcriterion{Parts A, B \& D}{10\%}
         \gradespan{5}{\fail One or more of Parts A, B, \& D are missing or were submitted late.}
-        \grade 		All work for Parts A, B, \& D have been signed-off.
+        \grade 		All work for Parts A, B, \& D has been signed-off.
 %
     \criterion{Appropriateness of Requirements}{5\%}
         \grade\fail 	No user stories are provided.
@@ -222,10 +227,10 @@ If you encounter difficulty, please email your tutor for support. For problems r
         \par 		Many clear and appropriate comments are present.
         \grade 		There are almost no problems which affect the maintainability of the source code. 
         \par 		Source code is well commented.
-        \par 		Doc strings (or equivalent) are provided.       
+        \par 		Module documentation in a standard format (e.g.\ Python docstrings, Doxygen comment markup) is provided.
         \grade 		There are no problems which affect the maintainability of the source code.
         \par 		Source code is exceptionally well commented.
-        \par 		Appropriate doc strings (or equivalent) are provided. 
+        \par 		Clear and comprehensive module documentation in a standard format (e.g.\ Python docstrings, Doxygen comment markup) is provided. 
 %
     \criterion{Professional Practice}{10\%}
         \grade\fail 	GitHub has not been used.
@@ -239,7 +244,7 @@ If you encounter difficulty, please email your tutor for support. For problems r
         \par 		There is evidence of some engagement with the Falmouth Games Academy community (e.g. reviewing peers' pull requests).
         \grade 		Source code and assets have regularly been checked into the repository.
         \par  		The first check-in to the repository is in the first quarter of the semester.
-        \par 		The project is exemplary documented using \texttt{readme.md} and \texttt{changelog.md}.
+        \par 		The project is exemplarily documented using \texttt{readme.md} and \texttt{changelog.md}.
         \par 		There is evidence of much engagement with the Falmouth Games Academy community (e.g. reviewing peers' pull requests).
 \end{markingrubric}
 
