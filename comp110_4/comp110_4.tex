@@ -2,6 +2,7 @@
 \graphicspath{ {../} }
 
 \usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
 \usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
 \usepackage{url}
 \usepackage{todonotes}
@@ -48,7 +49,7 @@ This assignment is formed of several parts:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{revise} any issues raised by your tutor or your peers;
 	\end{enumerate}
-    \item \textbf{Present} an executable version of your final program.
+    \item \textbf{Present} a research-style poster \textbf{and} an executable version of your final program.
 \end{enumerate}
 
 \todo[inline]{\textbf{Note:} All submissions must be clearly distinctive. Members of the same development group must \textbf{not} target the same component.}
@@ -62,6 +63,8 @@ This assignment is a \textbf{programming task} and so regular pushes to a GitHub
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file. Optionally, a \texttt{changelog.md} may be created.
 
 Modify the \texttt{.gitignore} to the defaults for either \textbf{Python} or \textbf{C++} depending on which language you wish to use for this assignment. Please, also ensure that you add IDE-specific files and folders to \texttt{.gitignore}. 
+
+You may use pull requests to seek additional feedback and support from the community at Falmouth University Games Academy.
 
 Setup a Trello board to manage this assignment. 
 
@@ -91,7 +94,7 @@ Part B is a \textbf{single formative submission}. This work is \textbf{individua
 
 To complete Part B, prepare a draft version of the source code for your game component. This may or may not be integrated into the existing game. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled code review session. Then, attend the scheduled code review session.
 
-You will receive \textbf{peer feedback} within 3 working days after the code review session.
+You will receive \textbf{peer feedback} within 3 working days after the review session.
 
 \subsection*{Part C}
 
@@ -103,7 +106,7 @@ Part C is a \textbf{single summative submission}. This work is \textbf{individua
 	\item Functional Coherence of Executable Solution;
 	\item Maintainability of Source Code;
 	\item Sophistication of Source Code;
-	\item Professional Practice;
+	\item Professional Practice.
 \end{enumerate}
 
 To complete Part C, revise the source code for your game component based on the feedback you have received. Integrate your source code into the existing game. Then, upload the source code and related assets to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file (and the \texttt{.rar} format must not be used).
@@ -112,15 +115,20 @@ You will receive \textbf{formal feedback} three weeks after the final deadline.
 
 \subsection*{Part D}
 
-Part D is \textbf{not grade-bearing}; however, \textbf{participation is mandatory}. Failure to attend will result in a grade capped at 40\% (D-).
+Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
-To complete Part D, attend the scheduled demo session. Ensure that a working executable demo of your work has been pushed into GitHub prior to this session. 
+\begin{enumerate}[label=(\alph*)]
+	\item The poster describes the algorithm appropriately;
+	\item The coding task is demonstrated with a working executable.
+\end{enumerate}
+
+To complete Part D, firstly prepare executable demo of your game component. Secodnly, prepare a research-style poster that describes your algorithm. This poster should be A3 in portrait format. Then, attend the scheduled demo session. Ensure that the poster and executable has been pushed into GitHub prior to this session. 
 
 You will receive immediate \textbf{informal feedback}.
 
 \section*{Additional Guidance}
 
-Do not begin programming the game component until your tutor has reviewed your proposal. It is important that the main requirements are firmly specified and are not too broad. This will help ensure that you do not overburden yourself. 
+Do not begin programming the game component until your tutor has reviewed your proposal. It is important that the main requirements are firmly specified and are not too broad. This will help ensure that you do not overburden yourself with too much work. 
 
 Please remember to commit frequently and to push your source code and related assets to the GitHub repository. This will make it easier for you to maintain a backup of your work. It will also help you to measure your productivity.
 
@@ -151,18 +159,16 @@ If you encounter difficulty, please email your tutor for support. For problems r
 \section*{Additional Resources}
 
 \begin{itemize}
-    \item To be advised by your tutor after submission of the proposal.
+    \item \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1955747/}
+    \item \url{http://colinpurrington.com/tips/poster-design}
+    \item Example Poster: \url{http://dl.acm.org/citation.cfm?id=2581274}
 \end{itemize}
 
 \begin{markingrubric}
 %
-    \firstcriterion{Satisfactory Preparation of Proposal}{5\%}
-        \gradespan{5}{\fail The proposal is inappropriate and/or is late.}
-        \grade 		The proposal has been signed-off by your tutor by the deadline.
-%
-    \criterion{Satisfactory Completion of Peer-Review Tasks}{5\%}
-        \gradespan{5}{\fail No work was submitted for peer-review and/or no peer-review has been submitted and/or either is late.}
-        \grade 		Work submitted for peer-review on time and reviews of peers' work submitted on time.
+    \firstcriterion{Parts A, B \& D}{10\%}
+        \gradespan{5}{\fail One or more of Parts A, B, \& D are missing or were submitted late.}
+        \grade 		All work for Parts A, B, \& D have been signed-off.
 %
     \criterion{Appropriateness of Requirements}{5\%}
         \grade\fail 	No user stories are provided.
