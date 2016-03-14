@@ -1,0 +1,323 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{API Hacking}
+\author{Dr Edward Powley}
+
+\begin{document}
+
+\maketitle
+%\begin{marginquote}
+%    ``Students come into programming classes with a broad range of backgrounds ---
+%    some have experience in several programming languages, others have never programmed before in their life.
+%    
+%    Being able to engage with the community and support each other is important.
+%    Upload your code to GitHub and receive feedback from experienced peers.
+%    Review your peers' work yourself and really consider what `quality' actually means
+%    and what `good' source code looks like.
+%    Debate, argue, and question others about it ---
+%    an open and sustained discourse is an excellent way to learn ---
+%    for both beginners and adepts!''
+%\end{marginquote}
+\marginpicture{MakeyMakey.jpg}{
+    The \emph{MaKey~MaKey} allows a multitude of materials to be used to create videogame controllers.
+}
+\section*{Introduction}
+
+In this assignment, you are required to design and implement a component for a game.
+The component must be based on one or more \textbf{existing third-party APIs}:
+for example web services, hardware device SDKs, or open-source libraries.
+Your component must be integrated into one of the games being developed by students on the BA Digital Games course,
+either by using Unity's native plugin interface to invoke code written in C++,
+or by implementing the plugin directly in C\#.
+
+This assignment is formed of \textbf{three} parts.
+There is a \textbf{single summative submission} via LearningSpace.
+Begin by forking the GitHub project at the following URL:
+\begin{center}
+\url{https://github.com/Falmouth-Games-Academy/comp140-api-hacking}
+\end{center}
+
+\subsection*{A. \emph{Propose} a game component}
+
+On GitHub, edit the \texttt{readme.md} file to contain a description of your proposed game component.
+Your proposal should:
+\begin{enumerate}
+    \item \textbf{Identify} the game into which your component will be integrated;
+    \item \textbf{Describe} the component that will be created;
+    \item \textbf{Show} the key user stories, in the form of a Trello task board;
+    \item \textbf{Justify} your choice of technologies (implementation language, APIs, etc.).
+\end{enumerate}
+Your proposal will be assessed on:
+\begin{enumerate}
+    \item \textbf{Scope}:
+        is the proposed component non-trivial, but feasible given the duration of the project?
+    \item \textbf{Appropriateness of component}:
+        will the proposed component enhance the selected game?
+    \item \textbf{Appropriateness of technologies}:
+        is the choice of implementation language and APIs sensible and well-justified?
+\end{enumerate}
+
+\textbf{Formative submission:} Discuss your proposal and task board with tutors in class.
+
+\subsection*{B. \emph{Implement} the component}
+
+You will build your prototype component over \textbf{three sprints}.
+At the beginning of each sprint, populate the sprint backlog on your Trello board.
+You should aim to have a `potentially shippable' component at the end of each sprint;
+that is, a component which does not have any major flaws or half-finished features that prevent it from being tested.
+For the first two sprints, the component should be working either within the game or in a separate testing environment;
+for the final sprint, the component should be fully integrated into the game.
+
+Your implementation will be assessed on the criteria listed in the marking rubric.
+
+\textbf{Formative submission:} Participate in the sprint review sessions in class.
+Check your code into your forked GitHub repository regularly,
+and make a pull request whenever you require assistance or feedback.
+
+\subsection*{C. \emph{Demonstrate} your component}
+
+Bring an executable of the game, with your component integrated, to the demo session in class.
+Be prepared to discuss it with tutors and peers.
+
+This part is not assessed, but you will receive feedback which will be useful to you on future projects.
+
+\textbf{Formative submission:} Participate in the demo session.
+
+\subsection*{Summative submission (electronic)}
+
+Create a zip file containing the following:
+
+\begin{itemize}
+\item A markdown file named \texttt{readme.md} containing your \textbf{proposal} from part~A,
+    and any other \textbf{documentation} you feel is appropriate
+    (e.g.\ special instructions for testing the component).
+\item Screenshots of your \textbf{Trello task board}.
+    As a minimum, include one from the beginning and one from the end of each sprint,
+    and screenshots documenting any checklists or other information within your cards.
+\item All \textbf{source code} created for part~B.
+    You do \textbf{not} need to provide the entire source code for the game.
+    Any code which was \textbf{not written by you} must be \textbf{clearly identified} as such,
+    in the \texttt{readme.md} file and/or as comments in the code files themselves.
+\item A \textbf{Windows executable} version of the game with your component integrated.
+    Build the project in Unity, and include both the \texttt{*.exe} file and the \texttt{*\_Data} directory.
+\end{itemize}
+
+The recommended way to produce this zip file is to check all of the above into your GitHub repository
+throughout the course of the project,
+and then use the ``Download Zip'' function on the GitHub website.
+Any material you do not wish to upload to GitHub (e.g.\ the executable)
+must be added to the zip file manually before uploading.
+
+\textbf{Material not included in the zip file will not be marked},
+even if it is available online, and even if tutors have seen it in class.
+Please ensure that all material you want the markers to consider is included in your submission.
+
+Upload your zip file to the appropriate submission queue on LearningSpace.
+Note that LearningSpace accepts only a single zip file per submission,
+with a maximum file size of 1GB.
+
+\begin{marginquote}
+    ``Alive with new thinking, buzzing with opportunity, connected with the best in the business,
+    Falmouth University is the perfect place to start shaping your creative career.
+    Thousands of people from around the globe come to us every year,
+    graduating to become the brightest stars in art, design, media, performance and writing industries.
+
+    ``[...]
+    Falmouth has forged its position as one of the most highly regarded creative arts institutions across the globe.''
+    
+    --- Falmouth University website
+\end{marginquote}
+\marginpicture{guitarhero}{
+    Rhythm games such as \emph{Guitar Hero} and \emph{Rock Band} are excellent examples of games
+    which make use of unique input devices to enhance gameplay.
+}
+\section*{Additional Guidance}
+
+Falmouth University is nationally and internationally renowned as an arts institution.
+Despite the fact that you are studying for a Bachelor of Science degree in a technical discipline,
+you are still expected to strive for the same level of \textbf{innovation and creative flair}
+as your fellow students in other departments.
+All assignments on this course involve a mix of technical and creative activities;
+this assignment is more heavily weighted towards the creative than the assignments you have completed thus far.
+On this assignment, a competent execution of an unimaginative idea is unlikely to achieve higher than a C grade overall,
+as opposed to an imperfect execution of a unique and ambitious concept
+--- bear this in mind when working on your design.
+One approach to promoting creativity is
+\textbf{divergent thinking}: generation of ideas by exploring many possible solutions.
+Often the most interesting ideas are \textbf{subversive}: they deliberately go against the
+accepted or most obvious solution
+
+The history of video games is littered with failed peripherals which consumers simply did not want,
+which were perceived as expensive gimmicks rather than legitimate enhancements to gameplay.
+Your creativity should be balanced by \textbf{commercial awareness}:
+your design should be informed by your research into products that have succeeded and failed
+in the past, and what underexploited niches exist in the present.
+An A$^*$ project would be a highly divergent idea, but one that has clear commercial viability.
+Do not be too discouraged if you fall short of this: this is a tall order even for the professionals!
+
+We have given you some of the materials you need: a MaKey~MaKey kit, crocodile clip leads and conductive paint.
+You will need to add your own materials to produce a \textbf{functional} physical prototype.
+A ``Blue Peter'' style prototype made from household items is fine,
+as is something made out of modelling clay, construction toys etc.
+However you should still choose your materials carefully, as overly flimsy construction may
+lose you marks on the functionality criterion.
+
+You may also wish to connect electronic components such as LEDs, buzzers, photoresistors etc to the MaKey~MaKey,
+or even use a different, more flexible hardware platform such as Arduino.
+However you are discouraged from spending large sums of money on extra hardware,
+and doing so is \textbf{not required} to achieve a high mark.
+If you choose to go down this route,
+it is possible to purchase an Arduino and a selection of electronic components online for 
+around the price of a textbook (\textsterling 20 -- \textsterling 30).\footnote{
+    Note that the MaKey~MaKey kits provided in class are version~1.2, which, unlike earlier versions, is not based on Arduino.
+    Any tutorials you may find online for reprogramming the MaKey~MaKey firmware using the Arduino IDE
+    are unfortunately not applicable to this version.
+}
+
+You should aim to demonstrate a high level of \textbf{sophistication}
+in the technical execution of your prototype.
+An important part of sophistication is having the insight to choose the right tool for the job:
+if a simpler technique fulfils all the requirements, use it.
+The use of unnecessarily complicated techniques, serving only to showcase one's own cleverness,
+is a dangerous habit for a software developer.
+
+The sole purpose of the \textbf{video demonstration} is to aid moderators and external examiners,
+who are not present for the demo session,
+in assessing your work.
+Your video does \textbf{not} need to be entertaining or highly polished:
+a smartphone or webcam video of you or someone else using the controller is sufficient.
+
+%Your \textbf{weekly reports} should document the iterations you make on your design and prototyping.
+%The emphasis in this assignment is on creativity and rapid iteration,
+%so do not be afraid to ``go back to the drawing board'' if a prototyped idea does not work as well as anticipated.
+%However it is important to document (and learn from) your failures, even more so than your successes.
+%
+%You are strongly encouraged to make use of sketches, diagrams, photographs, screenshots
+%and short videos to document your design and prototyping process.
+%Many indie game developers use such work-in-progress material as an important tool for promotion
+%and community engagement; for example, search Twitter for the hashtag \texttt{\#screenshotsaturday}.
+%Videos should ideally be short (5--30 second) demonstrations of functions of your prototype;
+%you may narrate if you wish, but it is not required.
+
+\begin{marginquote}
+    ``The first 90 percent of the code accounts for the first 90 percent of the development time.
+    
+    ``The remaining 10 percent of the code accounts for the other 90 percent of the development time.''
+    
+    --- Tom Cargill
+    
+    \marginquoterule
+    
+    ``Hofstadter's Law:
+    
+    ``It always takes longer than you expect, even when you take into account Hofstadter's Law.''
+    
+    --- Douglas Hofstadter
+\end{marginquote}
+\marginpicture{fishing}{
+    The \emph{Dreamcast Fishing Controller}, released as a peripheral for the game \emph{Sega Bass Fishing}.
+    Even peripherals which appeal to only a small audience can enjoy moderate commercial success.
+}
+\section*{Additional Resources}
+
+\begin{itemize}
+    \item Wilkinson, K. and Petrich, M. (2014) The Art of Tinkering: Meet 150 Markers Working at the Intersection of Art, Science \& Technology. Weldon Owen: London.
+    \item Alicia Gibb. Building Open Source Hardware: DIY Manufacturing for Hackers and Makers. Addison Wesley, 2014. 
+    \item Jeremy Blum. Exploring Arduino: Tools and Techniques for Engineering Wizardry. John Wiley, 2013. 
+    \item Kelly, K. (2014) Cool Tools: A Catalogue of Possibilities. Cool Tools.
+    \item Hatch, M. (2013) The Maker Movement Manifesto: Rules for Innovation in the New World of Creators, Hackers, and Tinkerers. McGraw Hill: New York.
+    \item \url{http://makeymakey.com/howto.php}
+\end{itemize}
+
+\begin{markingrubric}
+    \firstcriterion{Sprint reviews}{Threshold \par 5\% + 5\%}
+        \gradespan{2}{\fail None of the sprints are delivered, or no `reasonable' peer reviews are submitted.}
+        \gradespan{2}{A `potentially shippable' component is produced at the end of the final sprint.
+            \par A `reasonable' review of at least one peer's work is provided in one of the review sessions.}
+        \gradespan{2}{A `potentially shippable' component is produced at the end of all three sprints.
+            \par A `reasonable' review of at least one peer's work is provided in each of the review sessions.}
+    \criterion{Design of the solution}{15\%}
+        \grade\fail User stories are not provided, or the design does not correspond to the user stories.
+        \grade Few user stories are distinguishable and easily measured.
+            \par The correspondence between design and user stories is tenuous.
+        \grade Some user stories are distinguishable and easily measured.
+            \par The design somewhat corresponds to the user stories.
+        \grade Most user stories are distinguishable and easily measured.
+            \par The design corresponds to the user stories.
+        \grade Nearly all user stories are distinguishable and easily measured.
+            \par The design clearly corresponds to the user stories.
+        \grade All user stories are distinguishable and easily measured.
+            \par The design clearly and comprehensively corresponds to the user stories.
+    \criterion{Commercial awareness}{10\%}
+        \grade\fail No commercial awareness is demonstrated.
+        \grade Emerging commercial awareness is demonstrated.
+            \par There is no evidence of market research.
+        \grade Some commercial awareness is demonstrated.
+            \par Market research is present, but with significant gaps.
+        \grade Much commercial awareness is demonstrated.
+            \par Market research is extensive, but with some gaps.
+        \grade Significant commercial awareness is demonstrated.
+            \par Market research is comprehensive.
+        \grade Exemplary commercial awareness is demonstrated.
+            \par Market research is comprehensive and insightful.
+    \criterion{Innovation and creative flair}{30\%}
+        \grade\fail Demonstrates no evidence of innovation and/or creativity.
+        \grade Demonstrates evidence of emerging innovation and/or creativity.
+            \par The solution is purely derivative of existing products.
+            \par There is no evidence of divergent thinking.
+        \grade Demonstrates evidence of progressing innovation and/or creativity.
+            \par The solution is mostly derivative, with some attempts at innovation.
+            \par There is evidence of an attempt at divergent thinking.
+        \grade Demonstrates evidence of partial mastery of innovative and creative practice.
+            \par The solution is an interesting and somewhat innovative product.
+            \par There is some evidence of divergent thinking.
+        \grade Demonstrates some evidence of mastery of innovative and creative practice.
+            \par The solution is a novel and innovative product.
+            \par There is much evidence of divergent thinking.
+        \grade Demonstrates much evidence of mastery of innovative and creative practice.
+            \par The solution is a unique and innovative product.
+            \par There is significant evidence of divergent thinking.
+    \criterion{Functionality of physical prototype}{10\%}
+        \grade\fail A physical prototype is not produced, or the prototype is completely non-functional.
+        \grade The physical prototype is barely functional.
+            \par There are serious technical and/or constructional flaws.
+        \grade The physical prototype is somewhat functional.
+            \par There are obvious technical and/or constructional flaws.
+        \grade The physical prototype is mostly functional.
+            \par There are minor technical and/or constructional flaws.
+        \grade The physical prototype is functional.
+            \par There are superficial technical and/or constructional flaws.
+        \grade The physical prototype is functional.
+            \par The technical execution and physical construction are flawless.
+    \criterion{Sophistication: \par Software \par Electronics \par Physical construction}{20\%}
+        \grade\fail The solution lacks even a basic level of sophistication in any of the three areas.
+        \grade The solution is basic and unsophisticated in all three areas.
+            \par Little insight has been demonstrated in any area.
+        \grade The solution is moderately sophisticated in one of the areas, but lacking in the other two.
+            \par Emerging insight has been demonstrated in at least one of the areas.
+        \grade The solution is moderately sophisticated in two of the noted areas, but lacking in the third.
+            \par Much insight has been demonstrated in at least one of the areas.
+        \grade The solution combines somewhat sophisticated software, electronics and physical construction.
+            \par Significant insight has been demonstrated in at least two of these areas.
+        \grade The solution combines highly sophisticated software, electronics and physical construction.
+            \par Exemplary insight has been demonstrated in all three areas.
+    \criterion{Professional practice}{5\%}
+        \grade\fail GitHub has not been used.
+        \grade Material has only been checked into GitHub a few times before the deadline.
+        \grade Material has been checked into GitHub at least once per sprint.
+        \grade Material has been checked into GitHub several times per sprint.
+        \grade Material has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+        \grade Material has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of engagement with peers (e.g.\ voluntary code review).
+\end{markingrubric}
+
+\end{document}
