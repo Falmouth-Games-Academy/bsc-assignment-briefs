@@ -40,9 +40,11 @@ Your component must be integrated into either:
     \item Your \textbf{COMP130} Kivy game project; or
     \item Your \textbf{COMP150} group game project (\textbf{limit one per team}: liaise with the rest of your team before choosing this option); or
     \item \label{item:game-opensource} An \textbf{open-source game}; or
-    \item \label{item:game-mod} A \textbf{commercial game} which has a well-established (official or community-made) modding interface that allows mods to be developed in C++, C\# or Python.
+    \item \label{item:game-mod} A \textbf{commercial game} which has a well-established (official or community-made) modding interface that allows mods to be developed in one of the permitted languages.
 \end{enumerate}
-Note that options~\ref{item:game-opensource} and~\ref{item:game-mod} are likely to be more technically challenging than the others,
+Whichever option you choose, you may implement your component in \textbf{C++}, \textbf{C\#}, \textbf{Python}, or a combination of these.
+Other languages may be permitted at the discretion of your tutor, if you can argue convincingly that it is appropriate for your proposed project.
+Note that options~\ref{item:game-opensource} and~\ref{item:game-mod} above are likely to be more technically challenging than the others,
 so are recommended only for those comfortable with advanced programming concepts.
 
 You may work \textbf{individually} or \textbf{in pairs}.
@@ -89,7 +91,7 @@ for the final sprint, the component should be fully integrated into the game.
 Your implementation will be assessed on the criteria listed in the marking rubric.
 
 \textbf{Formative submission:} Participate in the sprint review sessions in class.
-Check your code into your forked GitHub repository regularly,
+Check your code into GitHub regularly (either your forked \texttt{comp140-api-hacking} repository or a branch of another appropriate repository),
 and make a pull request whenever you require assistance or feedback.
 
 \subsection*{C. \emph{Demonstrate} your component}
@@ -101,6 +103,16 @@ This part is not assessed, but you will receive feedback which will be useful to
 
 \textbf{Formative submission:} Participate in the demo session.
 
+\begin{marginquote}
+    ``There are two ways of constructing a software design.
+        One way is to make it so simple that there are obviously no deficiencies.
+        And the other way is to make it so complicated that there are no obvious deficiencies.''
+    
+    --- C.\ A.\ R.\ Hoare
+\end{marginquote}
+\marginpicture{angelina}{
+    \emph{ANGELINA}, by Falmouth University researcher Michael Cook, uses fifteen different APIs and web services to automatically design entire games.
+}
 \subsection*{Summative submission (electronic)}
 
 Create a zip file containing the following:
@@ -127,29 +139,11 @@ and then use the ``Download Zip'' function on the GitHub website.
 Any material you do not wish to upload to GitHub (e.g.\ the executable)
 must be added to the zip file manually before uploading.
 
-\textbf{Material not included in the zip file will not be marked},
-even if it is available online, and even if tutors have seen it in class.
-Please ensure that all material you want the markers to consider is included in your submission.
-
 Upload your zip file to the appropriate submission queue on LearningSpace.
 Note that LearningSpace accepts only a single zip file per submission,
 with a maximum file size of 1GB.
 If the game executable is larger than this, contact your tutors to make alternative arrangements.
 
-\begin{marginquote}
-    ``Alive with new thinking, buzzing with opportunity, connected with the best in the business,
-    Falmouth University is the perfect place to start shaping your creative career.
-    Thousands of people from around the globe come to us every year,
-    graduating to become the brightest stars in art, design, media, performance and writing industries.
-
-    ``[...]
-    Falmouth has forged its position as one of the most highly regarded creative arts institutions across the globe.''
-    
-    --- Falmouth University website
-\end{marginquote}
-\marginpicture{angelina}{
-    \emph{ANGELINA}, by Falmouth University researcher Michael Cook, uses fifteen different APIs and web services to automatically design entirely new games.
-}
 \section*{Additional Guidance}
 
 Creating new software solutions from scratch is an important skill for software developers.
@@ -206,19 +200,9 @@ with values instead defined as constants together in a single place.
 %e.g.\ by defining them in an external file read by the game on startup.
 
 \begin{marginquote}
-    ``The first 90 percent of the code accounts for the first 90 percent of the development time.
+    ``Measuring programming progress by lines of code is like measuring aircraft building progress by weight.''
     
-    ``The remaining 10 percent of the code accounts for the other 90 percent of the development time.''
-    
-    --- Tom Cargill
-    
-    \marginquoterule
-    
-    ``Hofstadter's Law:
-    
-    ``It always takes longer than you expect, even when you take into account Hofstadter's Law.''
-    
-    --- Douglas Hofstadter
+    --- Bill Gates
 \end{marginquote}
 \marginpicture{wheel}{
     Don't reinvent this.
@@ -243,32 +227,30 @@ with values instead defined as constants together in a single place.
 %
     \criterion{Choice of technologies (implementation language and APIs)}{10\%}
         \grade\fail The choice of technologies is inappropriate.
+            \par Justification is inappropriate or not provided.
         \grade The choice of technologies is appropriate.
-            \par No appropriate justification is provided.
+            \par Little appropriate justification is provided.
         \grade The choice of technologies is appropriate.
             \par Justification is appropriate, but no alternatives have been considered.
         \grade The choice of technologies is appropriate.
             \par Justification is appropriate, and alternatives have been considered.
         \grade The choice of technologies is highly appropriate.
-            \par Justification is strong, showing knowledge of the chosen technology and its alternatives.
+            \par Justification is strong, showing a working knowledge of the chosen technology and its alternatives.
         \grade The choice of technologies is highly appropriate.
-            \par Justification is exemplary, showing expertise in the chosen technology and its alternatives.
+            \par Justification is exemplary, showing insight into the chosen technology and its alternatives.
 %
-    \criterion{Appropriateness of user stories and sprint plans}{10\%}
-        \grade\fail No user stories and/or sprint plans are provided.
+    \criterion{Design of the solution}{10\%}
+        \grade\fail User stories are not provided, or the design does not correspond to the user stories.
         \grade Few user stories are distinguishable and easily measured.
-            \par Sprint plans provide little support for the project.
+            \par The correspondence between design and user stories is tenuous.
         \grade Some user stories are distinguishable and easily measured.
-            \par Sprint plans provide some support for the project.
+            \par The design somewhat corresponds to the user stories.
         \grade Most user stories are distinguishable and easily measured.
-            \par User stories correspond to the proposed component.
-            \par Sprint plans provide much support for the project.
+            \par The design corresponds to the user stories.
         \grade Nearly all user stories are distinguishable and easily measured.
-            \par User stories clearly correspond to the proposed component.
-            \par Sprint plans provide effective support for the project.
+            \par The design clearly corresponds to the user stories.
         \grade All user stories are distinguishable and easily measured.
-            \par User stories clearly and comprehensively correspond to the proposed component.
-            \par Sprint plans provide exemplary support for the project.
+            \par The design clearly and comprehensively corresponds to the user stories.
 %
     \criterion{Functional coherence}{10\%}
         \grade\fail No user stories have been implemented.
