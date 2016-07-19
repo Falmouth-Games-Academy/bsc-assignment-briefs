@@ -102,12 +102,12 @@
                 \hline
                 \centering \textbf{\small Criterion} &
                 \centering \textbf{\small Weight} &
-                \centering \cellcolor{gray!50} \textbf{\small F (0 -- 39)} &
-                \centering \textbf{\small D (40 -- 49)} &
-                \centering \textbf{\small C (50 -- 59)} &
-                \centering \textbf{\small B (60 -- 69)} &
-                \centering \textbf{\small A (70 -- 79)} &
-                \centering \textbf{\small A$^*$ (80 -- 100)} \endhead\hline
+                \centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
+                \centering \textbf{\small Basic Competency} &
+                \centering \textbf{\small Basic Proficiency} &
+                \centering \textbf{\small Novice Competency} &
+                \centering \textbf{\small Novice Proficiency} &
+                \centering \textbf{\small Professional Competency} \endhead\hline
 }{
                 \tabularnewline\hline
             \end{longtable}
