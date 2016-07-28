@@ -1,6 +1,9 @@
 # Windows thumbnail files
 Thumbs.db
 
+# OSX junk
+.DS_Store
+
 # TeXnicCenter session files
 *.tps
 
