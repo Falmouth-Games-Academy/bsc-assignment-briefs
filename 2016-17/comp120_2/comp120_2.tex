@@ -20,7 +20,7 @@
 ``Students come into programming classes with a broad range of backgrounds---some have experience in several programming languages, others have never programmed before in their life! Being able to engage with the community and support each other is important.''
 \end{marginquote}
 \marginpicture{flavour_pic}{
-    This flavour picture needs a caption...
+    An algorithm for visualising sound and music such as Beethoven.
 }
 
 In this assignment, you are required to write a computer program that will `tinker' with computer generated audio in a creative way.
@@ -44,7 +44,7 @@ This assignment is formed of several parts:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{revise} any issues raised by your tutor and/or your peers.
 	\end{enumerate}
-    \item \textbf{Present}, as an \textbf{individual}, a practical demonstration of the computer program to your tutor that will:
+    \item \textbf{Present}, as an \textbf{individual}, a practical demo of the computer program to your tutor that will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{demonstrate} your academic integrity;
     		\item as well as \textbf{demonstrate} your \textbf{individual} programming knowledge \textbf{and} communication skills.
@@ -85,15 +85,7 @@ You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
 
 \subsection*{Part C}
 
-Part C is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. The following criteria are used to allocate marks:
-
-\begin{enumerate}[label=(\alph*)]
-	\item Functional Coherence;
-	\item Sophistication;
-	\item Maintainability;
-	\item Creative Flair;
-	\item Use of Version Control.	
-\end{enumerate}
+Part C is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
 
 To complete Part C, revise the computer program based on the feedback you have received. Then, upload it to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
 
@@ -117,7 +109,7 @@ You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 It is critically important that you do not neglect your individual roles in the development process. Programming in pairs means that you work together on the same computer---switching between driver and navigator. It is a great opportunity to develop your technical communication skills and overcome common misconceptions about programming. It should not, however, be treated as a 'free ride'---you will get to review each others' progress. 
 
-You are being expected to \textit{transform} and \textit{repurpose} existing encodings (i.e. existing images). However, you may create your own images if desired. When using images you have not authored yourself, the source should be noted in the GitHub README.md file. 
+You are being expected to not only \textit{transform} and \textit{repurpose} existing encodings (i.e. existing melodies and sound effects), but generate new encodings from primitive input . When using audio you have not authored yourself, the source should be noted in the GitHub README.md file. 
 
 You can and should go beyond the techniques introduced in the lectures and the Guzdial book (e.g. researching algorithms for producing or manipulating graphics). The solutions must be written in Python, and any Python frameworksmay be used. So, for example, Kivy, Pillow, PyGame, and JES submissions are acceptable.
 
@@ -159,60 +151,59 @@ The peer-review component of this work does sometimes raise alarm. However, the 
     \firstcriterion{Functional Coherence}{5\%}
         \grade\fail 	No algorithm has been implemented successfully.
             \par 		The source code does not compile or there are serious logical errors.
-        \grade 		At least two algorithms have been implmeneted successfully.
+        \grade 		At least two algorithms have been implemented successfully.
             \par 		There are many obvious logical errors, or at least one significant logical error.   
-        \grade 		At least four algorithms have been implmeneted successfully.
+        \grade 		At least four algorithms have been implemented successfully.
             \par 		There are several obvious logical errors, at least one of which is significant. 
-        \grade 		At least five algorithms have been implmeneted successfully.
-       \par		A melody can be generated.
+        \grade 		At least five algorithms have been implemented successfully.
             \par 		There are some obvious logical errors, which are not significant. 
-        \grade 		At least six algorithms have been implmeneted successfully.
-       \par		A melody can be generated.
-            \par 		There are few obvious logical errors, which are cosmetic and/or superficial.      
-        \grade 		At least six algorithms have been implmeneted successfully.
-       \par		A melody can be generated.
+                   \par		The brief has been satisfied.
+        \grade 		At least six algorithms have been implemented successfully.
+            \par 		There are few obvious logical errors, which are cosmetic and/or superficial.     
+                   \par		The brief has been satisfied. 
+        \grade 		At least six algorithms have been implemented successfully.
             \par		There are no obvious logical errors.
+                   \par		The brief has been satisfied.
 %
-    \criterion{Sophistication}{15\%}
+    \criterion{Sophistication}{15\% $\dagger$}
         \grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
-            \par No attempt to structure the program is evident (e.g. one monolithic source file).
+            \par No attempt to structure the program (e.g. one monolithic function).
         \grade Little insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is poor.
         \grade Some insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is adequate.
         \grade Much insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is appropriate.
-        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is effective. There is high cohesion and low coupling.
-        \grade Exemplary insight into the appropriate use of programming constructs is evident from the source code.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is very effective. There is high cohesion and low coupling.
-            \par There is little to no code that obviously hinders performance.
 %
-    \criterion{Maintainability}{20\%}
+    \criterion{Maintainability}{20\% $\dagger$}
         \grade\fail There are no comments in the source code, or comments are misleading.
             \par Most variable names are unclear or inappropriate.
             \par Code formatting hinders readability.
         \grade The source code is only sporadically commented, or comments are unclear.
             \par Some identifier names are unclear or inappropriate.
             \par Code formatting is inconsistent or does not aid readability.
-        \grade The source code is well commented.
+        \grade The source code is somewhat well commented.
             \par Some identifier names are descriptive and appropriate.
-            \par An attempt has been made to adhere to a consistent formatting style.
+            \par An attempt has been made to adhere to thhe PEP-8 formatting style.
              \par There is little obvious duplication of code or of literal values.           
         \grade The source code is reasonably well commented.
             \par Most identifier names are descriptive and appropriate.
-            \par Most code adheres to a consistent formatting style.
+            \par Most code adheres to the PEP-8 formatting style.
              \par There is almost no obvious duplication of code or of literal values.   
-        \grade The source code is reasonably well commented, with some Doxygen-compatible module documentation.
+        \grade The source code is reasonably well commented, with Python doc-strings.
             \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to a consistent formatting style.
+            \par Almost all code adheres to the PEP-8 formatting style.
              \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered'' in the source code. 
-        \grade The source code is very well commented, with comprehensive Doxygen-compatible module documentation.
+        \grade The source code is very well commented, with Python doc-strings.
             \par All identifier names are descriptive and appropriate.
-            \par All source code adheres to a consistent formatting style.
-             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  
+            \par All source code adheres to the PEP-8 formatting style.
+             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code. 
 %
-    \criterion{Creative Flair}{10\%}
+    \criterion{Creative Flair}{10\% $\dagger$}
         \grade\fail No creativity.
             \par The work is a clone of an existing work with mere cosmetic alterations.
         \grade Little creativity.
@@ -221,35 +212,35 @@ The peer-review component of this work does sometimes raise alarm. However, the 
             \par The work is derivative of existing works, demonstrating little divergent and/or subversive thinking.
         \grade Much creativity.
             \par The work is somewhat novel, demonstrating some divergent and/or subversive thinking.
-            \par The work shows promise of fun and engagement.
-        \grade Significant creativity.
+        \grade Considerable creativity.
             \par The work is novel, demonstrating significant divergent and/or subversive thinking.
-            \par The work is somewhat fun and engaging.
-        \grade Exemplary creativity.
-            \par The work is highly original, with strong evidence of divergent and/or subversive thinking in terms of gameplay.
-            \par The gameplay is fun and engaging.
+        \grade Significant creativity.
+            \par The work is highly original, with strong evidence of divergent and/or subversive thinking.
 %
     \criterion{Use of Version Control}{10\%}
         \grade\fail GitHub has not been used.
         \grade Source code has rarely been checked into GitHub.
-        \grade Source code  has been checked into GitHub at least once per sprint.
+        \grade Source code  has been checked into GitHub at least once per week.
             \par Commit messages are present.
-        \grade Source code  has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par Branches are used sensibly.
-        \grade Source code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par Branches are used somewhat effectively.
-        \grade Source code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par Branches are used effectively.
             \par There is evidence of engagement with peers (e.g.\ code review).
+        \grade Source code  has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
+        \grade Source code has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of meaningful engagement with peers (e.g.\ code review).
+        \grade Source code has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of effective engagement with peers (e.g.\ code review).
+%
 %
     \criterion{Basic Competency Threshold}{40\%}
         \gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
         \gradespan{5}{Submission is timely.
         	\par Enough work is available to hold a meaningful discussion.
 	\par Clear evidence of programming knowledge and communication skills.
+	\par Clear evidence of reflection on own performance and contribution.
+	\par Only constructive criticism of pair-programming partner is raised.
 	\par No breaches of academic integrity.}
 \end{markingrubric}
 
