@@ -95,9 +95,10 @@
     \clearpage
     \newgeometry{margin=1cm}
     \begin{landscape}
-        \section*{Marking Rubric}
+        \section*{\@rubrictitle}
         \begingroup\scriptsize
             \setlength{\extrarowheight}{2pt}
+            \@rubrichead
             \begin{longtable}{|p{2.5cm}|p{1.5cm}|*{6}{p{3.4cm}|}}
                 \hline
                 \centering \textbf{\small Criterion} &
@@ -111,6 +112,7 @@
 }{
                 \tabularnewline\hline
             \end{longtable}
+            \@rubricfoot
         \endgroup
     \end{landscape}
 }
@@ -124,3 +126,12 @@
 \newcommand{\fail}{\cellcolor{gray!50}}
 \newcommand{\gradespan}[2]{& \multicolumn{#1}{p{3.4cm * #1 + (\tabcolsep * 2 + \arrayrulewidth) * (#1 - 1)}|}%
     {\setlength{\parskip}{0.5em}\raggedright #2}}
+
+% Modifiers for title, header and footer of the marking rubric
+% Note that these must be specified *before* \begin{markingrubric}
+\newcommand{\@rubrictitle}{Marking Rubric}
+\newcommand{\rubrictitle}[1]{\renewcommand{\@rubrictitle}{#1}}
+\newcommand{\@rubrichead}{}
+\newcommand{\rubrichead}[1]{\renewcommand{\@rubrichead}{#1}}
+\newcommand{\@rubricfoot}{}
+\newcommand{\rubricfoot}[1]{\renewcommand{\@rubricfoot}{#1}}
