@@ -2,323 +2,297 @@
 \graphicspath{ {../} }
 
 \usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
 \usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Interface Hacking}
-\author{Alcwyn Parker}
+\title{Research Journal --- Computing}
+\author{Dr Ed Powley}
 
 \begin{document}
 
 \maketitle
-%\begin{marginquote}
-%    ``Students come into programming classes with a broad range of backgrounds ---
-%    some have experience in several programming languages, others have never programmed before in their life.
-%    
-%    Being able to engage with the community and support each other is important.
-%    Upload your code to GitHub and receive feedback from experienced peers.
-%    Review your peers' work yourself and really consider what `quality' actually means
-%    and what `good' source code looks like.
-%    Debate, argue, and question others about it ---
-%    an open and sustained discourse is an excellent way to learn ---
-%    for both beginners and adepts!''
-%\end{marginquote}
-\marginpicture{flavour_pic}{
-    The \emph{Arduino} is an open-source prototyping platform that makes designing and developing interfaces fun \& easy.}
+
 \section*{Introduction}
 
-In this assignment, you are required to design and prototype a novel game controller device.
-Your prototype should function as an input device for \textbf{either}
-one of the games being developed by students on the BA Digital Games course; \textbf{or}
-the game you developed in COMP130 last semester.
-Your prototype should use a hardware platform such as \emph{Arduino} or \emph{Raspberry~Pi} etc,
-to convert user actions into game inputs.
+\begin{marginquote}
+  ``Individuals and Interactions over Processes and Tools''
+  
+  ``Working Software over Comprehensive Documentation''
+  
+  ``Customer Collaboration over Contract Negotiation''
+  
+  ``Responding to Change over Following a Plan''
+    
+    --- Agile Manifesto
+\end{marginquote}
+\marginpicture{MakeyMakey.jpg}{
+    The \emph{MaKey~MaKey} allows a multitude of materials to be used to create videogame controllers.
+}
 
-%Computing for Games combines technical and creative skills in equal parts.
-%All of your assignments involve a mixture of the two;
-%in this assignment the emphasis is more on creativity.
-%You will build upon the technical skills you have learned so far,
-%combined with your own creativity and innovation,
-%to produce a unique creative artefact.
+In this assignment, you will produce a journal detailing your research on the principles of computing.
+In addition to your individual journal, as a group you will create a community wiki to collect and discuss your findings.
 
-This assignment is formed of several parts.
+Familiarity with the scientific literature is extremely helpful for the computing professional,
+both to understand the seminal works that lay the foundations of the field,
+and to keep abreast of recent developments at the cutting edge.
+Games technology is a fast-moving field, and keeping up is important.
+However scientific papers are written in a way that is sometimes daunting to newcomers,
+so it is essential to practice the skill of reading and comprehending such papers.
+Keeping a research journal is a useful way to record your thoughts
+(questions, hypotheses, connections, ideas, ...) as you explore the literature.
+
+This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Select}, as a \textbf{pair}, \textbf{one} of the contracts provided by your tutor and:
-    	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{state} which contract you will work on;
-    		\item \textbf{list} the requirements implied by the contract;
-	\end{enumerate}
-    \item \textbf{Write}, as a \textbf{pair}, a draft computer program in Python that will:
-    	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{address} the requirements implied by a contract;
-    		\item \textbf{implement} \textbf{three} algorithms for tinkering graphcs;
-	\end{enumerate}
-    \item \textbf{Write}, as a \textbf{pair}, a final computer program in Python that will:
-    	\begin{enumerate}[label=\roman*.]
+    \item \textbf{Read} at least \textbf{six} papers from the scientific literature on computing.
+    \item \textbf{Write} a draft research journal that will:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{summarise} your thoughts on each paper;
+    		\item \textbf{synthesise} what you have read into a cohesive whole.
+    	\end{enumerate}
+    \item \textbf{Write} the final version of your research journal that will:
+    	\begin{enumerate}[label=(\roman*)]
     		\item \textbf{revise} any issues raised by your tutor and/or your peers.
-	\end{enumerate}
-    \item \textbf{Present}, as an \textbf{individual}, a practical demo of the computer program to your tutor that will:
-    	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{demonstrate} your academic integrity;
-    		\item as well as \textbf{demonstrate} your \textbf{individual} programming knowledge \textbf{and} communication skills.
-	\end{enumerate}
+    	\end{enumerate}
+    \item \textbf{Edit} the community wiki to:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{share} your findings on what you have read;
+    		\item \textbf{debate} your findings with your peers.
+    	\end{enumerate}
+    \item \textbf{Discuss} your research journal with the tutor in the viva session in class.
 \end{enumerate}
 
-The summative submission has \textbf{two} parts: an electronic component and a physical component.
-Begin by forking the GitHub project at the following URL:
-\begin{center}
-\url{https://github.com/Falmouth-Games-Academy/comp140-hardware}
-\end{center}
+\subsection*{Assignment Setup}
 
-\subsection*{A. \emph{Design} a novel game controller device}
+This assignment is an \textbf{academic writing task} and \textbf{wiki task}. Fork the GitHub repository at the following URL:
 
-On GitHub, create a Markdown file (or edit \texttt{readme.md})
-defining the high concept of your controller.
-Include details of any background research you have done to assess commercial viability.
+\indent \url{https://github.com/Falmouth-Games-Academy/comp110-journal}
 
-On Trello, create a task board that defines the key requirements
-(in terms of components and user stories) of the controller.
+Use the existing directory structure and, as required, extend this structure with sub-directories.
 
-\textbf{Formative submission:} Arrange a meeting with your tutor to discuss your concept and task board.
+Modify the \texttt{.gitignore} to the defaults for \textbf{TeX}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
-\subsection*{B. \emph{Build} and  \emph{integrate} a prototype of your game controller}
+\subsection*{Part A}
 
-You will build your prototype controller over a period of \textbf{4 weeks} utilising a \textbf{fast}, \textbf{iterative} development process.
-Each week should see a vast \textbf{improvement} in the quality of design and development working towards a \textbf{shippable product} to demo in the fourth week. that is, a prototype which does not have any major flaws or half-finished features that prevent it from being tested, and that can be used (even if lacking some features) as a controller in the game.
+No separate submission is required for Part~A, however it is a prerequisite for completing the other parts.
 
-Use this forked repository to store any digital artefacts (including but not limited to
-design sketches, photographs, art assets, source code, electronic circuit designs).
+To complete part A, read at least the six papers suggested in class.
+These six papers are intended to set the themes for your journal and the wiki;
+you are expected also to find and read other papers in the same areas as the six suggested.
 
-\subsection*{C. \emph{Heuristic analysis} by peers}
+\subsection*{Part B}
 
-Bring your prototype controller to the session where it will be subject to heuristic analysis by your peers in class.
+Part B consists of \textbf{multiple formative submissions}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
 
-For submission, you must also prepare a short \textbf{video demonstration} of your controller.
-The maximum length of this video is \textbf{two minutes};
-longer videos will be subject to penalties in line with the course word count policy available on LearningSpace.
-In your video, briefly demonstrate the functionality of the controller.
-You may narrate if you wish, but it is not required.
+To complete Part B, write your research journal.
+It is recommended that you write your journal entry in the \texttt{readme.md} file within your forked repository,
+but you may use LaTeX if you prefer.
+Commit your work to your GitHub repository to be signed off during personal tutor meetings,
+at least once every three weeks during semester~1.
 
-\textbf{Formative submission:} Participate in the heuristic analysis session.
+You will receive \textbf{immediate informal feedback}.
 
-\subsection*{Summative submission (electronic)}
+\subsection*{Part C}
 
-Create a zip file containing the following:
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis
+using the criteria listed in the marking rubric at the end of this document.
 
-\begin{itemize}
-\item A markdown file named \texttt{readme.md} giving a high-level overview of the project,
-    including your concept and background research from part~A.
-\item Screenshots of your Trello task board from part~A.
-\item All source code and other digital artefacts created for part~B.
-    You should include source code files or snippets demonstrating the integration of your controller into the game,
-    but you do \textbf{not} need to provide the entire source code for the game.
-\item The video demonstration produced for part~C, compressed in AVI or MP4 format.
-\end{itemize}
+To complete Part C, revise your report from Part~B to take into account any feedback you have received so far.
 
-The recommended way to produce this zip file is to check all of the above into your GitHub repository
-throughout the course of the project,
-and then use the ``Download Zip'' function on the GitHub website.
+Compress your \texttt{readme.md} file, along with any required images or other external files,
+into a \texttt{.zip} file and upload it to LearningSpace.
+Alternatively, if you have used LaTeX, upload a \texttt{.pdf} file of your journal to LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.zip} or \texttt{.pdf} file.
 
-\textbf{Material not included in the zip file will not be marked},
-even if it is available online, and even if tutors have seen it in class.
-Please ensure that all material you want the markers to consider is included in your submission.
+You will receive \textbf{formal feedback} three weeks after the final deadline.
 
-Upload your zip file to the appropriate submission queue on LearningSpace.
+\subsection*{Part D}
 
-\subsection*{Summative submission (physical)}
+Part D consists of \textbf{multiple formative submissions}. This work is \textbf{individual} but with a \textbf{collaborative} component, and will be assessed on a \textbf{criterion-referenced} basis.
+The criterion used to assess this part relates to the quantity and quality of your contributions.
 
-Hand in your prototype controller to the Academic Office in Tremough House.
-Pack your controller in a suitably sized box, with your student number
-and ``BSc Computing for Games -- COMP140 Assignment 1'' written clearly on it.
+To complete Part D, contribute to the wiki at the following URL:
 
-Your prototype will be returned to you after marking,
-however any components that are property of the university (e.g.\ Arduinos \& RaspberryPi boards)
-will first be removed.
-Thus please do not glue, solder or otherwise permanently affix anything to them.
+\url{https://github.com/Falmouth-Games-Academy/comp110-journal/wiki}
 
-\begin{marginquote}
-    ``Classic engineering relies on a strict process for getting from A to B; the Arduino Way delights in the possibility of getting lost on the way and finding C instead.``
-    
-   
-    --- Massimo Banzi - Co-founder of Arduino
-\end{marginquote}
+Please ensure that you are editing the wiki for the \texttt{Falmouth-Games-Academy} repository,
+and \textbf{not} the wiki for your fork of the repository.
+
+During your personal tutor meetings, make your tutor aware of your contributions to the wiki.
+
+You will receive \textbf{immediate informal feedback} as well as \textbf{ongoing peer feedback}.
+
+\subsection*{Part E}
+
+Part E consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part E, bring the final version of your research journal to the viva session in class.
+Be ready to discuss your work with your tutor.
+
+You will receive \textbf{immediate informal feedback}.
 
 \section*{Additional Guidance}
 
-Falmouth University is nationally and internationally renowned as an arts institution.
-Despite the fact that you are studying for a Bachelor of Science degree in a technical discipline,
-you are still expected to strive for the same level of \textbf{innovation and creative flair}
-as your fellow students in other departments.
-All assignments on this course involve a mix of technical and creative activities;
-this assignment is more heavily weighted towards the creative than the assignments you have completed thus far.
-On this assignment, a competent execution of an unimaginative idea is unlikely to achieve higher than a C grade overall,
-as opposed to an imperfect execution of a unique and ambitious concept
---- bear this in mind when working on your design.
-One approach to promoting creativity is
-\textbf{divergent thinking}: generation of ideas by exploring many possible solutions.
-Often the most interesting ideas are \textbf{subversive}: they deliberately go against the
-accepted or most obvious solution
+One paper will be suggested in class every two weeks; this is the bare minimum that you should read.
+You should also follow up some of the prior work referenced in these papers,
+as well as subsequent work that references them.
+As much as possible you should focus your reading on peer-reviewed scholarly sources reporting primary research:
+articles in scientific workshops, conferences, journals, and some books or book chapters.
+Other sources tend to be less rigorous, and should be used only for background information
+or in cases where their use can be convincingly justified.
 
-The history of video games is littered with failed peripherals which consumers simply did not want,
-which were perceived as expensive gimmicks rather than legitimate enhancements to gameplay.
-Your creativity should be balanced by \textbf{commercial awareness}:
-your design should be informed by your research into products that have succeeded and failed
-in the past, and what underexploited niches exist in the present.
-An A$^*$ project would be a highly divergent idea, but one that has clear commercial viability.
-Do not be too discouraged if you fall short of this: this is a tall order even for the professionals!
+A common pitfall is to focus too much on summarising the content of the papers you have read.
+For higher marks you need to demonstrate \textbf{insight} into what you have read:
+forming inferences and analyses beyond what is written in the paper.
+Some questions you might ask yourself are:
+Why is the paper significant and/or influential?
+Why did the researchers choose the approach that they did?
+Is there anything counterintuitive or surprising in the paper?
+Do you disagree with any of the assumptions or claims it makes?
+Does the paper suggest any further research questions?
 
-We have given you some of the materials you need: an Arduino and other useful components.
-You will need to add your own materials to produce a \textbf{functional} physical prototype.
-A ``Blue Peter'' style prototype made from household items is fine,
-as is something made out of modelling clay, construction toys etc.
-However you should still choose your materials carefully, as overly flimsy construction may
-lose you marks on the functionality criterion.
+A related pitfall is to structure the journal as a sequence of disconnected entries.
+Instead aim to \textbf{synthesise} multiple papers into a cohesive whole,
+drawing connections between works by different authors.
+Forming a holistic picture of a field is much more valuable than simply understanding individual works.
 
-You may also wish to connect electronic components such as LEDs, buzzers, photoresistors etc to the Arduino,
-or even use a different, more flexible hardware platform such as RaspberryPi.
-However you are discouraged from spending large sums of money on extra hardware,
-and doing so is \textbf{not required} to achieve a high mark.
-If you choose to go down this route,
-it is possible to purchase an RaspberryPi and other useful peripheral online for 
-around the price of a textbook (\textsterling 20 -- \textsterling 30).
+The wiki is primarily intended to become a useful shared resource for the cohort.
+As such, students are expected to direct themselves and their peers in populating, structuring and editing the wiki.
+If appropriate, you may copy and paste material from your individual journal into the wiki.
+However note that a wiki is not a piece of academic writing
+and thus will tend to have a less formal tone than you should be aiming for in your journal.
+Edits may be required to ensure a consistent tone for the wiki.
 
-You should aim to demonstrate a high level of \textbf{sophistication}
-in the technical execution of your prototype.
-An important part of sophistication is having the insight to choose the right tool for the job:
-if a simpler technique fulfils all the requirements, use it.
-The use of unnecessarily complicated techniques, serving only to showcase one's own cleverness,
-is a dangerous habit for a software developer.
+You can, and indeed should, take inspiration from others' wiki contributions when working on your own journal.
+However you \textbf{must not} copy verbatim material written by others;
+doing so will be considered academic misconduct.
 
-The sole purpose of the \textbf{video demonstration} is to aid moderators and external examiners,
-who are not present for the demo session,
-in assessing your work.
-Your video does \textbf{not} need to be entertaining or highly polished:
-a smartphone or webcam video of you or someone else using the controller is sufficient.
+Most researchers write scientific papers for the intended audience of their fellow researchers.
+Thus some papers can seem impenetrable to the novice reader.
+Don't lose heart!
+Discuss the paper with your peers.
+Follow up the papers it cites to find alternative explanations.
+If all else fails, continue reading the paper --- often a difficult paragraph is clarified by something which appears later.
 
-%Your \textbf{weekly reports} should document the iterations you make on your design and prototyping.
-%The emphasis in this assignment is on creativity and rapid iteration,
-%so do not be afraid to ``go back to the drawing board'' if a prototyped idea does not work as well as anticipated.
-%However it is important to document (and learn from) your failures, even more so than your successes.
-%
-%You are strongly encouraged to make use of sketches, diagrams, photographs, screenshots
-%and short videos to document your design and prototyping process.
-%Many indie game developers use such work-in-progress material as an important tool for promotion
-%and community engagement; for example, search Twitter for the hashtag \texttt{\#screenshotsaturday}.
-%Videos should ideally be short (5--30 second) demonstrations of functions of your prototype;
-%you may narrate if you wish, but it is not required.
-
-\begin{marginquote}
-    ``The first 90 percent of the code accounts for the first 90 percent of the development time.
-    
-    ``The remaining 10 percent of the code accounts for the other 90 percent of the development time.''
-    
-    --- Tom Cargill
-    
-    \marginquoterule
-    
-    ``Hofstadter's Law:
-    
-    ``It always takes longer than you expect, even when you take into account Hofstadter's Law.''
-    
-    --- Douglas Hofstadter
-\end{marginquote}
-
-\section*{Additional Resources}
+\section*{FAQ}
 
 \begin{itemize}
-    \item Wilkinson, K. and Petrich, M. (2014) The Art of Tinkering: Meet 150 Markers Working at the Intersection of Art, Science \& Technology. Weldon Owen: London.
-    \item Alicia Gibb. Building Open Source Hardware: DIY Manufacturing for Hackers and Makers. Addison Wesley, 2014. 
-    \item Jeremy Blum. Exploring Arduino: Tools and Techniques for Engineering Wizardry. John Wiley, 2013. 
-    \item Kelly, K. (2014) Cool Tools: A Catalogue of Possibilities. Cool Tools.
-    \item Hatch, M. (2013) The Maker Movement Manifesto: Rules for Innovation in the New World of Creators, Hackers, and Tinkerers. McGraw Hill: New York.
-    \item \url{http://arduino.cc}
-    \item \url{https://vimeo.com/18539129} Arduino The Documentary (2010)
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on LearningSpace. Please examine the assignment area where you located this document.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
 \end{itemize}
 
+%\section*{Additional Resources}
+%
+%\begin{itemize}
+%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
+%    \item http://agilemanifesto.org/
+%\end{itemize}
+
 \begin{markingrubric}
-    \firstcriterion{Iterative development process}{Threshold \par 5\% + 5\%}
-        \gradespan{2}{\fail There is little or no evidence of an iterative development process and no improvement over time in regards to the quality of the design and build of the prototype. }
-        \gradespan{2}{A `potentially shippable' prototype is produced at the end of development period.
-            \par There is evidence of a `reasonable' iterative development process but the prototype suffers from 'lock in' in regards to the original concept.}
-        \gradespan{2}{A `potentially shippable' prototype is produced at the end of the development period.
-            \par The project has benefitted from an iterative development process and many improvement have been made to the original concept}
-    \criterion{Design of the solution}{15\%}
-        \grade\fail User stories are not provided, or the design does not correspond to the user stories.
-        \grade Few user stories are distinguishable and easily measured.
-            \par The correspondence between design and user stories is tenuous.
-        \grade Some user stories are distinguishable and easily measured.
-            \par The design somewhat corresponds to the user stories.
-        \grade Most user stories are distinguishable and easily measured.
-            \par The design corresponds to the user stories.
-        \grade Nearly all user stories are distinguishable and easily measured.
-            \par The design clearly corresponds to the user stories.
-        \grade All user stories are distinguishable and easily measured.
-            \par The design clearly and comprehensively corresponds to the user stories.
-    \criterion{Commercial awareness}{10\%}
-        \grade\fail No commercial awareness is demonstrated.
-        \grade Emerging commercial awareness is demonstrated.
-            \par There is no evidence of market research.
-        \grade Some commercial awareness is demonstrated.
-            \par Market research is present, but with significant gaps.
-        \grade Much commercial awareness is demonstrated.
-            \par Market research is extensive, but with some gaps.
-        \grade Significant commercial awareness is demonstrated.
-            \par Market research is comprehensive.
-        \grade Exemplary commercial awareness is demonstrated.
-            \par Market research is comprehensive and insightful.
-    \criterion{Innovation and creative flair}{30\%}
-        \grade\fail Demonstrates no evidence of innovation and/or creativity.
-        \grade Demonstrates evidence of emerging innovation and/or creativity.
-            \par The solution is purely derivative of existing products.
-            \par There is no evidence of divergent thinking.
-        \grade Demonstrates evidence of progressing innovation and/or creativity.
-            \par The solution is mostly derivative, with some attempts at innovation.
-            \par There is evidence of an attempt at divergent thinking.
-        \grade Demonstrates evidence of partial mastery of innovative and creative practice.
-            \par The solution is an interesting and somewhat innovative product.
-            \par There is some evidence of divergent thinking.
-        \grade Demonstrates some evidence of mastery of innovative and creative practice.
-            \par The solution is a novel and innovative product.
-            \par There is much evidence of divergent thinking.
-        \grade Demonstrates much evidence of mastery of innovative and creative practice.
-            \par The solution is a unique and innovative product.
-            \par There is significant evidence of divergent thinking.
-    \criterion{Functionality of physical prototype}{10\%}
-        \grade\fail A physical prototype is not produced, or the prototype is completely non-functional.
-        \grade The physical prototype is barely functional.
-            \par There are serious technical and/or constructional flaws.
-        \grade The physical prototype is somewhat functional.
-            \par There are obvious technical and/or constructional flaws.
-        \grade The physical prototype is mostly functional.
-            \par There are minor technical and/or constructional flaws.
-        \grade The physical prototype is functional.
-            \par There are superficial technical and/or constructional flaws.
-        \grade The physical prototype is functional.
-            \par The technical execution and physical construction are flawless.
-    \criterion{Sophistication: \par Software \par Electronics \par Physical construction}{20\%}
-        \grade\fail The solution lacks even a basic level of sophistication in any of the three areas.
-        \grade The solution is basic and unsophisticated in all three areas.
-            \par Little insight has been demonstrated in any area.
-        \grade The solution is moderately sophisticated in one of the areas, but lacking in the other two.
-            \par Emerging insight has been demonstrated in at least one of the areas.
-        \grade The solution is moderately sophisticated in two of the noted areas, but lacking in the third.
-            \par Much insight has been demonstrated in at least one of the areas.
-        \grade The solution combines somewhat sophisticated software, electronics and physical construction.
-            \par Significant insight has been demonstrated in at least two of these areas.
-        \grade The solution combines highly sophisticated software, electronics and physical construction.
-            \par Exemplary insight has been demonstrated in all three areas.
-    \criterion{Professional practice}{5\%}
-        \grade\fail GitHub has not been used.
-        \grade Material has only been checked into GitHub a few times before the deadline.
-        \grade Material has been checked into GitHub at least once per week.
-        \grade Material has been checked into GitHub several times per week.
-        \grade Material has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-        \grade Material has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is evidence of engagement with peers (e.g.\ voluntary code review).
+%
+    \firstcriterion{Formative submissions}{Threshold 5\%}
+        \gradespan{5}{\fail Formative submissions for Part B have been signed off less frequently than once every three weeks.}
+        \grade 		Formative submissions for Part B have been signed off at least once every three weeks.
+%
+    \criterion{Participation in viva}{Threshold 5\%}
+        \gradespan{5}{\fail The student did not participate in the viva, or did not submit sufficient work to discuss in the viva.}
+        \grade 		The student participated in the viva.
+%
+    \criterion{Breadth of reading}{15\%}
+        \grade\fail	Fewer than the six suggested articles are referenced.
+        \grade		All six of the suggested articles are referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further six sources are also referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further 12 scholarly articles are also referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further 18 scholarly articles are also referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further 24 scholarly articles are also referenced.
+%
+    \criterion{Depth of insight}{20\%}
+        \grade\fail No insight is demonstrated.
+        \par		Papers are merely paraphrased.
+        \grade		Little insight is demonstrated.
+        \par		Papers are summarised in the student's own words.
+        \grade		Some insight is demonstrated.
+        \par		Attempts are made at discussion beyond summary.
+        \grade		Much insight is demonstrated.
+        \par		Discussion is inferential in nature.
+        \grade		Considerable insight is demonstrated.
+        \par		Discussion is analytical in nature.
+        \grade		Significant insight is demonstrated.
+        \par		Discussion is analytical and evaluative in nature.
+%
+    \criterion{Specificity, verifiability \& accuracy of claims}{10\%}
+        \grade\fail 	No citations to evidence to claims.
+        \par 		Substantial errors and/or misinterpretations.
+        \grade 		Few claims have a clear source of evidence.
+        \par 		Significant errors and/or misinterpretations.
+        \grade 		Some claims have a clear source of evidence.
+        \par 		Many errors and/or misinterpretations.
+        \grade 		Many claims have a clear source of evidence.
+        \par 		Some errors and/or misinterpretations.
+        \grade 		Most claims have a clear source of evidence.
+        \par 		Few errors and/or misinterpretations.
+        \grade 		All claims have a clear source of evidence.
+        \par 		Almost no errors and/or misinterpretations.
+%
+    \criterion{Synthesis}{20\%}
+        \grade\fail No connections are made between different sources.
+        \grade		Superficial connections are made between different sources.
+        \grade		Basic connections are made between different sources.
+        \grade		Reasonable connections are made between different sources.
+        \par		Connections are inferential in nature.
+        \grade		Strong connections are made between different sources.
+        \par		Connections are analytical in nature.
+        \grade		Strong connections are made between different sources.
+        \par		Connections are analytical and evaluative in nature.
+%
+    \criterion{Community engagement}{15\%}
+        \grade\fail 	No contribution has been made to the wiki.
+        \grade 		A few minor contributions have been made to the wiki.
+        \grade 		Some contributions have been made to the wiki.
+        \par		The student has made some attempt to engage in community discourse.
+        \grade 		Many contributions have been made to the wiki.
+        \par		Contributions are well-reasoned.
+        \par		The student has actively engaged in the community discourse.
+        \grade 		A significant number of contributions have been made to the wiki.
+        \par		Contributions are well-reasoned and academically sound.
+        \par		The student has participated in steering the community discourse.
+        \grade 		An extensive number of contributions have been made to the wiki.
+        \par		Contributions are well-reasoned and academically sound.
+        \par		The student has played a key role in driving the community discourse.
+%
+    \criterion{Appropriateness of spelling \& grammar}{5\%}
+        \grade\fail 	Substantial spelling and/or grammar errors.
+        \grade 		Many spelling and/or grammar errors.
+        \grade 		Some spelling and/or grammar errors.  
+        \grade 		Few spelling and/or grammar errors.
+        \grade 		Almost no spelling and/or grammar errors.
+        \grade 		No spelling or grammar errors.
+%
+    \criterion{Appropriateness of journal structure}{5\%}
+        \grade\fail 	There is no structure, or the structure is unclear.
+        \grade 		There is little structure.
+        \grade 		There is some structure.
+        \par 		A few sentences and paragraphs are well constructed.
+        \grade 		There is much structure.
+        \par 		Some sentences and paragraphs are well constructed.
+        \grade 		There is much structure, highlighting the key themes.
+        \par 		Most sentences and paragraphs are well constructed.
+        \grade 		There is much structure, highlighting the key themes.
+        \par 		All sentences and paragraphs are well constructed.
 \end{markingrubric}
 
 \end{document}
