@@ -1,0 +1,360 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{API Hacking}
+\author{Alcwyn Parker}
+
+\begin{document}
+
+\maketitle
+%\begin{marginquote}
+%    ``Students come into programming classes with a broad range of backgrounds ---
+%    some have experience in several programming languages, others have never programmed before in their life.
+%    
+%    Being able to engage with the community and support each other is important.
+%    Upload your code to GitHub and receive feedback from experienced peers.
+%    Review your peers' work yourself and really consider what `quality' actually means
+%    and what `good' source code looks like.
+%    Debate, argue, and question others about it ---
+%    an open and sustained discourse is an excellent way to learn ---
+%    for both beginners and adepts!''
+%\end{marginquote}
+\marginpicture{flavour_pic}{
+    \emph{ANGELINA}, by Falmouth University researcher Michael Cook, uses fifteen different APIs and web services to automatically design entire games.}
+
+\section*{Introduction}
+
+In this assignment, you are required to design and implement a component for a game.
+The component must be based on one or more \textbf{existing third-party APIs}:
+for example web services, hardware device SDKs, open-source libraries, or open dataset formats.
+Your component must be integrated into either:
+\begin{enumerate}[label=(\alph*)]
+    \item A game developed by \textbf{BA Digital Games} students (liaise with your chosen BA team before choosing this option); or
+    \item Your \textbf{COMP130} Kivy game project; or
+    \item Your \textbf{COMP150} group game project (\textbf{limit one per team}: liaise with the rest of your team before choosing this option); or
+    \item \label{item:game-opensource} An \textbf{open-source game}; or
+    \item \label{item:game-mod} A \textbf{commercial game} which has a well-established (official or community-made) modding interface that allows mods to be developed in one of the permitted languages.
+\end{enumerate}
+Whichever option you choose, you may implement your component in \textbf{C++}, \textbf{C\#}, \textbf{Python}, or a combination of these.
+Other languages may be permitted at the discretion of your tutor, if you can argue convincingly that it is appropriate for your proposed project.
+Note that options~\ref{item:game-opensource} and~\ref{item:game-mod} above are likely to be more technically challenging than the others,
+so are recommended only for those comfortable with advanced programming concepts.
+
+You may work \textbf{individually} or \textbf{in pairs}.
+This project is assessed individually, so ensure that \textbf{your individual contribution is clearly indicated}.
+
+This assignment is formed of \textbf{three} parts.
+There is a \textbf{single summative submission} via LearningSpace.
+Begin by forking the GitHub project at the following URL:
+\begin{center}
+\url{https://github.com/Falmouth-Games-Academy/comp140-api-hacking}
+\end{center}
+
+\subsection*{A. \emph{Propose} a game component}
+
+On GitHub, edit the \texttt{readme.md} file to contain a description of your proposed game component.
+Your proposal should:
+\begin{itemize}
+    \item \textbf{Identify} the game into which your component will be integrated;
+    \item \textbf{Describe} the component that will be created;
+    \item \textbf{Show} the key user stories, in the form of a Trello task board;
+    \item \textbf{Identify and justify} which technologies (implementation language, APIs, etc.) you will use.
+\end{itemize}
+Your proposal will be assessed on:
+\begin{itemize}
+    \item \textbf{Scope}:
+        is the proposed component non-trivial, but feasible given the duration of the project?
+    \item \textbf{Appropriateness of component}:
+        will the proposed component enhance the selected game?
+    \item \textbf{Appropriateness of technologies}:
+        is the choice of implementation language and APIs sensible and well-justified?
+\end{itemize}
+
+\textbf{Formative submission:} Discuss your proposal and task board with tutors in class.
+
+\subsection*{B. \emph{Implement} the component}
+
+You will build your prototype component over \textbf{three weeks}.
+You should aim to have a `potentially shippable' component at the end of each week;
+that is, a component which does not have any major flaws or half-finished features that prevent it from being tested.
+For the first two weeks, the component should be working either within the game or in a separate testing environment;
+for the final week, the component should be fully integrated into the game.
+
+Your implementation will be assessed on the criteria listed in the marking rubric.
+
+\textbf{Formative submission:} 
+Check your code into GitHub regularly (either your forked \texttt{comp140-api-hacking} repository or a branch of another appropriate repository),
+and make a pull request whenever you require assistance or feedback.
+
+\subsection*{C. \emph{Demonstrate} your component}
+
+Bring an executable of the game, with your component integrated, to the demo session in class.
+Be prepared to discuss it with tutors and peers.
+
+This part is not assessed, but you will receive feedback which will be useful to you on future projects.
+
+\textbf{Formative submission:} Participate in the demo session.
+
+\begin{marginquote}
+    ``There are two ways of constructing a software design.
+        One way is to make it so simple that there are obviously no deficiencies.
+        And the other way is to make it so complicated that there are no obvious deficiencies.''
+    
+    --- C.\ A.\ R.\ Hoare
+\end{marginquote}
+
+\subsection*{Summative submission (electronic)}
+
+Create a zip file containing the following:
+
+\begin{itemize}
+\item A markdown file named \texttt{readme.md} containing your \textbf{proposal} from part~A,
+    and any other \textbf{documentation} you feel is appropriate
+    (e.g.\ special instructions for testing the component).
+\item Screenshots of your \textbf{Trello task board} to evidence your project management.
+    and screenshots documenting any checklists or other information within your cards.
+\item All \textbf{source code} created for part~B.
+    You do \textbf{not} need to provide the entire source code for the game.
+    Any code which was \textbf{not written by you} must be \textbf{clearly identified} as such,
+    in the \texttt{readme.md} file and/or as comments in the code files themselves.
+\item A \textbf{Windows executable} version of the game with your component integrated.
+    Or, in the case of a mod for a commercial game, an executable version of the mod with clear installation instructions.
+    \textbf{Do not include copyright material which you do not have permission to redistribute}.
+\end{itemize}
+
+The recommended way to produce this zip file is to check all of the above into your GitHub repository
+throughout the course of the project,
+and then use the ``Download Zip'' function on the GitHub website.
+Any material you do not wish to upload to GitHub (e.g.\ the executable)
+must be added to the zip file manually before uploading.
+
+Upload your zip file to the appropriate submission queue on LearningSpace.
+Note that LearningSpace accepts only a single zip file per submission,
+with a maximum file size of 1GB.
+If the game executable is larger than this, contact your tutors to make alternative arrangements.
+
+\section*{Additional Guidance}
+
+Creating new software solutions from scratch is an important skill for software developers.
+However it can lead to ``reinventing the wheel'': spending much time and effort solving problems which have already been solved by others.
+Thus an equally important skill is being able to bring together existing code from different sources to produce a cohesive whole.
+Ensure that your \textbf{choice of technologies} is appropriate.
+%Your choice of implementation language may be somewhat constrained:
+%for example a component for a Unity game will need to be implemented in C\#, or in C++ using Unity's native plugin interface.
+%Depending on your proposed component, you may have a wider choice in terms of which API or APIs you use.
+Read up on the alternatives to determine which is the best fit for your proposed component.
+
+Falmouth University is nationally and internationally renowned as an arts institution.
+Despite the fact that you are studying for a Bachelor of Science degree in a technical discipline,
+you are still expected to strive for the same level of \textbf{innovation and creative flair}
+as your fellow students in other departments.
+All assignments on this course involve a mix of technical and creative activities;
+cultivating both of these skills in tandem will stand you in good stead for a career in the games industry.
+One approach to promoting creativity is
+\textbf{divergent thinking}: generation of ideas by exploring many possible solutions.
+Often the most interesting ideas are \textbf{subversive}: they deliberately go against the
+conventional or most obvious solution.
+
+The first step in planning your implementation should be to break your proposed component down into \textbf{user stories}. 
+Your user stories should be \textbf{distinguishable} (i.e.\ there should be little overlap between them)
+and \textbf{easily measured} (i.e.\ it should be easy to tell when each user story has been implemented).
+They should also be \textbf{comprehensive}, i.e.\ the user stories should completely capture the
+desired functionality of the component, with no gaps.
+Your code will be assessed on \textbf{functional coherence}:
+how well the finished component corresponds to the user stories,
+and whether there are any obvious bugs.
+Correspondence to user stories runs both ways:
+implementing features that were not present in the design (``feature creep'')
+is just as bad as neglecting to implement features.
+
+Your code will also be assessed on \textbf{sophistication}.
+To succeed on a project of this size and complexity,
+you will need to make use of appropriate algorithms, data structures, library features, and object oriented programming concepts.
+Appropriateness to the task at hand is key, however:
+you will \textbf{not} receive credit for shoehorning a complicated solution into your program
+where a simpler one would have sufficed.
+
+\textbf{Maintainability} is important in all programming projects,
+but doubly so when working in a team.
+Use \textbf{comments} liberally to improve comprehension of your code,
+and choose carefully the \textbf{names} for your files, classes, functions and variables.
+For high marks you should use a well-established commenting convention
+for \textbf{high-level documentation} of your files, classes and functions.
+The open-source tool Doxygen supports several such conventions.
+Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
+indentation, whitespace, placement of curly braces, etc.
+Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
+with values instead defined as constants together in a single place.
+%Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
+%e.g.\ by defining them in an external file read by the game on startup.
+
+\begin{marginquote}
+    ``Measuring programming progress by lines of code is like measuring aircraft building progress by weight.''
+    
+    --- Bill Gates
+\end{marginquote}
+\marginpicture{wheel}{
+    Don't reinvent this.
+}
+\section*{Additional Resources}
+
+\begin{itemize}
+    \item M. G. Friberger et al. (2013) Data Games. Proceedings of Procedural Content Generation Workshop. FDG 2013.
+        \url{http://julian.togelius.com/Friberger2013Data.pdf}
+    \item Cook, M. and Colton, S. (2014) Ludus Ex Machina: Building a 3D game designer that competes alongside humans. Proceedings of ICCC 2014.
+        \url{http://ccg.doc.gold.ac.uk/papers/cook_iccc2014.pdf}
+    \item \url{http://docs.unity3d.com/Manual/NativePlugins.html}
+\end{itemize}
+
+\begin{markingrubric}
+    \firstcriterion{Sprint reviews}{Threshold \par 5\% + 5\%}
+        \gradespan{2}{\fail None of the sprints are delivered, or no `reasonable' peer reviews are submitted.}
+        \gradespan{2}{A `potentially shippable' component is produced at the end of at least one sprint.
+            \par A `reasonable' review of at least one peer's work is provided in at least one of the review sessions.}
+        \gradespan{2}{A `potentially shippable' component is produced at the end of all three sprints.
+            \par A `reasonable' review of at least one peer's work is provided in each of the review sessions.}
+%
+    \criterion{Choice of technologies (implementation language and APIs)}{10\%}
+        \grade\fail The choice of technologies is inappropriate.
+            \par Justification is inappropriate or not provided.
+        \grade The choice of technologies is appropriate.
+            \par Little appropriate justification is provided.
+        \grade The choice of technologies is appropriate.
+            \par Justification is appropriate, but no alternatives have been considered.
+        \grade The choice of technologies is appropriate.
+            \par Justification is appropriate, and alternatives have been considered.
+        \grade The choice of technologies is highly appropriate.
+            \par Justification is strong, showing a working knowledge of the chosen technology and its alternatives.
+        \grade The choice of technologies is highly appropriate.
+            \par Justification is exemplary, showing insight into the chosen technology and its alternatives.
+%
+    \criterion{Design of the solution}{10\%}
+        \grade\fail User stories are not provided, or the design does not correspond to the user stories.
+        \grade Few user stories are distinguishable and easily measured.
+            \par The correspondence between design and user stories is tenuous.
+        \grade Some user stories are distinguishable and easily measured.
+            \par The design somewhat corresponds to the user stories.
+        \grade Most user stories are distinguishable and easily measured.
+            \par The design corresponds to the user stories.
+        \grade Nearly all user stories are distinguishable and easily measured.
+            \par The design clearly corresponds to the user stories.
+        \grade All user stories are distinguishable and easily measured.
+            \par The design clearly and comprehensively corresponds to the user stories.
+%
+    \criterion{Functional coherence}{10\%}
+        \grade\fail No user stories have been implemented.
+            \par There are critical bugs that prevent the code from compiling or running.
+        \grade Few user stories have been implemented.
+            \par There are many obvious and serious bugs.
+        \grade Some user stories have been implemented.
+            \par There are some obvious bugs.
+        \grade Many user stories have been implemented.
+            \par There is some evidence of feature creep.
+            \par There are few obvious bugs.
+        \grade Almost all user stories have been implemented.
+            \par There is little evidence of feature creep.
+            \par There are some minor bugs.
+        \grade All user stories have been implemented.
+            \par There is no evidence of feature creep.
+            \par Bugs, if any, are purely cosmetic and/or superficial.
+%
+    \criterion{Sophistication}{20\%}
+        \grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
+            \par APIs are used inappropriately.
+            \par No attempt to structure the program is evident (e.g. one monolithic source file).
+        \grade Little insight into the appropriate use of programming constructs is evident from the source code.
+            \par APIs are used somewhat appropriately.
+            \par The program structure is poor.
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par APIs are used mostly appropriately.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par APIs are used appropriately, with some mastery evident.
+            \par The program structure is appropriate.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par APIs are used appropriately, with much mastery evident.
+            \par The program structure is effective. There is high cohesion and low coupling.
+        \grade Exemplary insight into the appropriate use of programming constructs is evident from the source code.
+            \par APIs are used appropriately, with exemplary mastery evident.
+            \par The program structure is very effective. There is high cohesion and low coupling.
+%
+    \criterion{Maintainability}{20\%}
+        \grade\fail There are no comments, or comments are misleading.
+            \par Most variable names are unclear or inappropriate.
+            \par Code formatting hinders readability.
+        \grade The code is only sporadically commented, or comments are unclear.
+            \par Some identifier names are unclear or inappropriate.
+            \par Code formatting is inconsistent or does not aid readability.
+        \grade The code is well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par An attempt has been made to adhere to a consistent formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to a consistent formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The code is reasonably well commented, with some Doxygen-compatible module documentation.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to a consistent formatting style.
+             \par There is no obvious duplication of code or of literal values. %Some literal values can be easily ``tinkered''. 
+        \grade The code is very well commented, with comprehensive Doxygen-compatible module documentation.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a consistent formatting style.
+             \par There is no obvious duplication of code or of literal values. %Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
+%
+    \criterion{Innovation and creative flair}{10\%}
+        \grade\fail Demonstrates no evidence of innovation and/or creativity.
+        \grade Demonstrates evidence of emerging innovation and/or creativity.
+            \par The solution is purely derivative of existing products.
+            \par There is no evidence of divergent thinking.
+        \grade Demonstrates evidence of progressing innovation and/or creativity.
+            \par The solution is mostly derivative, with some attempts at innovation.
+            \par There is evidence of an attempt at divergent thinking.
+        \grade Demonstrates evidence of partial mastery of innovative and creative practice.
+            \par The solution is an interesting and somewhat innovative product.
+            \par There is some evidence of divergent thinking.
+        \grade Demonstrates some evidence of mastery of innovative and creative practice.
+            \par The solution is a novel and innovative product.
+            \par There is much evidence of divergent thinking.
+        \grade Demonstrates much evidence of mastery of innovative and creative practice.
+            \par The solution is a unique and innovative product.
+            \par There is significant evidence of divergent thinking.
+%
+    \criterion{Portability and navigability}{5\%}
+        \grade\fail Game will not execute at all on another machine for reasons related to code portability which cannot be fixed easily due to its poor structure.
+            \par The provided template has not been followed.
+        \grade There were challenges executing the game, but these were resolvable.
+            \par The directory structure inside the submitted zip file is unclear.
+            \par The provided template has not been followed.
+        \grade Several portability issues are present.
+            \par The directory structure inside the submitted zip file is somewhat confusing.
+            \par The provided template has mostly been followed.
+        \grade Some portability issues are present.
+            \par The directory structure inside the submitted zip file is adequate.
+            \par The provided template has been followed.
+        \grade Few portability issues are present.
+            \par The directory structure inside the submitted zip file is mostly sensible.
+            \par The provided template has been followed.
+        \grade Almost no portability issues are present.
+            \par The directory structure inside the submitted zip file is sensible.
+            \par The provided template has been followed.
+%
+    \criterion{Use of version control}{5\%}
+        \grade\fail GitHub has not been used.
+        \grade Material has only been checked into GitHub a few times before the deadline.
+        \grade Material has been checked into GitHub at least once per sprint.
+        \grade Material has been checked into GitHub several times per sprint.
+        \grade Material has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+        \grade Material has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of engagement with peers (e.g.\ voluntary code review).
+\end{markingrubric}
+
+\end{document}
