@@ -7,8 +7,8 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Research Journal --- Computing}
-\author{Dr Ed Powley}
+\title{Hacking }
+\author{Alcwyn Parker}
 
 \begin{document}
 
@@ -17,164 +17,112 @@
 \section*{Introduction}
 
 \begin{marginquote}
-  ``Individuals and Interactions over Processes and Tools''
-  
-  ``Working Software over Comprehensive Documentation''
-  
-  ``Customer Collaboration over Contract Negotiation''
-  
-  ``Responding to Change over Following a Plan''
-    
-    --- Agile Manifesto
+Hacker definition: ``A person who enjoys exploring the details of programmable systems and stretching their capabilities, as opposed to most users, who prefer to learn only the minimum necessary.''
+
+--- Jargon File
+
 \end{marginquote}
-\marginpicture{MakeyMakey.jpg}{
-    The \emph{MaKey~MaKey} allows a multitude of materials to be used to create videogame controllers.
+\marginpicture{flavour_pic}{
+    A twitterbot sorting a picture by its pixels.
 }
 
-In this assignment, you will produce a journal detailing your research on the principles of computing.
-In addition to your individual journal, as a group you will create a community wiki to collect and discuss your findings.
+In this assignment, you are required to design and prototype a novel game controller. Your prototype should function as an input device for either one of the games being developed by students on the BA Digital Games course; or the game you developed in COMP130 last semester. Your prototype should use a hardware platform such as Arduino or Raspberry Pi etc, to convert user actions into game inputs. 
 
-Familiarity with the scientific literature is extremely helpful for the computing professional,
-both to understand the seminal works that lay the foundations of the field,
-and to keep abreast of recent developments at the cutting edge.
-Games technology is a fast-moving field, and keeping up is important.
-However scientific papers are written in a way that is sometimes daunting to newcomers,
-so it is essential to practice the skill of reading and comprehending such papers.
-Keeping a research journal is a useful way to record your thoughts
-(questions, hypotheses, connections, ideas, ...) as you explore the literature.
+Computing for games embraces the core values of the hacker movement.  Experimentation, ingenuity and creativity are at the heart of everything we do. Custom game controllers are the perfect place to flex your creative flare and problem solving skills, whilst gaining invaluable experience working with hardware. 
 
-This assignment is formed of several parts:
+This assignment is formed of several components:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Read} at least \textbf{six} papers from the scientific literature on computing.
-    \item \textbf{Write} a draft research journal that will:
-    	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{summarise} your thoughts on each paper;
-    		\item \textbf{synthesise} what you have read into a cohesive whole.
-    	\end{enumerate}
-    \item \textbf{Write} the final version of your research journal that will:
-    	\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Select}, as a \textbf{pair}, \textbf{one} of the contracts provided by your tutor and:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{state} which contract you will work on;
+    		\item \textbf{list} the requirements implied by the contract;
+	\end{enumerate}
+    \item \textbf{Write}, as a \textbf{pair}, a draft computer program in Python that will:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{address} the requirements implied by a contract;
+    		\item \textbf{implement} \textbf{three} algorithms for tinkering graphcs;
+	\end{enumerate}
+    \item \textbf{Write}, as a \textbf{pair}, a final computer program in Python that will:
+    	\begin{enumerate}[label=\roman*.]
     		\item \textbf{revise} any issues raised by your tutor and/or your peers.
-    	\end{enumerate}
-    \item \textbf{Edit} the community wiki to:
-    	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{share} your findings on what you have read;
-    		\item \textbf{debate} your findings with your peers.
-    	\end{enumerate}
-    \item \textbf{Discuss} your research journal with the tutor in the viva session in class.
+	\end{enumerate}
+    \item \textbf{Present}, as an \textbf{individual}, a practical demo of the computer program to your tutor that will:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{demonstrate} your academic integrity;
+    		\item as well as \textbf{demonstrate} your \textbf{individual} programming knowledge \textbf{and} communication skills.
+	\end{enumerate}
 \end{enumerate}
 
 \subsection*{Assignment Setup}
 
-This assignment is an \textbf{academic writing task} and \textbf{wiki task}. Fork the GitHub repository at the following URL:
+This assignment is a \textbf{pair programming task}. Fork the GitHub repository at:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp110-journal}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp120-tinkering-graphics}
 
-Use the existing directory structure and, as required, extend this structure with sub-directories.
+Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{TeX}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+Modify the \texttt{.gitignore} to the defaults for \textbf{Python}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
 \subsection*{Part A}
 
-No separate submission is required for Part~A, however it is a prerequisite for completing the other parts.
+Part A consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. 
 
-To complete part A, read at least the six papers suggested in class.
-These six papers are intended to set the themes for your journal and the wiki;
-you are expected also to find and read other papers in the same areas as the six suggested.
+To complete Part A, write about your contract in the \texttt{readme.md} document.  Show this to your tutor in-class.  If acceptable, this will be signed-off. 
+
+You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 \subsection*{Part B}
 
-Part B consists of \textbf{multiple formative submissions}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+Part B is a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
-To complete Part B, write your research journal.
-It is recommended that you write your journal entry in the \texttt{readme.md} file within your forked repository,
-but you may use LaTeX if you prefer.
-Commit your work to your GitHub repository to be signed off during personal tutor meetings,
-at least once every three weeks during semester~1.
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
 
-You will receive \textbf{immediate informal feedback}.
+To complete Part B, prepare draft versions of the computer programs. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled peer-review session. Then, attend the scheduled peer-review session.
+
+You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
 
 \subsection*{Part C}
 
-Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis
-using the criteria listed in the marking rubric at the end of this document.
+Part C is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
 
-To complete Part C, revise your report from Part~B to take into account any feedback you have received so far.
+To complete Part C, revise the computer program based on the feedback you have received. Then, upload it to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
 
-Compress your \texttt{readme.md} file, along with any required images or other external files,
-into a \texttt{.zip} file and upload it to LearningSpace.
-Alternatively, if you have used LaTeX, upload a \texttt{.pdf} file of your journal to LearningSpace.
-Note that LearningSpace will only accept a single \texttt{.zip} or \texttt{.pdf} file.
-
-You will receive \textbf{formal feedback} three weeks after the final deadline.
+You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
 
 \subsection*{Part D}
 
-Part D consists of \textbf{multiple formative submissions}. This work is \textbf{individual} but with a \textbf{collaborative} component, and will be assessed on a \textbf{criterion-referenced} basis.
-The criterion used to assess this part relates to the quantity and quality of your contributions.
+Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
 
-To complete Part D, contribute to the wiki at the following URL:
+\begin{enumerate}[label=(\alph*)]
+	\item Enough work is available to hold a meaningful discussion;
+	\item Clear evidence of programming knowledge \textbf{and} communication skills;
+	\item No breaches of academic integrity.
+\end{enumerate}
 
-\url{https://github.com/Falmouth-Games-Academy/comp110-journal/wiki}
+To complete Part D, prepare a practical demonstration of the computer programs. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session.
 
-Please ensure that you are editing the wiki for the \texttt{Falmouth-Games-Academy} repository,
-and \textbf{not} the wiki for your fork of the repository.
-
-During your personal tutor meetings, make your tutor aware of your contributions to the wiki.
-
-You will receive \textbf{immediate informal feedback} as well as \textbf{ongoing peer feedback}.
-
-\subsection*{Part E}
-
-Part E consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
-
-To complete Part E, bring the final version of your research journal to the viva session in class.
-Be ready to discuss your work with your tutor.
-
-You will receive \textbf{immediate informal feedback}.
+You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 \section*{Additional Guidance}
 
-One paper will be suggested in class every two weeks; this is the bare minimum that you should read.
-You should also follow up some of the prior work referenced in these papers,
-as well as subsequent work that references them.
-As much as possible you should focus your reading on peer-reviewed scholarly sources reporting primary research:
-articles in scientific workshops, conferences, journals, and some books or book chapters.
-Other sources tend to be less rigorous, and should be used only for background information
-or in cases where their use can be convincingly justified.
+It is critically important that you do not neglect your individual roles in the development process. Programming in pairs means that you work together on the same computer---switching between driver and navigator. It is a great opportunity to develop your technical communication skills and overcome common misconceptions about programming. It should not, however, be treated as a 'free ride'---you will get to review each others' progress. 
 
-A common pitfall is to focus too much on summarising the content of the papers you have read.
-For higher marks you need to demonstrate \textbf{insight} into what you have read:
-forming inferences and analyses beyond what is written in the paper.
-Some questions you might ask yourself are:
-Why is the paper significant and/or influential?
-Why did the researchers choose the approach that they did?
-Is there anything counterintuitive or surprising in the paper?
-Do you disagree with any of the assumptions or claims it makes?
-Does the paper suggest any further research questions?
+You are being expected to \textit{transform} and \textit{repurpose} encodings (i.e. manipulating existing pictures). However, you may create your own images if desired. When using images you have not authored yourself, the source should be noted in the GitHub README.md file. 
 
-A related pitfall is to structure the journal as a sequence of disconnected entries.
-Instead aim to \textbf{synthesise} multiple papers into a cohesive whole,
-drawing connections between works by different authors.
-Forming a holistic picture of a field is much more valuable than simply understanding individual works.
+You can and should go beyond the techniques introduced in the lectures and the Guzdial book (e.g. researching algorithms for producing or manipulating graphics). The solutions must be written in Python, and any Python frameworksmay be used. So, for example, Kivy, Pillow, PyGame, and JES submissions are acceptable.
 
-The wiki is primarily intended to become a useful shared resource for the cohort.
-As such, students are expected to direct themselves and their peers in populating, structuring and editing the wiki.
-If appropriate, you may copy and paste material from your individual journal into the wiki.
-However note that a wiki is not a piece of academic writing
-and thus will tend to have a less formal tone than you should be aiming for in your journal.
-Edits may be required to ensure a consistent tone for the wiki.
+You are not being assessed on speed or memory performance. Do not worry too much about framerate, etc.
 
-You can, and indeed should, take inspiration from others' wiki contributions when working on your own journal.
-However you \textbf{must not} copy verbatim material written by others;
-doing so will be considered academic misconduct.
+A common pitfall is poor planning or time management. Often, students underestimate how much work is involved in first learning programming concepts and then actually applying them. Programming is quite unlike other subjects in that it cannot be crammed into a last minute deluge just before a deadline. It is, therefore, very important that you begin work early and sustain a consistent pace: little and often.
 
-Most researchers write scientific papers for the intended audience of their fellow researchers.
-Thus some papers can seem impenetrable to the novice reader.
-Don't lose heart!
-Discuss the paper with your peers.
-Follow up the papers it cites to find alternative explanations.
-If all else fails, continue reading the paper --- often a difficult paragraph is clarified by something which appears later.
+The first deadline is quite close to the start of the course and not much material will have been covered by this point. Please rest assured. This first formative submission is supposed to be a simple analysis of requirements. We expect there to be errors. However, it is very important to make a start on this project so you recieve early feedback to give you some direction and to encourage you to practice your programming skills across the entire duration of the course. Ideally, you should be programming every day!
+
+The peer-review component of this work does sometimes raise alarm. However, the only way to learn how to review code is by reviewing code. Your tutor will guide you through the process and provide advice. With practice, it will become clear what is satisfactory by discussing the quality of work with your peers and your tutor during the peer review sessions. 
 
 \section*{FAQ}
 
@@ -188,111 +136,116 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
     	\item 	\textbf{Is this a mistake?} \\ 	
     		If you have discovered an issue with the brief itself, the source files are available at: \\
     		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
-    		 Please make a pull request and comment accordingly.
+    		 Please raise an issue and comment accordingly.
 \end{itemize}
 
-%\section*{Additional Resources}
-%
-%\begin{itemize}
-%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
-%    \item http://agilemanifesto.org/
-%\end{itemize}
+\section*{Additional Resources}
 
+\begin{itemize}
+    \item Guzdial, M.J . and Ericson, B. (2015) Introduction to Computing and Programming in Python: A Multimedia Approach, 4th Edition. Pearson: New York.
+    \item Martin, R.C. (2008) Clean Code: A Handbook of Agile Software Craftsmanship. Prentice Hall: New York
+    \item http://guide.agilealliance.org/guide/pairing.html
+    \item http://www.pairprogramming.co.uk/
+    \item http://www.pythontutor.com/
+\end{itemize}
+
+\rubrichead{Criteria marked with a $\ddagger$ are shared by the group. All other criteria are individual.}
 \begin{markingrubric}
 %
-    \firstcriterion{Formative submissions}{Threshold 5\%}
-        \gradespan{5}{\fail Formative submissions for Part B have been signed off less frequently than once every three weeks.}
-        \grade 		Formative submissions for Part B have been signed off at least once every three weeks.
+    \firstcriterion{Functional Coherence}{5\% $\ddagger$}
+        \grade\fail 	No algorithm has been implemented successfully.
+            \par 		The source code does not compile or there are serious logical errors.
+        \grade 		At least one algorithm has been  implemented successfully.
+            \par 		There are many obvious logical errors, more than one of which is significant.   
+        \grade 		At least two algorithms have been  implemented successfully.
+            \par 		There are several obvious logical errors, at least one of which is significant. 
+        \grade 		At least three algorithms have been  implemented successfully.
+            \par 		There are some obvious logical errors, which are not significant. 
+            \par		The brief has been satisfied.
+        \grade 		At least three algorithms have been  implemented successfully.
+            \par 		There are few obvious logical errors, which are cosmetic and/or superficial.
+            \par		The brief has been satisfied.     
+        \grade 		At least three algorithms have been  implemented successfully.
+            \par		There are no obvious logical errors.
+            \par		The brief has been satisfied.
 %
-    \criterion{Participation in viva}{Threshold 5\%}
-        \gradespan{5}{\fail The student did not participate in the viva, or did not submit sufficient work to discuss in the viva.}
-        \grade 		The student participated in the viva.
+    \criterion{Sophistication}{15\% $\ddagger$}
+        \grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
+            \par No attempt to structure the program (e.g. one monolithic function).
+        \grade Little insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is poor.
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is appropriate.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is effective. There is high cohesion and low coupling.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is very effective. There is high cohesion and low coupling.
 %
-    \criterion{Breadth of reading}{15\%}
-        \grade\fail	Fewer than the six suggested articles are referenced.
-        \grade		All six of the suggested articles are referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further six sources are also referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further 12 scholarly articles are also referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further 18 scholarly articles are also referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further 24 scholarly articles are also referenced.
+    \criterion{Maintainability}{20\% $\ddagger$}
+        \grade\fail There are no comments in the source code, or comments are misleading.
+            \par Most variable names are unclear or inappropriate.
+            \par Code formatting hinders readability.
+        \grade The source code is only sporadically commented, or comments are unclear.
+            \par Some identifier names are unclear or inappropriate.
+            \par Code formatting is inconsistent or does not aid readability.
+        \grade The source code is somewhat well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par An attempt has been made to adhere to thhe PEP-8 formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The source code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to the PEP-8 formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The source code is reasonably well commented, with Python doc-strings.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to the PEP-8 formatting style.
+             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered'' in the source code. 
+        \grade The source code is very well commented, with Python doc-strings.
+            \par All identifier names are descriptive and appropriate.
+            \par All source code adheres to the PEP-8 formatting style.
+             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  
 %
-    \criterion{Depth of insight}{20\%}
-        \grade\fail No insight is demonstrated.
-        \par		Papers are merely paraphrased.
-        \grade		Little insight is demonstrated.
-        \par		Papers are summarised in the student's own words.
-        \grade		Some insight is demonstrated.
-        \par		Attempts are made at discussion beyond summary.
-        \grade		Much insight is demonstrated.
-        \par		Discussion is inferential in nature.
-        \grade		Considerable insight is demonstrated.
-        \par		Discussion is analytical in nature.
-        \grade		Significant insight is demonstrated.
-        \par		Discussion is analytical and evaluative in nature.
+    \criterion{Creative Flair}{10\% $\ddagger$}
+        \grade\fail No creativity.
+            \par The work is a clone of an existing work with mere cosmetic alterations.
+        \grade Little creativity.
+            \par The work is derivative of existing works, with only minor alterations.
+        \grade Some creativity.
+            \par The work is derivative of existing works, demonstrating little divergent and/or subversive thinking.
+        \grade Much creativity.
+            \par The work is somewhat novel, demonstrating some divergent and/or subversive thinking.
+        \grade Considerable creativity.
+            \par The work is novel, demonstrating significant divergent and/or subversive thinking.
+        \grade Significant creativity.
+            \par The work is highly original, with strong evidence of divergent and/or subversive thinking.
 %
-    \criterion{Specificity, verifiability \& accuracy of claims}{10\%}
-        \grade\fail 	No citations to evidence to claims.
-        \par 		Substantial errors and/or misinterpretations.
-        \grade 		Few claims have a clear source of evidence.
-        \par 		Significant errors and/or misinterpretations.
-        \grade 		Some claims have a clear source of evidence.
-        \par 		Many errors and/or misinterpretations.
-        \grade 		Many claims have a clear source of evidence.
-        \par 		Some errors and/or misinterpretations.
-        \grade 		Most claims have a clear source of evidence.
-        \par 		Few errors and/or misinterpretations.
-        \grade 		All claims have a clear source of evidence.
-        \par 		Almost no errors and/or misinterpretations.
+    \criterion{Use of Version Control}{10\%}
+        \grade\fail GitHub has not been used.
+        \grade Source code has rarely been checked into GitHub.
+        \grade Source code  has been checked into GitHub at least once per week.
+            \par Commit messages are present.
+            \par There is evidence of engagement with peers (e.g.\ code review).
+        \grade Source code  has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
+        \grade Source code has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of meaningful engagement with peers (e.g.\ code review).
+        \grade Source code has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of effective engagement with peers (e.g.\ code review).
 %
-    \criterion{Synthesis}{20\%}
-        \grade\fail No connections are made between different sources.
-        \grade		Superficial connections are made between different sources.
-        \grade		Basic connections are made between different sources.
-        \grade		Reasonable connections are made between different sources.
-        \par		Connections are inferential in nature.
-        \grade		Strong connections are made between different sources.
-        \par		Connections are analytical in nature.
-        \grade		Strong connections are made between different sources.
-        \par		Connections are analytical and evaluative in nature.
-%
-    \criterion{Community engagement}{15\%}
-        \grade\fail 	No contribution has been made to the wiki.
-        \grade 		A few minor contributions have been made to the wiki.
-        \grade 		Some contributions have been made to the wiki.
-        \par		The student has made some attempt to engage in community discourse.
-        \grade 		Many contributions have been made to the wiki.
-        \par		Contributions are well-reasoned.
-        \par		The student has actively engaged in the community discourse.
-        \grade 		A significant number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has participated in steering the community discourse.
-        \grade 		An extensive number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has played a key role in driving the community discourse.
-%
-    \criterion{Appropriateness of spelling \& grammar}{5\%}
-        \grade\fail 	Substantial spelling and/or grammar errors.
-        \grade 		Many spelling and/or grammar errors.
-        \grade 		Some spelling and/or grammar errors.  
-        \grade 		Few spelling and/or grammar errors.
-        \grade 		Almost no spelling and/or grammar errors.
-        \grade 		No spelling or grammar errors.
-%
-    \criterion{Appropriateness of journal structure}{5\%}
-        \grade\fail 	There is no structure, or the structure is unclear.
-        \grade 		There is little structure.
-        \grade 		There is some structure.
-        \par 		A few sentences and paragraphs are well constructed.
-        \grade 		There is much structure.
-        \par 		Some sentences and paragraphs are well constructed.
-        \grade 		There is much structure, highlighting the key themes.
-        \par 		Most sentences and paragraphs are well constructed.
-        \grade 		There is much structure, highlighting the key themes.
-        \par 		All sentences and paragraphs are well constructed.
+    \criterion{Basic Competency Threshold}{40\%}
+        \gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
+        \gradespan{5}{Submission is timely.
+        	\par Enough work is available to hold a meaningful discussion.
+	\par Clear evidence of programming knowledge and communication skills.
+	\par Clear evidence of reflection on own performance and contribution.
+	\par Only constructive criticism of pair-programming partner is raised.
+	\par No breaches of academic integrity.}
+	
 \end{markingrubric}
 
 \end{document}
