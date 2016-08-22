@@ -7,7 +7,7 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Hacking }
+\title{Hacking Hardware}
 \author{Alcwyn Parker}
 
 \begin{document}
@@ -23,35 +23,35 @@ Hacker definition: ``A person who enjoys exploring the details of programmable s
 
 \end{marginquote}
 \marginpicture{flavour_pic}{
-    A twitterbot sorting a picture by its pixels.
+    An Arduino.
 }
 
-In this assignment, you will work as an individual, to design and prototype a novel game controller. Your prototype should function as an input device for either one of the games being developed by students on the BA Digital Games course; or the game you developed in COMP150 last semester. Your prototype should use a hardware platform such as Arduino or Raspberry Pi etc, to convert user actions into game inputs. 
+In this assignment, you will work as an individual to design a novel game controller and implement a physical prototype. Your prototype should function as an input device for either one of the games being developed by students on the BA Digital Games course; or the game that you developed in COMP150. Your prototype should use a hardware platform, such as Arduino, to convert player actions into game inputs. 
 
-Computing for games embraces the core values of the hacker movement.  Experimentation, ingenuity and creativity are at the heart of everything we do. Custom game controllers are the perfect place to flex your creative flare and problem solving skills, whilst gaining invaluable experience working with hardware. 
+Experimentation, ingenuity, and creativity are at the heart of everything that professional game developers do. To this end, building your own custom game controller is the perfect place to exercise these characteristics. However, you will also gain invaluable exposure to working with computer hardware. In recent years, there has been considerable growth in the development of new fabrication technologies, such as 3D printers. In addition, electronics, from primitive transistors to complex computer chips, have all become much cheaper. Accessibility to these tools has, therefore, unveiled an unprecedented opportunity to invent and innovate in this space. Increasingly, app developers are augmenting mobile software with new wearable devices, and so to will game developers with the advent and increasing popularity of augmented reality games.
 
-This assignment is formed of several components:
+This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Write}, a proposal for a novel game controller that:
+    \item \textbf{Write}, a proposal for a novel game controller that will:
     	\begin{enumerate}[label=\roman*.]
-		\item \textbf{assesses} the game controller market;
-    		\item \textbf{states} which game is the basis for your interface;
-    		\item \textbf{justifies} your choice of game;
-		\item \textbf{outlines} your design in detail;
+    		\item \textbf{state and justify} the game that will be the basis for your interface;
+		\item \textbf{assess} the game controller market;
+		\item \textbf{outline} an initial design in detail;
+		\item and \textbf{list} the key requirements the prototype must fulfil.
 	\end{enumerate}
-    \item \textbf{Implement}, three physical prototypes which:
+    \item \textbf{Implement} three physical prototypes which will:
     	\begin{enumerate}[label=\roman*.]
-		\item \textbf{improves} the design over each iteration;
+		\item \textbf{improve} upon the design over each iteration;
 	\end{enumerate}
-    \item \textbf{implement}, a final physical prototype which:
+    \item \textbf{Implement} a final physical prototype which will:
     	\begin{enumerate}[label=\roman*.]
-		\item \textbf{revises} the design based on the results of a heuristic analysis.
+		\item \textbf{revise} the design based on the results of a heuristic analysis.
 	\end{enumerate}
     \item \textbf{Present} a practical demo of the game controller to your tutor that will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{demonstrate} your academic integrity;
-    		\item as well as \textbf{demonstrate} your \textbf{individual} programming knowledge \textbf{and} communication skills.
+    		\item as well as \textbf{show} your programming knowledge \textbf{and} communication skills.
 	\end{enumerate}
 \end{enumerate}
 
@@ -67,68 +67,66 @@ Modify the \texttt{.gitignore} to the defaults for \textbf{Python}. Please, also
 
 \subsection*{Part A}
 
-Part A consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
-
-\begin{enumerate}[label=(\alph*)]
-	\item research is thorough;
-	\item concept is appropriate and distinctive;
-	\item approach is considered and justified.
-\end{enumerate}
-
-To complete part A, on GitHub, edit the \textbf{readme.md} file to contain a description of your proposed game controller. Your proposal should include details of any background research you have done to assess commercial viability. On Trello, create a task board that defines the key requirements (in terms of components and user stories) of the controller. 
-
-\textbf{Formative submission:} Arrange a meeting with your tutor to discuss your concept and task board. 
-
-\subsection*{Part B}
-
-Part B is a \textbf{single formative assessment}. The following criteria are used to determine a pass or fail:
+Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
 \begin{enumerate}[label=(\alph*)]
 	\item Submission is timely;
-	\item Enough work is available to conduct a meaningful review;
-	\item A broadly appropriate review of a peer's work is submitted.
+	\item Choice of game is feasible;
+	\item Range of controllers are assessed is comprehensive;
+	\item Design is distinctive and has creative merit.
 \end{enumerate}
 
-You will build \textbf{three prototypes} over a period of \textbf{3 weeks} utilising a fast, iterative development process. Each week should see a vast improvement in the quality of design and development working towards a shippable product to demo in the fourth week. that is, a prototype which does not have any major flaws or half-finished features that prevent it from being tested, and that can be used (even if lacking some features) as a controller in the game. 
+To complete part A, write your proposal in the \texttt{readme.md} document. Show this to your tutor in-class. If acceptable, this will be signed-off.
 
-Use the forked repository to store any digital artefacts (including but not limited to design sketches, photographs, art assets, source code, electronic circuit designs). 
+\subsection*{Part B}
 
-To complete Part B, prepare your game controller for heuristic analysis. It must be fully functional and robust enough for testing. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled peer-review session. Then, attend the scheduled peer-review session.
+Part B is formed of \textbf{multiple formative submissions}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
-You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough progress is made to conduct a meaningful review each week;
+	\item A broadly appropriate heuristic analysis of a peer's work is submitted.
+\end{enumerate}
+
+To complete Part B, implement your prototype controller utilising a fast, iterative development process. Demonstrate your progress to your tutor each week in class. You are expected to deliver a minimum viable product within four weeks. That is, a version of the controller which is sufficiently complete for testing and promotion. Ensure that any digital artefacts (including but not limited to design sketches, photographs, art assets, source code, electronic circuit designs) are pushed to GitHub prior to each weekly session. Also ensure that you bring your prototype with you each week. 
+
+You will receive immediate \textbf{informal feedback} from your \textbf{tutor} and \textbf{peers}.
 
 \subsection*{Part C}
 
-Part C is a \textbf{single summative submission}. This work will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assesses on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at
+the end of this document for further detail.
 
-To complete Part C, revise the build and source code for your game controller based on the feedback you have received. Then, upload all project files to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
+To complete Part C, revise the prototype based on the feedback you have received. Then, upload photos and source code to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
 
 You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
+
 \subsection*{Part D}
 
-Part D is a \textbf{single summative} submission. This work is individual and will be assessed on a threshold basis. The following criteria are used to determine a pass or fail: 
+Part D is a \textbf{single summative submission}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail: 
 
 \begin{enumerate}[label=(\alph*)]
-	\item enough work is available to hold a meaningful discussion; 
+	\item Enough work is available to hold a meaningful discussion; 
 	\item Clear evidence of programming knowledge and communication skills; 
 	\item No breaches of academic integrity. 
 \end{enumerate}
 
 To complete Part D, prepare a practical demonstration of the game controller. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
 
-You will receive \textbf{immediate informal} feedback from your tutor.
+You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
 
 \section*{Additional Guidance}
-Falmouth University is nationally and internationally renowned as an arts institution. Despite the fact that you are studying for a Bachelor of Science degree in a technical discipline, you are still expected to strive for the same level of innovation and creative flair as your fellow students in other departments. All assignments on this course involve a mix of technical and creative activities; this assignment is more heavily weighted towards the creative than the assignments you have completed thus far. On this assignment, a competent execution of an unimaginative idea is unlikely to achieve higher than a C grade overall, as opposed to an imperfect execution of a unique and ambitious concept ? bear this in mind when working on your design. One approach to promoting creativity is divergent thinking: generation of ideas by exploring many possible solutions. Often the most interesting ideas are subversive: they deliberately go against the accepted or most obvious solution 
+Falmouth University is internationally renowned for the arts. Despite the fact that you are studying for a BSc degree in a technical discipline, you are still expected to strive for the same level of innovation and creative flair as your peers. This assignment is more heavily weighted towards the creative than the assignments you have completed thus far. On this assignment, a competent execution of an unimaginative idea is unlikely to achieve a high grade, as opposed to an imperfect execution of a unique and ambitious concept, which will be seen favourably by examiners. Consider this when working on your design. One approach to promote creativity is divergent thinking: generate ideas by exploring many possible solutions. Often the most interesting ideas are subversive: they deliberately go against the accepted or most obvious solution.
 
-The history of video games is littered with failed peripherals which consumers simply did not want, which were perceived as expensive gimmicks rather than legitimate enhancements to gameplay. Your creativity should be balanced by commercial awareness: your design should be informed by your research into products that have succeeded and failed in the past, and what underexploited niches exist in the present. An A? project would be a highly divergent idea, but one that has clear commercial viability. Do not be too discouraged if you fall short of this: this is a tall order even for the professionals! 
+The history of video games is littered with failed peripherals. They were perceived as expensive gimmicks rather than legitimate enhancements to gameplay. Your creativity should be balanced by commercial awareness: your design should be informed by research into products that have succeeded and failed in the past, and what underexploited niches exist in the present. A great project will be highly divergent, but one that has clear commercial viability. Do not be discouraged if you fall short: professionals find it difficult! 
 
-We have given you some of the materials you need: an Arduino and other useful components. You will need to add your own materials to produce a functional physical prototype. A ?Blue Peter? style prototype made from household items is fine, as is something made out of modeling clay, construction toys etc. However you should still choose your materials carefully, as overly flimsy construction may lose you marks on the functionality criterion. 
+We have given you some of the materials you need: an Arduino and other useful components. You will need to add your own materials to produce a functional physical prototype. A \textit{Blue Peter} style prototype made from household items is fine, as is something made out of modelling clay. However you should still choose your materials carefully, as overly flimsy construction may impair functionality. 
 
 You may also wish to connect electronic components such as LEDs, buzzers, photoresistors etc to the Arduino, or even use a different, more flexible hard- ware platform such as RaspberryPi. However you are discouraged from spending large sums of money on extra hardware, and doing so is not required to achieve a high mark. If you choose to go down this route, it is possible to purchase a RaspberryPi and other useful peripheral online for around the price of a textbook (up to \pounds40). 
 
-You should aim to demonstrate a high level of sophistication in the technical execution of your prototype. An important part of sophistication is having the insight to choose the right tool for the job: if a simpler technique fulfils all the requirements, use it. The use of unnecessarily complicated techniques, serving only to showcase one?s own cleverness, is a dangerous habit for a software developer. 
-The sole purpose of the video demonstration is to aid moderators and external examiners, who are not present for the demo session, in assessing your work. Your video does not need to be entertaining or highly polished: a smartphone or webcam video of you or someone else using the controller is sufficient. 
+You should aim to demonstrate a high level of sophistication in the technical execution of your prototype. An important part of sophistication is having the insight to choose the right tool for the job: if a simpler technique fulfils all the requirements, use it. The use of unnecessarily complicated techniques, serving only to showcase one's own cleverness, is a dangerous habit. 
+
+The sole purpose of the recorded demonstration is to aid the external moderators and examiners. Furthermore, any photos and/or videos submitted do not need to be entertaining or highly polished.
 
 \section*{FAQ}
 
