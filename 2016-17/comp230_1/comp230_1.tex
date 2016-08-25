@@ -7,8 +7,13 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Software Engineering Essay}
+\title{Ethics \& Professionalism Essay}
 \author{Dr Michael Scott}
+
+\newcommand{\proposalWordCount}{200}
+\newcommand{\essayWordCount}{1000}
+\newcommand{\presentationMinutes}{30}
+\newcommand{\minReferenceCount}{12 }
 
 \begin{document}
 
@@ -17,69 +22,68 @@
 \section*{Introduction}
 
 \begin{marginquote}
-  ``Program testing can be used to show the presence of bugs, but never to show their absence!''
+  ``Beware of bugs in the above code; I have only proved it correct, not tried it!''
   
-   --- Edsger Dijkstra
+   --- Donald Knuth
    
     \marginquoterule
     
-    ``Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to to, let us concentrate rather on explaining to human beings what we want a computer to do.''
+    ``I'm not a real programmer. I throw together things until it works then I move on. The real programmers will say: Yeah, it works but you're leaking memory everywhere. Perhaps we should fix that!''
     
-    --- Donald Knuth
+    --- Rasmus Lerdorf
     
     \marginquoterule
     
-    ``A good way to stay flexible is to write less code.''
+    ``I'm sorry Dave, I'm afraid I can't do that.''
     
-    --- Andy Hunt \& Dave Thomas
+    --- HAL 9000
       
 \end{marginquote}
 \marginpicture{flavour_pic}{
-    TBC
+    Edward Tufte makes the case that the 2003 Columbia shuttle disaster was caused through use of PowerPoint for communication.
 }
 
-In this assignment, you will research software engineering principles to bring an academic perspective to your working practice. Specifically, to explore: 
+In this assignment, you will research ethical and professional issues in the games development community and bring an academic perspective to its culture. Specifically, to explore: 
 
 \begin{enumerate}[label=(\roman*)]
-    \item Which engineering challenges are prominent in game development;
-    \item and how software engineering principles are applied to digital games.
+    \item Which ethical and professional challenges are prominent;
+    \item and how professionals can conduct themselves in an ethical manner.
 \end{enumerate}
 
-Working practices are important to employers in the games industry. Problems arising from poor software deisgn and ineffective quality assurance practices are largely avoidable. As such, the key principles of software engineering are widely used in the games industry. They are essential to learn. Additionally, research skills will help you with your professional development. Most critically, moving beyond textbooks and websites to the academic literature, which will help you to keep your skills up to date in the future.
+The culture of the games industry will not only play a key role in shaping your future job satisfaction, but it will also be instrumental in determining the form of the cultural artefacts that you produce. You need to explore your values and determine what is important to you. Issues in the games industry span a wide range of topics, from \textit{EA Spouse} to \textit{Hot Coffee}, from the \textit{Edge Fiasco} to \textit{GamerGate}, from \textit{ConFlag Censorship} to \textit{Bondi Snubs}. Not to mention, controversy surrounding issues such as anti-social behaviour, violence, and addiction. Notions of ethical principles, codes of conduct, and professional bodies (e.g., BCS, ACM, IGDA, etc.) will aid such explorations. 
 
 This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Write} a 200-word proposal \textbf{with} references which must:
+    \item \textbf{Write} a \proposalWordCount-word proposal \textbf{with} references which must:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{state} a game engineering problem which you intend to address;
-    		\item \textbf{describe} the way in which you intend to address the question;
-    		\item and then \textbf{list} at least \textbf{10} appropriate academic references to use to support your research.
+    		\item \textbf{justify} the importance of \textbf{one} ethical and/or professional issue;
+    		\item and then \textbf{cite} at least \textbf{\minReferenceCount} appropriate academic references.
 	\end{enumerate}
-    \item \textbf{Present}, as a \textbf{group}, a 15-minute summary of your research that will:
+    \item \textbf{Present}, as a \textbf{group}, a \presentationMinutes-minute summary of your research that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{clarify} each persons challenge area \textbf{and} final research question;
-    		\item \textbf{debate} the most important principles based on your own research;
-    		\item and \textbf{discuss how} these principles apply to working practice.
+    		\item \textbf{clarify} each issue \textbf{and} its importance;
+    		\item \textbf{identify} appropriate research questions \textbf{and} avenues for research;
+    		\item \textbf{debate how} each issue could be resolved;
+    		\item and \textbf{discuss how} these issues affect the development community.
 	\end{enumerate}
-    \item \textbf{Write} a draft 1000-word essay which will:
+    \item \textbf{Write} a draft \essayWordCount-word essay which will:
     	\begin{enumerate}[label=\roman*.]
-    		\item  \textbf{address} the research queston;
-    		\item and \textbf{analyse} which software engineering principles are the most important for your research area.
+    		\item  \textbf{address} the research question.
 	\end{enumerate}
-    \item \textbf{Write} a final 1000-word essay which will:
+    \item \textbf{Write} a final \essayWordCount-word essay which will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{revise} any issues raised by your tutor and/or your peers.
 	\end{enumerate}
 \end{enumerate}
 
-\todo[inline]{\textbf{Note:} All research questions must be distinctive. Members of the same development group must \textbf{not} target the same research question.}
+\todo[inline]{\textbf{Note:} All research questions must be distinctive. Members of the same group must \textbf{not} target the same research question.}
 
 \subsection*{Assignment Setup}
 
 This assignment is an \textbf{academic writing task}. Fork the GitHub repository at the following URL:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp160-engineering}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp230-ethics}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
 
@@ -92,7 +96,7 @@ Part A consists of a \textbf{single formative submission}. This work is \textbf{
 \begin{enumerate}[label=(\alph*)]
 	\item Submission is timely;
 	\item Research question is appropriate and distinctive;
-	\item At least six academic peer-reviewed sources are cited.
+	\item At least \minReferenceCount  academic peer-reviewed sources are cited.
 \end{enumerate}
 
 To complete Part A, write your proposal in the \texttt{readme.md} document and then prepare the reference list using a \texttt{*.bib} file.  Show these to your tutor.  If acceptable, this will be signed-off. 
@@ -104,8 +108,8 @@ You will receive immediate \textbf{informal feedback}.
 Part B is a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
 \begin{enumerate}[label=(\alph*)]
-	\item Research questions are adequetely addressed;
-	\item Some evidence of academic rigor;
+	\item Research questions are adequately addressed;
+	\item Some evidence of academic rigour;
 	\item Some insight into the relationship between theory and practice.
 \end{enumerate}
 
@@ -137,11 +141,13 @@ You will receive \textbf{formal feedback} three weeks after the final deadline.
 
 \section*{Additional Guidance}
 
-Developing the research question is the most challenging aspect of this assignment. It is very unlikely that you will settle on the first research question that you propose. This is because the question will often arise out of your individual research and reading efforts. Furthermore, the question should relate to working practices for game developers. An example might be: ``how can game developers make effective use of the daily scrum?''. You will need to discuss your question with your tutor and your peers to help focus it.
+As you progress into your second year, you will discover that a much greater level of intellectual independence is expected of you. Sessions now focus on student-driven dialogues where important issues are explored instead of merely presenting material. Your tutor is there to highlight opportunities for learning and to facilitate the dialogue. Not to provide answers. It is, therefore, critically important that all students research the topic for each dialogue in advance of attending. These are indicated to you in the session schedule on the LearningSpace.
 
-Areas where students tend to lose marks are: depth of insight; analytical skill; and evaluative skill. Depth of insight implies rigorous research, addressing one key challenge in much detail, rather than several challenges with weaker research and/or in less detail. Adequete analysis implies going beyond mere descrption, perhaps through: performing calculatons, comparing sources, or even deploying reasoning to generate new insights. Adequete evaluation implies making appropriate reference to evidence and ensuring that evidence is of appropriate quality. Further to this, sound and valid arguments are constructed, criticising the claims made by other authors.
+Again, identifying the most appropriate ethical or professional challenge to address and then developing an appropriate research question is the most challenging aspect of these assignments. It is very unlikely that you will settle on the first research question that you propose. Question arise out of research and gaps in the literature. Furthermore, the question should relate to issues in the games industry. An example might be: ``What legal powers does an employee have to remedy a situation where a company refuses to credit their contribution to a game they worked on?''. You will need to discuss your question with your tutor and your peers to help focus it.
 
-Focus on answering your research question. You have but 1000-words! Depth over breadth. Quality over quantitiy. Write concisely. Your ability to recall facts is not under assessment, your ability to construct an argument through critical analysis and making it relevant to practice is.
+Areas where students tend to lose marks are: depth of insight; analytical skill; and evaluative skill. Depth of insight implies rigorous research, addressing one key challenge in much detail, rather than several challenges with weaker research and/or in less detail. Adequate analysis implies going beyond mere description, perhaps through: performing calculations, comparing sources, or even deploying reasoning to generate new insights. Adequate evaluation implies making appropriate reference to evidence and ensuring that evidence is of appropriate quality. Further to this, sound and valid arguments are constructed, criticising the claims made by other authors.
+
+Focus on answering your research question. You have but 1000-words! Depth over breadth. Quality over quantity. Write concisely. Your ability to recall facts is not under assessment, your ability to construct an argument through critical analysis and making it relevant to practice is.
 
 \section*{FAQ}
 
@@ -161,31 +167,20 @@ Focus on answering your research question. You have but 1000-words! Depth over b
 \section*{Additional Resources}
 
 \begin{itemize}
-    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
-    \item http://agilemanifesto.org/
+    \item Baase, S. (2012) A Gift of Fire: Social, Legal, and Ethical Issues for Computing Technology. Pearson Education.
+    \item Sicart, M. (2009) The Ethics of Computer Games. MIT Press.
+    \item \url{https://www.igda.org/?page=codeofethics}
+    \item \url{http://www.bcs.org/category/6030}
+    \item \url{https://www.acm.org/about-acm/acm-code-of-ethics-and-} \\ \url{professional-conduct}
 \end{itemize}
 
 \begin{markingrubric}
 %
-    \firstcriterion{Parts A---C}{10\% (Threshold)}
+    \firstcriterion{Basic Proficiency Threshold}{40\% (Threshold)}
         \gradespan{1}{\fail Parts A---C have not been submitted, are incomplete, or are unsatisfactory.}
-        \gradespan{2}{Two parts incomplete.}
-        \gradespan{2}{One part incomplete.}
-        \gradespan{1}{Parts A---C are complete.}
-%
-    \criterion{Appropriateness of Referenced Articles}{10\%}
-        \grade\fail 	No relevant article is referenced.
-        \grade 		At least three relevant sources are referenced.
-        \grade 		At least six relevant sources have been referenced.
-        \par		Where appropriate, some sources report scholarly research.
-        \grade 		At least eight relevant sources have been referenced.
-        \par		Where appropriate, most articles report scholarly research.
-        \grade 		At least ten relevant sources have been referenced.
+        \gradespan{5}{Parts A---C are complete. \par At least ten relevant sources have been referenced.
         \par		Where appropriate, all sources report scholarly research.
-        \par		Some appropriate seminal and highly reputed sources have been referenced.      
-        \grade 		At least ten relevant sources have been referenced.
-        \par		Where appropriate, all articles report scholarly research.
-        \par		Many appropriate seminal and highly reputed sources have been referenced.   
+        \par		Some appropriate seminal and highly reputed sources have been referenced.      }
 %
     \criterion{Relevance to and Focus on the Research Question}{5\%}
         \grade\fail 	No focus on the research question.
@@ -200,7 +195,7 @@ Focus on answering your research question. You have but 1000-words! Depth over b
             \par 		Research question is explicitly defined.
             \par 		Conclusion explicitly refers back to the question.
 %
-    \criterion{Depth of Insight into Software Engineering Principles}{20\%}
+    \criterion{Depth of Insight into Software Engineering Principles}{15\%}
         \grade\fail 	No depth of insight into software engineering principles.
         \grade 		Little depth of insight into software engineering principles.
         \grade 		Some depth of insight into software engineering principles.
@@ -226,7 +221,7 @@ Focus on answering your research question. You have but 1000-words! Depth over b
         \grade 		All claims have a clear source of evidence.
         \par 		Almost no errors and/or misinterpretations.
 %
-    \criterion{Adequacy of Analysis of Research Articles}{20\%}
+    \criterion{Adequacy of Analysis of Research Articles}{15\%}
         \grade\fail 	No analysis has been presented.
         \grade 		Little analysis has been presented.
         \grade 		Some analysis has been presented. 
@@ -234,7 +229,7 @@ Focus on answering your research question. You have but 1000-words! Depth over b
         \grade 		Considerable analysis has been presented.
         \grade 		Significant analysis has been presented.
 %
-    \criterion{Adequacy of Discussion on Transfer to the Games Industry}{15\%}
+    \criterion{Adequacy of Discussion on Transfer to the Games Industry}{5\%}
         \grade\fail 	No transfer to the games industry.
         \grade 		Little transfer to the games industry.
         \grade 		Some transfer to the games industry. 
