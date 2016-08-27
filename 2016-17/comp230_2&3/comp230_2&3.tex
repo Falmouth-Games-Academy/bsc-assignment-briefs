@@ -16,7 +16,7 @@
     language=C++
 }
 
-\title{Production Tasks \& Technical Demo}
+\title{Pre-Production Tasks \& Pitches}
 \author{Dr Michael Scott}
 
 \begin{document}
@@ -24,24 +24,19 @@
 \maketitle
 
 \begin{marginquote}
-    ``It seems that perfection is attained not when there is nothing more to add,
-        but when there is nothing more to remove.''
+    ``The first 90 percent of the code accounts for the first 90 percent of the development time.
     
-    --- Antoine de Saint-Exup\'ery
+    ``The remaining 10 percent of the code accounts for the other 90 percent of the development time.''
     
-    \marginquoterule
-    
-    ``Good judgment comes from experience and experience comes from bad judgment!''
-    
-    --- Fred Brooks Jr
+    --- Tom Cargill
     
     \marginquoterule
     
-    ``Debugging is twice as hard as writing the code in the first place.
-     Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'' 
- 
-         --- Brian Kernighan
-     
+    ``Hofstadter's Law:
+    
+    ``It always takes longer than you expect, even when you take into account Hofstadter's Law.''
+    
+    --- Douglas Hofstadter
 \end{marginquote}
 \marginpicture{flavour_pic}{
     This flavour picture needs a caption...
@@ -49,67 +44,114 @@
 
 \section*{Introduction}
 
-In this assignment, you will prepare a production prototype of your game. This version of your game will be written in C++ using the Simple DirectMedia Layer (SDL). You will continue to work in small groups (typically, 3--4 students).
+In this assignment, you will prepare and pitch a pre-production prototype of a game-related product. You can: (i) join a single BA team as a `technical specialist' to work on a specific game component; (ii) join multiple BA teams as a `consultant' to work with one particular emerging technology; (iii) join a BSc team to develop a game that will serve as a tech demo for cutting-edge game components; or (iv) work in any configuration (including individual) to develop a game-making tool or game middleware that another BA/BSc team could make use of. Use any programming language or technology.
 
-The sucess of a digital game is not just determined by the fun of its design, but also by the soundness of its architecture. Put simply, games with serious bugs do not sell. As such, the value of software engineering principles cannot be emphasised enough! Reflecting upon these principles, through the lens of a development project that mirrors industry practice, is therefore important.
+It is important to experience the diverse ecology of roles and cross-disciplinary challenges that computing professionals encounter in the games industry.
 
 This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Prepare}, as a \textbf{group}, a plan which will:
+    \item \textbf{Write}, as an \textbf{individual}, a 2-page handout that will:
     	\begin{enumerate}[label=\roman*.]
-    	    	\item \textbf{identify} the skills and time available to complete the final prototype;
-    		\item \textbf{describe} the key user stories that will comprise the final prototype;
-    		\item and \textbf{highlight} the stories most critical to the technical demo.
+    		\item \textbf{outline} a product concept \textbf{and} target market;
+    		\item \textbf{state} your intended \textbf{individual} contribution;
+    		\item and \textbf{justify} a business case for the product overall.
 	\end{enumerate}
-    \item \textbf{Implement}, as a \textbf{group}, an initial production prototype in SDL which will:
+    \item \textbf{Present}, as an \textbf{individual}, a 3-minute `elevator pitch', which will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{illustrate} the core game mechanic;
-    		\item and \textbf{apply} at least \textbf{three} non-trivial algorithms.
+    		\item \textbf{clarify} the product concept contained in your handout;
+    		\item and \textbf{illustrate why} someone should invest in your product.
 	\end{enumerate}
-    \item \textbf{Implement}, as a \textbf{group}, a final production prototype  in SDL which will:
+    \item \textbf{Prepare}, as a \textbf{group}, a plan, which will:
+    	\begin{enumerate}[label=\roman*.]
+    	    	\item \textbf{identify} the skills and time available to complete pre-production;
+    	    	\item \textbf{iterate} upon \textbf{and improve} the design of the product;
+    		\item \textbf{describe} the key user stories that comprise the requirements;
+    		\item and \textbf{highlight} the stories that will comprise a minimal viable product.
+	\end{enumerate}
+    \item \textbf{Implement}, as a \textbf{group}, an initial pre-production prototype of the product which will:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{illustrate} the product's core features and unique selling points.
+	\end{enumerate}
+    \item \textbf{Implement}, as a \textbf{group}, a final pre-production prototype of the product which will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{revise} any issues raised by your tutor and/or your peers.
 	\end{enumerate}
-    \item \textbf{Prepare}, as an \textbf{individual}, an A3 research-style poster that:
+    \item \textbf{Write}, as a \textbf{group}, a presentation slide-deck and 2-page handout which:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{outlines and discusses} the engineering of the final prototype;
-    		\item and \textbf{describes one} algorithm that you have implemented. 
+    		\item \textbf{outlines} the core features and unique selling points;
+    		\item and \textbf{justifies} the business case for the product overall.
 	\end{enumerate}
-    \item \textbf{Present}, as a \textbf{group}, a `technical demo` which will:
+    \item \textbf{Present}, as a \textbf{group}, a 15-minute `investment pitch` that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{clarify} the technical content of your own poster;
-    		\item and \textbf{show} the final production prototype of the game.
+    		\item \textbf{clarify} the product and its design, as proposed in your presentation slide-deck and handout;
+    		\item and \textbf{demonstrate} the final pre-production prototype of the game.
 	\end{enumerate}
 \end{enumerate}
-  
+
 \subsection*{Assignment Setup}
 
-This assignment is a \textbf{product development task}. Fork the GitHub repository at the following URL:
+This assignment is a \textbf{product development task}. Fork the GitHub repositories at the following URL:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp160-game}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp230-pre-production}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Visual Studio}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+Modify the \texttt{.gitignore} to the defaults for \textbf{Python}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
 \subsection*{Part A}
 
-Part A consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
 
-\begin{enumerate}[label=(\alph*)]
-	\item Only well-formed user stories are included;
-	\item The user stories form a comprehensive plan;
-	\item The plan has reasonable scope and is feasible.
-\end{enumerate}
+\begin{itemize}
+	\item What is the title and high concept of the game?
+	\item What is the intended aesthetic?
+	\item What is the core mechanic? 
+	\item What makes the game fun?
+	\item Is there a market for this type of game? Who is the target audience?
+	\item What are the unique selling points?
+	\item Is the scope appropriate for the product development time-frame?
+\end{itemize}
 
-To complete Part A, setup and populate the team Trello board. Ensure that all members of the team are added to the board. Show it to your tutor in the scheduled CPD catch-up tutorial.
+To complete Part A, prepare the handout using any word processing tool. There is no submission.
 
-You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
+Show the handout to your \textbf{tutor} for immediate \textbf{informal feedback}.
 
 \subsection*{Part B}
 
-Part B is a \textbf{multiple formative submissions}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+Part B consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Presentation is timely;
+	\item The game concept can be understood;
+	\item Proposed game concept will likely lead to a feasible game design.
+\end{enumerate}
+
+To complete Part B, practice the delivery of the presentation. Ensure that you are comfortable with the presentation medium and discuss any concerns with your tutor. Then, attend the scheduled game concept elevator pitch session. Also, please ensure that you bring a sufficient number of copies of your handout to the session.
+
+A formal presentation slide-deck (i.e. PowerPoint) is \textbf{not permitted}. However, additional visual, tactile, auditory, and/or olfactory aides are acceptable.
+
+You will receive immediate \textbf{informal feedback} from \textbf{tutors} and \textbf{peers}.
+
+In the session, a selection process will determine which concepts will be taken forwards to parts C---G.
+
+\subsection*{Part C}
+
+Part C consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Only well-formed user stories are included;
+	\item The plan is comprehensive;
+	\item The plan is feasible.
+\end{enumerate}
+
+To complete Part C, setup and populate the team Trello board. Ensure that all members of the team are added to the board. Show it to your tutor in the scheduled personal catch-up tutorial.
+
+You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
+
+\subsection*{Part D}
+
+Part D is a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
 \begin{enumerate}[label=(\alph*)]
 	\item Submission is timely;
@@ -117,50 +159,49 @@ Part B is a \textbf{multiple formative submissions}. This work is \textbf{collab
 	\item A broadly appropriate review of another team's work is submitted.
 \end{enumerate}
 
-To complete Part B, prepare a draft version of the production prototype. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to \textit{each} scheduled sprint review session. Ensure that you attend \textit{each} scheduled sprint review session.
+To complete Part D, prepare a draft version of the pre-production prototype. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled sprint review session. Then, attend the scheduled sprint review session.
 
-You will receive immediate \textbf{informal feedback} from your \textbf{tutor} and \textbf{peers}.
-
-\subsection*{Part C}
-
-Part C is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of the brief for details on the criteria.
-
-To complete Part C, revise the production prototype based on the feedback you have received and tidy up any incomplete features. Please also ensure that you include appropriate screen-shots of the Trello board in a separate folder. Then, upload the source code to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file. The recommended way of generating the \texttt{.zip} file is using the \textit{[Download Zip]} button on the GitHub website.
-
-You will receive \textbf{formal feedback} three weeks after the final deadline.
-
-\subsection*{Part D}
-
-Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
-
-\begin{enumerate}[label=(\alph*)]
-	\item Submission is timely;
-	\item At least \textbf{one} non-trivial algorithm is described
-	\item The algorithm was implemented by the person submitting the work
-	\item The description of the algorithm is detailed and accurate
-	\item There is sufficient detail to show how the algorithm fits into the overall architecture of the game
-	\item There is little to no overlap with other members of the team
-\end{enumerate}
-
-To complete Part D, prepare the poster using any word processing and/or presentation tool. Then, upload the relevant files to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
-
-You will receive \textbf{informal feedback} from your tutor three days prior to Part E.
+You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
 
 \subsection*{Part E}
 
 Part E is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of the brief for details on the criteria.
 
-To complete Part E, look over your notes to prepare yourself to answer questions. Ensure that you are comfortable with the content of your poster and discuss any concerns with your tutor. Then, attend the scheduled technical demo session. Please ensure that you print your poster ahead of time and bring it with you. It should be printed on A3 paper and in portrait. This is your individual responsbility. Please, also ensure that one member of the team is able to setup a laptop with the production prototype ahead of time.
+To complete Part E, revise the pre-production prototype based on the feedback you have received and finish any incomplete features. Please also ensure that you include appropriate screen-shots of the Trello board in a separate folder. Then, upload the source code to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file. The recommended way of generating the \texttt{.zip} file is using the \textit{Download Zip} button on the GitHub website.
+
+You will receive \textbf{formal feedback} three weeks after the final deadline.
+
+\subsection*{Part F}
+
+Part F is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. Ensure the presentation addresses the following:
+
+\begin{itemize}
+	\item The title and high concept of the game
+	\item The target audience for the game
+	\item The intended aesthetic and how it relates to the intended audience
+	\item The core mechanic(s) and it/how they make game fun
+	\item The concept's unique selling points and how they distinguish it from competitors
+	\item The design's technical and production feasibility
+	\item The project's commercial feasibility
+\end{itemize}
+
+To complete Part F, prepare the handout and presentation slide-deck using any word processing and/or presentation tool. Then, upload the relevant files to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
+
+You will receive \textbf{informal feedback} from your tutor three days prior to Part G.
+
+\subsection*{Part G}
+
+Part G is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of the brief for details on the criteria.
+
+To complete Part G, practice the delivery of the presentation. Ensure that you are comfortable with the presentation medium and discuss any concerns with your tutor. Then, attend the scheduled game design pitch and pre-production demo session. Please ensure that you bring a sufficient number of copies of your handout to the session. Please, also ensure that you setup a laptop with the presentation slide-deck and the pre-production demo ahead of time.
 
 You will receive \textbf{formal feedback} three weeks after the final deadline.
 
 \section*{Additional Guidance}
 
-Carefully select the algorithm that you will take ownership of and implement. This algorithm will need to interface with other game components, and therefore affected by work of your peers. Aim for high cohesion and low coupling! It is also important that the main requirements are firmly specified and are not too broad. This will ensure that there is little overlap with the work of your peers and help ensure that you do not overburden yourself with too much work. 
-
-Please remember to commit frequently and to push your source code and related assets to the GitHub repository. This will make it easier for you to maintain a backup of your work. It will also help you to measure your productivity. GitHub should be an essential part of your workflow, not merely a place to submit your work for feedback. You will be expected to maintain an archive of playable builds to demo your work at any time.
-
-Poor planning and poor time management can have a significant impact on this assignment. As some of you may have already discovered, programming is quite unlike other subjects in that it cannot be ``crammed'' into a last minute deluge. Sustain a steady pace across the duration of the course. Do a little programming every day, if you can!
+Avoid poor planning and time management. By now this will be a familiar phrase, but it is no less true.
+In particular, avoid underestimating the effort required to implement even a simple game; always consider scope.
+From the pitch stage, you should consider very carefully what is feasible.
 
 For the most part, your work will be marked as a group effort.
 However we want to avoid the situation where students try to ``coast'' through the assignment
@@ -174,6 +215,26 @@ attribution in the source code; and GitHub commit logs.
 Any student who has contributed their \textit{fair share} of effort to the project will receive a fair \% for their effort,
 so any student who is putting in the appropriate level of effort has no need to worry.
 Note that effort is not the same as productivity.
+
+The first step in planning your implementation should be to break your concept down into \textbf{user stories}. 
+Your user stories should be \textbf{distinguishable} (i.e.\ there should be little overlap between them)
+and \textbf{easily measured} (i.e.\ it should be easy to tell when each user story has been implemented).
+They should also be \textbf{comprehensive}, i.e.\ the user stories should completely capture the
+desired functionality of the game, with no gaps.
+Imagine giving your user stories to a developer who has never seen a game of your target genre.
+Would they be able to implement the game correctly, or would they miss key features?
+
+%Wherever possible, you should clearly \textbf{attribute} the author(s) of segments of your code.
+%The easiest way to do this is by inserting appropriate comments, for example:
+%\begin{lstlisting}
+%/* This function was written by student 1511111 */
+%\end{lstlisting}
+%\begin{lstlisting}
+%/* This function was pair-programmed by students 1522222 and 1533333 */
+%\end{lstlisting}
+%\begin{lstlisting}
+%/* This function was adapted by student 1544444 from an example at http://stackoverflow.com/a/1657490 */
+%\end{lstlisting}
 
 Your code will be assessed on \textbf{functional coherence}:
 how well the finished game corresponds to the user stories,
@@ -203,6 +264,16 @@ with values instead defined as constants together in a single place.
 Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
 e.g.\ by defining them in an external file read by the game on startup.
 
+As with all assignments on this course, you are expected to display a level of
+\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
+arts institution.
+We are looking for creativity in the design of your \textbf{game mechanics};
+you will \textbf{not} be judged on the quality of your art assets.
+One approach to promoting creativity is
+\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
+Often the most interesting ideas are \textbf{subversive}: they deliberately go against
+convention or obvious solutions.
+
 \section*{FAQ}
 
 \begin{itemize}
@@ -229,7 +300,7 @@ e.g.\ by defining them in an external file read by the game on startup.
     \item \url{https://travis-ci.org}
 \end{itemize}
 
-\rubrictitle{Marking Rubric (Production Prototype)}
+\rubrictitle{Marking Rubric (Pre-Production Prototype)}
 \rubrichead{Criteria marked with a $\dagger$ are weighted by individual contribution to a shared deliverable. All other criteria are individual.}
 \begin{markingrubric}
     \firstcriterion{Sprint Reviews}{40\%}
@@ -295,15 +366,15 @@ e.g.\ by defining them in an external file read by the game on startup.
              \par There is little obvious duplication of code or of literal values.           
         \grade The code is reasonably well commented.
             \par Most identifier names are descriptive and appropriate.
-            \par Most code adheres to the Google C++ formatting style.
+            \par Most code adheres to the PEP-8 formatting style.
              \par There is almost no obvious duplication of code or of literal values.   
-        \grade The code is reasonably well commented, with Doxygen-compatible module documentation.
+        \grade The code is reasonably well commented, with Python doc-strings.
             \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to the Google C++ formatting style.
+            \par Almost all code adheres to the PEP-8 formatting style.
              \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered''. 
-        \grade The code is very well commented, with comprehensive Doxygen-compatible module documentation.
+        \grade The code is very well commented, with comprehensive Python doc-strings.
             \par All identifier names are descriptive and appropriate.
-            \par All code adheres to the Google C++ formatting style.
+            \par All code adheres to the PEP-8 formatting style.
              \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
 %
     \criterion{Portability and Navigability}{5\% $\dagger$}
@@ -371,71 +442,101 @@ e.g.\ by defining them in an external file read by the game on startup.
             and has facilitated others in doing so.
 \end{markingrubric}
 
-\rubrictitle{Marking Rubric (Technical Demo)}
+\rubrictitle{Marking Rubric (Investment Pitch)}
 \rubrichead{Criteria marked with a $\ddagger$ are shared by the group. All other criteria are individual.}
 \begin{markingrubric}
     \firstcriterion{Basic Competency Threshold}{40\%}
-        \gradespan{1}{\fail No individual poster and/or production prototype is delivered, or either are inappropriate.}
-        \gradespan{5}{A broadly appropriate individual poster and group tech demo are delivered in a timely fashion. There is no evidence of academic misconduct.}
+        \gradespan{1}{\fail No individual and/or group pitch is delivered, or either pitch is inappropriate.}
+        \gradespan{5}{A broadly appropriate individual and group pitch is delivered.}
 %
-    \criterion{Communication Skills}{20\% $\ddagger$}
+    \criterion{Communication Skills}{20\%}
         \grade\fail Delivered with no enthusiasm. 
-           \par The technology behind the game has not been articulated with clarity.
+           \par The game concept has not been articulated with clarity.
         \grade Delivered with little enthusiasm. 
             \par Little connection with the audience.
-            \par The technology behind the game has been articulated with little clarity.
-        \grade Delivered with some enthusiasm, conveying technical confidence. 
+            \par The game concept has been articulated with little clarity.
+        \grade Delivered with some enthusiasm, conveying a basic argument. 
             \par Some connection with the audience.
-            \par The technology behind the game has been articulated with some clarity.
-        \grade Delivered with much enthusiasm, conveying technical confidence. 
+            \par The game concept has been articulated with some clarity.
+        \grade Delivered with much enthusiasm, conveying a persuasive argument. 
             \par Much connection with the audience.
-            \par The technology behind the game has been articulated with much clarity.
-        \grade Delivered with considerable enthusiasm,conveying technical confidence. 
+            \par The game concept has been articulated with much clarity.
+            \par The aesthetics have impact.
+        \grade Delivered with considerable enthusiasm, conveying a persuasive argument. 
             \par Considerable connection with the audience.
-            \par The technology behind the game has been articulated with considerable clarity.
-        \grade Delivered with significant enthusiasm, conveying technical confidence and passion.
+            \par The game concept has been articulated with considerable clarity.
+            \par The aesthetics have considerable impact.
+        \grade Delivered with significant enthusiasm, conveying a very persuasive argument and passion for the project.
             \par Significant connection with the audience.
-            \par The technology behind the game has been articulated with significant clarity.
+            \par The game concept has been articulated with significant clarity.
+            \par The aesthetics have significant impact.
 %
-    \criterion{Poster Quality}{10\%}
-        \grade\fail There is no poster or it does not describe the engineering of the software. 
-        \grade The engineering of the software (e.g., class designs) is described with little adequacy.
-        \grade The engineering of the software (e.g., class designs) is described with some adequacy.
-        \grade The engineering of the software (e.g., class designs) is concisely described with much adequacy.
-            \par The use of UML diagrams and source code excerpts is somewhat effective.
-        \grade The engineering of the software (e.g., class designs) is concisely described with considerable adequacy.
-            \par The use of UML diagrams and source code excerpts is quite effective.
-        \grade The engineering of the software (e.g., class designs) is concisely described with significant adequacy.
-            \par The use of UML diagrams and source code excerpts is very effective.
+    \criterion{Handout Quality}{10\% $\ddagger$}
+        \grade\fail There is no handout. 
+        \grade The game concept is described with little adequacy.
+        \grade The game concept is described with some adequacy.
+        \grade The game concept is concisely described with much adequacy.
+            \par The use of figures and tables is somewhat effective.
+        \grade The game concept is concisely described with considerable adequacy.
+            \par The use of figures and tables is quite effective.
+        \grade The game concept is concisely described with significant adequacy.
+            \par The use of figures and tables is very effective.
 %
-    \criterion{Technical Insight}{10\%}
-        \grade\fail No individual algorithm has been contributed or it is trivial.
-        \grade Little insight into the technical qualities of the individual algorithm.
-            \par Little ability to explain how the algorithm fits into the game's components and architecture.
-        \grade Some insight into the technical qualities of the individual algorithm.
-            \par Some ability to explain how the algorithm fits into the game's components and architecture.
-        \grade Much insight into the technical qualities of the individual algorithm.
-            \par Much ability to explain how the algorithm fits into the game's components and architecture.
-            \par The relevance of the contribution is justified.
-        \grade Considerable insight into the technical qualities of the individual algorithm.
-            \par Considerable ability to explain how the algorithm fits into the game's components and architecture.
-            \par The relevance and value of the individual algorithm are justified.
-        \grade Significant insight into the technical qualities of the individual algorithm.
-            \par Significant ability to explain how the algorithm fits into the game's components and architecture.
-            \par The relevance and value of the  individual algorithm are justified.
-            \par The  individual algorithm is somewhat important to the design of the game.
+    \criterion{Market Awareness}{10\% $\ddagger$}
+        \grade\fail No target audience is mentioned or defined.
+            \par There are no unique selling points.
+        \grade The target audience is mentioned briefly.
+            \par There is little evidence of market research.
+            \par The proposed game design has few, if any, unique selling points.
+        \grade The target audience is explicitly defined.
+            \par There is some evidence of market research.
+            \par The proposed game design has some unique selling points.
+        \grade The target audience is well-defined and somewhat appropriate for the design.
+            \par There is much evidence of market research.
+            \par The proposed game design has several unique selling points.
+        \grade The target audience is well-defined and appropriate to the design.
+            \par There is considerable evidence of rigorous market research.
+            \par The proposed game design has several unique selling points.
+        \grade The target audience is well-defined and justifiably mapped to the design.
+            \par There is significant evidence of rigorous market research.
+            \par The proposed game design has several unique selling points.
 %
-    \criterion{Demo Quality}{20\% $\ddagger$}
-        \grade\fail There is no demo, or it is non-functional.
-        \grade The demo demonstrates some mechanics and interfaces.
-        \grade The demo demonstrates the key mechanics and interfaces.
-        \grade The demo demonstrates the core game mechanic.
-            \par Although there may be a backup video, at least some aspect of the demo is live using the production prototype.
-        \grade The demo demonstrates the core game mechanic.
-            \par Although there may be a backup video, much of the demo is live using the production prototype.
-        \grade The demo demonstrates the core game mechanic.
-            \par Although there may be a backup video, a considerable part of the demo is live using the production prototype.
-            \par There is some innovation in terms of technology in the demo.
+    \criterion{Innovation and Creative Flair}{10\% $\ddagger$}
+        \grade\fail No innovation and/or creativity.
+            \par The game concept is a clone of existing works with only cosmetic alterations.
+        \grade Little innovation and/or creativity.
+            \par The game concept is derivative of existing works, with only minor gameplay alterations.
+        \grade Some innovation and/or creativity.
+            \par The game concept is derivative of existing works, but shows emerging divergent and/or subversive thinking in terms of gameplay.
+        \grade Much innovation and/or creativity.
+            \par The game concept is somewhat original, with an attempt at divergent and/or subversive thinking in terms of gameplay.
+            \par The gameplay shows promise of fun and engagement.
+        \grade Considerable innovation and/or creativity.
+            \par The game concept is original, with evidence of divergent and/or subversive thinking in terms of gameplay.
+            \par The gameplay is somewhat fun and engaging.
+        \grade Significant innovation and/or creativity.
+            \par The game concept is highly original, with strong evidence of divergent and/or subversive thinking in terms of gameplay.
+            \par The gameplay is fun and engaging.
+%
+    \criterion{Commercial Feasibility}{10\% $\ddagger$}
+        \grade\fail No budget or production plan are proposed, or they are inadequate.
+            \par No sales projections or return on investment are calculated, or they are untenable.
+            \par The proposed game design is not viable.
+        \grade The proposed budget and project plan have little feasibility.
+            \par The sales projections and/or return on investment have little tenability.
+            \par The proposed game design is viable.
+        \grade The proposed budget and project plan have some feasibility.
+            \par The sales projections and/or return on investment have some tenability.
+            \par The proposed game design is viable.
+        \grade The proposed budget and project plan have much feasibility.
+            \par The sales projections and/or return on investment have much tenability.
+            \par The proposed game design is commercially viable.
+        \grade The proposed budget and project plan have considerable feasibility.
+            \par The sales projections and/or return on investment have considerable tenability.
+            \par The proposed game design is commercially viable.
+        \grade The proposed budget and project plan have significant feasibility.
+            \par The sales projections and/or return on investment have significant tenability.
+            \par The proposed game design is commercially viable and able to inspire much investor confidence.
 \end{markingrubric}
 
 \end{document}
