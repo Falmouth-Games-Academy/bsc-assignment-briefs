@@ -1,0 +1,307 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{Research Journal --- AI}
+\author{Dr Ed Powley}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+  ``I believe that at the end of the century the use of words and general educated opinion will have altered so much that one will be able to speak of machines thinking without expecting to be contradicted.''
+    
+    --- Alan Turing
+    
+    \marginquoterule
+    
+    ``By far the greatest danger of Artificial Intelligence is that people conclude too early that they understand it.''
+    
+    --- Eliezer Yudkowsky
+    
+    \marginquoterule
+
+        ``First, no one is going to accidentally build a robot that wants to rule the world. [Rodney Brookes] says that creating a robot that can suddenly take over is like someone accidentally building a 747 jetliner.''
+    
+    --- Michio Kaku
+            
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    When \textit{Damian Isla} reflected on the sophistication of the AI in \textit{Halo} at Develop, he noted how stupid they appear from any perspective other than first-person.
+}
+
+In this assignment, you will produce a journal detailing your research on computer graphics. In addition to your individual journal, as a group you will create a community wiki to collect and discuss your findings.
+
+Familiarity with the academic literature is extremely helpful for the computing professional,
+both to understand the seminal works that lay the foundations of the field,
+and to keep abreast of recent developments at the cutting edge.
+Games technology is a fast-moving field, and keeping up is important.
+However scientific papers are written in a way that is sometimes daunting to newcomers,
+so it is essential to practice the skill of reading and comprehending such papers.
+Keeping a research journal is a useful way to record your thoughts
+(questions, hypotheses, connections, ideas, ...) as you explore the literature.
+
+This assignment is formed of several parts:
+
+\begin{enumerate}[label=(\Alph*)]
+    \item \textbf{Write} a draft research journal, of at most 1200 words, that will:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{summarise} at least \textbf{six} papers from the academic literature on computer graphics;
+    		\item \textbf{synthesise} what you have read into a cohesive whole.
+    	\end{enumerate}
+    \item \textbf{Write} the final version of your research journal, of at most 1200 words, which will:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{revise} any issues raised by your tutor and/or your peers.
+    	\end{enumerate}
+    \item \textbf{Edit} the community wiki to:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{share} your findings on what you have read;
+    		\item \textbf{debate} your findings with your peers.
+    	\end{enumerate}
+    \item \textbf{Discuss} your research journal with your tutor in the viva session in class.
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+This assignment is an \textbf{academic writing task} and \textbf{wiki task}. Fork the GitHub repository at the following URL:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp250-journal}
+
+Use the existing directory structure and, as required, extend this structure with sub-directories.
+
+Modify the \texttt{.gitignore} to the defaults for \textbf{TeX}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+
+\subsection*{Part A}
+
+Part A consists of \textbf{multiple formative submissions}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part A, read at least the six papers suggested in class.
+These six papers are intended to set the themes for your journal and the wiki;
+you are expected also to find and read other papers in the same areas as the six suggested.
+For each paper you read, write an entry in your research journal.
+It is recommended that you write your journal entry in the \texttt{readme.md} file within your forked repository,
+but you may use LaTeX if you prefer.
+Commit your work to your GitHub repository to be signed off during personal tutor meetings,
+at least once every three weeks during semester~1.
+
+You will receive \textbf{immediate informal feedback}.
+
+\subsection*{Part B}
+
+Part B is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis
+using the criteria listed in the marking rubric at the end of this document.
+
+To complete Part B, revise your report from Part~A to take into account any feedback you have received so far.
+
+Compress your \texttt{readme.md} file, along with any required images or other external files,
+into a \texttt{.zip} file and upload it to LearningSpace.
+Alternatively, if you have used LaTeX, upload a \texttt{.pdf} file of your journal to LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.zip} or \texttt{.pdf} file.
+
+You will receive \textbf{formal feedback} three weeks after the final deadline.
+
+\subsection*{Part C}
+
+Part C consists of \textbf{multiple formative submissions}. This work is \textbf{individual} but with a \textbf{collaborative} component, and will be assessed on a \textbf{criterion-referenced} basis.
+The criterion used to assess this part relates to the quantity and quality of your contributions.
+
+To complete Part C, contribute to the wiki at the following URL:
+
+\url{https://github.com/Falmouth-Games-Academy/comp110-journal/wiki}
+
+Please ensure that you are editing the wiki for the \texttt{Falmouth-Games-Academy} repository,
+and \textbf{not} the wiki for your fork of the repository.
+
+During your personal tutor meetings, make your tutor aware of your contributions to the wiki.
+
+You will receive \textbf{immediate informal feedback} as well as \textbf{ongoing peer feedback}.
+
+\subsection*{Part D}
+
+Part D consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part D, bring the final version of your research journal to the viva session in class.
+Be ready to discuss your work with your tutor.
+
+You will receive \textbf{immediate informal feedback}.
+
+\section*{Additional Guidance}
+
+One paper will be suggested in class every two weeks; this is the bare minimum that you should read.
+You should also follow up some of the prior work referenced in these papers,
+as well as subsequent work that references them.
+As much as possible you should focus your reading on peer-reviewed scholarly sources reporting primary research:
+articles in scientific workshops, conferences, journals, and some books or book chapters.
+Other sources tend to be less rigorous, and should be used only for background information
+or in cases where their use can be convincingly justified.
+
+A common pitfall is to focus too much on summarising the content of the papers you have read.
+For higher marks you need to demonstrate \textbf{insight} into what you have read:
+forming inferences and analyses beyond what is written in the paper.
+Some questions you might ask yourself are:
+Why is the paper significant and/or influential?
+Why did the researchers choose the approach that they did?
+Is there anything counterintuitive or surprising in the paper?
+Do you disagree with any of the assumptions or claims it makes?
+Does the paper suggest any further research questions?
+
+A related pitfall is to structure the journal as a sequence of disconnected entries.
+Instead aim to \textbf{synthesise} multiple papers into a cohesive whole,
+drawing connections between works by different authors.
+Forming a holistic picture of a field is much more valuable than simply understanding individual works.
+
+The wiki is primarily intended to become a useful shared resource for the cohort.
+As such, students are expected to direct themselves and their peers in populating, structuring and editing the wiki.
+If appropriate, you may copy and paste material from your individual journal into the wiki.
+However note that a wiki is not a piece of academic writing
+and thus will tend to have a less formal tone than you should be aiming for in your journal.
+Edits may be required to ensure a consistent tone for the wiki.
+
+You can, and indeed should, take inspiration from others' wiki contributions when working on your own journal.
+However you \textbf{must not} copy verbatim material written by others;
+doing so will be considered academic misconduct.
+
+Most researchers write scientific papers for the intended audience of their fellow researchers.
+Thus some papers can seem impenetrable to the novice reader.
+Don't lose heart!
+Discuss the paper with your peers.
+Follow up the papers it cites to find alternative explanations.
+If all else fails, continue reading the paper --- often a difficult paragraph is clarified by something which appears later.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on LearningSpace. Please examine the assignment area where you located this document.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+%\section*{Additional Resources}
+%
+%\begin{itemize}
+%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
+%    \item http://agilemanifesto.org/
+%\end{itemize}
+
+\begin{markingrubric}
+%
+	\firstcriterion{Basic Competency Threshold}{40\%}
+		\gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
+		\gradespan{5}{Formative submissions for Part A have been signed off at least once every three weeks.
+			\par The student participated in the viva, with enough work available to hold a meaningful discussion.
+			\par Sources have been cited in an appropriate manner, without any obvious errors.
+			\par No breaches of academic integrity.
+		}
+%
+%    \criterion{Formative submissions}{Threshold 5\%}
+%        \gradespan{5}{\fail Formative submissions for Part A have been signed off less frequently than once every three weeks.}
+%        \grade 		Formative submissions for Part A have been signed off at least once every three weeks.
+%
+%    \criterion{Participation in viva}{Threshold 5\%}
+%        \gradespan{5}{\fail The student did not participate in the viva, or did not submit sufficient work to discuss in the viva.}
+%        \grade 		The student participated in the viva.
+%
+    \criterion{Breadth of reading}{5\%}
+        \grade\fail	Fewer than the six suggested articles are referenced.
+        \grade		All six of the suggested articles are referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further six sources are also referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further 12 scholarly articles are also referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further 18 scholarly articles are also referenced.
+        \grade		All six of the suggested articles are referenced.
+        \par		A further 24 scholarly articles are also referenced.
+%
+    \criterion{Depth of insight}{15\%}
+        \grade\fail No insight is demonstrated.
+        \par		Papers are merely paraphrased.
+        \grade		Little insight is demonstrated.
+        \par		Papers are summarised in the student's own words.
+        \grade		Some insight is demonstrated.
+        \par		Attempts are made at discussion beyond summary.
+        \grade		Much insight is demonstrated.
+        \par		Discussion is inferential in nature.
+        \grade		Considerable insight is demonstrated.
+        \par		Discussion is analytical in nature.
+        \grade		Significant insight is demonstrated.
+        \par		Discussion is analytical and evaluative in nature.
+%
+    \criterion{Specificity, verifiability \& accuracy of claims}{5\%}
+        \grade\fail 	No citations to evidence to claims.
+        \par 		Substantial errors and/or misinterpretations.
+        \grade 		Few claims have a clear source of evidence.
+        \par 		Significant errors and/or misinterpretations.
+        \grade 		Some claims have a clear source of evidence.
+        \par 		Many errors and/or misinterpretations.
+        \grade 		Many claims have a clear source of evidence.
+        \par 		Some errors and/or misinterpretations.
+        \grade 		Most claims have a clear source of evidence.
+        \par 		Few errors and/or misinterpretations.
+        \grade 		All claims have a clear source of evidence.
+        \par 		Almost no errors and/or misinterpretations.
+%
+    \criterion{Synthesis}{15\%}
+        \grade\fail No connections are made between different sources.
+        \grade		Superficial connections are made between different sources.
+        \grade		Basic connections are made between different sources.
+        \grade		Reasonable connections are made between different sources.
+        \par		Connections go beyond mere description.
+        \grade		Strong connections are made between different sources.
+        \par		Connections are analytical in nature.
+        \grade		Strong connections are made between different sources.
+        \par		Connections are analytical and evaluative in nature.
+%
+    \criterion{Community engagement}{10\%}
+        \grade\fail 	No contribution has been made to the wiki.
+        \grade 		A few contributions have been made to the wiki.
+        \grade 		Some contributions have been made to the wiki.
+        \par		Contributions are non-trivial.
+        \par		The student has made some attempt to engage in community discourse.
+        \grade 		Many contributions have been made to the wiki.
+        \par		Contributions are well-reasoned.
+        \par		The student has actively engaged in the community discourse.
+        \grade 		A significant number of contributions have been made to the wiki.
+        \par		Contributions are well-reasoned and academically sound.
+        \par		The student has participated in steering the community discourse.
+        \grade 		An extensive number of contributions have been made to the wiki.
+        \par		Contributions are well-reasoned and academically sound.
+        \par		The student has played a key role in driving the community discourse.
+%
+    \criterion{Appropriateness of spelling \& grammar}{5\%}
+        \grade\fail 	Substantial spelling and/or grammar errors.
+        \grade 		Many spelling and/or grammar errors.
+        \grade 		Some spelling and/or grammar errors.  
+        \grade 		Few spelling and/or grammar errors.
+        \grade 		Almost no spelling and/or grammar errors.
+        \grade 		No spelling or grammar errors.
+%
+    \criterion{Appropriateness of journal structure}{5\%}
+        \grade\fail 	There is no structure, or the structure is unclear.
+        \grade 		There is little structure.
+        \grade 		There is some structure.
+        \par 		A few sentences and paragraphs are well constructed.
+        \grade 		There is much structure.
+        \par 		Some sentences and paragraphs are well constructed.
+        \grade 		There is much structure, highlighting the key themes.
+        \par 		Most sentences and paragraphs are well constructed.
+        \grade 		There is much structure, highlighting the key themes.
+        \par 		All sentences and paragraphs are well constructed.
+\end{markingrubric}
+
+\end{document}
