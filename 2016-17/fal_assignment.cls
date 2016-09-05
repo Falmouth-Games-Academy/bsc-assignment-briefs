@@ -103,12 +103,7 @@
                 \hline
                 \centering \textbf{\small Criterion} &
                 \centering \textbf{\small Weight} &
-                \centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
-                \centering \textbf{\small Basic Competency} &
-                \centering \textbf{\small Basic Proficiency} &
-                \centering \textbf{\small Novice Competency} &
-                \centering \textbf{\small Novice Proficiency} &
-                \centering \textbf{\small Professional Competency} \endhead\hline
+                \@rubricgrades \endhead\hline
 }{
                 \tabularnewline\hline
             \end{longtable}
@@ -135,3 +130,20 @@
 \newcommand{\rubrichead}[1]{\renewcommand{\@rubrichead}{#1}}
 \newcommand{\@rubricfoot}{}
 \newcommand{\rubricfoot}[1]{\renewcommand{\@rubricfoot}{#1}}
+
+\newcommand{\@rubricgrades}{
+	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
+	\centering \textbf{\small Basic Competency} &
+	\centering \textbf{\small Basic Proficiency} &
+	\centering \textbf{\small Novice Competency} &
+	\centering \textbf{\small Novice Proficiency} &
+	\centering \textbf{\small Professional Competency}
+}
+\newcommand{\rubricyeartwo}{\renewcommand{\@rubricgrades}{
+	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
+	\centering \textbf{\small Basic Proficiency} &
+	\centering \textbf{\small Novice Competency} &
+	\centering \textbf{\small Novice Proficiency} &
+	\centering \textbf{\small Professional Competency} &
+	\centering \textbf{\small Professional Proficiency}
+}}
