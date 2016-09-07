@@ -2,219 +2,169 @@
 \graphicspath{ {../} }
 
 \usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
 \usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Interfaces \& Interaction}
+\title{Interaction \& Interfaces}
 \author{Alcwyn Parker}
 
 \begin{document}
 
 \maketitle
 
-\marginpicture{flavour_pic}{
-    The \emph{Arduino} is an open-source prototyping platform that makes designing and developing interfaces fun \& easy.}
 \section*{Introduction}
 
-In this assignment, you are required to design and prototype a novel game controller device.
-Your prototype should function as an input device for \textbf{either}
-one of the games being developed by students on the BA Digital Games course; \textbf{or}
-the game you developed in COMP130 last semester.
-Your prototype should use a hardware platform such as \emph{Arduino} or \emph{Raspberry~Pi} etc,
-to convert user actions into game inputs.
-
-%Computing for Games combines technical and creative skills in equal parts.
-%All of your assignments involve a mixture of the two;
-%in this assignment the emphasis is more on creativity.
-%You will build upon the technical skills you have learned so far,
-%combined with your own creativity and innovation,
-%to produce a unique creative artefact.
-
-This assignment is formed of \textbf{three} parts.
-The summative submission has \textbf{two} parts: an electronic component and a physical component.
-Begin by forking the GitHub project at the following URL:
-\begin{center}
-\url{https://github.com/Falmouth-Games-Academy/comp140-hardware}
-\end{center}
-
-\subsection*{A. \emph{Design} a novel game controller device}
-
-On GitHub, create a Markdown file (or edit \texttt{readme.md})
-defining the high concept of your controller.
-Include details of any background research you have done to assess commercial viability.
-
-On Trello, create a task board that defines the key requirements
-(in terms of components and user stories) of the controller.
-
-\textbf{Formative submission:} Arrange a meeting with your tutor to discuss your concept and task board.
-
-\subsection*{B. \emph{Build} and  \emph{integrate} a prototype of your game controller}
-
-You will build your prototype controller over a period of \textbf{4 weeks} utilising a \textbf{fast}, \textbf{iterative} development process.
-Each week should see a vast \textbf{improvement} in the quality of design and development working towards a \textbf{shippable product} to demo in the fourth week. that is, a prototype which does not have any major flaws or half-finished features that prevent it from being tested, and that can be used (even if lacking some features) as a controller in the game.
-
-Use this forked repository to store any digital artefacts (including but not limited to
-design sketches, photographs, art assets, source code, electronic circuit designs).
-
-\subsection*{C. \emph{Heuristic analysis} by peers}
-
-Bring your prototype controller to the session where it will be subject to heuristic analysis by your peers in class.
-
-For submission, you must also prepare a short \textbf{video demonstration} of your controller.
-The maximum length of this video is \textbf{two minutes};
-longer videos will be subject to penalties in line with the course word count policy available on LearningSpace.
-In your video, briefly demonstrate the functionality of the controller.
-You may narrate if you wish, but it is not required.
-
-\textbf{Formative submission:} Participate in the heuristic analysis session.
-
-\subsection*{Summative submission (electronic)}
-
-Create a zip file containing the following:
-
-\begin{itemize}
-\item A markdown file named \texttt{readme.md} giving a high-level overview of the project,
-    including your concept and background research from part~A.
-\item Screenshots of your Trello task board from part~A.
-\item All source code and other digital artefacts created for part~B.
-    You should include source code files or snippets demonstrating the integration of your controller into the game,
-    but you do \textbf{not} need to provide the entire source code for the game.
-\item The video demonstration produced for part~C, compressed in AVI or MP4 format.
-\end{itemize}
-
-The recommended way to produce this zip file is to check all of the above into your GitHub repository
-throughout the course of the project,
-and then use the ``Download Zip'' function on the GitHub website.
-
-\textbf{Material not included in the zip file will not be marked},
-even if it is available online, and even if tutors have seen it in class.
-Please ensure that all material you want the markers to consider is included in your submission.
-
-Upload your zip file to the appropriate submission queue on LearningSpace.
-
-\subsection*{Summative submission (physical)}
-
-Hand in your prototype controller to the Academic Office in Tremough House.
-Pack your controller in a suitably sized box, with your student number
-and ``BSc Computing for Games -- COMP140 Assignment 1'' written clearly on it.
-
-Your prototype will be returned to you after marking,
-however any components that are property of the university (e.g.\ Arduinos \& RaspberryPi boards)
-will first be removed.
-Thus please do not glue, solder or otherwise permanently affix anything to them.
-
 \begin{marginquote}
-    ``Classic engineering relies on a strict process for getting from A to B; the Arduino Way delights in the possibility of getting lost on the way and finding C instead.``
-    
-   
-    --- Massimo Banzi - Co-founder of Arduino
+Hacker definition: ``A person who enjoys exploring the details of programmable systems and stretching their capabilities, as opposed to most users, who prefer to learn only the minimum necessary.''
+
+--- Jargon File
+
 \end{marginquote}
+\marginpicture{flavour_pic}{
+    Arduino is an open-source prototyping platform based on easy-to-use hardware and software.
+}
+
+In this assignment, you are required to design and develop an interface that incorporates either augmented reality (AR) or virtual reality (VR). The interface should function as a means of interacting with either one of the games developed by students on the BA Digital Games course; or integrated into an existing project being developed in semester one. You will have access to a variety of AR/VR peripherals that can be incorporated into your project or you can develop your own. If you already have access to related hardware that you would like to work with this is also acceptable. 
+
+In the games industry, emerging technology have a tendency to disrupt our practice on a regular basis. As a developer it is vital that you are able to adapt and move with the times. What is trending now will soon become industry norms and make way for new innovations. It is easy to become overwhelmed by the pace of technological change that our industry faces. This module aims to encourage you to embrace this tide of technology advancement, using experimentation, tinkering and play to make sense of new technologies and channel your inner creativity rather than frustration. 
+
+This assignment is formed of several parts:
+
+\begin{enumerate}[label=(\Alph*)]
+    \item \textbf{Write}, a proposal for a VR/AR interface that will:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{state and justify} the game that will be the basis for your interface;
+		\item \textbf{assess} VR/AR market;
+		\item \textbf{outline} an initial design in detail;
+		\item and \textbf{list} the key requirements the prototype must fulfil.
+	\end{enumerate}
+    \item \textbf{design} and \textbf{Implement} your interface:
+    	\begin{enumerate}[label=\roman*.]
+		\item \textbf{improve} upon the design iteratively over the course of six weeks;
+	\end{enumerate}
+    \item \textbf{Implement} a final interface which will:
+    	\begin{enumerate}[label=\roman*.]
+		\item \textbf{revise} the design based on the results of the peer evaluation session.
+	\end{enumerate}
+    \item \textbf{Present} a practical demo of the game controller to your tutor that will:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{demonstrate} your academic integrity;
+    		\item as well as \textbf{show} your programming knowledge \textbf{and} communication skills.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+Fork the GitHub repository at:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp210-vr-ar-interface }
+
+Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
+
+Modify the \texttt{.gitignore} to the defaults for \textbf{whichever} language you have chosen to implement your interface in. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+
+\subsection*{Part A}
+
+Part A consists of a \textbf{single formative submission}. This work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Choice of interface is feasible;
+	\item research is comprehensive;
+	\item Design is distinctive and has creative merit.
+\end{enumerate}
+
+To complete part A, write your proposal in the \texttt{readme.md} document. Show this to your tutor in-class. If acceptable, this will be signed-off.
+
+\subsection*{Part B}
+
+Part B is formed of \textbf{multiple formative submissions}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough progress is made to conduct a meaningful review each week;
+	\item A broadly appropriate evaluation of a peer's work is submitted.
+\end{enumerate}
+
+To complete Part B, implement your interface utilising a fast, iterative development process. Demonstrate your progress to your tutor each week in class. Ensure that any digital artefacts (including but not limited to design sketches, photographs, art assets, source code, electronic circuit designs) are pushed to GitHub prior to each weekly session. Also ensure that you bring your prototype with you each week. 
+
+You will receive immediate \textbf{informal feedback} from your \textbf{tutor} and \textbf{peers}.
+
+\subsection*{Part C}
+
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+
+To complete Part C, revise the interface design based on the feedback you have received. Then, upload photos and source code to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
+
+You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
+
+\subsection*{Part D}
+
+Part D is a \textbf{single summative submission}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail: 
+
+\begin{enumerate}[label=(\alph*)]
+	\item Enough work is available to hold a meaningful discussion; 
+	\item Clear evidence of programming knowledge and communication skills; 
+	\item No breaches of academic integrity. 
+\end{enumerate}
+
+To complete Part D, prepare a practical demonstration of the interface. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
+
+You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
 
 \section*{Additional Guidance}
+Falmouth University is internationally renowned for the arts. Despite the fact that you are studying for a BSc degree in a technical discipline, you are still expected to strive for the same level of innovation and creative flair as your peers. This assignment is more heavily weighted towards the creative than the assignments you have completed thus far. On this assignment, a competent execution of an unimaginative idea is unlikely to achieve a high grade, as opposed to an imperfect execution of a unique and ambitious concept, which will be seen favourably by examiners. Consider this when working on your design. One approach to promote creativity is divergent thinking: generate ideas by exploring many possible solutions. Often the most interesting ideas are subversive: they deliberately go against the accepted or most obvious solution.
 
-Falmouth University is nationally and internationally renowned as an arts institution.
-Despite the fact that you are studying for a Bachelor of Science degree in a technical discipline,
-you are still expected to strive for the same level of \textbf{innovation and creative flair}
-as your fellow students in other departments.
-All assignments on this course involve a mix of technical and creative activities;
-this assignment is more heavily weighted towards the creative than the assignments you have completed thus far.
-On this assignment, a competent execution of an unimaginative idea is unlikely to achieve higher than a C grade overall,
-as opposed to an imperfect execution of a unique and ambitious concept
---- bear this in mind when working on your design.
-One approach to promoting creativity is
-\textbf{divergent thinking}: generation of ideas by exploring many possible solutions.
-Often the most interesting ideas are \textbf{subversive}: they deliberately go against the
-accepted or most obvious solution
+Whichever platform you choose, you may implement your component in C++, C\#, Python, or a combination of these. Other languages may be permitted at the discretion of your tutor, if you can argue convincingly that it is appropriate for the proposed project. The design of your interface must be informed by the usability and user-experience findings from assignment one. The development process for your interface should be fast and iterative. In the first five weeks you will journey through the stages of discovery, interpretation and ideation. This will be followed by six weeks of prototyping through fast paced experimentation and evolution. At the end of each ?prototyping? week you should aim to have a fully functional prototype that has been improved considerably from the previous week. Most VR/AR headset and peripheral manufacturers release their products with SDKs, plugins and game engine integration. This helps developers utilise these products in their own projects with ease. For this assignment you must not rely on the basic examples and demoes given away for free with the developer kits.  You are expected to produce new code alongside using the appropriate libraries or plugins to create an interface that is unique, novel and innovative. Stand on the shoulders of giants. Although you may be new to developing for AR/VR these types of systems have been around since the 1960s. In fact, stereoscopic photo viewers have been around since 1838 (see Charles Wheatstone). Large organisations such as Google, Facebook and many others are all investing massive sums of money in research, production and documentation for VR and AR. There is a wealth of information already out there that you will need to draw upon to create a successful response to the assignment. 
 
-The history of video games is littered with failed peripherals which consumers simply did not want,
-which were perceived as expensive gimmicks rather than legitimate enhancements to gameplay.
-Your creativity should be balanced by \textbf{commercial awareness}:
-your design should be informed by your research into products that have succeeded and failed
-in the past, and what underexploited niches exist in the present.
-An A$^*$ project would be a highly divergent idea, but one that has clear commercial viability.
-Do not be too discouraged if you fall short of this: this is a tall order even for the professionals!
+You should aim to demonstrate a high level of sophistication in the technical execution of your prototype. An important part of sophistication is having the insight to choose the right tool for the job: if a simpler technique fulfils all the requirements, use it. The use of unnecessarily complicated techniques, serving only to showcase one's own cleverness, is a dangerous habit. 
 
-We have given you some of the materials you need: an Arduino and other useful components.
-You will need to add your own materials to produce a \textbf{functional} physical prototype.
-A ``Blue Peter'' style prototype made from household items is fine,
-as is something made out of modelling clay, construction toys etc.
-However you should still choose your materials carefully, as overly flimsy construction may
-lose you marks on the functionality criterion.
+The sole purpose of the recorded demonstration is to aid the external moderators and examiners. Furthermore, any photos and/or videos submitted do not need to be entertaining or highly polished.
 
-You may also wish to connect electronic components such as LEDs, buzzers, photoresistors etc to the Arduino,
-or even use a different, more flexible hardware platform such as RaspberryPi.
-However you are discouraged from spending large sums of money on extra hardware,
-and doing so is \textbf{not required} to achieve a high mark.
-If you choose to go down this route,
-it is possible to purchase an RaspberryPi and other useful peripheral online for 
-around the price of a textbook (\textsterling 20 -- \textsterling 30).
+\section*{FAQ}
 
-You should aim to demonstrate a high level of \textbf{sophistication}
-in the technical execution of your prototype.
-An important part of sophistication is having the insight to choose the right tool for the job:
-if a simpler technique fulfils all the requirements, use it.
-The use of unnecessarily complicated techniques, serving only to showcase one's own cleverness,
-is a dangerous habit for a software developer.
-
-The sole purpose of the \textbf{video demonstration} is to aid moderators and external examiners,
-who are not present for the demo session,
-in assessing your work.
-Your video does \textbf{not} need to be entertaining or highly polished:
-a smartphone or webcam video of you or someone else using the controller is sufficient.
-
-%Your \textbf{weekly reports} should document the iterations you make on your design and prototyping.
-%The emphasis in this assignment is on creativity and rapid iteration,
-%so do not be afraid to ``go back to the drawing board'' if a prototyped idea does not work as well as anticipated.
-%However it is important to document (and learn from) your failures, even more so than your successes.
-%
-%You are strongly encouraged to make use of sketches, diagrams, photographs, screenshots
-%and short videos to document your design and prototyping process.
-%Many indie game developers use such work-in-progress material as an important tool for promotion
-%and community engagement; for example, search Twitter for the hashtag \texttt{\#screenshotsaturday}.
-%Videos should ideally be short (5--30 second) demonstrations of functions of your prototype;
-%you may narrate if you wish, but it is not required.
-
-\begin{marginquote}
-    ``The first 90 percent of the code accounts for the first 90 percent of the development time.
-    
-    ``The remaining 10 percent of the code accounts for the other 90 percent of the development time.''
-    
-    --- Tom Cargill
-    
-    \marginquoterule
-    
-    ``Hofstadter's Law:
-    
-    ``It always takes longer than you expect, even when you take into account Hofstadter's Law.''
-    
-    --- Douglas Hofstadter
-\end{marginquote}
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on LearningSpace. Please examine the assignment area where you located this document.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please raise an issue and comment accordingly.
+\end{itemize}
 
 \section*{Additional Resources}
 
 \begin{itemize}
-    \item Wilkinson, K. and Petrich, M. (2014) The Art of Tinkering: Meet 150 Markers Working at the Intersection of Art, Science \& Technology. Weldon Owen: London.
-    \item Alicia Gibb. Building Open Source Hardware: DIY Manufacturing for Hackers and Makers. Addison Wesley, 2014. 
-    \item Jeremy Blum. Exploring Arduino: Tools and Techniques for Engineering Wizardry. John Wiley, 2013. 
-    \item Kelly, K. (2014) Cool Tools: A Catalogue of Possibilities. Cool Tools.
-    \item Hatch, M. (2013) The Maker Movement Manifesto: Rules for Innovation in the New World of Creators, Hackers, and Tinkerers. McGraw Hill: New York.
-    \item \url{http://arduino.cc}
-    \item \url{https://vimeo.com/18539129} Arduino The Documentary (2010)
+     \item Jerald, Jason. (2015) Human-Centered Design for Virtual Reality. ACM Books.
+    \item http://www.gdcvault.com/play/1023649/Human-Centered-Design-of-Immersive 
+    \item https://www.sitepoint.com/heuristic-evaluation-guide/
+    \item https://www.usability.gov/how-to-and-tools/methods/heuristic-evaluation.html
+    
 \end{itemize}
 
 \begin{markingrubric}
-    \firstcriterion{Iterative development process}{Threshold \par 5\% + 5\%}
-        \gradespan{2}{\fail There is little or no evidence of an iterative development process and no improvement over time in regards to the quality of the design and build of the prototype. }
-        \gradespan{2}{A `potentially shippable' prototype is produced at the end of development period.
-            \par There is evidence of a `reasonable' iterative development process but the prototype suffers from 'lock in' in regards to the original concept.}
-        \gradespan{2}{A `potentially shippable' prototype is produced at the end of the development period.
-            \par The project has benefitted from an iterative development process and many improvement have been made to the original concept}
+    \firstcriterion{Basic Competency Threshold}{40\%}
+        \gradespan{1}{\fail At least one part is missing or is unsatisfactory. 
+        
+        There is little or no evidence of an iterative development process and no improvement over time in regards to the quality of the design and build of the prototype.}
+        \gradespan{5}{Submission is timely.
+        	\par Enough work is available to hold a meaningful discussion.
+	\par Clear evidence of a `reasonable' iterative development process
+	\par Clear evidence of programming knowledge and communication skills.
+	\par Clear evidence of reflection on own performance and contribution.
+	\par No breaches of academic integrity.}
+%
     \criterion{Design of the solution}{15\%}
-        \grade\fail User stories are not provided, or the design does not correspond to the user stories.
-        \grade Few user stories are distinguishable and easily measured.
-            \par The correspondence between design and user stories is tenuous.
+        \grade\fail No user stories are provided, or the design does not correspond to the user stories.
         \grade Some user stories are distinguishable and easily measured.
+            \par The correspondence between design and user stories is tenuous.
+        \grade Little user stories are distinguishable and easily measured.
             \par The design somewhat corresponds to the user stories.
         \grade Most user stories are distinguishable and easily measured.
             \par The design corresponds to the user stories.
@@ -222,69 +172,80 @@ a smartphone or webcam video of you or someone else using the controller is suff
             \par The design clearly corresponds to the user stories.
         \grade All user stories are distinguishable and easily measured.
             \par The design clearly and comprehensively corresponds to the user stories.
+%
     \criterion{Commercial awareness}{10\%}
         \grade\fail No commercial awareness is demonstrated.
-        \grade Emerging commercial awareness is demonstrated.
-            \par There is no evidence of market research.
         \grade Some commercial awareness is demonstrated.
+            \par There is no evidence of market research.
+        \grade Little commercial awareness is demonstrated.
             \par Market research is present, but with significant gaps.
         \grade Much commercial awareness is demonstrated.
             \par Market research is extensive, but with some gaps.
-        \grade Significant commercial awareness is demonstrated.
+        \grade Considerable commercial awareness is demonstrated.
             \par Market research is comprehensive.
-        \grade Exemplary commercial awareness is demonstrated.
+        \grade Significant commercial awareness is demonstrated.
             \par Market research is comprehensive and insightful.
-    \criterion{Innovation and creative flair}{30\%}
-        \grade\fail Demonstrates no evidence of innovation and/or creativity.
-        \grade Demonstrates evidence of emerging innovation and/or creativity.
+%
+    \criterion{Innovation and creative flair}{5\%}
+        \grade\fail No evidence of innovation and/or creativity.
+        \grade Some evidence of emerging innovation and/or creativity.
             \par The solution is purely derivative of existing products.
             \par There is no evidence of divergent thinking.
-        \grade Demonstrates evidence of progressing innovation and/or creativity.
+        \grade Little evidence of emerging innovation and/or creativity.
             \par The solution is mostly derivative, with some attempts at innovation.
             \par There is evidence of an attempt at divergent thinking.
-        \grade Demonstrates evidence of partial mastery of innovative and creative practice.
+        \grade Much evidence of emerging innovation and/or creativity.
             \par The solution is an interesting and somewhat innovative product.
             \par There is some evidence of divergent thinking.
-        \grade Demonstrates some evidence of mastery of innovative and creative practice.
+        \grade Considerable evidence of mastery of innovative and creative practice.
             \par The solution is a novel and innovative product.
             \par There is much evidence of divergent thinking.
-        \grade Demonstrates much evidence of mastery of innovative and creative practice.
+        \grade Significant evidence of mastery of innovative and creative practice.
             \par The solution is a unique and innovative product.
             \par There is significant evidence of divergent thinking.
-    \criterion{Functionality of physical prototype}{10\%}
-        \grade\fail A physical prototype is not produced, or the prototype is completely non-functional.
-        \grade The physical prototype is barely functional.
+%            
+    \criterion{Functionality of the Interface}{15\%}
+        \grade\fail No interface is produced, or the interface is completely non-functional.
+        \grade The interface has no functionality.
             \par There are serious technical and/or constructional flaws.
-        \grade The physical prototype is somewhat functional.
+        \grade The interface has some functionality.
             \par There are obvious technical and/or constructional flaws.
-        \grade The physical prototype is mostly functional.
+        \grade The interface has much functionality.
             \par There are minor technical and/or constructional flaws.
-        \grade The physical prototype is functional.
+        \grade The interface has considerable functionality.
             \par There are superficial technical and/or constructional flaws.
-        \grade The physical prototype is functional.
-            \par The technical execution and physical construction are flawless.
-    \criterion{Sophistication: \par Software \par Electronics \par Physical construction}{20\%}
+        \grade The interface has significant functionality.
+            \par The technical execution is flawless.
+%
+    \criterion{Sophistication: \par Software \par Electronics \par Physical construction}{10\%}
         \grade\fail The solution lacks even a basic level of sophistication in any of the three areas.
-        \grade The solution is basic and unsophisticated in all three areas.
-            \par Little insight has been demonstrated in any area.
-        \grade The solution is moderately sophisticated in one of the areas, but lacking in the other two.
-            \par Emerging insight has been demonstrated in at least one of the areas.
-        \grade The solution is moderately sophisticated in two of the noted areas, but lacking in the third.
+        \grade The solution evidences some sophistication in one or more of the three areas.
+            \par Some insight has been demonstrated in any area.
+        \grade The solution evidences little sophistication in one or more of the three areas.
+            \par Little insight has been demonstrated in at least one of the areas.
+        \grade The solution evidences much sophistication in two or more of the three areas.
             \par Much insight has been demonstrated in at least one of the areas.
-        \grade The solution combines somewhat sophisticated software, electronics and physical construction.
-            \par Significant insight has been demonstrated in at least two of these areas.
-        \grade The solution combines highly sophisticated software, electronics and physical construction.
-            \par Exemplary insight has been demonstrated in all three areas.
-    \criterion{Professional practice}{5\%}
+        \grade The solution evidences considerable sophistication in all three areas.
+            \par Considerable insight has been demonstrated in at least two of these areas.
+        \grade The solution evidences significant sophistication in all three areas..
+            \par Significant insight has been demonstrated in all three areas.
+%            
+    \criterion{Use of Version Control}{5\%}
         \grade\fail GitHub has not been used.
-        \grade Material has only been checked into GitHub a few times before the deadline.
-        \grade Material has been checked into GitHub at least once per week.
-        \grade Material has been checked into GitHub several times per week.
-        \grade Material has been checked into GitHub several times per week.
+        \grade Source code has rarely been checked into GitHub.
+        \grade Source code  has been checked into GitHub at least once per week.
+            \par Commit messages are present.
+            \par There is evidence of engagement with peers (e.g.\ code review).
+        \grade Source code  has been checked into GitHub several times per week.
             \par Commit messages are clear, concise and relevant.
-        \grade Material has been checked into GitHub several times per week.
+            \par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
+        \grade Source code has been checked into GitHub several times per week.
             \par Commit messages are clear, concise and relevant.
-            \par There is evidence of engagement with peers (e.g.\ voluntary code review).
+            \par There is evidence of meaningful engagement with peers (e.g.\ code review).
+        \grade Source code has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is evidence of effective engagement with peers (e.g.\ code review).
+%
 \end{markingrubric}
 
 \end{document}
