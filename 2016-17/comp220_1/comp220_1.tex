@@ -18,10 +18,18 @@
 
 \begin{marginquote}
 ``Because of the nature of Moore's law, anything that an extremely clever graphics programmer can do at one point can be replicated by a merely competent programmer some number of years later.''
-\par --- John Carmack
+
+--- John Carmack
+
+    \marginquoterule
+
+``Currently computer graphics are used a great deal, but it can be excessive.''
+
+--- Hayao Miyazaki
 \end{marginquote}
-\marginpicture{MakeyMakey.jpg}{
-    The \emph{MaKey~MaKey} allows a multitude of materials to be used to create videogame controllers.
+\marginpicture{flavour_pic}{
+    A demo of fluid simulation with NVIDIA's PhysX.
+    Recent advances in GPU technology have enabled a wide range of high-fidelity real-time rendering and simulation effects.
 }
 
 In this assignment, you are required to \textbf{design} and \textbf{implement} a C++ program using SDL and OpenGL
@@ -38,7 +46,7 @@ This assignment is formed of several parts:
 	\item \textbf{Write} a 2-page handout that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{outline} the concept of your demo;
-			\item \textbf{explain} how your demo satisfies the requirements of the contract;
+			\item \textbf{explain} how your demo satisfies the requirements of the contract (provided as an appendix at the end of this document);
 			\item \textbf{describe} at least \textbf{two} graphical or simulation effects your demo will include;
 			\item \textbf{list} the key user stories on an accompanying Trello board.
 		\end{enumerate}
@@ -188,16 +196,6 @@ as long as they are available under an appropriate license and are properly attr
     		If you have discovered an issue with the brief itself, the source files are available at: \\
     		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
     		 Please make a pull request and comment accordingly.
-\end{itemize}
-
-\section*{Additional Resources}
-
-\begin{itemize}
-    \item \url{http://www.opengl-tutorial.org}
-    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
-    \item \url{https://google.github.io/styleguide/cppguide.html}
-    \item \todo{a site for 3d models}
-    \item \todo{more...?}
 \end{itemize}
 
 \rubricyeartwo
@@ -351,41 +349,51 @@ as long as they are available under an appropriate license and are properly attr
             \par There is extensive evidence of engagement with peers (e.g.\ code review).
 \end{markingrubric}
 
-\subsection*{Contract --- to be given as a separate document, but in here for now}
+\section*{Appendix: Contract}
 
-You must design and implement a technical demo making use of 3D graphics techniques.
-The demo must allow the player to move around a simple 3D environment in first-person perspective.
-
+You must \textbf{design} and \textbf{implement} a technical demo making use of 3D graphics techniques.
 The demo must meet the following requirements:
 
 \begin{itemize}
 	\item A scene containing \textbf{at least one} textured mesh \textbf{and at least one} light source.
-	\item Standard first-person movement controls:
-		\todo{Note: this will be covered as a live-coding activity in class}
-		move with the WASD keys, look around with the mouse.
+	\item Standard \textbf{first-person movement controls}:
+		\begin{itemize}
+			\item The player can use the mouse to look up/down and to rotate in place;
+			\item The player can use the WASD keys and/or the arrow keys to move around the environment;
+			\item Other controls (e.g.\ interact, jump, shoot) should be added
+				\textbf{if and only if} they are required for your concept.
+		\end{itemize}
 	\item At least \textbf{two} of the following graphics and simulation techniques:
 		\begin{itemize}
-			\item Procedural generation of complex meshes;
+			\item Loading of meshes from a standard 3D object file format;
+			\item Procedural generation of complex meshes or terrain;
 			\item Rendering of semi-transparent materials;
-			\item Skeletal animation;
-			\item Collision detection;
+			\item Realistic rendering of rough surfaces (e.g.\ normal mapping);
+			\item Skeletal animation or deformation;
+			\item Collision detection or ray-casting;
 			\item Integration of a third-party physics engine (e.g.\ Bullet, PhysX);
-			\item Particle effects (e.g.\ fire, smoke, dust, explosions, water, blood);
-			\item An advanced real-time lighting effect (e.g.\ shadow casting, reflections, volumetric lighting, bloom, radiosity);
-			\item A stylised full-screen filter (e.g.\ cel shading, halftone, CRT monitor effect, motion blur);
-			\item Realistic rendering of terrain and foliage;
+			\item Particle effects (e.g.\ fire, smoke, fluid);
+			\item An advanced real-time lighting effect (e.g.\ shadow casting, reflections, volumetric lighting, bloom);
+			\item Non-realistic rendering (e.g.\ cel shading);
 			\item Other advanced rendering or simulation techniques of your choice,
-				subject to discussion with your tutor.
+				subject to discussion with your tutor
+				and demonstration that you have researched the feasibility of your chosen techniques.
 		\end{itemize}
 	\item Some aspect intended to create \textbf{fun and/or engagement} for the user,
 		such as:
 		\begin{itemize}
 			\item Exploring an environment in a ``walking simulator'' style; or
 			\item Interacting with a simulated system; or
-			\item Achieving a simple gameplay objective.
+			\item Achieving a \textbf{simple} gameplay objective (beware of overscoping!)
 		\end{itemize}
 \end{itemize}
 
+\section*{Additional Resources}
 
+\begin{itemize}
+    \item \url{http://www.opengl-tutorial.org}
+    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
+    \item \url{https://google.github.io/styleguide/cppguide.html}
+\end{itemize}
 
 \end{document}
