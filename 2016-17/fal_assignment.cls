@@ -42,6 +42,11 @@
 \newcommand{\@version}{1.0}
 \newcommand{\version}[1]{\renewcommand{\@version}{#1}}
 
+% Allow module code to be specified, e.g. \module{1.1} in the preamble
+% Defaults to COMPXXX if not specified
+\newcommand{\@module}{COMPXXX}
+\newcommand{\module}[1]{\renewcommand{\@module}{#1}}
+
 % Custom maketitle command, using tikz for fancy layout
 \renewcommand{\maketitle}{%
     \begin{tikzpicture}[remember picture, overlay]
@@ -52,7 +57,7 @@
             \parbox[t]{18cm}{\raggedleft\Huge\color{white}{\MakeUppercase{\@title}}}
         };
         \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm] at (banner.south east) {
-            \parbox[t]{18cm}{\raggedleft\color{white}{Version \@version\\BSc Computing for Games}}
+            \parbox[t]{18cm}{\raggedleft\color{white}{Version \@version\\BSc Computing for Games\\\@module}}
         };
         \node[anchor=north west] at (banner.south west) {
             \parbox[t]{18cm}{\raggedright\color{gray}{\@author}}
