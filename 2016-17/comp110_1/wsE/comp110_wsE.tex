@@ -1,0 +1,149 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily,
+	frame=single,
+	showstringspaces=false,
+	breaklines=true,
+	prebreak={\space\hbox{\textcolor{gray}{$\hookleftarrow$}}}
+}
+\lstset{
+	commentstyle=\ttfamily\textit,
+	keywordstyle=\ttfamily\textbf,
+	stringstyle=\ttfamily,
+	rulecolor=\color{black}
+}
+\usepackage{mips}
+\lstset{language=[mips]Assembler}
+\usepackage{textcomp}
+
+\title{Worksheet E: Compilers and Machine Code}
+\author{Dr Ed Powley}
+\module{COMP110}
+
+\begin{document}
+
+\maketitle
+\marginpicture{flavour_pic}{
+    The MIPS architecture was popular in the 1980s--2000s, and is still in use today in embedded applications and in education.
+}
+
+\section*{Introduction}
+
+In this worksheet, you will complete some exercises involving translation of programs between assembly code and high-level Python code.
+
+Nowadays, programmers rarely write assembly code by hand as modern compilers do a much better job.
+However, some understanding of how high-level coding constructs translate into low-level machine code
+is useful in understanding the behaviour and performance characteristics of your programs.
+
+To complete this worksheet, complete parts (a)--(e) below.
+
+\begin{enumerate}[label=(\alph*)]
+	\item \textbf{Write} a piece of Python code equivalent to the following MIPS assembly code:
+\end{enumerate}
+
+\begin{lstlisting}
+        addi $s2, $zero, 0
+        addi $s3, $s0, 0
+inner:  add $s2, $s2, $s1
+        addi $s3, $s3, -1
+        bne $s3, $zero, inner
+\end{lstlisting}
+
+\begin{enumerate}[resume,label=(\alph*)]
+	\item Thus \textbf{explain} why the code has the effect of multiplying the values in registers \lstinline{$s0} and \lstinline{$s1}
+	and storing the result in \lstinline{$s2}.
+	\item \textbf{Write} a piece of Python code equivalent to the following MIPS assembly code:
+\end{enumerate}
+
+\begin{lstlisting}
+        addi $s0, $zero, 10
+        addi $s1, $zero, 1
+
+outer:  addi $s2, $zero, 0
+        addi $s3, $s0, 0
+inner:  add $s2, $s2, $s1
+        addi $s3, $s3, -1
+        bne $s3, $zero, inner
+        addi $s1, $s2, 0
+        addi $s0, $s0, -1
+        bne $s0, $zero, outer
+\end{lstlisting}
+
+\begin{enumerate}[resume,label=(\alph*)]
+	\item Thus \textbf{explain} why the code has the effect of calculating the factorial of the value in \lstinline{$s0}
+and storing the value in \lstinline{$s1};
+that is, if \lstinline{$s0} $= 10$ then \lstinline{$s0} $= 10 \times 9 \times \dots \times 2 \times 1 = 3\,628\,800$.
+\end{enumerate}
+
+A more efficient Python program for calculating the factorial could look like this:
+
+\begin{lstlisting}[language=Python]
+s0 = 10
+s1 = 1
+
+while s0 != 0:
+    s1 *= s0
+    s0 -= 1
+\end{lstlisting}
+
+\begin{enumerate}[resume,label=(\alph*)]
+	\item \textbf{Write} a MIPS assembly program equivalent to the Python code above.
+	Hint: you will need to find out how to use the \lstinline{mult} and \lstinline{mflo} MIPS instructions.
+	Check your program using a MIPS simulator.
+\end{enumerate}
+
+\iffalse
+$ % syntax highlighting gets confused by all those dollar signs
+\fi
+
+\section*{Submission instructions}
+
+If you did not already do so for a previous worksheet, \textbf{fork} the GitHub repository at the following URL:
+
+\url{https://github.com/Falmouth-Games-Academy/comp110-worksheets}
+
+Create a file named \url{worksheet_E/readme.md}, and write your solutions to the above tasks.
+When you have finished, open a \textbf{pull request}.
+To correctly format code listings in a markdown document, they should be wrapped in triple backticks like so
+(the backtick symbol is just below the Escape key on a standard British PC keyboard):
+
+\begin{lstlisting}[language={},upquote=true]
+Text here
+
+```
+def my_code_listing():
+    print "Hello, world!"
+```
+
+More text here
+\end{lstlisting}
+
+Attend the scheduled worksheet feedback session on \textbf{Monday November 21st 2016},
+ensuring that you have uploaded all material to GitHub and opened a pull request before this time.
+
+Note that the deadline for this worksheet may be very close to the deadline for final summative submission of all worksheets.
+Please see MyFalmouth for details of deadlines, and the Assignment Brief for COMP110 assignment~1 for summative submission instructions.
+
+\section*{Marking criteria}
+
+Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}.
+Any attempt, even unfinished, will receive a passing grade.
+
+Your work will be marked according to the following criteria:
+\begin{itemize}
+	\item Where appropriate, are your answers \textbf{correct}?
+	\item Are your explanations \textbf{clear}, \textbf{concise} and \textbf{accurate}?
+	\item Where you have obtained information from external sources, are they \textbf{properly cited}?
+\end{itemize}
+
+\end{document}
