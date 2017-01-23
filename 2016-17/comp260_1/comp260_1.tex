@@ -39,23 +39,23 @@
     Multi-threading is commonly used to improve performance in games.
 }
 
-In this assignment, you are required to implement an algorithm that will process data in a \textit{distributed} manner, taking advantage of client-server interaction and multi-threading.
+In this assignment, you are required to implement  algorithms that process data in a \textit{distributed} manner, taking advantage of databases and concurrency.
 
 Games are resource intensive. Compounding this issue, players are sensitive to performance issues. It is important, therefore, to leverage the available resources to ensure adequate performance. Distributed processing is one way to achieve this. It is, therefore, important that you apply the principles of concurrency, coordination, and agreement to create efficient games. 
 
 This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Select}, as a \textbf{pair}, \textbf{one} of the contracts provided by your tutor and:
+    \item \textbf{Select}, as a \textbf{group}, \textbf{one} of the contracts provided by your tutor and:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{state} which contract you will work on;
     		\item \textbf{gather} the requirements for the contract;
 	\end{enumerate}
-    \item \textbf{Implement}, as a \textbf{pair}, a draft program, in a language of your choice, that will:
+    \item \textbf{Implement}, collaboratively, a draft program, in a language of your choice, that will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{address} the requirements implied by the contract;
 	\end{enumerate}
-    \item \textbf{Write}, as a \textbf{pair}, a final computer program that will:
+    \item \textbf{Write}, collaboratively, a final computer program that will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{revise} any issues raised by your tutor and/or your peers.
 	\end{enumerate}
@@ -68,13 +68,13 @@ This assignment is formed of several parts:
 
 \subsection*{Assignment Setup}
 
-This assignment is a \textbf{pair programming task}. Fork the GitHub repository at:
+This assignment is a \textbf{collaborative programming task}. Fork the GitHub repository at:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp120-tinkering-graphics}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp260-server}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Python}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+Modify the \texttt{.gitignore} to the defaults for \textbf{Java}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
 \subsection*{Part A}
 
@@ -148,10 +148,10 @@ The peer-review component of this work does sometimes raise alarm. However, the 
 \section*{Additional Resources}
 
 \begin{itemize}
-    \item TBC
+    \item Additional resources have been migrated to the Talis Aspire system, which is available at: \url{http://resourcelists.falmouth.ac.uk/}.
 \end{itemize}
 
-\rubrichead{Criteria marked with a $\ddagger$ are shared by the group. All other criteria are individual.}
+\rubrichead{Criteria marked with a $\ddagger$ are shared by the group. Criteria marked with a $\dagger$ are weighted by individual contribution to a shared deliverable and viva performance. All other criteria are individual.}
 \begin{markingrubric}
 %
     \firstcriterion{Functional Coherence}{5\% $\ddagger$}
@@ -171,7 +171,7 @@ The peer-review component of this work does sometimes raise alarm. However, the 
             \par		There are no obvious logical errors.
             \par		The brief has been satisfied.
 %
-    \criterion{Sophistication}{15\% $\ddagger$}
+    \criterion{Sophistication}{10\% $\ddagger$}
         \grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
             \par No attempt to structure the program (e.g. one monolithic function).
         \grade Little insight into the appropriate use of programming constructs is evident from the source code.
@@ -185,7 +185,7 @@ The peer-review component of this work does sometimes raise alarm. However, the 
         \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is very effective. There is high cohesion and low coupling.
 %
-    \criterion{Maintainability}{20\% $\ddagger$}
+    \criterion{Maintainability}{15\% $\ddagger$}
         \grade\fail There are no comments in the source code, or comments are misleading.
             \par Most variable names are unclear or inappropriate.
             \par Code formatting hinders readability.
@@ -209,21 +209,21 @@ The peer-review component of this work does sometimes raise alarm. However, the 
             \par All source code adheres to the PEP-8 formatting style.
              \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  
 %
-    \criterion{Creative Flair}{10\% $\ddagger$}
-        \grade\fail No creativity.
-            \par The work is a clone of an existing work with mere cosmetic alterations.
-        \grade Little creativity.
-            \par The work is derivative of existing works, with only minor alterations.
-        \grade Some creativity.
-            \par The work is derivative of existing works, demonstrating little divergent and/or subversive thinking.
-        \grade Much creativity.
-            \par The work is somewhat novel, demonstrating some divergent and/or subversive thinking.
-        \grade Considerable creativity.
-            \par The work is novel, demonstrating significant divergent and/or subversive thinking.
-        \grade Significant creativity.
-            \par The work is highly original, with strong evidence of divergent and/or subversive thinking.
+    \criterion{Distributed Systems Architecture}{25\% $\dagger$}
+        \grade\fail No use of distributed approaches.
+            \par Unable to articulate either database, segmentation, or concurrency design decisions.
+        \grade Poor performance and scalability gain.
+            \par Very little ability to articulate database, segmentation, and concurrency design decisions.
+        \grade Some performance and scalability gain.
+            \par Little ability to articulate database, segmentation, and concurrency design decisions.
+        \grade Much performance and scalability gain.
+            \par Some ability to articulate database, segmentation, and concurrency design decisions.
+        \grade Considerable performance and scalability gain.
+            \par Much ability to articulate database, segmentation, and concurrency design decisions.
+        \grade Significant performance and scalability gain.
+            \par Considerable ability to articulate database, segmentation, and concurrency design decisions.
 %
-    \criterion{Use of Version Control}{10\%}
+    \criterion{Use of Version Control}{5\%}
         \grade\fail GitHub has not been used.
         \grade Source code has rarely been checked into GitHub.
         \grade Source code  has been checked into GitHub at least once per week.

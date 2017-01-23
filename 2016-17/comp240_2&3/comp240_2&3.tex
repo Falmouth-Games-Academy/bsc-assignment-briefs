@@ -263,9 +263,7 @@ e.g.\ by defining them in an external file read by the game on startup.
 
 \begin{itemize}
     \item Stroustrup, B. (2014) Programming: Principles and Practice using C++. Second Edition. Addison Wesley.
-    \item Spraul, V. (2012) Think Like a Programmer. O'Reilly Media.
     \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
-    \item Sims, C. and Johnson, H.L. (2012) SCRUM: A Breathtakingly Brief and Agile Introduction. Dymaxicon.
     \item \url{https://www.mountaingoatsoftware.com/agile/user-stories}
     \item \url{https://literateprogramming.com}
     \item \url{http://gameprogrammingpatterns.com/}
@@ -283,9 +281,9 @@ e.g.\ by defining them in an external file read by the game on startup.
 \rubrictitle{Marking Rubric (Production Prototype)}
 \rubrichead{Criteria marked with a $\dagger$ are weighted by individual contribution to a shared deliverable. All other criteria are individual.}
 \begin{markingrubric}
-    \firstcriterion{Sprint Reviews}{40\%}
-        \gradespan{1}{\fail The student fails to participate in at least one sprint review.}
-        \gradespan{5}{The student participates in all sprint reviews.
+    \firstcriterion{Threshold}{40\%}
+        \gradespan{1}{\fail The student either fails to participate in product owner meetings and supervised studio hours, has not contributed to promotional material, fails to participate in peer-reviews, receives a set of peer-reviews indicating unsatisfactory collegiality, has not checked code into source control, or has engaged in academic misconduct.}
+        \gradespan{5}{Satisfactory participation in the the collaborative project.
              \par All sprint reviews result in a playable build.}
 %
     \criterion{Appropriateness of User Stories and Sprint Plans}{5\% $\dagger$}
@@ -319,6 +317,22 @@ e.g.\ by defining them in an external file read by the game on startup.
         \grade All gameplay elements have been implemented.
             \par There is no evidence of feature creep.
             \par Bugs, if any, are purely cosmetic and/or superficial.
+%            
+    \criterion{Promotional Coherence}{4\% $\dagger$}
+        \grade\fail There is no website or press kit, or the game does not resemble either.
+        \grade Few promised gameplay elements are in-game.
+            \par The website and press kit have little clarity.
+        \grade Some promised gameplay elements are in-game.
+            \par The website and press kit have some clarity.
+        \grade Many promised gameplay elements are in-game.
+            \par The website and press kit have much clarity.
+            \par Promotional material evokes some excitement.
+        \grade Almost all promised gameplay elements are in-game.
+            \par The website and press kit have considerable clarity.
+            \par Promotional material evokes much excitement.
+        \grade All promised gameplay elements are in-gamed.
+            \par The website and press kit have significant clarity.
+            \par Promotional material evokes considerable excitement.
 %
     \criterion{Sophistication}{10\% $\dagger$}
         \grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
@@ -357,7 +371,7 @@ e.g.\ by defining them in an external file read by the game on startup.
             \par All code adheres to the Google C++ formatting style.
              \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
 %
-    \criterion{Portability and Navigability}{5\% $\dagger$}
+    \criterion{Portability and Navigability}{1\% $\dagger$}
         \grade\fail Game will not execute at all on another machine for reasons related to code portability which cannot be fixed easily due to its poor structure.
             \par The provided template has not been followed.
         \grade There were challenges executing the game, but these were resolvable.
@@ -426,10 +440,10 @@ e.g.\ by defining them in an external file read by the game on startup.
 \rubrichead{Criteria marked with a $\ddagger$ are shared by the group. All other criteria are individual.}
 \begin{markingrubric}
     \firstcriterion{Basic Competency Threshold}{40\%}
-        \gradespan{1}{\fail No individual poster and/or production prototype is delivered, or either are inappropriate.}
-        \gradespan{5}{A broadly appropriate individual poster and group tech demo are delivered in a timely fashion. There is no evidence of academic misconduct.}
+        \gradespan{1}{\fail No poster and/or production prototype is delivered, or either are inappropriate.}
+        \gradespan{5}{A broadly appropriate poster and group tech demo are delivered in a timely fashion. Every member of the team participates and demonstrated technical knowledge about their aspect of the game. There is no evidence of academic misconduct.}
 %
-    \criterion{Communication Skills}{20\% $\ddagger$}
+    \criterion{Communication Skills}{10\%}
         \grade\fail Delivered with no enthusiasm. 
            \par The technology behind the game has not been articulated with clarity.
         \grade Delivered with little enthusiasm. 
@@ -448,7 +462,15 @@ e.g.\ by defining them in an external file read by the game on startup.
             \par Significant connection with the audience.
             \par The technology behind the game has been articulated with significant clarity.
 %
-    \criterion{Poster Quality}{10\%}
+        \criterion{Website and Video Quality}{10\%$\ddagger$}
+        \grade\fail There is no website, video, or press kit. 
+        \grade The website, video, and press kit do little to help promote the game.
+        \grade The website, video, and press kit do some things to help promote the game.
+        \grade The website, video, and press kit do much to help promote the game.
+        \grade The website, video, and press kit make a considerable contribution to the promotion of the game.
+        \grade The website, video, and press kit make a significant contribution to the promotion of the game.
+%
+    \criterion{Poster Quality}{10\%$\ddagger$}
         \grade\fail There is no poster or it does not describe the engineering of the software. 
         \grade The engineering of the software (e.g., class designs) is described with little adequacy.
         \grade The engineering of the software (e.g., class designs) is described with some adequacy.
