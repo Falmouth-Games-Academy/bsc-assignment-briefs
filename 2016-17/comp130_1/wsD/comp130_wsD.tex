@@ -1,0 +1,114 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily,
+	frame=single,
+	showstringspaces=false,
+	breaklines=true,
+	prebreak={\space\hbox{\textcolor{gray}{$\hookleftarrow$}}}
+}
+\lstset{
+	commentstyle=\ttfamily\textit,
+	keywordstyle=\ttfamily\textbf,
+	stringstyle=\ttfamily,
+	rulecolor=\color{black}
+}
+\lstset{language=C++}
+
+\title{Worksheet D: Game Component}
+\module{COMP130}
+\author{Dr Ed Powley}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``Todo margin quote.''
+
+--- Whoever said it
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    Although the Unreal Engine can now be used to develop games of almost any genre,
+    it originated with the 1998 first-person shooter Unreal.
+}
+
+In this worksheet you will describe a component (e.g.\ a particular algorithm or subsystem)
+which you have created for your team game development project.
+Note that you are \textbf{not} expected to develop a component specifically for this worksheet;
+you are being assessed on your ability to describe a piece of technical work which is already
+in progress or completed.
+
+To complete this worksheet:
+\begin{enumerate}[label=(\alph*)]
+	\item \textbf{Select} a component which you have implemented, or are in the process of implementing,
+		for your team development project.
+		This component should be primarily your own work, although it is fine if others have also contributed.
+	\item \textbf{Write} at most \textbf{1000 words} describing:
+		\begin{enumerate}[label=(\roman*)]
+			\item The name and high concept of your game;
+			\item The purpose of the component, and how it fits into the game concept;
+			\item Technical details of how the component works;
+			\item Challenges encountered in developing the component;
+			\item Any contributions made by others to your component.
+		\end{enumerate}
+		This should be written in the style of development blog post, for an audience of fellow game developers.
+	\item \textbf{Include} in your blog post:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{At least two} relevant \textbf{static images, GIFs or videos} (e.g.\ screenshots or diagrams);
+			\item \textbf{At least one} sample of \textbf{C++ code} or \textbf{Blueprint scripting};
+			\item Links or bibliographic details for any \textbf{sources}
+				(e.g.\ tutorials, blog posts, forum discussions, academic papers, textbooks)
+				used in developing your component.
+		\end{enumerate}
+		This material does \textbf{not} contribute to the 1000 word limit, so you are encouraged to use
+		as much as you feel is appropriate.
+\end{enumerate}
+
+\section*{Submission instructions}
+
+If you have not already, begin by \textbf{forking} the GitHub repository at the following URL:
+
+\url{https://github.com/Falmouth-Games-Academy/comp130-worksheets}
+
+Within the \url{worksheet_D} directory, create a \texttt{readme.md} document
+and write the content of your blog post.
+Upload any images to this directory also, and use appropriate Markdown syntax to embed them in your document.
+
+Upload all material to GitHub and open a pull request
+by \textbf{TODO date}.
+
+\section*{Marking criteria}
+
+Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}.
+Any attempt, even unfinished, will receive a passing grade.
+
+Your work will be marked according to the following criteria:
+\begin{itemize}
+	\item \textbf{Written communication}. Is your description of technical concepts clear and accurate?
+		Is there an appropriate level of depth?
+		Is spelling and grammar of a high standard?
+	\item \textbf{Visual aids}. Are images relevant and high quality?
+		Do they contribute to the user's understanding?
+	\item \textbf{Sophistication}. Have you made use of appropriate technical solutions?
+		Note the emphasis is on \textbf{appropriate}; extra credit will \textbf{not} be given for unnecessarily complex solutions.
+	\item \textbf{Maintainability}. Are C++ code samples well commented, with identifier names appropriate and descriptive?
+		Are Blueprint samples tidy, well commented and easy to follow?
+	\item \textbf{Stretch goal}. Is your solution particularly elegant or ingenious?
+		Does it demonstrate in-depth insight into complex technical concepts?
+\end{itemize}
+
+\end{document}
