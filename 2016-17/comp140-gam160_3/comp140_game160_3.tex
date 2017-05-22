@@ -7,7 +7,7 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Hacking Hardware}
+\title{Hacking Hardware - Referral}
 \author{Brian McDonald}
 \module{COMP140-GAM160}
 
@@ -34,18 +34,13 @@ This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
     \item \textbf{Implement}, a small prototype game of your choice, that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{state and justify} the game that will be the basis for your interface;
-		\item \textbf{outline} an initial design in detail;
-		\item and \textbf{list} the key requirements the prototype must fulfil.
+    		\item \textbf{demonstrate} some gameplay
+		\item \textbf{contains} elements that can be controlled by an Arduino
 	\end{enumerate}
-    \item \textbf{Implement} a final physical prototype which will:
+    \item \textbf{Implement} an Arduino controller:
     	\begin{enumerate}[label=\roman*.]
-		\item \textbf{revise} the design based on your component research
-		    \item \textbf{Implement} a revised version of your game which will:
-		\begin{enumerate}[label=\roman*.]
-			\item \textbf{improve} upon the design of the original prototype;
-			\item \textbf{integrate} the controller with the game
-		\end{enumerate}
+		\item \textbf{Reads} data from sensors
+		    \item \textbf{Interfaces} with your game in some manner
 	\end{enumerate}
     \item \textbf{Present} a practical demo of the game controller to your tutor that will:
     	\begin{enumerate}[label=\roman*.]
@@ -56,26 +51,19 @@ This assignment is formed of several parts:
 
 \subsection*{Assignment Setup}
 
-Continue on the assignment 1 code base 
+Fork the GitHub repository at:
 
-You may have to modify the \texttt{.gitignore} to take into account Ardunio 
+\indent \url{https://github.com/Falmouth-Games-Academy/comp140-gam160-game}
+
+Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
+
+Modify the \texttt{.gitignore} to the defaults for \textbf{Unity} or \textbf{Unreal}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}.  
+
+
 
 \subsection*{Part A}
 
-Part A consists of a \textbf{single formative submission}. This work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
-
-\begin{enumerate}[label=(\alph*)]
-	\item Submission is timely;
-	\item Choice of game is feasible;
-	\item Range of controllers are assessed is comprehensive;
-	\item Design is distinctive and has creative merit.
-\end{enumerate}
-
-To complete part A, write your proposal in the \texttt{readme.md} document. Show this to your tutor in-class. If acceptable, this will be signed-off.
-
-\subsection*{Part B}
-
-Part B is a \textbf{single summative submission}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail: 
+Part A is a \textbf{single summative submission}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail: 
 
 \begin{enumerate}[label=(\alph*)]
 	\item Enough work is available to hold a meaningful discussion; 
@@ -83,9 +71,21 @@ Part B is a \textbf{single summative submission}. This is \textbf{individual} wo
 	\item No breaches of academic integrity. 
 \end{enumerate}
 
-To complete Part B, prepare a practical demonstration of the game controller. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
+To complete Part A, prepare a practical demonstration of the game controller. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
 
 You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
+
+\subsection*{Part B}
+
+Part B is the final submission of the code base to the learning space, this should be a zipped version of your GitHub repository
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Game functions correctly
+	\item Arduino interfaces with game 
+	\item There is an attempt to write well engineered software
+\end{enumerate}
+
 
 \section*{Additional Guidance}
 Falmouth University is internationally renowned for the arts. Despite the fact that you are studying for a BSc degree in a technical discipline, you are still expected to strive for the same level of innovation and creative flair as your peers. This assignment is more heavily weighted towards the creative than the assignments you have completed thus far. On this assignment, a competent execution of an unimaginative idea is unlikely to achieve a high grade, as opposed to an imperfect execution of a unique and ambitious concept, which will be seen favourably by examiners. Consider this when working on your design. One approach to promote creativity is divergent thinking: generate ideas by exploring many possible solutions. Often the most interesting ideas are subversive: they deliberately go against the accepted or most obvious solution.
