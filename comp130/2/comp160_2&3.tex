@@ -156,7 +156,7 @@ You will receive \textbf{formal feedback} three weeks after the deadline.
 
 Part E is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of the brief for details on the criteria.
 
-To complete Part E, revise the prototype based on the  feedback you have received and tidy away any incomplete features. Build the project and copy it to a USB storage device. Please note, you \textbf{MUST} include \textbf{BOTH} the source code \textbf{and} a stand-alone playable build. These should be in two separate and clearly labelled folders. Then, submit it physically alongside your colleagues on the other courses.
+To complete Part E, revise the prototype based on the feedback that you have received. Build the project and copy it to a USB storage device. Please note, you \textbf{MUST} include \textbf{both} the source code \textbf{and} a stand-alone playable build. These should be in two separate and clearly labelled folders. Instructions on how to play the game \textbf{MUST} also be included. Then, submit it physically alongside your colleagues on the other courses.
 
 You will receive \textbf{formal feedback} three weeks after the final deadline.
 
@@ -188,7 +188,7 @@ This is a complex and challenging project. It is double-weighted in terms of mod
 
 \begin{enumerate}[label=(\roman*)]
 	\item Your blog posts, which review your key contributions and their engineering quality, submitted online as an invidual to the LearningSpace;
-		\item A working and playable build of the early-acces release canditate, submitted physically as a group on a USB device;
+		\item A working and playable version of the early-acces release canditate, submitted physically as a group on a USB device;
 	\item and, a poster highlighting \textbf{ONE} game component that you assumed responsibility for, submitted online as an invidual to the LearningSpace.
 \end{enumerate}
 
@@ -203,8 +203,7 @@ However, we want to avoid the situation where students try to ``coast'' through 
 on their fellow group members' work,
 and equally the situation where one member of the group takes the lion's share of the work
 and prevents the others from contributing effectively.
-Marks will be weighted by a multiplier for \textbf{individual contribution},
-which aims to penalise both of these behaviours.
+Marks will be weighted by a multiplier for \textbf{individual contribution}, which aims to penalise both of these behaviours.
 We assess this by several means: Does their contribution in this sprint add value to the game? Has the student effectively utilised their specialist skills? Has the student effectively utilised agile and software engineering principles? Has the student demonstrated good teamworking and communication skills? Has the student checked their contribution into souce control? Any student who has contributed their \textit{fair share} of effort to the project will receive a fair \% for their effort,
 so any student who is putting in the appropriate level of effort has no need to worry. Note that effort is not the same as productivity.
 
@@ -248,15 +247,95 @@ As adults, in the first instance, you should resolve these challenges yourself. 
     \item \url{http://www.gamasutra.com/blogs/RogerPaffrath/20131115/204871/What_NOT_to_do_when_starting_as_an_indie_game_developer.php}
 \end{itemize}
 
-\rubrictitle{Marking Rubric (Production Tasks)}
+\rubrictitle{Marking Rubric (Production Tasks --- [i] Invidual Specialist Contribution \& [ii] Game with Instructions)}
 \rubrichead{Criteria marked with a $\dagger$ are weighted by individual contribution to a shared deliverable. All other criteria are individual.}
 \begin{markingrubric}
     \firstcriterion{Threshold}{40\%}
-        \gradespan{1}{\fail The student either fails to participate in product owner meetings and supervised studio hours, has not contributed to promotional material, fails to participate in peer-reviews, receives a set of peer-reviews indicating unsatisfactory collegiality, has not checked code into source control, or has engaged in academic misconduct.}
+        \gradespan{1}{\fail Unsatisfactory participation, academic misconduct, and/or no working build delivered.}
         \gradespan{5}{Satisfactory participation in the the collaborative project.
-             \par A playable build is delivered in sprint reviews.}
+             \par A playable build is delivered in each sprint review and final submission.}
 %
-    \criterion{Appropriateness of User Stories and Sprint Plans}{5\% $\dagger$}
+    \criterion{Value of Individual Specialist Contribution}{2.5\%}
+        \grade\fail Few to no individual contributions that are relevant to a computing specialism.
+        \grade Contributions add some value to the project.
+        \grade Contributions add much value to the project.
+            \par An attempt has been made to align contributions with the high concept and USPs.
+        \grade Contributions add considerable value to the project.
+            \par Contributions are somewhat aligned with the high concept and USPs.
+        \grade Contributions add considerable value to the project.
+            \par Contributions are adequetely aligned with the high concept and USPs.
+        \grade Contributions add significant value to the project.
+            \par Contributions are clearly and directly aligned with the high concept and USPs.
+            \par Contributions have provided some support for peers.
+%
+    \criterion{Quality of Individual Specialist Contribution}{12.5\%}
+        \grade\fail Few to no individual contributions that are relevant to a computing specialism.
+        \grade Little engineering quality.
+        \grade Some engineering quality.
+            \par Blog posts elicit appropriate technical details.
+            \par UML diagrams and pseudocode are used.
+        \grade Much engineering quality.
+            \par Blog posts elicit appropriate technical details.
+            \par UML diagrams and pseudocode are clear and somewhat effective.
+        \grade Considerable engineering quality.
+            \par Blog posts leverage technical details effectively.
+            \par UML diagrams and pseudocode are clear and effective.
+        \grade Significant engineering quality.
+            \par Blog posts provide clear and effective technical detail.
+            \par UML diagrams and pseudocode are clear and very effective.        
+%
+    \criterion{Agile Working Practice}{7.5\%}
+        \grade\fail Working practices are unacceptable and/or agile principles have not been applied.
+        \grade Little engagement with agile working practice.
+            \par Clear evidence of attendance at regular sprint planning meetings.
+            \par Clear evidence of attendance regular sprint retrospective meetings.
+            \par Little to no evidence of attendance at daily stand-ups.
+        \grade Some engagement with agile working practice.
+            \par Clear evidence of attendance at regular sprint planning meetings.
+            \par Clear evidence of attendance regular sprint retrospective meetings.
+            \par Some evidence of attendance at daily stand-ups.
+        \grade Much engagement with agile working practice.
+            \par Clear evidence of attendance at regular sprint planning meetings.
+            \par Clear evidence of attendance regular sprint retrospective meetings.
+            \par Clear evidence of attendance at daily stand-ups.
+            \par There is evidence of some use of CI, TDD, and bug tracking to support the project.
+        \grade Considerable engagement with agile working practice.
+            \par Clear evidence of attendance at regular sprint planning meetings.
+            \par Clear evidence of attendance regular sprint retrospective meetings.
+            \par Clear evidence of attendance at daily stand-ups.
+            \par There is evidence of some use of CI, TDD, and bug tracking to support the project.
+        \grade Significant engagement with agile working practice.
+            \par Attendence to all daily stand-ups and regular meetings.
+            \par CI, TDD, and bug tracking have been used effectively to support the project.
+%
+    \criterion{Collaborative Practice}{7.5\%}
+        \grade\fail Version control has not been used.
+        \grade Material has been checked into version control at least once per sprint.
+            \par Communication has been sufficient.
+        \grade Material has been checked into version control at least once per week.
+            \par Commit messages are clear, concise and relevant.
+            \par Communication has been somewhat appropriate.
+            \par Conduct and teamwork in meetings has been sufficient.
+        \grade Material has been checked into version control several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par Branches are used sensibly.
+            \par There is a little evidence of engagement with peers (e.g.\ code review).
+            \par Communication has been effective.
+            \par Conduct and teamwork in meetings has been somewhat appropriate.
+        \grade Material has been checked into version control frequently each week.
+            \par Commit messages are clear, concise and relevant.
+            \par Branches are used somewhat effectively.
+            \par There is some evidence of engagement with peers (e.g.\ code review).
+            \par Communication has been effective.
+            \par Conduct and teamwork in meetings has been appropriate.
+        \grade Material has been checked into version control very frequently each week.
+            \par Commit messages are clear, concise and relevant.
+            \par Branches are used effectively.
+            \par There is much evidence of engagement with peers (e.g.\ code review).
+            \par Communication has been very effective.
+            \par Conduct and teamwork in meetings has been effective.
+%
+    \criterion{Conceptual Coherence}{10\% $\dagger$}
         \grade\fail No user stories and/or sprint plans are provided.
         \grade Few user stories are distinguishable and easily measured.
             \par Sprint plans provide little support for the project.
@@ -272,7 +351,7 @@ As adults, in the first instance, you should resolve these challenges yourself. 
             \par User stories clearly and comprehensively correspond to the game design.
             \par Sprint plans provide significant support for the project.
 %
-    \criterion{Functional Coherence}{5\% $\dagger$}
+    \criterion{Functional Coherence}{10\% $\dagger$}
         \grade\fail No gameplay elements have been implemented and/or the code fails to compile or run.
         \grade Few gameplay elements have been implemented.
             \par There are many obvious and serious bugs.
@@ -288,7 +367,7 @@ As adults, in the first instance, you should resolve these challenges yourself. 
             \par There is no evidence of feature creep.
             \par Bugs, if any, are purely cosmetic and/or superficial.
 %            
-    \criterion{Promotional Coherence}{4\% $\dagger$}
+    \criterion{Creative Innovation}{5\% $\dagger$}
         \grade\fail There is no website or press kit, or the game does not resemble either.
         \grade Few promised gameplay elements are in-game.
             \par The website and press kit have little clarity.
@@ -304,7 +383,7 @@ As adults, in the first instance, you should resolve these challenges yourself. 
             \par The website and press kit have significant clarity.
             \par Promotional material evokes considerable excitement.
 %
-    \criterion{Sophistication}{10\% $\dagger$}
+    \criterion{Engagement}{5\% $\dagger$}
         \grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
             \par No attempt to structure the program is evident (e.g. one monolithic source file).
         \grade Little insight into the appropriate use of programming constructs is evident from the source code.
@@ -316,144 +395,30 @@ As adults, in the first instance, you should resolve these challenges yourself. 
         \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is effective. There is high cohesion and low coupling.
         \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is very effective. There is high cohesion and low coupling.
-%
-    \criterion{Maintainability}{20\% $\dagger$}
-        \grade\fail There are no comments, or comments are misleading.
-            \par Most variable names are unclear or inappropriate.
-            \par Code formatting hinders readability.
-        \grade The code is only sporadically commented, or comments are unclear.
-            \par Few identifier names are clear or inappropriate.
-        \grade The code is well commented.
-            \par Some identifier names are descriptive and appropriate.
-            \par An attempt has been made to adhere to a consistent formatting style.
-             \par There is little obvious duplication of code or of literal values.           
-        \grade The code is reasonably well commented.
-            \par Most identifier names are descriptive and appropriate.
-            \par Most code adheres to the Epic C++ formatting style.
-             \par There is almost no obvious duplication of code or of literal values.   
-        \grade The code is reasonably well commented, with Doxygen-compatible module documentation.
-            \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to the Epic C++ formatting style.
-             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered''. 
-        \grade The code is very well commented, with comprehensive Doxygen-compatible module documentation.
-            \par All identifier names are descriptive and appropriate.
-            \par All code adheres to the Epic C++ formatting style.
-             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
-%
-    \criterion{Portability and Navigability}{1\% $\dagger$}
-        \grade\fail Game will not execute at all on another machine for reasons related to code portability which cannot be fixed easily due to its poor structure.
-            \par The provided template has not been followed.
-        \grade There were challenges executing the game, but these were resolvable.
-            \par The directory structure inside the submitted zip file is unclear.
-            \par The provided template has not been followed.
-        \grade Several portability issues are present.
-            \par The directory structure inside the submitted zip file is somewhat confusing.
-            \par The provided template has mostly been followed.
-        \grade Some portability issues are present.
-            \par The directory structure inside the submitted zip file is adequate.
-            \par The provided template has been followed.
-        \grade Few portability issues are present.
-            \par The directory structure inside the submitted zip file is mostly sensible.
-            \par The provided template has been followed.
-        \grade Almost no portability issues are present.
-            \par The directory structure inside the submitted zip file is sensible.
-            \par The provided template has been followed.
-%
-    \criterion{Team Cohesion}{5\% $\dagger$}
-        \grade\fail The group's professional conduct has been unacceptable,
-            and/or the group has failed to function at all as a team.
-            \par Agile working practices have not been used.
-        \grade The group has demonstrated little professionalism.
-            \par Agile working practices have provided little support for the project.
-        \grade The group has demonstrated some professionalism,
-            functioning adequately as a team.
-            \par Agile working practices have provided some support for the project.
-        \grade The group has demonstrated much professionalism,
-            functioning somewhat effectively as a team.
-            \par Agile working practices have provided much support for the project.
-        \grade The group has demonstrated considerable professionalism,
-            functioning effectively as a cohesive team.
-            \par Agile working practices have provided considerable support for the project.
-            \par There is evidence of some use of CI and TDD to support a continuous integration approach.
-        \grade The group has demonstrated significant professionalism,
-            functioning highly effectively as a cohesive team.
-            \par Agile working practices have provided significant support for the project.
-            \par CI and TDD have been used to effectively support a continuous integration approach.
-%
-    \criterion{Use of Version Control}{10\%}
-        \grade\fail GitHub has not been used.
-        \grade Material has been checked into GitHub less frequently than once per sprint.
-            \par All code has been checked into the Master branch.
-        \grade Code has been checked into GitHub at least once per sprint.
-            \par An attempt has been made to use branches.
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par Branches are used sensibly.
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par Branches are used somewhat effectively.
-            \par There is evidence of engagement with peers (e.g.\ code review).
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par Branches are used effectively.
-            \par There is significant evidence of engagement with peers (e.g.\ code review).
-%
-    \criterion{Individual Contribution}{Multiplier for criteria marked $\dagger$}
-        \gradespan{5}{\fail The student has failed to contribute their ``fair share'' to the project,
-            or has actively prevented others from doing so.}
-        \grade The student has contributed their ``fair share'' to the project,
-            and has facilitated others in doing so.
+            \par The program structure is very effective. There is high cohesion and low coupling.            
 \end{markingrubric}
 
 \rubrictitle{Marking Rubric (Poster \& Technical Demo)}
 \rubrichead{Criteria marked with a $\ddagger$ are shared by the group. All other criteria are individual.}
 \begin{markingrubric}
     \firstcriterion{Basic Competency Threshold}{40\%}
-        \gradespan{1}{\fail No individual poster and/or production prototype is delivered, or either are inappropriate.}
+        \gradespan{1}{\fail No individual poster and/or demo is delivered and/or no evidence of C++ having been used for the demonstrated component, or either are inappropriate.}
         \gradespan{5}{Present at the demo. A broadly appropriate poster and tech demo are delivered in a timely fashion. Engages in conversation about the game with peers and tutors. There is no evidence of academic misconduct.}
 %
-    \criterion{Communication Skills}{10\%}
-        \grade\fail Delivered with no enthusiasm. 
-           \par The technology behind the game has not been articulated with clarity.
-           \par May have relied on peers to deliver the demo instead of contributing themselves.
-        \grade Delivered with little enthusiasm. 
-            \par Little connection with the audience.
-            \par The technology behind the game has been articulated with little clarity.
-        \grade Delivered with some enthusiasm, conveying technical confidence. 
-            \par Some connection with the audience.
-            \par The technology behind the game has been articulated with some clarity.
-        \grade Delivered with much enthusiasm, conveying technical confidence. 
-            \par Much connection with the audience.
-            \par The technology behind the game has been articulated with much clarity.
-        \grade Delivered with considerable enthusiasm,conveying technical confidence. 
-            \par Considerable connection with the audience.
-            \par The technology behind the game has been articulated with considerable clarity.
-        \grade Delivered with significant enthusiasm, conveying technical confidence and passion.
-            \par Significant connection with the audience.
-            \par The technology behind the game has been articulated with significant clarity.
-%
-    \criterion{Website and Video Quality}{10\%$\ddagger$}
-        \grade\fail There is no website, video, or press kit. 
-        \grade The website, video, and press kit do little to help promote the game.
-        \grade The website, video, and press kit do some things to help promote the game.
-        \grade The website, video, and press kit do much to help promote the game.
-        \grade The website, video, and press kit make a considerable contribution to the promotion of the game.
-        \grade The website, video, and press kit make a significant contribution to the promotion of the game.
-%
-    \criterion{Poster Quality}{10\%$\ddagger$}
-        \grade\fail There is no poster or it does not describe the engineering of the software. 
-        \grade The engineering of the software (e.g., class designs) is described with little adequacy.
-        \grade The engineering of the software (e.g., class designs) is described with some adequacy.
-        \grade The engineering of the software (e.g., class designs) is concisely described with much adequacy.
+    \criterion{Poster Quality}{20\%}
+        \grade\fail There is no poster or it does not describe the engineering of a non-trivial game component. 
+        \grade The engineering of the component (e.g., class designs) is described with little adequacy.
+        \grade The engineering of the component (e.g., class designs) is described with some adequacy.
+            \par UML diagrams and source code excerpts are present.
+        \grade The engineering of the component (e.g., class designs) is concisely described with much adequacy.
             \par The use of UML diagrams and source code excerpts is somewhat effective.
-        \grade The engineering of the software (e.g., class designs) is concisely described with considerable adequacy.
+        \grade The engineering of the component (e.g., class designs) is concisely described with considerable adequacy.
             \par The use of UML diagrams and source code excerpts is quite effective.
         \grade The engineering of the software (e.g., class designs) is concisely described with significant adequacy.
             \par The use of UML diagrams and source code excerpts is very effective.
 %
-    \criterion{Technical Insight}{10\%}
-        \grade\fail No individual algorithm has been contributed or it is trivial.
+    \criterion{Technical Insight}{20\%}
+        \grade\fail No or inappropriate and/or irrelevant technical insight.
         \grade Little insight into the technical qualities of the individual algorithm.
             \par Little ability to explain how the algorithm fits into the game's components and architecture.
         \grade Some insight into the technical qualities of the individual algorithm.
