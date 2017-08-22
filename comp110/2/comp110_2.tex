@@ -7,6 +7,12 @@
 \usepackage{url}
 \usepackage{todonotes}
 
+% Suppress numbers in bibliography
+% https://tex.stackexchange.com/a/35371
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
 \title{Research Journal --- Computing}
 \author{Dr Ed Powley}
 \module{COMP110}
@@ -18,22 +24,17 @@
 \section*{Introduction}
 
 \begin{marginquote}
-  ``Individuals and Interactions over Processes and Tools''
-  
-  ``Working Software over Comprehensive Documentation''
-  
-  ``Customer Collaboration over Contract Negotiation''
-  
-  ``Responding to Change over Following a Plan''
+  ``Computer science is not about machines, in the same way that astronomy is not about telescopes. There is an essential unity of mathematics and computer science.''
     
-    --- Agile Manifesto
+    --- Michael R.\ Fellows
 \end{marginquote}
 \marginpicture{flavour_pic}{
-    Ada Lovelace is considered by some to be the first ever programmer. Lovelace believed that intuition and imagination were critical to effectively applying mathematical and scientific concepts. She valued metaphysics as much as mathematics, viewing both as tools for exploring "the unseen worlds around us".
+    Ada Lovelace is considered by some to be the first ever programmer. Lovelace believed that intuition and imagination were critical to effectively applying mathematical and scientific concepts. She valued metaphysics as much as mathematics, viewing both as tools for exploring ``the unseen worlds around us''.
 }
 
 In this assignment, you will produce a journal detailing your research on the principles of computing.
-In addition to your individual journal, as a group you will create a community wiki to collect and discuss your findings.
+Your research will focus on a seminal paper in computing,
+exploring the historical context of the paper and its lasting influence on the field.
 
 Familiarity with the scientific literature is extremely helpful for the computing professional,
 both to understand the seminal works that lay the foundations of the field,
@@ -49,43 +50,46 @@ This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
     \item \textbf{Write} a draft research journal, of at most 1500 words, that will:
     	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{summarise} at least \textbf{six} papers from the scientific literature on computing;
-    		\item \textbf{synthesise} what you have read into a cohesive whole.
+    		\item \textbf{summarise} the key contributions of \textbf{one} of the papers listed below;
+    		\item \textbf{discuss} the context and influence of your chosen paper, with reference to other
+    			papers from the scientific literature;
+    		\item \textbf{list} the papers referenced, including the chosen paper,
+    			in the form of a correctly formatted bibliography in ACM or IEEE style.
     	\end{enumerate}
     \item \textbf{Write} the final version of your research journal, of at most 1500 words, that will:
     	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{revise} any issues raised by your tutor and/or your peers.
+    		\item \textbf{revise} any issues raised by your tutor and/or your peers following Part~A.
     	\end{enumerate}
-    \item \textbf{Edit} the community wiki to:
-    	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{share} your findings on what you have read;
-    		\item \textbf{debate} your findings with your peers.
-    	\end{enumerate}
-    \item \textbf{Discuss} your research journal with your tutor in the viva session in class.
+    \item \textbf{Discuss} your research journal with the tutor in the timetabled viva session.
 \end{enumerate}
 
 \subsection*{Assignment Setup}
 
-This assignment is an \textbf{academic writing task} and \textbf{wiki task}. Fork the GitHub repository at the following URL:
+This assignment is an \textbf{academic writing task}. Fork the GitHub repository at the following URL:
 
 \indent \url{https://github.com/Falmouth-Games-Academy/comp110-journal}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories.
-
-Modify the \texttt{.gitignore} to the defaults for \textbf{TeX}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+Please also ensure that you add any editor-specific files and folders to the \texttt{.gitignore} file.
 
 \subsection*{Part A}
 
-Part A consists of \textbf{multiple formative submissions}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
 
-To complete Part A, read at least the four papers suggested in class, and at least two others.
-These papers are intended to set the themes for your journal and the wiki;
-you are expected also to find and read other papers in the same areas as the ones suggested.
-For each paper you read, write an entry in your research journal.
-It is recommended that you write your journal entry in the \texttt{readme.md} file within your forked repository,
-but you may use LaTeX if you prefer.
-Commit your work to your GitHub repository to be signed off during personal tutor meetings,
-at least once every three weeks during semester~1.
+To complete Part A, read the papers listed below.
+Choose \textbf{one} of these papers to focus on for your research journal.
+Use this paper as a starting point for further reading in the scientific literature.
+Write a 1500 word document, typeset using LaTeX,
+which summarises your chosen paper and its influence on the field of computing
+with reference to the other papers you have read.
+Your report must include a bibliography of all works cited;
+it is recommended that you typeset this using BibTeX with the \texttt{IEEEtran} package.
+
+Commit your work to your GitHub repository regularly.
+Bring a draft of your research journal to the timetabled review session,
+where it will be reviewed by your peers.
+You may also request feedback from the tutor at any time,
+by opening a pull request on GitHub.
 
 You will receive \textbf{immediate informal feedback}.
 
@@ -96,43 +100,31 @@ using the criteria listed in the marking rubric at the end of this document.
 
 To complete Part B, revise your report from Part~A to take into account any feedback you have received so far.
 
-Compress your \texttt{readme.md} file, along with any required images or other external files,
-into a \texttt{.zip} file and upload it to LearningSpace.
-Alternatively, if you have used LaTeX, upload a \texttt{.pdf} file of your journal to LearningSpace.
-Note that LearningSpace will only accept a single \texttt{.zip} or \texttt{.pdf} file.
+Upload the compiled \texttt{.pdf} version of your journal to LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.pdf} file.
+Please check the \texttt{.pdf} file carefully for errors before submission, as this is the version that will be marked.
 
-You will receive \textbf{formal feedback} three weeks after the final deadline.
+You will receive \textbf{formal feedback} three working weeks after the final deadline.
 
 \subsection*{Part C}
 
-Part C consists of \textbf{multiple formative submissions}. This work is \textbf{individual} but with a \textbf{collaborative} component, and will be assessed on a \textbf{criterion-referenced} basis.
-The criterion used to assess this part relates to the quantity and quality of your contributions.
+Part C consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
 
-To complete Part C, contribute to the wiki at the following URL:
-
-\url{https://github.com/Falmouth-Games-Academy/comp110-journal/wiki}
-
-Please ensure that you are editing the wiki for the \texttt{Falmouth-Games-Academy} repository,
-and \textbf{not} the wiki for your fork of the repository.
-
-During your personal tutor meetings, make your tutor aware of your contributions to the wiki.
-
-You will receive \textbf{immediate informal feedback} as well as \textbf{ongoing peer feedback}.
-
-\subsection*{Part D}
-
-Part D consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
-
-To complete Part D, bring the final version of your research journal to the viva session in class.
-Be ready to discuss your work with your tutor.
+To complete Part C, bring the final version of your research journal to the timetabled viva session.
+Be ready to discuss your work with the tutor.
 
 You will receive \textbf{immediate informal feedback}.
 
 \section*{Additional Guidance}
 
-One paper will be suggested in class every two weeks; this is the bare minimum that you should read.
-You should also follow up some of the prior work referenced in these papers,
-as well as subsequent work that references them.
+The papers listed below are widely regarded as seminal works in the field of computer science.
+As with all papers, they were influenced by work that came before,
+and have influenced work that came after.
+Your task is to develop an understanding of \textit{why} these papers are seminal:
+how they fit into the context of what came before,
+what they contributed to the state-of-the-art at the time they were published,
+and how they have gone on to influence subsequent thinking in the field.
+
 As much as possible you should focus your reading on peer-reviewed scholarly sources reporting primary research:
 articles in scientific workshops, conferences, journals, and some books or book chapters.
 Other sources tend to be less rigorous, and should be used only for background information
@@ -152,17 +144,6 @@ A related pitfall is to structure the journal as a sequence of disconnected entr
 Instead aim to \textbf{synthesise} multiple papers into a cohesive whole,
 drawing connections between works by different authors.
 Forming a holistic picture of a field is much more valuable than simply understanding individual works.
-
-The wiki is primarily intended to become a useful shared resource for the cohort.
-As such, students are expected to direct themselves and their peers in populating, structuring and editing the wiki.
-If appropriate, you may copy and paste material from your individual journal into the wiki.
-However note that a wiki is not a piece of academic writing
-and thus will tend to have a less formal tone than you should be aiming for in your journal.
-Edits may be required to ensure a consistent tone for the wiki.
-
-You can, and indeed should, take inspiration from others' wiki contributions when working on your own journal.
-However you \textbf{must not} copy verbatim material written by others;
-doing so will be considered academic misconduct.
 
 Most researchers write scientific papers for the intended audience of their fellow researchers.
 Thus some papers can seem impenetrable to the novice reader.
@@ -188,7 +169,7 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 
 \renewcommand{\refname}{Papers}
 \nocite{*}
-\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtranS} % IEEEtranS = IEEEtran, but in alphabetical order
 \bibliography{comp110_2}
 
 %\section*{Additional Resources}
@@ -202,10 +183,12 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 %
 	\firstcriterion{Basic Competency Threshold}{40\%}
 		\gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
-		\gradespan{5}{Formative submissions for Part A have been signed off at least once every three weeks.
+		\gradespan{5}{The student participated in the peer review activity (Part~A),
+			with enough work available to allow a meaningful review.
+			The student gave a meaningful review of at least one peer's work in Part~A.
 			\par The student participated in the viva, with enough work available to hold a meaningful discussion.
 			\par Sources have been cited in an appropriate manner, without any obvious errors.
-			\par No breaches of academic integrity.
+			\par There are no breaches of academic integrity.
 		}
 %
 %    \criterion{Formative submissions}{Threshold 5\%}
@@ -217,16 +200,18 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 %        \grade 		The student participated in the viva.
 %
     \criterion{Breadth of reading}{5\%}
-        \grade\fail	Fewer than the four suggested articles are referenced.
-        \grade		All four of the suggested articles are referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further six sources are also referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further 12 scholarly articles are also referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further 18 scholarly articles are also referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further 24 scholarly articles are also referenced.
+        \grade\fail	None of the articles listed above are referenced.
+        \par		Fewer than 2 additional sources, not listed above, are referenced.
+        \grade		One of the articles listed above is referenced.
+        \par		An additional 2 sources, not listed above, are referenced.
+        \grade		One of the articles listed above is referenced.
+        \par		An additional 5 sources, not listed above, are referenced.
+        \grade		One of the articles listed above is referenced.
+        \par		An additional 8 sources, not listed above, are referenced.
+        \grade		One of the articles listed above is referenced.
+        \par		An additional 12 sources, not listed above, are referenced.
+        \grade		One of the articles listed above is referenced.
+        \par		An additional 16 sources, not listed above, are referenced.
 %
     \criterion{Depth of insight}{15\%}
         \grade\fail No insight is demonstrated.
@@ -267,23 +252,7 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
         \grade		Strong connections are made between different sources.
         \par		Connections are analytical and evaluative in nature.
 %
-    \criterion{Community engagement}{10\%}
-        \grade\fail 	No contribution has been made to the wiki.
-        \grade 		A few contributions have been made to the wiki.
-        \grade 		Some contributions have been made to the wiki.
-        \par		Contributions are non-trivial.
-        \par		The student has made some attempt to engage in community discourse.
-        \grade 		Many contributions have been made to the wiki.
-        \par		Contributions are well-reasoned.
-        \par		The student has actively engaged in the community discourse.
-        \grade 		A significant number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has participated in steering the community discourse.
-        \grade 		An extensive number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has played a key role in driving the community discourse.
-%
-    \criterion{Appropriateness of spelling \& grammar}{5\%}
+    \criterion{Spelling \& grammar}{5\%}
         \grade\fail 	Substantial spelling and/or grammar errors.
         \grade 		Many spelling and/or grammar errors.
         \grade 		Some spelling and/or grammar errors.  
@@ -291,7 +260,7 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
         \grade 		Almost no spelling and/or grammar errors.
         \grade 		No spelling or grammar errors.
 %
-    \criterion{Appropriateness of journal structure}{5\%}
+    \criterion{Structure}{5\%}
         \grade\fail 	There is no structure, or the structure is unclear.
         \grade 		There is little structure.
         \grade 		There is some structure.
