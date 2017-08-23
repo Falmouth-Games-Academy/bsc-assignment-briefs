@@ -7,6 +7,61 @@
 \usepackage{url}
 \usepackage{todonotes}
 
+\usepackage{luacode}
+
+\begin{luacode*}
+	function rubricRow(title, weight)
+		return {
+			title = title,
+			weight = weight,
+			criteria = { "", "", "", "", "", "" },
+			
+			setCriterion = function(self, index, text)
+				self.criteria[index+1] = text
+				return self
+			end,
+			
+			addParagraph = function(self, startIndex, fmt, args)
+				for i,par in ipairs(args) do
+					critIndex = startIndex + i
+					print("****", i, par, critIndex)
+					crit = self.criteria[critIndex] or ""
+					if crit ~= "" then
+						crit = crit .. "\\par "
+					end
+					crit = crit .. string.format(fmt, par)
+					self.criteria[critIndex] = crit
+				end
+				return self
+			end,
+		}
+	end
+    
+	function printRubric(rubric)
+		tex.print("\\begin{markingrubric}")
+		
+		for rowIndex, row in ipairs(rubric) do
+			if rowIndex == 1 then
+				tex.print("\\firstcriterion{")
+			else
+				tex.print("\\criterion{")
+			end
+			
+			tex.print(row.title, "}{", string.format("%d", row.weight), "\\%}")
+			
+			for critIndex, criterion in ipairs(row.criteria) do
+				tex.print("\\grade")
+				if critIndex == 1 then
+					tex.print("\\fail")
+				end
+				tex.print(criterion)
+			end
+		end
+		
+		tex.print("\\end{markingrubric}")
+	end
+\end{luacode*}
+
 \title{Research Journal --- Computing}
 \author{Dr Ed Powley}
 \module{COMP110}
@@ -198,110 +253,132 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 %    \item http://agilemanifesto.org/
 %\end{itemize}
 
-\begin{markingrubric}
-%
-	\firstcriterion{Basic Competency Threshold}{40\%}
-		\gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
-		\gradespan{5}{Formative submissions for Part A have been signed off at least once every three weeks.
-			\par The student participated in the viva, with enough work available to hold a meaningful discussion.
-			\par Sources have been cited in an appropriate manner, without any obvious errors.
-			\par No breaches of academic integrity.
-		}
-%
-%    \criterion{Formative submissions}{Threshold 5\%}
-%        \gradespan{5}{\fail Formative submissions for Part A have been signed off less frequently than once every three weeks.}
-%        \grade 		Formative submissions for Part A have been signed off at least once every three weeks.
-%
-%    \criterion{Participation in viva}{Threshold 5\%}
-%        \gradespan{5}{\fail The student did not participate in the viva, or did not submit sufficient work to discuss in the viva.}
-%        \grade 		The student participated in the viva.
-%
-    \criterion{Breadth of reading}{5\%}
-        \grade\fail	Fewer than the four suggested articles are referenced.
-        \grade		All four of the suggested articles are referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further six sources are also referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further 12 scholarly articles are also referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further 18 scholarly articles are also referenced.
-        \grade		All four of the suggested articles are referenced.
-        \par		A further 24 scholarly articles are also referenced.
-%
-    \criterion{Depth of insight}{15\%}
-        \grade\fail No insight is demonstrated.
-        \par		Papers are merely paraphrased.
-        \grade		Little insight is demonstrated.
-        \par		Papers are summarised in the student's own words.
-        \grade		Some insight is demonstrated.
-        \par		Attempts are made at discussion beyond summary.
-        \grade		Much insight is demonstrated.
-        \par		Discussion is inferential in nature.
-        \grade		Considerable insight is demonstrated.
-        \par		Discussion is analytical in nature.
-        \grade		Significant insight is demonstrated.
-        \par		Discussion is analytical and evaluative in nature.
-%
-    \criterion{Specificity, verifiability \& accuracy of claims}{5\%}
-        \grade\fail 	No citations to evidence to claims.
-        \par 		Substantial errors and/or misinterpretations.
-        \grade 		Few claims have a clear source of evidence.
-        \par 		Significant errors and/or misinterpretations.
-        \grade 		Some claims have a clear source of evidence.
-        \par 		Many errors and/or misinterpretations.
-        \grade 		Many claims have a clear source of evidence.
-        \par 		Some errors and/or misinterpretations.
-        \grade 		Most claims have a clear source of evidence.
-        \par 		Few errors and/or misinterpretations.
-        \grade 		All claims have a clear source of evidence.
-        \par 		Almost no errors and/or misinterpretations.
-%
-    \criterion{Synthesis}{15\%}
-        \grade\fail No connections are made between different sources.
-        \grade		Superficial connections are made between different sources.
-        \grade		Basic connections are made between different sources.
-        \grade		Reasonable connections are made between different sources.
-        \par		Connections go beyond mere description.
-        \grade		Strong connections are made between different sources.
-        \par		Connections are analytical in nature.
-        \grade		Strong connections are made between different sources.
-        \par		Connections are analytical and evaluative in nature.
-%
-    \criterion{Community engagement}{10\%}
-        \grade\fail 	No contribution has been made to the wiki.
-        \grade 		A few contributions have been made to the wiki.
-        \grade 		Some contributions have been made to the wiki.
-        \par		Contributions are non-trivial.
-        \par		The student has made some attempt to engage in community discourse.
-        \grade 		Many contributions have been made to the wiki.
-        \par		Contributions are well-reasoned.
-        \par		The student has actively engaged in the community discourse.
-        \grade 		A significant number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has participated in steering the community discourse.
-        \grade 		An extensive number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has played a key role in driving the community discourse.
-%
-    \criterion{Appropriateness of spelling \& grammar}{5\%}
-        \grade\fail 	Substantial spelling and/or grammar errors.
-        \grade 		Many spelling and/or grammar errors.
-        \grade 		Some spelling and/or grammar errors.  
-        \grade 		Few spelling and/or grammar errors.
-        \grade 		Almost no spelling and/or grammar errors.
-        \grade 		No spelling or grammar errors.
-%
-    \criterion{Appropriateness of journal structure}{5\%}
-        \grade\fail 	There is no structure, or the structure is unclear.
-        \grade 		There is little structure.
-        \grade 		There is some structure.
-        \par 		A few sentences and paragraphs are well constructed.
-        \grade 		There is much structure.
-        \par 		Some sentences and paragraphs are well constructed.
-        \grade 		There is much structure, highlighting the key themes.
-        \par 		Most sentences and paragraphs are well constructed.
-        \grade 		There is much structure, highlighting the key themes.
-        \par 		All sentences and paragraphs are well constructed.
-\end{markingrubric}
+\begin{luacode*}
+	rubric = {
+		rubricRow("Breadth of reading", 5)
+			: addParagraph(0, "Fewer than the four suggested articles are referenced.", {0})
+			: addParagraph(1, "All four of the suggested articles are referenced.", {0,0,0,0,0})
+			: addParagraph(2, "A further %d sources are also referenced.", {6, 12, 18, 24})
+		,
+		rubricRow("Depth of insight", 15)
+			: addParagraph(0, "%s insight is demonstrated.",
+				{ "No", "Little", "Some", "Much", "Considerable", "Significant" })
+			: addParagraph(0, "%s", {
+				"Papers are merely paraphrased.",
+				"Papers are summarised in the student's own words.",
+				"Attempts are made at discussion beyond summary.",
+				"Discussion is inferential in nature.",
+				"Discussion is analytical in nature.",
+				"Discussion is analytical and evaluative in nature." })
+	}
+	
+	printRubric(rubric)	
+\end{luacode*}
+
+%\begin{markingrubric}
+%%
+%	\firstcriterion{Basic Competency Threshold}{40\%}
+%		\gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
+%		\gradespan{5}{Formative submissions for Part A have been signed off at least once every three weeks.
+%			\par The student participated in the viva, with enough work available to hold a meaningful discussion.
+%			\par Sources have been cited in an appropriate manner, without any obvious errors.
+%			\par No breaches of academic integrity.
+%		}
+%%
+%%    \criterion{Formative submissions}{Threshold 5\%}
+%%        \gradespan{5}{\fail Formative submissions for Part A have been signed off less frequently than once every three weeks.}
+%%        \grade 		Formative submissions for Part A have been signed off at least once every three weeks.
+%%
+%%    \criterion{Participation in viva}{Threshold 5\%}
+%%        \gradespan{5}{\fail The student did not participate in the viva, or did not submit sufficient work to discuss in the viva.}
+%%        \grade 		The student participated in the viva.
+%%
+%    \criterion{Breadth of reading}{5\%}
+%        \grade\fail	Fewer than the four suggested articles are referenced.
+%        \grade		All four of the suggested articles are referenced.
+%        \grade		All four of the suggested articles are referenced.
+%        \par		A further six sources are also referenced.
+%        \grade		All four of the suggested articles are referenced.
+%        \par		A further 12 scholarly articles are also referenced.
+%        \grade		All four of the suggested articles are referenced.
+%        \par		A further 18 scholarly articles are also referenced.
+%        \grade		All four of the suggested articles are referenced.
+%        \par		A further 24 scholarly articles are also referenced.
+%%
+%    \criterion{Depth of insight}{15\%}
+%        \grade\fail No insight is demonstrated.
+%        \par		Papers are merely paraphrased.
+%        \grade		Little insight is demonstrated.
+%        \par		Papers are summarised in the student's own words.
+%        \grade		Some insight is demonstrated.
+%        \par		Attempts are made at discussion beyond summary.
+%        \grade		Much insight is demonstrated.
+%        \par		Discussion is inferential in nature.
+%        \grade		Considerable insight is demonstrated.
+%        \par		Discussion is analytical in nature.
+%        \grade		Significant insight is demonstrated.
+%        \par		Discussion is analytical and evaluative in nature.
+%%
+%    \criterion{Specificity, verifiability \& accuracy of claims}{5\%}
+%        \grade\fail 	No citations to evidence to claims.
+%        \par 		Substantial errors and/or misinterpretations.
+%        \grade 		Few claims have a clear source of evidence.
+%        \par 		Significant errors and/or misinterpretations.
+%        \grade 		Some claims have a clear source of evidence.
+%        \par 		Many errors and/or misinterpretations.
+%        \grade 		Many claims have a clear source of evidence.
+%        \par 		Some errors and/or misinterpretations.
+%        \grade 		Most claims have a clear source of evidence.
+%        \par 		Few errors and/or misinterpretations.
+%        \grade 		All claims have a clear source of evidence.
+%        \par 		Almost no errors and/or misinterpretations.
+%%
+%    \criterion{Synthesis}{15\%}
+%        \grade\fail No connections are made between different sources.
+%        \grade		Superficial connections are made between different sources.
+%        \grade		Basic connections are made between different sources.
+%        \grade		Reasonable connections are made between different sources.
+%        \par		Connections go beyond mere description.
+%        \grade		Strong connections are made between different sources.
+%        \par		Connections are analytical in nature.
+%        \grade		Strong connections are made between different sources.
+%        \par		Connections are analytical and evaluative in nature.
+%%
+%    \criterion{Community engagement}{10\%}
+%        \grade\fail 	No contribution has been made to the wiki.
+%        \grade 		A few contributions have been made to the wiki.
+%        \grade 		Some contributions have been made to the wiki.
+%        \par		Contributions are non-trivial.
+%        \par		The student has made some attempt to engage in community discourse.
+%        \grade 		Many contributions have been made to the wiki.
+%        \par		Contributions are well-reasoned.
+%        \par		The student has actively engaged in the community discourse.
+%        \grade 		A significant number of contributions have been made to the wiki.
+%        \par		Contributions are well-reasoned and academically sound.
+%        \par		The student has participated in steering the community discourse.
+%        \grade 		An extensive number of contributions have been made to the wiki.
+%        \par		Contributions are well-reasoned and academically sound.
+%        \par		The student has played a key role in driving the community discourse.
+%%
+%    \criterion{Appropriateness of spelling \& grammar}{5\%}
+%        \grade\fail 	Substantial spelling and/or grammar errors.
+%        \grade 		Many spelling and/or grammar errors.
+%        \grade 		Some spelling and/or grammar errors.  
+%        \grade 		Few spelling and/or grammar errors.
+%        \grade 		Almost no spelling and/or grammar errors.
+%        \grade 		No spelling or grammar errors.
+%%
+%    \criterion{Appropriateness of journal structure}{5\%}
+%        \grade\fail 	There is no structure, or the structure is unclear.
+%        \grade 		There is little structure.
+%        \grade 		There is some structure.
+%        \par 		A few sentences and paragraphs are well constructed.
+%        \grade 		There is much structure.
+%        \par 		Some sentences and paragraphs are well constructed.
+%        \grade 		There is much structure, highlighting the key themes.
+%        \par 		Most sentences and paragraphs are well constructed.
+%        \grade 		There is much structure, highlighting the key themes.
+%        \par 		All sentences and paragraphs are well constructed.
+%\end{markingrubric}
 
 \end{document}
