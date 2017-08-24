@@ -8,7 +8,6 @@
 \usepackage{todonotes}
 
 \usepackage{luacode}
-
 \directlua{dofile("../../rubric.lua")}
 
 \title{Research Journal --- Computing}
@@ -203,65 +202,67 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 %\end{itemize}
 
 \begin{luacode*}
-	printRubric {
-		Row:new("Basic competency threshold", 40)
-			: addSingle(0, "At least one part is missing or is unsatisfactory.")
-			: addSingle(1, "Formative submissions for Part A have been signed off at least once every three weeks.")
-			: addSingle(1, "The student participated in the viva, with enough work available to hold a meaningful discussion.")
-			: addSingle(1, "Sources have been cited in an appropriate manner, without any obvious errors.")
-			: addSingle(1, "No breaches of academic integrity.")
-		,
-		Row:new("Breadth of reading", 5)
-			: addSingle(0, "Fewer than the four suggested articles are referenced.")
-			: addRepeated(1, 5, "All four of the suggested articles are referenced.")
-			: addFormatted(2, "A further %d sources are also referenced.", {6, 12, 18, 24})
-		,
-		Row:new("Depth of insight", 15)
-			: addFormatted(0, "%s insight is demonstrated.",
-				{ "No", "Little", "Some", "Much", "Considerable", "Significant" })
-			: addMultiple(0, {
-				"Papers are merely paraphrased.",
-				"Papers are summarised in the student's own words.",
-				"Attempts are made at discussion beyond summary.",
-				"Discussion is inferential in nature.",
-				"Discussion is analytical in nature.",
-				"Discussion is analytical and evaluative in nature." })
-		,
-		Row:new("Specificity, verifiability \\& accuracy of claims", 5)
-			: addFormatted(0, "%s errors and/or misrepresentations.",
-				{ "Substantial", "Significant", "Many", "Some", "Few", "Almost no" })
-			: addFormatted(0, "%s claims have a clear source of evidence.",
-				{ "No", "Few", "Some", "Many", "Most", "All" })
-		,
-		Row:new("Synthesis", 15)
-			: addFormatted(0, "%s connections are made between different sources.",
-				{ "No", "Superficial", "Basic", "Reasonable", "Strong", "Strong" })
-			:addMultiple(3, {
-				"Connections go beyond mere description.",
-				"Connections are analytical in nature.",
-				"Connections are analytical and evaluative in nature." })
-		,
-		Row:new("Community engagement", 10)
-			:addFormatted(0, "%s contributions have been made to the wiki.",
-				{ "No", "A few", "Some", "Many", "A significant number of", "An extensive number of" })
-			:addFormatted(2, "Contributions are %s.",
-				{ "non-trivial", "well-reasoned",
-					"well-reasoned and academically sound", "well-reasoned and academically sound" })
-			:addFormatted(2, "The student has %s the community discourse",
-				{ "made some attempt to engage in", "actively engaged in",
-					"participated in steering", "played a key role in driving" })
-		,
-		Row:new("Spelling \\& grammar", 5)
-			:addFormatted(0, "%s spelling and/or grammatical errors.",
-				{ "Substantial", "Many", "Some", "Few", "Almost no", "No" })
-		,
-		Row:new("Structure", 5)
-			:addSingle(0, "There is no structure, or the structure is unclear.")
-			:addFormatted(1, "There is %s structure.", { "little", "some", "much" })
-			:addRepeated(4, 2, "There is much structure, highlighting the key themes.")
-			:addFormatted(2, "%s sentences and paragraphs are well constructed.",
-				{ "A few", "Some", "Most", "All" })
-	}
+	Rubric:new()
+		:addRows {
+			Row:new("Basic competency threshold", 40)
+				: addSingle(0, "At least one part is missing or is unsatisfactory.")
+				: addSingle(1, "Formative submissions for Part A have been signed off at least once every three weeks.")
+				: addSingle(1, "The student participated in the viva, with enough work available to hold a meaningful discussion.")
+				: addSingle(1, "Sources have been cited in an appropriate manner, without any obvious errors.")
+				: addSingle(1, "No breaches of academic integrity.")
+			,
+			Row:new("Breadth of reading", 5)
+				: addSingle(0, "Fewer than the four suggested articles are referenced.")
+				: addRepeated(1, 5, "All four of the suggested articles are referenced.")
+				: addFormatted(2, "A further %d sources are also referenced.", {6, 12, 18, 24})
+			,
+			Row:new("Depth of insight", 15)
+				: addFormatted(0, "%s insight is demonstrated.",
+					{ "No", "Little", "Some", "Much", "Considerable", "Significant" })
+				: addMultiple(0, {
+					"Papers are merely paraphrased.",
+					"Papers are summarised in the student's own words.",
+					"Attempts are made at discussion beyond summary.",
+					"Discussion is inferential in nature.",
+					"Discussion is analytical in nature.",
+					"Discussion is analytical and evaluative in nature." })
+			,
+			Row:new("Specificity, verifiability \\& accuracy of claims", 5)
+				: addFormatted(0, "%s errors and/or misrepresentations.",
+					{ "Substantial", "Significant", "Many", "Some", "Few", "Almost no" })
+				: addFormatted(0, "%s claims have a clear source of evidence.",
+					{ "No", "Few", "Some", "Many", "Most", "All" })
+			,
+			Row:new("Synthesis", 15)
+				: addFormatted(0, "%s connections are made between different sources.",
+					{ "No", "Superficial", "Basic", "Reasonable", "Strong", "Strong" })
+				:addMultiple(3, {
+					"Connections go beyond mere description.",
+					"Connections are analytical in nature.",
+					"Connections are analytical and evaluative in nature." })
+			,
+			Row:new("Community engagement", 10)
+				:addFormatted(0, "%s contributions have been made to the wiki.",
+					{ "No", "A few", "Some", "Many", "A significant number of", "An extensive number of" })
+				:addFormatted(2, "Contributions are %s.",
+					{ "non-trivial", "well-reasoned",
+						"well-reasoned and academically sound", "well-reasoned and academically sound" })
+				:addFormatted(2, "The student has %s the community discourse",
+					{ "made some attempt to engage in", "actively engaged in",
+						"participated in steering", "played a key role in driving" })
+			,
+			Row:new("Spelling \\& grammar", 5)
+				:addFormatted(0, "%s spelling and/or grammatical errors.",
+					{ "Substantial", "Many", "Some", "Few", "Almost no", "No" })
+			,
+			Row:new("Structure", 5)
+				:addSingle(0, "There is no structure, or the structure is unclear.")
+				:addFormatted(1, "There is %s structure.", { "little", "some", "much" })
+				:addRepeated(4, 2, "There is much structure, highlighting the key themes.")
+				:addFormatted(2, "%s sentences and paragraphs are well constructed.",
+					{ "A few", "Some", "Most", "All" })
+		}
+		:print()
 \end{luacode*}
 
 \end{document}

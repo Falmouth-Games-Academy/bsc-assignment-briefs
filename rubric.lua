@@ -37,27 +37,55 @@ function Row:addFormatted(startIndex, fmt, args)
 	end
 	return self
 end
+
+Rubric = {}
+
+function Rubric:new()
+	o = { rows={} }
+	setmetatable(o, self)
+	self.__index = self
+	return o
+end
+
+function Rubric:setLevel(level)
+	self.descriptors = { [0] = "Refer for resubmission" }
+	for i,si in ipairs{"Basic", "Novice", "Professional", "Expert"} do
+		for j,sj in ipairs{"Competency", "Proficiency"} do
+			k = i * 2 + j - level + 1
+			if k >= 1 and k <= 5 then
+				self.descriptors[k] = si .. " " .. sj
+			end
+		end
+	end
+end
 	
-function printRubric(rubric)
+function Rubric:addRows(rows)
+	for i,row in ipairs(rows) do
+		self.rows[#self.rows + 1] = row
+	end
+	return self
+end
+
+function Rubric:print()
 	totalWeight = 0
-	for rowIndex, row in ipairs(rubric) do
+	for rowIndex, row in ipairs(self.rows) do
 		totalWeight = totalWeight + row.weight
 	end
 	
 	if totalWeight ~= 100 then
-		tex.print("\\rubrictitle{Marking Rubric --- FIXME: weights add up to ", totalWeight, " and not 100!}")
+		tex.print("\\rubrichead{\\textcolor{red}{\\Large FIXME: weights add up to ", totalWeight, " and not 100!}}")
 	end
 	
 	tex.print("\\begin{markingrubric}")
 	
-	for rowIndex, row in ipairs(rubric) do
+	for rowIndex, row in ipairs(self.rows) do
 		if rowIndex == 1 then
 			tex.print("\\firstcriterion")
 		else
 			tex.print("\\criterion")
 		end
 		
-		tex.print(string.format("{%s}{%d\\%%}", row.title, row.weight))
+		tex.print(string.format("{%s}{%g\\%%}", row.title, row.weight))
 		
 		for i = 0,5 do
 			if row.criteria[i] ~= nil then

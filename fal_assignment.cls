@@ -11,7 +11,7 @@
 \usepackage{longtable} % For >1 page marking rubric
 \usepackage{colortbl}  % For colouring table cells
 \usepackage{microtype} % For improved hyphenation
-\usepackage{calc}
+\usepackage{calc}      % For calculating lengths
 
 % Adjust margins
 \usepackage[margin=1.5cm, left=6.5cm]{geometry}
@@ -95,7 +95,7 @@
     \end{tikzpicture}
 }
 
-% Marking rubric
+% Legacy marking rubric -- use rubric.lua instead
 \newenvironment{markingrubric}{%
     \clearpage
     \newgeometry{margin=1cm}
