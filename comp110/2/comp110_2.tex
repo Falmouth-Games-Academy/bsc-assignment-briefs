@@ -10,34 +10,56 @@
 \usepackage{luacode}
 
 \begin{luacode*}
-	function rubricRow(title, weight)
-		return {
-			title = title,
-			weight = weight,
-			criteria = { "", "", "", "", "", "" },
-			
-			setCriterion = function(self, index, text)
-				self.criteria[index+1] = text
-				return self
-			end,
-			
-			addParagraph = function(self, startIndex, fmt, args)
-				for i,par in ipairs(args) do
-					critIndex = startIndex + i
-					print("****", i, par, critIndex)
-					crit = self.criteria[critIndex] or ""
-					if crit ~= "" then
-						crit = crit .. "\\par "
-					end
-					crit = crit .. string.format(fmt, par)
-					self.criteria[critIndex] = crit
-				end
-				return self
-			end,
-		}
+	Row = {}
+	
+	function Row:new(title, weight)
+		o = { title=title, weight=weight, criteria={} }
+		setmetatable(o, self)
+		self.__index = self
+		return o
 	end
-    
+	
+	function Row:addSingle(index, str)
+		crit = self.criteria[index] or ""
+		if crit ~= "" then
+			crit = crit .. "\\par "
+		end
+		crit = crit .. str
+		self.criteria[index] = crit
+		return self
+	end
+		
+	function Row:addRepeated(startIndex, count, str)
+		for i = startIndex, startIndex+count-1 do
+			self:addSingle(i, str)
+		end
+		return self
+	end
+		
+	function Row:addMultiple(startIndex, args)
+		for i,par in ipairs(args) do
+			self:addSingle(startIndex + i - 1, par)
+		end
+		return self
+	end
+		
+	function Row:addFormatted(startIndex, fmt, args)
+		for i,par in ipairs(args) do
+			self:addSingle(startIndex + i - 1, string.format(fmt, par))
+		end
+		return self
+	end
+		
 	function printRubric(rubric)
+		totalWeight = 0
+		for rowIndex, row in ipairs(rubric) do
+			totalWeight = totalWeight + row.weight
+		end
+		
+		if totalWeight ~= 100 then
+			tex.print("\\rubrictitle{Marking Rubric --- FIXME: weights add up to ", totalWeight, " and not 100!}")
+		end
+		
 		tex.print("\\begin{markingrubric}")
 		
 		for rowIndex, row in ipairs(rubric) do
@@ -49,12 +71,14 @@
 			
 			tex.print(row.title, "}{", string.format("%d", row.weight), "\\%}")
 			
-			for critIndex, criterion in ipairs(row.criteria) do
+			totalWeight = totalWeight + row.weight
+			
+			for i = 0,5 do
 				tex.print("\\grade")
-				if critIndex == 1 then
+				if i == 0 then
 					tex.print("\\fail")
 				end
-				tex.print(criterion)
+				tex.print(row.criteria[i] or "")
 			end
 		end
 		
@@ -254,25 +278,38 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 %\end{itemize}
 
 \begin{luacode*}
-	rubric = {
-		rubricRow("Breadth of reading", 5)
-			: addParagraph(0, "Fewer than the four suggested articles are referenced.", {0})
-			: addParagraph(1, "All four of the suggested articles are referenced.", {0,0,0,0,0})
-			: addParagraph(2, "A further %d sources are also referenced.", {6, 12, 18, 24})
+	printRubric {
+		Row:new("Breadth of reading", 5)
+			: addSingle(0, "Fewer than the four suggested articles are referenced.")
+			: addRepeated(1, 5, "All four of the suggested articles are referenced.")
+			: addFormatted(2, "A further %d sources are also referenced.", {6, 12, 18, 24})
 		,
-		rubricRow("Depth of insight", 15)
-			: addParagraph(0, "%s insight is demonstrated.",
+		Row:new("Depth of insight", 15)
+			: addFormatted(0, "%s insight is demonstrated.",
 				{ "No", "Little", "Some", "Much", "Considerable", "Significant" })
-			: addParagraph(0, "%s", {
+			: addMultiple(0, {
 				"Papers are merely paraphrased.",
 				"Papers are summarised in the student's own words.",
 				"Attempts are made at discussion beyond summary.",
 				"Discussion is inferential in nature.",
 				"Discussion is analytical in nature.",
 				"Discussion is analytical and evaluative in nature." })
+		,
+		Row:new("Specificity, verifiability \\& accuracy of claims", 5)
+			: addFormatted(0, "%s errors and/or misrepresentations.",
+				{ "Substantial", "Significant", "Many", "Some", "Few", "Almost no" })
+			: addFormatted(0, "%s claims have a clear source of evidence.",
+				{ "No", "Few", "Some", "Many", "Most", "All" })
+		,
+		Row:new("Synthesis", 15)
+			: addFormatted(0, "%s connections are made between different sources.",
+				{ "No", "Superficial", "Basic", "Reasonable", "Strong", "Strong" })
+			:addMultiple(3, {
+				"Connections go beyond mere description.",
+				"Connections are analytical in nature.",
+				"Connections are analytical and evaluative in nature." })
+		,
 	}
-	
-	printRubric(rubric)	
 \end{luacode*}
 
 %\begin{markingrubric}
