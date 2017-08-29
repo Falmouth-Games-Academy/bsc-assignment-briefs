@@ -7,6 +7,11 @@
 \usepackage{url}
 \usepackage{todonotes}
 
+% Suppress bibliography title
+% https://tex.stackexchange.com/a/132647
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
 % Suppress numbers in bibliography
 % https://tex.stackexchange.com/a/35371
 \makeatletter
@@ -16,6 +21,7 @@
 \title{Research Journal --- Computing}
 \author{Dr Ed Powley}
 \module{COMP110}
+\version{2.0}
 
 \begin{document}
 
@@ -102,9 +108,9 @@ To complete Part B, revise your report from Part~A to take into account any feed
 
 Upload the compiled \texttt{.pdf} version of your journal to LearningSpace.
 Note that LearningSpace will only accept a single \texttt{.pdf} file.
-Please check the \texttt{.pdf} file carefully for errors before submission, as this is the version that will be marked.
+Please check the \texttt{.pdf} file carefully for errors before submission.
 
-You will receive \textbf{formal feedback} three working weeks after the final deadline.
+You will receive \textbf{formal feedback} three weeks after the final deadline.
 
 \subsection*{Part C}
 
@@ -120,6 +126,8 @@ You will receive \textbf{immediate informal feedback}.
 The papers listed below are widely regarded as seminal works in the field of computer science.
 As with all papers, they were influenced by work that came before,
 and have influenced work that came after.
+They are decades old, but all of them have played a significant role in shaping the state of computing
+in \the\year.
 Your task is to develop an understanding of \textit{why} these papers are seminal:
 how they fit into the context of what came before,
 what they contributed to the state-of-the-art at the time they were published,
@@ -129,21 +137,24 @@ As much as possible you should focus your reading on peer-reviewed scholarly sou
 articles in scientific workshops, conferences, journals, and some books or book chapters.
 Other sources tend to be less rigorous, and should be used only for background information
 or in cases where their use can be convincingly justified.
+It is almost never appropriate to cite Wikipedia and other similar online sources,
+although these are often useful for identifying further scholarly works.
 
 A common pitfall is to focus too much on summarising the content of the papers you have read.
 For higher marks you need to demonstrate \textbf{insight} into what you have read:
 forming inferences and analyses beyond what is written in the paper.
 Some questions you might ask yourself are:
 Why is the paper significant and/or influential?
+What is the problem it is trying to solve, and why is that problem important?
 Why did the researchers choose the approach that they did?
 Is there anything counterintuitive or surprising in the paper?
 Do you disagree with any of the assumptions or claims it makes?
 Does the paper suggest any further research questions?
 
 A related pitfall is to structure the journal as a sequence of disconnected entries.
-Instead aim to \textbf{synthesise} multiple papers into a cohesive whole,
+Instead aim to \textbf{synthesise} multiple papers into a cohesive argument,
 drawing connections between works by different authors.
-Forming a holistic picture of a field is much more valuable than simply understanding individual works.
+Understanding individual works is useful, but forming a holistic picture is much more valuable.
 
 Most researchers write scientific papers for the intended audience of their fellow researchers.
 Thus some papers can seem impenetrable to the novice reader.
@@ -167,7 +178,11 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
     		 Please make a pull request and comment accordingly.
 \end{itemize}
 
-\renewcommand{\refname}{Papers}
+\section*{Reading list}
+
+You must choose \textbf{one} of the following papers on which to focus your research journal.
+However it is recommended that you read all of them before making your choice.
+
 \nocite{*}
 \bibliographystyle{IEEEtranS} % IEEEtranS = IEEEtran, but in alphabetical order
 \bibliography{comp110_2}
@@ -183,9 +198,9 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 %
 	\firstcriterion{Basic Competency Threshold}{40\%}
 		\gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
-		\gradespan{5}{The student participated in the peer review activity (Part~A),
+		\gradespan{5}{The student participated in the peer review activity,
 			with enough work available to allow a meaningful review.
-			The student gave a meaningful review of at least one peer's work in Part~A.
+			\par The student gave a meaningful review of at least one peer's work.
 			\par The student participated in the viva, with enough work available to hold a meaningful discussion.
 			\par Sources have been cited in an appropriate manner, without any obvious errors.
 			\par There are no breaches of academic integrity.
@@ -199,7 +214,7 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
 %        \gradespan{5}{\fail The student did not participate in the viva, or did not submit sufficient work to discuss in the viva.}
 %        \grade 		The student participated in the viva.
 %
-    \criterion{Breadth of reading}{5\%}
+    \criterion{Breadth of reading}{10\%}
         \grade\fail	None of the articles listed above are referenced.
         \par		Fewer than 2 additional sources, not listed above, are referenced.
         \grade		One of the articles listed above is referenced.
@@ -227,7 +242,7 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
         \grade		Significant insight is demonstrated.
         \par		Discussion is analytical and evaluative in nature.
 %
-    \criterion{Specificity, verifiability \& accuracy of claims}{5\%}
+    \criterion{Specificity, verifiability \& accuracy of claims}{10\%}
         \grade\fail 	No citations to evidence to claims.
         \par 		Substantial errors and/or misinterpretations.
         \grade 		Few claims have a clear source of evidence.
@@ -253,12 +268,12 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
         \par		Connections are analytical and evaluative in nature.
 %
     \criterion{Spelling \& grammar}{5\%}
-        \grade\fail 	Substantial spelling and/or grammar errors.
-        \grade 		Many spelling and/or grammar errors.
-        \grade 		Some spelling and/or grammar errors.  
-        \grade 		Few spelling and/or grammar errors.
-        \grade 		Almost no spelling and/or grammar errors.
-        \grade 		No spelling or grammar errors.
+        \grade\fail 	Substantial spelling and/or grammatical errors.
+        \grade 		Many spelling and/or grammatical errors.
+        \grade 		Some spelling and/or grammatical errors.  
+        \grade 		Few spelling and/or grammatical errors.
+        \grade 		Almost no spelling and/or grammatical errors.
+        \grade 		No spelling or grammatical errors.
 %
     \criterion{Structure}{5\%}
         \grade\fail 	There is no structure, or the structure is unclear.
