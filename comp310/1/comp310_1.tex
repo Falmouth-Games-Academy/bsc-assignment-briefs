@@ -1,0 +1,172 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage[hyphens]{url}
+\usepackage{todonotes}
+
+\title{Constrained development task}
+\author{Dr Ed Powley}
+\module{COMP310}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``Because of the nature of Moore's law, anything that an extremely clever graphics programmer can do at one point can be replicated by a merely competent programmer some number of years later.''
+
+--- John Carmack
+
+    \marginquoterule
+
+``Programming is like this amazing puzzle game where the puzzles are created by your own stupidity.''
+
+--- Brad O'Farrell
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    A demo of fluid simulation with NVIDIA's PhysX.
+    Recent advances in GPU technology have enabled a wide range of high-fidelity real-time rendering and simulation effects.
+}
+
+In this assignment, you are required to \textbf{design} and \textbf{implement} a ``de-make''
+of a well-known game. Your de-make will be implemented in assembly language and will run on the 
+Nintendo Entertainment System (NES).
+
+Bla bla bla motivation.
+
+This assignment is formed of several parts:
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Prepare} a 10-minute presentation that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{outline} the concept of your de-make, including the game it is based upon;
+			\item \textbf{explain} the key mechanic around which your de-make will focus;
+			\item \textbf{justify} the technical feasibility of your concept.
+		\end{enumerate}
+	\item \textbf{Write} a computer program in 6502 assembly language that will
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{implement} your de-make concept.
+		\end{enumerate}
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+This assignment is a \textbf{programming} task. Fork the GitHub repository at the following URL:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp310-portfolio}
+
+Use the existing directory structure and, as required, extend this structure with sub-directories.
+Ensure that you maintain the \texttt{readme.md} file.
+If necessary, please ensure that you add any editor-specific files and folders to \texttt{.gitignore}. 
+
+\subsection*{Part A}
+
+Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
+
+\begin{itemize}
+	\item What is the title and high concept of the demo?
+	\item What is the intended aesthetic?
+	\item For each of two graphical or simulation effects:
+	\begin{itemize}
+		\item What is the effect?
+		\item How will the effect contribute to the aesthetic?
+	\end{itemize}
+	\item Is the scope appropriate for the product development time-frame?
+\end{itemize}
+
+To complete Part A, prepare the handout using any word processing tool.
+To help illustrate your intended aesthetic, your handout may include images and/or links to online videos.
+
+Show the handout to your \textbf{tutor} for immediate \textbf{informal feedback}.
+
+Once you have completed Part A, you should move onto the Worksheets. See the worksheets on the Learning Space for more details.  
+
+\section*{Additional Guidance}
+
+As always, avoid underestimating the effort required to implement even simple software; always consider scope.
+From the proposal stage, you should consider very carefully what is feasible.
+
+Your code will be assessed on \textbf{functional coherence}:
+how well the finished product corresponds to the user stories,
+and whether it has any obvious bugs.
+Correspondence to user stories runs both ways:
+implementing features that were not present in the design (``feature creep'')
+is just as bad as neglecting to implement features.
+
+Unlike your previous assignments,
+you will be assessed on the \textbf{performance} of your solution.
+Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
+but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
+It may be necessary to trade-off the complexity or fidelity of an effect
+in order to achieve acceptable performance.
+
+Your code will also be assessed on \textbf{sophistication}.
+To succeed on a project of this size and complexity,
+you will need to make use of appropriate algorithms, data structures, libraries, and object oriented programming concepts.
+Appropriateness to the task at hand is key:
+you will \textbf{not} receive credit for complexity  
+where something simpler would have sufficed.
+
+\textbf{Maintainability} is important in all programming projects,
+but doubly so when working in a team.
+Use \textbf{comments} liberally to improve code comprehension,
+and carefully choose the \textbf{names} for your files, classes, functions and variables.
+Use a well-established commenting convention
+for \textbf{high-level documentation}.
+The open-source tool Doxygen supports several such conventions.
+Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
+indentation, whitespace, placement of curly braces, etc.
+Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
+with values instead defined as constants together in a single place.
+Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
+e.g.\ by defining them in an external file read at startup.
+
+As with all assignments on this course, you are expected to display a level of
+\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
+arts institution.
+One approach to promoting creativity is
+\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
+Often the most interesting ideas are \textbf{subversive}: they deliberately go against
+convention or obvious solutions.
+
+You will \textbf{not} be judged on the quality of your art assets.
+It is fine to use meshes and textures found online,
+as long as they are available under an appropriate license and are properly attributed.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+\section*{Additional Resources}
+
+\begin{itemize}
+    \item \url{http://www.opengl-tutorial.org}
+    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
+    \item \url{https://google.github.io/styleguide/cppguide.html}
+\end{itemize}
+
+\rubricyeartwo
+\begin{markingrubric}
+	%
+    \firstcriterion{Basic competency threshold}{40\%}
+		\grade\fail Bla
+		\gradespan{5}{Bla}
+	%
+\end{markingrubric}
+
+\end{document}
