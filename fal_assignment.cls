@@ -152,3 +152,11 @@
 	\centering \textbf{\small Professional Competency} &
 	\centering \textbf{\small Professional Proficiency}
 }}
+\newcommand{\rubricyearthree}{\renewcommand{\@rubricgrades}{
+	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
+	\centering \textbf{\small Novice Competency} &
+	\centering \textbf{\small Novice Proficiency} &
+	\centering \textbf{\small Professional Competency} &
+	\centering \textbf{\small Professional Proficiency} &
+	\centering \textbf{\small Expert Competency}
+}}
