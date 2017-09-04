@@ -29,8 +29,7 @@
 --- Brad O'Farrell
 \end{marginquote}
 \marginpicture{flavour_pic}{
-    A demo of fluid simulation with NVIDIA's PhysX.
-    Recent advances in GPU technology have enabled a wide range of high-fidelity real-time rendering and simulation effects.
+    \emph{Halo 2600}, a de-make of the Halo series developed for the Atari 2600 by Ed Fries.
 }
 
 In this assignment, you are required to \textbf{design} and \textbf{implement} a ``de-make''
@@ -47,9 +46,19 @@ This assignment is formed of several parts:
 			\item \textbf{explain} the key mechanic around which your de-make will focus;
 			\item \textbf{justify} the technical feasibility of your concept.
 		\end{enumerate}
-	\item \textbf{Write} a computer program in 6502 assembly language that will
+	\item \textbf{Populate} a Trello board with the user stories for your demo.
+	\item \textbf{Implement} a draft program in 6502 assembly language that will
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{implement} your de-make concept.
+		\end{enumerate}
+	\item \textbf{Implement} a final program in 6502 assembly language that will
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{address} any shortcomings identified by tutors and peers in Part~C.
+		\end{enumerate}
+	\item \textbf{Present} a practical demo of your game and source code that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{demonstrate} your academic integrity;
+			\item \textbf{demonstrate} your individual programming knowledge and communication skills.
 		\end{enumerate}
 \end{enumerate}
 
@@ -68,27 +77,80 @@ If necessary, please ensure that you add any editor-specific files and folders t
 Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
 
 \begin{itemize}
-	\item What is the title and high concept of the demo?
+	\item What is the title of the game?
+	\item On what well-known game is it based?
+	\item What is the core mechanic that your game will implement?
+	\item Is the game technically feasible, given the limitations of the target platform?
+		It may be helpful to reference existing NES games here.
 	\item What is the intended aesthetic?
-	\item For each of two graphical or simulation effects:
-	\begin{itemize}
-		\item What is the effect?
-		\item How will the effect contribute to the aesthetic?
-	\end{itemize}
 	\item Is the scope appropriate for the product development time-frame?
 \end{itemize}
 
-To complete Part A, prepare the handout using any word processing tool.
-To help illustrate your intended aesthetic, your handout may include images and/or links to online videos.
+To complete Part A, prepare a 10-minute presentation.
+You may use any presentation software and visual aids that you deem appropriate.
 
-Show the handout to your \textbf{tutor} for immediate \textbf{informal feedback}.
+Deliver your presentation in class. You will receive immediate \textbf{informal feedback}
+from tutor and peers.
 
-Once you have completed Part A, you should move onto the Worksheets. See the worksheets on the Learning Space for more details.  
+\subsection*{Part B}
+
+Part B consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
+
+\begin{itemize}
+	\item What are the user stories for your demo?
+	\item Which user stories are required for a minimum viable product, and which are stretch goals?
+	\item Is the scope appropriate for the product development time-frame?
+\end{itemize}
+
+To complete Part B, populate a Trello board with your user stories.
+
+Show the Trello board to your \textbf{tutor} for immediate \textbf{informal feedback}.
+
+\subsection*{Part C}
+
+Part C is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
+
+To complete Part C, prepare a draft implementation of your game. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled peer review session. Then, attend the scheduled sprint review session. You will receive immediate \textbf{informal feedback}.
+
+\subsection*{Part D}
+
+Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+
+To complete Part D, revise your program based on the feedback you have received. Then, upload a \texttt{.zip} file to LearningSpace containing the following:
+
+\begin{enumerate}[label=(\alph*)]
+	\item The source code for your game;
+	\item Any art or sound assets required to build your game;
+	\item Brief instructions describing how to compile your game from source;
+	\item A compiled ROM image of your game suitable for loading into an emulator.
+\end{enumerate}
+
+Please note, the LearningSpace will only accept a single \texttt{.zip} file. You will receive \textbf{formal feedback} three weeks after the final submission deadline.
+
+\subsection*{Part E}
+
+Part E is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Enough work is available to hold a meaningful discussion;
+	\item Clear evidence of programming knowledge \textbf{and} communication skills;
+	\item No breaches of academic integrity.
+\end{enumerate}
+
+To complete Part E, prepare a practical demonstration of the game. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session.
 
 \section*{Additional Guidance}
 
 As always, avoid underestimating the effort required to implement even simple software; always consider scope.
 From the proposal stage, you should consider very carefully what is feasible.
+This is especially true for this project, where you are working with extremely limited hardware
+and programming in a low-level programming language.
 
 Your code will be assessed on \textbf{functional coherence}:
 how well the finished product corresponds to the user stories,
@@ -160,13 +222,151 @@ as long as they are available under an appropriate license and are properly attr
     \item \url{https://google.github.io/styleguide/cppguide.html}
 \end{itemize}
 
-\rubricyeartwo
+\rubricyearthree
 \begin{markingrubric}
-	%
-    \firstcriterion{Basic competency threshold}{40\%}
-		\grade\fail Bla
-		\gradespan{5}{Bla}
-	%
+	\firstcriterion{Basic Competency Threshold}{40\%}
+		\grade\fail At least one part is missing or is unsatisfactory.
+		\gradespan{5}{Submission is timely.
+			\par Enough work is available to hold a meaningful discussion.
+			\par Clear evidence of programming knowledge and communication skills.
+			\par No breaches of academic integrity.}
+%
+    \criterion{Appropriateness of User Stories and Sprint Plans}{5\%}
+        \grade \fail Few user stories are distinguishable and easily measured.
+            \par Sprint plans provide little support for the project.
+        \grade Some user stories are distinguishable and easily measured.
+            \par Sprint plans provide some support for the project.
+        \grade Most user stories are distinguishable and easily measured.
+            \par User stories correspond to the product design.
+            \par Sprint plans provide much support for the project.
+        \grade Nearly all user stories are distinguishable and easily measured.
+            \par User stories clearly correspond to the product design.
+            \par Sprint plans provide considerable support for the project.
+        \grade All user stories are distinguishable and easily measured.
+            \par User stories clearly and comprehensively correspond to the product design.
+            \par Sprint plans provide significant support for the project.
+        \grade All user stories are distinguishable and easily measured.
+            \par User stories clearly and comprehensively correspond to the product design.
+            \par Sprint plans provide extensive support for the project.
+%
+    \criterion{Functional Coherence}{5\%}
+        \grade \fail Few user stories have been implemented  and/or the code fails to compile or run.
+            \par Many obvious and serious bugs are detected.
+            \par The game's performance is unacceptable.
+        \grade Some user stories have been implemented.
+            \par Some obvious bugs are detected.
+            \par The game has many performance issues.
+        \grade Many user stories have been implemented.
+            \par There is some evidence of feature creep.
+            \par Few obvious bugs  are detected.
+            \par The game has some performance issues.
+        \grade Almost all user stories have been implemented.
+            \par There is little evidence of feature creep.
+            \par Some minor bugs  are detected.
+            \par The game has very few performance issues.
+        \grade All user stories have been implemented.
+            \par There is almost no evidence of feature creep.
+            \par Some bugs, purely cosmetic and/or superficial in nature, are detected.
+            \par The game has almost no performance issues.
+        \grade All user stories have been implemented.
+            \par There is no evidence of feature creep.
+            \par Few to no bugs are detected.
+            \par The game has no performance issues.
+%
+    \criterion{Sophistication}{10\%}
+        \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is poor or non-existant.
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is appropriate.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is effective. There is high cohesion and low coupling.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is very effective. There is high cohesion and low coupling.
+        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is extremely effective. There is very high cohesion and very low coupling.
+%
+    \criterion{Maintainability}{15\%}
+        \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
+            \par Few identifier names are clear or inappropriate.
+            \par Code formatting hinders readability.
+        \grade The code is somewhat well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par An attempt has been made to adhere to a consistent formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to a sensible formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The code is reasonably well commented.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values.
+        \grade The code is very well commented.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values.
+        \grade The code is extremely well commented.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+            \par There is no duplication of code or of literal values.
+%
+    \criterion{Creative Flair}{10\%}
+        \grade\fail Little or no creativity.
+            \par The work is a clone of an existing work with mere cosmetic alterations.
+            \par The work delivers little or no fun and/or engagement.
+        \grade Some creativity.
+            \par The work is derivative of existing works, with only minor alterations.
+            \par The work delivers some fun and/or engagement.
+        \grade Much creativity.
+            \par The work is derivative of existing works, demonstrating little divergent and/or subversive thinking.
+            \par The work delivers much fun and/or engagement.
+        \grade Considerable creativity.
+            \par The work is somewhat novel, demonstrating some divergent and/or subversive thinking.
+            \par The work delivers considerable fun and/or engagement.
+        \grade Significant creativity.
+            \par The work is novel, demonstrating significant divergent and/or subversive thinking.
+            \par The work delivers significant fun and/or engagement.
+        \grade Extensive creativity.
+            \par The work is highly original, with strong evidence of divergent and/or subversive thinking.
+            \par The work delivers extensive fun and/or engagement.
+%
+    \criterion{Portability and Navigability}{5\%}
+        \grade\fail The game will not run at all.
+        	\par The code can only be compiled on the student's machine.
+            \par The directory structure inside the submitted zip file is unclear.
+        \grade The game runs on an NES emulator.
+        	\par The code can be compiled on another machine.
+            \par The directory structure inside the submitted zip file is adequate.
+        \grade The game runs on a variety of NES emulators, but with issues on some emulators.
+        	\par The code can be compiled on another machine.
+            \par The directory structure inside the submitted zip file is mostly sensible.
+        \grade The game runs on a variety of NES emulators with only minor issues.
+        	\par The code can be compiled on another machine.
+            \par The directory structure inside the submitted zip file is sensible.
+        \grade The game runs on a variety of NES emulators, and on NES hardware, with only minor issues.
+        	\par The code can be compiled on another machine.
+            \par The directory structure inside the submitted zip file is sensible.
+        \grade The game runs on a variety of NES emulators, and on NES hardware, with no issues.
+        	\par The code can be compiled on another machine.
+            \par The directory structure inside the submitted zip file is sensible.
+%
+    \criterion{Use of Version Control}{5\%}
+        \grade \fail Material has been checked into GitHub once per sprint or less.
+        \grade Code has been checked into GitHub at least once per sprint.
+        \grade Code has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is some evidence of engagement with peers (e.g.\ code review).
+        \grade Code has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is much evidence of engagement with peers (e.g.\ code review).
+        \grade Code has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is significant evidence of engagement with peers (e.g.\ code review).
+        \grade Code has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is extensive evidence of engagement with peers (e.g.\ code review).
 \end{markingrubric}
 
 \end{document}
