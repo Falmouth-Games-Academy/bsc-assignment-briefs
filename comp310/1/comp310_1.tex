@@ -38,8 +38,7 @@ Nintendo Entertainment System (NES).
 
 In the days of the NES, game programmers used assembly language
 to give them fine low-level control over extremely limited hardware.
-In practice this degree of control is rarely needed by programmers nowadays.
-However the experience of developing a game in this way will give you an intimate understanding
+The experience of developing a game in this way will give you an intimate understanding
 of how a typical CPU and machine architecture function at a low level,
 and experience of using this architecture to your advantage,
 which are useful skills even when programming in high-level languages for more powerful hardware.
@@ -51,7 +50,7 @@ This assignment is formed of several parts:
 	\item \textbf{Prepare} a 10-minute presentation that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{outline} the concept of your de-make, including the game it is based upon;
-			\item \textbf{explain} the key mechanic around which your de-make will focus;
+			\item \textbf{explain} the key mechanic around which your de-make will be based;
 			\item \textbf{justify} the technical feasibility of your concept.
 		\end{enumerate}
 	\item \textbf{Populate} a Trello board with the user stories for your demo.
@@ -89,7 +88,7 @@ Part A consists of a \textbf{single formative submission}. This work is \textbf{
 	\item On what well-known game is it based?
 	\item What is the core mechanic that your game will implement?
 	\item Is the game technically feasible, given the limitations of the target platform?
-		It may be helpful to reference existing NES games here.
+		Make reference to existing NES games and to technical documentation.
 	\item What is the intended aesthetic?
 	\item Is the scope appropriate for the product development time-frame?
 \end{itemize}
@@ -159,6 +158,9 @@ As always, avoid underestimating the effort required to implement even simple so
 From the proposal stage, you should consider very carefully what is feasible.
 This is especially true for this project, where you are working with extremely limited hardware
 and programming in a low-level programming language.
+You are strongly advised to focus on a single game mechanic,
+and to keep your proposed project simple.
+Focus on producing a basic playable experience, not on adding unnecessary features.
 
 Your code will be assessed on \textbf{functional coherence}:
 how well the finished product corresponds to the user stories,
@@ -167,19 +169,14 @@ Correspondence to user stories runs both ways:
 implementing features that were not present in the design (``feature creep'')
 is just as bad as neglecting to implement features.
 
-Unlike your previous assignments,
-you will be assessed on the \textbf{performance} of your solution.
-Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
-but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
-It may be necessary to trade-off the complexity or fidelity of an effect
-in order to achieve acceptable performance.
-
 Your code will also be assessed on \textbf{sophistication}.
 To succeed on a project of this nature,
 you will need to make use of appropriate algorithms, data structures, and programming paradigms.
 Appropriateness to the task at hand is key:
 you will \textbf{not} receive credit for complexity  
 where something simpler would have sufficed.
+Indeed, in this case, an overly complex solution is likely to run slowly and hence
+adversely impact functional coherence.
 
 \textbf{Maintainability} is important in all programming projects,
 but doubly so when working in a team.
@@ -187,13 +184,9 @@ Use \textbf{comments} liberally to improve code comprehension,
 and carefully choose the \textbf{names} for your files, classes, functions and variables.
 Use a well-established commenting convention
 for \textbf{high-level documentation}.
-The open-source tool Doxygen supports several such conventions.
-Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
-indentation, whitespace, placement of curly braces, etc.
+Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}.
 Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
 with values instead defined as constants together in a single place.
-Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
-e.g.\ by defining them in an external file read at startup.
 
 As with all assignments on this course, you are expected to display a level of
 \textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
@@ -204,8 +197,9 @@ Often the most interesting ideas are \textbf{subversive}: they deliberately go a
 convention or obvious solutions.
 
 You will \textbf{not} be judged on the quality of your art assets.
-It is fine to use meshes and textures found online,
+It is fine to use assets found online,
 as long as they are available under an appropriate license and are properly attributed.
+Or it is perfectly acceptable to use placeholder ``programmer art''.
 
 \section*{FAQ}
 
@@ -225,16 +219,16 @@ as long as they are available under an appropriate license and are properly attr
 \section*{Additional Resources}
 
 \begin{itemize}
-    \item \url{http://www.opengl-tutorial.org}
-    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
-    \item \url{https://google.github.io/styleguide/cppguide.html}
+    \item \url{http://skilldrick.github.io/easy6502/}
+	\item \url{http://nintendoage.com/forum/messageview.cfm?catid=22&threadid=7155}
+	\item \url{http://www.obelisk.me.uk/6502/reference.html}
 \end{itemize}
 
 \rubricyearthree
 \begin{markingrubric}
 	\firstcriterion{Basic Competency Threshold}{40\%}
 		\grade\fail At least one part is missing or is unsatisfactory.
-		\gradespan{5}{Submission is timely.
+		\gradespan{5}{Submission of all parts is timely.
 			\par Enough work is available to hold a meaningful discussion.
 			\par Clear evidence of programming knowledge and communication skills.
 			\par No breaches of academic integrity.}
