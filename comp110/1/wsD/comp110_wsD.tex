@@ -1,5 +1,5 @@
 \documentclass{../../../fal_assignment}
-\graphicspath{ {../../} }
+\graphicspath{ {../../../} }
 
 \usepackage{amsmath}
 \usepackage{enumitem}
@@ -27,6 +27,7 @@
 \title{Worksheet D: Data Structures}
 \author{Dr Ed Powley}
 \module{COMP110}
+\version{2.0}
 
 \begin{document}
 
@@ -75,22 +76,15 @@ so please plan your time accordingly.
 
 \section*{Submission instructions}
 
-If you did not already do so for a previous worksheet, \textbf{fork} the GitHub repository at the following URL:
+Begin by \textbf{forking} the GitHub repository at the following URL:
 
-\url{https://github.com/Falmouth-Games-Academy/comp110-worksheets}
+\url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-D}
 
-If you have an existing fork, you will need to add the URL above to your fork as an ``upstream'' repository,
-and then pull changes from upstream. Instructions for doing this can be found at:
-\begin{itemize}
-	\item \url{http://stackoverflow.com/a/7297491} (for TortoiseGit)
-	\item \url{https://help.github.com/articles/syncing-a-fork/} (for command-line tools)
-\end{itemize}
-
-Edit \url{worksheet_D/oxo.py}, implementing the required functions.
+Edit \url{oxo.py}, implementing the required functions.
 \textbf{Please do not move or rename the file, or add any other files to your submission.}
 When you have finished, open a \textbf{pull request}.
 
-Attend the scheduled worksheet feedback session on \textbf{Monday November 7th 2016},
+Attend the scheduled worksheet feedback session in \textbf{week 11},
 ensuring that you have uploaded all material to GitHub and opened a pull request before this time.
 
 \section*{Marking criteria}
@@ -101,7 +95,7 @@ Any attempt, even unfinished, will receive a passing grade.
 Your work will be marked according to the following criteria:
 \begin{itemize}
 	\item \textbf{Functional coherence}. Is your implementation correct?
-		Your code will be run through an automated testing script to verify that it gives the correct results for a large sample of input values.
+		Your code will be run through TravisCI to verify that it gives the correct results for a large sample of input values.
 	\item \textbf{Sophistication}. Have you made use of appropriate code structures and data structures?
 		Note the emphasis is on \textbf{appropriate}; extra credit will \textbf{not} be given for unnecessarily complex solutions.
 	\item \textbf{Maintainability: readability}. Is your code well commented? Are your identifier names appropriate and descriptive?
