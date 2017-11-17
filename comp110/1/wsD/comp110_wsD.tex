@@ -74,15 +74,21 @@ To complete this worksheet:
 It is anticipated that \lstinline{get_winner()} will be the most challenging of these,
 so please plan your time accordingly.
 
+The skeleton project contains a file \texttt{play.py}, which imports your \lstinline{OxoBoard} class
+and uses it to graphically play a game of Noughts and Crosses. You may find this useful when testing your code.
+
 \section*{Submission instructions}
 
 Begin by \textbf{forking} the GitHub repository at the following URL:
 
 \url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-D}
 
-Edit \url{oxo.py}, implementing the required functions.
-\textbf{Please do not move or rename the file, or add any other files to your submission.}
+Edit \texttt{oxo.py}, implementing the required functions.
 When you have finished, open a \textbf{pull request}.
+
+\textbf{Do not move or rename \texttt{oxo.py}, and do not edit or delete any of the other files in the repository.}
+Doing so will interfere with the automated testing scripts used to check your submission for correctness,
+and as a result may lead to you losing marks.
 
 Attend the scheduled worksheet feedback session in \textbf{week 11},
 ensuring that you have uploaded all material to GitHub and opened a pull request before this time.
@@ -100,8 +106,11 @@ Your work will be marked according to the following criteria:
 		Note the emphasis is on \textbf{appropriate}; extra credit will \textbf{not} be given for unnecessarily complex solutions.
 	\item \textbf{Maintainability: readability}. Is your code well commented? Are your identifier names appropriate and descriptive?
 		Have you adhered to appropriate coding standards (e.g. PEP-8)?
-	\item \textbf{Maintainability: expandability}. Suppose that we wanted to implement an $n \times n$ variant of Noughts and Crosses.
+	\item \textbf{Maintainability: expandability}. Suppose that we wanted to implement an $n \times n$ variant of Noughts and Crosses
+		that works for any positive integer $n$.
 		How easily could your code be adapted to this change in requirements?
+		How about an $m \times n$ variant, where the objective is to get $k$ in a row,
+		for any positive integers $m,n,k$?
 \end{itemize}
 
 \end{document}
