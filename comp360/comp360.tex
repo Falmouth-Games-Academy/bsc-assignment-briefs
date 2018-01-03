@@ -7,9 +7,10 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Research Dissertation \& Artefact}
+\title{Research Artefact \& Dissertation}
 \author{Dr Michael Scott}
 \module{COMP360}
+\version{1.1}
 
 \begin{document}
 
@@ -18,130 +19,186 @@
 \section*{Introduction}
 
 \begin{marginquote}
-``Because of the nature of Moore's law, anything that an extremely clever graphics programmer can do at one point can be replicated by a merely competent programmer some number of years later.''
+``Most papers in computer science describe how their author learned what someone else already knew.''
 
---- John Carmack
+--- Peter Landin
 
     \marginquoterule
 
-``Currently computer graphics are used a great deal, but it can be excessive.''
+``We can only see a short distance ahead, but we can see plenty there that needs to be done.''
 
---- Hayao Miyazaki
+--- Alan Turing
+
 \end{marginquote}
-\marginpicture{flavour_pic}{
-    A demo of fluid simulation with NVIDIA's PhysX.
-    Recent advances in GPU technology have enabled a wide range of high-fidelity real-time rendering and simulation effects.
-}
+\marginpicture{flavour_pic}{}
 
-In this assignment, you are required to \textbf{design} and \textbf{implement} a C++ program using SDL and OpenGL
-which demonstrates the type of 3D computer graphics techniques that appear in a modern game engine.
+ These assignments form the second part of your \textbf{major research project}; whether \textbf{empirical research} relating to computing for games, or \textbf{practice-based research} in game development. It is your opportunity to collect and analyse primary data and prepare a manuscript to disseminate your findings.
 
-Graphics technology is one of the most obvious areas in which innovation has driven gaming technology in recent years.
-Modern gaming PCs and consoles contain powerful graphics processing units (GPUs),
-and gamers expect modern games to push this hardware to its full potential.
-In this assignment you will practice the use of advanced graphical effects.
-Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques. This portfolio piece will be built up using a series of Worksheets, worksheet A and B will give you a foundational framework for
-the rest of the assignment which will be completed in C and D.
+Together, they are formed of several parts:
 
-This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
-	\item \textbf{Write} a 2-page handout that will:
+	\item \textbf{Complete} your research artefact, ensuring that you:
 		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{outline} the concept of your demo;
-			\item \textbf{explain} how your demo satisfies the requirements of the contract (provided as an appendix at the end of this document);
-			\item \textbf{describe} at least \textbf{two} graphical or simulation effects your demo will include;
+			\item \textbf{apply} a rigorous software project management approach;
+			\item and \textbf{follow} best practices in software engineering.
 		\end{enumerate}
-	\item Worksheet A - \textbf{Project Framework}
-	\item Worksheet B - \textbf{Camera \& Basic Scene}
-	\item Worksheet C - \textbf{Demo specific work}
-	\item Worksheet D - \textbf{Demo specific work \& Viva}
+	\item \textbf{Collect} data relating to your research question,
+		ensuring that you:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{apply} a rigorous research method;
+			\item \textbf{leverage} your research artefact appropriately;
+			\item and \textbf{conform} with all ethical requirements.
+		\end{enumerate}
+	\item \textbf{Deliver} a 20-minute presentation that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{analyse and synthesise} your findings.
+		\end{enumerate}
+	\item \label{part:review-draft} \textbf{Write} a 12-page academic dissertation in IEEE format
+		that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{identify} and \textbf{review} the scientific literature relevant to your project;
+			\item \textbf{outline and justify} one or more research questions;
+			\item \textbf{outline and justify} the methodology applied in addressing the research question(s);
+			\item \textbf{analyse} data you have obtained;
+			\item as well as \textbf{interpret and discuss} your findings.
+		\end{enumerate}
+	\item \textbf{Prepare} the final 12-page academic dissertation in IEEE format that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{address} any issues raised through peer-review;
+			\item \textbf{and evaluate} the outcome of the research project.
+		\end{enumerate}
+	\item \textbf{Deliver} a 20-minute presentation that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{showcase} the final research artefact;
+			\item and \textbf{defend} the claims made in the academic dissertation.
+		\end{enumerate}
 \end{enumerate}
 
 \subsection*{Assignment Setup}
 
-This assignment is a \textbf{programming} task. Fork the GitHub repository at the following URL:
+These assignments form a \textbf{research} task, consisting of \textbf{academic reading}, \textbf{academic writing},
+\textbf{software development}, and \textbf{scientific experimentation}.
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp220-portfolio}
+For the \textbf{prototype research artefact}, there is no set GitHub repository.
+However you are strongly encouraged to create one.
+Ensure that you set up the \texttt{.gitignore} file for your chosen development environment,
+and maintain the \texttt{readme.md} file.
 
-Use the existing directory structure and, as required, extend this structure with sub-directories.
-Ensure that you maintain the \texttt{readme.md} file.
+For the \textbf{research dissertation}, continue using the GitHub repository at the following URL:
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Visual Studio}.
-Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+\indent \url{https://github.com/Falmouth-Games-Academy/comp320-proposal}
+
+Use the existing LaTeX template, which is based on the IEEE Transactions style,
+to write your dissertation.
 
 \subsection*{Part A}
 
-Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
+Part A consists of a \textbf{single summative submission}.
+However, your supervisor may set additional \textbf{formative submissions} at their discretion.
+This work is \textbf{individual} and will be assessed on a \textbf{holistic} basis, according to the descriptors set out at the end of this document.
 
-\begin{itemize}
-	\item What is the title and high concept of the demo?
-	\item What is the intended aesthetic?
-	\item For each of two graphical or simulation effects:
-	\begin{itemize}
-		\item What is the effect?
-		\item How will the effect contribute to the aesthetic?
-	\end{itemize}
-	\item Is the scope appropriate for the product development time-frame?
-\end{itemize}
+To complete Part A, implement your research artefact and show it to your research supervisor in a timetabled meeting. As
+the requirements for the research artefact will vary by project, consult with your supervisor to verify whether or not the
+artefact is adequete for the desired purpose.
 
-To complete Part A, prepare the handout using any word processing tool.
-To help illustrate your intended aesthetic, your handout may include images and/or links to online videos.
+You will receive immediate \textbf{informal feedback} from your supervisor.
 
-Show the handout to your \textbf{tutor} for immediate \textbf{informal feedback}.
+Then, upload a \texttt{.zip} file containing the final version of your source code and any assets/dependencies to the LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.zip} file.
 
-Once you have completed Part A, you should move onto the Worksheets. See the worksheets on the Learning Space for more details.  
+You will receive \textbf{formal feedback} three weeks after the summative deadline.
+
+\subsection*{Part B}
+
+Part B consists of a \textbf{single formative submission}.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part B, collect data and codify it into a digital dataset. Show this to your research supervisor in a timetabled meeting. 
+As the research questions and methods will vary, consult with your supervisor to verify whether or not the
+data is adequete for the desired purpose.
+
+You will receive immediate \textbf{informal feedback} from your supervisor.
+
+\todo[inline]{\textbf{Important:} Carrying out \textbf{any} data collection or experimental work
+without first securing ethical approval is a breach of Falmouth University's Research Ethics Policy.
+This will be treated as a case of academic misconduct, and penalised accordingly.}
+
+\subsection*{Part C}
+
+Part C consists of a \textbf{single formative submission}.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+To pass, answer the following questions:
+
+\begin{enumerate}[label=(\roman*)]
+	\item What is (are) the key research question(s) that you will seek to answer in your project?
+	\item How will answering these questions contribute to the state of knowledge in the field of your project?
+	\item Why have you applied particular methods in seeking answers to these questions?
+	\item What results have you obtained?
+	\item How have you analysed and interpreted these results?
+	\item What are you likely to conclude on the basis of this research?
+	\item What are the potential implications of your discoveries?
+\end{enumerate}
+
+To complete Part C, prepare a 20-minute presentation and deliver it in the scheduled session. Prepare your slide-deck using your choice of presentation software (e.g.\ Beamer, reveal.js, PowerPoint). You may extend your existing slides from COMP320, but must incorporate new material and new findings.
+
+You will receive immediate \textbf{informal feedback} from your tutors.
+
+\subsection*{Part D}
+
+Part D consists of a \textbf{single formative submission}. 
+However, your supervisor may set additional \textbf{formative submissions} at their discretion.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part D, prepare a draft of the dissertation. This should \textit{build upon} and \textit{extend} your research proposal and
+literature review. As such, overlap with the COMP320 submission is expected. However, there should be new material.
+Use the provided LaTeX template and do \textbf{not} modify the formatting. Bring these to meetings with your supervisor.
+
+You will receive immediate \textbf{informal feedback} from your supervisor.
+
+Then, bring \textbf{two physical print-outs} of your dissertation to the timetabled peer-review session. 
+You are advised to consider the specified page limit and attempt to adhere to it at this stage; although, you will \textbf{not} be penalised at this point for failing to do so.  Also, ensure you also bring pens and highlighters.
+
+You will receive immediate \textbf{informal feedback} from peers and \textit{in the following week} a \textbf{meta-review} from tutors.
+
+\subsection*{Part E}
+
+Part E consists of a \textbf{single summative submission}. However, your supervisor may set additional \textbf{formative submissions} at their discretion.
+This work is \textbf{individual} and will be assessed on a \textbf{holistic} basis, according to the descriptors set out at the end of this document.
+
+To complete Part E, revise your manuscript to address any issues highlighted during the peer review.
+Your document must not exceed \textbf{twelve pages} of text, excluding figures, tables, references and appendices.
+This is subject to the policy on word and page limits available on the LearningSpace course page.
+
+As an addendum to the research manuscript, an appendix containing at most one-page of critical reflection and self-evaluation should be incorporared. 
+This should be a critical appraisal of the project, indicating the rationale for any key decisions, lessons learnt, and evaluation (with hindsight) of the process
+and outcome of the project. 
+
+Upload your final \texttt{.pdf} file to the LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.pdf} file.
+
+You will receive \textbf{formal feedback} three weeks after the formative deadline.
+
+\subsection*{Part F}
+
+Part F consists of a \textbf{single formative submission}.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+To pass, answer the following questions:
+
+\begin{enumerate}[label=(\roman*)]
+	\item What was the purpose of your research?
+	\item How did you approach the research?
+	\item What did you discover?
+	\item What are the implications of your findings?
+\end{enumerate}
+
+To complete Part F, prepare a 20-minute presentation in the timetabled session after the submission deadline.
+Prepare your slides using your choice of presentation software (e.g.\ Beamer, reveal.js, PowerPoint).
+
+You will receive immediate \textbf{informal feedback} from tutors.
 
 \section*{Additional Guidance}
 
-As always, avoid underestimating the effort required to implement even simple software; always consider scope.
-From the proposal stage, you should consider very carefully what is feasible.
-
-Your code will be assessed on \textbf{functional coherence}:
-how well the finished product corresponds to the user stories,
-and whether it has any obvious bugs.
-Correspondence to user stories runs both ways:
-implementing features that were not present in the design (``feature creep'')
-is just as bad as neglecting to implement features.
-
-Unlike your previous assignments,
-you will be assessed on the \textbf{performance} of your solution.
-Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
-but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
-It may be necessary to trade-off the complexity or fidelity of an effect
-in order to achieve acceptable performance.
-
-Your code will also be assessed on \textbf{sophistication}.
-To succeed on a project of this size and complexity,
-you will need to make use of appropriate algorithms, data structures, libraries, and object oriented programming concepts.
-Appropriateness to the task at hand is key:
-you will \textbf{not} receive credit for complexity  
-where something simpler would have sufficed.
-
-\textbf{Maintainability} is important in all programming projects,
-but doubly so when working in a team.
-Use \textbf{comments} liberally to improve code comprehension,
-and carefully choose the \textbf{names} for your files, classes, functions and variables.
-Use a well-established commenting convention
-for \textbf{high-level documentation}.
-The open-source tool Doxygen supports several such conventions.
-Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
-indentation, whitespace, placement of curly braces, etc.
-Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
-with values instead defined as constants together in a single place.
-Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
-e.g.\ by defining them in an external file read at startup.
-
-As with all assignments on this course, you are expected to display a level of
-\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
-arts institution.
-One approach to promoting creativity is
-\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
-Often the most interesting ideas are \textbf{subversive}: they deliberately go against
-convention or obvious solutions.
-
-You will \textbf{not} be judged on the quality of your art assets.
-It is fine to use meshes and textures found online,
-as long as they are available under an appropriate license and are properly attributed.
+Todo additional guidance.
 
 \section*{FAQ}
 
@@ -158,80 +215,252 @@ as long as they are available under an appropriate license and are properly attr
     		 Please make a pull request and comment accordingly.
 \end{itemize}
 
-\section*{Additional Resources}
+%\section*{Additional Resources}
 
-\begin{itemize}
-    \item \url{http://www.opengl-tutorial.org}
-    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
-    \item \url{https://google.github.io/styleguide/cppguide.html}
-\end{itemize}
+%\begin{itemize}
+%    \item \url{http://www.opengl-tutorial.org}
+%    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
+%    \item \url{https://google.github.io/styleguide/cppguide.html}
+%\end{itemize}
 
-\rubricyeartwo
+\rubricyearthree
+\rubrictitle{Marking Descriptors: Research Artefact (30\%)}
+\rubrichead{Note that this assignment is \textbf{not} marked in a criterion-based fashion.
+	Instead, your project supervisor will assign an overall grade by considering the following descriptors in relation to your project.}
+	
 \begin{markingrubric}
 	%
-    \firstcriterion{Project Ouline}{10\%}
-		\grade\fail No or Late submission of project outline
-	\grade A poor standard of English and the outline is not clear
-	\grade A good standard of English and the outline has some merit
-	\grade A good standard of English and the outline is well justified
-	\grade A good standard of English and the outline is very good
-	\grade A good standard of English and the outline pushes the students skill
+    \firstcriterion{Ethics Approval \& Academic Conduct}{---}
+		\grade\fail Ethical approval not obtained or evident lack of academic integrity.
+		\grade{Ethics approval has been sought and obtained. \par Academic conduct is acceptable.}
+		\gradespan{4}{}
 	%
-	\criterion{Worksheet A}{10\%}
-		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+    \criterion{Novice Competency Threshold}{---}
+		\grade\fail Any criterion not achieved at the novice competency.
+		\grade{Research artefact is relevant and satisfactory. \par All novice competency crtieria are met.}
+		\gradespan{4}{}
 	%
-	\criterion{Worksheet B}{15\%}
-		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+    \criterion{Requirements}{---}
+        \grade \fail 
+        \grade Some requirements are distinguishable and easily measured.
+            \par Requirements somewhat correspond to the proposed research.
+        \grade Most requirements are distinguishable and easily measured.
+            \par Requirements correspond to the proposed research.
+        \grade Nearly all requirements are distinguishable and easily measured.
+            \par Requirements clearly correspond to the proposed research.
+        \grade All requirements are distinguishable and easily measured.
+            \par Requirements clearly and comprehensively correspond to the proposed research.
+        \grade All requirements are distinguishable and easily measured.
+            \par Requirements clearly and comprehensively correspond to the proposed research.
+%
+    \criterion{Functional Coherence}{---}
+        \grade \fail 
+        \grade Some useful and relevant features have been implemented.
+            \par Some obvious bugs are detected.
+        \grade Many useful and relevant features have been implemented.
+            \par There is some evidence of feature creep.
+            \par Few obvious bugs  are detected.
+        \grade Almost all pertinent features have been implemented.
+            \par There is little evidence of feature creep.
+            \par Some minor bugs  are detected.
+        \grade All pertinent features have been implemented.
+            \par There is almost no evidence of feature creep.
+            \par Some bugs, purely cosmetic and/or superficial in nature, are detected.
+        \grade All pertinent features have been implemented.
+            \par There is no evidence of feature creep.
+            \par Few to no bugs are detected.
+%
+    \criterion{Sophistication}{---}
+        \grade \fail 
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is appropriate.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is effective.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is highly effective, with high cohesion and low coupling.
+        \grade Extensive insight into the effective use of programming constructs is evident from the source code.
+            \par The program structure is impressive, with very high cohesion and low coupling.
+%
+    \criterion{Maintainability}{---}
+        \grade \fail 
+        \grade The code is somewhat well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par Most code adheres to a sensible formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to a sensible formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The code is reasonably well commented.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values.
+        \grade The code is very well commented.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values.
+        \grade The code is extremely well commented.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+            \par There is no duplication of code or of literal values.
+%
+    \criterion{Validation \& Verification}{---}
+        \grade \fail 
+        \grade Some evidence of source code validation and verification.
+            \par Basic unit testing is evident.       
+        \grade Much evidence of source code validation and verification.
+            \par Basic unit testing is evident, with much coverage.
+        \grade Considerable evidence of source code validation and verification.
+            \par Sophisticated unit testing is evident, with considerable coverage.
+            \par Appropriate testing techniques beyond unit testing have been applied, with some effectiveness at improving integrity/quality.
+        \grade Significant evidence of source code validation and verification.
+            \par Sophisticated unit testing is evident, with considerable coverage.
+            \par Appropriate testing techniques beyond unit testing have been applied, with much effectiveness at improving integrity/quality.
+        \grade Extensive evidence of source code validation and verification.
+            \par Sophisticated unit testing is evident, with significant coverage.
+            \par Innovative or cutting-edge testing techniques have been applied, with considerable rigor.
+            
+\end{markingrubric}
+
+\rubrictitle{Marking Descriptors: Dissertation (70\%)}
+\begin{markingrubric}
 	%
-	\criterion{Worksheet C}{20\%}
-		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+    \firstcriterion{Ethics Approval \& Academic Conduct}{---}
+		\grade\fail Ethical approval not obtained or evident lack of academic integrity.
+		\grade{Ethics approval has been sought and obtained. \par Academic conduct is acceptable.}
+		\gradespan{4}{}
 	%
-	\criterion{Worksheet D}{25\%}
-		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+    \criterion{Novice Competency Threshold}{---}
+		\grade\fail Any criterion not achieved at the novice competency.
+		\gradespan{1}{Satisfactory presentations are delivered.
+			\par Adequete participation in peer review exercises, with enough to enable meaningful review alongside critical and constructive comments provided to peers.
+			\par All novice competency crtieria are met.
+			\par An appropriate number of academic sources are referenced.
+			\par All academic sources are referenced appropriately, with no obvious errors or omissions.
+			\par All important claims are well-specified, verifiable, and accurate.}
+		\gradespan{4}{}
 	%
-    \criterion{Maintainability}{15\% $\ddagger$}
-\grade\fail There are no comments in the source code, or comments are misleading.
-\par Most variable names are unclear or inappropriate.
-\par Code formatting hinders readability.
-\grade The source code is only sporadically commented, or comments are unclear.
-\par Some identifier names are unclear or inappropriate.
-\par Code formatting is inconsistent or does not aid readability.
-\grade The source code is somewhat well commented.
-\par Some identifier names are descriptive and appropriate.
-\par An attempt has been made to adhere to thhe PEP-8 formatting style.
-\par There is little obvious duplication of code or of literal values.           
-\grade The source code is reasonably well commented.
-\par Most identifier names are descriptive and appropriate.
-\par Most code adheres to the PEP-8 formatting style.
-\par There is almost no obvious duplication of code or of literal values.   
-\grade The source code is reasonably well commented, with Python doc-strings.
-\par Almost all identifier names are descriptive and appropriate.
-\par Almost all code adheres to the PEP-8 formatting style.
-\par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered'' in the source code. 
-\grade The source code is very well commented, with Python doc-strings.
-\par All identifier names are descriptive and appropriate.
-\par All source code adheres to the PEP-8 formatting style.
-\par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  	
+    \criterion{Abstract}{---}
+        \grade \fail 
+      \grade A general overview of the dissertation is provided.
+        	\par There is some structure.		
+      \grade A concise, but targeted summary of key points in the dissertation is provided.
+        	\par There is much structure.	      	
+       \grade A concise, but highly targeted outline of the purpose and key claims made in the dissertation is provided.
+        	\par The abstract broadly incorporates and follows the OCAR elements.	  
+      \grade A concise, but highly targeted outline of the relevant academic discourse and potential contributions made in the dissertation is provided.
+        	\par The abstract incorporates and follows the OCAR elements.	      	
+       \grade A concise, but impressively highlighted gap in the literature and outline of intellectual contributions made in the dissertation to plug that gap is provided. 
+        	\par The abstract incorporates and follows the OCAR elements.
+        	\par The key contribution of the dissertation is made clear in the abstract.
+
+    \criterion{Introduction}{---}
+        \grade \fail 
+      \grade Introduction has much structure.
+        	\par The field of research is somewhat contextualised.
+      \grade Introduction has much structure.
+        	\par The field of research is somewhat contextualised and motivated.	      	
+       \grade Introduction has considerable structure.
+        	\par The motivation for the research is somewhat justified.	  
+      \grade Introduction has considerable structure.
+        	\par The motivation for the research is clearly justified.	 	      	
+       \grade Introduction has significant structure.
+        	\par The potential impact of the research is justified effectively.
+        		
+    \criterion{Literature Review}{---}
+        \grade \fail 
+        	\par 
+        \grade The literature review falls short of being comprehensive, but has some merit.
+        	\par  Synthesis is adequete, hinting at a need for the work.
+        \grade The literature review falls short of comprehensive, but has much merit.
+        	\par  Synthesis is appropriate, highlighting a need for the work.
+        \grade The literature review is somewhat comprehensive, having considerable merit.
+        	\par  Synthesis is effective, criticising existing work to reveal a gap.
+        \grade The literature review is comprehensive, having significant merit.
+        	\par Synthesis is effective, criticising existing work to reveal a key gap.
+        \grade The literature review is comprehensive, incorporating all important seminal and contemporary works.
+        	\par Synthesis is highly effective, critically evaluating existing work to showcase an important gap.
 	%
-	\criterion{Use of Version Control}{5\%}
-		\grade\fail GitHub has not been used.
-		\grade Source code has rarely been checked into GitHub.
-		\grade Source code  has been checked into GitHub at least once per week.
-			\par Commit messages are present.
-			\par There is evidence of engagement with peers (e.g.\ code review).
-		\grade Source code  has been checked into GitHub several times per week.
-			\par Commit messages are clear, concise and relevant.
-			\par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
-		\grade Source code has been checked into GitHub several times per week.
-			\par Commit messages are clear, concise and relevant.
-			\par There is evidence of meaningful engagement with peers (e.g.\ code review).
-		\grade Source code has been checked into GitHub several times per week.
-			\par Commit messages are clear, concise and relevant.
-			\par There is evidence of effective engagement with peers (e.g.\ code review).
+    \criterion{Research Questions \& Hypotheses}{---}
+            \grade\fail 
+        \grade 		Research questions suggest a basic understanding of concepts and principles in the field.
+        \grade 		Research questions suggest a broad understanding of concepts and principles in the field.
+        \par		Research questions are original.
+        \par		Where relevant, hypotheses are made clear.
+        \grade 		Research questions suggest a thorough understanding of the field as well as some insight into its discourse.
+        \par		Research questions are original and ambitious.
+      \par		Where relevant, hypotheses are made explicit, clear, and well-formed.
+        \grade 		Research questions suggest a thorough understanding of the field as well as much insight into its discourse.
+        \par		Research questions are original, ambitious, and timely.
+      \par		Where relevant, hypotheses are made explicit, clear, and well-formed.
+        \grade 		Research questions suggest an comprehensive understanding of the field as well as significant insight into its discourse.
+        \par		Research questions are at the cutting edge of the field.
+      \par		Where relevant, hypotheses are stated explicitly with precision.
+        %
+    %
+    \criterion{Methodology}{---}
+        \grade\fail 
+        \grade 		The methodology applied could plausibly lead to a somewhat meaningful claim.
+        \par		Methods are justified.
+        \grade 		The methodology applied could plausibly lead to a meaningful claim.
+        \par		The methodology and integrity of the research are justified.
+        \grade 		The applied methodology is scientifically rigorous, and potentially able to lead to a sound claim.
+        \par		The methodology and integrity of the research justified somewhat convincingly.
+        \grade 		The applied methodology is scientifically rigorous, and quite likely to lead to a sound claim.
+        \par		The methodology and integrity of the research justified convincingly.
+        \grade 		The applied methodology is extremely scientifically rigorous, perhaps a gold standard, and highly likely to lead to a sound claim.
+        \par		The methodology and integrity of the research are justified very convincingly.
+    %
+    \criterion{Results \& Analysis}{---}
+        \grade\fail 
+        \grade 		The results and their analysis is basic.
+        \grade 		The results and their analysis approach sophistication.
+        \par 		The method of analysis is appropriate to the project.
+        \grade 		The results and their analysis are somewhat sophisticated and reflect good practice.
+        \par 		The method of analysis is appropriate to the project.
+        \grade 		The results and their analysis are highly sophisticated and reflect good practice.
+        \par 		The method of analysis is suited and tailored to the project.
+       \par 		Some care has been taken to guard against potential criticisms of the analysis and its assumptions.
+        \par		The analysis shows progress towards publishable quality.
+        \grade 		The results and their analysis are very highly sophisticated and could be considered best practice.
+        \par 		The method of analysis is not only suited and tailored to the project.
+        \par 		Much care has been taken to guard against potential criticisms of the analysis and its assumptions.
+        \par		The results and analysis is of publishable quality.
+    %
+    \criterion{Discussion \& Conclusion}{---}
+        \grade\fail 
+        \grade		Some insight into the topic is evident.
+        \par		Attempts are made at discussion beyond summary.
+        \grade		Much insight into the topic is evident.
+        \par		Discussion is inferential in nature.
+        \par		Key take-away points can be inferred from the work.
+        \grade		Considerable insight into the topic is evident.
+        \par		Discussion is analytical in nature.
+        \par		The limitations of the research are made clear.
+        \par		Key take-away points are made clear in the conclusion.
+        \grade		Significant  insight into the topic is evident.
+        \par		Discussion is both analytical and evaluative in nature.
+        \par		The limitations of the research are made explicitly clear.
+        \par		Meaningful take-away points are made clear in the conclusion. There might be recommendations.
+        \grade		Extensive insight into the topic is evident.
+        \par		Discussion is both analytical and evaluative in nature.
+        \par		The limitations of the research have been thought through well, with their mitigation and/or acknowledgement made explicitly clear.
+        \par		Meaningful contributions to discourse in the field are made clear in the conclusion alongside key recommendations/impact.
+       %
+    \criterion{Critical Evaluation}{---}
+        \grade\fail 
+        \grade		Some relevant and critical self-appraisal.
+        \grade		Much relevant and critical self-appraisal.
+        \par		Outcomes and lessons learned are made clear, and loosely tied to goals to improve.
+        \grade		Considerable self-appraisal whcih is both relevant and critical in nature.
+        \par		Outcomes and lessons learned are analysed and tied to somewhat well-formed SMART objectives.
+        \grade		Significant self-appraisal whcih is both pertinent and critical in nature.
+        \par		Outcomes and lessons learned are analysed in much depth and clearly tied to well-formed SMART objectives.
+        \grade		Extensive self-appraisal whcih is both pertinent and critical in nature.
+        \par		Outcomes and lessons learned are analysed in considerable depth and tied explicitly to well-formed SMART objectives. 
+       \par		Evaluation of the project leads to recomendations that others could leverage to improve their research. 
 \end{markingrubric}
 
 \section*{Appendix: British Computer Society Requirements}
