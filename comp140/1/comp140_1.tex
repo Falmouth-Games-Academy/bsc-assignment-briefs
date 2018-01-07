@@ -7,226 +7,132 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Hacking Hardware}
-\author{Brian McDonald and Alcwyn Parker}
-\module{COMP140 \& GAME160}
+\title{Worksheet Tasks}
+\author{Brian McDonald}
+\module{COMP140}
+\version{2.0}
 
 \begin{document}
-	
-	\maketitle
-	
-	\section*{Introduction}
-	
-	\begin{marginquote}
-		Hacker definition: ``A person who enjoys exploring the details of programmable systems and stretching their capabilities, as opposed to most users, who prefer to learn only the minimum necessary.''
-		
-		--- Jargon File
-		
-	\end{marginquote}
-	\marginpicture{flavour_pic}{
-	    Arduino is an open-source prototyping platform based on easy-to-use hardware and software.
-	}
-	
-	In this assignment you will work as an individual to develop a game which supports a novel alternative controller. At this stage you will be focusing on the design and the development of the game using object orientated concepts. You will also create a concept for alternative controller which will be used with the game.
-	
-	Experimentation, ingenuity, and creativity are at the heart of everything that professional game developers do. To this end, building your own custom game controller is the perfect place to exercise these characteristics. However, you will also gain invaluable exposure to working with computer hardware. In recent years, there has been considerable growth in the development of new fabrication technologies, such as 3D printers. In addition, electronics, from primitive transistors to complex computer chips, have all become much cheaper. Accessibility to these tools has, therefore, unveiled an unprecedented opportunity to invent and innovate in this space. Increasingly, app developers are augmenting mobile software with new wearable devices, and so to will game developers with the advent and increasing popularity of augmented reality games.
-	
-	This assignment is formed of several parts:
-	
-	\begin{enumerate}[label=(\Alph*)]
-		\item \textbf{Write}, a proposal for a game that uses an alternative controller which contains:
-		\begin{enumerate}[label=\roman*.]
-			\item \textbf{describe} the game
-			\item \textbf{describe} the core game mechanics
-		\end{enumerate}
-		\item \textbf{Write} a proposal for an alternative controller which contains: 
-		\begin{enumerate}[label=\roman*.]
-			\item \textbf{research} into existing alt-Controllers
-			\item \textbf{description} of the physical controller
-			\item \textbf{design} of physical controller
-		\end{enumerate}
-		\item Practical \textbf{demonstration} of the game, this should
-		\begin{enumerate}[label=\roman*.]
-			\item \textbf{demonstrate} your understanding of Object Orientated concepts
-			\item \textbf{reflection} of your performance to date
-			\item \textbf{description} of tasks to completed
-			\item revised \textbf{design} of physical controller
-		\end{enumerate}
-	\end{enumerate}
-	
-	\subsection*{Assignment Setup}
-	
-	Fork the GitHub repository at:
-	
-	\indent \url{https://github.com/Falmouth-Games-Academy/comp140-gam160-game}
-	
-	Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
-	
-	Modify the \texttt{.gitignore} to the defaults for \textbf{Unity} or \textbf{Unreal}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
-	
-	\subsection*{Part A}
-	
-	Part A consists of a \textbf{single formative submission}. This work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
-	
-	\begin{enumerate}[label=(\alph*)]
-		\item Submission is timely;
-		\item Choice of game is feasible;
-		\item Design is distinctive and has creative merit.
-	\end{enumerate}
-	
-	To complete part A, write your proposal in the \texttt{readme.md} document. This should use the \textbf{markdown} syntax, for additional guidance, please read the following  
-	
-	\indent \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
-	
-	Show this to your tutor in-class. If acceptable, this will be signed-off.
-	
-	\subsection*{Part B}
-	
-	Part B is formed of \textbf{single formative submissions}. This will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
-	
-	\begin{enumerate}[label=(\alph*)]
-		\item Submission is timely;
-		\item Research activities are exhaustive which are well referenced
-		\item Description of the controller 
-		\item Design is distinctive and has creative merit.
-	\end{enumerate}
-	
-	To complete Part B, write your proposal in the \texttt{readme.md} document using markdown syntax.
-	
-	You will receive \textbf{informal feedback} from your \textbf{tutor}.
-	
-	\subsection*{Part C}
-	
-	To complete Part C, implement your prototype game utilising a fast, iterative development process. Prepare a practical demonstration of the game. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
-	
-	You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
-	
-	\section*{Additional Guidance}
-	Falmouth University is internationally renowned for the arts. Despite the fact that you are studying for a BSc degree in a technical discipline, you are still expected to strive for the same level of innovation and creative flair as your peers. This assignment is more heavily weighted towards the creative than the assignments you have completed thus far. On this assignment, a competent execution of an unimaginative idea is unlikely to achieve a high grade, as opposed to an imperfect execution of a unique and ambitious concept, which will be seen favourably by examiners. Consider this when working on your design. One approach to promote creativity is divergent thinking: generate ideas by exploring many possible solutions. Often the most interesting ideas are subversive: they deliberately go against the accepted or most obvious solution.
-	
-	The history of video games is littered with failed peripherals. They were perceived as expensive gimmicks rather than legitimate enhancements to gameplay. Your creativity should be balanced by commercial awareness: your design should be informed by research into products that have succeeded and failed in the past, and what underexploited niches exist in the present. A great project will be highly divergent, but one that has clear commercial viability. Do not be discouraged if you fall short: professionals find it difficult! 
-	
-	You should aim to demonstrate a high level of sophistication in the technical execution of your prototype. An important part of sophistication is having the insight to choose the right tool for the job: if a simpler technique fulfils all the requirements, use it. The use of unnecessarily complicated techniques, serving only to showcase one's own cleverness, is a dangerous habit. 
-	
-	The sole purpose of the recorded demonstration is to aid the external moderators and examiners. Furthermore, any photos and/or videos submitted do not need to be entertaining or highly polished.
-	
-	\section*{FAQ}
-	
-	\begin{itemize}
-		\item 	\textbf{What is the deadline for this assignment?} \\ 
-		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
-		
-		\item 	\textbf{What should I do to seek help?} \\ 
-		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
-		
-		\item 	\textbf{Is this a mistake?} \\ 	
-		If you have discovered an issue with the brief itself, the source files are available at: \\
-		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
-		Please raise an issue and comment accordingly.
-	\end{itemize}
-	
-	\section*{Additional Resources}
-	
-	\begin{itemize}
-		\item Dawson, M. (2014) Beginning C++ Through Game Programming. CENGAGE Learning Custom Publishing 
-		\item Wilkinson, K. and Petrich, M. (2014) The Art of Tinkering: Meet 150 Markers Working at the Intersection of Art, Science \& Technology. Weldon Owen: London.
-		\item Alicia Gibb. Building Open Source Hardware: DIY Manufacturing for Hackers and Makers. Addison Wesley, 2014. 
-		\item Jeremy Blum. Exploring Arduino: Tools and Techniques for Engineering Wizardry. John Wiley, 2013. 
-		\item Kelly, K. (2014) Cool Tools: A Catalogue of Possibilities. Cool Tools.
-		\item Hatch, M. (2013) The Maker Movement Manifesto: Rules for Innovation in the New World of Creators, Hackers, and Tinkerers. McGraw Hill: New York.
-		\item \url https://twitter.com/ShakeThatButton
-		\item \url{http://www.gamasutra.com/view/news/288079/Heres_the_lineup_of_games_playable_at_GDC_2017s_AltCtrlGDC_showcase.php}
-	\end{itemize}
-	
-	\begin{markingrubric}
-		\firstcriterion{Basic Competency Threshold}{40\%}
-		\gradespan{1}{\fail At least one part is missing or is unsatisfactory. 
-			
-			There is little or no evidence of an iterative development process and no improvement over time in regards to the quality of the design and build of the game.}
-		\gradespan{5}{Submission is timely.
-			\par Enough work is available to hold a meaningful discussion.
-			\par Clear evidence of a `reasonable' iterative development process
-			\par Clear evidence of programming knowledge and communication skills.
-			\par Clear evidence of reflection on own performance.
-			\par No breaches of academic integrity.}
-		%
-		\criterion{Design of the solution}{15\%}
-		\grade\fail No evidence of design.
-		\grade Some evidence of design.
-		\grade Little evidence of design.
-		\grade Much evidence of design.
-		\grade Considerable evidence of design.
-		\grade Significant evidence of design.
-		%
-		\criterion{Commercial awareness}{10\%}
-		\grade\fail No commercial awareness is demonstrated.
-		\grade Some commercial awareness is demonstrated.
-		\par There is no evidence of market research.
-		\grade Little commercial awareness is demonstrated.
-		\par Market research is present, but with significant gaps.
-		\grade Much commercial awareness is demonstrated.
-		\par Market research is extensive, but with some gaps.
-		\grade Considerable commercial awareness is demonstrated.
-		\par Market research is comprehensive.
-		\grade Significant commercial awareness is demonstrated.
-		\par Market research is comprehensive and insightful.
-		%
-		\criterion{Innovation and creative flair}{5\%}
-		\grade\fail No evidence of innovation and/or creativity.
-		\grade Some evidence of emerging innovation and/or creativity.
-		\par The solution is purely derivative of existing products.
-		\par There is no evidence of divergent thinking.
-		\grade Little evidence of emerging innovation and/or creativity.
-		\par The solution is mostly derivative, with some attempts at innovation.
-		\par There is evidence of an attempt at divergent thinking.
-		\grade Much evidence of emerging innovation and/or creativity.
-		\par The solution is an interesting and somewhat innovative product.
-		\par There is some evidence of divergent thinking.
-		\grade Considerable evidence of mastery of innovative and creative practice.
-		\par The solution is a novel and innovative product.
-		\par There is much evidence of divergent thinking.
-		\grade Significant evidence of mastery of innovative and creative practice.
-		\par The solution is a unique and innovative product.
-		\par There is significant evidence of divergent thinking.
-		%            
-		\criterion{Functionality of game prototype}{15\%}
-		\grade\fail A game is not produced, or the prototype is completely non-functional.
-		\grade The game has no functionality.
-		\par There are serious technical flaws.
-		\grade The game has some functionality.
-		\par There are obvious technical flaws.
-		\grade The game has much functionality.
-		\par There are minor technical flaws.
-		\grade The game has considerable functionality.
-		\par There are superficial technical flaws.
-		\grade The game has significant functionality.
-		\par The technical execution is flawless.
-		%
-		\criterion{Sophistication: \par Game Design \par Controller Design \par Object Orientated Concepts}{10\%}
-		\grade\fail The solution lacks even a basic level of sophistication in any of the three areas.
-		\grade The solution evidences some sophistication in one or more of the three areas.
-		\par Some insight has been demonstrated in any area.
-		\grade The solution evidences little sophistication in one or more of the three areas.
-		\par Little insight has been demonstrated in at least one of the areas.
-		\grade The solution evidences much sophistication in two or more of the three areas.
-		\par Much insight has been demonstrated in at least one of the areas.
-		\grade The solution evidences considerable sophistication in all three areas.
-		\par Considerable insight has been demonstrated in at least two of these areas.
-		\grade The solution evidences significant sophistication in all three areas..
-		\par Significant insight has been demonstrated in all three areas.
-		%            
-		\criterion{Use of Version Control}{5\%}
-		\grade\fail GitHub has not been used.
-		\grade Source code has rarely been checked into GitHub.
-		\grade Source code  has been checked into GitHub at least once per week.
-		\par Commit messages are present.
-		\grade Source code  has been checked into GitHub several times per week.
-		\par Commit messages are clear, concise and relevant..
-		\grade Source code has been checked into GitHub several times per week.
-		\par Commit messages are clear, concise and relevant.
-		\grade Source code has been checked into GitHub several times per week.
-		\par Commit messages are clear, concise and relevant.
-		%
-	\end{markingrubric}
-	
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``As soon as we started programming, we found out to our surprise that it wasn't as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs.''
+\par --- Maurice Wilkes
+\marginquoterule
+\par ``C++ is history repeated as tragedy. Java is history repeated as farce.''
+\par --- Scott McKay
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    The \textbf{MetaMakers} undertake cutting edge Computational Creativity research at \textbf{Falmouth University}. Their main is to develop, combine, and extend artificial intelligence techniques to build inspirational software, and explore the philosophy of what it means for software to be creative. 
+}
+
+In this assignment, you are required to \textbf{write} a series of computer programs according to instructions.
+
+In order for programmers to communicate with each other regarding the technical aspects of a game development project, they must have good computational thinking skills, a strong foundational knowledge of computing principles, applied knowledge of program design notations and annotations, and a working knowledge of particular programming constructs (often as a result of writing their own versions). Such knowledge and skills take time and a sustained effort to develop. For this reason, you will work consistently across the semester by completing a series of bite-sized worksheets.
+
+This assignment is formed of \textbf{three} parts. Each part corresponds to one worksheet, addressing the following learning objectives:
+
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Apply} the basic principles of programming in C++;
+	\item \textbf{Implement} algorithms in C++ and SDL2 using notations such as flowcharts and pseudocode;
+	\item \textbf{Apply} theoretical concepts such as communication protocols and object-orientated design patterns.
+\end{enumerate}
+
+For each worksheet you must:
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Read} the instructions in the worksheet;
+    \item \textbf{Complete} all of the problems presented in the worksheet;
+    \item \textbf{Make} the solution available to the module leader for formative review;
+    \item and \textbf{submit} the solution summatively on the LearningSpace.
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+This assignment consists of \textbf{multiple formative submissions}, followed by a \textbf{single summative submission}.
+You will receive \textbf{immediate informal feedback} after each formative submission.
+
+Each worksheet contains detailed submission instructions; you will generally be required to \textbf{fork} a repository on GitHub and submit a \textbf{pull request} containing your solution.
+
+At the end of the semester you will be required make a final summative submission of all of your worksheet solutions.
+Prepare a \textbf{single \texttt{.zip} file} containing your five worksheet submissions \textbf{in separate folders}, and upload it to the appropriate submission area on LearningSpace.
+This final submission is subject to the usual university policies regarding late submission or non-submission---even if you have met all the formative deadlines for individual worksheets,
+failure to make a submission via LearningSpace by the summative deadline will be subject to late submission penalties.
+
+\section*{Additional Guidance}
+
+Make a submission on time and you will get a basic pass on that worksheet,
+even if your solution is incorrect or incomplete.
+A solution meeting all of the correctness and/or functionality criteria on the worksheet is required to demonstrate basic proficiency,
+with higher grades contingent on your solution being of a high quality.
+The individual worksheets give more guidance as to what constitutes ``quality'' for that particular exercise,
+but bear in mind that a major purpose of these worksheets is to assess your ability to communicate
+complex computational ideas in English, in notation and in program code.
+Thus pay particular attention to the precision and clarity of your written communication,
+and the readability and maintainability of your source code.
+
+It is very important to keep up with the worksheets. Missing a deadline results in an automatic mark of 0\% for that worksheet.
+The underlying skills being developed are also critically important to your progression as a programmer, so do not neglect the work.
+Do not underestimate the time it takes to complete tasks that may appear trivial when you first see them.
+Do not leave work until the last minute! With programming in particular, trying to ``cram'' the work just before the deadline is a sure path to failure. Aim for consistent, steady progress over the course of the semester.
+
+Nobody learns in a vacuum: you are allowed, and indeed encouraged, to discuss your work with your peers. However you must be very careful to avoid falling into \textbf{academic misconduct}, in particular \textbf{plagiarism}. If any part of your solution is \textbf{not your own individual work}, you must make this as clear as possible in your submission, for example in source code comments.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+		Each worksheet has its own formative deadline, specified on that worksheet and also communicated in class.
+    		Falmouth University policy states that summative deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+	\item 	\textbf{How will I receive feedback on my work?} \\ 
+    		You will be given verbal feedback on your work during the session in which it is marked.
+    		If you require more in-depth feedback or discussion, please book an appointment with your tutor.
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+\section*{Additional Resources}
+
+Please see individual worksheets.
+
+%\begin{itemize}
+%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
+%    \item http://agilemanifesto.org/
+%\end{itemize}
+
+\begin{markingrubric}
+%    \firstcriterion{Timely submission}{40\%}
+%        \gradespan{5}{\fail Nothing is submitted by the deadline, or the submission is not a reasonable attempt at the
+%        	problems set forth in the worksheet.
+%        	\par \textbf{This results in a mark of 0\% for this worksheet, regardless of other criteria.}}
+%        \gradespan{1}{A reasonable attempt at the worksheet is submitted on time.}
+%
+    \firstcriterion{Worksheets}{33\% $\times$ 3 worksheets}
+        \grade\fail	A reasonable attempt at the worksheet is not submitted by the deadline.
+        \grade 		The submission is either late or on-time.
+        \par		The submission is a reasonable attempt, but is incomplete or incorrect.
+        \grade 		The submission is on time.
+        \par 		The submission is complete and correct.
+        \par		The submission has significant quality issues.
+        \grade 		The submission is on time.
+        \par 		The submission is complete and correct.
+        \par		The submission has some quality issues.
+        \grade 		The submission is on time.
+        \par 		The submission is complete and correct.
+        \par		The submission has very few quality issues.
+        \grade 		The submission is on time.
+        \par 		The submission is complete and correct.
+        \par		The submission has almost no quality issues.
+\end{markingrubric}
+
 \end{document}
