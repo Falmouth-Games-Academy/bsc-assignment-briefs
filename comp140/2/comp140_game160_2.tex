@@ -7,8 +7,8 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Hacking Hardware}
-\author{Alcwyn Parker}
+\title{Code Combination II: Individual Creative Controller \& Game Project}
+\author{Brian McDonald, Alcwyn Parker, Dr Michael Scott \& Dr Ed Powley}
 \module{COMP140}
 
 \begin{document}
@@ -29,38 +29,39 @@ Hacker definition: ``A person who enjoys exploring the details of programmable s
 
 In this assignment, you will work as an individual to design a novel game controller and implement a physical prototype. Your prototype should function as an input device the game developed for the first coursework. Your prototype should use a hardware platform, such as Arduino, to convert player actions into game inputs. 
 
-Experimentation, ingenuity, and creativity are at the heart of everything that professional game developers do. To this end, building your own custom game controller is the perfect place to exercise these characteristics. However, you will also gain invaluable exposure to working with computer hardware. In recent years, there has been considerable growth in the development of new fabrication technologies, such as 3D printers. In addition, electronics, from primitive transistors to complex computer chips, have all become much cheaper. Accessibility to these tools has, therefore, unveiled an unprecedented opportunity to invent and innovate in this space. Increasingly, app developers are augmenting mobile software with new wearable devices, and so to will game developers with the advent and increasing popularity of augmented reality games.
+Experimentation, ingenuity, and creativity are at the heart of everything that professional game developers do. To this end, building your own custom game controller is the perfect place to exercise these characteristics. However, you will also gain invaluable exposure to working with computer hardware. In recent years, there has been considerable growth in the development of new fabrication technologies, such as 3D printers. In addition, electronics, from primitive transistors to complex computer chips, have all become much cheaper. Accessibility to these tools has, therefore, unveiled an unprecedented opportunity to invent and innovate in this space. Increasingly, app developers are augmenting mobile software with new wearable devices, and so too will game developers with the advent and increasing popularity of virtual, augmented, and mixed reality games.
 
 This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Write}, a revised proposal for a novel game controller that will:
+    \item \textbf{Write} a proposal for a novel game \textbf{and} controller that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{state and justify} the game that will be the basis for your interface;
-		\item \textbf{outline} an initial design in detail;
-		\item and \textbf{list} the key requirements the prototype must fulfil.
+    		\item \textbf{describe} the game design that will form the basis for your interface;
+    		\item \textbf{illustrate} basic  research into electronic component and physical form factors for controllers;
+		\item \textbf{analyse} the design of the controller in detail;
+		\item and \textbf{list} the key user stories.
 	\end{enumerate}
-    \item \textbf{Implement} a final physical prototype which will:
+    \item \textbf{Implement} a final game \textbf{and} physical controller prototype that will:
     	\begin{enumerate}[label=\roman*.]
-		\item \textbf{revise} the design based on your component research
-		    \item \textbf{Implement} a revised version of your game which will:
-		\begin{enumerate}[label=\roman*.]
-			\item \textbf{improve} upon the design of the original prototype;
-			\item \textbf{integrate} the controller with the game
-		\end{enumerate}
+    		\item \textbf{integrate} a physical controller with a digital game;
+		\item as well as \textbf{illustrate} your innovation and creative flair.
 	\end{enumerate}
-    \item \textbf{Present} a practical demo of the game controller to your tutor that will:
+    \item \textbf{Present} a practical demo of your work that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{demonstrate} your academic integrity;
-    		\item as well as \textbf{show} your programming knowledge \textbf{and} communication skills.
+    		\item \textbf{highlight} both your technical knowledge \textbf{and} insight;
+    		\item as well as \textbf{demonstrate} your academic integrity.
 	\end{enumerate}
 \end{enumerate}
 
-\subsection*{Assignment Setup}
-
-Continue on the assignment 1 code base 
-
-You may have to modify the \texttt{.gitignore} to take into account Ardunio 
+	\subsection*{Assignment Setup}
+	
+	Fork the GitHub repository at:
+	
+	\indent \url{https://github.com/Falmouth-Games-Academy/comp140-gam160-game}
+	
+	Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
+	
+	Modify the \texttt{.gitignore} to the defaults for \textbf{Visual Studio}, \textbf{C}, \textbf{C++}, and \textbf{Arduino}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. You may need to review the sources in the additional guidance section in order to generate the \texttt{.gitignore} file most appropriate to your repository. 
 
 \subsection*{Part A}
 
@@ -68,16 +69,27 @@ Part A consists of a \textbf{single formative submission}. This work will be ass
 
 \begin{enumerate}[label=(\alph*)]
 	\item Submission is timely;
-	\item Choice of game is feasible;
-	\item Range of controllers are assessed is comprehensive;
-	\item Design is distinctive and has creative merit.
+	\item Game design is feasible;
+	\item Range of controllers assessed is somewhat comprehensive;
+	\item Controller design is feasible;
+	\item Designs are somewhat distinctive and have at least some creative merit.
 \end{enumerate}
 
-To complete part A, write your proposal in the \texttt{readme.md} document. Show this to your tutor in-class. If acceptable, this will be signed-off.
+To complete part A, write your proposal in the \texttt{readme.md} document. Show this to one of your tutors before the end of the studio practice period. If acceptable, this will be signed-off.
+
+You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 \subsection*{Part B}
 
-Part B is a \textbf{single summative submission}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail: 
+Part B is a \textbf{single summative submission}. This is \textbf{individual} work and will be assessed on a \textbf{criterion-references} basis. Please refer to the marking rubric at the end of this assignment brief for details.
+
+To complete Part B, prepare a practical demonstration of the physical game controller and record this as a 1-2 minute video with at least 3 accompanying photographs (2 views of the controller and 1 of the controller being used with the digital game in-shot). Package these photographs and video together into a single \texttt{.zip} file. Then, upload these to the summative submission area on the LearningSpace. Also prepare the source code and assets for your controller and digital game into a second \texttt{.zip} file. The source code for your digital game and your Arduino code should be included together in this file. Then, upload these to summative submission area on the LearningSpace. 
+
+You will receive \textbf{formal feedback} from your \textbf{tutor} within 3 working days after the viva in Part C.
+
+\subsection*{Part C}
+
+Part C is a \textbf{single summative submission}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail: 
 
 \begin{enumerate}[label=(\alph*)]
 	\item Enough work is available to hold a meaningful discussion; 
@@ -85,22 +97,20 @@ Part B is a \textbf{single summative submission}. This is \textbf{individual} wo
 	\item No breaches of academic integrity. 
 \end{enumerate}
 
-To complete Part B, prepare a practical demonstration of the game controller. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
+To complete Part C, prepare a practical demonstration of the game controller. Ensure that the final build and physical hardware are bought to the viva session. Then, attend the scheduled viva session. 
 
 You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
 
 \section*{Additional Guidance}
-Falmouth University is internationally renowned for the arts. Despite the fact that you are studying for a BSc degree in a technical discipline, you are still expected to strive for the same level of innovation and creative flair as your peers. This assignment is more heavily weighted towards the creative than the assignments you have completed thus far. On this assignment, a competent execution of an unimaginative idea is unlikely to achieve a high grade, as opposed to an imperfect execution of a unique and ambitious concept, which will be seen favourably by examiners. Consider this when working on your design. One approach to promote creativity is divergent thinking: generate ideas by exploring many possible solutions. Often the most interesting ideas are subversive: they deliberately go against the accepted or most obvious solution.
+Falmouth University is internationally renowned for the creative industries. Despite the fact that you are studying for a science degree in a technical discipline, you are still expected to strive for the same level of innovation and creative flair as your peers. This assignment is more heavily weighted towards the creative than the assignments you have encountered thus far. On this assignment, a competent execution of an unimaginative idea is unlikely to achieve a high grade, as opposed to an imperfect execution of a unique and ambitious concept, which will be seen favourably by examiners. Consider this when working on your design. One approach to promote creativity is divergent thinking: generate ideas by exploring many possible solutions. Often the most interesting ideas are subversive: they deliberately go against the accepted or most obvious solution.
 
-The history of video games is littered with failed peripherals. They were perceived as expensive gimmicks rather than legitimate enhancements to gameplay. Your creativity should be balanced by commercial awareness: your design should be informed by research into products that have succeeded and failed in the past, and what underexploited niches exist in the present. A great project will be highly divergent, but one that has clear commercial viability. Do not be discouraged if you fall short: professionals find it difficult! 
+The history of video games is littered with failed peripherals; often, perceived as expensive gimmicks rather than legitimate enhancements to gameplay. Balance your creative insight with commercial awareness: your design should be informed by research into products that have succeeded and failed in the past, and those underexploited niches in the present. A great project will be highly divergent, but one that has clear commercial viability. Do not be discouraged if you fall short: professionals find this difficult! 
 
-We have given you some of the materials you need: an Arduino and other useful components. You will need to add your own materials to produce a functional physical prototype. A \textit{Blue Peter} style prototype made from household items is fine, as is something made out of modelling clay. However you should still choose your materials carefully, as overly flimsy construction may impair functionality. 
+We have given you some of the materials you need: an Arduino, wires, and a few electronic components. However, you will need to incorporate your own materials. For example: LEDs; buzzers; photoresistors; housings; etc. You are expected to spend up to \pounds~40 on such components (as outlined in your welcome letter). However you are discouraged from spending above this. Doing so is not required to achieve a high mark! A \textit{Blue Peter} style prototype made from household items is fine, as is modelling clay. Choose your materials carefully, though, as overly flimsy construction may impair functionality. 
 
-You may also wish to connect electronic components such as LEDs, buzzers, photoresistors etc to the Arduino, or even use a different, more flexible hard- ware platform such as RaspberryPi. However you are discouraged from spending large sums of money on extra hardware, and doing so is not required to achieve a high mark. If you choose to go down this route, it is possible to purchase a RaspberryPi and other useful peripheral online for around the price of a textbook (up to \pounds40). 
+Strive to demonstrate a high level of sophistication in the technical execution of your prototype. Having the insight to choose the right tool for the job is critical: if simpler techniques fulfill the requirements, use them! Unnecessary complexity, serving to solely showcase one's own cleverness, is a bad habit. 
 
-You should aim to demonstrate a high level of sophistication in the technical execution of your prototype. An important part of sophistication is having the insight to choose the right tool for the job: if a simpler technique fulfils all the requirements, use it. The use of unnecessarily complicated techniques, serving only to showcase one's own cleverness, is a dangerous habit. 
-
-The sole purpose of the recorded demonstration is to aid the external moderators and examiners. Furthermore, any photos and/or videos submitted do not need to be entertaining or highly polished.
+You are not assessed on your skills in photography! The sole purpose of making recordings and photos is archival: to aid moderators and external examiners. Photos and videos do not need not be highly polished. 
 
 \section*{FAQ}
 
@@ -124,9 +134,10 @@ The sole purpose of the recorded demonstration is to aid the external moderators
     \item Alicia Gibb. Building Open Source Hardware: DIY Manufacturing for Hackers and Makers. Addison Wesley, 2014. 
     \item Jeremy Blum. Exploring Arduino: Tools and Techniques for Engineering Wizardry. John Wiley, 2013. 
     \item Kelly, K. (2014) Cool Tools: A Catalogue of Possibilities. Cool Tools.
-    \item Hatch, M. (2013) The Maker Movement Manifesto: Rules for Innovation in the New World of Creators, Hackers, and Tinkerers. McGraw Hill: New York.
-    \item https://www.sitepoint.com/heuristic-evaluation-guide/
-    \item https://www.usability.gov/how-to-and-tools/methods/heuristic-evaluation.html
+    \item \url{https://www.sitepoint.com/heuristic-evaluation-guide/}
+    \item \url{https://www.usability.gov/how-to-and-tools/methods/heuristic-evaluation.html}
+    \item \url{https://github.com/arduino/Arduino/blob/master/.gitignore}
+     \item \url{https://gitignore.io/}
     
 \end{itemize}
 
@@ -136,81 +147,95 @@ The sole purpose of the recorded demonstration is to aid the external moderators
         
         There is little or no evidence of an iterative development process and no improvement over time in regards to the quality of the design and build of the prototype.}
         \gradespan{5}{Submission is timely.
+          \par A working, playable game is submitted.
+          \par Video of an accompanying and appropriately designed game controller is submitted.
         	\par Enough work is available to hold a meaningful discussion.
-	\par Clear evidence of a `reasonable' iterative development process
-	\par Clear evidence of programming knowledge and communication skills.
-	\par Clear evidence of reflection on own performance and contribution.
-	\par Only constructive criticism of pair-programming partner is raised.
+	\par Clear evidence of programming knowledge and ability to discuss technical aspects of the project at viva.
 	\par No breaches of academic integrity.}
 %
-    \criterion{Design of the solution}{15\%}
-        \grade\fail No evidence of upfront design
-        \grade The correspondence between design and implementation is tenuous.
-        \grade The design somewhat corresponds to the final implementation.
-        \grade The design corresponds to the final implementation.
-        \grade The design clearly corresponds to the implementation.
-        \grade The design clearly and comprehensively corresponds to the implementation.
+    \criterion{Design of the Solution}{5\%}
+        \grade\fail No evidence of upfront design and/or user stories, or significantly diverges from implementation.
+        \grade There is a little correspondence between the design and the implementation, even if somewhat tenuous.
+        \grade There is some correspondence between the design and the implementation.
+        \grade Design is appropriate for most of the given requirements.
+        \par     There is much correspondence between the user stories, design work, and implementation.
+        \par     Proposed design is free, or mostly free, of critical flaws.
+        \grade Design is aligned quite well with most, if not all, of the given requirements.
+        \par     There is much, clear and explicit, correspondence between the user stories, design work, and implementation.
+        \par     Proposed design is somewhat fit-for-purpose and free of critical flaws.
+        \grade Design is comprehensively aligned to the stated requirements.
+        \par     There is considerable, clear and explicit, correspondence between the user stories, design work, and implementation.
+        \par     Proposed design is fit-for-purpose and free of major flaws.
 %
-    \criterion{Innovation and creative flair}{10\%}
+    \criterion{Innovation \& Creative Flair}{15\%}
         \grade\fail No evidence of innovation and/or creativity.
-        \grade Some evidence of emerging innovation and/or creativity.
-            \par The solution is purely derivative of existing products.
-            \par There is no evidence of divergent thinking.
         \grade Little evidence of emerging innovation and/or creativity.
-            \par The solution is mostly derivative, with some attempts at innovation.
-            \par There is evidence of an attempt at divergent thinking.
+            \par No evidence of divergent thinking.
+        \grade Some evidence of emerging innovation and/or creativity.
+            \par Solution goes beyond mere derivation.
         \grade Much evidence of emerging innovation and/or creativity.
             \par The solution is an interesting and somewhat innovative product.
-            \par There is some evidence of divergent thinking.
-        \grade Considerable evidence of mastery of innovative and creative practice.
+            \par Some evidence of divergent thinking.
+        \grade Considerable evidence of emerging innovative and/or creativity.
             \par The solution is a novel and innovative product.
-            \par There is much evidence of divergent thinking.
-        \grade Significant evidence of mastery of innovative and creative practice.
+            \par Much evidence of divergent thinking.
+        \grade Significant evidence of emerging innovative and/or creativity.
             \par The solution is a unique and innovative product.
-            \par There is significant evidence of divergent thinking.
+            \par Considerable evidence of divergent thinking.
+            \par Target audience will potentially find the game fun to play.
 %            
-    \criterion{Functionality of physical prototype}{15\%}
-        \grade\fail A physical prototype is not produced, or the prototype is completely non-functional.
-        \grade The physical prototype has no functionality.
-            \par There are serious technical and/or constructional flaws.
+    \criterion{Functionality of Physical Prototype}{10\%}
+        \grade\fail No physical prototype, or the prototype is not functional.
+        \grade The physical prototype has a little functionality.
+            \par There are critical technical and/or constructional flaws.
         \grade The physical prototype has some functionality.
-            \par There are obvious technical and/or constructional flaws.
+            \par There are major technical and/or constructional flaws.
         \grade The physical prototype has much functionality.
-            \par There are minor technical and/or constructional flaws.
+            \par If any, only minor technical and/or constructional flaws.
         \grade The physical prototype has considerable functionality.
-            \par There are superficial technical and/or constructional flaws.
+            \par If any, only minor technical and/or constructional flaws.
         \grade The physical prototype has significant functionality.
-            \par The technical execution and physical construction are flawless.
+            \par If any, only superficial technical and/or constructional flaws.
 %
-    \criterion{Sophistication: \par Software \par Electronics \par Physical construction}{15\%}
-        \grade\fail The solution lacks even a basic level of sophistication in any of the three areas.
-        \grade The solution evidences some sophistication in one or more of the three areas.
-            \par Some insight has been demonstrated in any area.
-        \grade The solution evidences little sophistication in one or more of the three areas.
-            \par Little insight has been demonstrated in at least one of the areas.
-        \grade The solution evidences much sophistication in two or more of the three areas.
-            \par Much insight has been demonstrated in at least one of the areas.
-        \grade The solution evidences considerable sophistication in all three areas.
-            \par Considerable insight has been demonstrated in at least two of these areas.
-        \grade The solution evidences significant sophistication in all three areas..
-            \par Significant insight has been demonstrated in all three areas.
-%            
-    \criterion{Use of Version Control}{5\%}
-        \grade\fail GitHub has not been used.
-        \grade Source code has rarely been checked into GitHub.
-        \grade Source code  has been checked into GitHub at least once per week.
-            \par Commit messages are present.
-            \par There is evidence of engagement with peers (e.g.\ code review).
-        \grade Source code  has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
-        \grade Source code has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is evidence of meaningful engagement with peers (e.g.\ code review).
-        \grade Source code has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is evidence of effective engagement with peers (e.g.\ code review).
+    \criterion{Sophistication: Electronics}{5\%}
+        \grade\fail Solution lacks even basic use of electronic components.
+        \grade Solution has some sophistication in terms of electronics.
+            \par Little insight insight into electronic circuits.
+        \grade Solution has some sophistication  in terms of electronics.
+            \par Some insight insight into electronic circuits.
+        \grade Solution leverages electronic components with much effectiveness.
+            \par Much insight insight into electronic circuits.
+        \grade Solution leverages electronic components with much effectiveness.
+            \par Considerable insight insight into electronic circuits.
+        \grade Solution leverages electronic components with much effectiveness.
+            \par Significant insight insight into electronic circuits.
 %
+    \criterion{Sophistication: Physical Form Factor}{5\%}
+        \grade\fail No physical prototype, or it is limited to a breadboard without housing.
+        \grade Physical form factor has a little sophistication.
+            \par Little insight into human-computer interaction.
+        \grade Physical form factor has some sophistication.
+            \par Some insight into human-computer interaction.
+        \grade Physical form factor has much sophistication and sturdiness.
+            \par Much insight into human-computer interaction.
+        \grade Physical form factor has much sophistication  and sturdiness.
+            \par Considerable insight into human-computer interaction.
+        \grade Physical form factor has considerable sophistication and sturdiness.
+            \par Significant insight into human-computer interaction.
+            \par Controller has both practical and aesthetic value.
+%
+    \criterion{Sophistication \& Maintainability: Software}{20\%}
+        \grade\fail Solution lacks even basic levels of sophistication and/or maintainability.
+        \grade Solution has a little sophistication in terms of programming constructs.
+            \par Little insight insight into maintainable software design.
+        \grade Solution has some sophistication in terms of programming constructs.
+            \par Some insight insight into maintainable software design.
+        \grade Solution leverages OO programming constructs with much sophistication.
+            \par Much insight into maintainable software design.
+        \grade Solution leverages OO programming constructs with much sophistication.
+            \par Considerable insight has been demonstrated into maintainable software design.
+        \grade Solution leverages OO programming constructs with considerable sophistication.
+            \par Significant insight into maintainable software design.
 \end{markingrubric}
 
 \end{document}
