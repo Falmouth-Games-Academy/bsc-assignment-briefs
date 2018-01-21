@@ -34,11 +34,11 @@
     However, many games rely on AI to create a satisfying gameplay experience.
 }
 
-In this assignment, you are required to design and implement \textbf{two} software artefacts:
-\begin{itemize}
-	\item A component integrating one or more artificial intelligence (AI) techniques into a game;
-	\item An AI bot which can play a simple real-time strategy (RTS) game in competition with other bots.
-\end{itemize}
+In this assignment, you are required to design and implement \textbf{two} software artefacts.
+First, you will create a \textbf{game component}, integrating one or more artificial intelligence (AI) techniques
+into one of your game development projects from another module.
+Second, you will create a \textbf{MicroRTS bot}: an AI agent that plays a simple real-time strategy (RTS) game,
+which will compete in a tournament against your classmates' bots.
 
 Almost all types of games use AI in some capacity, and many genres rely on advanced AI techniques.
 Control of non-player characters is an important application of AI,
@@ -88,12 +88,24 @@ Finally:
 
 \subsection*{Assignment Setup}
 
-This assignment is a \textbf{programming} task.
-There is no template GitHub repository for this assignment;
+This assignment comprises a pair of \textbf{programming} tasks.
+
+For the \textbf{game component} task, there is no template GitHub repository;
 you should work within the existing source control repository for your game
 or create a new GitHub repository as appropriate.
-Either way, remember to modify the \texttt{.gitignore} file to exclude temporary build files
+Either way, remember to modify the \texttt{.gitignore} file (or equivalent in other version control systems) to exclude temporary build files
 from the repository.
+It is expected that your component will be implemented in C\# if your game is built in Unity,
+or a combination of C++, Blueprints and behaviour trees if your game is built in Unreal.
+However you may use any programming languages or environments that are appropriate to your project.
+
+For the \textbf{MicroRTS bot} task, begin by forking the following GitHub repository:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp250-bot}
+
+Modify the provided template code to implement your bot.
+The base repository's \texttt{readme.md} file contains important instructions for submitting your bot to the tournament server;
+be sure to read and follow these instructions carefully.
 
 \subsection*{Part A}
 
