@@ -7,10 +7,9 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Portfolio of game engine components --- AI (Part 1)}
+\title{Portfolio of game engine components --- AI (Task 1)}
 \author{Dr Ed Powley}
 \module{COMP250}
-\version{2.0}
 
 \begin{document}
 
@@ -34,11 +33,15 @@
     However, many games rely on AI to create a satisfying gameplay experience.
 }
 
-In this assignment, you are required to design and implement \textbf{two} software artefacts.
-First, you will create a \textbf{game component}, integrating one or more artificial intelligence (AI) techniques
-into one of your game development projects from another module.
-Second, you will create a \textbf{MicroRTS bot}: an AI agent that plays a simple real-time strategy (RTS) game,
-which will compete in a tournament against your classmates' bots.
+In this assignment, you are required to \textbf{design} and \textbf{implement} a game component
+implementing one or more artificial intelligence (AI) techniques.
+Note that ``component'' here may also include tools to help game designers to author AI behaviours or systems.
+
+It is strongly recommended that your component is integrated into your COMP240 group game development project,
+however if this is not appropriate you may integrate it into another of your current or previous development projects.
+You may use any programming language and game engine you deem appropriate,
+including visual scripting languages such as Blueprints;
+this choice will probably be dictated by your choice of game.
 
 Almost all types of games use AI in some capacity, and many genres rely on advanced AI techniques.
 Control of non-player characters is an important application of AI,
@@ -50,9 +53,9 @@ procedural narrative engines,
 assistive technologies,
 AI ``directors'',
 and many others.
-Your final output will be a pair of portfolio pieces, which you can use in future to demonstrate your mastery of these techniques.
+Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques.
 
-This assignment is formed of several parts. For the \textbf{game component}:
+This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
 	\item \textbf{Write} a 2-page handout that will:
 		\begin{enumerate}[label=(\roman*)]
@@ -61,25 +64,16 @@ This assignment is formed of several parts. For the \textbf{game component}:
 				the overall game concept;
 			\item \textbf{describe} the key requirements of your component.
 		\end{enumerate}
-	\item \textbf{Populate} a Trello board with the user stories for your component.
-	\item \textbf{Implement} a draft version of your component that will:
+	\item \textbf{Populate} a task board with the user stories for your component.
+	\item \textbf{Implement} a draft versions of your component that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{implement} the user stories from your Trello board.
 		\end{enumerate}
-	\item \textbf{Implement} a final version of your program that will:
+	\item \textbf{Implement} a final version of your component that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{revise} any issues raised by your tutor and/or your peers.
 		\end{enumerate}
-\end{enumerate}
-
-For the \textbf{MicroRTS bot}:
-\begin{enumerate}[label=(\Alph*),resume]
-	\item \textbf{Do} some stuff
-\end{enumerate}
-
-Finally:
-\begin{enumerate}[label=(\Alph*),resume]
-	\item \textbf{Present} a practical demo of your game component and your MicroRTS bot that will:
+	\item \textbf{Present} a practical demo of the computer program to your tutor that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{demonstrate} your academic integrity;
 			\item \textbf{demonstrate} your individual programming knowledge and communication skills.
@@ -88,24 +82,12 @@ Finally:
 
 \subsection*{Assignment Setup}
 
-This assignment comprises a pair of \textbf{programming} tasks.
-
-For the \textbf{game component} task, there is no template GitHub repository;
+This assignment is a \textbf{programming} task.
+There is no template GitHub repository for this assignment;
 you should work within the existing source control repository for your game
 or create a new GitHub repository as appropriate.
-Either way, remember to modify the \texttt{.gitignore} file (or equivalent in other version control systems) to exclude temporary build files
+Either way, remember to modify the \texttt{.gitignore} file (or equivalent on other version control systems) to exclude temporary build files
 from the repository.
-It is expected that your component will be implemented in C\# if your game is built in Unity,
-or a combination of C++, Blueprints and behaviour trees if your game is built in Unreal.
-However you may use any programming languages or environments that are appropriate to your project.
-
-For the \textbf{MicroRTS bot} task, begin by forking the following GitHub repository:
-
-\indent \url{https://github.com/Falmouth-Games-Academy/comp250-bot}
-
-Modify the provided template code to implement your bot.
-The base repository's \texttt{readme.md} file contains important instructions for submitting your bot to the tournament server;
-be sure to read and follow these instructions carefully.
 
 \subsection*{Part A}
 
@@ -121,7 +103,6 @@ Part A consists of a \textbf{single formative submission}. This work is \textbf{
 
 To complete Part A, prepare the handout using any word processing tool.
 Your handout may include images and/or links to online videos.
-In addition, create a Trello board and populate it with your user stories.
 
 Show the handout to the \textbf{tutor} for immediate \textbf{informal feedback}.
 
@@ -135,9 +116,12 @@ Part B consists of a \textbf{single formative submission}. This work is \textbf{
 	\item Is the scope appropriate for the product development time-frame?
 \end{itemize}
 
-To complete Part B, populate a Trello board with your user stories.
+To complete Part B, populate a task board with your user stories.
+If you have an existing task board for your game development project (e.g.\ a Trello board or a physical task board),
+use labelling or colour-coding to identify those user stories which comprise your AI component ---
+it is \textbf{not} recommended that you create a separate task board for your component.
 
-Show the Trello board to the \textbf{tutor} for immediate \textbf{informal feedback}.
+Show the task board to the \textbf{tutor} for immediate \textbf{informal feedback}.
 
 \subsection*{Part C}
 
@@ -211,8 +195,14 @@ Also ensure that all code corresponds to a sensible and consistent \textbf{forma
 indentation, whitespace, placement of curly braces, etc.
 Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
 with values instead defined as constants together in a single place.
-Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
-e.g.\ by defining them in an external file read at startup.
+Where appropriate, values should be exposed as properties or variables in the Unity or Unreal editor
+so that they can easily be ``\textbf{tinkered}'' without changing the source code.
+
+Maintainability is also important when using \textbf{visual scripting} systems such as \textbf{Blueprints}.
+Pay special attention to the \textbf{layout} of your Blueprints,
+which should be tidy and should make clear the flow of control and data.
+Use \textbf{grouping}, \textbf{macros}, \textbf{functions}, \textbf{routing nodes} etc.\ to achieve this.
+Blueprints which resemble bowls of spaghetti will not achieve high marks!
 
 As with all assignments on this course, you are expected to display a level of
 \textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
@@ -251,7 +241,6 @@ convention or obvious solutions.
 \end{itemize}
 
 \rubricyeartwo
-\rubrictitle{Marking Rubric: Game Component (30\%)}
 \begin{markingrubric}
 	\firstcriterion{Basic Competency Threshold}{40\%}
 		\grade\fail At least one part, or at least one sprint review, is missing or is unsatisfactory.
@@ -355,134 +344,6 @@ convention or obvious solutions.
         \grade Extensive creativity.
             \par The work is highly original, with strong evidence of divergent and/or subversive thinking.
             \par The work delivers extensive fun and/or engagement.
-%
-    \criterion{Portability and Navigability}{5\%}
-        \grade\fail Product will not execute at all on another machine, for reasons related to code portability, even if they are trivially resolvable.
-            \par The directory structure inside the submitted zip file is unclear.
-            \par Provided template has not been followed well, if at all.
-        \grade Several portability issues are present.
-            \par The directory structure inside the submitted zip file is somewhat confusing.
-            \par The provided template has mostly been followed.
-        \grade Some portability issues are present.
-            \par The directory structure inside the submitted zip file is adequate.
-            \par The provided template has been followed.
-        \grade Few portability issues are present.
-            \par The directory structure inside the submitted zip file is mostly sensible.
-            \par The provided template has been followed.
-        \grade Almost no portability issues are present.
-            \par The directory structure inside the submitted zip file is sensible.
-            \par The provided template has been followed.
-        \grade No portability issues are present.
-            \par There is cross-platform compatibility.
-            \par The directory structure inside the submitted zip file is sensible.
-            \par The provided template has been followed.
-%
-    \criterion{Use of Version Control}{5\%}
-        \grade \fail Material has been checked into GitHub less frequently than once per sprint.
-        \grade Code has been checked into GitHub at least once per sprint.
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par There is some evidence of engagement with peers (e.g.\ code review).
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par There is much evidence of engagement with peers (e.g.\ code review).
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par There is significant evidence of engagement with peers (e.g.\ code review).
-        \grade Code has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is extensive evidence of engagement with peers (e.g.\ code review).
-\end{markingrubric}
-
-\rubrictitle{Marking Rubric: MicroRTS Bot (70\%)}
-\begin{markingrubric}
-	\firstcriterion{Basic Competency Threshold}{40\%}
-		\grade\fail At least one part, or at least one sprint review, is missing or is unsatisfactory.
-		\gradespan{5}{Submission is timely.
-			\par Enough work is available to hold a meaningful discussion.
-			\par Clear evidence of programming knowledge and communication skills.
-			\par No breaches of academic integrity.
-			\par Tournament rules have been adhered to.
-			\par The student participates in all sprint reviews.}
-%
-    \criterion{Appropriateness of User Stories and Sprint Plans}{5\%}
-        \grade \fail Few user stories are distinguishable and easily measured.
-            \par Sprint plans provide little support for the project.
-        \grade Some user stories are distinguishable and easily measured.
-            \par Sprint plans provide some support for the project.
-        \grade Most user stories are distinguishable and easily measured.
-            \par User stories correspond to the product design.
-            \par Sprint plans provide much support for the project.
-        \grade Nearly all user stories are distinguishable and easily measured.
-            \par User stories clearly correspond to the product design.
-            \par Sprint plans provide considerable support for the project.
-        \grade All user stories are distinguishable and easily measured.
-            \par User stories clearly and comprehensively correspond to the product design.
-            \par Sprint plans provide significant support for the project.
-        \grade All user stories are distinguishable and easily measured.
-            \par User stories clearly and comprehensively correspond to the product design.
-            \par Sprint plans provide extensive support for the project.
-%
-    \criterion{Functional Coherence}{5\%}
-        \grade \fail Few user stories have been implemented  and/or the code fails to compile or run.
-            \par Many obvious and serious bugs are detected.
-        \grade Some user stories have been implemented.
-            \par Some obvious bugs are detected.
-        \grade Many user stories have been implemented.
-            \par There is some evidence of feature creep.
-            \par Few obvious bugs  are detected.
-        \grade Almost all user stories have been implemented.
-            \par There is little evidence of feature creep.
-            \par Some minor bugs  are detected.
-        \grade All user stories have been implemented.
-            \par There is almost no evidence of feature creep.
-            \par Some bugs, purely cosmetic and/or superficial in nature, are detected.
-        \grade All user stories have been implemented.
-            \par There is no evidence of feature creep.
-            \par Few to no bugs are detected.
-%
-    \criterion{Sophistication}{15\%}
-        \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is poor or non-existant.
-        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is adequate.
-        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is appropriate.
-        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is effective. There is high cohesion and low coupling.
-        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is very effective. There is high cohesion and low coupling.
-        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is extremely effective. There is very high cohesion and very low coupling.
-%
-    \criterion{Maintainability}{15\%}
-        \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
-            \par Few identifier names are clear or inappropriate.
-            \par Code formatting hinders readability.
-        \grade The code is well commented.
-            \par Some identifier names are descriptive and appropriate.
-            \par An attempt has been made to adhere to a consistent formatting style.
-             \par There is little obvious duplication of code or of literal values.           
-        \grade The code is reasonably well commented.
-            \par Most identifier names are descriptive and appropriate.
-            \par Most code adheres to a sensible formatting style.
-             \par There is almost no obvious duplication of code or of literal values.   
-        \grade The code is reasonably well commented, with appropriate Doxygen-compatiable documentation.
-            \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to a sensible formatting style.
-             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered''. 
-        \grade The code is very well commented, with comprehensive appropriate Doxygen-compatiable documentation.
-            \par All identifier names are descriptive and appropriate.
-            \par All code adheres to a sensible formatting style.
-             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
-        \grade The code is commented extremely well, with comprehensive appropriate Doxygen-compatiable documentation.
-            \par All identifier names are descriptive and appropriate.
-            \par All code adheres to a sensible formatting style.
-            \par There is no duplication of code or of literal values. Nearly all literal values are, where appropriate, easily ``tinkered'' outside of the source.  
-%
-    \criterion{Performance}{10\%}
-        \grade\fail No bot is entered into the tournament.
-        \gradespan{5}{Marks allocated according to the bot's final position on the tournament leaderboard.}
 %
     \criterion{Portability and Navigability}{5\%}
         \grade\fail Product will not execute at all on another machine, for reasons related to code portability, even if they are trivially resolvable.
