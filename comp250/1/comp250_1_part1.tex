@@ -7,9 +7,10 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Portfolio of game engine components --- Artificial Intelligence}
+\title{Portfolio of game engine components --- AI (Task 1)}
 \author{Dr Ed Powley}
 \module{COMP250}
+\version{2.0}
 
 \begin{document}
 
@@ -28,7 +29,7 @@
 
 --- Terry Pratchett
 \end{marginquote}
-\marginpicture{flavour_pic}{
+\marginpicture{flavour_pic_1}{
     Not all video games portray AI in a positive light.
     However, many games rely on AI to create a satisfying gameplay experience.
 }
@@ -36,15 +37,11 @@
 In this assignment, you are required to \textbf{design} and \textbf{implement} a game component
 implementing one or more artificial intelligence (AI) techniques.
 Note that ``component'' here may also include tools to help game designers to author AI behaviours or systems.
-Your component should be integrated into either:
-\begin{enumerate}[label=(\Alph*)]
-	\item A game developed by BA Digital Games students;
-	\item Your COMP230/COMP240 project;
-	\item A game or technical demo you developed for any previous module; or
-	\item In the case of an authoring component, either a standalone application
-		or an editor plugin for e.g.\ Unity or Unreal.
-\end{enumerate}
-You may use any programming language and game engine you deem appropriate;
+
+It is strongly recommended that your component is integrated into your COMP240 group game development project,
+however if this is not appropriate you may integrate it into another of your current or previous development projects.
+You may use any programming language and game engine you deem appropriate,
+including visual scripting languages such as Blueprints;
 this choice will probably be dictated by your choice of game.
 
 Almost all types of games use AI in some capacity, and many genres rely on advanced AI techniques.
@@ -59,12 +56,6 @@ AI ``directors'',
 and many others.
 Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques.
 
-%Graphics technology is one of the most obvious areas in which innovation has driven gaming technology in recent years.
-%Modern gaming PCs and consoles contain powerful graphics processing units (GPUs),
-%and gamers expect modern games to push this hardware to its full potential.
-%In this assignment you will practice the use of advanced graphical effects.
-%Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques.
-
 This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
 	\item \textbf{Write} a 2-page handout that will:
@@ -74,12 +65,12 @@ This assignment is formed of several parts:
 				the overall game concept;
 			\item \textbf{describe} the key requirements of your component.
 		\end{enumerate}
-	\item \textbf{Populate} a Trello board with the user stories for your component.
-	\item \textbf{Implement}, over a series of \textbf{three} sprints, draft versions of your component that will:
+	\item \textbf{Populate} a task board with the user stories for your component.
+	\item \textbf{Implement} a draft versions of your component that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{implement} the user stories from your Trello board.
 		\end{enumerate}
-	\item \textbf{Implement} a final version of your program, which will:
+	\item \textbf{Implement} a final version of your component that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{revise} any issues raised by your tutor and/or your peers.
 		\end{enumerate}
@@ -96,7 +87,7 @@ This assignment is a \textbf{programming} task.
 There is no template GitHub repository for this assignment;
 you should work within the existing source control repository for your game
 or create a new GitHub repository as appropriate.
-Either way, remember to modify the \texttt{.gitignore} file to exclude temporary build files
+Either way, remember to modify the \texttt{.gitignore} file (or equivalent on other version control systems) to exclude temporary build files
 from the repository.
 
 \subsection*{Part A}
@@ -113,7 +104,6 @@ Part A consists of a \textbf{single formative submission}. This work is \textbf{
 
 To complete Part A, prepare the handout using any word processing tool.
 Your handout may include images and/or links to online videos.
-In addition, create a Trello board and populate it with your user stories.
 
 Show the handout to the \textbf{tutor} for immediate \textbf{informal feedback}.
 
@@ -127,9 +117,12 @@ Part B consists of a \textbf{single formative submission}. This work is \textbf{
 	\item Is the scope appropriate for the product development time-frame?
 \end{itemize}
 
-To complete Part B, populate a Trello board with your user stories.
+To complete Part B, populate a task board with your user stories.
+If you have an existing task board for your game development project (e.g.\ a Trello board or a physical task board),
+use labelling or colour-coding to identify those user stories which comprise your AI component ---
+it is \textbf{not} recommended that you create a separate task board for your component.
 
-Show the Trello board to the \textbf{tutor} for immediate \textbf{informal feedback}.
+Show the task board to the \textbf{tutor} for immediate \textbf{informal feedback}.
 
 \subsection*{Part C}
 
@@ -203,8 +196,14 @@ Also ensure that all code corresponds to a sensible and consistent \textbf{forma
 indentation, whitespace, placement of curly braces, etc.
 Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
 with values instead defined as constants together in a single place.
-Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
-e.g.\ by defining them in an external file read at startup.
+Where appropriate, values should be exposed as properties or variables in the Unity or Unreal editor
+so that they can easily be ``\textbf{tinkered}'' without changing the source code.
+
+Maintainability is also important when using \textbf{visual scripting} systems such as \textbf{Blueprints}.
+Pay special attention to the \textbf{layout} of your Blueprints,
+which should be tidy and should make clear the flow of control and data.
+Use \textbf{grouping}, \textbf{macros}, \textbf{functions}, \textbf{routing nodes} etc.\ to achieve this.
+Blueprints which resemble bowls of spaghetti will not achieve high marks!
 
 As with all assignments on this course, you are expected to display a level of
 \textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading

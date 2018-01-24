@@ -1,0 +1,341 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage[hyphens]{url}
+\usepackage{todonotes}
+
+\title{Portfolio of game engine components --- AI (Task 2)}
+\author{Dr Ed Powley}
+\module{COMP250}
+\version{2.0}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``To be enjoyable, an AI must put up a good fight but lose more often than win. It must make the player feel clever, sly, cunning, and powerful. It must make the player jump from his seat shouting, `Take that, you little s**t!'\thinspace''
+
+--- Mat Buckland
+
+    \marginquoterule
+
+``Real stupidity beats artificial intelligence every time.''
+
+--- Terry Pratchett
+\end{marginquote}
+\marginpicture{flavour_pic_2}{
+    Not all video games portray AI in a positive light.
+    However, many games rely on AI to create a satisfying gameplay experience.
+}
+
+In this assignment, you are required to design and implement
+an \textbf{AI bot} for the \textbf{MicroRTS} game.
+
+In most games, the role of AI agents is to provide an enjoyable experience for the player.
+However, creating agents that instead try to win the game is an important area of research:
+in some genres of games there is demand for such AI,
+and it allows games to be used as a testbed for AI techniques that can be applied to real-world decision problems.
+Real-time strategy (RTS) games are particularly challenging for AI to play well,
+involving complex tactical and strategic decisions.
+MicroRTS is a simplified RTS which was developed for benchmarking AI techniques against each other.
+In this assignment you will develop a ``bot'' (an AI agent) that plays MicroRTS.
+Your bot will compete in a tournament against your classmates' bots.
+
+This assignment is formed of several parts:
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Implement}, over a course of several iterative sprints, draft versions of your bot.
+		\textbf{Upload} these to the tournament server.
+	\item \textbf{Implement} a final version of your bot that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{revise} any issues raised by your tutor and/or your peers.
+		\end{enumerate}
+	\item \textbf{Present} a practical demo of your bot that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{demonstrate} your academic integrity;
+			\item \textbf{demonstrate} your individual programming knowledge and communication skills.
+		\end{enumerate}
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+This assignment is a \textbf{programming} task.
+Begin by forking the following GitHub repository:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp250-microrts}
+
+Modify the provided template code to implement your bot.
+The base repository's \texttt{readme.md} file contains important instructions for submitting your bot to the tournament server;
+be sure to read and follow these instructions carefully.
+
+\subsection*{Part A}
+
+Part A is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
+
+To complete Part A, develop your bot in an iterative fashion.
+Push your code to GitHub regularly; if you have forked the base repository correctly,
+every push to the \texttt{master} branch will automatically submit your bot to the tournament server.
+
+Ensure that a sufficiently advanced draft is uploaded to GitHub, and attend the scheduled peer review session.
+
+\subsection*{Part B}
+
+Part B is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+
+To complete Part B, revise your bot based on the feedback you have received. Then, upload it to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
+
+You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
+
+\subsection*{Part C}
+
+Part E is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Enough work is available to hold a meaningful discussion;
+	\item Clear evidence of programming knowledge \textbf{and} communication skills;
+	\item No breaches of academic integrity.
+\end{enumerate}
+
+To complete Part C, prepare a practical demonstration of your bot. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session.
+
+\section*{Additional Guidance}
+
+As always, avoid underestimating the effort required to implement even simple software; always consider scope.
+From the proposal stage, you should consider very carefully what is feasible.
+
+Your code will be assessed on \textbf{functional coherence}:
+how well the finished product corresponds to the user stories,
+and whether it has any obvious bugs.
+Correspondence to user stories runs both ways:
+implementing features that were not present in the design (``feature creep'')
+is just as bad as neglecting to implement features.
+
+%Unlike your previous assignments,
+%you will be assessed on the \textbf{performance} of your solution.
+%Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
+%but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
+%It may be necessary to trade-off the complexity or fidelity of an effect
+%in order to achieve acceptable performance.
+
+Your code will also be assessed on \textbf{sophistication}.
+To succeed on a project of this size and complexity,
+you will need to make use of appropriate algorithms, data structures, libraries, and object oriented programming concepts.
+Appropriateness to the task at hand is key:
+you will \textbf{not} receive credit for complexity  
+where something simpler would have sufficed.
+Likewise, if you are using an engine such as Unity or Unreal,
+you should make use of (and build upon) the AI functionality included therein;
+you will \textbf{not} receive extra credit for ``rolling your own'' without good reason to do so.
+
+\textbf{Maintainability} is important in all programming projects,
+but doubly so when working in a team.
+Use \textbf{comments} liberally to improve code comprehension,
+and carefully choose the \textbf{names} for your files, classes, functions and variables.
+Use a well-established commenting convention
+for \textbf{high-level documentation}.
+The open-source tool Doxygen supports several such conventions.
+Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
+indentation, whitespace, placement of curly braces, etc.
+Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
+with values instead defined as constants together in a single place.
+Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
+e.g.\ by defining them in an external file read at startup.
+
+As with all assignments on this course, you are expected to display a level of
+\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
+arts institution.
+One approach to promoting creativity is
+\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
+Often the most interesting ideas are \textbf{subversive}: they deliberately go against
+convention or obvious solutions.
+
+%You will \textbf{not} be judged on the quality of your art assets.
+%It is fine to use meshes and textures found online,
+%as long as they are available under an appropriate license and are properly attributed.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+\section*{Additional Resources}
+
+\begin{itemize}
+	\item \url{http://aigamedev.com}
+    \item \url{https://docs.unity3d.com/Manual/Navigation.html}
+    \item \url{https://docs.unrealengine.com/latest/INT/Gameplay/AI/}
+    \item \url{https://google.github.io/styleguide/cppguide.html}
+\end{itemize}
+
+\rubricyeartwo
+\begin{markingrubric}
+	\firstcriterion{Basic Competency Threshold}{40\%}
+		\grade\fail At least one part, or at least one sprint review, is missing or is unsatisfactory.
+			\par The student is disqualified from the tournament.
+		\gradespan{5}{Submission is timely.
+			\par Enough work is available to hold a meaningful discussion.
+			\par Clear evidence of programming knowledge and communication skills.
+			\par No breaches of academic integrity.
+			\par Tournament rules have been adhered to.
+			\par The student participates in all sprint reviews.}
+%
+    \criterion{Appropriateness of User Stories and Sprint Plans}{5\%}
+        \grade \fail Few user stories are distinguishable and easily measured.
+            \par Sprint plans provide little support for the project.
+        \grade Some user stories are distinguishable and easily measured.
+            \par Sprint plans provide some support for the project.
+        \grade Most user stories are distinguishable and easily measured.
+            \par User stories correspond to the product design.
+            \par Sprint plans provide much support for the project.
+        \grade Nearly all user stories are distinguishable and easily measured.
+            \par User stories clearly correspond to the product design.
+            \par Sprint plans provide considerable support for the project.
+        \grade All user stories are distinguishable and easily measured.
+            \par User stories clearly and comprehensively correspond to the product design.
+            \par Sprint plans provide significant support for the project.
+        \grade All user stories are distinguishable and easily measured.
+            \par User stories clearly and comprehensively correspond to the product design.
+            \par Sprint plans provide extensive support for the project.
+%
+    \criterion{Functional Coherence}{5\%}
+        \grade \fail Few user stories have been implemented  and/or the code fails to compile or run.
+            \par Many obvious and serious bugs are detected.
+        \grade Some user stories have been implemented.
+            \par Some obvious bugs are detected.
+        \grade Many user stories have been implemented.
+            \par There is some evidence of feature creep.
+            \par Few obvious bugs  are detected.
+        \grade Almost all user stories have been implemented.
+            \par There is little evidence of feature creep.
+            \par Some minor bugs  are detected.
+        \grade All user stories have been implemented.
+            \par There is almost no evidence of feature creep.
+            \par Some bugs, purely cosmetic and/or superficial in nature, are detected.
+        \grade All user stories have been implemented.
+            \par There is no evidence of feature creep.
+            \par Few to no bugs are detected.
+%
+    \criterion{Sophistication}{15\%}
+        \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is poor or non-existant.
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is appropriate.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is effective. There is high cohesion and low coupling.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is very effective. There is high cohesion and low coupling.
+        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is extremely effective. There is very high cohesion and very low coupling.
+%
+    \criterion{Maintainability}{15\%}
+        \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
+            \par Few identifier names are clear or inappropriate.
+            \par Code formatting hinders readability.
+        \grade The code is well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par An attempt has been made to adhere to a consistent formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to a sensible formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The code is reasonably well commented, with appropriate Doxygen-compatiable documentation.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered''. 
+        \grade The code is very well commented, with comprehensive appropriate Doxygen-compatiable documentation.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
+        \grade The code is commented extremely well, with comprehensive appropriate Doxygen-compatiable documentation.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+            \par There is no duplication of code or of literal values. Nearly all literal values are, where appropriate, easily ``tinkered'' outside of the source.  
+%
+    \criterion{Performance}{10\%}
+        \grade\fail No bot is entered into the tournament, or the entered bot is disqualified.
+        \gradespan{5}{Marks allocated according to the bot's final position on the tournament leaderboard.}
+%
+    \criterion{Portability and Navigability}{5\%}
+        \grade\fail Product will not execute at all on another machine, for reasons related to code portability, even if they are trivially resolvable.
+            \par The directory structure inside the submitted zip file is unclear.
+            \par Provided template has not been followed well, if at all.
+        \grade Several portability issues are present.
+            \par The directory structure inside the submitted zip file is somewhat confusing.
+            \par The provided template has mostly been followed.
+        \grade Some portability issues are present.
+            \par The directory structure inside the submitted zip file is adequate.
+            \par The provided template has been followed.
+        \grade Few portability issues are present.
+            \par The directory structure inside the submitted zip file is mostly sensible.
+            \par The provided template has been followed.
+        \grade Almost no portability issues are present.
+            \par The directory structure inside the submitted zip file is sensible.
+            \par The provided template has been followed.
+        \grade No portability issues are present.
+            \par There is cross-platform compatibility.
+            \par The directory structure inside the submitted zip file is sensible.
+            \par The provided template has been followed.
+%
+    \criterion{Use of Version Control}{5\%}
+        \grade \fail Material has been checked into GitHub less frequently than once per sprint.
+        \grade Code has been checked into GitHub at least once per sprint.
+        \grade Code has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is some evidence of engagement with peers (e.g.\ code review).
+        \grade Code has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is much evidence of engagement with peers (e.g.\ code review).
+        \grade Code has been checked into GitHub several times per sprint.
+            \par Commit messages are clear, concise and relevant.
+            \par There is significant evidence of engagement with peers (e.g.\ code review).
+        \grade Code has been checked into GitHub several times per week.
+            \par Commit messages are clear, concise and relevant.
+            \par There is extensive evidence of engagement with peers (e.g.\ code review).
+\end{markingrubric}
+
+\section*{Appendix: Tournament Rules}
+
+\begin{enumerate}
+	\item Bots will play in a round-robin (all-versus-all) tournament.
+		Bots are ranked by Elo score, based on wins and losses.
+	\item A rolling tournament server is available, to which you may upload your bot for testing.
+		Final leaderboard position will be based on the version of your bot that is submitted to LearningSpace.
+	\item There is a time limit of 100 milliseconds per game tick.
+		If a bot takes longer than 100 milliseconds to choose an action, it forfeits the current match (which is recorded as a loss).
+	\item If a bot crashes by raising an uncaught exception, it forfeits the current match.
+	\item Bots \textbf{must not} create additional threads or processes.
+	\item Bots \textbf{must not} perform computations on the GPU.
+	\item Bots \textbf{must not} perform network access.
+	\item A bot \textbf{may} read and write files in its specified working directory, or subdirectories thereof.
+		It \textbf{must not} access files outside its working directory.
+	\item \textbf{Any attempt} to compromise the security of the tournament server,
+		or otherwise deliberately interfere with the smooth running of the tournament and the fairness of the results,
+		will result in \textbf{permanent disqualification} from the tournament
+		and \textbf{failure of the Basic Competency Threshold} for this assignment.
+\end{enumerate}
+
+\end{document}
