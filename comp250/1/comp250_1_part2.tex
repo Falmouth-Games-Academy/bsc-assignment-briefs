@@ -86,6 +86,7 @@ Part A is a \textbf{single formative submission}. This work is \textbf{individua
 To complete Part A, develop your bot in an iterative fashion.
 Push your code to GitHub regularly; if you have forked the base repository correctly,
 every push to the \texttt{master} branch will automatically submit your bot to the tournament server.
+Use the results from the tournament server to refine your bot design.
 
 Ensure that a sufficiently advanced draft is uploaded to GitHub, and attend the scheduled peer review session.
 
@@ -101,7 +102,7 @@ You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks a
 
 \subsection*{Part C}
 
-Part E is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
 
 \begin{enumerate}[label=(\alph*)]
 	\item Enough work is available to hold a meaningful discussion;
@@ -202,43 +203,24 @@ convention or obvious solutions.
 			\par Tournament rules have been adhered to.
 			\par The student participates in all sprint reviews.}
 %
-    \criterion{Appropriateness of User Stories and Sprint Plans}{5\%}
-        \grade \fail Few user stories are distinguishable and easily measured.
-            \par Sprint plans provide little support for the project.
-        \grade Some user stories are distinguishable and easily measured.
-            \par Sprint plans provide some support for the project.
-        \grade Most user stories are distinguishable and easily measured.
-            \par User stories correspond to the product design.
-            \par Sprint plans provide much support for the project.
-        \grade Nearly all user stories are distinguishable and easily measured.
-            \par User stories clearly correspond to the product design.
-            \par Sprint plans provide considerable support for the project.
-        \grade All user stories are distinguishable and easily measured.
-            \par User stories clearly and comprehensively correspond to the product design.
-            \par Sprint plans provide significant support for the project.
-        \grade All user stories are distinguishable and easily measured.
-            \par User stories clearly and comprehensively correspond to the product design.
-            \par Sprint plans provide extensive support for the project.
-%
     \criterion{Functional Coherence}{5\%}
-        \grade \fail Few user stories have been implemented  and/or the code fails to compile or run.
+        \grade \fail The code fails to compile or run.
             \par Many obvious and serious bugs are detected.
-        \grade Some user stories have been implemented.
-            \par Some obvious bugs are detected.
-        \grade Many user stories have been implemented.
-            \par There is some evidence of feature creep.
-            \par Few obvious bugs  are detected.
-        \grade Almost all user stories have been implemented.
-            \par There is little evidence of feature creep.
-            \par Some minor bugs  are detected.
-        \grade All user stories have been implemented.
-            \par There is almost no evidence of feature creep.
-            \par Some bugs, purely cosmetic and/or superficial in nature, are detected.
-        \grade All user stories have been implemented.
-            \par There is no evidence of feature creep.
-            \par Few to no bugs are detected.
+        \grade Some obvious bugs are detected.
+        \grade Few obvious bugs  are detected.
+        \grade Some minor bugs  are detected.
+        \grade Some superficial bugs are detected.
+        \grade Almost no bugs are detected.
 %
-    \criterion{Sophistication}{15\%}
+    \criterion{Algorithmic Sophistication}{10\%}
+        \grade \fail Little insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Some insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Much insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Considerable insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Significant insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Extensive insight into the appropriate use of AI techniques is evident from the design of the bot.
+%
+    \criterion{Sophistication of Implementation}{10\%}
         \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
             \par The program structure is poor or non-existant.
         \grade Some insight into the appropriate use of programming constructs is evident from the source code.
@@ -279,7 +261,7 @@ convention or obvious solutions.
 %
     \criterion{Performance}{10\%}
         \grade\fail No bot is entered into the tournament, or the entered bot is disqualified.
-        \gradespan{5}{Marks allocated according to the bot's final position on the tournament leaderboard.}
+        \gradespan{5}{Marks to be allocated according to the bot's Elo score, as measured in a round-robin tournament.}
 %
     \criterion{Portability and Navigability}{5\%}
         \grade\fail Product will not execute at all on another machine, for reasons related to code portability, even if they are trivially resolvable.
@@ -326,18 +308,19 @@ convention or obvious solutions.
 		Bots are ranked by Elo score, based on wins and losses.
 	\item A rolling tournament server is available, to which you may upload your bot for testing.
 		Final leaderboard position will be based on the version of your bot that is submitted to LearningSpace.
+	\item If the submitted bot cannot be compiled on the tournament server, it receives the lowest possible score.
 	\item There is a time limit of 100 milliseconds per game tick.
 		If a bot takes longer than 100 milliseconds to choose an action, it forfeits the current match (which is recorded as a loss).
 	\item If a bot crashes by raising an uncaught exception, it forfeits the current match.
-	\item Bots \textbf{must not} create additional threads or processes.
-	\item Bots \textbf{must not} perform computations on the GPU.
-	\item Bots \textbf{must not} perform network access.
+	\item Bots \textbf{must not} create additional threads or processes, perform computations on the GPU, or perform network access.
+		Any bot found to be doing these will be disqualified from the tournament.
 	\item A bot \textbf{may} read and write files in its specified working directory, or subdirectories thereof.
 		It \textbf{must not} access files outside its working directory.
 	\item \textbf{Any attempt} to compromise the security of the tournament server,
 		or otherwise deliberately interfere with the smooth running of the tournament and the fairness of the results,
 		will result in \textbf{permanent disqualification} from the tournament
 		and \textbf{failure of the Basic Competency Threshold} for this assignment.
+		This is at the discretion of the Module Leader.
 \end{enumerate}
 
 \end{document}
