@@ -19,19 +19,13 @@
 \section*{Introduction}
 
 \begin{marginquote}
-``To be enjoyable, an AI must put up a good fight but lose more often than win. It must make the player feel clever, sly, cunning, and powerful. It must make the player jump from his seat shouting, `Take that, you little s**t!'\thinspace''
-
---- Mat Buckland
-
-    \marginquoterule
-
 ``Real stupidity beats artificial intelligence every time.''
 
 --- Terry Pratchett
 \end{marginquote}
 \marginpicture{flavour_pic_2}{
-    Not all video games portray AI in a positive light.
-    However, many games rely on AI to create a satisfying gameplay experience.
+    MicroRTS, originally developed by Santiago Onta\~n\'on at Drexel University,
+    is an open-source software environment designed for benchmarking AI techniques for real-time strategy games.
 }
 
 In this assignment, you are required to design and implement
@@ -49,8 +43,14 @@ Your bot will compete in a tournament against your classmates' bots.
 
 This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
-	\item \textbf{Implement}, over a course of several iterative sprints, draft versions of your bot.
-		\textbf{Upload} these to the tournament server.
+	\item \textbf{Implement}, over a course of several sprints, draft versions of your bot:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{research} and \textbf{devise} appropriate AI methods;
+			\item \textbf{implement} these methods in your bot;
+			\item \textbf{upload} your bot to the tournament server;
+			\item \textbf{revise} your bot based on results from the tournament server;
+			\item \textbf{repeat} iteratively.
+		\end{enumerate}
 	\item \textbf{Implement} a final version of your bot that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{revise} any issues raised by your tutor and/or your peers.
@@ -67,7 +67,7 @@ This assignment is formed of several parts:
 This assignment is a \textbf{programming} task.
 Begin by forking the following GitHub repository:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp250-microrts}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp250-bot}
 
 Modify the provided template code to implement your bot.
 The base repository's \texttt{readme.md} file contains important instructions for submitting your bot to the tournament server;
@@ -185,10 +185,10 @@ convention or obvious solutions.
 \section*{Additional Resources}
 
 \begin{itemize}
-	\item \url{http://aigamedev.com}
-    \item \url{https://docs.unity3d.com/Manual/Navigation.html}
-    \item \url{https://docs.unrealengine.com/latest/INT/Gameplay/AI/}
-    \item \url{https://google.github.io/styleguide/cppguide.html}
+	\item \url{https://github.com/santiontanon/microrts/wiki}
+	\item \url{https://sites.google.com/site/micrortsaicompetition/home}
+    \item \url{https://docs.oracle.com/javase/tutorial/}
+    \item \url{https://google.github.io/styleguide/javaguide.html}
 \end{itemize}
 
 \rubricyeartwo
@@ -304,23 +304,40 @@ convention or obvious solutions.
 \section*{Appendix: Tournament Rules}
 
 \begin{enumerate}
-	\item Bots will play in a round-robin (all-versus-all) tournament.
-		Bots are ranked by Elo score, based on wins and losses.
-	\item A rolling tournament server is available, to which you may upload your bot for testing.
-		Final leaderboard position will be based on the version of your bot that is submitted to LearningSpace.
-	\item If the submitted bot cannot be compiled on the tournament server, it receives the lowest possible score.
-	\item There is a time limit of 100 milliseconds per game tick.
-		If a bot takes longer than 100 milliseconds to choose an action, it forfeits the current match (which is recorded as a loss).
-	\item If a bot crashes by raising an uncaught exception, it forfeits the current match.
-	\item Bots \textbf{must not} create additional threads or processes, perform computations on the GPU, or perform network access.
-		Any bot found to be doing these will be disqualified from the tournament.
-	\item A bot \textbf{may} read and write files in its specified working directory, or subdirectories thereof.
-		It \textbf{must not} access files outside its working directory.
-	\item \textbf{Any attempt} to compromise the security of the tournament server,
-		or otherwise deliberately interfere with the smooth running of the tournament and the fairness of the results,
-		will result in \textbf{permanent disqualification} from the tournament
-		and \textbf{failure of the Basic Competency Threshold} for this assignment.
-		This is at the discretion of the Module Leader.
+	\item Bots will play in a \textbf{round-robin} (all-versus-all) tournament.
+	\item Bots will be ranked by \textbf{Elo score}, based on wins and losses.
+	\item A \textbf{rolling tournament} server is available, to which you may upload your bot for testing.
+	\item However, \textbf{final leaderboard position} will be based on the version of your bot that is submitted to LearningSpace.
+	\item You \textbf{may} upload multiple bots to the rolling tournament server,
+		however \textbf{only one} submission will be accepted for the final tournament.
+	\item \textbf{All Java source code} for your bot must be provided ---
+		pre-compiled files (\texttt{.class}, \texttt{.jar} etc) are \textbf{not} permitted.
+		This includes any third-party libraries you use.
+	\item The bot will \textbf{forfeit} the current match if it:
+		\begin{enumerate}
+			\item Takes longer than 100 milliseconds to choose an action
+			\item Allocates more than 1GB of memory
+			\item Crashes by raising an uncaught exception
+		\end{enumerate}
+		Forfeiting a match is recorded as a loss.
+	\item The bot will be \textbf{disqualified} from the tournament if it:
+		\begin{enumerate}
+			\item Fails to compile on the tournament server
+			\item Creates additional threads or processes
+			\item Accesses GPU resources
+			\item Accesses the network
+			\item Accesses files outside the working directory
+		\end{enumerate}
+		Disqualification removes the bot from the tournament, and results in the lowest possible Elo score.
+		If a bot is disqualified from the rolling tournament, you may upload a new version to fix the issue.
+	\item The bot will be \textbf{permanently disqualified} from the tournament if it:
+		\begin{enumerate}
+			\item \textbf{Deliberately} attempts to compromise the security of the tournament server
+			\item \textbf{Deliberately} attempts to interfere with the smooth running of the tournament or the fairness of the results
+		\end{enumerate}
+		Permanent disqualification removes the bot from the tournament, and results in a ban on uploading further bots to the server.
+		Your bot will also not be included in the final tournament.
+		Permanent disqualification will be considered an automatic failure of the Basic Competency Threshold for this assignment.
 \end{enumerate}
 
 \end{document}
