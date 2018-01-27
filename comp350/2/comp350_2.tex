@@ -7,7 +7,7 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Assignment 1 - Optimisation Task}
+\title{Assignment 2 - Porting Task}
 \author{Brian McDonaldS}
 \module{COMP350}
 
@@ -20,47 +20,42 @@
 \section*{Introduction}
 
 \begin{marginquote}
-``We should forget about small efficiencies, say about 97\% of the time: premature optimization is the root of all evil. ''
+``Making Doom run on a new platform is only a couple days of work,"Making it a really good game on a platform that doesn't have a keyboard and mouse or an excess of processing power is an honest development effort. ''
 
---- Donald Knuth
+--- John Carmack on porting Doom to iOS
 
     \marginquoterule
-
-``There is a famous rule in performance optimization called the 90/10 rule: 90\% of a program's execution time is spent in only 10\% of its code. The standard inference from this rule is that programmers should find that 10\% of the code and optimize it, because that's the only code where improvements make a difference in the overall system performance. ''
-
---- Richard E. Pattis
 \end{marginquote}
 
 \marginpicture{flavour_pic}{
-	Unreal Engine CPU Profiler
+	Dreamcast Dev Kit
 }
 
-In this assignment, you are required to \textbf{optimise} a project you have been working on. This project could be one of the following
+In this assignment you should continue on with the code base from assignment 1 and \textbf{port} a project you have been working on to one of the following platforms.
 \begin{itemize}
-	\item COMP330 \& COMP340 (Group project)
-	\item COMP320 \& COMP360 (Dissertation Project)
+	\item PS4
+	\item iOS
+	\item Android
 \end{itemize}
 
-You should also consider taking the same project and using it for Assignment 2 - Porting Task.
-
-Optimisation is the process of modifying a system to make it more efficient. This will often take the form of identifying via profiling and then making a change to improve performance and then re-profiling. 
+Porting a game is not a trivial task, not only do you have to account for restrictions on the platform in terms of resources but you also have to deal with the requirements of the platform holder
 
 This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
-	\item \textbf{Write} a document which contains the following (equivalent of one page of A4)
-		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{describe} the project;
-			\item \textbf{outline} the required tools;
-		\end{enumerate}
+	\item \textbf{Carry out} and \textbf{document} your porting process
 	\item \textbf{Review} the work of your peers
-	\item \textbf{Carry out} and \textbf{document}, a series of optimisation steps
+	\item \textbf{Present}, as an \textbf{individual}, a practical demo of the computer program to your tutor that will:
+		\begin{enumerate}[label=\roman*.]
+			\item \textbf{demonstrate} your academic integrity;
+			\item as well as \textbf{demonstrate} your \textbf{individual} programming knowledge \textbf{and} communication skills.
+		\end{enumerate}
 \end{enumerate}
 
 \subsection*{Assignment Setup}
 
-This assignment is a \textbf{programming} task. Fork the GitHub repository at the following URL:
+This assignment is a \textbf{programming} task. Continue on with the repository from Assignment or fork the GitHub repository at the following URL:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp350-optimisation}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp350-porting}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories.
 Ensure that you maintain the \texttt{readme.md} file.
@@ -109,25 +104,6 @@ Part C is a \textbf{single formative submission}. This work is \textbf{individua
 \end{enumerate}
 
 To complete Part C, prepare draft versions of the computer programs. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled sprint review sessions. Then, attend the scheduled sprint review sessions.
-
-\subsection*{Part D}
-
-Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
-
-To complete Part D, revise your program based on the feedback you have received. Then, upload a \texttt{.zip} file to LearningSpace containing the following:
-
-\begin{enumerate}[label=(\alph*)]
-	\item The source code for your project;
-	\item Document which contains the following
-	\begin{itemize}
-		\item Description of the project
-		\item Details of the profiling process
-		\item Screenshots of each run of the profiler
-		\item Tables/figures of each run of the profiler
-	\end{itemize}
-\end{enumerate}
-
-Please note, the LearningSpace will only accept a single \texttt{.zip} file. You will receive \textbf{formal feedback} three weeks after the final submission deadline.
 
 \section*{Additional Guidance}
 
