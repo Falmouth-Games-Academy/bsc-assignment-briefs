@@ -4,178 +4,137 @@
 \usepackage{enumitem}
 \setlist{nosep} % Make enumerate / itemize lists more closely spaced
 \usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
-\usepackage{url}
+\usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Research Journal --- Graphics}
-\author{Dr Ed Powley}
-\module{COMP220}
+\title{Assignment 1 - Optimisation Task}
+\author{Brian McDonaldS}
+\module{COMP350}
 
 \begin{document}
 
 \maketitle
 
+%
+
 \section*{Introduction}
 
 \begin{marginquote}
-  ``There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies and the other way is to make it so complicated that there are no obvious deficiencies.''
-    
-    --- C.A.R. Hoare
-    
-    \marginquoterule
-    
-    ``The computing scientist's main challenge is not to get confused by the complexities of [their] own making.''
-    
-    --- E. W. Dijkstra
-    
+``We should forget about small efficiencies, say about 97\% of the time: premature optimization is the root of all evil. ''
+
+--- Donald Knuth
+
     \marginquoterule
 
-        ``Controlling complexity is the essence of computer programming.''
-    
-    --- Brian Kernighan
-            
+``There is a famous rule in performance optimization called the 90/10 rule: 90\% of a program's execution time is spent in only 10\% of its code. The standard inference from this rule is that programmers should find that 10\% of the code and optimize it, because that's the only code where improvements make a difference in the overall system performance. ''
+
+--- Richard E. Pattis
 \end{marginquote}
+
 \marginpicture{flavour_pic}{
-    \textit{ACM SIGGRAPH} is the premier conference on computer graphics, with contributions to it highly respected by the games industry.
+	Unreal Engine CPU Profiler
 }
 
-In this assignment, you will produce a journal detailing your research on computer graphics. In addition to your individual journal, as a group you will create a community wiki to collect and discuss your findings.
+In this assignment, you are required to \textbf{optimise} a project you have been working on. This project could be one of the following
+\begin{itemize}
+	\item COMP330 \& COMP340 (Group project)
+	\item COMP320 \& COMP360 (Dissertation Project)
+\end{itemize}
 
-Familiarity with the academic literature is extremely helpful for the computing professional,
-both to understand the seminal works that lay the foundations of the field,
-and to keep abreast of recent developments at the cutting edge.
-Games technology is a fast-moving field, and keeping up is important.
-However scientific papers are written in a way that is sometimes daunting to newcomers,
-so it is essential to practice the skill of reading and comprehending such papers.
-Keeping a research journal is a useful way to record your thoughts
-(questions, hypotheses, connections, ideas, ...) as you explore the literature.
+You should also consider taking the same project and using it for Assignment 2 - Porting Task.
+
+Optimisation is the process of modifying a system to make it more efficient. This will often take the form of identifying via profiling and then making a change to improve performance and then re-profiling. 
 
 This assignment is formed of several parts:
-
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Write} a draft research journal, of at most 1200 words, that will:
-    	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{summarise} at least \textbf{six} papers from the academic literature on computer graphics;
-    		\item \textbf{synthesise} what you have read into a cohesive whole.
-    	\end{enumerate}
-    \item \textbf{Write} the final version of your research journal, of at most 1200 words, which will:
-    	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{revise} any issues raised by your tutor and/or your peers.
-    	\end{enumerate}
-    \item \textbf{Edit} the community wiki to:
-    	\begin{enumerate}[label=(\roman*)]
-    		\item \textbf{share} your findings on what you have read;
-    		\item \textbf{debate} your findings with your peers.
-    	\end{enumerate}
-    \item \textbf{Discuss} your research journal with your tutor in the viva session in class.
+	\item \textbf{Write} a document which contains the following (equivalent of one page of A4)
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{describe} the project;
+			\item \textbf{outline} the required tools;
+		\end{enumerate}
+	\item \textbf{Review} the work of your peers
+	\item \textbf{Carry out} and \textbf{document}, a series of optimisation steps
 \end{enumerate}
 
 \subsection*{Assignment Setup}
 
-This assignment is an \textbf{academic writing task} and \textbf{wiki task}. Fork the GitHub repository at the following URL:
+This assignment is a \textbf{programming} task. Fork the GitHub repository at the following URL:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp220-journal}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp350-optimisation}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories.
+Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{TeX}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+Modify the \texttt{.gitignore} to the defaults for platform or engine of your project.
+Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
 \subsection*{Part A}
 
-Part A consists of \textbf{multiple formative submissions}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
 
-To complete Part A, \textbf{select} and \textbf{read at least six} papers from the academic literature on computer graphics.
-For each paper you read, write an entry in your research journal.
-It is recommended that you write your journal entry in the \texttt{readme.md} file within your forked repository,
-but you may use LaTeX if you prefer.
-Commit your work to your GitHub repository to be signed off during personal tutor meetings,
-at least once every three weeks during semester~1.
+\begin{itemize}
+	\item What is the details of the project you are optimising?
+	\item What language/engine are you optimising?
+	\item What tools are you going to use?
+\end{itemize}
 
-You will receive \textbf{immediate informal feedback}.
+To complete Part A, prepare the handout using any word processing tool.
+
+Ensure that the document and related assets are pushed to GitHub and a pull request is made prior to \textbf{5pm on Friday 9th of February}.
 
 \subsection*{Part B}
 
-Part B is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis
-using the criteria listed in the marking rubric at the end of this document.
+Part B consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. You will upload your coursework repository for peer review.
 
-To complete Part B, revise your report from Part~A to take into account any feedback you have received so far.
+You will be assessed on the following criteria 
 
-Compress your \texttt{readme.md} file, along with any required images or other external files,
-into a \texttt{.zip} file and upload it to LearningSpace.
-Alternatively, if you have used LaTeX, upload a \texttt{.pdf} file of your journal to LearningSpace.
-Note that LearningSpace will only accept a single \texttt{.zip} or \texttt{.pdf} file.
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
 
-You will receive \textbf{formal feedback} three weeks after the final deadline.
+To complete Part B, prepare draft versions of the computer programs. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled peer-review session. Then, attend the scheduled peer-review session.
+
+You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
 
 \subsection*{Part C}
 
-Part C consists of \textbf{multiple formative submissions}. This work is \textbf{individual} but with a \textbf{collaborative} component, and will be assessed on a \textbf{criterion-referenced} basis.
-The criterion used to assess this part relates to the quantity and quality of your contributions.
+Part C is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
-To complete Part C, contribute to the wiki at the following URL:
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
 
-\url{https://github.com/Falmouth-Games-Academy/comp220-journal/wiki}
-
-Please ensure that you are editing the wiki for the \texttt{Falmouth-Games-Academy} repository,
-and \textbf{not} the wiki for your fork of the repository.
-
-During your personal tutor meetings, make your tutor aware of your contributions to the wiki.
-
-You will receive \textbf{immediate informal feedback} as well as \textbf{ongoing peer feedback}.
+To complete Part C, prepare draft versions of the computer programs. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled sprint review sessions. Then, attend the scheduled sprint review sessions.
 
 \subsection*{Part D}
 
-Part D consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
 
-To complete Part D, bring the final version of your research journal to the viva session in class.
-Be ready to discuss your work with your tutor.
+To complete Part D, revise your program based on the feedback you have received. Then, upload a \texttt{.zip} file to LearningSpace containing the following:
 
-You will receive \textbf{immediate informal feedback}.
+\begin{enumerate}[label=(\alph*)]
+	\item The source code for your project;
+	\item Document which contains the following
+	\begin{itemize}
+		\item Description of the project
+		\item Details of the profiling process
+		\item Screenshots of each run of the profiler
+		\item Tables/figures of each run of the profiler
+	\end{itemize}
+\end{enumerate}
+
+Please note, the LearningSpace will only accept a single \texttt{.zip} file. You will receive \textbf{formal feedback} three weeks after the final submission deadline.
 
 \section*{Additional Guidance}
 
-To make the most efficient use of your time,
-focus your reading on papers that are relevant to the techniques you have chosen to implement
-in your portfolio task for this module.
-That said, it is also beneficial to read more widely around the subject area
-to better understand the context within which works are situated.
-As much as possible you should focus your reading on peer-reviewed scholarly sources reporting primary research:
-articles in scientific workshops, conferences, journals, and some books or book chapters.
-Other sources tend to be less rigorous, and should be used only for background information
-or in cases where their use can be convincingly justified.
+As always, avoid underestimating the effort required to implement even simple software; always consider scope.
+From the proposal stage, you should consider very carefully what is feasible. The important aspect about this coursework is the profiling process, you should approach this like an experiment and document each step and iteration in the process.
 
-A common pitfall is to focus too much on summarising the content of the papers you have read.
-For higher marks you need to demonstrate \textbf{insight} into what you have read:
-forming inferences and analyses beyond what is written in the paper.
-Some questions you might ask yourself are:
-Why is the paper significant and/or influential?
-Why did the researchers choose the approach that they did?
-Is there anything counterintuitive or surprising in the paper?
-Do you disagree with any of the assumptions or claims it makes?
-Does the paper suggest any further research questions?
 
-A related pitfall is to structure the journal as a sequence of disconnected entries.
-Instead aim to \textbf{synthesise} multiple papers into a cohesive whole,
-drawing connections between works by different authors.
-Forming a holistic picture of a field is much more valuable than simply understanding individual works.
-
-The wiki is primarily intended to become a useful shared resource for the cohort.
-As such, students are expected to direct themselves and their peers in populating, structuring and editing the wiki.
-If appropriate, you may copy and paste material from your individual journal into the wiki.
-However note that a wiki is not a piece of academic writing
-and thus will tend to have a less formal tone than you should be aiming for in your journal.
-Edits may be required to ensure a consistent tone for the wiki.
-
-You can, and indeed should, take inspiration from others' wiki contributions when working on your own journal.
-However you \textbf{must not} copy verbatim material written by others;
-doing so will be considered academic misconduct.
-
-Most researchers write scientific papers for the intended audience of their fellow researchers.
-Thus some papers can seem impenetrable to the novice reader.
-Don't lose heart!
-Discuss the paper with your peers.
-Follow up the papers it cites to find alternative explanations.
-If all else fails, continue reading the paper --- often a difficult paragraph is clarified by something which appears later.
 
 \section*{FAQ}
 
@@ -192,120 +151,102 @@ If all else fails, continue reading the paper --- often a difficult paragraph is
     		 Please make a pull request and comment accordingly.
 \end{itemize}
 
-%\section*{Additional Resources}
-%
-%\begin{itemize}
-%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
-%    \item http://agilemanifesto.org/
-%\end{itemize}
+\section*{Additional Resources}
+
+\begin{itemize}
+    \item \url{http://gameprogrammingpatterns.com/optimization-patterns.html}
+    \item \url{https://docs.unrealengine.com/latest/INT/Engine/Performance/}
+    \item \url{https://docs.unity3d.com/Manual/Profiler.html}
+    \item \url{https://msdn.microsoft.com/en-us/library/ms182372.aspx}
+\end{itemize}
 
 \rubricyeartwo
 \begin{markingrubric}
-%
 	\firstcriterion{Basic Competency Threshold}{40\%}
-		\gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
-		\gradespan{5}{Formative submissions for Part A have been signed off at least once every three weeks.
-			\par The student participated in the viva, with enough work available to hold a meaningful discussion.
-			\par Sources have been cited in an appropriate manner, without any obvious errors.
-			\par No breaches of academic integrity.
-		}
+		\grade\fail At least one part, is missing or is unsatisfactory.
+		\gradespan{5}{Submission is timely.
+			\par Considerable engagement with version control, commesurate with at least three or more commits per week.
+			\par Enough work is available to hold a meaningful discussion.
+			\par Clear evidence of programming knowledge and communication skills.
+			\par Adequete participation in-class peer-review activities at least at the level of basic competency.
+			\par No breaches of academic integrity.}
 %
-%    \criterion{Formative submissions}{Threshold 5\%}
-%        \gradespan{5}{\fail Formative submissions for Part A have been signed off less frequently than once every three weeks.}
-%        \grade 		Formative submissions for Part A have been signed off at least once every three weeks.
+    \criterion{Appropriateness of Project Description}{10\%}
+        \grade \fail The description lack detail or is unclear
+        \grade The description is poor and requires more detail
+            \par There is no list of tools to be used during the optimisation process
+        \grade The description is of a good level of detail but it is over-scoped 
+            \par Some tools were listed but no detail was given on these
+        \grade The description is of a good level of detail and is of appropriate scope
+            \par Some tools were listed and there is a brief description of the tool
+        \grade The description is of a very good level of detail and is of appropriate scope
+            \par Some tools were listed and there is a description of good level of detail
+        \grade The description is of an excellent level of detail and is of appropriate scope
+            \par  Some tools were listed and there is a description of an excellent level detail
 %
-%    \criterion{Participation in viva}{Threshold 5\%}
-%        \gradespan{5}{\fail The student did not participate in the viva, or did not submit sufficient work to discuss in the viva.}
-%        \grade 		The student participated in the viva.
+    \criterion{Sophistication}{10\%}
+        \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is poor or non-existant.
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is appropriate.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is effective. There is high cohesion and low coupling.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is very effective. There is high cohesion and low coupling.
+        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is extremely effective. There is very high cohesion and very low coupling.
 %
-    \criterion{Breadth of reading}{5\%}
-        \grade\fail	Fewer than the six suggested articles are referenced.
-        \grade		All six of the suggested articles are referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further six sources are also referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further 12 scholarly articles are also referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further 18 scholarly articles are also referenced.
-        \grade		All six of the suggested articles are referenced.
-        \par		A further 24 scholarly articles are also referenced.
+    \criterion{Maintainability}{15\%}
+        \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
+            \par Few identifier names are clear or inappropriate.
+            \par Code formatting hinders readability.
+        \grade The code is well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par An attempt has been made to adhere to a consistent formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to a sensible formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The code is reasonably well commented, with appropriate Doxygen-compatiable documentation.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered''. 
+        \grade The code is very well commented, with comprehensive appropriate Doxygen-compatiable documentation.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
+        \grade The code is commented extremely well, with comprehensive appropriate Doxygen-compatiable documentation.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+            \par There is no duplication of code or of literal values. Nearly all literal values are, where appropriate, easily ``tinkered'' outside of the source.  
 %
-    \criterion{Depth of insight}{15\%}
-        \grade\fail Little or no insight is demonstrated.
-        \par		Papers are merely paraphrased or summarised in the student's own words.
-        \grade		Some insight is demonstrated.
-        \par		Attempts are made at discussion beyond summary.
-        \grade		Much insight is demonstrated.
-        \par		Discussion is inferential in nature.
-        \grade		Considerable insight is demonstrated.
-        \par		Discussion is analytical in nature.
-        \grade		Significant insight is demonstrated.
-        \par		Discussion is analytical and evaluative in nature.
-        \grade		Extensive insight is demonstrated.
-        \par		Discussion is highly analytical and evaluative in nature.
+	\criterion{Peer Review}{10\%}
+		\grade\fail No peer-review submitted.
+		\grade There is evidence of some engagement with peers (e.g.\ code review).
+		\grade There is evidence of some engagement with peers (e.g.\ code review).
+		\par Comments to peers are somewhat constructive and provide some insight.
+		\grade There is evidence of much engagement with peers (e.g.\ code review).
+		\par Comments to peers are reasonably constructive and provide much insight.
+		\grade There is evidence of much engagement with peers (e.g.\ code review).
+		\par Comments to peers are reasonably constructive and provide considerable insight.
+		\grade There is evidence of considerable engagement with peers (e.g.\ code review).
+		\par Comments to peers are highly constructive and provide significant insight.
 %
-    \criterion{Specificity, verifiability \& accuracy of claims}{5\%}
-        \grade\fail 	Few claims have a clear source of evidence.
-        \par 		Significant errors and/or misinterpretations.
-        \grade 		Some claims have a clear source of evidence.
-        \par 		Many errors and/or misinterpretations.
-        \grade 		Many claims have a clear source of evidence.
-        \par 		Some errors and/or misinterpretations.
-        \grade 		Most claims have a clear source of evidence.
-        \par 		Few errors and/or misinterpretations.
-        \grade 		All claims have a clear source of evidence.
-        \par 		Almost no errors and/or misinterpretations.
-        \grade		All claims have a clear source of evidence.
-        \par 		No detectable errors and/or misinterpretations.
-%
-    \criterion{Synthesis}{15\%}
-        \grade\fail No connections are made between different sources.
-        \grade		Superficial connections are made between different sources.
-        \grade		Basic connections are made between different sources.
-        \grade		Reasonable connections are made between different sources.
-        \par		Connections go beyond mere description.
-        \grade		Strong connections are made between different sources.
-        \par		Connections are analytical in nature.
-        \grade		Strong connections are made between different sources.
-        \par		Connections are analytical and evaluative in nature.
-%
-    \criterion{Community engagement}{10\%}
-        \grade\fail 	Few or no contributions have been made to the wiki.
-        \grade 		Some contributions have been made to the wiki.
-        \par		Contributions are non-trivial.
-        \par		The student has made some attempt to engage in community discourse.
-        \grade 		Many contributions have been made to the wiki.
-        \par		Contributions are well-reasoned.
-        \par		The student has engaged in the community discourse.
-        \grade 		A considerable number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned.
-        \par		The student has actively engaged in the community discourse.
-        \grade 		A significant number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has participated in steering the community discourse.
-        \grade 		An extensive number of contributions have been made to the wiki.
-        \par		Contributions are well-reasoned and academically sound.
-        \par		The student has played a key role in driving the community discourse.
-%
-    \criterion{Appropriateness of spelling \& grammar}{5\%}
-        \grade\fail 	Substantial spelling and/or grammar errors.
-        \grade 		Many spelling and/or grammar errors.
-        \grade 		Some spelling and/or grammar errors.  
-        \grade 		Few spelling and/or grammar errors.
-        \grade 		Almost no spelling and/or grammar errors.
-        \grade 		No spelling or grammar errors.
-%
-    \criterion{Appropriateness of journal structure}{5\%}
-        \grade\fail 	There is no structure, or the structure is unclear.
-        \grade 		There is little structure.
-        \grade 		There is some structure.
-        \par 		A few sentences and paragraphs are well constructed.
-        \grade 		There is much structure.
-        \par 		Some sentences and paragraphs are well constructed.
-        \grade 		There is much structure, highlighting the key themes.
-        \par 		Most sentences and paragraphs are well constructed.
-        \grade 		There is much structure, highlighting the key themes.
-        \par 		All sentences and paragraphs are well constructed.
+	\criterion{Optimisation Process}{15\%}
+		\grade\fail Optimisation has been carried out but there is no supporting documentation
+		\grade Optimisation has been carried out with some basic supporting documentation
+		\par The documentation lacks detail and clarity, there is also a lack of figures, charts and tables
+		\grade Optimisation has been carried out with more detailed supporting documentation
+		\par The documentation lacks detail and clarity, but there is evidence of more analytical approach (including diagrams)
+		\grade Optimisation has been carried out and the supporting documentation is of a good level
+		\par The documentation is of a good level of detail and there is evidence of more analytical approach (including diagrams)
+		\grade Optimisation has been carried out and the supporting documentation is of a very good level
+		\par The documentation is of a good level of detail and the commentary on the optimisation process is of a good level of detail
+		\grade Optimisation has been carried out and the supporting documentation is of a excellent level
+		\par The documentation is of a good level of detail and the commentary on the optimisation process is of a excellent level of detail
 \end{markingrubric}
 
 \end{document}
