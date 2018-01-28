@@ -10,7 +10,7 @@
 \title{Client-Server Game Task}
 \author{Dr Michael Scott}
 \module{COMP260}
-\version{2.0.1}
+\version{2.0.2}
 
 \begin{document}
 
@@ -38,7 +38,7 @@ All prove to be false in the long run and all cause big trouble and painful lear
     \textit{MUD1}, written by Roy Trubshaw and Richard Bartle---now, Prof. Bartle---was the first virtual world to run multiplayer over a network. It was written in 1978, pre-dating the Internet.
 }
 
-For this assignment, you implement a multiplayer online text-based adventure game using a client-server architecture.  The server will be written in C\#. Though, you may implement the client in any suitable language of your choice (e.g., C++, C\#, Python, Java, etc.). 
+For this assignment, you implement a multiplayer online text-based adventure game using a client-server architecture.  The server will be written in C\#. Though, you may implement the client in a suitable language of your choice. 
 
 Knowledge of computer networking is essential. You will need to work with highly sophisticated network technologies to satisfy increasing demand for social experiences in games. Experience working with client-server architectures, in particular, is highly desired by employers even outside games.
 
@@ -48,12 +48,15 @@ This assignment is formed of several parts:
     \item \textbf{Extend} your client-server MUD such that:
     	\begin{enumerate}[label=\roman*.]
     		\item the server \textbf{operates} from a DigitalOcean Ubuntu Droplet;
-    		\item the client \textbf{operates} from a local machine \textbf{and} is made thin;
+    		\item and \textbf{supports} multiple simultaneous clients;
+    		\item clients \textbf{operate} from local machines as a thin clients;
     		\item the system \textbf{incorporates} network communication between a local client \textbf{and} remote server over the Internet;
-    		\item the system and network communication is \textbf{encyrpted and secured};
+    		\item the system and network communication is \textbf{secured and encrypted};
     		\item the server \textbf{manages} all major game content (e.g., room topologies);
     		\item while \textbf{leveraging} a distributed data infrastructure (e.g., for trade);	
-    		\item as well as player log in \textbf{and} session recovery functionality.
+    		\item as well as player log in \textbf{and} session recovery functionality;
+    		\item server data \textbf{is managed} within appropriate databases;
+   		\item and databases \textbf{discriminate} between session and persistent data.
 	\end{enumerate}
     \item \textbf{Implement} a fnal prototype of the game that will:
     	\begin{enumerate}[label=\roman*.]
@@ -66,7 +69,7 @@ This assignment is formed of several parts:
 	\end{enumerate}
 \end{enumerate}
 
-\todo[inline]{\textbf{Please Note:} Falmouth University Games Academy have partnered with DitigalOcean to provide \textbf{EACH} of you, individually, with your own remote server on their cloud platform. You will receive login details after the distributed processing task. You \textbf{MUST} act in an ethical and professional manner when using this platform as well as act with due care and courtesy should any issues arise. If you encounter technical difficulties, please contact \texttt{games.techs@falmouth.ac.uk} in the first instance.}
+\todo[inline]{\textbf{Please Note:} Falmouth University Games Academy have partnered with DitigalOcean to provide \textbf{EACH} of you with your own remote server on their cloud platform. You will receive login details after completing the first coursework task. You \textbf{MUST} act in an ethical and professional manner when using this platform. If you encounter technical difficulties, please contact \texttt{games.techs@falmouth.ac.uk} in the first instance.}
 
 \subsection*{Assignment Setup}
 
@@ -75,9 +78,7 @@ This assignment is a \textbf{programming task}. Fork the GitHub repositories at:
 \url{https://github.com/Falmouth-Games-Academy/comp260-client} \\
 \url{https://github.com/Falmouth-Games-Academy/comp260-server}
 
-Ensure that you maintain the \texttt{readme.md} file.
-
-Modify the \texttt{.gitignore} to the defaults for the programming languages and integrated development environments you will be using, as appropriate.
+Ensure that you maintain the \texttt{readme.md} file. Modify the \texttt{.gitignore} to the defaults for the programming languages and integrated development environments you will be using, as appropriate.
 
 \subsection*{Part A}
 
@@ -125,9 +126,13 @@ A common pitfall is poor planning or time management. Often, students underestim
 
 It is very easy for the deadline for this assignment to sneak up on students. Although a MUD looks quite simplistic in comparison to the games you have been making using game engines, it requires a considerable effort to get an application operating robustly over a computer network. Be wary! Start early, and dive into research on these topics. 
 
-Do not underestimate matters of security. You \textbf{MUST} consider the security of your solution and incorproate appropriate safeguards in order to ontain a passing grade on the distributed infrastructure criterion. Start the research journal early, and incorporate both your own findings as well as the findings of your peers into your work. Act as a research community and develop a discourse that raises awareness of key issues.
+Do not underestimate matters of security. You \textbf{MUST} consider the security of your solution and incorporate appropriate safeguards in order to ontain a passing grade on the distributed infrastructure criterion. Start the research journal early, and incorporate both your own findings as well as the findings of your peers into your work. Act as a research community and develop a discourse that raises awareness of key issues.
 
-On a related note, you \textbf{MUST} also incorporate a database into your solution. This is an absolute requirement. If you didn't master the material on \texttt{SQLite} and \texttt{mySQL} databases that were introduced to you in the first year, then you must revise these topics in your free time. They will not be covered again. A great resource to do so is W3Schools:
+On a related note, you MUST also incorporate a database into your solution.
+This is an absolute requirement. If you didn't master the material on SQLite
+and mySQL databases that were introduced to you in the first year, then you
+should revisit these topics. A great resource to do so is 
+W3Schools:
 
 \url{https://www.w3schools.com/sql/default.asp}
 
@@ -135,7 +140,7 @@ Likewise, the material on \texttt{UNIX}-based servers and commands will not be f
 
 \url{http://mally.stanford.edu/~sr/computing/basic-unix.html}
 
-The peer-review component of this work does sometimes raise alarm. However, the only way to learn how to review code is by reviewing code. Your tutor will guide you through the process and provide advice. With practice, it will become clear what is satisfactory by discussing the quality of work with your peers and your tutor during the peer review sessions. 
+Consider carefully how the MUD service should cope with session and persistent data. Persistent data will likely be player-centric, like username, password, experience, room, inventory, and so on. Session data is likely to be things like current chat log. Things that developers would expect to be discarded when the player finishes playing.
 
 \section*{FAQ}
 
