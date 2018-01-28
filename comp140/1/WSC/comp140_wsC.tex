@@ -15,11 +15,16 @@
 
 \maketitle
 
-
-
 \section*{Introduction}
+This worksheet is made up of two parts:
 
-In this worksheet, you will use an Arduino to create a game controller for the retro arcade classic, Pong. The source for the game exists already. You are tasked with modifying the code to include bidirectional communication with the Arduino. The suggested design of the final controller is: two potentiometers to control the paddles and some combination of LEDs that flash when someone scores. Feel free to add some creative flair to the suggested design or modify it completely. The only requirement is that there must be two-way communication between the Arduino and the game. The wiring diagram below shows a potential controller setup for this worksheet. You are encouraged to create the controller one step at a time following the steps below. \textbf{DO NOT} wire everything up in one go and then expect it to work first time. 
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Develop}, a version of pong which uses a custom controller
+	\item \textbf{Revise} the design of your game and controller 
+\end{enumerate}
+
+\section*{Part A}
+In this part, you will use an Arduino to create a game controller for the retro arcade classic, Pong. The source for the game exists already. You are tasked with modifying the code to include bidirectional communication with the Arduino. The suggested design of the final controller is: two potentiometers to control the paddles and some combination of LEDs that flash when someone scores. Feel free to add some creative flair to the suggested design or modify it completely. The only requirement is that there must be two-way communication between the Arduino and the game. The wiring diagram below shows a potential controller setup for this worksheet. You are encouraged to create the controller one step at a time following the steps below. \textbf{DO NOT} wire everything up in one go and then expect it to work first time. 
 
 \begin{figure}[!h]
 	\begin{center}
@@ -45,14 +50,19 @@ Once you have tested that the LEDs work as is expected, modify the Pong code so 
     Example setup
 }
 
-
-\section*{Submission instructions}
-
 Begin by \textbf{forking} the GitHub repository at the following URL:
 
 \url{https://github.com/Falmouth-Games-Academy/comp140-worksheetc}
 
-You should complete a pull request before the hand-in on Monday 26th of February by 5pm on Week 5. Feedback will be given in the pull request and 3 weeks after the final hand-in
+You should complete a pull request before the hand-in on Monday 26th of February by 5pm. Feedback will be given in the pull request and 3 weeks after the final hand-in
+
+\section*{Part B}
+
+You should make all edits of your design to the original coursework repository at the following URL:
+
+\url{https://github.com/Falmouth-Games-Academy/comp140-gam160-game} 
+
+To complete Part B, revise the design of your game \& controller Then, upload a \texttt{.zip} file of to LearningSpace before the hand-in on Monday 26th of February by 5pm.
 
 \section*{Marking criteria}
 
@@ -63,6 +73,7 @@ To demonstrate \textbf{basic competency}, complete the following:
 	\item Connect one potentiometer to the breadboard. Hook the potentiometer up to the Arduino
 	\item Send the value read from the potentiometer to the Serial.
 	\item Modify the Pong code to read the value from serial and update player one's paddle accordingly.
+	\item Some evidence of emerging innovation and/or creativity in the design of the controller and game.
 \end{itemize} 
 
 To demonstrate \textbf{basic proficiency}, complete the following:
@@ -70,6 +81,7 @@ To demonstrate \textbf{basic proficiency}, complete the following:
 	\item Achieve \textbf{basic competency}.
 	\item Mirror the potentiometer setup for player two.
 	\item Modify the Pong code to read the value from serial and update player one and player two's paddle accordingly.
+	\item Little evidence of emerging innovation and/or creativity in the design of the controller and game.
 \end{itemize}
 
 To demonstrate \textbf{novice competency}, complete the following:
@@ -77,6 +89,7 @@ To demonstrate \textbf{novice competency}, complete the following:
 	\item Achieve \textbf{basic proficiency}.
 	\item Create the circuits for two LEDs.
 	\item Make the LEDs flash using the serial monitor built into the Arduino IDE.
+	\item Much evidence of emerging innovation and/or creativity in the design of the controller and game.
 \end{itemize}
 
 To demonstrate \textbf{novice proficiency}, complete the following:
@@ -84,12 +97,14 @@ To demonstrate \textbf{novice proficiency}, complete the following:
 	\item Achieve \textbf{novice competency}
 	\item Modify the Pong code so that it can trigger the LEDs to flash.
 	\item add some creative flair to the visual feedback
+	\item Considerable evidence of mastery of innovative and creative practice in the design of the controller and game.
 \end{itemize}
 
 To demonstrate \textbf{professional competency}, complete the following:
 \begin{itemize}
 	\item Achieve \textbf{novice proficiency}
 	\item Enhance the visual feedback so that it can communicate a best of three scenario.
+	\item Significant evidence of mastery of innovative and creative practice  in the design of the controller and game.
 \end{itemize}
 
 
