@@ -37,7 +37,68 @@
 
 \maketitle
 
-In this worksheet, you will use the SDL2 library (\url{https://www.libsdl.org/index.php}) to write a program to generate and display the \emph{Mandelbrot set} fractal; see Figure~\ref{fig:mandelbrot}.
+In this worksheet, you will carry out \textbf{Three Tasks}
+
+This assignment is formed of several parts:
+
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Write}, a proposal for a game that uses an alternative controller which contains:
+	\begin{enumerate}[label=\roman*.]
+		\item \textbf{describe} the game
+		\item \textbf{describe} the core game mechanics
+	\end{enumerate}
+	\item \textbf{Write} a proposal for an alternative controller which contains: 
+	\begin{enumerate}[label=\roman*.]
+		\item \textbf{research} into existing alt-Controllers
+		\item \textbf{description} of the physical controller
+		\item \textbf{design} of physical controller
+	\end{enumerate}
+	\item {Write} a program to generate and display the \emph{Mandelbrot set} fractal
+\end{enumerate}
+
+
+	\subsection*{Part A}
+
+Part A consists of a \textbf{single formative submission}. This work will be assessed on a \textbf{threshold} basis. 
+
+The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Choice of game is feasible;
+	\item Design is distinctive and has creative merit.
+\end{enumerate}
+
+To complete part A, fork the GitHub repository at:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp140-gam160-game}
+
+Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
+
+Write your proposal in the \texttt{readme.md} document. This should use the \textbf{markdown} syntax, for additional guidance, please read the following  
+
+\indent \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
+
+Please make a pull request before \textbf{Friday 9th of February at 5pm}, you will receive immediate feedback from your tutor. 
+
+\subsection*{Part B}
+
+Part B is formed of \textbf{single formative submissions}. This will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Research activities are exhaustive and well referenced
+	\item Description of the controller 
+	\item Design is distinctive and has creative merit.
+\end{enumerate}
+
+To complete Part B, write your proposal in the \texttt{readme.md} document using markdown syntax.
+
+Please make a pull request before \textbf{Friday 16th of February at 5pm}, you will receive immediate feedback from your tutor. 
+
+\subsection*{Part C}
+
+You will use the SDL2 library (\url{https://www.libsdl.org/index.php}) to write a program to generate and display the \emph{Mandelbrot set} fractal; see Figure~\ref{fig:mandelbrot}.
 This fractal colours each pixel of the image according to an iterated mathematical formula, as described below.
 The GitHub repository contains a project named \texttt{Mandelbrot} for you to build upon.
 This contains code to create and display a blank image; you will implement the calculations to generate the Mandelbrot set fractal.
@@ -83,23 +144,13 @@ If such a value of $i$ is not found after a large number of iterations (for exam
 for which $(x_i)^2 + (y_i)^2 \geq 4$ and selecting the appropriate pixel colour.
 Implement the algorithm in \texttt{Mandelbrot.cpp} so that the program generates the Mandelbrot set fractal (Figure~\ref{fig:mandelbrot}) when it is run.
 
-\section{Stretch goal} \label{stretch-c}
-
-Mathematicians have discovered many other fractals besides the Mandelbrot set.
-
-\textbf{Research} a different type of fractal, using online resources and/or academic literature.
-Briefly summarise your findings (with URLs and/or citations) in your \texttt{readme.md} file.
-
-\textbf{Implement} a generator for the fractal you have researched.
-Allow the user to choose (by command line entry) which fractal they want to generate when the program starts up: the Mandelbrot set or the new fractal.
-You may wish to restructure the skeleton program to accommodate the new fractal generation algorithm.
 \section*{Submission instructions}
 
 Begin by \textbf{forking} the GitHub repository at the following URL:
 
 \url{https://github.com/Falmouth-Games-Academy/comp140-worksheetB}
 
-You should complete a pull request before the hand-in on Friday by 5pm on Week 3. Feedback will be given in the pull request and in class.
+You should complete a pull request before the hand-in on \textbf{Friday 16th of February at 5pm}, you will receive immediate feedback from your tutor. 
 	
 \section*{Marking criteria}
 	
@@ -111,6 +162,7 @@ You should complete a pull request before the hand-in on Friday by 5pm on Week 3
 		As with other worksheets, you may resubmit after these deadlines in order to collect extra correctness or quality marks.
 		This is awarded as long as you submit \emph{something} for each part by the deadline,
 		even if your submission has bugs or other issues.
+		\item Some evidence of emerging innovation and/or creativity in the design of the controller and game.
 	\end{itemize} 
 	
 	To demonstrate \textbf{basic proficiency}, complete the following:
@@ -120,6 +172,7 @@ You should complete a pull request before the hand-in on Friday by 5pm on Week 3
 		affect the overall functioning of your programs
 		\item Appropriate use of GitHub, with descriptive commit messages 
 		\item Comments are used where appropriate, and are well written.
+		\item Little evidence of emerging innovation and/or creativity in the design of the controller and game.
 	\end{itemize}
 	
 	To demonstrate \textbf{novice competency}, complete the following:
@@ -128,18 +181,21 @@ You should complete a pull request before the hand-in on Friday by 5pm on Week 3
 		\item \textbf{Complete} Algorithm \ref{core-c-last}. \textbf{Note:} You will not be penalised for trivial errors which do not
 		affect the overall functioning of your programs
 		\item Your code is well formatted. Variable and function names are clear and descriptive.
+		\item Much evidence of emerging innovation and/or creativity in the design of the controller and game.
 	\end{itemize}
 	
 	To demonstrate \textbf{novice proficiency}, complete the following:
 	\begin{itemize}
 		\item Achieve \textbf{novice competency}
 		\item \textbf{Research} a different fractal
+		\item Considerable evidence of mastery of innovative and creative practice in the design of the controller and game.
 	\end{itemize}
 	
 	To demonstrate \textbf{professional competency}, complete the following:
 	\begin{itemize}
 		\item Achieve \textbf{novice proficiency}
 		\item \textbf{Implement} a new fractal and allow the user to choose what fractal to generate
+		\item Significant evidence of mastery of innovative and creative practice  in the design of the controller and game.
 	\end{itemize}
 	
 	
