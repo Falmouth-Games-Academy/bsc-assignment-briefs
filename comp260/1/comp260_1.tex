@@ -49,14 +49,16 @@ This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
     \item \textbf{Design} a distributed processing architecture in UML for a MUD that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{support} multiple clients on a single computer;
-    		\item \textbf{enable} players to use a client to navigate \textbf{multiple} locations within a virtual dungeon;
+    		\item \textbf{support} multiple client instances on a single computer;
+    		\item \textbf{enable} players to navigate \textbf{multiple} locations in a virtual dungeon;
     		\item \textbf{allow} players to be aware of other players in the same location;
-    		\item and \textbf{permit} players to send messages to each other when they are in the same room.
+    		\item and \textbf{permit} players in the same room to communicate.
 	\end{enumerate}
     \item \textbf{Implement} a MUD prototype that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{incorporate} distributed processessing.
+    		\item \textbf{support} multiple clients using socket-based networking;
+    		\item \textbf{incorporate} distributed processing using threads;
+     		\item and \textbf{refactor} from a peer-to-peer to a client-server architecture.
 	\end{enumerate}
     \item \textbf{Implement} a more refined design \textbf{and} MUD prototype that will:
     	\begin{enumerate}[label=\roman*.]
