@@ -29,7 +29,7 @@
 \tikzstyle{decision} = [flowchartnode, diamond, aspect=2, text width=2cm]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-\title{COMP140 Worksheet B: Mandelbrot set}
+\title{COMP140 Worksheet B: Fractals}
 \author{Brian McDonald \& Ed Powley}
 
 
@@ -53,11 +53,11 @@ This assignment is formed of several parts:
 		\item \textbf{description} of the physical controller
 		\item \textbf{design} of physical controller
 	\end{enumerate}
-	\item {Write} a program to generate and display the \emph{Mandelbrot set} fractal
+	\item {Write} a program to generate and display a fractal
 \end{enumerate}
 
 
-	\subsection*{Part A}
+\subsection*{Part A}
 
 Part A consists of a \textbf{single formative submission}. This work will be assessed on a \textbf{threshold} basis. 
 
@@ -71,7 +71,7 @@ The following criteria are used to determine a pass or fail:
 
 To complete part A, fork the GitHub repository at:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp140-gam160-game}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp140-worksheetB}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
 
@@ -98,16 +98,16 @@ Please make a pull request before \textbf{Friday 16th of February at 5pm}, you w
 
 \subsection*{Part C}
 
-You will use the SDL2 library (\url{https://www.libsdl.org/index.php}) to write a program to generate and display the \emph{Mandelbrot set} fractal; see Figure~\ref{fig:mandelbrot}.
+You will use the SDL2 library (\url{https://www.libsdl.org/index.php}) to write a program to generate and display a fractal; see Figure~\ref{fig:mandelbrot}.
 This fractal colours each pixel of the image according to an iterated mathematical formula, as described below.
-The GitHub repository contains a project named \texttt{Mandelbrot} for you to build upon.
-This contains code to create and display a blank image; you will implement the calculations to generate the Mandelbrot set fractal.
+The GitHub repository contains a project named \texttt{Fractal} for you to build upon.
+This contains code to create and display a random image; you will implement the calculations to generate the fractal.
 
 \begin{figure}[!h]
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{mandelbrot.png}
 	\end{center}
-	\caption{The Mandelbrot set fractal.}
+	\caption{An example of a fractal}
 	\label{fig:mandelbrot}
 \end{figure}
 
@@ -115,7 +115,7 @@ This contains code to create and display a blank image; you will implement the c
 
 To generate an interesting fractal, the on-screen $x$ and $y$ coordinates must first be rescaled.
 In the skeleton project the pixel coordinates range from $0$ to $800$,
-whereas the Mandelbrot set fractal is most interesting in the region $-2 \leq x \leq 1$ and $-1.5 \leq y \leq 1.5$.
+whereas the fractal is most interesting in the region $-2 \leq x \leq 1$ and $-1.5 \leq y \leq 1.5$.
 
 Let $p_x$ be the $x$ coordinate of the pixel. This can be remapped into the range $x_{\text{min}}$ to $x_{\text{max}}$ using the following formula:
 \begin{equation*}
@@ -123,11 +123,11 @@ x_0 = \frac{p_x}{\text{image.width}} \times \left( x_{\text{max}} - x_{\text{min
 \end{equation*}
 The $y$ coordinate can be remapped using a similar formula.
 
-\textbf{Implement} the above calculations for the $x$ and $y$ coordinates, at the indicated parts of \texttt{Mandelbrot.cpp}.
+\textbf{Implement} the above calculations for the $x$ and $y$ coordinates, at the indicated parts of \texttt{Fractal.cpp}.
 
 \section{} \label{core-c-last}
 
-The Mandelbrot set is based on the following sequence of numbers. Let $x_0$ and $y_0$ be the coordinates of a point in the image.
+The fractal set is based on the following sequence of numbers. Let $x_0$ and $y_0$ be the coordinates of a point in the image.
 Then the sequence $x_1, y_1, x_2, y_2, x_3, y_3, \dots$ is defined\footnote{%
 	If you are familiar with complex numbers, you may notice that this is equivalent to $z_{j+1} = z_j^2 + z_0$, where $z_j = x_j + y_j i$.
 } recursively for $i = 0, 1, 2, 3, \dots$ by:
@@ -142,13 +142,10 @@ If such a value of $i$ is not found after a large number of iterations (for exam
 
 \textbf{Implement} an algorithm which performs the above computation, determining the smallest value of $i$
 for which $(x_i)^2 + (y_i)^2 \geq 4$ and selecting the appropriate pixel colour.
-Implement the algorithm in \texttt{Mandelbrot.cpp} so that the program generates the Mandelbrot set fractal (Figure~\ref{fig:mandelbrot}) when it is run.
+
+Implement the algorithm in \texttt{fractal.cpp} so that the program generates the fractal (Figure~\ref{fig:mandelbrot}) when it is run.
 
 \section*{Submission instructions}
-
-Begin by \textbf{forking} the GitHub repository at the following URL:
-
-\url{https://github.com/Falmouth-Games-Academy/comp140-worksheetB}
 
 You should complete a pull request before the hand-in on \textbf{Friday 16th of February at 5pm}, you will receive immediate feedback from your tutor. 
 	
