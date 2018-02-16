@@ -8,8 +8,9 @@
 \usepackage{todonotes}
 
 \title{Distributed Processing Task}
-\author{Dr Michael Scott}
+\author{Gareth Lewis \& Dr Michael Scott}
 \module{COMP260}
+\version{2.0.1}
 
 \begin{document}
 
@@ -39,54 +40,57 @@
     Multi-threading is commonly used to improve performance in games.
 }
 
-In this assignment, you are required to implement  algorithms that process data in a \textit{distributed} manner, taking advantage of databases and concurrency.
+In this assignment, you are required to design and implement algorithms that process data in a \textit{distributed} manner.
 
-Games are resource intensive. Compounding this issue, players are sensitive to performance issues. It is important, therefore, to leverage the available resources to ensure adequate performance. Distributed processing is one way to achieve this. It is, therefore, important that you apply the principles of concurrency, coordination, and agreement to create efficient games. 
+Games are resource intensive. Compounding this issue, players are sensitive to performance issues. It is critical, then, to leverage available resources to ensure adequate performance. Distributed processing is one solution. Apply the principles of coordination and agreement, and you will be successful. 
 
 This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Select}, as a \textbf{group}, \textbf{one} of the contracts provided by your tutor and:
+    \item \textbf{Design} a distributed processing architecture in UML for a MUD that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{state} which contract you will work on;
-    		\item \textbf{gather} the requirements for the contract;
+    		\item \textbf{support} multiple client instances on a single computer;
+    		\item \textbf{enable} players to navigate \textbf{multiple} locations in a virtual dungeon;
+    		\item \textbf{allow} players to be aware of other players in the same location;
+    		\item and \textbf{permit} players in the same room to communicate.
 	\end{enumerate}
-    \item \textbf{Implement}, collaboratively, a draft program, in a language of your choice, that will:
+    \item \textbf{Implement} a MUD prototype that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{address} the requirements implied by the contract;
+    		\item \textbf{support} multiple clients using socket-based networking;
+    		\item \textbf{incorporate} distributed processing using threads;
+     		\item and be \textbf{realised} as a client-server architecture.
 	\end{enumerate}
-    \item \textbf{Write}, collaboratively, a final computer program that will:
+    \item \textbf{Implement} a more refined design \textbf{and} MUD prototype that will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{revise} any issues raised by your tutor and/or your peers.
 	\end{enumerate}
-    \item \textbf{Present}, as an \textbf{individual}, a practical demo of the computer program to your tutor that will:
+    \item \textbf{Present} a practical demonstation of the MUD prototype that will:
     	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{show} your academic integrity;
-    		\item as well as \textbf{demonstrate} your \textbf{individual} programming knowledge \textbf{and} communication skills.
+    		\item \textbf{show} academic integrity \textbf{and} technical communication skills.
 	\end{enumerate}
 \end{enumerate}
 
 \subsection*{Assignment Setup}
 
-This assignment is a \textbf{collaborative programming task}. Fork the GitHub repository at:
+This assignment is a \textbf{programming task}. Fork the GitHub repository at:
 
 \indent \url{https://github.com/Falmouth-Games-Academy/comp260-server}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Java}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+Modify the \texttt{.gitignore} to the defaults for \textbf{C\#} and \textbf{Visual Studio}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
 \subsection*{Part A}
 
-Part A consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. 
+Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. This deliverable is not assessed and is intended to be advisory at this stage.
 
-To complete Part A, write about your contract in the \texttt{readme.md} document.  Show this to your tutor in-class.  If acceptable, this will be signed-off. 
+To complete Part A, incorporate the design, using UML, into the \texttt{readme.md} document.  Show this to your tutor in-class.  If acceptable, it will be signed-off. 
 
 You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 \subsection*{Part B}
 
-Part B is a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+Part B is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
 
 \begin{enumerate}[label=(\alph*)]
 	\item Submission is timely;
@@ -94,15 +98,15 @@ Part B is a \textbf{single formative submission}. This work is \textbf{collabora
 	\item A broadly appropriate review of a peer's work is submitted.
 \end{enumerate}
 
-To complete Part B, prepare draft versions of the computer program. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled peer-review session. Then, attend the scheduled peer-review session.
+To complete Part B, prepare a draft version of the MUD. Please ensure that the source code and related assets are pushed to GitHub and are made available prior to the scheduled peer-review workshop. Then, attend the scheduled session.
 
 You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
 
 \subsection*{Part C}
 
-Part C is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
 
-To complete Part C, revise the computer program based on the feedback you have received. Then, upload it to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
+To complete Part C, revise the MUD based on the feedback you have received. Then, upload it to the LearningSpace. Ensure that you include the \texttt{readme.md} document containing the design that you developed in Part A. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
 
 You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
 
@@ -122,13 +126,9 @@ You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 \section*{Additional Guidance}
 
-It is critically important that you do not neglect your individual roles in the development process. Programming in pairs means that you work together on the same computer---switching between driver and navigator. It is a great opportunity to develop your technical communication skills and overcome common misconceptions about programming. It should not, however, be treated as a 'free ride'---you will get to review each others' progress. 
+A common pitfall is poor planning or time management. Many underestimate the work involved in designing and implementing multiplayer games. It simply cannot be crammed into a last minute deluge just before a deadline. There is a critical and time-consuming phase of testing! It is, therefore, very important that you begin work early and sustain a consistent pace: little and often.
 
-A common pitfall is poor planning or time management. Often, students underestimate how much work is involved in first learning programming concepts and then actually applying them. Programming is quite unlike other subjects in that it cannot be crammed into a last minute deluge just before a deadline. It is, therefore, very important that you begin work early and sustain a consistent pace: little and often.
-
-The first deadline is quite close to the start of the course and not much material will have been covered by this point. Please rest assured. This first formative submission is supposed to be a simple analysis of requirements. We expect there to be errors. However, it is very important to make a start on this project so you recieve early feedback to give you some direction and to encourage you to practice your programming skills across the entire duration of the course. Ideally, you should be programming every day!
-
-The peer-review component of this work does sometimes raise alarm. However, the only way to learn how to review code is by reviewing code. Your tutor will guide you through the process and provide advice. With practice, it will become clear what is satisfactory by discussing the quality of work with your peers and your tutor during the peer review sessions. 
+The first deadline is  close to the start of the module and not much material will have been covered by this point. Please rest assured. This first formative submission is supposed to be a simple analysis of design. It is advisory---and a way to kick start the project such that you recieve early feedback to give you some direction and to encourage you to practice your programming skills.
 
 \section*{FAQ}
 
@@ -151,103 +151,89 @@ The peer-review component of this work does sometimes raise alarm. However, the 
     \item Additional resources have been migrated to the Talis Aspire system, which is available at: \url{http://resourcelists.falmouth.ac.uk/}.
 \end{itemize}
 
-\rubrichead{Criteria marked with a $\ddagger$ are shared by the group. Criteria marked with a $\dagger$ are weighted by individual contribution to a shared deliverable and viva performance. All other criteria are individual.}
+\rubricyeartwo
+%\rubrichead{Criteria marked with a $\ddagger$ are shared by the group. Criteria marked with a $\dagger$ are weighted by individual contribution to a shared deliverable and viva performance. All other criteria are individual.}
 \begin{markingrubric}
 %
-    \firstcriterion{Functional Coherence}{5\% $\ddagger$}
-        \grade\fail 	No algorithm has been implemented successfully.
-            \par 		The source code does not compile or there are serious logical errors.
-        \grade 		At least one algorithm has been  implemented successfully.
-            \par 		There are many obvious logical errors, more than one of which is significant.   
-        \grade 		At least two algorithms have been  implemented successfully.
-            \par 		There are several obvious logical errors, at least one of which is significant. 
-        \grade 		At least three algorithms have been  implemented successfully.
-            \par 		There are some obvious logical errors, which are not significant. 
-            \par		The brief has been satisfied.
-        \grade 		At least three algorithms have been  implemented successfully.
-            \par 		There are few obvious logical errors, which are cosmetic and/or superficial.
-            \par		The brief has been satisfied.     
-        \grade 		At least three algorithms have been  implemented successfully.
-            \par		There are no obvious logical errors.
-            \par		The brief has been satisfied.
-%
-    \criterion{Sophistication}{10\% $\ddagger$}
-        \grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
-            \par No attempt to structure the program (e.g. one monolithic function).
-        \grade Little insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is poor.
-        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is adequate.
-        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is appropriate.
-        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is effective. There is high cohesion and low coupling.
-        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is very effective. There is high cohesion and low coupling.
-%
-    \criterion{Maintainability}{15\% $\ddagger$}
-        \grade\fail There are no comments in the source code, or comments are misleading.
-            \par Most variable names are unclear or inappropriate.
-            \par Code formatting hinders readability.
-        \grade The source code is only sporadically commented, or comments are unclear.
-            \par Some identifier names are unclear or inappropriate.
-            \par Code formatting is inconsistent or does not aid readability.
-        \grade The source code is somewhat well commented.
-            \par Some identifier names are descriptive and appropriate.
-            \par An attempt has been made to adhere to thhe PEP-8 formatting style.
-             \par There is little obvious duplication of code or of literal values.           
-        \grade The source code is reasonably well commented.
-            \par Most identifier names are descriptive and appropriate.
-            \par Most code adheres to the PEP-8 formatting style.
-             \par There is almost no obvious duplication of code or of literal values.   
-        \grade The source code is reasonably well commented, with Python doc-strings.
-            \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to the PEP-8 formatting style.
-             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered'' in the source code. 
-        \grade The source code is very well commented, with Python doc-strings.
-            \par All identifier names are descriptive and appropriate.
-            \par All source code adheres to the PEP-8 formatting style.
-             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  
-%
-    \criterion{Distributed Systems Architecture}{25\% $\dagger$}
-        \grade\fail No use of distributed approaches.
-            \par Unable to articulate either database, segmentation, or concurrency design decisions.
-        \grade Poor performance and scalability gain.
-            \par Very little ability to articulate database, segmentation, and concurrency design decisions.
-        \grade Some performance and scalability gain.
-            \par Little ability to articulate database, segmentation, and concurrency design decisions.
-        \grade Much performance and scalability gain.
-            \par Some ability to articulate database, segmentation, and concurrency design decisions.
-        \grade Considerable performance and scalability gain.
-            \par Much ability to articulate database, segmentation, and concurrency design decisions.
-        \grade Significant performance and scalability gain.
-            \par Considerable ability to articulate database, segmentation, and concurrency design decisions.
-%
-    \criterion{Use of Version Control}{5\%}
-        \grade\fail GitHub has not been used.
-        \grade Source code has rarely been checked into GitHub.
-        \grade Source code  has been checked into GitHub at least once per week.
-            \par Commit messages are present.
-            \par There is evidence of engagement with peers (e.g.\ code review).
-        \grade Source code  has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
-        \grade Source code has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is evidence of meaningful engagement with peers (e.g.\ code review).
-        \grade Source code has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is evidence of effective engagement with peers (e.g.\ code review).
-%
-    \criterion{Basic Competency Threshold}{40\%}
+    \firstcriterion{Threshold}{40\%}
         \gradespan{1}{\fail At least one part is missing or is unsatisfactory.}
-        \gradespan{5}{Submission is timely.
+        \gradespan{5}{Parts A---D are complete and timely.
         	\par Enough work is available to hold a meaningful discussion.
+        	\par Provided a meaningful review of a peer's work.
 	\par Clear evidence of programming knowledge and communication skills.
-	\par Clear evidence of reflection on own performance and contribution.
-	\par Only constructive criticism of pair-programming partner is raised.
+	\par Apprioriate use of GitHub for version control.
 	\par No breaches of academic integrity.}
-	
+%
+    \criterion{Design}{20\%}
+        \grade\fail 	Little to no design work.
+            \par 		Design does not incorporate concurrency and/or a databasing.
+          \par 		Little to no UML.
+          
+        \grade 		Design has some merit.
+            \par 		Design sufficiently incorporates concurrency and databasing. 
+          \par 		Sufficient use of UML.
+          
+        \grade 		Design has modest merit.
+            \par 		Design adequetely incorporates concurrency and databasing.  
+          \par 		UML and other notation is leveraged adequetely.
+            \par 		Scale and performance are briefly mentioned.
+            
+        \grade 		Design has much merit.
+            \par 		Design appropriately incorporates concurrency and databasing.  
+          \par 		UML and other notation is leveraged somewhat appropriately.
+            \par 		Scale and performance are considered.
+            
+        \grade 		Design has considerable merit.
+            \par 		Design, with high appropriateness, incorporates concurrency and databasing.  
+          \par 		UML and other notation is leveraged appropriately.
+            \par 		Issues such as scale and performance, with reference to CAP theorem, are considered.
+            
+        \grade 		Design has significant merit.
+            \par 		Design, with high appropriateness, incorporates concurrency and databasing.  
+          \par 		UML and other notation is leveraged highly appropriately.
+            \par 		Issues such as scale and performance, with reference to CAP theorem, are carefully considered.
+
+%
+    \criterion{MUD Architecture}{20\%}
+        \grade\fail Little to no evidence of distributed processes.
+
+        \grade Some distributed processes.
+	\par  Player chat system and/or space navigation operable.
+	\par  Supports at least two client instances.
+        \grade Modest number of distributed processes.
+	\par  Player chat system and space navigation operable.
+	\par  Basic commands implemented.
+	\par  Supports serveral client instances.
+        \grade Many distributed processes.
+	\par  Player chat system and space navigation implemented well.
+	\par  Interesting commands implemented.
+	\par  Evidence to suggest scalability to support many client instances.
+        \grade Considerable number of distribued processes.
+	\par  Player chat system and space navigation implemented effectively.
+	\par  Sophisticated commands implemented.
+	\par  Evidence to suggest scalability to support a great many client instances.
+        \grade Significant number of distributed processes.
+	\par  Player chat system and space navigation implemented highly effectively.
+	\par  Highly sophisticated commands implemented.
+	\par  Evidence to suggest scalability to support hundreds of client instances.
+%
+    \criterion{Demo}{20\%}
+        \grade\fail No demo.
+            \par Little to no ability to articulate either networking or concurrency concepts.
+        \grade Demo somewhat sufficient to illustrate key distributed processing concepts.
+            \par Some ability to articulate either networking or concurrency concepts.
+        \grade Demo sufficient to illustrate key distributed processing concepts.
+            \par Modest ability to articulate either networking or concurrency concepts.
+            \par Some ability to articulate design decisions.
+        \grade Demo adequete to illustrate key distributed processing concepts.
+            \par Much ability to articulate either networking or concurrency concepts.
+            \par Modest ability to articulate design decisions.
+        \grade Demo appropriate to illustrate key distributed processing concepts.
+            \par Considerable ability to articulate either networking or concurrency concepts.
+            \par Much ability to articulate design decisions.
+        \grade Demo highly appropriate to illustrate key distributed processing concepts.
+            \par Significant ability to articulate either networking or concurrency concepts.
+            \par Considerable ability to articulate design decisions.
 \end{markingrubric}
 
 \end{document}

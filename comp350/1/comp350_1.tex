@@ -7,9 +7,9 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Portfolio of game engine components --- Graphics}
-\author{Dr Ed Powley}
-\module{COMP220}
+\title{Assignment 1 - Optimisation Task}
+\author{Brian McDonaldS}
+\module{COMP350}
 
 \begin{document}
 
@@ -20,65 +20,52 @@
 \section*{Introduction}
 
 \begin{marginquote}
-``Because of the nature of Moore's law, anything that an extremely clever graphics programmer can do at one point can be replicated by a merely competent programmer some number of years later.''
+``We should forget about small efficiencies, say about 97\% of the time: premature optimization is the root of all evil. ''
 
---- John Carmack
+--- Donald Knuth
 
     \marginquoterule
 
-``Currently computer graphics are used a great deal, but it can be excessive.''
+``There is a famous rule in performance optimization called the 90/10 rule: 90\% of a program's execution time is spent in only 10\% of its code. The standard inference from this rule is that programmers should find that 10\% of the code and optimize it, because that's the only code where improvements make a difference in the overall system performance. ''
 
---- Hayao Miyazaki
+--- Richard E. Pattis
 \end{marginquote}
+
 \marginpicture{flavour_pic}{
-    A demo of fluid simulation with NVIDIA's PhysX.
-    Recent advances in GPU technology have enabled a wide range of high-fidelity real-time rendering and simulation effects.
+	Unreal Engine CPU Profiler
 }
 
-In this assignment, you are required to \textbf{design} and \textbf{implement} a C++ program using SDL and OpenGL
-which demonstrates the type of 3D computer graphics techniques that appear in a modern game engine.
+In this assignment, you are required to \textbf{optimise} a project you have been working on. This project could be one of the following
+\begin{itemize}
+	\item COMP330 \& COMP340 (Group project)
+	\item COMP320 \& COMP360 (Dissertation Project)
+\end{itemize}
 
-Graphics technology is one of the most obvious areas in which innovation has driven gaming technology in recent years.
-Modern gaming PCs and consoles contain powerful graphics processing units (GPUs),
-and gamers expect modern games to push this hardware to its full potential.
-In this assignment you will practice the use of advanced graphical effects.
-Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques.
+You should also consider taking the same project and using it for Assignment 2 - Porting Task.
+
+Optimisation is the process of modifying a system to make it more efficient. This will often take the form of identifying via profiling and then making a change to improve performance and then re-profiling. 
 
 This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
-	\item \textbf{Write} a 2-page handout that will:
+	\item \textbf{Write} a document which contains the following (equivalent of one page of A4)
 		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{outline} the concept of your demo;
-			\item \textbf{explain} how your demo satisfies the requirements of the contract (provided as an appendix at the end of this document);
-			\item \textbf{describe} at least \textbf{two} graphical or simulation effects your demo will include;
+			\item \textbf{describe} the project;
+			\item \textbf{outline} the required tools;
 		\end{enumerate}
-	\item \textbf{Populate} a Trello board with the user stories for your demo.
-	\item \textbf{Implement}, over a series of \textbf{three} sprints, draft versions of your program that will:
-		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{address} the requirements in the contract;
-			\item \textbf{implement} at least \textbf{two} algorithms for graphical or simulation effects.
-		\end{enumerate}
-	\item \textbf{Implement} a final version of your program, which will:
-		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{revise} any issues raised by your tutor and/or your peers.
-		\end{enumerate}
-	\item \textbf{Present} a practical demo of the computer program to your tutor that will:
-		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{demonstrate} your academic integrity;
-			\item \textbf{demonstrate} your individual programming knowledge and communication skills.
-		\end{enumerate}
+	\item \textbf{Review} the work of your peers
+	\item \textbf{Carry out} and \textbf{document}, a series of optimisation steps
 \end{enumerate}
 
 \subsection*{Assignment Setup}
 
 This assignment is a \textbf{programming} task. Fork the GitHub repository at the following URL:
 
-\indent \url{https://github.com/Falmouth-Games-Academy/comp220-portfolio}
+\indent \url{https://github.com/Falmouth-Games-Academy/comp350-optimisation}
 
 Use the existing directory structure and, as required, extend this structure with sub-directories.
 Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Visual Studio}.
+Modify the \texttt{.gitignore} to the defaults for platform or engine of your project.
 Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
 \subsection*{Part A}
@@ -86,35 +73,30 @@ Please, also ensure that you add editor-specific files and folders to \texttt{.g
 Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
 
 \begin{itemize}
-	\item What is the title and high concept of the demo?
-	\item What is the intended aesthetic?
-	\item For each of two graphical or simulation effects:
-	\begin{itemize}
-		\item What is the effect?
-		\item How will the effect contribute to the aesthetic?
-	\end{itemize}
-	\item Is the scope appropriate for the product development time-frame?
+	\item What is the details of the project you are optimising?
+	\item What language/engine are you optimising?
+	\item What tools are you going to use?
 \end{itemize}
 
 To complete Part A, prepare the handout using any word processing tool.
-To help illustrate your intended aesthetic, your handout may include images and/or links to online videos.
-In addition, create a Trello board and populate it with your user stories.
 
-Show the handout to your \textbf{tutor} for immediate \textbf{informal feedback}.
+Ensure that the document and related assets are pushed to GitHub and a pull request is made prior to \textbf{5pm on Friday 9th of February}.
 
 \subsection*{Part B}
 
-Part B consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. Answer the following questions to pass:
+Part B consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. You will upload your coursework repository for peer review.
 
-\begin{itemize}
-	\item What are the user stories for your demo?
-	\item Which user stories are required for a minimum viable product, and which are stretch goals?
-	\item Is the scope appropriate for the product development time-frame?
-\end{itemize}
+You will be assessed on the following criteria 
 
-To complete Part B, populate a Trello board with your user stories.
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
 
-Show the Trello board to your \textbf{tutor} for immediate \textbf{informal feedback}.
+To complete Part B, prepare draft versions of the computer programs. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled peer-review session. Then, attend the scheduled peer-review session.
+
+You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
 
 \subsection*{Part C}
 
@@ -132,73 +114,27 @@ To complete Part C, prepare draft versions of the computer programs. Ensure that
 
 Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
 
-To complete Part D, revise the computer program based on the feedback you have received. Then, upload it to the LearningSpace. Please note, the LearningSpace will only accept a single \texttt{.zip} file.
-
-You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
-
-\subsection*{Part E}
-
-Part E is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
+To complete Part D, revise your program based on the feedback you have received. Then, upload a \texttt{.zip} file to LearningSpace containing the following:
 
 \begin{enumerate}[label=(\alph*)]
-	\item Enough work is available to hold a meaningful discussion;
-	\item Clear evidence of programming knowledge \textbf{and} communication skills;
-	\item No breaches of academic integrity.
+	\item The source code for your project;
+	\item Document which contains the following
+	\begin{itemize}
+		\item Description of the project
+		\item Details of the profiling process
+		\item Screenshots of each run of the profiler
+		\item Tables/figures of each run of the profiler
+	\end{itemize}
 \end{enumerate}
 
-To complete Part E, prepare a practical demonstration of the computer program. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session.
+Please note, the LearningSpace will only accept a single \texttt{.zip} file. You will receive \textbf{formal feedback} three weeks after the final submission deadline.
 
 \section*{Additional Guidance}
 
 As always, avoid underestimating the effort required to implement even simple software; always consider scope.
-From the proposal stage, you should consider very carefully what is feasible.
+From the proposal stage, you should consider very carefully what is feasible. The important aspect about this coursework is the profiling process, you should approach this like an experiment and document each step and iteration in the process.
 
-Your code will be assessed on \textbf{functional coherence}:
-how well the finished product corresponds to the user stories,
-and whether it has any obvious bugs.
-Correspondence to user stories runs both ways:
-implementing features that were not present in the design (``feature creep'')
-is just as bad as neglecting to implement features.
 
-Unlike your previous assignments,
-you will be assessed on the \textbf{performance} of your solution.
-Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
-but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
-It may be necessary to trade-off the complexity or fidelity of an effect
-in order to achieve acceptable performance.
-
-Your code will also be assessed on \textbf{sophistication}.
-To succeed on a project of this size and complexity,
-you will need to make use of appropriate algorithms, data structures, libraries, and object oriented programming concepts.
-Appropriateness to the task at hand is key:
-you will \textbf{not} receive credit for complexity  
-where something simpler would have sufficed.
-
-\textbf{Maintainability} is important in all programming projects,
-but doubly so when working in a team.
-Use \textbf{comments} liberally to improve code comprehension,
-and carefully choose the \textbf{names} for your files, classes, functions and variables.
-Use a well-established commenting convention
-for \textbf{high-level documentation}.
-The open-source tool Doxygen supports several such conventions.
-Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
-indentation, whitespace, placement of curly braces, etc.
-Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
-with values instead defined as constants together in a single place.
-Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
-e.g.\ by defining them in an external file read at startup.
-
-As with all assignments on this course, you are expected to display a level of
-\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
-arts institution.
-One approach to promoting creativity is
-\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
-Often the most interesting ideas are \textbf{subversive}: they deliberately go against
-convention or obvious solutions.
-
-You will \textbf{not} be judged on the quality of your art assets.
-It is fine to use meshes and textures found online,
-as long as they are available under an appropriate license and are properly attributed.
 
 \section*{FAQ}
 
@@ -218,64 +154,35 @@ as long as they are available under an appropriate license and are properly attr
 \section*{Additional Resources}
 
 \begin{itemize}
-    \item \url{http://www.opengl-tutorial.org}
-    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
-    \item \url{https://google.github.io/styleguide/cppguide.html}
+    \item \url{http://gameprogrammingpatterns.com/optimization-patterns.html}
+    \item \url{https://docs.unrealengine.com/latest/INT/Engine/Performance/}
+    \item \url{https://docs.unity3d.com/Manual/Profiler.html}
+    \item \url{https://msdn.microsoft.com/en-us/library/ms182372.aspx}
 \end{itemize}
 
 \rubricyeartwo
 \begin{markingrubric}
 	\firstcriterion{Basic Competency Threshold}{40\%}
-		\grade\fail At least one part, or at least one sprint review, is missing or is unsatisfactory.
+		\grade\fail At least one part, is missing or is unsatisfactory.
 		\gradespan{5}{Submission is timely.
+			\par Considerable engagement with version control, commesurate with at least three or more commits per week.
 			\par Enough work is available to hold a meaningful discussion.
 			\par Clear evidence of programming knowledge and communication skills.
-			\par No breaches of academic integrity.
-			\par The student participates in all sprint reviews}
+			\par Adequete participation in-class peer-review activities at least at the level of basic competency.
+			\par No breaches of academic integrity.}
 %
-    \criterion{Appropriateness of User Stories and Sprint Plans}{5\%}
-        \grade \fail Few user stories are distinguishable and easily measured.
-            \par Sprint plans provide little support for the project.
-        \grade Some user stories are distinguishable and easily measured.
-            \par Sprint plans provide some support for the project.
-        \grade Most user stories are distinguishable and easily measured.
-            \par User stories correspond to the product design.
-            \par Sprint plans provide much support for the project.
-        \grade Nearly all user stories are distinguishable and easily measured.
-            \par User stories clearly correspond to the product design.
-            \par Sprint plans provide considerable support for the project.
-        \grade All user stories are distinguishable and easily measured.
-            \par User stories clearly and comprehensively correspond to the product design.
-            \par Sprint plans provide significant support for the project.
-        \grade All user stories are distinguishable and easily measured.
-            \par User stories clearly and comprehensively correspond to the product design.
-            \par Sprint plans provide extensive support for the project.
-%
-    \criterion{Functional Coherence}{5\%}
-        \grade \fail Few user stories have been implemented  and/or the code fails to compile or run.
-            \par Many obvious and serious bugs are detected.
-            \par The executable's performance on lab PCs is unacceptable.
-        \grade Some user stories have been implemented.
-            \par Some obvious bugs are detected.
-            \par The executable has many performance issues on lab PCs.
-        \grade Many user stories have been implemented.
-            \par There is some evidence of feature creep.
-            \par Few obvious bugs  are detected.
-            \par The executable has some performance issues on lab PCs.
-        \grade Almost all user stories have been implemented.
-            \par There is little evidence of feature creep.
-            \par Some minor bugs  are detected.
-            \par The executable has very few performance issues on lab PCs.
-        \grade All user stories have been implemented.
-            \par There is almost no evidence of feature creep.
-            \par Some bugs, purely cosmetic and/or superficial in nature, are detected.
-            \par The executable has almost no performance issues on lab PCs.
-            \par Some consideration for graceful degradation on less powerful hardware is evident.
-        \grade All user stories have been implemented.
-            \par There is no evidence of feature creep.
-            \par Few to no bugs are detected.
-            \par The executable has no performance issues on lab PCs.
-            \par Much consideration for graceful degradation on less powerful hardware is evident.
+    \criterion{Appropriateness of Project Description}{10\%}
+        \grade \fail The description lack detail or is unclear
+        \grade The description is poor and requires more detail
+            \par There is no list of tools to be used during the optimisation process
+        \grade The description is of a good level of detail but it is over-scoped 
+            \par Some tools were listed but no detail was given on these
+        \grade The description is of a good level of detail and is of appropriate scope
+            \par Some tools were listed and there is a brief description of the tool
+        \grade The description is of a very good level of detail and is of appropriate scope
+            \par Some tools were listed and there is a description of good level of detail
+        \grade The description is of an excellent level of detail and is of appropriate scope
+            \par  Some tools were listed and there is a description of an excellent level detail
 %
     \criterion{Sophistication}{10\%}
         \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
@@ -316,101 +223,30 @@ as long as they are available under an appropriate license and are properly attr
             \par All code adheres to a sensible formatting style.
             \par There is no duplication of code or of literal values. Nearly all literal values are, where appropriate, easily ``tinkered'' outside of the source.  
 %
-    \criterion{Creative Flair}{10\%}
-        \grade\fail Little or no creativity.
-            \par The work is a clone of an existing work with mere cosmetic alterations.
-            \par The work delivers little or no fun and/or engagement.
-        \grade Some creativity.
-            \par The work is derivative of existing works, with only minor alterations.
-            \par The work delivers some fun and/or engagement.
-        \grade Much creativity.
-            \par The work is derivative of existing works, demonstrating little divergent and/or subversive thinking.
-            \par The work delivers much fun and/or engagement.
-        \grade Considerable creativity.
-            \par The work is somewhat novel, demonstrating some divergent and/or subversive thinking.
-            \par The work delivers considerable fun and/or engagement.
-        \grade Significant creativity.
-            \par The work is novel, demonstrating significant divergent and/or subversive thinking.
-            \par The work delivers significant fun and/or engagement.
-        \grade Extensive creativity.
-            \par The work is highly original, with strong evidence of divergent and/or subversive thinking.
-            \par The work delivers extensive fun and/or engagement.
+	\criterion{Peer Review}{10\%}
+		\grade\fail No peer-review submitted.
+		\grade There is evidence of some engagement with peers (e.g.\ code review).
+		\grade There is evidence of some engagement with peers (e.g.\ code review).
+		\par Comments to peers are somewhat constructive and provide some insight.
+		\grade There is evidence of much engagement with peers (e.g.\ code review).
+		\par Comments to peers are reasonably constructive and provide much insight.
+		\grade There is evidence of much engagement with peers (e.g.\ code review).
+		\par Comments to peers are reasonably constructive and provide considerable insight.
+		\grade There is evidence of considerable engagement with peers (e.g.\ code review).
+		\par Comments to peers are highly constructive and provide significant insight.
 %
-    \criterion{Portability and Navigability}{5\%}
-        \grade\fail Product will not execute at all on another machine, for reasons related to code portability, even if they are trivially resolvable.
-            \par The directory structure inside the submitted zip file is unclear.
-            \par Provided template has not been followed well, if at all.
-        \grade Several portability issues are present.
-            \par The directory structure inside the submitted zip file is somewhat confusing.
-            \par The provided template has mostly been followed.
-        \grade Some portability issues are present.
-            \par The directory structure inside the submitted zip file is adequate.
-            \par The provided template has been followed.
-        \grade Few portability issues are present.
-            \par The directory structure inside the submitted zip file is mostly sensible.
-            \par The provided template has been followed.
-        \grade Almost no portability issues are present.
-            \par The directory structure inside the submitted zip file is sensible.
-            \par The provided template has been followed.
-        \grade No portability issues are present.
-            \par Appropriate cross-platform compatiability on Linux, Windows, and MacOS.
-            \par The directory structure inside the submitted zip file is sensible.
-            \par The provided template has been followed.
-%
-    \criterion{Use of Version Control}{5\%}
-        \grade \fail Material has been checked into GitHub less frequently than once per sprint.
-        \grade Code has been checked into GitHub at least once per sprint.
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par There is some evidence of engagement with peers (e.g.\ code review).
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par There is much evidence of engagement with peers (e.g.\ code review).
-        \grade Code has been checked into GitHub several times per sprint.
-            \par Commit messages are clear, concise and relevant.
-            \par There is significant evidence of engagement with peers (e.g.\ code review).
-        \grade Code has been checked into GitHub several times per week.
-            \par Commit messages are clear, concise and relevant.
-            \par There is extensive evidence of engagement with peers (e.g.\ code review).
+	\criterion{Optimisation Process}{15\%}
+		\grade\fail Optimisation has been carried out but there is no supporting documentation
+		\grade Optimisation has been carried out with some basic supporting documentation
+		\par The documentation lacks detail and clarity, there is also a lack of figures, charts and tables
+		\grade Optimisation has been carried out with more detailed supporting documentation
+		\par The documentation lacks detail and clarity, but there is evidence of more analytical approach (including diagrams)
+		\grade Optimisation has been carried out and the supporting documentation is of a good level
+		\par The documentation is of a good level of detail and there is evidence of more analytical approach (including diagrams)
+		\grade Optimisation has been carried out and the supporting documentation is of a very good level
+		\par The documentation is of a good level of detail and the commentary on the optimisation process is of a good level of detail
+		\grade Optimisation has been carried out and the supporting documentation is of a excellent level
+		\par The documentation is of a good level of detail and the commentary on the optimisation process is of a excellent level of detail
 \end{markingrubric}
-
-\section*{Appendix: Contract}
-
-You must \textbf{design} and \textbf{implement} a technical demo making use of 3D graphics techniques.
-The demo must meet the following requirements:
-
-\begin{itemize}
-	\item A scene containing \textbf{at least one} textured mesh \textbf{and at least one} light source.
-	\item Standard \textbf{first-person movement controls}:
-		\begin{itemize}
-			\item The player can use the mouse to look up/down and to rotate in place;
-			\item The player can use the WASD keys and/or the arrow keys to move around the environment;
-			\item Other controls (e.g.\ interact, jump, shoot) should be added
-				\textbf{if and only if} they are required for your concept.
-		\end{itemize}
-	\item At least \textbf{two} of the following graphics and simulation techniques:
-		\begin{itemize}
-			\item Loading of meshes from a standard 3D object file format;
-			\item Procedural generation of complex meshes or terrain;
-			\item Rendering of semi-transparent materials;
-			\item Realistic rendering of rough surfaces (e.g.\ normal mapping);
-			\item Skeletal animation or deformation;
-			\item Collision detection or ray-casting;
-			\item Integration of a third-party physics engine (e.g.\ Bullet, PhysX);
-			\item Particle effects (e.g.\ fire, smoke, fluid);
-			\item An advanced real-time lighting effect (e.g.\ shadow casting, reflections, volumetric lighting, bloom);
-			\item Non-realistic rendering (e.g.\ cel shading);
-			\item Other advanced rendering or simulation techniques of your choice,
-				subject to discussion with your tutor
-				and demonstration that you have researched the feasibility of your chosen techniques.
-		\end{itemize}
-	\item Some aspect intended to create \textbf{fun and/or engagement} for the user,
-		such as:
-		\begin{itemize}
-			\item Exploring an environment in a ``walking simulator'' style; or
-			\item Interacting with a simulated system; or
-			\item Achieving a \textbf{simple} gameplay objective (beware of overscoping!)
-		\end{itemize}
-\end{itemize}
 
 \end{document}
