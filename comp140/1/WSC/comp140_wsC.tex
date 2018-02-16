@@ -30,10 +30,10 @@ In this worksheet, you will use an Arduino to create a game controller for the r
 \end{figure}
 
 \section{A Single Potentiometer} \label{arduino-first}
-To begin, connect one potentiometer to the breadboard. Hook the potentiometer up to the Arduino. Then write an Arduino sketch to send the potentiometer values over the serial connection. Tested this works using the serial monitor built into the Arduino IDE. Then, adapt the Pong source to update player one's paddle using the values from the potentiometer. 
+To begin, connect one potentiometer to the breadboard. Hook the potentiometer up to the Arduino. Then write an Arduino sketch to send the potentiometer value, when the arduino receives a 'P' char over serial. Test this works using the serial monitor built into the Arduino IDE. Then, adapt the Pong source to update player one's paddle using the values from the potentiometer. 
 
 \section{Two Potentiometers} \label{arduino-second}
-Mirror the potentiometer wiring for the second player and alter the code to send the values of both potentiometers delimited by a hyphen. Update the Pong code so that it splits the values received over serial and uses the first value to control the left paddle and the second value to control the right paddle. 
+Mirror the potentiometer wiring for the second player and alter the code to send the values of both potentiometers delimited by a hyphen when the Arduino receives the 'P' over serial. Update the Pong code so that it splits the values received over serial and uses the first value to control the left paddle and the second value to control the right paddle. 
 
 \section{Visual Feedback - Part 1} \label{arduino-third}
 Now that the player control is finished, we need to start thinking about visual feedback. Create the circuit for one of the LEDs in the diagram above. It doesn't matter which one but for simplicity lets say it is the LED attached to digital pin 8. Update the Arduino sketch so that if serial communication is received and the byte read represents a capital 'L' then the LED attached to pin number 8 flashes. Wire up a second LED but this time connect it to pin 7. Update the Arduino sketch so that if serial communication is received and the byte read represents a capital 'R' then the LED attached to pin number 7 flashes. Test the LEDs using the serial monitor in the Arduino IDE. 
