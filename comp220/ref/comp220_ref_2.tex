@@ -1,0 +1,135 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{Referral Brief Research Journal --- Graphics}
+\author{Brian McDonald}
+\module{COMP220}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section*{Introduction}
+	
+	\begin{marginquote}
+		If we knew what it was we were doing, it would not be called research, would it?
+		
+		--- Albert Einstein
+		
+	\end{marginquote}
+	
+	In this assignment you will select a topic (see topic section) and carry out some research on the area. You then have to produce a 1000 word report on the topic which includes the following sections
+	
+	\begin{itemize}
+		\item Introduction - provide some details on the area you have chosen
+		\item Background - summarise research in this area
+		\item Implementation \& Usage - how is area implemented in games
+		\item References - provide all references using Harvard Referencing style 
+	\end{itemize}
+	
+	You have to submit a word document or pdf to the learning space by \textbf{4pm on 22nd of March 2018}
+	
+	\section*{Additional Guidance}
+	Research is one of the key skills you can develop as a programmer, during you career you will encounter problems which you can't solve straight away. This will require you to go away and carry out research to gather the knowledge to give you the tools to solve the problem. In addition to this, research is simply not about parroting what has been written before, you have to critically analyse and then adapt to your own use.
+	
+	At Falmouth University we use the Harvard Referencing style, please ensure that you use this  for all references. You can receive support for this from your tutor and the University Library - \url{http://library.fxplus.ac.uk/library/how/referencing}. You are also welcome to use tools such as RefWorks, Mendely, or Zotero to organise your references, these tools will often allow you to export a reading list in a Harvard style which can then be incorporated into your report.
+	
+	Writing takes practice so make sure that you take feedback from your tutor and incorporate the changes into a new version of the document. You should also consider getting someone else to proof read your report, it is very easy to make mistakes and not notice them when you are too close to the work.
+	
+	\section*{FAQ}
+	
+	\begin{itemize}
+		\item 	\textbf{What is the deadline for this assignment?} \\ 
+		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+		
+		\item 	\textbf{What should I do to seek help?} \\ 
+		You can email your tutor for informal clarifications. For informal feedback, please consider booking a tutorial slot.
+		
+		\item 	\textbf{Is this a mistake?} \\ 	
+		If you have discovered an issue with the brief itself, the source files are available at: \\
+		\url{https://github.com/Falmouth-Games-Academy/ba-assignment-briefs}.\\
+		Please raise an issue and comment accordingly.
+	\end{itemize}
+	
+	\section*{Additional Resources}
+	
+	\begin{itemize}
+		\item Strunk, W., 2007. The elements of style. Penguin.
+		\item Ridley, D., 2012. The literature review: A step-by-step guide for students. Sage.
+		\item Harvard Referencing at Falmouth University [Online], Available: \url{http://ask.fxplus.ac.uk/harvard-falmouth} [5 June 2017]
+		\item Game Developer Conference Vault [Online], Available: \url{http://www.gdcvault.com/} [5 June 2017]
+		\item SIGGRAPH [Online], Available: \url{http://www.siggraph.org/}  [5 June 2017]
+		\item DiGRA [Online], Available: \url{http://www.digra.org/}  [5 June 2017]
+		\item FDG [Online], Available: \url{https://ispr.info/2016/11/18/call-foundations-of-digital-games-fdg-2017/}  [5 June 2017]
+		\item International conference in computational creativity [Online], Available: \url{http://computationalcreativity.net/iccc2017/}  [5 June 2017]
+		\item Chi Play [Online], Available: \url{http://chiplay.acm.org/2017/}  [5 June 2017]
+		
+		
+	\end{itemize}
+	
+	\begin{markingrubric}
+		\criterion{Description of Topic}{20\%}
+		\grade\fail Is not relevant to the topic
+		\grade Topic description is brief in length and requires more detail 
+		\grade Topic description is of good length but requires more detail
+		\grade Topic description is of good length and has adequate detail 
+		\grade Topic description is of good length and is of good detail
+		\grade Topic description is of good length and has an excellent level of detail
+		%
+		%
+		\criterion{Quality of writing}{20\%}
+		\grade\fail No evidence of analysis of the relevant research in the area
+		\grade Some evidence of analysis of the relevant research in the area
+		\grade Some evidence of critical analysis of the relevant research in the area
+		\grade A good amount of critical analysis of the relevant research in the area
+		\grade A very good amount of critical analysis, the student compares and contrasts papers in the relevant area
+		\grade An excellent amount of critical analysis, the student is able to construct a good argument based on research
+		%
+		\criterion{Breadth of sources}{15\%}
+		\grade\fail All papers from one source.
+		\grade An over reliance on web sources, or very little in the way of journal/conference papers 
+		\grade Some journal articles provided, most come from one source
+		\grade A good varied mix of journal articles and conference papers
+		\grade A very good mix of journal articles and conference papers
+		\grade An excellent selection of journal articles and conference papers
+		%            
+		\criterion{Report Structure}{25\%}
+		\grade\fail The report has no structure or doesn't follow suggested format
+		\grade The report uses the suggested structure but has some major flow issues
+		\grade The report uses the suggested structure but has some flow issues
+		\grade The report uses the suggested structure but has some minor flow issues
+		\grade The report uses the suggested structure but has some very minor flow issues
+		\grade The report uses the suggested structure and excellent flow
+		%
+		%
+		\criterion{Standard of English}{20\%}
+		\grade\fail The report has many spelling mistakes and grammatical errors	
+		\grade The report has spelling mistakes and grammatical errors	
+		\grade The report has some spelling mistakes and grammatical errors	
+		\grade The report has few spelling mistakes and grammatical errors	
+		\grade The report has very few spelling mistakes and grammatical errors	
+		\grade The report has no spelling mistakes and grammatical errors	
+		%
+		
+	\end{markingrubric}
+	
+	\section*{Appendix: Topics}
+	
+	You must \textbf{select} one of the following topics:
+	
+	\begin{itemize}
+		\item Scene Management
+		\item Reflectance Models
+		\item Post processing
+		\item Non-photo-realistic rendering
+		\item Shadow Techniques
+		\item Physics Simulations
+		\item Resource Management
+	\end{itemize}
+\end{document}
