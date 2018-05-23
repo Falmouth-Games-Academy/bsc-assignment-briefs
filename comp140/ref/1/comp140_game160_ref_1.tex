@@ -1,5 +1,5 @@
-\documentclass{../../fal_assignment}
-\graphicspath{ {../../} }
+\documentclass{../../..//fal_assignment}
+\graphicspath{ {../../../} }
 
 \usepackage{enumitem}
 \setlist{nosep} % Make enumerate / itemize lists more closely spaced
@@ -7,7 +7,7 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Hacking Hardware - Referral}
+\title{Hacking Hardware - Referral 1}
 \author{Brian McDonald}
 \module{COMP140-GAM160}
 
@@ -27,26 +27,19 @@ Hacker definition: ``A person who enjoys exploring the details of programmable s
     Arduino is an open-source prototyping platform based on easy-to-use hardware and software.
 }
 
-In this assignment, you will work as an individual to develop a small game and then integrate an Ardunio to control some elements of the game (e.g. a button to toggle lights, a slider to control strafing etc) 
-
-This assignment is formed of several parts:
+In this assignment, you will work as an individual to develop a small game and will be controlled by a custom controller, \textbf{Please note you don't need to develop the controller for this coursework}. When working on the development of the game, controller will consist of two potentiometers, 1 button and 6 LEDs.
 
 \begin{enumerate}[label=(\Alph*)]
     \item \textbf{Implement}, a small prototype game of your choice, that will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{demonstrate} some gameplay
-		\item \textbf{contains} elements that can be controlled by an Arduino
-	\end{enumerate}
-    \item \textbf{Implement} an Arduino controller:
-    	\begin{enumerate}[label=\roman*.]
-		\item \textbf{Reads} data from sensors
-		    \item \textbf{Interfaces} with your game in some manner
-	\end{enumerate}
-    \item \textbf{Present} a practical demo of the game controller to your tutor that will:
+			\item \textbf{contains} elements that can be controlled by an Arduino
+		\end{enumerate}
+    \item \textbf{Present} a practical demo of the game to your tutor that will:
     	\begin{enumerate}[label=\roman*.]
     		\item \textbf{demonstrate} your academic integrity;
     		\item as well as \textbf{show} your programming knowledge \textbf{and} communication skills.
-	\end{enumerate}
+		\end{enumerate}
 \end{enumerate}
 
 \subsection*{Assignment Setup}
@@ -57,7 +50,7 @@ Fork the GitHub repository at:
 
 Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Unity} or \textbf{Unreal}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}.  
+Modify the \texttt{.gitignore} to the defaults for \textbf{Unity} or \textbf{C++/Visual Studio}. Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}.  
 
 
 
@@ -71,7 +64,7 @@ Part A is a \textbf{single summative submission}. This is \textbf{individual} wo
 	\item No breaches of academic integrity. 
 \end{enumerate}
 
-To complete Part A, prepare a practical demonstration of the game controller. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
+To complete Part A, prepare a practical demonstration of the game. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
 
 You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
 
@@ -82,7 +75,6 @@ Part B is the final submission of the code base to the learning space, this shou
 \begin{enumerate}[label=(\alph*)]
 	\item Submission is timely;
 	\item Game functions correctly
-	\item Arduino interfaces with game 
 	\item There is an attempt to write well engineered software
 \end{enumerate}
 
@@ -135,11 +127,11 @@ The sole purpose of the recorded demonstration is to aid the external moderators
         There is little or no evidence of an iterative development process and no improvement over time in regards to the quality of the design and build of the prototype.}
         \gradespan{5}{Submission is timely.
         	\par Enough work is available to hold a meaningful discussion.
-	\par Clear evidence of a `reasonable' iterative development process
-	\par Clear evidence of programming knowledge and communication skills.
-	\par Clear evidence of reflection on own performance and contribution.
-	\par Only constructive criticism of pair-programming partner is raised.
-	\par No breaches of academic integrity.}
+			\par Clear evidence of a `reasonable' iterative development process
+			\par Clear evidence of programming knowledge and communication skills.
+			\par Clear evidence of reflection on own performance and contribution.
+			\par Only constructive criticism of pair-programming partner is raised.
+			\par No breaches of academic integrity.}
 %
     \criterion{Design of the solution}{15\%}
         \grade\fail No evidence of upfront design
@@ -166,21 +158,21 @@ The sole purpose of the recorded demonstration is to aid the external moderators
         \grade Significant evidence of mastery of innovative and creative practice.
             \par The solution is a unique and innovative product.
             \par There is significant evidence of divergent thinking.
-%            
-    \criterion{Functionality of physical prototype}{15\%}
-        \grade\fail A physical prototype is not produced, or the prototype is completely non-functional.
-        \grade The physical prototype has no functionality.
-            \par There are serious technical and/or constructional flaws.
-        \grade The physical prototype has some functionality.
-            \par There are obvious technical and/or constructional flaws.
-        \grade The physical prototype has much functionality.
-            \par There are minor technical and/or constructional flaws.
-        \grade The physical prototype has considerable functionality.
-            \par There are superficial technical and/or constructional flaws.
-        \grade The physical prototype has significant functionality.
-            \par The technical execution and physical construction are flawless.
 %
-    \criterion{Sophistication: \par Software \par Electronics \par Physical construction}{15\%}
+		\criterion{Functionality of game prototype}{15\%}
+		\grade\fail A game is not produced, or the prototype is completely non-functional.
+		\grade The game has no functionality.
+			\par There are serious technical flaws.
+		\grade The game has some functionality.
+			\par There are obvious technical flaws.
+		\grade The game has much functionality.
+			\par There are minor technical flaws.
+		\grade The game has considerable functionality.
+			\par There are superficial technical flaws.
+		\grade The game has significant functionality.
+			\par The technical execution is flawless.
+%
+    \criterion{Sophistication: \par Software}{15\%}
         \grade\fail The solution lacks even a basic level of sophistication in any of the three areas.
         \grade The solution evidences some sophistication in one or more of the three areas.
             \par Some insight has been demonstrated in any area.
