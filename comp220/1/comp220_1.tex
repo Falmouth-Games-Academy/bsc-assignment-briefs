@@ -7,8 +7,8 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Portfolio of game engine components --- Graphics}
-\author{Dr Ed Powley \& Brian McDonald}
+\title{Portfolio of Graphics Components}
+\author{Brian McDonald}
 \module{COMP220}
 
 \begin{document}
@@ -34,27 +34,30 @@
 }
 
 In this assignment, you are required to \textbf{design} and \textbf{implement} a C++ program using SDL and OpenGL
-which demonstrates the type of 3D computer graphics techniques that appear in a modern game engine.
+which will demonstrate a selection of different 3D computer graphics techniques that are likely to appear in a modern game engine.
 
 Graphics technology is one of the most obvious areas in which innovation has driven gaming technology in recent years.
 Modern gaming PCs and consoles contain powerful graphics processing units (GPUs),
 and gamers expect modern games to push this hardware to its full potential.
 In this assignment you will practice the use of advanced graphical effects.
-Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques. This portfolio piece will be built up using a series of Worksheets, worksheet A and B will give you a foundational framework for
-the rest of the assignment which will be completed in C and D.
+Your final product will be a meaningful portfolio piece, which you can use in future to demonstrate your mastery of these techniques. This portfolio piece will be built up using a series of tasks will give you a foundational framework for the rest of the assignment which will involve independent research and experimentation.
 
 This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
-	\item \textbf{Write} a 2-page handout that will:
-		\begin{enumerate}[label=(\roman*)]
+	\item \textbf{Write} a 2-page proposal document that will:
+		\begin{enumerate}[label=\roman*]
 			\item \textbf{outline} the concept of your demo;
 			\item \textbf{explain} how your demo satisfies the requirements of the contract (provided as an appendix at the end of this document);
-			\item \textbf{describe} at least \textbf{two} graphical or simulation effects your demo will include;
+			\item \textbf{describe} at least \textbf{TWO} graphical or simulation effects your demo will include;
 		\end{enumerate}
-	\item Worksheet A - \textbf{Project Framework}
-	\item Worksheet B - \textbf{Camera \& Basic Scene}
-	\item Worksheet C - \textbf{Demo specific work}
-	\item Worksheet D - \textbf{Demo specific work \& Viva}
+	\item \textbf{Setup} the project framework;
+	\item \textbf{Implement} a basic scene \textbf{and} a camera;
+	\item \textbf{Enhance} the scene with the \textbf{TWO} additional components that you described in your proposal (i.e., special effects);
+    \item \textbf{Present} a practical demo of your work that will:
+    	\begin{enumerate}[label=\roman*.]
+    		\item \textbf{highlight} both your technical knowledge \textbf{and} insight;
+    		\item as well as \textbf{demonstrate} your academic integrity.
+	\end{enumerate}
 \end{enumerate}
 
 \subsection*{Assignment Setup}
@@ -66,7 +69,7 @@ This assignment is a \textbf{programming} task. Fork the GitHub repository at th
 Use the existing directory structure and, as required, extend this structure with sub-directories.
 Ensure that you maintain the \texttt{readme.md} file.
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Visual Studio}.
+Modify the \texttt{.gitignore} to the defaults for \textbf{C++} and \textbf{Visual Studio}.
 Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
 
 \subsection*{Part A}
@@ -84,12 +87,50 @@ Part A consists of a \textbf{single formative submission}. This work is \textbf{
 	\item Is the scope appropriate for the product development time-frame?
 \end{itemize}
 
-To complete Part A, prepare the handout using any word processing tool.
+To complete Part A, prepare the proposal using any word processing tool.
 To help illustrate your intended aesthetic, your handout may include images and/or links to online videos.
 
-Show the handout to your \textbf{tutor} for immediate \textbf{informal feedback} in \textbf{class on Week 3}
+Show the handout to your \textbf{tutor} for immediate \textbf{informal feedback} in the relevant session in Week 3.
 
-Once you have completed Part A, you should move onto the Worksheets. See the worksheets on the Learning Space for more details.  
+Once you have completed Part A, progress onto Parts B---C. See the handouts on the Learning Space for more details.  
+
+\subsection*{Part B}
+
+Part B consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+
+To complete Part B, follow the video tutorials on LearningSpace and prepare the project framework using any integrated development environment. Ensure that you commit and push your code your project repository.
+
+Show the code to your \textbf{tutor} for immediate \textbf{informal feedback} in the relevant session in Week 5.
+
+\subsection*{Part C}
+
+Part C consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+
+To complete Part C, follow the video tutorials on LearningSpace and implement the basic scene and camera. Ensure that you commit and push your code your project repository.
+
+Show the code to your \textbf{tutor} for immediate \textbf{informal feedback} in the relevant session in Week 7.
+
+\subsection*{Part D}
+
+Part D consists of a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+
+To complete Part D, follow the video tutorials on LearningSpace and implement the basic scene and camera. Ensure that you commit and push your code your project repository. Then, upload a copy of your repository to the LearningSpace as a \texttt{.zip} file
+
+You will received \textbf{formal feedback} from your \textbf{tutor} within 3 weeks.
+
+\subsection*{Part E}
+
+Part E is a \textbf{single summative submission}. This is \textbf{individual} work will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail: 
+
+\begin{enumerate}[label=(\alph*)]
+	\item Enough work is available to hold a meaningful discussion; 
+	\item Clear evidence of programming knowledge and communication skills; 
+	\item No breaches of academic integrity. 
+\end{enumerate}
+
+To complete Part E, prepare a practical demonstration. You may find it useful to prepare a video and to leverage it to showcase your work during the viva. Ensure that the final build and source code is also readily available. Then, attend the scheduled viva session. 
+
+You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
 
 \section*{Additional Guidance}
 
@@ -179,19 +220,19 @@ as long as they are available under an appropriate license and are properly attr
 	%
 	\criterion{Worksheet A}{10\%}
 		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+	\gradespan{5}{See handout for details}
 	%
 	\criterion{Worksheet B}{15\%}
 		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+	\gradespan{5}{See handout for details}
 	%
 	\criterion{Worksheet C}{20\%}
 		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+	\gradespan{5}{See handout for details}
 	%
 	\criterion{Worksheet D}{25\%}
 		\grade\fail No or Late submission of worksheet
-	\gradespan{5}{See worksheet for details}
+	\gradespan{5}{See handout for details}
 	%
     \criterion{Maintainability}{15\% $\ddagger$}
 \grade\fail There are no comments in the source code, or comments are misleading.

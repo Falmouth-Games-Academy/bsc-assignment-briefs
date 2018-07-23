@@ -1,0 +1,81 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{Project Framework}
+\author{Brian McDonald}
+\module{COMP270}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+In this worksheet you have to develop a Framework that can be used as basis to build a game or demo. This framework should use OpenGL, GLEW and SDL2.
+
+To complete this worksheet, build an application which implements the following:
+\begin{enumerate}[label=(\alph*)]
+	\item \textbf{Intialise} SDL2
+	\item \textbf{Create} a Window which can be configure with different sizes, titles and can be toggle to full screen
+	\item \textbf{Create} an OpenGL Renderer
+	\item \textbf{Initialises} GLEW
+	\item \textbf{Runs} a Game Loop
+	\item \textbf{Exits} when \textbf{escape} is pressed on the keyboard 
+	\item \textbf{Cleans up} all resources when application exits
+\end{enumerate}
+
+\section*{Submission instructions}
+
+Begin by \textbf{forking} the GitHub repository at the following URL:
+
+\url{https://github.com/Falmouth-Games-Academy/comp220-worksheetA}
+
+You should complete a pull request before the hand-in on Friday by 5pm on Week 4. Feedback will be given in the pull request and in class.
+
+\section*{Marking criteria}
+
+Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}. If you do not manage to finish all assigned task, then you can complete this before the submission of Worksheet B
+
+To demonstrate \textbf{basic competency}, complete the following:
+\begin{itemize}
+	\item Initialisation of SDL2
+	\item Create of a basic Window
+	\item Cleanup after exit
+\end{itemize} 
+
+To demonstrate \textbf{basic proficiency}, complete the following:
+\begin{itemize}
+	\item Achieve \textbf{basic competency}
+	\item Initialisation of OpenGL
+	\item Initialisation of GLEW
+\end{itemize}
+
+To demonstrate \textbf{novice competency}, complete the following:
+\begin{itemize}
+	\item Achieve \textbf{basic proficiency}
+	\item Implement Game Loop
+\end{itemize}
+
+To demonstrate \textbf{novice proficiency}, complete the following:
+\begin{itemize}
+	\item Achieve \textbf{novice competency}
+	\item Application exits when key is pressed
+	\item Some evidence of software design
+	\item Some evidence of reusability (functions, classes, inheritance) 
+\end{itemize}
+
+To demonstrate \textbf{professional competency}, complete the following:
+\begin{itemize}
+	\item Achieve \textbf{novice proficiency}
+	\item Evidence of good software design (unit tests, static code analysis)
+	\item Evidence of reusability (Framework is compiled into a library and can be reused)
+\end{itemize}
+
+
+\end{document}
