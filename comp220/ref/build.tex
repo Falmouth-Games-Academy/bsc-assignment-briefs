@@ -1,0 +1,227 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage[hyphens]{url}
+\usepackage{todonotes}
+
+\title{Referral Brief Portfolio of game engine components --- Graphics}
+\author{Brian McDonald}
+\module{COMP220}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``Because of the nature of Moore's law, anything that an extremely clever graphics programmer can do at one point can be replicated by a merely competent programmer some number of years later.''
+
+--- John Carmack
+
+    \marginquoterule
+
+``Currently computer graphics are used a great deal, but it can be excessive.''
+
+--- Hayao Miyazaki
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    A demo of fluid simulation with NVIDIA's PhysX.
+    Recent advances in GPU technology have enabled a wide range of high-fidelity real-time rendering and simulation effects.
+}
+
+In this assignment, you are required to \textbf{design} and \textbf{implement} a C++ program using SDL and OpenGL
+which demonstrates the type of 3D computer graphics techniques that appear in a modern game engine.
+
+Graphics technology is one of the most obvious areas in which innovation has driven gaming technology in recent years.
+Modern gaming PCs and consoles contain powerful graphics processing units (GPUs),
+and gamers expect modern games to push this hardware to its full potential.
+In this assignment you will practice the use of advanced graphical effects.
+Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques.
+
+For this assignment you have to carry out the following:
+\begin{itemize}
+	\item Implement an application framework using SDL
+	\item Initialise OpenGL
+	\item Render multiple 3D Object to the screen
+	\item Scene lit with at lease one light
+	\item FPS style Camera which can be controlled by the user
+\end{itemize}
+
+You have to submit a zip file which containts your application soucre code and all assets to the learning space by \textbf{4pm on 22nd of March 2018}
+
+\subsection*{Assignment Setup}
+
+This assignment is a \textbf{programming} task. Fork the GitHub repository at the following URL:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp220-portfolio}
+
+Use the existing directory structure and, as required, extend this structure with sub-directories.
+Ensure that you maintain the \texttt{readme.md} file.
+
+Modify the \texttt{.gitignore} to the defaults for \textbf{Visual Studio}.
+Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
+
+\section*{Additional Guidance}
+
+As always, avoid underestimating the effort required to implement even simple software; always consider scope.
+From the proposal stage, you should consider very carefully what is feasible.
+
+Your code will be assessed on \textbf{functional coherence}:
+how well the finished product corresponds to the user stories,
+and whether it has any obvious bugs.
+Correspondence to user stories runs both ways:
+implementing features that were not present in the design (``feature creep'')
+is just as bad as neglecting to implement features.
+
+Unlike your previous assignments,
+you will be assessed on the \textbf{performance} of your solution.
+Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
+but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
+It may be necessary to trade-off the complexity or fidelity of an effect
+in order to achieve acceptable performance.
+
+Your code will also be assessed on \textbf{sophistication}.
+To succeed on a project of this size and complexity,
+you will need to make use of appropriate algorithms, data structures, libraries, and object oriented programming concepts.
+Appropriateness to the task at hand is key:
+you will \textbf{not} receive credit for complexity  
+where something simpler would have sufficed.
+
+\textbf{Maintainability} is important in all programming projects,
+but doubly so when working in a team.
+Use \textbf{comments} liberally to improve code comprehension,
+and carefully choose the \textbf{names} for your files, classes, functions and variables.
+Use a well-established commenting convention
+for \textbf{high-level documentation}.
+The open-source tool Doxygen supports several such conventions.
+Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
+indentation, whitespace, placement of curly braces, etc.
+Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
+with values instead defined as constants together in a single place.
+Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
+e.g.\ by defining them in an external file read at startup.
+
+As with all assignments on this course, you are expected to display a level of
+\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
+arts institution.
+One approach to promoting creativity is
+\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
+Often the most interesting ideas are \textbf{subversive}: they deliberately go against
+convention or obvious solutions.
+
+You will \textbf{not} be judged on the quality of your art assets.
+It is fine to use meshes and textures found online,
+as long as they are available under an appropriate license and are properly attributed.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+\section*{Additional Resources}
+
+\begin{itemize}
+    \item \url{http://www.opengl-tutorial.org}
+    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
+    \item \url{https://google.github.io/styleguide/cppguide.html}
+\end{itemize}
+
+\rubricyeartwo
+\begin{markingrubric}
+	%
+    \firstcriterion{Application Framework}{10\%}
+		\grade\fail Empty application
+		\grade Window displayed using SDL, Window and SDL shutdown correctly
+		\grade Achieve Basic Proficiency, events such as close and input handled
+		\grade Achieve Novice Competency, the initialisation of SDL and the Window is moved into functions
+		\grade Achieve Novice Competency, A Game Application class is created to initialise SDL, Window and handle events
+		\grade Achieve Professional Competency, the Game Application class serves as a base class for a 'Game Application' 
+	%
+	\criterion{OpenGL Initialisation}{15\%}
+		\grade\fail OpenGL not initialised 
+		\grade OpenGL and GLEW initialised and destroyed correctly
+		\grade Achieve Basic Competency, the initialisation of OpenGL is handled by a function in your application
+		\grade Achieve Novice Competency, GLEW selects the best version of OpenGL that the graphics card supports
+		\grade Achieve Novice Proficiency, OpenGL functionality moved into a Renderer class
+		\grade Achieve Professional Competency, you have created an Interface class for a Renderer and the OpenGL Renderer inherits from this
+	%
+	\criterion{Rendering of 3D Objects}{20\%}
+		\grade\fail No objects renderer to the screen
+		\grade One object rendered to the screen
+		\grade Multiple objects rendered to the screen
+		\grade A Game Object class (or similar) is created to render objects to the screen
+		\grade Achieve Novice Competency and add a Component based system to the Game Object 
+		\grade Achieve Professional Competency and implement some Scene Management to the application
+	%
+	\criterion{Lights}{20\%}
+		\grade\fail No lights in scene
+		\grade One Directional light is in the scene, which has a Diffuse component calculated. The scene also includes an Ambient component.
+		\grade Achieve basic proficiency and the light has Specular component calculated
+		\grade Achieve Novice Competency and implement a point light
+		\grade Achieve Novice Proficiency and support multiple point lights
+		\grade Achieve Professional Competency and support multiple point lights, one directional light and a sport light
+	%
+	\criterion{FPS Style Camera}{15\%}
+		\grade\fail No FPS Camera implemented
+		\grade FPS Camera that can be controlled using WASD
+		\grade Achieve Basic Competency and the mouse movement controls the viewpoint of the Camera
+		\grade Achieve Novice Competency and move the camera functionality into a Camera class
+		\grade Achieve Novice Proficiency, provide support for multiple cameras and the ability to switch viewpoints
+		\grade Achieve Professional Competency and camera effects like head bob and screen shake
+	%
+    \criterion{Maintainability}{15\%}
+\grade\fail There are no comments in the source code, or comments are misleading.
+\par Most variable names are unclear or inappropriate.
+\par Code formatting hinders readability.
+\grade The source code is only sporadically commented, or comments are unclear.
+\par Some identifier names are unclear or inappropriate.
+\par Code formatting is inconsistent or does not aid readability.
+\grade The source code is somewhat well commented.
+\par Some identifier names are descriptive and appropriate.
+\par An attempt has been made to adhere to thhe PEP-8 formatting style.
+\par There is little obvious duplication of code or of literal values.           
+\grade The source code is reasonably well commented.
+\par Most identifier names are descriptive and appropriate.
+\par Most code adheres to the PEP-8 formatting style.
+\par There is almost no obvious duplication of code or of literal values.   
+\grade The source code is reasonably well commented, with Python doc-strings.
+\par Almost all identifier names are descriptive and appropriate.
+\par Almost all code adheres to the PEP-8 formatting style.
+\par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered'' in the source code. 
+\grade The source code is very well commented, with Python doc-strings.
+\par All identifier names are descriptive and appropriate.
+\par All source code adheres to the PEP-8 formatting style.
+\par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  	
+	%
+	\criterion{Use of Version Control}{5\%}
+		\grade\fail GitHub has not been used.
+		\grade Source code has rarely been checked into GitHub.
+		\grade Source code  has been checked into GitHub at least once per week.
+			\par Commit messages are present.
+			\par There is evidence of engagement with peers (e.g.\ code review).
+		\grade Source code  has been checked into GitHub several times per week.
+			\par Commit messages are clear, concise and relevant.
+			\par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
+		\grade Source code has been checked into GitHub several times per week.
+			\par Commit messages are clear, concise and relevant.
+			\par There is evidence of meaningful engagement with peers (e.g.\ code review).
+		\grade Source code has been checked into GitHub several times per week.
+			\par Commit messages are clear, concise and relevant.
+			\par There is evidence of effective engagement with peers (e.g.\ code review).
+\end{markingrubric}
+
+\end{document}

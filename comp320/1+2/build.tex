@@ -1,0 +1,467 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage[hyphens]{url}
+\usepackage{todonotes}
+
+\title{Research Review, Proposal \& Prototype Artefact}
+\author{Dr Ed Powley}
+\module{COMP320}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``Most papers in computer science describe how their author learned what someone else already knew.''
+
+--- Peter Landin
+
+    \marginquoterule
+
+``We can only see a short distance ahead, but we can see plenty there that needs to be done.''
+
+--- Alan Turing
+
+\end{marginquote}
+\marginpicture{flavour_pic}{}
+
+You are required to deliver a major \textbf{research project} as part of your degree; either in the form of \textbf{empirical research} relating to computing for games, or \textbf{practice-based research} related to game development. Individually, you explore a field that interests you, and for which there is a clearly identified need. This module forms the first part of this project and provides the opportunity to conduct a literature review, as well as to collect and analyse data using appropriate methods and statistics.
+
+These assignments are formed of several parts:
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Complete} an Application for Research Ethics Approval form,
+		which will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{briefly propose} the research to be undertaken in your project
+			\item \textbf{outline} any potential ethical issues around your proposed work,
+				particularly with respect to research involving human subjects
+		\end{enumerate}
+		\textbf{Note that you \textit{must} complete and submit Part A
+		\textit{before} carrying out any experimental work.}
+	\item \textbf{Deliver} a 15-minute presentation that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{explain} the context of your project
+			\item \textbf{identify} and \textbf{discuss} the scientific literature
+				relevant to your project
+			\item \textbf{propose} one or more research questions for your project
+		\end{enumerate}
+	\item \label{part:review-draft} \textbf{Write} a draft research review and proposal
+		that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{identify} and \textbf{analyse} the scientific literature
+				relevant to your project
+			\item \textbf{propose} one or more research questions for your project
+			\item \textbf{justify} your choice of research question(s)
+				and how they will contribute to the state of knowledge
+			\item \textbf{outline} and \textbf{justify} the methodology to be used
+				in addressing the research question(s)
+			\item \textbf{present} any preliminary results you have obtained so far
+		\end{enumerate}
+	\item \textbf{Write} a final research review and proposal that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{address} any issues raised in Part~\ref{part:review-draft}
+		\end{enumerate}
+	\item \textbf{Produce} a prototype research artefact that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{facilitate} the collection of empirical data for your project
+			\item \textbf{demonstrate} the technical feasibility of your proposed artefact
+			\item \textbf{provide} a basis for further development and
+				experimentation in the second study block
+		\end{enumerate}
+	\item \textbf{Deliver} a 15-minute presentation that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{summarise} the context and research question(s)
+				of your project
+			\item \textbf{outline} and \textbf{justify} the methodology to be used in
+				addressing the research question(s)
+			\item \textbf{present} any preliminary results you have obtained so far
+		\end{enumerate}
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+These assignments form a \textbf{research} task, consisting of \textbf{academic reading}, \textbf{academic writing},
+\textbf{software development} and \textbf{scientific experimentation}.
+
+For the \textbf{prototype research artefact}, there is no set GitHub repository.
+However you are strongly encouraged to create one.
+Ensure that you set up the \texttt{.gitignore} file for your chosen development environment,
+and maintain the \texttt{readme.md} file.
+
+For the \textbf{research review and proposal}, fork the GitHub repository at the following URL:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp320-proposal}
+
+Use the existing LaTeX template, which is based on the IEEE Transactions style,
+to write your literature review and proposal.
+
+\subsection*{Part A}
+
+Part A consists of a \textbf{single formative submission}.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part A, download the Research Ethics Approval Application Form
+from the COMP320 area on LearningSpace.
+Complete the form in consultation with your project supervisor.
+Note that you will need to write a (brief) research proposal for this form.
+
+Print and sign the form, and hand it to your supervisor for approval.
+
+\textbf{Important:} carrying out \textbf{any} experimental work
+without first completing Part A is a breach of Falmouth University's Research Ethics Policy.
+This will be treated as a case of academic misconduct, and penalised accordingly.
+
+\subsection*{Part B}
+
+Part B consists of a \textbf{single formative submission}.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+To pass, answer the following questions:
+
+\begin{enumerate}[label=(\roman*)]
+	\item What is the context of your project? How does it fit into the
+		research field of computing for games?
+	\item What are the key results from the literature upon which your project will be built?
+	\item What is the current state of knowledge in the field?
+		What are the open questions and challenges?
+	\item What is (are) the key research question(s) that you will seek to
+		answer in your project?
+\end{enumerate}
+
+To complete Part B, prepare a short (15-minute) presentation 
+and deliver it in the scheduled session in week~7.
+Prepare your slides using your choice of presentation software
+(e.g.\ Beamer, reveal.js, PowerPoint).
+
+\subsection*{Part C}
+
+Part C consists of a \textbf{single formative submission},
+however your project supervisor may also set additional \textbf{formative submissions} at their discretion.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part C, use the provided LaTeX template to write a literature review and proposal.
+Do \textbf{not} modify the formatting of the provided template.
+You are advised to bear in mind the page limit specified for Part~D
+and attempt to adhere to it at this stage,
+however you will \textbf{not} be penalised for failing to do so.
+
+Push your document to GitHub and open a pull request
+in advance of the scheduled peer review session.
+
+You will receive immediate \textbf{informal feedback} from tutor and peers.
+
+\subsection*{Part D}
+
+Part D consists of a \textbf{single summative submission},
+however your project supervisor may also set additional \textbf{formative submissions} at their discretion.
+This work is \textbf{individual} and will be assessed on a \textbf{holistic} basis,
+according to the descriptors set out at the end of this document.
+
+To complete Part D, revise your document from Part C
+to address any issues highlighted during the peer review.
+Your document must not exceed \textbf{six pages} of text,
+excluding figures, tables, references and appendices.
+This is subject to the usual policy on word and page limits available on LearningSpace.
+
+Upload your final \texttt{.pdf} file to the LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.pdf} file.
+
+You will receive immediate and continuous \textbf{informal feedback} through meetings with your supervisor.
+You will also receive \textbf{formal feedback} three weeks after the formative deadline.
+
+\subsection*{Part E}
+
+Part E consists of a \textbf{single summative submission},
+however your project supervisor may also set additional \textbf{formative submissions} at their discretion.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+
+To complete Part E, design and implement a piece of research software appropriate to your chosen project.
+Create a Trello board setting out the key requirements for the software,
+and identifying which requirements will be tackled this study block
+and which are stretch goals to be left until later.
+Check the source code into a version control repository regularly.
+Ensure your \texttt{readme.md} file contains any information required to build and run the artefact, if appropriate.
+
+Upload a \texttt{.zip} file containing your source code, associated assets, and screenshots of your Trello board to the LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.zip} file.
+
+You will receive immediate and continuous \textbf{informal feedback} through meetings with your supervisor.
+You will also receive \textbf{formal feedback} three weeks after the formative deadline.
+
+\subsection*{Part F}
+
+Part F consists of a \textbf{single formative submission}.
+This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+To pass, answer the following questions:
+
+\begin{enumerate}[label=(\roman*)]
+	\item What is (are) the key research question(s) that you will seek to
+		answer in your project?
+	\item How will answering these questions contribute to the state of knowledge
+		in the field of your project?
+	\item What methodology will you use to seek answers to these questions?
+		Justify your methodology.
+	\item What preliminary results have you obtained?
+\end{enumerate}
+
+To complete Part F, prepare a short (15-minute) presentation 
+and deliver it in the scheduled session in week~13.
+Prepare your slides using your choice of presentation software
+(e.g.\ Beamer, reveal.js, PowerPoint).
+
+\section*{Additional Guidance}
+
+Todo additional guidance.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+%\section*{Additional Resources}
+
+%\begin{itemize}
+%    \item \url{http://www.opengl-tutorial.org}
+%    \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
+%    \item \url{https://google.github.io/styleguide/cppguide.html}
+%\end{itemize}
+
+\rubricyearthree
+\rubrictitle{Marking Descriptors: Prototype Research Artefact}
+\rubrichead{Note that this assignment is \textbf{not} marked in a criterion-based fashion.
+	Instead, your project supervisor will assign an overall grade by considering the following descriptors in relation to your project.}
+\begin{markingrubric}
+	%
+    \firstcriterion{Ethics Approval}{---}
+		\grade\fail An ethics approval form has not been submitted.
+			\par \textbf{This is an automatic fail, regardless of other criteria.}
+		\gradespan{5}{Ethics approval has been sought and obtained.}
+	%
+    \criterion{Basic Competency Threshold}{---}
+		\grade\fail Part~F is not completed or is unsatisfactory.
+		\gradespan{5}{A satisfactory presentation is delivered for Part~F.}
+	%
+    \criterion{Appropriateness of Requirements}{---}
+        \grade \fail Few requirements are distinguishable and easily measured.
+            \par Requirements bear little correspondence to the proposed research.
+        \grade Some requirements are distinguishable and easily measured.
+            \par Requirements somewhat correspond to the proposed research.
+        \grade Most requirements are distinguishable and easily measured.
+            \par Requirements correspond to the proposed research.
+        \grade Nearly all requirements are distinguishable and easily measured.
+            \par Requirements clearly correspond to the proposed research.
+        \grade All requirements are distinguishable and easily measured.
+            \par Requirements clearly and comprehensively correspond to the proposed research.
+        \grade All requirements are distinguishable and easily measured.
+            \par Requirements clearly and comprehensively correspond to the proposed research.
+%
+    \criterion{Functional Coherence}{---}
+        \grade \fail Few features have been implemented, or the code fails to compile and run.
+            \par Many obvious and serious bugs are detected.
+        \grade Some features have been implemented.
+            \par Some obvious bugs are detected.
+        \grade Many features have been implemented.
+            \par There is some evidence of feature creep.
+            \par Few obvious bugs  are detected.
+        \grade Almost all features have been implemented.
+            \par There is little evidence of feature creep.
+            \par Some minor bugs  are detected.
+        \grade All features have been implemented.
+            \par There is almost no evidence of feature creep.
+            \par Some bugs, purely cosmetic and/or superficial in nature, are detected.
+        \grade All features have been implemented.
+            \par There is no evidence of feature creep.
+            \par Few to no bugs are detected.
+%
+    \criterion{Sophistication}{---}
+        \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is poor or non-existant.
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is appropriate.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is effective. There is high cohesion and low coupling.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is very effective. There is high cohesion and low coupling.
+        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is extremely effective. There is very high cohesion and very low coupling.
+%
+    \criterion{Maintainability}{---}
+        \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
+            \par Few identifier names are clear or inappropriate.
+            \par Code formatting hinders readability.
+        \grade The code is somewhat well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par An attempt has been made to adhere to a consistent formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to a sensible formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The code is reasonably well commented.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values.
+        \grade The code is very well commented.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values.
+        \grade The code is extremely well commented.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+            \par There is no duplication of code or of literal values.
+\end{markingrubric}
+
+\rubrictitle{Marking Descriptors: Research Review and Proposal}
+\begin{markingrubric}
+	%
+    \firstcriterion{Ethics Approval}{---}
+		\grade\fail An ethics approval form has not been submitted.
+			\par \textbf{This is an automatic fail, regardless of other criteria.}
+		\gradespan{5}{Ethics approval has been sought and obtained.}
+	%
+    \criterion{Basic Competency Threshold}{---}
+		\grade\fail Parts~B and~C are not completed or are unsatisfactory.
+			\par Referencing of sources is unsatisfactory.
+		\gradespan{5}{A satisfactory presentation is delivered for Part~B.
+			\par The student participates in the peer review activity for Part~C, with enough work present for a meaningful review.
+			\par Sources are referenced, with no obvious errors or omissions.}
+	%
+    \criterion{Breadth of literature review}{---}
+        \grade \fail The literature review is missing or unsatisfactory.
+        	\par Many key sources are omitted.
+        \grade The literature review falls far short of comprehensive.
+        	\par There are many obvious omissions.
+        \grade The literature review falls short of comprehensive.
+        	\par There are some obvious omissions.
+        \grade The literature review is somewhat comprehensive.
+        	\par There are few obvious omissions.
+        \grade The literature review is very comprehensive.
+        	\par There are very few obvious omissions.
+        \grade The literature review is extremely comprehensive.
+        	\par There are no obvious omissions.
+	%
+    \criterion{Depth of insight}{---}
+        \grade\fail Little insight is demonstrated.
+        \par		Papers are summarised in the student's own words.
+        \grade		Some insight is demonstrated.
+        \par		Attempts are made at discussion beyond summary.
+        \grade		Much insight is demonstrated.
+        \par		Discussion is inferential in nature.
+        \grade		Considerable insight is demonstrated.
+        \par		Discussion is analytical in nature.
+        \grade		Significant insight is demonstrated.
+        \par		Discussion is analytical and evaluative in nature.
+        \grade		Extensive insight is demonstrated.
+        \par		Discussion is analytical and evaluative in nature.
+	%
+    \criterion{Specificity, verifiability \& accuracy of claims}{---}
+        \grade\fail Few claims have a clear source of evidence.
+        \par 		Significant errors and/or misinterpretations.
+        \grade 		Some claims have a clear source of evidence.
+        \par 		Many errors and/or misinterpretations.
+        \grade 		Many claims have a clear source of evidence.
+        \par 		Some errors and/or misinterpretations.
+        \grade 		Most claims have a clear source of evidence.
+        \par 		Few errors and/or misinterpretations.
+        \grade 		All claims have a clear source of evidence.
+        \par 		Almost no errors and/or misinterpretations.
+        \grade 		All claims have a clear source of evidence.
+        \par 		No errors and/or misinterpretations.
+    %
+    \criterion{Quality of research question(s)}{---}
+        \grade\fail Research questions are absent or not satisfactory.
+        \grade 		Research questions show basic understanding of the field.
+        \par		Research questions are unambitious or unoriginal.
+        \grade 		Research questions show strong understanding of the field.
+        \par		Research questions are original.
+        \grade 		Research questions show some insight into the field.
+        \par		Research questions are original and ambitious.
+        \grade 		Research questions show much insight into the field.
+        \par		Research questions are original, ambitious and timely.
+        \grade 		Research questions show significant insight into the field.
+        \par		Research questions are at the cutting edge of the field.
+    %
+    \criterion{Methodology}{---}
+        \grade\fail Methodology is not specified, not justified, or either of these is unsatisfactory.
+        \grade 		The proposed methodology is somewhat plausible.
+        \par		The justification is not very convincing.
+        \grade 		The proposed methodology is plausible.
+        \par		The justification is somewhat convincing.
+        \grade 		The proposed methodology is sound.
+        \par		The justification is convincing.
+        \grade 		The proposed methodology is very sound.
+        \par		The justification is very convincing.
+        \grade 		The proposed methodology is extremely sound.
+        \par		The justification is extremely convincing.
+    %
+    \criterion{Preliminary results}{---}
+        \grade\fail No preliminary results are presented.
+        \grade 		Preliminary results are basic.
+        \grade 		Preliminary results are verging on significant.
+        \grade 		Preliminary results are significant.
+        \grade 		Preliminary results show progress towards publishable quality.
+        \grade 		Preliminary results are already of publishable quality.
+    %
+\end{markingrubric}
+
+\section*{Appendix: British Computer Society Requirements}
+
+An individual project is an expectation within undergraduate, integrated masters, and postgraduate masters programmes in computing. Students must be provided with written guidance on all aspects of the project, including selection,conduct, supervision, milestones, format of the report and the criteria for assessment. All projects should reflect the aims and learning outcomes which characterise the programme to which they contribute as set out in the programme specification.
+
+It is expected that within an undergraduate programme, students will undertake a major computing project, normally in
+their final year and normally as an individual activity, giving them the opportunity to demonstrate:
+
+\begin{itemize}
+\item their ability to apply practical and analytical skills present in the programme as a whole
+\item innovation and/or creativity
+\item synthesis of information, ideas and practices to provide a quality solution together with an evaluation of that solution
+\item that their project meets a real need in a wider context
+\item the ability to self-manage a significant piece of work
+\item critical self-evaluation of the process
+\end{itemize}
+
+Projects must involve the production of a report which should include:
+
+\begin{itemize}
+\item Elucidation of the problem and the objectives of the project
+\item an in-depth investigation of the context and literature, and where appropriate, other similar products (this section is
+likely to be emphasised less for an IEng project)
+\item where appropriate, a clear description of the stages of the life cycle undertaken
+\item where appropriate, a description of how verification and validation were applied at these stages
+\item where appropriate, a description of the use of tools to support the development process
+\item a critical appraisal of the project, indicating the rationale for any design/implementation decisions, lessons learnt
+during the course of the project, and evaluation (with hindsight) of the project outcome and the process of its
+production (including a review of the plan and any deviations from it)
+\item a description of any research hypothesis
+\item in the event that the individual work is part of a group enterprise, a clear indication of the part played by the author in
+achieving the goals of the project and its effectiveness
+\item references 
+\end{itemize}
+
+In the event of this major activity being undertaken as part of a group enterprise, there is a requirement that the
+assessment is such that the individual contribution of each student is measured against all the above learning
+outcomes.
+
+For accreditation for CITP, CEng or CSci, the individual project should be worth at least 30 credit points at level 6 or
+above. The project must be passed without compensation.
+For accreditation for IEng the individual project should be worth at least 20 credit points at level 5 or above. The project
+must be passed without compensation. 
+
+\end{document}
