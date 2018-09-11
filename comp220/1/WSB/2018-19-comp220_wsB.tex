@@ -7,8 +7,9 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{COMP220 Worksheet A: Project Framework}
+\title{COMP220 Worksheet B: Basic Scene}
 \author{Brian McDonald}
+\module{COMP220}
 
 \begin{document}
 
@@ -16,26 +17,22 @@
 
 \section*{Introduction}
 
-In this worksheet you have to develop a Framework that can be used as basis to build a game or demo. This framework should use OpenGL, GLEW and SDL2.
+In this worksheet you are going to build in the work completed in Worksheet A. In this worksheet you will be building up a basic scene which will involve loading and rendering a few 3D models, these models should have some texturing. There should be some form of interactivity which will allow the user to navigate the scene.
 
 To complete this worksheet, build an application which implements the following:
 \begin{enumerate}[label=(\alph*)]
-	\item \textbf{Intialise} SDL2
-	\item \textbf{Create} a Window which can be configure with different sizes, titles and can be toggle to full screen
-	\item \textbf{Create} an OpenGL Renderer
-	\item \textbf{Initialises} GLEW
-	\item \textbf{Runs} a Game Loop
-	\item \textbf{Exits} when \textbf{escape} is pressed on the keyboard 
-	\item \textbf{Cleans up} all resources when application exits
+	\item \textbf{Loading} of 3D Models
+	\item \textbf{Placement} of 3D Objects in the scene
+	\item \textbf{Loading} of Textures
+	\item \textbf{Rendering} of Objects with basic shaders
+	\item \textbf{First Person Controls} using keyboard and mouse
 \end{enumerate}
 
 \section*{Submission instructions}
 
-Begin by \textbf{forking} the GitHub repository at the following URL:
+Continue using the repository from Worksheet A, you should consider creating a new branch for this worksheet
 
-\url{https://github.com/Falmouth-Games-Academy/comp220-worksheetA}
-
-You should complete a pull request before the hand-in on Friday by 5pm on Week 4. Feedback will be given in the pull request and in class.
+You should complete a pull request before the hand-in on \textbf{Friday by 5pm on Week 7}. Feedback will be given in the pull request and in class.
 
 \section*{Marking criteria}
 
@@ -43,30 +40,29 @@ Remember that \textbf{it is better to submit incomplete work than to submit noth
 
 To demonstrate \textbf{basic competency}, complete the following:
 \begin{itemize}
-	\item Initialisation of SDL2
-	\item Create of a basic Window
-	\item Cleanup after exit
+	\item Loading of 3D Models
+	\item Placement of 3D Models
+	\item Rendering of objects
 \end{itemize} 
 
 To demonstrate \textbf{basic proficiency}, complete the following:
 \begin{itemize}
 	\item Achieve \textbf{basic competency}
-	\item Initialisation of OpenGL
-	\item Initialisation of GLEW
+	\item Loading of Textures
 \end{itemize}
 
 To demonstrate \textbf{novice competency}, complete the following:
 \begin{itemize}
 	\item Achieve \textbf{basic proficiency}
-	\item Implement Game Loop
+	\item Keyboard and mouse controls
 \end{itemize}
 
 To demonstrate \textbf{novice proficiency}, complete the following:
 \begin{itemize}
 	\item Achieve \textbf{novice competency}
-	\item Application exits when key is pressed
 	\item Some evidence of software design
 	\item Some evidence of reusability (functions, classes, inheritance) 
+	\item Additional joypad controls
 \end{itemize}
 
 To demonstrate \textbf{professional competency}, complete the following:
