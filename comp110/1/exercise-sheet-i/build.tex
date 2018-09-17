@@ -1,13 +1,31 @@
 \documentclass{../../../fal_assignment}
 \graphicspath{ {../../../} }
 
+\usepackage{luacode}
+\begin{luacode}
+math.randomseed(201819)
+
+-- https://stackoverflow.com/a/9080080
+function toBits(num,bits)
+    -- returns a table of bits, most significant first.
+    bits = bits or math.max(1, select(2, math.frexp(num)))
+    local t = {} -- will contain the bits        
+    for b = bits, 1, -1 do
+        t[b] = math.fmod(num, 2)
+        num = math.floor((num - t[b]) / 2)
+    end
+    -- return t
+    return table.concat(t)
+end
+\end{luacode}
+
 \usepackage{enumitem}
 \setlist{nosep} % Make enumerate / itemize lists more closely spaced
 \usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{COMP110 Exercise Sheet I: Title}
+\title{COMP110 Exercise Sheet I: Number Bases}
 \module{COMP110}
 \author{Ed Powley}
 \version{1.0}
@@ -16,55 +34,62 @@
 
 \maketitle
 
-\section*{Introduction}
-
-\textbf{SpaceChem} is a puzzle game released in 2011 by independent developers Zachtronics. The gameplay consists of solving problems in a visual programming environment, and as such requires many of the skills required of a programmer. This worksheet allows you to begin developing these skills, even if you are not yet comfortable with the syntax of more conventional programming languages such as Python.
-
-To complete this worksheet:
-\begin{enumerate}[label=(\alph*)]
-	\item \textbf{Play} SpaceChem --- it is available on the PCs in the Teaching Space,
-		or it can be purchased from Steam for around \textsterling 7;
- 	\item \textbf{Complete} all of the ``research'' and ``production'' levels on the planets of Sernimir II, Sernimir IV, and Danopth.
+\begin{enumerate}
+    \item Convert the following numbers from decimal to binary:
+    \begin{enumerate}
+        \item $\directlua{ tex.print(math.random(100,255)) }$
+        \item $\directlua{ tex.print(math.random(100,255)) }$
+        \item $\directlua{ tex.print(math.random(1000,8192)) }$
+        \item $\directlua{ tex.print(math.random(1000,8192)) }$
+        \item $\directlua{ tex.print(math.random(10000,65535)) }$
+    \end{enumerate}
+    \item Convert the following numbers from binary to decimal:
+    \begin{enumerate}
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,65535), 16)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,65535), 16)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,65535), 16)) }$
+    \end{enumerate}
+    \item For each of the following sums:
+    \begin{itemize}
+        \item Convert the numbers from decimal to binary
+        \item Perform the calculation
+        \item Convert the answer back to decimal
+    \end{itemize}
+    \begin{enumerate}
+        \item $\directlua{ tex.print(math.random(10,99)) } + \directlua{ tex.print(math.random(10,99)) }$
+        \item $\directlua{ tex.print(math.random(100,255)) } + \directlua{ tex.print(math.random(100,255)) }$
+        \item $\directlua{ tex.print(math.random(100,999)) } + \directlua{ tex.print(math.random(100,999)) }$
+        \item $\directlua{ tex.print(math.random(0,65535)) } + \directlua{ tex.print(math.random(0,65535)) }$
+        \item $\directlua{ tex.print(math.random(0,65535)) } + \directlua{ tex.print(math.random(0,65535)) }$
+    \end{enumerate}
+    \item For each of the following differences:
+    \begin{itemize}
+        \item Convert the numbers from decimal to binary
+        \item Convert the second number to 2's complement representation
+        \item Perform the calculation
+        \item Convert the answer back to decimal
+    \end{itemize}
+    \begin{luacode}
+        function diff_problem(max, force_positive)
+            a = math.random(0, max)
+            b = math.random(0, max)
+            if force_positive and a < b then
+                a,b = b,a
+            end
+            tex.print(a)
+            tex.print("-")
+            tex.print(b)
+        end
+    \end{luacode}
+    \begin{enumerate}
+        \item $\directlua{diff_problem(255, true)}$
+        \item $\directlua{diff_problem(255, false)}$
+        \item $\directlua{diff_problem(255, false)}$
+        \item $\directlua{diff_problem(65535, false)}$
+        \item $\directlua{diff_problem(65535, false)}$
+    \end{enumerate}
 \end{enumerate}
-
-\section*{Submission instructions}
-
-Begin by \textbf{forking} the GitHub repository at the following URL:
-
-\url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-A}
-
-Once each level has been completed, upload a \textbf{video} of your solution to YouTube using the in-game upload feature.
-Create a YouTube playlist for your videos, and add a link to it to the \texttt{README.md} file within the forked repository.
-Note that SpaceChem disables its YouTube recording feature for ``defense'' levels; you do \textbf{not} need to submit videos for these.
-
-In addition, locate your SpaceChem save file on your hard disk, for example:
-
-\url{C:\Users\<your name>\AppData\Local\Zachtronics Industries\SpaceChem\save\000.user}
-
-\textbf{Upload} this file to your forked repository.
-An automated Travis~CI script will be used to scan your save file and determine your game progress,
-therefore please do \textbf{not} rename the file or upload it into a subdirectory.
-
-Attend the timetabled worksheet review session in \textbf{Week 2},
-ensuring that you have uploaded all material to GitHub before this time.
-
-\section*{Marking criteria}
-
-Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}. If you do not manage to finish all assigned levels by the deadline, upload videos and screenshots of whatever levels you have completed and you will receive a passing grade.
-
-To demonstrate \textbf{basic competency}, upload \textbf{at least one} completed level video to YouTube, and upload your save file to GitHub, as instructed above.
-
-To demonstrate \textbf{basic proficiency}, upload videos for \textbf{all} ``Research'' and ``Production'' levels on Sernimir II, Sernimir IV, and Danopth, except for the optional challenge level ``In-Place Swap''.
-
-To demonstrate \textbf{novice competency}, achieve basic proficiency plus \textbf{one} of the following:
-	\begin{itemize}
-		\item Solve ``Everyday is the First Day'' in 300 cycles or fewer;
-		\item Solve ``It Takes Three'' in 20 symbols or fewer;
-		\item Solve ``Challenge: In-Place Swap'' from Danopth, and ``An Introduction to Sensing'', ``Prelude to a Migraine'' and ``Random Oxides'' from Alkonost.
-	\end{itemize}
-
-To demonstrate \textbf{novice proficiency}, achieve basic proficiency plus \textbf{two} of the criteria above.
-
-To demonstrate \textbf{professional competency}, achieve basic proficiency plus \textbf{all three} of the criteria above.
 
 \end{document}

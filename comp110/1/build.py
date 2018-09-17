@@ -25,7 +25,7 @@ for d in directory_list:
         os.remove(str(f))
 
     for i in range(2):
-        subprocess.Popen(['pdflatex', "-jobname=" + str(head_name) + '-comp110-assignment-1-' + working_directory, 'build.tex'],
+        subprocess.Popen(['lualatex', "-jobname=" + str(head_name) + '-comp110-assignment-1-' + working_directory, 'build.tex'],
                          cwd = working_directory).wait()
 
     old_files = []
