@@ -34,42 +34,52 @@ end
 
 \maketitle
 
+To complete this worksheet:
+\begin{itemize}
+    \item \textbf{complete} the following problems using \textbf{pen and paper}; and
+    \item \textbf{hand in} your solutions in the COMP110 workshop session in week 3.
+\end{itemize}
+
+Marks will only be awarded for correct answers \textbf{with working shown}!
+You \textbf{may} use online calculators or other aids to check your answers,
+but you \textbf{must} demonstrate that you have first performed the calculations manually.
+
 \begin{enumerate}
-    \item Convert the following numbers from decimal to binary:
+    \item Convert the following numbers from decimal to 8-bit binary:
     \begin{enumerate}
-        \item $\directlua{ tex.print(math.random(100,255)) }$
-        \item $\directlua{ tex.print(math.random(100,255)) }$
-        \item $\directlua{ tex.print(math.random(1000,8192)) }$
-        \item $\directlua{ tex.print(math.random(1000,8192)) }$
-        \item $\directlua{ tex.print(math.random(10000,65535)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
     \end{enumerate}
     \item Convert the following numbers from binary to decimal:
     \begin{enumerate}
         \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
         \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
-        \item $\directlua{ tex.print(toBits(math.random(0,65535), 16)) }$
-        \item $\directlua{ tex.print(toBits(math.random(0,65535), 16)) }$
-        \item $\directlua{ tex.print(toBits(math.random(0,65535), 16)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
     \end{enumerate}
     \item For each of the following sums:
     \begin{itemize}
-        \item Convert the numbers from decimal to binary
+        \item Convert the numbers from decimal to 8-bit binary
         \item Perform the calculation
         \item Convert the answer back to decimal
     \end{itemize}
     \begin{enumerate}
-        \item $\directlua{ tex.print(math.random(10,99)) } + \directlua{ tex.print(math.random(10,99)) }$
-        \item $\directlua{ tex.print(math.random(100,255)) } + \directlua{ tex.print(math.random(100,255)) }$
-        \item $\directlua{ tex.print(math.random(100,999)) } + \directlua{ tex.print(math.random(100,999)) }$
-        \item $\directlua{ tex.print(math.random(0,65535)) } + \directlua{ tex.print(math.random(0,65535)) }$
-        \item $\directlua{ tex.print(math.random(0,65535)) } + \directlua{ tex.print(math.random(0,65535)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
     \end{enumerate}
     \item For each of the following differences:
     \begin{itemize}
-        \item Convert the numbers from decimal to binary
+        \item Convert the numbers from decimal to 8-bit binary
         \item Convert the second number to 2's complement representation
         \item Perform the calculation
-        \item Convert the answer back to decimal
+        \item Convert the answer back to decimal, converting from 2's complement if necessary
     \end{itemize}
     \begin{luacode}
         function diff_problem(max, force_positive)
@@ -84,11 +94,11 @@ end
         end
     \end{luacode}
     \begin{enumerate}
-        \item $\directlua{diff_problem(255, true)}$
-        \item $\directlua{diff_problem(255, false)}$
-        \item $\directlua{diff_problem(255, false)}$
-        \item $\directlua{diff_problem(65535, false)}$
-        \item $\directlua{diff_problem(65535, false)}$
+        \item $\directlua{diff_problem(127, true)}$
+        \item $\directlua{diff_problem(127, true)}$
+        \item $\directlua{diff_problem(127, false)}$
+        \item $\directlua{diff_problem(127, false)}$
+        \item $\directlua{diff_problem(127, false)}$
     \end{enumerate}
 \end{enumerate}
 
