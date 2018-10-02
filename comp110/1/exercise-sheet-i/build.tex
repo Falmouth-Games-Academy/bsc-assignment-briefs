@@ -1,0 +1,106 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\usepackage{luacode}
+\begin{luacode}
+math.randomseed(201819)
+
+-- https://stackoverflow.com/a/9080080
+function toBits(num,bits)
+    -- returns a table of bits, most significant first.
+    bits = bits or math.max(1, select(2, math.frexp(num)))
+    local t = {} -- will contain the bits        
+    for b = bits, 1, -1 do
+        t[b] = math.fmod(num, 2)
+        num = math.floor((num - t[b]) / 2)
+    end
+    -- return t
+    return table.concat(t)
+end
+\end{luacode}
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{COMP110 Exercise Sheet I: Number Bases}
+\module{COMP110}
+\author{Ed Powley}
+\version{1.0}
+
+\begin{document}
+
+\maketitle
+
+To complete this worksheet:
+\begin{itemize}
+    \item \textbf{complete} the following problems using \textbf{pen and paper}; and
+    \item \textbf{hand in} your solutions in the COMP110 workshop session in week 3.
+\end{itemize}
+
+Marks will only be awarded for correct answers \textbf{with working shown}!
+You \textbf{may} use online calculators or other aids to check your answers,
+but you \textbf{must} demonstrate that you have first performed the calculations manually.
+
+\begin{enumerate}
+    \item Convert the following numbers from decimal to 8-bit binary:
+    \begin{enumerate}
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+        \item $\directlua{ tex.print(math.random(0,255)) }$
+    \end{enumerate}
+    \item Convert the following numbers from binary to decimal:
+    \begin{enumerate}
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+        \item $\directlua{ tex.print(toBits(math.random(0,255), 8)) }$
+    \end{enumerate}
+    \item For each of the following sums:
+    \begin{itemize}
+        \item Convert the numbers from decimal to 8-bit binary
+        \item Perform the addition
+        \item Convert the answer back to decimal
+    \end{itemize}
+    \begin{enumerate}
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+        \item $\directlua{ tex.print(math.random(0,127)) } + \directlua{ tex.print(math.random(0,127)) }$
+    \end{enumerate}
+    \item For each of the following differences:
+    \begin{itemize}
+        \item Convert the numbers from decimal to 8-bit binary
+        \item Convert the second number to 2's complement representation
+        \item Perform the addition
+        \item If the result is negative (i.e.\ if the leftmost bit is 1), convert from 2's complement
+        \item Convert the answer back to decimal, giving the result with the appropriate sign (i.e.\ $+$ or $-$)
+    \end{itemize}
+    \begin{luacode}
+        function diff_problem(max, force_positive)
+            a = math.random(0, max)
+            b = math.random(0, max)
+            if force_positive and a < b then
+                a,b = b,a
+            end
+            tex.print(a)
+            tex.print("-")
+            tex.print(b)
+        end
+    \end{luacode}
+    \begin{enumerate}
+        \item $\directlua{diff_problem(127, true)}$
+        \item $\directlua{diff_problem(127, true)}$
+        \item $\directlua{diff_problem(127, false)}$
+        \item $\directlua{diff_problem(127, false)}$
+        \item $\directlua{diff_problem(127, false)}$
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
