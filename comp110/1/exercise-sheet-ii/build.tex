@@ -7,64 +7,105 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{COMP110 Exercise Sheet I: Title}
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\footnotesize\ttfamily,
+    commentstyle=\ttfamily\textit,
+    keywordstyle=\ttfamily\textbf,
+    stringstyle=\ttfamily,
+    frame=single,
+    tabsize=4,
+    showstringspaces=false
+}
+
+\title{COMP110 Exercise Sheet II: Logic Gates}
 \module{COMP110}
 \author{Ed Powley}
 \version{1.0}
+
+\newcommand{\TT}{\textsc{True}}
+\newcommand{\FF}{\textsc{False}}
+\newcommand{\OP}[1]{\ \textsc{#1}\ }
+\newcommand{\OPand}{\OP{and}}
+\newcommand{\OPor}{\OP{or}}
+\newcommand{\OPxor}{\OP{xor}}
+\newcommand{\OPnand}{\OP{nand}}
+\newcommand{\OPnor}{\OP{nor}}
+\newcommand{\OPxnor}{\OP{xnor}}
+\newcommand{\OPnot}{\textsc{not}\ }
 
 \begin{document}
 
 \maketitle
 
-\section*{Introduction}
+To complete this exercise sheet:
+\begin{itemize}
+    \item \textbf{complete} the following problems using \textbf{pen and paper}; and
+    \item \textbf{hand in} your solutions in the COMP110 workshop session in week 5.
+\end{itemize}
 
-\textbf{SpaceChem} is a puzzle game released in 2011 by independent developers Zachtronics. The gameplay consists of solving problems in a visual programming environment, and as such requires many of the skills required of a programmer. This worksheet allows you to begin developing these skills, even if you are not yet comfortable with the syntax of more conventional programming languages such as Python.
-
-To complete this worksheet:
-\begin{enumerate}[label=(\alph*)]
-	\item \textbf{Play} SpaceChem --- it is available on the PCs in the Teaching Space,
-		or it can be purchased from Steam for around \textsterling 7;
- 	\item \textbf{Complete} all of the ``research'' and ``production'' levels on the planets of Sernimir II, Sernimir IV, and Danopth.
+\begin{enumerate}
+    \item \label{q:expressions} Write out the truth tables for the following boolean expressions, for all possible values of boolean variables
+        $A, B, C, \dots$:
+        \begin{enumerate}
+            \item $A \OPand B \OPand \OPnot C$
+            \item $A \OPand \OPnot(B \OPand \OPnot C)$
+            \item $(A \OPor \OPnot B) \OPand (A \OPor C)$
+            \item $A \OPand \OPnot (B \OPor \OPnot C) \OPand (\OPnot A \OPand D)$
+        \end{enumerate}
+    \item Draw logic circuits for each of the expressions in Question~\ref{q:expressions}.
+    \item \label{q:identities} Use truth tables to show that the following identities hold:
+        \begin{enumerate}
+            \item $\OPnot (A \OPor B) = \OPnot A \OPand \OPnot B$
+            \item $\OPnot (A \OPand B) = \OPnot A \OPor \OPnot B$
+            \item $(A \OPand B) \OPor (A \OPand C) = A \OPand (B \OPor C)$
+            \item $(A \OPor B) \OPand (A \OPor C) = A \OPor (B \OPand C)$
+        \end{enumerate}
+    \item Explain, using the identities in Question~\ref{q:identities} and/or truth tables,    
+        why each of the following pairs of programs is equivalent:
+        \begin{enumerate}
+            \item {\ }
+                \begin{lstlisting}
+if not(file_exists("a.txt") and file_exists("b.txt")):
+    print("A required file is missing")
+                \end{lstlisting}
+                \begin{lstlisting}
+if not file_exists("a.txt") or not file_exists("b.txt"):
+    print("A required file is missing")
+                \end{lstlisting}
+            \item {\ }
+                \begin{lstlisting}
+if (type(x) == int and x > 7) or (type(x) == float and x > 7):
+    print("Hello")
+                \end{lstlisting}
+                \begin{lstlisting}
+if (type(x) == int or type(x) == float) and x > 7:
+    print("Hello")
+                \end{lstlisting}
+            \item {\ }
+                \begin{lstlisting}
+if x == 0 and y == 0:
+    do_something()
+else:
+    print("Do nothing")
+                \end{lstlisting}
+                \begin{lstlisting}
+if x != 0 or y != 0:
+    print("Do nothing")
+else:
+    do_something()
+                \end{lstlisting}
+            \item {\ }
+                \begin{lstlisting}
+if x > 10 or (x > 0 and y > 0):
+    do_something()
+                \end{lstlisting}
+                \begin{lstlisting}
+if x > 0 and (x > 10 or y > 0):
+    do_something()
+                \end{lstlisting}
+        \end{enumerate}
 \end{enumerate}
-
-\section*{Submission instructions}
-
-Begin by \textbf{forking} the GitHub repository at the following URL:
-
-\url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-A}
-
-Once each level has been completed, upload a \textbf{video} of your solution to YouTube using the in-game upload feature.
-Create a YouTube playlist for your videos, and add a link to it to the \texttt{README.md} file within the forked repository.
-Note that SpaceChem disables its YouTube recording feature for ``defense'' levels; you do \textbf{not} need to submit videos for these.
-
-In addition, locate your SpaceChem save file on your hard disk, for example:
-
-\url{C:\Users\<your name>\AppData\Local\Zachtronics Industries\SpaceChem\save\000.user}
-
-\textbf{Upload} this file to your forked repository.
-An automated Travis~CI script will be used to scan your save file and determine your game progress,
-therefore please do \textbf{not} rename the file or upload it into a subdirectory.
-
-Attend the timetabled worksheet review session in \textbf{Week 2},
-ensuring that you have uploaded all material to GitHub before this time.
-
-\section*{Marking criteria}
-
-Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}. If you do not manage to finish all assigned levels by the deadline, upload videos and screenshots of whatever levels you have completed and you will receive a passing grade.
-
-To demonstrate \textbf{basic competency}, upload \textbf{at least one} completed level video to YouTube, and upload your save file to GitHub, as instructed above.
-
-To demonstrate \textbf{basic proficiency}, upload videos for \textbf{all} ``Research'' and ``Production'' levels on Sernimir II, Sernimir IV, and Danopth, except for the optional challenge level ``In-Place Swap''.
-
-To demonstrate \textbf{novice competency}, achieve basic proficiency plus \textbf{one} of the following:
-	\begin{itemize}
-		\item Solve ``Everyday is the First Day'' in 300 cycles or fewer;
-		\item Solve ``It Takes Three'' in 20 symbols or fewer;
-		\item Solve ``Challenge: In-Place Swap'' from Danopth, and ``An Introduction to Sensing'', ``Prelude to a Migraine'' and ``Random Oxides'' from Alkonost.
-	\end{itemize}
-
-To demonstrate \textbf{novice proficiency}, achieve basic proficiency plus \textbf{two} of the criteria above.
-
-To demonstrate \textbf{professional competency}, achieve basic proficiency plus \textbf{all three} of the criteria above.
 
 \end{document}
