@@ -1,6 +1,8 @@
 \documentclass{../../../fal_assignment}
 \graphicspath{ {../../../} }
 
+\usepackage{amsmath}
+
 \usepackage{luacode}
 \begin{luacode}
 math.randomseed(201819)
@@ -8,7 +10,7 @@ math.randomseed(201819)
 function rand_vec(a,b)
 	local x = math.random(a, b)
 	local y = math.random(a, b)
-	tex.sprint("\cvec{", x, "}{", y, "}")
+	tex.sprint("\\cvec{", x, "}{", y, "}")
 end
 \end{luacode}
 
@@ -39,6 +41,26 @@ To complete this worksheet:
     \item Calculate the following vectors:
     \begin{enumerate}
         \item $\directlua{rand_vec(1, 10)} + \directlua{rand_vec(1, 10)}$
+        \item $\directlua{rand_vec(-10, 10)} + \directlua{rand_vec(-10, 10)}$
+        \item $\directlua{rand_vec(-10, 10)} - \directlua{rand_vec(-10, 10)}$
+        \item $\directlua{tex.print(math.random(2,10))} \times \directlua{rand_vec(-10, 10)} + \directlua{tex.print(math.random(2,10))} \times \directlua{rand_vec(-10, 10)}$
+        \item $\directlua{tex.print(math.random(2,10))} \times \directlua{rand_vec(-10, 10)} - \directlua{tex.print(math.random(2,10))} \times \directlua{rand_vec(-10, 10)}$
+    \end{enumerate}
+    \item Find the magnitudes of the following vectors, giving your answers to 2 decimal places:
+    \begin{enumerate}
+        \item $\directlua{rand_vec(1, 10)}$
+        \item $\directlua{rand_vec(-10, 10)}$
+        \item $\directlua{rand_vec(-20, 20)}$
+        \item $\directlua{rand_vec(-20, 20)}$
+        \item $\directlua{rand_vec(-20, 20)}$
+    \end{enumerate}
+    \item Find the distances between the following pairs of points, giving your answers to 2 decimal places:
+    \begin{enumerate}
+        \item $\directlua{rand_vec(1, 10)}$ and $\directlua{rand_vec(1, 10)}$
+        \item $\directlua{rand_vec(-10, 10)}$ and $\directlua{rand_vec(-10, 10)}$
+        \item $\directlua{rand_vec(-20, 20)}$ and $\directlua{rand_vec(-20, 20)}$
+        \item $\directlua{rand_vec(-20, 20)}$ and $\directlua{rand_vec(-20, 20)}$
+        \item $\directlua{rand_vec(-20, 20)}$ and $\directlua{rand_vec(-20, 20)}$
     \end{enumerate}
 \end{enumerate}
 
