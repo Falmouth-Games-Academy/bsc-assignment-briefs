@@ -1,0 +1,72 @@
+----------------------------------------
+1a
+False 	 False 	 False 	| False
+False 	 False 	 True 	| False
+False 	 True 	 False 	| False
+False 	 True 	 True 	| False
+True 	 False 	 False 	| False
+True 	 False 	 True 	| False
+True 	 True 	 False 	| True
+True 	 True 	 True 	| False
+----------------------------------------
+1b
+False 	 False 	 False 	| False
+False 	 False 	 True 	| False
+False 	 True 	 False 	| False
+False 	 True 	 True 	| False
+True 	 False 	 False 	| True
+True 	 False 	 True 	| True
+True 	 True 	 False 	| False
+True 	 True 	 True 	| True
+----------------------------------------
+1c
+False 	 False 	 False 	| False
+False 	 False 	 True 	| True
+False 	 True 	 False 	| False
+False 	 True 	 True 	| False
+True 	 False 	 False 	| True
+True 	 False 	 True 	| True
+True 	 True 	 False 	| True
+True 	 True 	 True 	| True
+----------------------------------------
+3a
+False 	 False 	| True
+False 	 True 	| False
+True 	 False 	| False
+True 	 True 	| False
+----------------------------------------
+3b
+False 	 False 	| True
+False 	 True 	| True
+True 	 False 	| True
+True 	 True 	| False
+----------------------------------------
+3c
+False 	 False 	 False 	| False
+False 	 False 	 True 	| False
+False 	 True 	 False 	| False
+False 	 True 	 True 	| False
+True 	 False 	 False 	| False
+True 	 False 	 True 	| True
+True 	 True 	 False 	| True
+True 	 True 	 True 	| True
+----------------------------------------
+3d
+False 	 False 	 False 	| False
+False 	 False 	 True 	| False
+False 	 True 	 False 	| False
+False 	 True 	 True 	| True
+True 	 False 	 False 	| True
+True 	 False 	 True 	| True
+True 	 True 	 False 	| True
+True 	 True 	 True 	| True
+----------------------------------------
+adrian
+False 	 False 	 False 	| False
+False 	 False 	 True 	| False
+False 	 True 	 False 	| False
+False 	 True 	 True 	| False
+True 	 False 	 False 	| False
+True 	 False 	 True 	| False
+True 	 True 	 False 	| False
+True 	 True 	 True 	| False
