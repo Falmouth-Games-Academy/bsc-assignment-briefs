@@ -1,0 +1,298 @@
+\title{Portfolio of game engine components --- AI (Task 2)}
+
+\maketitle
+
+\label{p:part2-start}
+
+\section*{Introduction}
+
+\begin{marginquote}
+``Real stupidity beats artificial intelligence every time.''
+
+--- Terry Pratchett
+\end{marginquote}
+\marginpicture{flavour_pic_2}{
+    MicroRTS, originally developed by Santiago Onta\~n\'on at Drexel University,
+    is an open-source software environment designed for benchmarking AI techniques for real-time strategy games.
+}
+
+In this assignment, you are required to design and implement
+an \textbf{AI bot} for the \textbf{MicroRTS} game.
+
+In most games, the role of AI agents is to provide an enjoyable experience for the player.
+However, creating agents that instead try to win the game is an important area of research:
+in some genres of games there is demand for such AI,
+and it allows games to be used as a testbed for AI techniques that can be applied to real-world decision problems.
+Real-time strategy (RTS) games are particularly challenging for AI to play well,
+involving complex tactical and strategic decisions.
+MicroRTS is a simplified RTS which was developed for benchmarking AI techniques against each other.
+In this assignment you will develop a ``bot'' (an AI agent) that plays MicroRTS.
+Your bot will compete in a tournament against your classmates' bots.
+
+This assignment is formed of several parts:
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Implement}, over a course of several sprints, draft versions of your bot:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{research} and \textbf{devise} appropriate AI methods;
+			\item \textbf{implement} these methods in your bot;
+			\item \textbf{upload} your bot to the tournament server;
+			\item \textbf{revise} your bot based on results from the tournament server;
+			\item \textbf{repeat} iteratively.
+		\end{enumerate}
+	\item \textbf{Implement} a final version of your bot that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{revise} any issues raised by your tutor and/or your peers.
+		\end{enumerate}
+	\item \textbf{Present} a practical demo of your bot that will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{demonstrate} your academic integrity;
+			\item \textbf{demonstrate} your individual programming knowledge and communication skills.
+		\end{enumerate}
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+This assignment is a \textbf{programming} task.
+Begin by forking the following GitHub repository:
+
+\indent \url{https://github.com/Falmouth-Games-Academy/comp250-bot}
+
+Modify the provided template code to implement your bot.
+The base repository's \texttt{readme.md} file contains important instructions for submitting your bot to the tournament server;
+be sure to read and follow these instructions carefully.
+
+\subsection*{Part A}
+
+Part A is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Submission is timely;
+	\item Enough work is available to conduct a meaningful review;
+	\item A broadly appropriate review of a peer's work is submitted.
+\end{enumerate}
+
+To complete Part A, develop your bot in an iterative fashion.
+Push your code to GitHub regularly; if you have forked the base repository correctly,
+every push to the \texttt{master} branch will automatically submit your bot to the tournament server.
+Use the results from the tournament server to refine your bot design.
+
+Ensure that a sufficiently advanced draft is uploaded to GitHub, and attend the scheduled peer review session.
+
+\subsection*{Part B}
+
+Part B is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
+
+To complete Part B, revise your bot based on the feedback you have received. Then, upload it to the LearningSpace.
+Please note, the LearningSpace will only accept a single \texttt{.zip} file, which must include your submissions for
+\textbf{both} Task 1 (Game Component) \textbf{and} Task 2 (MicroRTS Bot).
+
+You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
+
+\subsection*{Part C}
+
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Enough work is available to hold a meaningful discussion;
+	\item Clear evidence of programming knowledge \textbf{and} communication skills;
+	\item No breaches of academic integrity.
+\end{enumerate}
+
+To complete Part C, prepare a practical demonstration of your bot. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session.
+
+\section*{Additional Guidance}
+
+As always, avoid underestimating the effort required to implement even simple software; always consider scope.
+From the proposal stage, you should consider very carefully what is feasible.
+
+Your code will be assessed on \textbf{functional coherence}:
+how well the finished product corresponds to the user stories,
+and whether it has any obvious bugs.
+Correspondence to user stories runs both ways:
+implementing features that were not present in the design (``feature creep'')
+is just as bad as neglecting to implement features.
+
+%Unlike your previous assignments,
+%you will be assessed on the \textbf{performance} of your solution.
+%Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
+%but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
+%It may be necessary to trade-off the complexity or fidelity of an effect
+%in order to achieve acceptable performance.
+
+Your code will also be assessed on \textbf{sophistication}.
+To succeed on a project of this size and complexity,
+you will need to make use of appropriate algorithms, data structures, libraries, and object oriented programming concepts.
+Appropriateness to the task at hand is key:
+you will \textbf{not} receive credit for complexity  
+where something simpler would have sufficed.
+Likewise, if you are using an engine such as Unity or Unreal,
+you should make use of (and build upon) the AI functionality included therein;
+you will \textbf{not} receive extra credit for ``rolling your own'' without good reason to do so.
+
+\textbf{Maintainability} is important in all programming projects,
+but doubly so when working in a team.
+Use \textbf{comments} liberally to improve code comprehension,
+and carefully choose the \textbf{names} for your files, classes, functions and variables.
+Use a well-established commenting convention
+for \textbf{high-level documentation}.
+The open-source tool Doxygen supports several such conventions.
+Also ensure that all code corresponds to a sensible and consistent \textbf{formatting style}:
+indentation, whitespace, placement of curly braces, etc.
+Hard-coded \textbf{literals} (numbers and strings) within the source should be avoided,
+with values instead defined as constants together in a single place.
+Consider allowing some literal values, where appropriate, to be ``tinkered'' without changing the source code,
+e.g.\ by defining them in an external file read at startup.
+
+As with all assignments on this course, you are expected to display a level of
+\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
+arts institution.
+One approach to promoting creativity is
+\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
+Often the most interesting ideas are \textbf{subversive}: they deliberately go against
+convention or obvious solutions.
+
+%You will \textbf{not} be judged on the quality of your art assets.
+%It is fine to use meshes and textures found online,
+%as long as they are available under an appropriate license and are properly attributed.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+\section*{Additional Resources}
+
+\begin{itemize}
+	\item \url{https://github.com/santiontanon/microrts/wiki}
+	\item \url{https://sites.google.com/site/micrortsaicompetition/home}
+    \item \url{https://docs.oracle.com/javase/tutorial/}
+    \item \url{https://google.github.io/styleguide/javaguide.html}
+\end{itemize}
+
+\rubricyeartwo
+\begin{markingrubric}
+	\firstcriterion{Basic Competency Threshold}{40\%}
+		\grade\fail At least one part is missing or is unsatisfactory.
+		    \par The work is only a trivial modification of the sample code.
+			\par The student is disqualified from the tournament.
+		\gradespan{5}{Submission is timely.
+			\par Enough work is available to hold a meaningful discussion.
+			\par The work is clearly diverges from the sample code.
+			\par Clear evidence of programming knowledge and communication skills.
+			\par No breaches of academic integrity.
+			\par Tournament rules have been adhered to.
+			\par A bot is pushed to GitHub and submitted to the tournament server at least once per sprint.}
+%
+    \criterion{Functional Coherence}{10\%}
+        \grade \fail The code fails to compile or run.
+            \par Many obvious and serious bugs are detected.
+        \grade Some obvious bugs are detected.
+        \grade Few obvious bugs  are detected.
+        \grade Some minor bugs  are detected.
+        \grade Some superficial bugs are detected.
+        \grade Almost no bugs are detected.
+%
+    \criterion{Algorithmic Sophistication}{10\%}
+        \grade \fail Little insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Some insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Much insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Considerable insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Significant insight into the appropriate use of AI techniques is evident from the design of the bot.
+        \grade Extensive insight into the appropriate use of AI techniques is evident from the design of the bot.
+%
+    \criterion{Sophistication of Implementation}{10\%}
+        \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is poor or non-existant.
+        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is adequate.
+        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is appropriate.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is effective. There is high cohesion and low coupling.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is very effective. There is high cohesion and low coupling.
+        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
+            \par The program structure is extremely effective. There is very high cohesion and very low coupling.
+%
+    \criterion{Maintainability}{15\%}
+        \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
+            \par Few identifier names are clear or inappropriate.
+            \par Code formatting hinders readability.
+        \grade The code is well commented.
+            \par Some identifier names are descriptive and appropriate.
+            \par An attempt has been made to adhere to a consistent formatting style.
+             \par There is little obvious duplication of code or of literal values.           
+        \grade The code is reasonably well commented.
+            \par Most identifier names are descriptive and appropriate.
+            \par Most code adheres to a sensible formatting style.
+             \par There is almost no obvious duplication of code or of literal values.   
+        \grade The code is reasonably well commented, with appropriate Doxygen-compatiable documentation.
+            \par Almost all identifier names are descriptive and appropriate.
+            \par Almost all code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered''. 
+        \grade The code is very well commented, with comprehensive appropriate Doxygen-compatiable documentation.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
+        \grade The code is commented extremely well, with comprehensive appropriate Doxygen-compatiable documentation.
+            \par All identifier names are descriptive and appropriate.
+            \par All code adheres to a sensible formatting style.
+            \par There is no duplication of code or of literal values. Nearly all literal values are, where appropriate, easily ``tinkered'' outside of the source.  
+%
+    \criterion{Performance}{15\%}
+        \grade\fail No bot is entered into the tournament, or the entered bot is disqualified.
+        \gradespan{5}{Marks to be allocated according to the bot's Elo score, as measured in a round-robin tournament.}
+\end{markingrubric}
+
+\section*{Appendix: Tournament Rules}
+
+\begin{enumerate}
+	\item Bots will play in a \textbf{round-robin} (all-versus-all) tournament.
+	\item Bots will be ranked by \textbf{Elo score}, based on wins and losses.
+	\item A \textbf{rolling tournament} server is available, to which you may upload your bot for testing.
+	\item However, \textbf{final leaderboard position} will be based on the version of your bot that is submitted to LearningSpace.
+	\item You \textbf{may} upload multiple bots to the rolling tournament server,
+		however \textbf{only one} submission will be accepted for the final tournament.
+	\item \textbf{All Java source code} for your bot must be provided ---
+		pre-compiled files (\texttt{.class}, \texttt{.jar} etc) are \textbf{not} permitted.
+		This includes any third-party libraries you use.
+	\item The bot will \textbf{forfeit} the current match if it:
+		\begin{enumerate}
+			\item Takes longer than 100 milliseconds to choose an action
+			\item Allocates more than 1GB of memory
+			\item Crashes by raising an uncaught exception
+		\end{enumerate}
+		Forfeiting a match is recorded as a loss.
+	\item The bot will be \textbf{disqualified} from the tournament if it:
+		\begin{enumerate}
+			\item Fails to compile on the tournament server
+			\item Creates additional threads or processes
+			\item Accesses GPU resources
+			\item Accesses the network
+			\item Accesses files outside the working directory
+		\end{enumerate}
+		Disqualification removes the bot from the tournament, and results in the lowest possible Elo score.
+		If a bot is disqualified from the rolling tournament, you may upload a new version to fix the issue.
+	\item The bot will be \textbf{permanently disqualified} from the tournament if it:
+		\begin{enumerate}
+			\item \textbf{Deliberately} attempts to compromise the security of the tournament server
+			\item \textbf{Deliberately} attempts to interfere with the smooth running of the tournament or the fairness of the results
+		\end{enumerate}
+		Permanent disqualification removes the bot from the tournament, and results in a ban on uploading further bots to the server.
+		Your bot will also not be included in the final tournament.
+		Permanent disqualification will be considered an automatic failure of the Basic Competency Threshold for this assignment.
+	\item All students are expected to engage with the competition in an \textbf{ethical} and \textbf{professional} manner.
+		Any perceived breaches of this, as judged by the Module Leader, will be penalised accordingly.
+\end{enumerate}
+\label{p:part2-end}
+
