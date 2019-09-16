@@ -57,7 +57,7 @@
             \parbox[t]{18cm}{\raggedleft\Huge\color{white}{\MakeUppercase{\@title}}}
         };
         \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm] at (banner.south east) {
-            \parbox[t]{18cm}{\raggedleft\color{white}{Version \@version\\BSc Computing for Games\\\@module}}
+            \parbox[t]{18cm}{\raggedleft\color{white}{Version \@version\\Computing\\\@module}}
         };
         \node[anchor=north west] at (banner.south west) {
             \parbox[t]{18cm}{\raggedright\color{gray}{\@author}}
@@ -138,25 +138,25 @@
 
 \newcommand{\@rubricgrades}{
 	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
-	\centering \textbf{\small Basic Competency} &
-	\centering \textbf{\small Basic Proficiency} &
-	\centering \textbf{\small Novice Competency} &
-	\centering \textbf{\small Novice Proficiency} &
-	\centering \textbf{\small Professional Competency}
+	\centering \textbf{\small Adequate} &
+	\centering \textbf{\small Competent} &
+	\centering \textbf{\small Very Good} &
+	\centering \textbf{\small Excellent} &
+	\centering \textbf{\small Outstanding}
 }
 \newcommand{\rubricyeartwo}{\renewcommand{\@rubricgrades}{
 	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
-	\centering \textbf{\small Basic Proficiency} &
-	\centering \textbf{\small Novice Competency} &
-	\centering \textbf{\small Novice Proficiency} &
-	\centering \textbf{\small Professional Competency} &
-	\centering \textbf{\small Professional Proficiency}
+	\centering \textbf{\small Adequate} &
+	\centering \textbf{\small Competent} &
+	\centering \textbf{\small Very Good} &
+	\centering \textbf{\small Excellent} &
+	\centering \textbf{\small Outstanding}
 }}
 \newcommand{\rubricyearthree}{\renewcommand{\@rubricgrades}{
 	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
-	\centering \textbf{\small Novice Competency} &
-	\centering \textbf{\small Novice Proficiency} &
-	\centering \textbf{\small Professional Competency} &
-	\centering \textbf{\small Professional Proficiency} &
-	\centering \textbf{\small Expert Competency}
+	\centering \textbf{\small Adequate} &
+	\centering \textbf{\small Competent} &
+	\centering \textbf{\small Very Good} &
+	\centering \textbf{\small Excellent} &
+	\centering \textbf{\small Outstanding}
 }}
