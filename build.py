@@ -26,7 +26,7 @@ for d in directory_list:
                              assignment_number + '-' + 'brief', cwd = working_directory).wait()
 
         old_files = []
-        for e in ['*.aux','*.out','*.nav','*.log','*.snm','*.toc']:
+        for e in ['*.aux','*.out','*.nav','*.log','*.snm','*.toc','*.tcp']:
             temp = [ f for f in Path(working_directory).glob(e) if f.is_file() ]
             old_files.extend(temp)
         for f in old_files:
