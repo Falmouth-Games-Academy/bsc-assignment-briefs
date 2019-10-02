@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question type="shortanswer">
+                <name>
+                    <text>ws2_q1_0</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;126&lt;/b&gt; from decimal to 8-bit binary.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>01111110</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q1_1</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;225&lt;/b&gt; from decimal to 8-bit binary.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>11100001</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q1_2</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;226&lt;/b&gt; from decimal to 8-bit binary.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>11100010</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q1_3</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;243&lt;/b&gt; from decimal to 8-bit binary.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>11110011</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q1_4</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;60&lt;/b&gt; from decimal to 8-bit binary.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>00111100</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q2_0</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;01010111&lt;/b&gt; from 8-bit binary to decimal.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>87</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q2_1</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;01001101&lt;/b&gt; from 8-bit binary to decimal.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>77</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q2_2</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;01011100&lt;/b&gt; from 8-bit binary to decimal.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>92</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q2_3</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;10111011&lt;/b&gt; from 8-bit binary to decimal.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>187</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>ws2_q2_4</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Convert &lt;b&gt;10000001&lt;/b&gt; from 8-bit binary to decimal.&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>129</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="cloze">
+                <name>
+                    <text>ws2_q3_0</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 67 + 105&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 67 to 8-bit binary: {1:SHORTANSWER:=01000011}&lt;/p&gt;&lt;p&gt;Convert 105 to 8-bit binary: {1:SHORTANSWER:=01101001}&lt;/p&gt;&lt;p&gt;Add these two numbers together: {1:SHORTANSWER:=10101100}&lt;/p&gt;&lt;p&gt;Convert your answer from binary to decimal: {1:SHORTANSWER:=172}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q3_1</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 90 + 24&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 90 to 8-bit binary: {1:SHORTANSWER:=01011010}&lt;/p&gt;&lt;p&gt;Convert 24 to 8-bit binary: {1:SHORTANSWER:=00011000}&lt;/p&gt;&lt;p&gt;Add these two numbers together: {1:SHORTANSWER:=01110010}&lt;/p&gt;&lt;p&gt;Convert your answer from binary to decimal: {1:SHORTANSWER:=114}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q3_2</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 98 + 91&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 98 to 8-bit binary: {1:SHORTANSWER:=01100010}&lt;/p&gt;&lt;p&gt;Convert 91 to 8-bit binary: {1:SHORTANSWER:=01011011}&lt;/p&gt;&lt;p&gt;Add these two numbers together: {1:SHORTANSWER:=10111101}&lt;/p&gt;&lt;p&gt;Convert your answer from binary to decimal: {1:SHORTANSWER:=189}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q3_3</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 49 + 14&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 49 to 8-bit binary: {1:SHORTANSWER:=00110001}&lt;/p&gt;&lt;p&gt;Convert 14 to 8-bit binary: {1:SHORTANSWER:=00001110}&lt;/p&gt;&lt;p&gt;Add these two numbers together: {1:SHORTANSWER:=00111111}&lt;/p&gt;&lt;p&gt;Convert your answer from binary to decimal: {1:SHORTANSWER:=63}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q3_4</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 21 + 7&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 21 to 8-bit binary: {1:SHORTANSWER:=00010101}&lt;/p&gt;&lt;p&gt;Convert 7 to 8-bit binary: {1:SHORTANSWER:=00000111}&lt;/p&gt;&lt;p&gt;Add these two numbers together: {1:SHORTANSWER:=00011100}&lt;/p&gt;&lt;p&gt;Convert your answer from binary to decimal: {1:SHORTANSWER:=28}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q4_0</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 82 - 5&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 82 to 8-bit binary: {1:SHORTANSWER:=01010010}&lt;/p&gt;&lt;p&gt;Convert 5 to 8-bit binary: {1:SHORTANSWER:=00000101}&lt;/p&gt;&lt;p&gt;Express -5 in 2's complement 8-bit binary: {1:SHORTANSWER:=11111011}&lt;/p&gt;&lt;p&gt;Add the binary representations of 82 and -5 together: {1:SHORTANSWER:=01001101}&lt;/p&gt;&lt;p&gt;Convert your answer from 2's complement binary to decimal: {1:SHORTANSWER:=77}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q4_1</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 76 - 50&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 76 to 8-bit binary: {1:SHORTANSWER:=01001100}&lt;/p&gt;&lt;p&gt;Convert 50 to 8-bit binary: {1:SHORTANSWER:=00110010}&lt;/p&gt;&lt;p&gt;Express -50 in 2's complement 8-bit binary: {1:SHORTANSWER:=11001110}&lt;/p&gt;&lt;p&gt;Add the binary representations of 76 and -50 together: {1:SHORTANSWER:=00011010}&lt;/p&gt;&lt;p&gt;Convert your answer from 2's complement binary to decimal: {1:SHORTANSWER:=26}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q4_2</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 31 - 76&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 31 to 8-bit binary: {1:SHORTANSWER:=00011111}&lt;/p&gt;&lt;p&gt;Convert 76 to 8-bit binary: {1:SHORTANSWER:=01001100}&lt;/p&gt;&lt;p&gt;Express -76 in 2's complement 8-bit binary: {1:SHORTANSWER:=10110100}&lt;/p&gt;&lt;p&gt;Add the binary representations of 31 and -76 together: {1:SHORTANSWER:=11010011}&lt;/p&gt;&lt;p&gt;Convert your answer from 2's complement binary to decimal: {1:SHORTANSWER:=-45}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q4_3</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 87 - 113&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 87 to 8-bit binary: {1:SHORTANSWER:=01010111}&lt;/p&gt;&lt;p&gt;Convert 113 to 8-bit binary: {1:SHORTANSWER:=01110001}&lt;/p&gt;&lt;p&gt;Express -113 in 2's complement 8-bit binary: {1:SHORTANSWER:=10001111}&lt;/p&gt;&lt;p&gt;Add the binary representations of 87 and -113 together: {1:SHORTANSWER:=11100110}&lt;/p&gt;&lt;p&gt;Convert your answer from 2's complement binary to decimal: {1:SHORTANSWER:=-26}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>ws2_q4_4</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;&lt;b&gt;Calculating 65 - 65&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Convert 65 to 8-bit binary: {1:SHORTANSWER:=01000001}&lt;/p&gt;&lt;p&gt;Express -65 in 2's complement 8-bit binary: {1:SHORTANSWER:=10111111}&lt;/p&gt;&lt;p&gt;Add the binary representations of 65 and -65 together: {1:SHORTANSWER:=00000000}&lt;/p&gt;&lt;p&gt;Convert your answer from 2's complement binary to decimal: {1:SHORTANSWER:=0}&lt;/p&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question></quiz>
