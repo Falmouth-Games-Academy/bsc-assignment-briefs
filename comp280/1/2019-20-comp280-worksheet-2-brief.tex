@@ -1,0 +1,102 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{hyperref}
+
+\title{Worksheet 2: Artificial Intelligence with Unreal and Behaviour Trees}
+\author{Ed Powley}
+\module{COMP280}
+\version{1.0}
+
+\begin{document}
+
+\maketitle
+
+\marginpicture{pacman}{
+    \emph{Pac-Man} is a classic example of relatively simple AI behaviours giving rise to a compelling gameplay experience.
+}
+
+\section*{Introduction}
+
+In this worksheet, you will implement a set of AI behaviours for the enemies in a simple game.
+
+Begin by \textbf{forking} the following git repository:
+
+\begin{center}
+	\url{https://github.com/Falmouth-Games-Academy/comp280-worksheet-2}
+\end{center}
+
+This repository contains an Unreal project based on the classic arcade game \emph{Pac-Man}.
+The player uses the WASD keys to run around a maze collecting pills.
+The maze is also inhabited by four ghosts:
+these will kill the player upon contact, unless a power pill is active, in which case the player kills the ghost.
+In the template project, the ghosts (implemented in the \texttt{GhostCharacter} class) stay still in the centre of the maze;
+your task for this worksheet is to implement suitable AI behaviours.
+
+To complete this worksheet:
+
+\begin{enumerate}
+	\item \textbf{Fork} the repository linked above.
+	\item \textbf{Implement} a basic Behaviour Tree based AI controller for the ghosts.
+		A good starting tutorial is available at \url{https://wiki.unrealengine.com/Blueprint_Behavior_Tree_Tutorial}.
+	\item \textbf{Iterate} on your AI to produce suitably complex and engaging behaviours.
+	\item \textbf{Open a pull request} by 22nd November 2019 to receive formative feedback.
+\end{enumerate}
+
+\section*{Additional guidance}
+
+In many genres of game, the design of AI agents is key to delivering a good player experience.
+It would be easy to create virtually unbeatable ghost AI for Pac-Man,
+however this would not lead to enjoyable gameplay.
+
+The following are some ideas for how you might make your solution more interesting (all of these are optional suggestions):
+
+\begin{itemize}
+	\item Give each of the ghosts its own distinctive behaviour. (Note that if you choose to subclass \texttt{GhostCharacter} to allow for this,
+	you can edit the \texttt{GhostSpawner}s in the level to cause them to spawn instances of your new class.)
+	\item Have the ghosts behave differently based on whether a power pill is active.
+	\item Give the ghosts limited perception so that they have to find the player.
+	\item Have the ghosts take the state of the game, e.g.\ locations of pills left, into account.
+\end{itemize}
+
+For more guidance, please read the over-arching assignment brief for this assignment on LearningSpace.
+
+\begin{markingrubric}
+	\firstcriterion{Basic competency threshold}{30\%}
+		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
+	\gradespan{5}{A reasonable attempt at the worksheet was submitted by the formative deadline.
+		\par		There is no evidence of academic misconduct.}
+		
+    \criterion{Behaviour design}{40\%}
+        \grade\fail AI behaviours are non-existent or are extremely basic.
+		\grade AI behaviours are basic, but the gameplay experience is not well balanced.
+		\grade AI behaviours show efforts towards sophistication, but the gameplay experience is not well balanced.
+		\grade AI behaviours are moderately sophisticated, with efforts towards a well balanced gameplay experience.
+		\grade AI behaviours are sophisticated, well thought out, and give a well balanced gameplay experience.
+		\grade AI behaviours are extremely sophisticated, well thought out, and give a very well balanced gameplay experience.
+
+    \criterion{Sophistication and maintainability}{30\%}
+        \grade \fail The project shows little or no understanding of relevant techniques and tools.
+			\par Code is very poorly structured and commented, to the point of being unreadable.
+        \grade The project shows basic understanding of relevant techniques and tools.
+			\par Code is readable but lacking in structure and commenting.
+        \grade The project shows some knowledge of relevant techniques and tools.
+			\par Efforts towards structuring and commenting of code.
+        \grade The project shows good knowledge of relevant techniques and tools.
+			\par Code is well structured and commented.
+			\par Some parameters to the AI are easily tunable outside the blueprints / behaviour trees.
+        \grade The project shows extensive knowledge of relevant techniques and tools.
+			\par Code is very well structured and commented.
+			\par Many parameters are easily tunable outside the blueprints / behaviour trees.
+        \grade The project shows mastery of relevant techniques and tools.
+			\par Code is extremely well structured and commented.
+			\par All relevant parameters are easily tunable outside the blueprints / behaviour trees.
+\end{markingrubric}
+
+\end{document}
