@@ -1,0 +1,84 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{hyperref}
+
+\title{Worksheet 2: Computer Graphics \& VFX}
+\author{Brian McDonald}
+\module{COMP280}
+\version{1.0}
+
+\begin{document}
+
+\maketitle
+
+
+\section*{Introduction}
+
+In this worksheet, you will implement a VFX techniques which will demonstrate your understanding of the graphics pipeline.
+
+Begin by \textbf{forking} the following git repository:
+
+\begin{center}
+	\url{https://github.com/Falmouth-Games-Academy/comp280-worksheet-3}
+\end{center}
+
+To complete this worksheet:
+
+\begin{enumerate}
+	\item \textbf{Fork} the repository linked above.
+	\item \textbf{Implement} a basics VFX technique, this must include a procedural mesh element.
+	\item \textbf{Iterate} on your VFX technique.
+	\item \textbf{Open a pull request} by 6th of December to receive formative feedback.
+\end{enumerate}
+
+\section*{Additional guidance}
+
+VFX in video games is a combination of art and programming practice, it is useful to have an understanding of how the graphics pipeline and how to exploit its feature to achieve an effect
+
+The following are some ideas for VFX techniques you could implement
+
+\begin{itemize}
+	\item Fireball
+	\item Deflector Shield 
+	\item Liquid
+	\item Flames
+	\item Basic Animation (waving flags)
+\end{itemize}
+
+For more guidance, please read the over-arching assignment brief for this assignment on LearningSpace.
+
+\begin{markingrubric}
+	\firstcriterion{VFX Technique}{60\%}
+        \grade\fail There is no VFX Technique implemented.
+		\grade The VFX technique is very basic (e.g. some basic animation) and the procedural mesh is a basic primitive.
+		\grade The VFX technique show efforts towards sophistication, but the procedural mesh is a basic primitive.
+		\grade The VFX technique is moderately sophisticated, with some effort to link it into a game context (e.g. Fireball is cast by a player character).
+		\grade The VFX technique is sophisticated, well thought out, and is linked to a game action.
+		\grade The VFX technique is extremely sophisticated, well thought out, and would fit well into a game.
+
+    \criterion{Sophistication and maintainability}{40\%}
+        \grade \fail The project shows little or no understanding of relevant techniques and tools.
+			\par Code is very poorly structured and commented, to the point of being unreadable.
+        \grade The project shows basic understanding of relevant techniques and tools.
+			\par Code is readable but lacking in structure and commenting.
+        \grade The project shows some knowledge of relevant techniques and tools.
+			\par Efforts towards structuring and commenting of code.
+        \grade The project shows good knowledge of relevant techniques and tools.
+			\par Code is well structured and commented.
+			\par Some parameters of the VFX technique are easily tunable outside the code.
+        \grade The project shows extensive knowledge of relevant techniques and tools.
+			\par Code is very well structured and commented.
+			\par Many parameters are easily tunable outside the code.
+        \grade The project shows mastery of relevant techniques and tools.
+			\par Code is extremely well structured and commented.
+			\par All relevant parameters are easily tunable outside the code
+\end{markingrubric}
+
+\end{document}
