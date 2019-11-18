@@ -1,0 +1,408 @@
+keystroke "a" using command down
+keystroke " "
+keystroke "RESEARCH: Breadth of reading"
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "REFER FOR RESUBMISSION"
+keystroke return
+keystroke return
+keystroke "None of the articles listed in the reading list are referenced."
+keystroke return
+keystroke return
+keystroke "Fewer than 2 additional sources, not listed in the reading list, are referenced."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "ADEQUATE"
+keystroke return
+keystroke return
+keystroke "One of the articles listed in the reading list is referenced."
+keystroke return
+keystroke return
+keystroke "An additional 2 sources, not listed in the reading list, are referenced."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "COMPETENT"
+keystroke return
+keystroke return
+keystroke "One of the articles listed in the reading list is referenced."
+keystroke return
+keystroke return
+keystroke "An additional 5 sources, not listed in the reading list, are referenced."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "VERY GOOD"
+keystroke return
+keystroke return
+keystroke "One of the articles listed in the reading list is referenced."
+keystroke return
+keystroke return
+keystroke "An additional 8 sources, not listed in the reading list, are referenced."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "EXCELLENT"
+keystroke return
+keystroke return
+keystroke "One of the articles listed in the reading list is referenced."
+keystroke return
+keystroke return
+keystroke "An additional 12 sources, not listed in the reading list, are referenced."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "OUTSTANDING"
+keystroke return
+keystroke return
+keystroke "One of the articles listed in the reading list is referenced."
+keystroke return
+keystroke return
+keystroke "An additional 16 sources, not listed in the reading list, are referenced. %"
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "RESEARCH: Depth of insight"
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "REFER FOR RESUBMISSION"
+keystroke return
+keystroke return
+keystroke "No insight is demonstrated."
+keystroke return
+keystroke return
+keystroke "Papers are merely paraphrased."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "ADEQUATE"
+keystroke return
+keystroke return
+keystroke "Little insight is demonstrated."
+keystroke return
+keystroke return
+keystroke "Papers are summarised in the student's own words."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "COMPETENT"
+keystroke return
+keystroke return
+keystroke "Some insight is demonstrated."
+keystroke return
+keystroke return
+keystroke "Attempts are made at discussion beyond summary."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "VERY GOOD"
+keystroke return
+keystroke return
+keystroke "Much insight is demonstrated."
+keystroke return
+keystroke return
+keystroke "Discussion is inferential in nature."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "EXCELLENT"
+keystroke return
+keystroke return
+keystroke "Considerable insight is demonstrated."
+keystroke return
+keystroke return
+keystroke "Discussion is analytical in nature."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "OUTSTANDING"
+keystroke return
+keystroke return
+keystroke "Significant insight is demonstrated."
+keystroke return
+keystroke return
+keystroke "Discussion is analytical and evaluative in nature. %"
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "RESEARCH: Specificity, verifiability & accuracy of claims"
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "REFER FOR RESUBMISSION"
+keystroke return
+keystroke return
+keystroke "No citations to evidence to claims."
+keystroke return
+keystroke return
+keystroke "Substantial errors and/or misinterpretations."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "ADEQUATE"
+keystroke return
+keystroke return
+keystroke "Few claims have a clear source of evidence."
+keystroke return
+keystroke return
+keystroke "Significant errors and/or misinterpretations."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "COMPETENT"
+keystroke return
+keystroke return
+keystroke "Some claims have a clear source of evidence."
+keystroke return
+keystroke return
+keystroke "Many errors and/or misinterpretations."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "VERY GOOD"
+keystroke return
+keystroke return
+keystroke "Many claims have a clear source of evidence."
+keystroke return
+keystroke return
+keystroke "Some errors and/or misinterpretations."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "EXCELLENT"
+keystroke return
+keystroke return
+keystroke "Most claims have a clear source of evidence."
+keystroke return
+keystroke return
+keystroke "Few errors and/or misinterpretations."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "OUTSTANDING"
+keystroke return
+keystroke return
+keystroke "All claims have a clear source of evidence."
+keystroke return
+keystroke return
+keystroke "Almost no errors and/or misinterpretations. %"
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "RESEARCH: Synthesis"
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "REFER FOR RESUBMISSION"
+keystroke return
+keystroke return
+keystroke "No attempt has been made to synthesise information from multiple sources."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "ADEQUATE"
+keystroke return
+keystroke return
+keystroke "A superficial attempt has been made to synthesise information from multiple sources."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "COMPETENT"
+keystroke return
+keystroke return
+keystroke "A reasonable attempt has been made to synthesise information from multiple sources."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "VERY GOOD"
+keystroke return
+keystroke return
+keystroke "Information from multiple sources is synthesised into a somewhat cohesive whole."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "EXCELLENT"
+keystroke return
+keystroke return
+keystroke "Information from multiple sources is synthesised into a cohesive whole."
+keystroke return
+keystroke return
+keystroke "Connections are analytical in nature."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "OUTSTANDING"
+keystroke return
+keystroke return
+keystroke "Information from multiple sources is synthesised into a strongly cohesive whole."
+keystroke return
+keystroke return
+keystroke "Connections are analytical and evaluative in nature. %"
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "RESEARCH: Spelling & grammar"
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "REFER FOR RESUBMISSION"
+keystroke return
+keystroke return
+keystroke "Substantial spelling and/or grammatical errors."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "ADEQUATE"
+keystroke return
+keystroke return
+keystroke "Many spelling and/or grammatical errors."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "COMPETENT"
+keystroke return
+keystroke return
+keystroke "Some spelling and/or grammatical errors."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "VERY GOOD"
+keystroke return
+keystroke return
+keystroke "Few spelling and/or grammatical errors."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "EXCELLENT"
+keystroke return
+keystroke return
+keystroke "Almost no spelling and/or grammatical errors."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "OUTSTANDING"
+keystroke return
+keystroke return
+keystroke "No spelling or grammatical errors. %"
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "RESEARCH: Structure"
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "REFER FOR RESUBMISSION"
+keystroke return
+keystroke return
+keystroke "There is no structure, or the structure is unclear."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "ADEQUATE"
+keystroke return
+keystroke return
+keystroke "There is little structure."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "COMPETENT"
+keystroke return
+keystroke return
+keystroke "There is some structure."
+keystroke return
+keystroke return
+keystroke "A few sentences and paragraphs are well constructed."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "VERY GOOD"
+keystroke return
+keystroke return
+keystroke "There is much structure."
+keystroke return
+keystroke return
+keystroke "Some sentences and paragraphs are well constructed."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "EXCELLENT"
+keystroke return
+keystroke return
+keystroke "There is much structure, highlighting the key themes."
+keystroke return
+keystroke return
+keystroke "Most sentences and paragraphs are well constructed."
+keystroke tab
+keystroke tab
+keystroke "a" using command down
+keystroke " "
+keystroke "OUTSTANDING"
+keystroke return
+keystroke return
+keystroke "There is much structure, highlighting the key themes."
+keystroke return
+keystroke return
+keystroke "All sentences and paragraphs are well constructed."
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab
+keystroke tab

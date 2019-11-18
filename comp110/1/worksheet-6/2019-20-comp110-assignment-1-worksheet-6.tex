@@ -22,12 +22,12 @@
 	stringstyle=\ttfamily,
 	rulecolor=\color{black}
 }
-\lstset{language=Python}
+\lstset{language=[Sharp]C}
 
-\title{Worksheet D: Data Structures}
+\title{Worksheet 6: Data Structures}
 \author{Dr Ed Powley}
 \module{COMP110}
-\version{3.0}
+\version{4.0}
 
 \begin{document}
 
@@ -38,7 +38,7 @@
 
 \section*{Introduction}
 
-In this worksheet, you will complete a Python implementation of the pen-and-paper game Noughts and Crosses
+In this worksheet, you will complete a C\# implementation of the pen-and-paper game Noughts and Crosses
 (also known as OXO or Tic-Tac-Toe).
 
 Noughts and Crosses is a two-player game played on a $3 \times 3$ grid.
@@ -49,54 +49,57 @@ The winner is the first player to get three marks in a row horizontally, vertica
 To complete this worksheet:
 
 \begin{enumerate}[label=(\alph*)]
-	\item \textbf{Fork} the skeleton project and \textbf{open} \texttt{oxo.py} in your favourite Python IDE.
+	\item \textbf{Fork} the skeleton project and \textbf{open} the project in Visual Studio.
 	\item \textbf{Choose} an appropriate data structure to represent the state of the board.
 	\item \textbf{Implement} the following methods of the \lstinline{OxoBoard} class:
 		\begin{enumerate}[label=(\roman*)]
-			\item \lstinline{__init__()}, which should initialise the data structure and any other fields that are required.
-			\item \lstinline{get_square(x, y)}, which should return the current contents of the square at coordinates $x,y$.
+			\item \lstinline{OxoBoard()}, which should initialise the data structure and any other fields that are required.
+			\item \lstinline{GetSquare(x, y)}, which should return the current contents of the square at coordinates $x,y$.
 				For this and other functions, $x$ and $y$ have values of $0$, $1$ or $2$:
 				$0,0$ is the top left corner, $1,0$ is the top middle, and so on.
-				Cell contents are integers: $0$ for an empty square,
-				$1$ for a player~1 mark, and $2$ for a player~2 mark.
-			\item \lstinline{set_square(x, y, mark)}, which should check if the square at coordinates $x,y$ is empty.
-				If it is empty, fill it with the value of \lstinline{mark} and return \lstinline{True};
-				if the square is not empty, leave it alone and return \lstinline{False}.
-			\item \lstinline{is_board_full()}, which should return a boolean indicating whether all spaces on the board are occupied.
-			\item \lstinline{get_winner()}, which should check if either player has made three in a row.
-				If they have, return the player number (1 or 2).
-				If neither player has made three in a row, return 0.
+				Cell contents are represented by the \lstinline{Mark} enumeration: \lstinline{Mark.None} for an empty square,
+				\lstinline{Mark.O} for a player~1 mark, and \lstinline{Mark.X} for a player~2 mark.
+			\item \lstinline{SetSquare(x, y, mark)}, which should check if the square at coordinates $x,y$ is empty.
+				If it is empty, fill it with the value of \lstinline{mark} and return \lstinline{true};
+				if the square is not empty, leave it alone and return \lstinline{false}.
+			\item \lstinline{IsBoardFull()}, which should return a boolean indicating whether all spaces on the board are occupied.
+			\item \lstinline{GetWinner()}, which should check if either player has made three in a row.
+				If they have, return the player who has achieved this (\lstinline{Mark.O} or \lstinline{Mark.X}).
+				If neither player has made three in a row, return \lstinline{Mark.None}.
 				If the board state is such that both players have made three in a row (which cannot occur in a normal game),
 				behaviour is undefined (i.e.\ your function does not need to handle this case).
 		\end{enumerate}
+	\item As a \textbf{stretch goal}, \textbf{extend} your implementation to allow for board sizes other than $3 \times 3$
+	    --- either to achieve $n$ in a row on an $n \times n$ board, or to achieve $k$ in a row on an $m \times n$ board.
 \end{enumerate}
 
-It is anticipated that \lstinline{get_winner()} will be the most challenging of these,
+It is anticipated that \lstinline{GetWinner()} will be the most challenging of these,
 so please plan your time accordingly.
 
-The skeleton project contains a file \texttt{play.py}, which imports your \lstinline{OxoBoard} class
-and uses it to graphically play a game of Noughts and Crosses. You may find this useful when testing your code.
+The skeleton project contains a file \texttt{Program.cs}, which imports your \lstinline{OxoBoard} class
+and uses it to play a game of Noughts and Crosses. You may find this useful when testing your code.
+There is also a unit test project which defines a series of tests using the NUnit\footnote{\url{https://nunit.org}} framework;
+these can be run locally within Visual Studio, and will also be run automatically via TravisCI when you submit a pull request
+on GitHub.
 
 \section*{Submission instructions}
 
 Begin by \textbf{forking} the GitHub repository at the following URL:
 
-\url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-D}
+\url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-6}
 
-Edit \texttt{oxo.py}, implementing the required functions.
+Edit \texttt{OxoBoard.cs}, implementing the required functions.
 When you have finished, open a \textbf{pull request}.
 
-\textbf{Do not move or rename \texttt{oxo.py}, and do not edit or delete any of the other files in the repository.}
+\textbf{Do not move or rename \texttt{OxoBoard.cs}, and do not edit or delete any of the other files in the repository.}
 Doing so will interfere with the automated testing scripts used to check your submission for correctness,
 and as a result may lead to you losing marks.
 
-Attend the scheduled worksheet feedback session,
-ensuring that you have uploaded all material to GitHub and opened a pull request before this time.
+Upload all material to GitHub and open a pull request by the deadline listed on LearningSpace.
 
 \section*{Marking criteria}
 
 Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}.
-Any attempt, even unfinished, will receive a passing grade.
 
 Your work will be marked according to the following criteria:
 \begin{itemize}
@@ -105,12 +108,13 @@ Your work will be marked according to the following criteria:
 	\item \textbf{Sophistication}. Have you made use of appropriate code structures and data structures?
 		Note the emphasis is on \textbf{appropriate}; extra credit will \textbf{not} be given for unnecessarily complex solutions.
 	\item \textbf{Maintainability: readability}. Is your code well commented? Are your identifier names appropriate and descriptive?
-		Have you adhered to appropriate coding standards (e.g. PEP-8)?
+		Have you adhered to appropriate coding standards?
 	\item \textbf{Maintainability: expandability}. Suppose that we wanted to implement an $n \times n$ variant of Noughts and Crosses
 		that works for any positive integer $n$.
 		How easily could your code be adapted to this change in requirements?
 		How about an $m \times n$ variant, where the objective is to get $k$ in a row,
 		for any positive integers $m,n,k$?
+		Extra credit will be awarded for successfully implementing one or both of these as stretch goals.
 \end{itemize}
 
 \end{document}
