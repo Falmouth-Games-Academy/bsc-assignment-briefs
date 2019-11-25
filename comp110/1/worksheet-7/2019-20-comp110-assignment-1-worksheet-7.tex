@@ -1,80 +1,115 @@
 \documentclass{../../../fal_assignment}
 \graphicspath{ {../../../} }
 
+\usepackage{amsmath}
 \usepackage{enumitem}
 \setlist{nosep} % Make enumerate / itemize lists more closely spaced
 \usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
 \usepackage{url}
 \usepackage{todonotes}
-\usepackage{amsmath}
-
+\usepackage{algpseudocode}
 \usepackage{listings}
 \lstset{
-    language=Python,
-    basicstyle=\footnotesize\ttfamily,
-    commentstyle=\ttfamily\textit,
-    keywordstyle=\ttfamily\textbf,
-    stringstyle=\ttfamily,
-    frame=single,
-    tabsize=4,
-    showstringspaces=false
+	basicstyle=\ttfamily,
+	frame=single,
+	showstringspaces=false
 }
+\lstset{
+	commentstyle=\ttfamily\textit,
+	keywordstyle=\ttfamily\textbf,
+	stringstyle=\ttfamily,
+	rulecolor=\color{black}
+}
+\lstset{language=[Sharp]C}
 
-\newcommand{\TT}{\textsc{True}}
-\newcommand{\FF}{\textsc{False}}
-\newcommand{\OP}[1]{\ \textsc{#1}\ }
-\newcommand{\OPand}{\wedge}
-\newcommand{\OPor}{\vee}
-\newcommand{\OPnot}{\neg}
-
-\newcommand{\fib}{\operatorname{fib}}
-
-\title{COMP110 Exercise Sheet III: Recursion and Induction}
+\title{Worksheet 7: Recursion}
+\author{Dr Ed Powley}
 \module{COMP110}
-\author{Ed Powley}
 \version{1.0}
 
 \begin{document}
 
 \maketitle
+%\marginpicture{flavour_pic}{
+%    OXO on the EDSAC computer, one of the earliest examples of a computer game.
+%}
 
-To complete this exercise sheet:
-\begin{itemize}
-    \item \textbf{complete} the following problems using \textbf{pen and paper}; and
-    \item \textbf{hand in} your solutions in the COMP110 workshop session in week 8.
-\end{itemize}
+\section*{Introduction}
 
-\begin{enumerate}
-    \item Prove the following identities by induction. In all cases, $X_1, \dots, X_n$ and $Y$ are
-		boolean variables.
-        \begin{enumerate}
-            \item $\OPnot (X_1 \OPor X_2 \OPor \dots \OPor X_n) = \OPnot X_1 \OPand \OPnot X_2 \OPand \dots \OPand \OPnot X_n$
-            \item $\OPnot (X_1 \OPand X_2 \OPand \dots \OPand X_n) = \OPnot X_1 \OPor \OPnot X_2 \OPor \dots \OPor \OPnot X_n$
-            \item $(Y \OPand X_1) \OPor (Y \OPand X_2) \OPor \dots \OPor (Y \OPand X_n) = Y \OPand (X_1 \OPor X_2 \OPor \dots \OPor X_n)$
-            \item $(Y \OPor X_1) \OPand (Y \OPor X_2) \OPand \dots \OPand (Y \OPor X_n) = Y \OPor (X_1 \OPand X_2 \OPand \dots \OPand X_n)$
-        \end{enumerate}
-		\vspace{1ex}
-	\item Prove by induction that, for all positive integers $n$,
-		$$ \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6} $$
-	\item The Fibonacci numbers are defined recursively as follows:
-		\begin{align*}
-			\fib(0) &= 1 \\
-			\fib(1) &= 1 \\
-			\fib(n) &= \fib(n-1) + \fib(n-2) \quad \text{ for $n \geq 2$}
-		\end{align*}
-        \begin{enumerate}
-            \item Write down the first $10$ Fibonacci numbers (i.e.\ $\fib(0), \dots, \fib(9)$).
-			\item Consider the following Python function:
-\begin{lstlisting}
-def fib(n):
-    if n <= 1:
-	    return 1
-	else:
-	    return fib(n-1) + fib(n-2)
-\end{lstlisting}
-				Prove, by induction, that the total number of calls to \lstinline{fib} required to compute
-				\lstinline{fib(n)} is $2 \times \fib(n) - 1$.
-        \end{enumerate}
+In this worksheet, you will implement a number of recursive C\# functions to analyse a directory of files.
+
+A file system on a computer is organised into \emph{directories} (or \emph{folders}) and \emph{files}.
+A directory can contain files as well as recursively containing other directories.
+We refer to the files \emph{below} a directory as the files contained within that directory itself,
+within all subdirectories, within all subdirectories of subdirectories, and so on.
+
+To complete this worksheet:
+
+\begin{enumerate}[label=(\alph*)]
+	\item \textbf{Fork} the skeleton project and \textbf{open} the project in Visual Studio.
+	\item \textbf{Implement} the following methods of the \lstinline{DirectoryUtils} class:
+		\begin{enumerate}[label=(\roman*)]
+			\item \lstinline{GetTotalSize()}, which should return the total size (in bytes) of all the files
+				below the given directory.
+			\item \lstinline{CountFiles()}, which should return the total number of files
+				below the given directory. This should only count files, not directories.
+			\item \lstinline{GetDepth()}, which should return the nested ``depth'' of the directory:
+				this is the maximum number of subdirectory levels between the top-level directory
+				and a file.
+				For example: a directory containing only files has a depth of 0;
+				a directory whose subdirectories have depth 0 has depth 1;
+				a directory whose subdirectories have depth at most 1 has depth 2.
+			\item \lstinline{GetSmallestFile()} and \lstinline{GetLargestFile()},
+				which should return the smallest and largest file below the given directory respectively.
+				These functions return a \lstinline{Tuple<string, long>},
+				whose first element is the path to the file
+				and whose second element is the size of the file in bytes.
+				If there is more than one file with equal smallest or largest size,
+				the function will return one of them arbitrarily.
+			\item \lstinline{GetFilesOfSize()}, which should get all files whose size is equal to the
+				given size in bytes.
+				This function returns an \lstinline{IEnumerable<string>}, a sequence of file paths.
+				For example it may return a \lstinline{List<string>} or a \lstinline{string[]},
+				or it may be implemented as an iterator using \lstinline{yield return}.
+		\end{enumerate}
+	\item \textbf{Test} your implementation.
+		A small directory structure (based on an asset pack from Kenney\footnote{\url{https://www.kenney.nl/assets/pixel-vehicle-pack}}) is provided in the base repository for you to test on, and a set of unit tests
+		is provided based on this. You are also encouraged to test your implementations on other
+		directory structures.
 \end{enumerate}
+
+The skeleton project contains a file \texttt{Program.cs}, which you may find this useful when testing your code.
+There is also a unit test project which defines a series of tests using the NUnit\footnote{\url{https://nunit.org}} framework;
+these can be run locally within Visual Studio, and will also be run automatically via TravisCI when you submit a pull request
+on GitHub.
+
+\section*{Submission instructions}
+
+Begin by \textbf{forking} the GitHub repository at the following URL:
+
+\url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-7}
+
+Edit \texttt{DirectoryUtils.cs}, implementing the required functions.
+When you have finished, open a \textbf{pull request}.
+
+\textbf{Do not move or rename \texttt{DirectoryUtils.cs}, and do not edit or delete any of the files in the repository except for \texttt{DirectoryUtils.cs} and \texttt{Program.cs}}.
+Doing so will interfere with the automated testing scripts used to check your submission for correctness,
+and as a result may lead to you losing marks.
+
+Upload all material to GitHub and open a pull request by the deadline listed on LearningSpace.
+
+\section*{Marking criteria}
+
+Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}.
+
+Your work will be marked according to the following criteria:
+\begin{itemize}
+	\item \textbf{Functional coherence}. Is your implementation correct?
+		Your code will be run through TravisCI to verify that it gives the correct results for a sample of input values.
+	\item \textbf{Sophistication}. Have you made use of appropriate code structures and data structures?
+		Note the emphasis is on \textbf{appropriate}; extra credit will \textbf{not} be given for unnecessarily complex solutions.
+	\item \textbf{Maintainability: readability}. Is your code well commented? Are your identifier names appropriate and descriptive?
+		Have you adhered to appropriate coding standards?
+\end{itemize}
 
 \end{document}
