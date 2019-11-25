@@ -22,7 +22,7 @@
 }
 \lstset{language=[Sharp]C}
 
-\title{Worksheet 7: Recursion}
+\title{Worksheet 7: Traversal}
 \author{Dr Ed Powley}
 \module{COMP110}
 \version{1.0}
@@ -36,7 +36,7 @@
 
 \section*{Introduction}
 
-In this worksheet, you will implement a number of recursive C\# functions to analyse a directory of files.
+In this worksheet, you will implement a number of C\# functions to analyse a directory of files.
 
 A file system on a computer is organised into \emph{directories} (or \emph{folders}) and \emph{files}.
 A directory can contain files as well as recursively containing other directories.
@@ -82,6 +82,19 @@ The skeleton project contains a file \texttt{Program.cs}, which you may find thi
 There is also a unit test project which defines a series of tests using the NUnit\footnote{\url{https://nunit.org}} framework;
 these can be run locally within Visual Studio, and will also be run automatically via TravisCI when you submit a pull request
 on GitHub.
+
+The provided \lstinline{DirectoryUtils} class has some helper methods which you may find useful:
+\begin{itemize}
+    \item \lstinline{GetFileSize()} returns the size of the given file in bytes.
+    \item \lstinline{IsDirectory()} returns true if the given path refers to a directory --- for example,
+        this can be used to distinguish between directories and files.
+\end{itemize}
+The following methods from the .NET standard library, all in the \lstinline{System.IO} namespace, may also be useful:
+\begin{itemize}
+    \item \lstinline{Directory.GetDirectories()} returns an array containing the directories within the given directory.
+    \item \lstinline{Directory.GetFiles()} returns an array containing the files within the given directory.
+    \item \lstinline{Directory.GetFileSystemEntries()} returns an array containing both the files and the directories within the given directory.
+\end{itemize}
 
 \section*{Submission instructions}
 
