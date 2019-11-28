@@ -14,7 +14,7 @@
     urlcolor=cyan,
 }
 
-\title{Worksheet 4: Interfaces and Interactions - Heuristic Evaluations}
+\title{Worksheet 4: Interfaces and Interactions}
 \author{Alcwyn Parker	}
 \module{COMP280}
 \version{1.0}
@@ -26,24 +26,31 @@
 \section*{Introduction}
 
 \begin{marginquote}
-``No matter the language, learning to program will take a very long time, and is often very frustrating. I'm sorry. There is no solution. Just practice. Regular practice.
-
-\par --- \'Olafur Waage
+``Design is really an act of communication, which means having a deep understanding of the person with whom the designer is communicating.''
+\par --- \'Donald A. Norman
 \end{marginquote}
-\marginpicture{flavour_pic}{
-    \emph{SpaceChem} is a puzzle game in which players must apply computational thinking to build circuits which assemble
-    chemical molecules.
-}
+%\marginpicture{flavour_pic}{
+ %   \emph{SpaceChem} is a puzzle game in which players must apply computational thinking to build circuits which assemble
+ %   chemical molecules.
+%}
 
-To complete this worksheet, you are expected to rapid prototype a simple User Interface in Unreal Engine. Once complete, the interface will be subject to a heuristic evaluation by a peer. In return, you will evaluate someone else's interface design. To fulfil the requirements of this worksheet you are expected to submit evidence of the entire process in the form of one Unreal Engine project hosting the interface, screenshots of the interface, and the results from both heuristic evaluations in pdf format. 
+To complete this worksheet, you are expected to rapid prototype a simple user Interface in Unreal Engine or Unity. Once complete, the interface will be subject to a heuristic evaluation and then improved upon to accommodate the findings of the evaluation. 
 
 To complete this worksheet: 
 
 \begin{enumerate}[label=(\roman*)]
-    \item \textbf{Design} \& {implement} a simple UI in Unreal Engine;
-    \item \textbf{Designate} a peer to evaluate your user interface design;
-    \item \textbf{Evaluate} the user interface design of a peer
-    \item \textbf{Summarise} the improvements that could be made to your user interface design based on the results of the heuristic evaluation. 
+    \item \textbf{Design} a HUD for an FPS using Adobe XD or similar. The HUD interface must contain:
+    \begin{itemize}
+    	\item Enemy radar 
+	\item Health bar
+	\item Ammo
+	\item Pause menu
+	\item STRETCH GOAL - Controls window
+    \end{itemize}
+    \item \textbf{implement} the HUD in Unreal Engine or Unity
+    \item \textbf{carry out} a heuristic evaluation on the HUD 
+    \item \textbf{enhance} the initial HUD using the findings from the heuristic evaluation
+    \item \textbf{STRETCH GOAL: } if you finish this worksheet early, ask a peer to evaluate your interface and use the new 
 \end{enumerate}
 
 \subsection*{Assignment Setup} 
@@ -53,6 +60,15 @@ Begin by \textbf{forking} the following Git repository:
 \hyperlink{https://github.com/Falmouth-Games-Academy/comp280-worksheet-4}{https://github.com/Falmouth-Games-Academy/comp280-worksheet-4} 
 
 Use this repo to track all files related to this worksheet. Once you have completed the worksheet, make a pull request to receive formative feedback. 
+
+To fulfil the requirements of this worksheet you are expected to submit evidence of:
+
+\begin{itemize}
+	\item an initial interface design in the form of interactive prototype;
+	\item screenshots of the first implementation in engine;
+	\item the results from a heuristic evaluation;
+	\item and then screenshots of the final interface with enhancements based on the results from the heuristic evaluation
+\end{itemize}
 
 
 \section*{FAQ}
@@ -77,19 +93,15 @@ Use this repo to track all files related to this worksheet. Once you have comple
 
 \rubrichead{Each individual worksheet is marked according to this rubric.}
 \rubricfoot{Each worksheet is worth 11.1\% of the total marks for this assignment.}
+
 \begin{markingrubric}
 	\firstcriterion{Design of user interface}{30\%}
 		\grade\fail	There is no functioning user interface
-		\grade{There is a basic user interface with limited functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a basic user interface with some functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a user interface with good functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a well design user interface with much functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a well design user interface with much functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
+		\grade{There is a basic user interface with limited functionality}
+		\grade{There is a basic user interface with some functionality}
+		\grade{There is a user interface with good functionality}
+		\grade{There is a well design user interface with much functionality}
+		\grade{There is a well design user interface with much functionality}
 
 		
     \criterion{Rigour}{50\%}
@@ -101,18 +113,16 @@ Use this repo to track all files related to this worksheet. Once you have comple
 		\grade{There is a basic user interface with limited functionality}
 
 \criterion{Depth of insight}{20\%}
-    	\grade\fail	There is no functioning user interface
-		\grade{There is a basic user interface with limited functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a basic user interface with limited functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a basic user interface with limited functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a basic user interface with limited functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
-		\grade{There is a basic user interface with limited functionality
-			\par Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.}
+    	\grade\fail	None of the issues identified in the evaluation have been addressed
+		\grade{Few of the issues identified in the evaluation have been addressed}
+		\grade{Some of the issues identified in the evaluation have been addressed}
+		\grade{Many of the issues identified in the evaluation have been addressed}
+		\grade{All of the issues identified in the evaluation have been addressed }
+		\grade{The stretch goal has been met}
 
 \end{markingrubric}
+
+% https://www.reddit.com/r/unrealengine/comments/a7w2vq/how_to_design_a_fps_hud/
+% https://www.youtube.com/watch?v=5Gt444eN7Rg&list=PLSlkDq2rO1t5r1tj6gLWD_EesQ8IZtN_h
 
 \end{document}
