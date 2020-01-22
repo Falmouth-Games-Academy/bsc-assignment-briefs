@@ -7,10 +7,10 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Worksheet Tasks}
+\title{Creative Computing Project}
 \author{Brian McDonald}
 \module{COMP140}
-\version{2.0}
+\version{3.0}
 
 \begin{document}
 	
@@ -26,59 +26,88 @@
 		\par --- Scott McKay
 	\end{marginquote}
 	\marginpicture{flavour_pic}{
-		The \textbf{MetaMakers} undertake cutting edge Computational Creativity research at \textbf{Falmouth University}. Their main is to develop, combine, and extend artificial intelligence techniques to build inspirational software, and explore the philosophy of what it means for software to be creative. 
+		Pong Controller example from session 18-19 
 	}
 	
-	In this assignment, you are required to \textbf{write} a series of computer programs according to instructions.
+	In this assignment, you are required to \textbf{create} a game or other playful experience which \textbf{interfaces} with a custom controller.
 	
-	In order for programmers to communicate with each other regarding the technical aspects of a game development project, they must have good computational thinking skills, a strong foundational knowledge of computing principles, applied knowledge of program design notations and annotations, and a working knowledge of particular programming constructs (often as a result of writing their own versions). Such knowledge and skills take time and a sustained effort to develop. For this reason, you will work consistently across the semester by completing a series of bite-sized worksheets.
+	Experimentation, ingenuity, and creativity are at the heart of everything that professional game developers do. To this end, building your own custom game controller is the perfect place to exercise these characteristics. However, you will also gain invaluable exposure to working with computer hardware. In recent years, there has been considerable growth in the development of new fabrication technologies, such as 3D printers. In addition, electronics, from primitive transistors to complex computer chips, have all become much cheaper. Accessibility to these tools has, therefore, unveiled an unprecedented opportunity to invent and innovate in this space. Increasingly, app developers are augmenting mobile software with new wearable devices, and so to will game developers with the advent and increasing popularity of augmented reality games.
 	
-	This assignment is formed of several parts, \textbf{three} parts corresponding to a worksheet, addressing the following learning objectives:
+	
+	This assignment is formed of several parts
 	
 	\begin{enumerate}[label=(\Alph*)]
-		\item \textbf{Apply} the basic principles of programming in C++;
-		\item \textbf{Implement} algorithms in C++ and SDL2 using notations such as flowcharts and pseudocode;
-		\item \textbf{Apply} theoretical concepts such as communication protocols and object-orientated design patterns.
+		\item \textbf{Write}, as an \textbf{individual}, a draft game or other playful experience which interfaces with a custom controller
+		\item \textbf{Write}, an an \textbf{individual} a revised version of your project and submit it for Peer Review
+		\item \textbf{Write}, as an \textbf{individual}, a final version of your project
+		\item \textbf{Present}, as an \textbf{individual}, a practical demo of the computer program to your tutor that will:
+		\begin{enumerate}[label=\roman*.]
+			\item \textbf{demonstrate} your academic integrity;
+			\item as well as \textbf{demonstrate} your \textbf{individual} programming \& hardware knowledge.
+		\end{enumerate}
+	\end{enumerate}
+
+
+	As this module is about pushing your creativity in creating an experience which blends a physical controller and a digital application, we are going to enforce the following \textbf{constraints} and make some \textbf{recommendations}
+	
+	\subsection{Constraints}
+	\begin{enumerate}[label=(\Alph*)]
+		\item You should not recreate a twin stick joypad
+		\item You should not build a custom joystick/fighting stick
+		\item You should avoid buttons, other sensors could be used instead
+		\item You should not submit a bare bread board
+		\item You should have a traditional control scheme (keyboard, mouse, keyboard), so your game functionality can be quickly tested 
+		\item The main \textbf{readme.md} should be updated with all sources used to create the project
 	\end{enumerate}
 	
-	For each worksheet you must:
-	
-	\begin{enumerate}[label=(\roman*)]
-		\item \textbf{Read} the instructions in the worksheet;
-		\item \textbf{Complete} all of the problems presented in the worksheet;
-		\item \textbf{Make} the solution available to the module leader for formative review;
-		\item and \textbf{submit} the solution summatively on the LearningSpace.
+	\subsection{Recommendations}
+	\begin{enumerate}[label=(\Alph*)]
+		\item You should consider building a 2D Game
+		\item You should avoid using 3D printed elements in your controller
+		\item You should use found objects/recycled objects for your controller
 	\end{enumerate}
 	
 	\subsection*{Assignment Setup}
 	
-	This assignment consists of \textbf{multiple formative submissions}, followed by a \textbf{single summative submission}.
-	You will receive \textbf{immediate informal feedback} after each formative submission.
+	.Fork the GitHub repository at:
 	
-	Each worksheet contains detailed submission instructions; you will generally be required to \textbf{fork} a repository on GitHub and submit a \textbf{pull request} containing your solution.
+	\indent \url{https://github.com/Falmouth-Games-Academy/comp140-Project}
 	
-	At the end of the semester you will be required make a final summative submission of all of your worksheet solutions.
-	Prepare a \textbf{single \texttt{.zip} file} containing your five worksheet submissions \textbf{in separate folders}, and upload it to the appropriate submission area on LearningSpace.
-	This final submission is subject to the usual university policies regarding late submission or non-submission---even if you have met all the formative deadlines for individual worksheets,
-	failure to make a submission via LearningSpace by the summative deadline will be subject to late submission penalties.
+	Use the existing directory structure, the Unity Project should be placed inside the \textbf{Unity Project} folder and the Arduino project files should be placed inside \textbf{Arduino Project} folder. Ensure that you maintain the \texttt{readme.md} file.
+	
+	\subsection*{Part A}
+	
+	Part A consists of a \textbf{single formative submission}. You should demonstrate your progress to a tutor in the timetabled session in \textbf{Week 6}
+	
+	The tutor will give immediate feedback in class.
+	
+	\subsection*{Part B}
+	
+	Part B consists of a \textbf{single formative submissions}. This will be submitted to the peer review session in the timetabled session in \textbf{Week 9}
+	
+	You will receive immediate feedback from your peers
+	
+	
+	\subsection*{Part C}
+	
+	Part C consists of a \textbf{single summative submissions}. You should download your project from GitHub, and submit a \textbf{zip file} which contains the following
+	
+	\begin{enumerate}
+		\item The Unity Project including all source code and assets
+		\item The Arduino Project
+		\item Two images of the controller, one of the wiring and another with case/housing
+		\item Footage of the controller and game/experience being played
+		\item readme.md with references to all sources and assets used in the project
+	\end{enumerate}
+	
+	
+	\subsection*{Part D}
+	To complete Part D, implement the final changes to your project. Prepare a practical demonstration of the project. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session. 
+	
+	You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
 	
 	\section*{Additional Guidance}
-	
-	Make a submission on time and you will get a basic pass on that worksheet,
-	even if your solution is incorrect or incomplete.
-	A solution meeting all of the correctness and/or functionality criteria on the worksheet is required to demonstrate basic proficiency,
-	with higher grades contingent on your solution being of a high quality.
-	The individual worksheets give more guidance as to what constitutes ``quality'' for that particular exercise,
-	but bear in mind that a major purpose of these worksheets is to assess your ability to communicate
-	complex computational ideas in English, in notation and in program code.
-	Thus pay particular attention to the precision and clarity of your written communication,
-	and the readability and maintainability of your source code.
-	
-	It is very important to keep up with the worksheets. Missing a deadline results in an automatic mark of 0\% for that worksheet.
-	The underlying skills being developed are also critically important to your progression as a programmer, so do not neglect the work.
-	Do not underestimate the time it takes to complete tasks that may appear trivial when you first see them.
-	Do not leave work until the last minute! With programming in particular, trying to ``cram'' the work just before the deadline is a sure path to failure. Aim for consistent, steady progress over the course of the semester.
-	
+
 	Nobody learns in a vacuum: you are allowed, and indeed encouraged, to discuss your work with your peers. However you must be very careful to avoid falling into \textbf{academic misconduct}, in particular \textbf{plagiarism}. If any part of your solution is \textbf{not your own individual work}, you must make this as clear as possible in your submission, for example in source code comments.
 	
 	\section*{FAQ}
@@ -99,40 +128,111 @@
 		If you have discovered an issue with the brief itself, the source files are available at: \\
 		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
 		Please make a pull request and comment accordingly.
+		
+		\item \textbf{What coding standards are we using on this assignment?}\\
+		We are using the Microsoft's coding styles for C\# \\
+		\url{https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions}
 	\end{itemize}
 	
 	\section*{Additional Resources}
 	
-	Please see individual worksheets.
-	
-	%\begin{itemize}
-	%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
-	%    \item http://agilemanifesto.org/
-	%\end{itemize}
-	
-	\begin{markingrubric}
-		\firstcriterion{Timely submission}{40\%}
-		\gradespan{5}{\fail Nothing is submitted by the deadline, or the submission is not a reasonable attempt at the
-			problems set forth in the worksheet.
-			\par \textbf{This results in a mark of 0\% for this worksheet, regardless of other criteria.}}
-		\gradespan{1}{A reasonable attempt at the worksheet is submitted on time.}
-		%
-		\criterion{Worksheets}{20\% $\times$ 3 worksheets}
-		\grade\fail	A reasonable attempt at the worksheet is not submitted by the deadline.
-		\grade 		The submission is either late or on-time.
-		\par		The submission is a reasonable attempt, but is incomplete or incorrect.
-		\grade 		The submission is on time.
-		\par 		The submission is complete and correct.
-		\par		The submission has significant quality issues.
-		\grade 		The submission is on time.
-		\par 		The submission is complete and correct.
-		\par		The submission has some quality issues.
-		\grade 		The submission is on time.
-		\par 		The submission is complete and correct.
-		\par		The submission has very few quality issues.
-		\grade 		The submission is on time.
-		\par 		The submission is complete and correct.
-		\par		The submission has almost no quality issues.
-	\end{markingrubric}
+\rubrichead{All submissions and assessment criteria for this assignment are individual.}
+\begin{markingrubric}
+	%
+	\firstcriterion{Basic Competency Threshold}{30\%}
+	\gradespan{1}{\fail At least one part is missing or is inadequate.}
+	\gradespan{5}{Adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to set briefs and/or self-initiated activity.
+		\par The work demonstrates an adequate, ethically informed, real-world experience of industry/business environments and markets.
+		\par Enough work is available to hold a meaningful discussion.
+		\par Adequate participation in-class peer-review activities at least at the level of basic competency.
+		\par Clear evidence of programming knowledge.
+		\par Constraints followed
+		\par No breaches of academic integrity.
+}
+	%
+	\criterion{PROCESS: \\Sophistication of Code}{15\%}
+	\grade\fail No insight into the appropriate use of programming constructs is evident from the source code.
+	\par No attempt to structure the program (e.g. one monolithic function).
+	\grade Little insight into the appropriate use of programming constructs is evident from the source code.
+	\par The program structure is poor.
+	\grade Some insight into the appropriate use of programming constructs is evident from the source code.
+	\par The program structure is adequate.
+	\grade Much insight into the appropriate use of programming constructs is evident from the source code.
+	\par The program structure is appropriate.
+	\grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+	\par The program structure is effective. There is high cohesion and low coupling.
+	\grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+	\par The program structure is very effective. There is high cohesion and low coupling.
+	%
+	\criterion{PROCESS: \\Maintainability of Code}{10\%}
+	\grade\fail There are no comments in the source code, or comments are misleading.
+	\par Most variable names are unclear or inappropriate.
+	\par Code formatting hinders readability.
+	\grade The source code is only sporadically commented, or comments are unclear.
+	\par Some identifier names are unclear or inappropriate.
+	\par Code formatting is inconsistent or does not aid readability.
+	\grade The source code is somewhat well commented.
+	\par Some identifier names are descriptive and appropriate.
+	\par An attempt has been made to adhere to Microsoft's formatting style.
+	\par There is little obvious duplication of code or of literal values.           
+	\grade The source code is reasonably well commented.
+	\par Most identifier names are descriptive and appropriate.
+	\par Most code adheres to the Microsoft's formatting style.
+	\par There is almost no obvious duplication of code or of literal values.   
+	\grade The source code is reasonably well commented in the Microsoft's style
+	\par Almost all identifier names are descriptive and appropriate.
+	\par Almost all code adheres to the Microsoft's formatting style.
+	\par There is no obvious duplication of code or of literal values. Some literal values can be easily changed in the Unity Editor.
+	\grade The source code is very well commented, with Python doc-strings.
+	\par All identifier names are descriptive and appropriate.
+	\par All source code adheres to the Microsoft's formatting style.
+	\par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily changed in the Unity Editor.
+	%
+	\criterion{INDUSTRY: Sophistication of Controller Design}{15\%}
+	\grade\fail The solution lacks even a basic level of sophistication.
+	\grade The solution evidences some sophistication.
+	\par There is no attempt to innovate in the design of the housing/case or use of components.
+	\grade The solution evidences little sophistication.
+	\par The housing/case shows some evidence of thought, and/or some interesting components have been selected.
+	\grade The solution evidences much sophistication.
+	\par The housing/case shows much evidence of iteration and integration with the digital component, and/or some conventional components have been used in an interesting way
+	\grade The solution evidences considerable sophistication.
+	\par The housing/case and components use is almost at a professional standard seen at alt-ctrl-GDC
+	\grade The solution evidences significant sophistication..
+	\par The housing/case and components use is at a professional standard seen at alt-ctrl-GDC
+	%  
+	\criterion{INDUSTRY: \\Creative Response to Brief}{15\%}
+	\grade\fail No creativity.
+	\par The work is a clone of an existing work with mere cosmetic alterations.
+	\grade Little creativity.
+	\par The work is derivative of existing works, with only minor alterations.
+	\grade Some creativity.
+	\par The work is derivative of existing works, demonstrating little divergent and/or subversive thinking.
+	\grade Much creativity.
+	\par The work is somewhat novel, demonstrating some divergent and/or subversive thinking.
+	\grade Considerable creativity.
+	\par The work is novel, demonstrating significant divergent and/or subversive thinking.
+	\grade Significant creativity.
+	\par The work is highly original, with strong evidence of divergent and/or subversive thinking.
+	%
+	\criterion{INDUSTRY: \\Use of Version Control}{15\%}
+	\grade\fail Version control (e.g. GitHub) has not been used.
+	\grade Source code has been checked into version control (e.g. GitHub).
+	\grade Source code has been checked into version control (e.g. GitHub) at least once per week.
+	\par Sensible commit messages are present.
+	\grade Source code  has been checked into version control (e.g. GitHub) several times per week.
+	\par Commit messages are clear, concise and relevant.
+	\par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
+	\par Comments to peers are somewhat constructive and provide some insight.
+	\grade Source code has been checked into version control (e.g. GitHub) several times per week.
+	\par Commit messages are clear, concise and relevant.
+	\par There is evidence of meaningful engagement with peers (e.g.\ code review).
+	\par Comments to peers are reasonably constructive and provide much insight.
+	\grade Source code has been checked into version control (e.g. GitHub) many times per week.
+	\par Commit messages are clear, concise and relevant.
+	\par There is evidence of effective engagement with peers (e.g.\ code review).
+	\par Comments to peers are reasonably constructive and provide considerable insight.
+	%
+\end{markingrubric}
 	
 \end{document}
