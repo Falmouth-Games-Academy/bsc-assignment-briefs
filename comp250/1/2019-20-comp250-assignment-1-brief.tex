@@ -1,8 +1,20 @@
-\title{Portfolio of game engine components --- AI (Task 1)}
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage[hyphens]{url}
+\usepackage{todonotes}
+
+\title{Portfolio of game engine components --- AI}
+\author{Dr Ed Powley}
+\module{COMP250}
+\version{4.0}
+
+\begin{document}
 
 \maketitle
-
-\label{p:part1-start}
 
 \section*{Introduction}
 
@@ -20,8 +32,8 @@ In this assignment, you are required to \textbf{design} and \textbf{implement} a
 implementing one or more artificial intelligence (AI) techniques.
 Note that ``component'' here may also include tools to help game designers to author AI behaviours or systems.
 
-It is strongly recommended that your component is integrated into your COMP240 group game development project,
-however if this is not appropriate you may integrate it into another of your current or previous development projects.
+In the interests of managing workload, you are strongly encouraged to integrate your component into your GAM240 group game development project.
+However if this is not appropriate you may integrate it into another of your current or previous development projects, or into a standalone demo application.
 You may use any programming language and game engine you deem appropriate,
 including visual scripting languages such as Blueprints;
 this choice will probably be dictated by your choice of game.
@@ -45,20 +57,16 @@ This assignment is formed of several parts:
 			\item \textbf{outline} the concept of your component;
 			\item \textbf{identify} the game into which your component will be integrated, and how it will fit into
 				the overall game concept;
-			\item \textbf{describe} the key requirements of your component.
+			\item \textbf{describe} the key requirements of your component;
+			\item \textbf{state} the AI technique(s) that the component will demonstrate;
+			\item \textbf{justify} that the proposed component is feasible in scope.
 		\end{enumerate}
-	\item \textbf{Implement} a draft versions of your component that will:
+	\item \textbf{Implement} your component.
+	\item \textbf{Record} a 5-minute commentated video demonstration of your component that will:
 		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{implement} the user stories from your Trello board.
-		\end{enumerate}
-	\item \textbf{Implement} a final version of your component that will:
-		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{revise} any issues raised by your tutor and/or your peers.
-		\end{enumerate}
-	\item \textbf{Present} a practical demo of the computer program to your tutor that will:
-		\begin{enumerate}[label=(\roman*)]
-			\item \textbf{demonstrate} your academic integrity;
-			\item \textbf{demonstrate} your individual programming knowledge and communication skills.
+			\item \textbf{demonstrate} the component in action;
+			\item \textbf{describe} the architecture of the component, with reference to source code as appropriate;
+			\item \textbf{justify} the choices made in architecting the component.
 		\end{enumerate}
 \end{enumerate}
 
@@ -67,7 +75,7 @@ This assignment is formed of several parts:
 This assignment is a \textbf{programming} task.
 There is no template GitHub repository for this assignment;
 you should work within the existing source control repository for your game
-or create a new GitHub repository as appropriate.
+or create a new repository as appropriate.
 Either way, remember to modify the \texttt{.gitignore} file (or equivalent on other version control systems) to exclude temporary build files
 from the repository.
 
@@ -86,7 +94,7 @@ Part A consists of a \textbf{single formative submission}. This work is \textbf{
 To complete Part A, prepare the handout using any word processing tool.
 Your handout may include images and/or links to online videos.
 
-Show the handout to the \textbf{tutor} for immediate \textbf{informal feedback}.
+Show the handout to the \textbf{tutor} in the timetabled proposal review session in week 2 for immediate \textbf{informal feedback}.
 
 \subsection*{Part B}
 
@@ -109,27 +117,13 @@ You will receive immediate \textbf{informal feedback} from your \textbf{peers}.
 
 Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.
 
-To complete Part C, revise your component based on the feedback you have received. Then, upload your game project to the LearningSpace.
-Include a \texttt{readme.md} file detailing which parts of the project constitute your component for this assignment.
-If your project exceeds the 1GB limit for LearningSpace uploads, you are advised to remove unnecessary assets ---
-you need only include enough content (e.g.\ one level) to allow your AI component to be assessed.
+To complete Part C, record a 5-minute video demonstrating your component.
+The video should show the component in action, as well as some illustration of the underlying architecture.
+The video should include a voiceover explaining the concept of the component,
+commentating the demonstration, and describing the architecture.
+Advanced video editing is not required --- a screen-captured video recorded using OBS or similar software is fine.
 
-Please note, the LearningSpace will only accept a single \texttt{.zip} file, which must include your submissions for
-\textbf{both} Task 1 (Game Component) \textbf{and} Task 2 (MicroRTS Bot).
-
-You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
-
-\subsection*{Part D}
-
-Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:
-
-\begin{enumerate}[label=(\alph*)]
-	\item Enough work is available to hold a meaningful discussion;
-	\item Clear evidence of programming knowledge \textbf{and} communication skills;
-	\item No breaches of academic integrity.
-\end{enumerate}
-
-To complete Part D, prepare a practical demonstration of the computer program. Ensure that the source code and related assets are pushed to GitHub and a pull request is made prior to the scheduled viva session. Then, attend the scheduled viva session.
+Upload your video file to the submission area on LearningSpace. You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
 
 \section*{Additional Guidance}
 
@@ -218,14 +212,14 @@ convention or obvious solutions.
 
 \rubricyeartwo
 \begin{markingrubric}
-	\firstcriterion{Basic Competency Threshold}{40\%}
+	\firstcriterion{Basic Competency Threshold}{30\%}
 		\grade\fail At least one part is missing or is unsatisfactory.
 		\gradespan{5}{Submission of all parts is timely and satisfactory.
 			\par Enough work is available to hold a meaningful discussion.
 			\par Clear evidence of programming knowledge and communication skills.
 			\par No breaches of academic integrity.}
 %
-    \criterion{Functional Coherence}{15\%}
+    \criterion{Functional coherence}{20\%}
         \grade \fail Few requirements have been implemented  and/or the code fails to compile or run.
             \par Many obvious and serious bugs are detected.
         \grade Some requirements have been implemented.
@@ -243,63 +237,55 @@ convention or obvious solutions.
             \par There is no evidence of feature creep.
             \par Few to no bugs are detected.
 %
-    \criterion{Sophistication}{15\%}
-        \grade \fail Little insight into the appropriate use of programming constructs is evident from the source code.
+    \criterion{Sophistication of architecture}{20\%}
+        \grade \fail Little insight into the appropriate use of programming constructs and data structures is evident.
             \par The program structure is poor or non-existant.
-        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
+        \grade Some insight into the appropriate use of programming constructs and data structures is evident.
             \par The program structure is adequate.
-        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
+        \grade Much insight into the appropriate use of programming constructs and data structures is evident.
             \par The program structure is appropriate.
-        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
+        \grade Considerable insight into the appropriate use of programming constructs and data structures is evident.
             \par The program structure is effective. There is high cohesion and low coupling.
-        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
+        \grade Significant insight into the appropriate use of programming constructs and data structures is evident.
             \par The program structure is very effective. There is high cohesion and low coupling.
-        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
+        \grade Extensive insight into the appropriate use of programming constructs and data structures is evident.
             \par The program structure is extremely effective. There is very high cohesion and very low coupling.
 %
-    \criterion{Maintainability}{15\%}
-        \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
-            \par Few identifier names are clear or inappropriate.
-            \par Code formatting hinders readability.
-        \grade The code is well commented.
-            \par Some identifier names are descriptive and appropriate.
-            \par An attempt has been made to adhere to a consistent formatting style.
-             \par There is little obvious duplication of code or of literal values.           
-        \grade The code is reasonably well commented.
-            \par Most identifier names are descriptive and appropriate.
-            \par Most code adheres to a sensible formatting style.
-             \par There is almost no obvious duplication of code or of literal values.   
-        \grade The code is reasonably well commented, with appropriate high-level documentation.
-            \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to a sensible formatting style.
-             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered''. 
-        \grade The code is very well commented, with comprehensive appropriate high-level documentation.
-            \par All identifier names are descriptive and appropriate.
-            \par All code adheres to a sensible formatting style.
-             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source.  
-        \grade The code is commented extremely well, with comprehensive appropriate high-level documentation.
-            \par All identifier names are descriptive and appropriate.
-            \par All code adheres to a sensible formatting style.
-            \par There is no duplication of code or of literal values. Nearly all literal values are, where appropriate, easily ``tinkered'' outside of the source.  
-%
-    \criterion{Creative Flair}{15\%}
-        \grade\fail Little or no creativity.
-            \par The work is a clone of an existing work with mere cosmetic alterations.
-            \par The work delivers little or no fun and/or engagement.
-        \grade Some creativity.
-            \par The work is derivative of existing works, with only minor alterations.
-            \par The work delivers some fun and/or engagement.
-        \grade Much creativity.
-            \par The work is derivative of existing works, demonstrating little divergent and/or subversive thinking.
-            \par The work delivers much fun and/or engagement.
-        \grade Considerable creativity.
-            \par The work is somewhat novel, demonstrating some divergent and/or subversive thinking.
-            \par The work delivers considerable fun and/or engagement.
-        \grade Significant creativity.
-            \par The work is novel, demonstrating significant divergent and/or subversive thinking.
-            \par The work delivers significant fun and/or engagement.
-        \grade Extensive creativity.
-            \par The work is highly original, with strong evidence of divergent and/or subversive thinking.
-            \par The work delivers extensive fun and/or engagement.
-    \label{p:part1-end}
+    \criterion{Sophistication of AI techniques}{30\%}
+        \grade\fail Lack of basic understanding of AI techniques is evident.
+            \par AI techniques are unsuited to the task, and/or justification is absent or incoherent.
+            \par Application of AI is trivial.
+        \grade Understanding of basic AI techniques is demonstrated.
+            \par AI techniques are suited to the task, with an attempt at justification.
+            \par Application of AI is basic but effective.
+        \grade Working knowledge of basic AI techniques is demonstrated.
+            \par AI techniques are suited to the task, with adequate justification.
+            \par Application of AI is somewhat sophisticated.
+        \grade Working knowledge of standard AI techniques is demonstrated.
+            \par AI techniques are suited to the task, with good justification.
+            \par Application of AI is reasonably sophisticated.
+        \grade Extensive knowledge of advanced AI techniques is demonstrated.
+            \par AI techniques are highly suited to the task, with strong justification.
+            \par Application of AI is sophisticated and complex.
+        \grade Mastery of cutting-edge AI techniques is demonstrated.
+            \par AI techniques are highly suited to the task, with very strong justification.
+            \par Application of AI is highly sophisticated, complex, and state-of-the-art.
 \end{markingrubric}
+
+\section*{Appendix: Contracts}
+
+Choose \textbf{one} of the following contracts to implement in your component:
+
+\begin{itemize}
+    \item Non-player character behaviour --- note that this must include something more than the basic pathfinding and perception behaviours included in Unity and Unreal
+    \item Pathfinding with advanced movement, e.g. physics-based vehicle steering
+    \item An authored AI behaviour system based on something other than finite state machines or behaviour trees, e.g. planning or utility-based AI
+    \item A solver for a puzzle game
+    \item An AI director or adaptive difficulty system
+    \item A procedural content generation system
+    \item Another AI component of your choice,
+        subject to discussion with your tutor
+        and demonstration that you have researched the feasibility of your chosen techniques.
+\end{itemize}
+
+\end{document}
