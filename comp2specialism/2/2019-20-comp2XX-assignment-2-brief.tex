@@ -7,10 +7,15 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
+\usepackage{xcolor}
+
 \title{Individual Specialist Computing Project - Technical Report}
 \author{Dr Michael Scott}
 \module{COMP2**}
 \version{0.1}
+
+\newcommand\ytl[2]{
+\parbox[b]{8em}{\hfill{\color{cyan}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \parbox[c]{4.5cm}{\vspace{7pt}\color{red!40!black!80}\raggedright\sffamily #2.\\[7pt]}\\[-3pt]}
 
 \begin{document}
 
@@ -29,9 +34,9 @@
     showcasing your porfolio work to potential employers.
 }
 
-In this assignment, you are required to create and present both a poster and website in which you will report the outcome of practice-based research related to your \textit{individual specialist computing project}.
+For this assignment, you will create and present both a poster and web page in which you report the outcome of practice-based research related to the technical architecture of your individual specialist computing project.
 
-Whether you are going to apply for a role in the games industry or for a role further afield, employers will want to know what you can do and what value will you bring
+Whether you are going to apply for a role in the industry or for a role further afield, employers will want to know what you can do and what value will you bring
 to their company. People care more about concrete practical examples of your work experience and your skills, and so it is important to develop a comfort with demonstrating
 and discussing technical projects. Hence, this `technical report' assignment is framed around how you communicate a potential portfolio piece to an employer.
  
@@ -43,8 +48,8 @@ There are \textbf{TWO} key learning outcomes which you need to address in your t
 	\item[LO5. ] \textbf{Develop} an argument on a topic using appropriate research methods, primary and secondary sources, and academic conventions.
 \end{itemize}
 
-As such, there needs to an element of reflection in your technical report where you analyse the advantages and disadvantages of your approach to building
-your computing artefact. There also needs to be an element of research in which you develop an \textit{argument} which your support through appropriate methods. By argument,
+As such, there needs to be an element of reflection in your technical report where you analyse the advantages and disadvantages of the shape of 
+your computing artefact. There also needs to be an element of research in which you develop an \textit{argument} which you support through appropriate methods. By argument,
 we mean ``an evidence-based defense of a non-obvious position on a complex issue''. This is \textbf{not} a traditional academic essay, and so please do not take a formal approach and do not restrict yourself to academic sources. Though you need to follow academic conventions, it is not a literature review! Citing the grey literature is not only acceptable but is encouraged. The best way of achieving both of these learning outcomes is through a process of practice-based research. This means we anticipate that you conduct ``an original investigation in order to gain new knowledge by means of practice and the outcomes of that practice''. Typically, tinkering with your artefact, experimenting with ways of doing things, and comparing outcomes to see what is effective.
 
 This assignment is directly linked to the `computing artefact' assignment in the specialist module that you have selected. Accordingly, the assignment is formed of these parts:
@@ -75,18 +80,18 @@ This assignment is directly linked to the `computing artefact' assignment in the
 			\item \textbf{analysing} the merits and flaws of these decisions and approaches;
 			\item as well as \textbf{explaining} your practice-based research.
 		\end{enumerate}
-	\item \textbf{Prepare} a website that will:
+	\item \textbf{Prepare} a report as a web page that will:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{describe} your computing artefact;
 			\item \textbf{illustrate} the architecture of your computing artefact;
 			\item \textbf{embed} a video of your computing artefact;
 			\item \textbf{communicate} your practice-based research;
-			\item and \textbf{defends} an argument related to the outcome of this research.
+			\item and \textbf{defend} an argument related to the outcome of this research.
 		\end{enumerate}		
-	\item \textbf{Present}, as an individual, a website to your tutor that will:
+	\item \textbf{Present}, as an individual, the web page to your tutor, ensuring that you:
 		\begin{enumerate}[label=(\roman*)]
 			\item \textbf{demonstrate} your academic integrity;
-			\item as well as \textbf{showcase} your \textbf{individual} programming knowledge.
+			\item as well as \textbf{showcase} your knowledge of system architecture/research.
 		\end{enumerate}			
 \end{enumerate}
 
@@ -177,7 +182,7 @@ Part E is a \textbf{single formative submission}. This work is \textbf{individua
 	\item Enough work is available to conduct a meaningful review.
 \end{enumerate}
 
-To complete Part E, produce a web page. You may use any framework to prepare the website, for example WordPress, but you should follow the layout suggested in the portfolio development workshop sessions. It is likely that the technical report represents one web page in the portfolio website that you have created.  Bring the digital version of the website to the supervision session in Week 10.
+To complete Part E, produce a web page containing your report. You may use any framework to prepare the website, for example WordPress, but you should follow the layout suggested in the portfolio development workshop sessions. It is likely that the technical report represents part of the portfolio website that you have created.  Bring the digital version of the website to the peer review session in Week 9 and the supervision session in Week 10.
 
 You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
@@ -185,7 +190,7 @@ You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 Part F is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis.  Please refer to the marking rubric at the end of this document for further detail.
 
-Update the website based on the feedback that you received in Part E. Upload the \texttt{LearningSpace} by the time/date specified in the list of deadlines available on \url{myfalmouth.falmouth.ac.uk} (typically, shortly following the supervision meetings in Week 10) and ensure that you include your website, poster in your submission to the `technical report' submission queue. Please note that you should upload the video of your artefact to the appropriate submission queue for the `computing artefact` assignment. 
+Update the website based on the feedback that you received in Part E. Upload to \texttt{LearningSpace} by the time/date specified in the list of deadlines available on \url{myfalmouth.falmouth.ac.uk} (typically, shortly following the supervision meetings in Week 10) and ensure that you include your website, poster in your submission to the `technical report' submission queue. Please note that you should upload the video of your artefact to the appropriate submission queue for the `computing artefact` assignment. 
 
 Then, attend the timetabled viva session.
 
@@ -215,6 +220,26 @@ font size is legible on the printed out poster.
     		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
     		 Please make a pull request and comment accordingly.
 \end{itemize}
+
+\begin{table}[!h]
+\caption{Indicative Assignment Timeline}
+\centering
+\begin{minipage}[t]{.7\linewidth}
+\color{gray}
+\rule{\linewidth}{1pt}
+\ytl{Week 2}{Show Proposal to Supervisor (Part A)}
+\ytl{Week 4}{Show Computing Artefact Work-in-Progress to Supervisor (Part B)}
+\ytl{Week 6}{Show Computing Artefact Work-in-Progress to Supervisor (Part B)}
+\ytl{Week 8}{Show Draft Poster to Supervisor (Part C)}
+\ytl{Week 8}{Present Poster to Peers (Part D)}
+\ytl{Week 9}{Peer Review Web Page (Part E)}
+\ytl{Week 10}{Show Web Page to Supervisor (Part E)}
+\ytl{Week 10}{Submit Poster and Web Page to LearningSpace (Part F)}
+\ytl{Week 13}{Present Web Page at Viva (Part F)}
+\bigskip
+\rule{\linewidth}{1pt}%
+\end{minipage}%
+\end{table}
 
 \rubricyeartwo
 \rubrichead{This rubric applies to the assessment of the \textbf{poster} in Part D.}
@@ -344,22 +369,22 @@ font size is legible on the printed out poster.
         \par There is some structure.
             \par Some sentences and paragraphs are well constructed.
         \par Most in-text citations and quotations are correct.
-        \par The reference section is complete and well-formed in Harvard, ACM or IEEE format.
+        \par The reference section is complete and mostly well-formed in Harvard, ACM or IEEE format.
         \grade Some evidence for mastery of academic conventions.
             \par There is much structure, highlighting the argument.
             \par Most sentences and paragraphs are well constructed, clearly articulating points in the argument.
         \par All in-text citations and quotations are correct.
-        \par The reference section is complete and well-formed in Harvard, ACM or IEEE format.
+        \par The reference section is complete and entirely well-formed in Harvard, ACM or IEEE format.
         \grade 	Much evidence for mastery of academic conventions.
             \par There is considerable structure, bolstering the argument.
             \par Most sentences and paragraphs are well constructed, clearly articulating and signposting points in the argument.
         \par All in-text citations and quotations are correct.
-        \par The reference section is complete and well-formed in Harvard, ACM or IEEE format.
+        \par The reference section is complete and entirely well-formed in Harvard, ACM or IEEE format.
         \grade 	Considerable evidence for mastery of academic conventions.
             \par There is significant structure, supporting the logical flow of the argument.
             \par Nearly all sentences and paragraphs are well constructed, emphasising points in the argument.
         \par All in-text citations and quotations are correct.
-        \par The reference section is complete and well-formed in Harvard, ACM or IEEE format.
+        \par The reference section is complete and entirely well-formed in Harvard, ACM or IEEE format.
 \end{markingrubric}
 
 \end{document}
