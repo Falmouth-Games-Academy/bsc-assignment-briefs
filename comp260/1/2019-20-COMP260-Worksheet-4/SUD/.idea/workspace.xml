@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe7321f0-2f24-40f8-8c5e-7533ea4b6b11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/housepriceapp/predictorapp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/houseprices/ml_house_data_set.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/houseprices/train_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/houseprices/trained_house_classifier_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/http/base http/client/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/http/base http/server/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/http/http hiscores/Pyhthon HTTP Server/Server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/http/http hiscores/Python HTTP Client/Client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/sin_table_estimator/trained_model.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../COMP704/L3/sin_table_estimator/trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../L3/Chat Service/Chat Client/chatclient.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../L3/Chat Service/Chat Client/chatclient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../COMP704/L3/base http/client/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../COMP704/L3/base http/server/server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../COMP704/L3/http hiscores/Pyhthon HTTP Server/Server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../COMP704/L3/http hiscores/Python HTTP Client/Client.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1XZled6h0aS10lElx9oMX6PuJUg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe7321f0-2f24-40f8-8c5e-7533ea4b6b11" name="Default Changelist" comment="" />
+      <created>1581261593289</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581261593289</updated>
+      <workItem from="1581261595559" duration="1729000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
