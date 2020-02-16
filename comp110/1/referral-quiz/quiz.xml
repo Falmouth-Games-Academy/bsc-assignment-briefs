@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<quiz><question type="description">
+                <name>
+                    <text>refer_q1_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;SpaceChem&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q2_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Binary notation&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q3_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Flowcharts and pseudocode&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q4_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Logic gates&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="cloze">
+                <name>
+                    <text>refer_q4</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Complete the following truth table:&lt;/p&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;A&lt;/th&gt;&lt;th&gt;B&lt;/th&gt;&lt;th&gt;C&lt;/th&gt;&lt;th&gt;A or not B&lt;/th&gt;&lt;th&gt;A or C&lt;/th&gt;&lt;th&gt;(A or not B) and (A or C)&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;&lt;tr&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%100%False~%0%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%100%False~%0%True}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%100%False~%0%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%100%False~%0%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%100%False~%0%True}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%100%False~%0%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%100%False~%0%True}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;td&gt;{1:MULTICHOICE:%0%False~%100%True}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q5_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Computational complexity&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q5_code</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;p&gt;Consider the following C# function:
+&lt;pre&gt;static bool hasDuplicate(List&lt;int&gt; list)
+{
+    for (int i = 0; i &lt; list.Count; i++)
+    {
+        for (int j = 0; j &lt; list.Count; j++)
+        {
+            Console.WriteLine("Comparing {0} and {1}", i, j);
+            if (i != j &amp;&amp; list[i] == list[j])
+            {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="shortanswer">
+                <name>
+                    <text>refer_q5_1</text>
+                </name>
+                <questiontext format="html">
+                    <text>If the list has 3 elements, how many times will the Console.WriteLine function be called in the worst case?</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>9</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="shortanswer">
+                <name>
+                    <text>refer_q5_2</text>
+                </name>
+                <questiontext format="html">
+                    <text>If the list has 5 elements, how many times will the Console.WriteLine function be called in the worst case?</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="100">
+                    <text>25</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="multichoice">
+                <name>
+                    <text>refer_q5_3</text>
+                </name>
+                <questiontext format="html">
+                    <text>If the list has n elements, how many times will the Console.WriteLine function be called in the worst case?</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="0">
+                    <text>n</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer><answer format="moodle_auto_format" fraction="0">
+                    <text>2n</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer><answer format="moodle_auto_format" fraction="100">
+                    <text>n&lt;sup&gt;2&lt;/sup&gt;</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer><answer format="moodle_auto_format" fraction="0">
+                    <text>2&lt;sup&gt;n&lt;/sup&gt;</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="multichoice">
+                <name>
+                    <text>refer_q5_4</text>
+                </name>
+                <questiontext format="html">
+                    <text>What word could we use to describe the computational complexity of this function?</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>1.0000000</defaultgrade>
+                <penalty>0.3333333</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            <answer format="moodle_auto_format" fraction="0">
+                    <text>Constant</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer><answer format="moodle_auto_format" fraction="0">
+                    <text>Linear</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer><answer format="moodle_auto_format" fraction="100">
+                    <text>Quadratic</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer><answer format="moodle_auto_format" fraction="0">
+                    <text>Logarithmic</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer><answer format="moodle_auto_format" fraction="0">
+                    <text>Exponential</text>
+                    <feedback format="html">
+                        <text />
+                    </feedback>
+                </answer></question><question type="description">
+                <name>
+                    <text>refer_q6_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Data structures&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q7_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Traversal&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q8_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Floating point numbers&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q8a_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Vectors&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question><question type="description">
+                <name>
+                    <text>refer_q9_title</text>
+                </name>
+                <questiontext format="html">
+                    <text>&lt;h3&gt;Assembly code&lt;/h3&gt;</text>
+                </questiontext>
+                <generalfeedback format="html">
+                    <text />
+                </generalfeedback>
+                <defaultgrade>0.0000000</defaultgrade>
+                <penalty>0.0000000</penalty>
+                <hidden>0</hidden>
+                <idnumber />
+            </question></quiz>
