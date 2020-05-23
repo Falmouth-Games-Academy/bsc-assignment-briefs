@@ -13,6 +13,13 @@
 \usepackage{microtype} % For improved hyphenation
 \usepackage{calc}
 
+\usepackage[hyphens]{url}
+
+
+%\usepackage[pdftex, pdflang={en-GB}, pdfdisplaydoctitle]{hyperref} % For hyperlinks and also for PDF information
+
+%\usepackage{pdfcomment}
+
 % Adjust margins
 \usepackage[margin=1.5cm, left=6.5cm]{geometry}
 \setlength{\marginparwidth}{4.5cm}
@@ -37,62 +44,174 @@
 \titlespacing{\section}{0cm}{\parskip}{0cm}
 \titlespacing{\subsection}{0cm}{\parskip}{0cm}
 
+\usepackage[pdftex, pdflang={en-GB}, pdfdisplaydoctitle]{hyperref}
+
+% Accessibility package is very particular about usepackage order so it goes here
+%\usepackage[tagged, flatstructure]{accessibility}
+\usepackage{tagpdf}
+\tagpdfsetup{activate-all=true}
+
+% Make enumerate / itemize lists more closely spaced
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Fix for pound sterling sign http://tex.stackexchange.com/a/17858
+\usepackage[T1]{fontenc} 
+
+% For adding todos and coloured boxes
+\usepackage{todonotes}
+
 % Allow document version to be specified, e.g. \version{1.1} in the preamble
 % Defaults to 1.0 if not specified
 \newcommand{\@version}{1.0}
 \newcommand{\version}[1]{\renewcommand{\@version}{#1}}
 
-% Allow module code to be specified, e.g. \module{1.1} in the preamble
+% Allow module code to be specified, e.g. \module{COMP110} in the preamble
 % Defaults to COMPXXX if not specified
 \newcommand{\@module}{COMPXXX}
 \newcommand{\module}[1]{\renewcommand{\@module}{#1}}
 
+% Structure tagging for accessibility
+\newcommand{\tag}[2]{
+    % Temporarily replace formatting macros with no-ops
+    \begingroup
+        \def\textbf{}
+        \def\textit{}
+        \def\emph{}
+        \def\par{}
+        \def\thinspace{ }
+        % Expand and store the plain text
+        \protected@xdef\tmpActualText{#2}
+    % Restore formatting macros
+    \endgroup
+    % Create the structure tags
+    \tagstructbegin{tag=#1, actualtext-o=\tmpActualText}
+        \tagmcbegin{tag=#1}
+            % Display the actual content
+            #2
+        \tagmcend
+    \tagstructend
+}
+
+% Shortcut to tag a paragraph
+\newcommand{\p}[1]{\tag{P}{#1}}
+
 % Custom maketitle command, using tikz for fancy layout
 \renewcommand{\maketitle}{%
-    \begin{tikzpicture}[remember picture, overlay]
-        \node[anchor=north west, xshift=1cm, yshift=-1cm] (banner) at (current page.north west) {
-            \includegraphics[width=19cm]{header}
-        };
-        \node[anchor=north east, xshift=-0.5cm, yshift=-0.5cm] at (banner.north east) {
-            \parbox[t]{18cm}{\raggedleft\Huge\color{white}{\MakeUppercase{\@title}}}
-        };
-        \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm] at (banner.south east) {
-            \parbox[t]{18cm}{\raggedleft\color{white}{Version \@version\\Computing\\\@module}}
-        };
-        \node[anchor=north west] at (banner.south west) {
-            \parbox[t]{18cm}{\raggedright\color{gray}{\@author}}
-        };
-    \end{tikzpicture}
+    \tagstructbegin{tag=Div, title={Document header}}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=north west, xshift=1cm, yshift=-1cm] (banner) at (current page.north west) {
+                \tagmcbegin{artifact=background} % Accessibility: ignore this image
+                    \includegraphics[width=19cm]{header}
+                \tagmcend
+            };
+            \node[anchor=north east, xshift=-0.5cm, yshift=-0.5cm] at (banner.north east) {
+                \parbox[t]{18cm}{\raggedleft\Huge\color{white}{
+                    \tagstructbegin{tag=H1}
+                        \tagmcbegin{tag=H1, actualtext-o=\@title}
+                            \MakeUppercase{\@title}
+                        \tagmcend
+                    \tagstructend
+                }}
+            };
+            \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm] at (banner.south east) {
+                \parbox[t]{18cm}{\raggedleft\color{white}{
+                    %Version \@version\\Computing\\\@module
+                    \p{Version \@version}\\\p{Computing}\\\p{\@module}
+                }}
+            };
+            \node[anchor=north west] at (banner.south west) {
+                \parbox[t]{18cm}{\raggedright\color{gray}{
+                    \p{\@author}
+                }}
+            };
+        \end{tikzpicture}
+    \tagstructend
     \vspace{4cm}
+}
+
+% Section headers
+\let\originalsection\section%
+\renewcommand{\section}{%
+    \@ifstar{\originalsectionWithStar}%
+    {\@ifnextchar[%]
+        {\originalsectionWithTwoOption}%
+        {\originalsectionWithOption}%
+    }%
+}%
+
+\newcommand{\originalsectionWithStar}[1]{\originalsection*{\tag{H2}{#1}}}
+\newcommand{\originalsectionWithTwoOption}[2]{\originalsection[#1]{\tag{H2}{#2}}}
+\newcommand{\originalsectionWithOption}[1]{\originalsection{\tag{H2}{#1}}}
+
+% Graphics with alt text
+\newcommand{\includegraphicsalt}[3][]{%
+    \tagstructbegin{tag=Figure, alttext-o={#3}}
+        \tagmcbegin{tag=Figure}
+            \includegraphics[#1]{#2}
+        \tagmcend
+    \tagstructend
 }
 
 % Inspirational quote in the margin
 \newcommand{\marginquoterule}{{\color{black}\rule{4.5cm}{1pt}}}
 
-\NewEnviron{marginquote}{%
-    \begin{tikzpicture}[remember picture, overlay]
-        \node[anchor=west, xshift=1.5cm] at (current page.west) {
-            \parbox[t]{4.5cm}{%
-                \setlength{\parskip}{1em}%
-                \marginquoterule\par%
-                \small\centering\emph{\color{blue!50!black}\BODY}\par%
-                \marginquoterule%
-            }
-        };
-    \end{tikzpicture}
+% \NewEnviron{marginquote}{%
+%     \begin{tikzpicture}[remember picture, overlay]
+%         \node[anchor=west, xshift=1.5cm] at (current page.west) {
+%             \parbox[t]{4.5cm}{%
+%                 \setlength{\parskip}{1em}%
+%                 \marginquoterule\par%
+%                 \small\centering\emph{\color{blue!50!black}%
+%                     \tag{BlockQuote}{\BODY}%
+%                 }\par%
+%                 \marginquoterule%
+%             }
+%         };
+%     \end{tikzpicture}
+% }
+
+\newcommand{\marginquoteb}[2]{%
+    \tagstructbegin{tag=BlockQuote}
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[anchor=west, xshift=1.5cm] at (current page.west) {
+                \parbox[t]{4.5cm}{%
+                    \setlength{\parskip}{1em}%
+                    \marginquoterule\par%
+                    \small\centering\em\color{blue!50!black}\p{#1}\par%
+                    %\small\centering\emph{\color{blue!50!black}\p{--- #2}}\par%
+                    \marginquoterule%
+                }
+            };
+        \end{tikzpicture}
+    \tagstructend
 }
 
+\NewEnviron{marginquote}{\marginquoteb{\BODY}{}}
+
 % Inspirational image in the margin
-% First parameter is the image file name, second parameter is the caption
-\newcommand{\marginpicture}[2]{%
+% First parameter is the image file name, second parameter is the alt text, third parameter is the caption
+\newcommand{\marginpicturealt}[3]{%
+    \tagstructbegin{tag=Div, title={Margin picture}}
     \begin{tikzpicture}[remember picture, overlay]
         \node[anchor=south west, xshift=1.5cm, yshift=1.5cm] at (current page.south west) {
             \parbox[t]{4.5cm}{%
-                \includegraphics[width=4.5cm]{#1}\par
-                {\footnotesize #2}
+                \includegraphicsalt[width=4.5cm]{#1}{#2}\par
+                % \tagmcbegin{tag=Figure, alttext={#2}}
+                %     \includegraphics[width=4.5cm]{#1}
+                % \tagmcend\par
+                {\footnotesize\tag{Caption}{#3}}
             }
         };
     \end{tikzpicture}
+    \tagstructend
+}
+
+\newcommand{\marginpicture}[2]{%
+    \marginpicturealt{#1}{}{\color{red}{%
+        Accessibility warning: no alt text.
+        \verb{\marginpicture} is deprecated, please use \verb{\marginpicturealt}.
+    } #2}
 }
 
 % Marking rubric
@@ -160,3 +279,22 @@
 	\centering \textbf{\small Excellent} &
 	\centering \textbf{\small Outstanding}
 }}
+
+% PDF properties for accessibility
+% https://stackoverflow.com/a/3430025
+\makeatletter
+\AtBeginDocument{
+    % Need to set PDF title and author here to make sure they have been defined
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+    % Open the document structure tag
+    \tagstructbegin{tag=Document}
+}
+\makeatother
+
+\AtEndDocument{
+    % Close the document structure tag
+    \tagstructend
+}
