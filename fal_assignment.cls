@@ -12,6 +12,7 @@
 \usepackage{colortbl}  % For colouring table cells
 \usepackage{microtype} % For improved hyphenation
 \usepackage{calc}
+\usepackage{etoolbox}
 
 \usepackage[hyphens]{url}
 
@@ -49,7 +50,7 @@
 % Accessibility package is very particular about usepackage order so it goes here
 %\usepackage[tagged, flatstructure]{accessibility}
 \usepackage{tagpdf}
-\tagpdfsetup{activate-all=true}
+\tagpdfsetup{activate-all=true, interwordspace=true}
 
 % Make enumerate / itemize lists more closely spaced
 \usepackage{enumitem}
@@ -72,7 +73,8 @@
 \newcommand{\module}[1]{\renewcommand{\@module}{#1}}
 
 % Structure tagging for accessibility
-\newcommand{\tag}[2]{
+% This macro sets the actualtext key --- may be needed in some situations where screen readers can't automatically extract text
+\newcommand{\tagWithActualText}[2]{
     % Temporarily replace formatting macros with no-ops
     \begingroup
         \def\textbf{}
@@ -93,8 +95,69 @@
     \tagstructend
 }
 
+% Structure tagging for accessibility
+\newcommand{\tag}[2]{
+    % Create the structure tags
+    \tagstructbegin{tag=#1}
+        \tagmcbegin{tag=#1}
+            % Display the actual content
+            #2
+        \tagmcend
+    \tagstructend
+}
+
 % Shortcut to tag a paragraph
 \newcommand{\p}[1]{\tag{P}{#1}}
+
+% Overriding list environments with accessibility tagging
+\let\oldenumerate\enumerate
+\let\oldendenumerate\endenumerate
+\renewenvironment{enumerate}{%
+    \begingroup
+    \tagstructbegin{tag=L}%
+    \newif\ifinItem\inItemfalse%
+    \def\closeItem{%
+        \ifinItem%
+            \tagmcend\tagstructend%
+            \inItemfalse%
+        \fi%
+    }%
+    \oldenumerate%
+}{%
+    \closeItem%
+    \oldendenumerate%
+    \tagstructend%
+    \endgroup
+}
+
+\let\olditemize\itemize
+\let\oldenditemize\enditemize
+\renewenvironment{itemize}{%
+    \begingroup
+    \tagstructbegin{tag=L}%
+    \newif\ifinItem\inItemfalse%
+    \def\closeItem{%
+        \ifinItem%
+            \tagmcend\tagstructend%
+            \inItemfalse%
+        \fi%
+    }%
+    \olditemize%
+}{%
+    \closeItem%
+    \oldenditemize%
+    \tagstructend%
+    \endgroup
+}
+
+\let\olditem\item
+\renewcommand{\item}{%
+    \closeItem%
+    \tagstructbegin{tag=LI}%
+    \tagmcbegin{tag=LI}%
+    \inItemtrue%
+    \olditem%
+}
 
 % Custom maketitle command, using tikz for fancy layout
 \renewcommand{\maketitle}{%
@@ -131,6 +194,7 @@
 }
 
 % Section headers
+% Code to override these was ``inspired'' by the accessibility package
 \let\originalsection\section%
 \renewcommand{\section}{%
     \@ifstar{\originalsectionWithStar}%
@@ -143,6 +207,32 @@
 \newcommand{\originalsectionWithStar}[1]{\originalsection*{\tag{H2}{#1}}}
 \newcommand{\originalsectionWithTwoOption}[2]{\originalsection[#1]{\tag{H2}{#2}}}
 \newcommand{\originalsectionWithOption}[1]{\originalsection{\tag{H2}{#1}}}
+
+\let\originalsubsection\subsection%
+\renewcommand{\subsection}{%
+    \@ifstar{\originalsubsectionWithStar}%
+    {\@ifnextchar[%]
+        {\originalsubsectionWithTwoOption}%
+        {\originalsubsectionWithOption}%
+    }%
+}%
+
+\newcommand{\originalsubsectionWithStar}[1]{\originalsubsection*{\tag{H2}{#1}}}
+\newcommand{\originalsubsectionWithTwoOption}[2]{\originalsubsection[#1]{\tag{H2}{#2}}}
+\newcommand{\originalsubsectionWithOption}[1]{\originalsubsection{\tag{H2}{#1}}}
+
+\let\originalsubsubsection\subsubsection%
+\renewcommand{\subsubsection}{%
+    \@ifstar{\originalsubsubsectionWithStar}%
+    {\@ifnextchar[%]
+        {\originalsubsubsectionWithTwoOption}%
+        {\originalsubsubsectionWithOption}%
+    }%
+}%
+
+\newcommand{\originalsubsubsectionWithStar}[1]{\originalsubsubsection*{\tag{H2}{#1}}}
+\newcommand{\originalsubsubsectionWithTwoOption}[2]{\originalsubsubsection[#1]{\tag{H2}{#2}}}
+\newcommand{\originalsubsubsectionWithOption}[1]{\originalsubsubsection{\tag{H2}{#1}}}
 
 % Graphics with alt text
 \newcommand{\includegraphicsalt}[3][]{%
