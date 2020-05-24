@@ -280,28 +280,24 @@
 \NewEnviron{marginquote}{\marginquoteb{\BODY}{}}
 
 % Inspirational image in the margin
-% First parameter is the image file name, second parameter is the alt text, third parameter is the caption
-\newcommand{\marginpicturealt}[3]{%
-    \tagstructbegin{tag=Div, title={Margin picture}}
+% First parameter is the image file name, second parameter is the caption
+\newcommand{\marginpicture}[3][A decorative picture]{%
+    \ifstrequal{#1}{A decorative picture}{\typeout{Accessibility warning: no alt text for marginpicture}}{}
+    \tagstructbegin{tag=Div}
     \begin{tikzpicture}[remember picture, overlay]
         \node[anchor=south west, xshift=1.5cm, yshift=1.5cm] at (current page.south west) {
             \parbox[t]{4.5cm}{%
-                \includegraphicsalt[width=4.5cm]{#1}{#2}\par
-                % \tagmcbegin{tag=Figure, alttext={#2}}
-                %     \includegraphics[width=4.5cm]{#1}
-                % \tagmcend\par
-                {\footnotesize\tag{Caption}{#3}}
+                \tagstructbegin{tag=Figure, alttext=#1}
+                \tagmcbegin{tag=Figure}
+                \includegraphics[width=4.5cm]{#2}
+                \tagmcend
+                \tagstructend
+                \par
+                {\footnotesize \tag{P}{#3}}
             }
         };
     \end{tikzpicture}
     \tagstructend
-}
-
-\newcommand{\marginpicture}[2]{%
-    \marginpicturealt{#1}{}{\color{red}{%
-        Accessibility warning: no alt text.
-        \verb{\marginpicture} is deprecated, please use \verb{\marginpicturealt}.
-    } #2}
 }
 
 % Marking rubric
