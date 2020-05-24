@@ -194,6 +194,56 @@
     \tagstructend
 }
 
+%Accessible paragraphs
+
+\let\originalparagraph\paragraph%
+\renewcommand{\paragraph}
+{
+    \@ifstar
+    {\originalparagraphWithStar}%
+    {\@ifnextchar[%]
+        {\originalparagraphWithTwoOption}%
+        {\originalparagraphWithOption}%
+    }%
+}%
+
+\newcommand{\originalparagraphWithStar}[1]%
+{ 
+    \tagstructbegin{tag=P} \tagmcbegin{tag=P} #1 \tagmcend \tagstructend
+}
+\newcommand{\originalparagraphWithTwoOption}[2]%
+{
+    \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalparagraph[#1]{#2} \tagmcend \tagstructend
+}
+\newcommand{\originalparagraphWithOption}[1]%
+{
+     \tagstructbegin{tag=P} \tagmcbegin{tag=P} #1 \tagmcend \tagstructend
+}
+
+\let\originalsubparagraph\subparagraph%
+\renewcommand{\subparagraph}
+{
+    \@ifstar
+    {\originalsubparagraphWithStar}%
+    {\@ifnextchar[%]
+        {\originalsubparagraphWithTwoOption}%
+        {\originalsubparagraphWithOption}%
+    }%
+}%
+
+\newcommand{\originalsubparagraphWithStar}[1]%
+{ 
+    \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalsubparagraph*{#1} \tagmcend \tagstructend
+}
+\newcommand{\originalsubparagraphWithTwoOption}[2]%
+{
+    \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalsubparagraph[#1]{#2} \tagmcend \tagstructend
+}
+\newcommand{\originalsubparagraphWithOption}[1]%
+{
+     \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalsubparagraph{#1} \tagmcend \tagstructend
+}
+
 % Custom maketitle command, using tikz for fancy layout
 \renewcommand{\maketitle}{%
     \tagstructbegin{tag=Div, title={Document header}}
