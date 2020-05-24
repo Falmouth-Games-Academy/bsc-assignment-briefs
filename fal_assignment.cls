@@ -389,6 +389,36 @@
 }
 
 % Marking rubric
+\newtoggle{CriterionOpen}
+\global\togglefalse{CriterionOpen}
+
+\newcommand{\openCriterion}{
+   \tagstructbegin{tag=TR}
+   \global\toggletrue{CriterionOpen}
+}
+
+\newcommand{\closeCriterion}{
+  \tagstructend %TR
+   \global\togglefalse{CriterionOpen}
+
+}
+
+\newtoggle{GradeOpen}
+\global\togglefalse{GradeOpen}
+
+\newcommand{\openGrade}{
+   \tagstructbegin{tag=TD}
+   \tagmcbegin{tag=TD}
+   \global\toggletrue{GradeOpen}
+   \hspace{-0.8em} % I don't know what is causing this offset
+}
+
+\newcommand{\closeGrade}{
+  \tagmcend %TD
+  \tagstructend %TD
+   \global\togglefalse{GradeOpen}
+}
+
 \newenvironment{markingrubric}{%
     \clearpage
     \newgeometry{margin=1cm}
@@ -396,29 +426,35 @@
         \section*{\@rubrictitle}
         \begingroup\scriptsize
             \setlength{\extrarowheight}{2pt}
-            \@rubrichead
+            \p{\@rubrichead}
+            \tagstructbegin{tag=Table, alttext=\@rubrictitle}
             \begin{longtable}{|p{2.5cm}|p{1.5cm}|*{6}{p{3.4cm}|}}
                 \hline
-                \centering \textbf{\small Criterion} &
-                \centering \textbf{\small Weight} &
-                \@rubricgrades \endhead\hline
+                \openCriterion\centering \textbf{\small \tag{TH}{Criterion}} &
+                \centering \textbf{\small \tag{TH}{Weight}} &
+                \@rubricgrades \closeCriterion \endhead\hline
 }{
+                \iftoggle{GradeOpen}{\closeGrade}{}
+                \iftoggle{CriterionOpen}{\closeCriterion}{}
                 \tabularnewline\hline
             \end{longtable}
+            \tagstructend %Table
             \@rubricfoot
         \endgroup
     \end{landscape}
+    
 }
 
 % Commands inside the marking rubric
 % Use firstcriterion for the first criterion, and criterion for subsequent ones
 % The difference is that firstcriterion doesn't start a new table row, because \endhead did that already
-\newcommand{\firstcriterion}[2]{\setlength{\parskip}{0.5em}\raggedright #1 & \centering #2}
-\newcommand{\criterion}[2]{\tabularnewline\hline\setlength{\parskip}{0.5em}\raggedright #1 & \centering #2}
-\newcommand{\grade}{ & \setlength{\parskip}{0.5em}\raggedright}
+% TODO: Investigate why \hspace is needed
+\newcommand{\firstcriterion}[2]{\openCriterion \hspace{-1.4em} \setlength{\parskip}{0.5em}\raggedright \tag{TD}{#1} & \centering \tag{TD}{#2}}
+\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\hline\setlength{\parskip}{0.5em}\raggedright \hspace{-0.8em} \tag{TD}{#1} & \centering \tag{TD}{#2}}
+\newcommand{\grade}{\iftoggle{GradeOpen}{\closeGrade}{} & \openGrade \setlength{\parskip}{0.5em}\raggedright}
 \newcommand{\fail}{\cellcolor{gray!15}}
 \newcommand{\gradespan}[2]{& \multicolumn{#1}{p{3.4cm * #1 + (\tabcolsep * 2 + \arrayrulewidth) * (#1 - 1)}|}%
-    {\setlength{\parskip}{0.5em}\raggedright #2}}
+    {\setlength{\parskip}{0.5em}\raggedright \tag{TD}{#2}}}
 
 % Modifiers for title, header and footer of the marking rubric
 % Note that these must be specified *before* \begin{markingrubric}
@@ -430,29 +466,15 @@
 \newcommand{\rubricfoot}[1]{\renewcommand{\@rubricfoot}{#1}}
 
 \newcommand{\@rubricgrades}{
-	\centering \cellcolor{gray!30} \textbf{\small Refer for Resubmission} &
-	\centering \textbf{\small Adequate} &
-	\centering \textbf{\small Competent} &
-	\centering \textbf{\small Very Good} &
-	\centering \textbf{\small Excellent} &
-	\centering \textbf{\small Outstanding}
+	\centering \cellcolor{gray!30} \textbf{\small \tag{TH}{Refer for Resubmission}} &
+	\centering \textbf{\small \tag{TH}{Adequate}} &
+	\centering \textbf{\small \tag{TH}{Competent}} &
+	\centering \textbf{\small \tag{TH}{Very Good}} &
+	\centering \textbf{\small \tag{TH}{Excellent}} &
+	\centering \textbf{\small \tag{TH}{Outstanding}}
 }
-\newcommand{\rubricyeartwo}{\renewcommand{\@rubricgrades}{
-	\centering \cellcolor{gray!30} \textbf{\small Refer for Resubmission} &
-	\centering \textbf{\small Adequate} &
-	\centering \textbf{\small Competent} &
-	\centering \textbf{\small Very Good} &
-	\centering \textbf{\small Excellent} &
-	\centering \textbf{\small Outstanding}
-}}
-\newcommand{\rubricyearthree}{\renewcommand{\@rubricgrades}{
-	\centering \cellcolor{gray!30} \textbf{\small Refer for Resubmission} &
-	\centering \textbf{\small Adequate} &
-	\centering \textbf{\small Competent} &
-	\centering \textbf{\small Very Good} &
-	\centering \textbf{\small Excellent} &
-	\centering \textbf{\small Outstanding}
-}}
+\newcommand{\rubricyeartwo}{\@rubricgrades}
+\newcommand{\rubricyearthree}{\@rubricgrades}
 
 % PDF properties for accessibility
 % https://stackoverflow.com/a/3430025
