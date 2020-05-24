@@ -110,53 +110,78 @@
 \newcommand{\p}[1]{\tag{P}{#1}}
 
 % Overriding list environments with accessibility tagging
-\let\oldenumerate\enumerate
-\let\oldendenumerate\endenumerate
-\renewenvironment{enumerate}{%
-    \begingroup
-    \tagstructbegin{tag=L}%
-    \newif\ifinItem\inItemfalse%
-    \def\closeItem{%
-        \ifinItem%
-            \tagmcend\tagstructend%
-            \inItemfalse%
-        \fi%
-    }%
-    \oldenumerate%
-}{%
-    \closeItem%
-    \oldendenumerate%
-    \tagstructend%
-    \endgroup
+\newtoggle{LIOpen}
+\global\togglefalse{LIOpen}
+
+\newcounter{NestedEnumDepth}
+\setcounter{NestedEnumDepth}{0}
+
+\iftoggle{LIOpen}{\closeItem}{}
+
+\newcommand{\closeItem}{
+  \tagmcend\tagstructend %LBody
+  \tagmcend\tagstructend %LI
+   \global\togglefalse{LIOpen}
 }
 
-\let\olditemize\itemize
-\let\oldenditemize\enditemize
-\renewenvironment{itemize}{%
-    \begingroup
-    \tagstructbegin{tag=L}%
-    \newif\ifinItem\inItemfalse%
-    \def\closeItem{%
-        \ifinItem%
-            \tagmcend\tagstructend%
-            \inItemfalse%
-        \fi%
-    }%
-    \olditemize%
-}{%
-    \closeItem%
-    \oldenditemize%
-    \tagstructend%
-    \endgroup
+  %
+  \let\originalenumerate\enumerate%
+  \let\originalendenumerate\endenumerate%
+  \renewenvironment{enumerate}%
+    {
+      \setcounter{NestedEnumDepth}{\value{NestedEnumDepth}+1}
+      \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructbegin{tag=L}\tagmcbegin{tag=L}}{}
+      \originalenumerate
+    }{
+     \originalendenumerate 
+     \iftoggle{LIOpen}{\closeItem}{}
+     \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagmcend  \tagstructend}{}
+     \setcounter{NestedEnumDepth}{\value{NestedEnumDepth}-1}
+     }%
+
+  
+    %
+  \let\originalitemize\itemize%
+  \let\originalenditemize\enditemize%
+  \renewenvironment{itemize}%
+    {
+    \iftoggle{LIOpen}{\closeItem}{}
+    \tagstructbegin{tag=L}\tagmcbegin{tag=L}
+    \originalitemize
+    }{
+    \originalenditemize 
+    \iftoggle{LIOpen}{\closeItem}{}
+    \tagmcend  \tagstructend}%
+  %
+
+\let\originaltheenumi\theenumi%
+\renewcommand{\theenumi}{
+    \iftoggle{LIOpen}{\closeItem}
+    \originaltheenumi    
 }
 
-\let\olditem\item
-\renewcommand{\item}{%
-    \closeItem%
-    \tagstructbegin{tag=LI}%
-    \tagmcbegin{tag=LI}%
-    \inItemtrue%
-    \olditem%
+\renewcommand{\labelitemi}{
+    \iftoggle{LIOpen}{\closeItem}{}
+    \tagstructbegin{tag=LI}\tagmcbegin{tag=LI} 
+    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} - \tagmcend\tagstructend
+    \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
+    \global\toggletrue{LIOpen}
+}
+  
+\renewcommand{\labelenumi}{
+    \iftoggle{LIOpen}{\closeItem}{}
+    \tagstructbegin{tag=LI}\tagmcbegin{tag=LI} 
+    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} (\Alph*) \tagmcend\tagstructend
+    \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
+    \global\toggletrue{LIOpen}
+}
+
+\renewcommand{\labelenumii}{
+    \iftoggle{LIOpen}{\closeItem}{}
+    \tagstructbegin{tag=LI}\tagmcbegin{tag=LI} 
+    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} \roman*. \tagmcend\tagstructend
+    \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
+    \global\toggletrue{LIOpen}
 }
 
 % Custom maketitle command, using tikz for fancy layout
