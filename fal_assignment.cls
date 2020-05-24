@@ -292,9 +292,9 @@
     }%
 }%
 
-\newcommand{\originalsectionWithStar}[1]{\originalsection*{\tag{H2}{#1}}}
-\newcommand{\originalsectionWithTwoOption}[2]{\originalsection[#1]{\tag{H2}{#2}}}
-\newcommand{\originalsectionWithOption}[1]{\originalsection{\tag{H2}{#1}}}
+\newcommand{\originalsectionWithStar}[1]{\originalsection*{\tag{H1}{#1}}}
+\newcommand{\originalsectionWithTwoOption}[2]{\originalsection[#1]{\tag{H1}{#2}}}
+\newcommand{\originalsectionWithOption}[1]{\originalsection{\tag{H1}{#1}}}
 
 \let\originalsubsection\subsection%
 \renewcommand{\subsection}{%
@@ -422,21 +422,25 @@
 \newenvironment{markingrubric}{%
     \clearpage
     \newgeometry{margin=1cm}
+    %\renewcommand{\arraystretch}{1.25}
     \begin{landscape}
         \section*{\@rubrictitle}
         \begingroup\scriptsize
-            \setlength{\extrarowheight}{2pt}
-            \p{\@rubrichead}
+            \p{\@rubrichead}\\
             \tagstructbegin{tag=Table, alttext=\@rubrictitle}
-            \begin{longtable}{|p{2.5cm}|p{1.5cm}|*{6}{p{3.4cm}|}}
-                \hline
+            \arrayrulecolor{gray!40}
+            \setlength\arrayrulewidth{1pt}
+            \begin{longtable}{p{2.5cm}p{1.5cm}*{6}{p{3.4cm}}}
+                \hline\\[0.3em]
                 \openCriterion\centering \textbf{\small \tag{TH}{Criterion}} &
                 \centering \textbf{\small \tag{TH}{Weight}} &
-                \@rubricgrades \closeCriterion \endhead\hline
+                \@rubricgrades \closeCriterion \endhead
+                 \hline\\[0.5em]
 }{
                 \iftoggle{GradeOpen}{\closeGrade}{}
                 \iftoggle{CriterionOpen}{\closeCriterion}{}
-                \tabularnewline\hline
+                \tabularnewline
+                \hline
             \end{longtable}
             \tagstructend %Table
             \@rubricfoot
@@ -449,10 +453,10 @@
 % Use firstcriterion for the first criterion, and criterion for subsequent ones
 % The difference is that firstcriterion doesn't start a new table row, because \endhead did that already
 % TODO: Investigate why \hspace is needed
-\newcommand{\firstcriterion}[2]{\openCriterion \hspace{-1.4em} \setlength{\parskip}{0.5em}\raggedright \tag{TD}{#1} & \centering \tag{TD}{#2}}
-\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\hline\setlength{\parskip}{0.5em}\raggedright \hspace{-0.8em} \tag{TD}{#1} & \centering \tag{TD}{#2}}
+\newcommand{\firstcriterion}[2]{\strut \openCriterion \hspace{-1.6em} \setlength{\parskip}{0.5em}\raggedright \tag{TD}{#1} & \centering \tag{TD}{#2}}
+\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\setlength{\parskip}{0.8em}\raggedright \hspace{-0.8em} \tag{TD}{#1} & \centering \tag{TD}{#2}}
 \newcommand{\grade}{\iftoggle{GradeOpen}{\closeGrade}{} & \openGrade \setlength{\parskip}{0.5em}\raggedright}
-\newcommand{\fail}{\cellcolor{gray!15}}
+\newcommand{\fail}{}
 \newcommand{\gradespan}[2]{& \multicolumn{#1}{p{3.4cm * #1 + (\tabcolsep * 2 + \arrayrulewidth) * (#1 - 1)}|}%
     {\setlength{\parskip}{0.5em}\raggedright \tag{TD}{#2}}}
 
@@ -466,7 +470,7 @@
 \newcommand{\rubricfoot}[1]{\renewcommand{\@rubricfoot}{#1}}
 
 \newcommand{\@rubricgrades}{
-	\centering \cellcolor{gray!30} \textbf{\small \tag{TH}{Refer for Resubmission}} &
+	\centering \textbf{\small \tag{TH}{Near Pass}} &
 	\centering \textbf{\small \tag{TH}{Adequate}} &
 	\centering \textbf{\small \tag{TH}{Competent}} &
 	\centering \textbf{\small \tag{TH}{Very Good}} &
