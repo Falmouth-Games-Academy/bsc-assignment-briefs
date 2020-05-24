@@ -272,7 +272,7 @@
                 }}
             };
             \node[anchor=north west] at (banner.south west) {
-                \parbox[t]{18cm}{\raggedright\color{gray}{
+                \parbox[t]{18cm}{\raggedright{
                     \p{\@author}
                 }}
             };
@@ -416,7 +416,7 @@
 \newcommand{\firstcriterion}[2]{\setlength{\parskip}{0.5em}\raggedright #1 & \centering #2}
 \newcommand{\criterion}[2]{\tabularnewline\hline\setlength{\parskip}{0.5em}\raggedright #1 & \centering #2}
 \newcommand{\grade}{ & \setlength{\parskip}{0.5em}\raggedright}
-\newcommand{\fail}{\cellcolor{gray!50}}
+\newcommand{\fail}{\cellcolor{gray!15}}
 \newcommand{\gradespan}[2]{& \multicolumn{#1}{p{3.4cm * #1 + (\tabcolsep * 2 + \arrayrulewidth) * (#1 - 1)}|}%
     {\setlength{\parskip}{0.5em}\raggedright #2}}
 
@@ -430,7 +430,7 @@
 \newcommand{\rubricfoot}[1]{\renewcommand{\@rubricfoot}{#1}}
 
 \newcommand{\@rubricgrades}{
-	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
+	\centering \cellcolor{gray!30} \textbf{\small Refer for Resubmission} &
 	\centering \textbf{\small Adequate} &
 	\centering \textbf{\small Competent} &
 	\centering \textbf{\small Very Good} &
@@ -438,7 +438,7 @@
 	\centering \textbf{\small Outstanding}
 }
 \newcommand{\rubricyeartwo}{\renewcommand{\@rubricgrades}{
-	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
+	\centering \cellcolor{gray!30} \textbf{\small Refer for Resubmission} &
 	\centering \textbf{\small Adequate} &
 	\centering \textbf{\small Competent} &
 	\centering \textbf{\small Very Good} &
@@ -446,7 +446,7 @@
 	\centering \textbf{\small Outstanding}
 }}
 \newcommand{\rubricyearthree}{\renewcommand{\@rubricgrades}{
-	\centering \cellcolor{gray!50} \textbf{\small Refer for Resubmission} &
+	\centering \cellcolor{gray!30} \textbf{\small Refer for Resubmission} &
 	\centering \textbf{\small Adequate} &
 	\centering \textbf{\small Competent} &
 	\centering \textbf{\small Very Good} &
