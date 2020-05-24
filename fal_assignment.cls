@@ -184,6 +184,16 @@
     \global\toggletrue{LIOpen}
 }
 
+% Accessible link tagging
+\renewcommand{\url}[1]
+{
+    \tagstructbegin{tag=Link, alttext=#1}
+    \tagmcbegin{tag=Link}   
+    \href{#1}{#1}
+    \tagmcend 
+    \tagstructend
+}
+
 % Custom maketitle command, using tikz for fancy layout
 \renewcommand{\maketitle}{%
     \tagstructbegin{tag=Div, title={Document header}}
