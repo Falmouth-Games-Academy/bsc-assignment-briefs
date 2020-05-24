@@ -163,7 +163,7 @@
 \renewcommand{\labelitemi}{
     \iftoggle{LIOpen}{\closeItem}{}
     \tagstructbegin{tag=LI}\tagmcbegin{tag=LI} 
-    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} - \tagmcend\tagstructend
+    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} - \tagmcend\tagstructend % Character encoding error on use of bullet causing accessibility test to fail
     \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
     \global\toggletrue{LIOpen}
 }
@@ -243,6 +243,9 @@
 {
      \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalsubparagraph{#1} \tagmcend \tagstructend
 }
+
+% Character encoding error on use of \texttt{} causing accessibility test to fail
+\renewcommand{\texttt}{}
 
 % Custom maketitle command, using tikz for fancy layout
 \renewcommand{\maketitle}{%
