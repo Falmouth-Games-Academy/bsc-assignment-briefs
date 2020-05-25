@@ -130,28 +130,27 @@
   \renewenvironment{enumerate}%
     {
       \setcounter{NestedEnumDepth}{\value{NestedEnumDepth}+1}
-      \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructbegin{tag=L}\tagmcbegin{tag=L}}{}
+      \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructbegin{tag=L}}{}
       \originalenumerate
     }{
      \originalendenumerate 
      \iftoggle{LIOpen}{\closeItem}{}
-     \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagmcend  \tagstructend}{}
+     \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructend}{}
      \setcounter{NestedEnumDepth}{\value{NestedEnumDepth}-1}
      }%
 
-  
     %
   \let\originalitemize\itemize%
   \let\originalenditemize\enditemize%
   \renewenvironment{itemize}%
     {
     \iftoggle{LIOpen}{\closeItem}{}
-    \tagstructbegin{tag=L}\tagmcbegin{tag=L}
+    \tagstructbegin{tag=L}
     \originalitemize
     }{
     \originalenditemize 
     \iftoggle{LIOpen}{\closeItem}{}
-    \tagmcend  \tagstructend}%
+    \tagstructend}%
   %
 
 \let\originaltheenumi\theenumi%
@@ -184,17 +183,22 @@
     \global\toggletrue{LIOpen}
 }
 
-% Accessible link tagging
-\renewcommand{\url}[1]
-{
-    \tagstructbegin{tag=Link, alttext=#1}
-    \tagmcbegin{tag=Link}   
-    \href{#1}{#1}
-    \tagmcend 
-    \tagstructend
+%Accessible paragraphs
+\newtoggle{ParagraphContainerOpen}
+\global\togglefalse{ParagraphContainerOpen}
+
+\newtoggle{RequireParagraphRestore}
+\global\togglefalse{RequireParagraphRestore}
+
+\newcommand{\openParagraphContainer}{
+  \tagmcbegin{tag=P}
+   \global\toggletrue{ParagraphContainerOpen}
 }
 
-%Accessible paragraphs
+\newcommand{\closeParagraphContainer}{
+  \tagmcend %P
+   \global\togglefalse{ParagraphContainerOpen}
+}
 
 \let\originalparagraph\paragraph%
 \renewcommand{\paragraph}
@@ -209,15 +213,15 @@
 
 \newcommand{\originalparagraphWithStar}[1]%
 { 
-    \tagstructbegin{tag=P} \tagmcbegin{tag=P} #1 \tagmcend \tagstructend
+    \tagstructbegin{tag=P} \openParagraphContainer #1 \closeParagraphContainer \tagstructend
 }
 \newcommand{\originalparagraphWithTwoOption}[2]%
 {
-    \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalparagraph[#1]{#2} \tagmcend \tagstructend
+    \tagstructbegin{tag=P} \openParagraphContainer \originalparagraph[#1]{#2} \closeParagraphContainer \tagstructend
 }
 \newcommand{\originalparagraphWithOption}[1]%
 {
-     \tagstructbegin{tag=P} \tagmcbegin{tag=P} #1 \tagmcend \tagstructend
+     \tagstructbegin{tag=P} \openParagraphContainer #1 \closeParagraphContainer \tagstructend
 }
 
 \let\originalsubparagraph\subparagraph%
@@ -233,15 +237,29 @@
 
 \newcommand{\originalsubparagraphWithStar}[1]%
 { 
-    \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalsubparagraph*{#1} \tagmcend \tagstructend
+    \tagstructbegin{tag=P} \openParagraphContainer \originalsubparagraph*{#1} \closeParagraphContainer \tagstructend
 }
 \newcommand{\originalsubparagraphWithTwoOption}[2]%
 {
-    \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalsubparagraph[#1]{#2} \tagmcend \tagstructend
+    \tagstructbegin{tag=P} \openParagraphContainer \originalsubparagraph[#1]{#2} \closeParagraphContainer \tagstructend
 }
 \newcommand{\originalsubparagraphWithOption}[1]%
 {
-     \tagstructbegin{tag=P} \tagmcbegin{tag=P} \originalsubparagraph{#1} \tagmcend \tagstructend
+     \tagstructbegin{tag=P} \openParagraphContainer \originalsubparagraph{#1} \closeParagraphContainer \tagstructend
+}
+
+% Accessible link tagging
+\renewcommand{\url}[1]
+{
+    \iftoggle{ParagraphContainerOpen}{\closeParagraphContainer \global\toggletrue{RequireParagraphRestore}}{}
+
+    \tagstructbegin{tag=Link, actualtext-o=#1, alttext=#1}
+    \tagmcbegin{tag=Link}   
+    \href{#1}{#1}
+    \tagmcend 
+    \tagstructend
+    
+    \iftoggle{RequireParagraphRestore}{\openParagraphContainer \global\togglefalse{RequireParagraphRestore}}{}
 }
 
 % Character encoding error on use of \texttt{} causing accessibility test to fail
