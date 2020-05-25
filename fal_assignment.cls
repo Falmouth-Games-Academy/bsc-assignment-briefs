@@ -119,7 +119,8 @@
 \iftoggle{LIOpen}{\closeItem}{}
 
 \newcommand{\closeItem}{
-  \tagmcend\tagstructend %LBody
+  \closeLBodyContainer %LBody
+  \tagstructend %LBody
   \tagstructend %LI
    \global\togglefalse{LIOpen}
 }
@@ -159,11 +160,27 @@
     \originaltheenumi    
 }
 
+\newtoggle{LBodyContainerOpen}
+\global\togglefalse{LBodyContainerOpen}
+
+\newtoggle{RequireLBodyRestore}
+\global\togglefalse{RequireLBodyRestore}
+
+\newcommand{\openLBodyContainer}{
+  \tagmcbegin{tag=LBody}
+   \global\toggletrue{LBodyContainerOpen}
+}
+
+\newcommand{\closeLBodyContainer}{
+  \tagmcend %LBody
+   \global\togglefalse{LBodyContainerOpen}
+}
+
 \renewcommand{\labelitemi}{
     \iftoggle{LIOpen}{\closeItem}{}
     \tagstructbegin{tag=LI}
     \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} - \tagmcend\tagstructend % Character encoding error on use of bullet causing accessibility test to fail
-    \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
+    \tagstructbegin{tag=LBody}\openLBodyContainer
     \global\toggletrue{LIOpen}
 }
   
@@ -171,7 +188,7 @@
     \iftoggle{LIOpen}{\closeItem}{}
     \tagstructbegin{tag=LI}
     \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} (\Alph*) \tagmcend\tagstructend
-    \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
+    \tagstructbegin{tag=LBody}\openLBodyContainer
     \global\toggletrue{LIOpen}
 }
 
@@ -179,7 +196,7 @@
     \iftoggle{LIOpen}{\closeItem}{}
     \tagstructbegin{tag=LI}
     \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} \roman*. \tagmcend\tagstructend
-    \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
+    \tagstructbegin{tag=LBody}\openLBodyContainer
     \global\toggletrue{LIOpen}
 }
 
@@ -252,6 +269,7 @@
 \renewcommand{\url}[1]
 {
     \iftoggle{ParagraphContainerOpen}{\closeParagraphContainer \global\toggletrue{RequireParagraphRestore}}{}
+    \iftoggle{LBodyContainerOpen}{\closeLBodyContainer \global\toggletrue{RequireLBodyRestore}}{}
 
     \tagstructbegin{tag=Link, actualtext-o=#1, alttext=#1}
     \tagmcbegin{tag=Link}   
@@ -260,6 +278,7 @@
     \tagstructend
     
     \iftoggle{RequireParagraphRestore}{\openParagraphContainer \global\togglefalse{RequireParagraphRestore}}{}
+    \iftoggle{RequireLBodyRestore}{\openLBodyContainer \global\togglefalse{RequireLBodyRestore}}{}
 }
 
 % Character encoding error on use of \texttt{} causing accessibility test to fail
