@@ -120,7 +120,7 @@
 
 \newcommand{\closeItem}{
   \tagmcend\tagstructend %LBody
-  \tagmcend\tagstructend %LI
+  \tagstructend %LI
    \global\togglefalse{LIOpen}
 }
 
@@ -162,7 +162,7 @@
 
 \renewcommand{\labelitemi}{
     \iftoggle{LIOpen}{\closeItem}{}
-    \tagstructbegin{tag=LI}\tagmcbegin{tag=LI} 
+    \tagstructbegin{tag=LI}
     \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} - \tagmcend\tagstructend % Character encoding error on use of bullet causing accessibility test to fail
     \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
     \global\toggletrue{LIOpen}
@@ -170,7 +170,7 @@
   
 \renewcommand{\labelenumi}{
     \iftoggle{LIOpen}{\closeItem}{}
-    \tagstructbegin{tag=LI}\tagmcbegin{tag=LI} 
+    \tagstructbegin{tag=LI}
     \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} (\Alph*) \tagmcend\tagstructend
     \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
     \global\toggletrue{LIOpen}
@@ -178,7 +178,7 @@
 
 \renewcommand{\labelenumii}{
     \iftoggle{LIOpen}{\closeItem}{}
-    \tagstructbegin{tag=LI}\tagmcbegin{tag=LI} 
+    \tagstructbegin{tag=LI}
     \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} \roman*. \tagmcend\tagstructend
     \tagstructbegin{tag=LBody}\tagmcbegin{tag=LBody}
     \global\toggletrue{LIOpen}
