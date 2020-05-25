@@ -50,7 +50,11 @@
 % Accessibility package is very particular about usepackage order so it goes here
 %\usepackage[tagged, flatstructure]{accessibility}
 \usepackage{tagpdf}
-\tagpdfsetup{activate-all=true, interwordspace=true}
+\tagpdfsetup{activate-all=true, 
+interwordspace=true, 
+newattribute = {UpperAlpha}{<</O /List /ListNumbering /UpperAlpha>>}, 
+newattribute = {LowerRoman}{<</O /List /ListNumbering /LowerRoman>>},
+newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 
 % Make enumerate / itemize lists more closely spaced
 \usepackage{enumitem}
@@ -133,8 +137,8 @@
   \renewenvironment{enumerate}%
     {
       \setcounter{NestedEnumDepth}{\value{NestedEnumDepth}+1}
-      \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructbegin{tag=L}}{}
-      \ifnumcomp{\value{NestedEnumDepth}}{>}{1}{ \tagstructbegin{tag=L} \tagstructbegin{tag=LI} \tagstructbegin{tag=LBody}}{}
+      \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructbegin{tag=L, attribute={UpperAlpha}}}{}
+      \ifnumcomp{\value{NestedEnumDepth}}{>}{1}{ \tagstructbegin{tag=L, attribute={LowerRoman}} \tagstructbegin{tag=LI} \tagstructbegin{tag=LBody}}{}
       \originalenumerate
     }{
      \originalendenumerate 
@@ -182,7 +186,7 @@
 \renewcommand{\labelitemi}{
     \iftoggle{LIOpen}{\closeItem}{}
     \tagstructbegin{tag=LI}
-    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} - \tagmcend\tagstructend % Character encoding error on use of bullet causing accessibility test to fail
+    \tagmcbegin{tag=Lbl} - \tagmcend % Character encoding error on use of bullet causing accessibility test to fail
     \tagstructbegin{tag=LBody}\openLBodyContainer
     \global\toggletrue{LIOpen}
 }
@@ -190,7 +194,7 @@
 \renewcommand{\labelenumi}{
     \iftoggle{LIOpen}{\closeItem}{}
     \tagstructbegin{tag=LI}
-    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} (\Alph*) \tagmcend\tagstructend
+    \tagmcbegin{tag=Lbl} (\Alph*) \tagmcend
     \tagstructbegin{tag=LBody}\openLBodyContainer
     \global\toggletrue{LIOpen}
 }
@@ -198,7 +202,7 @@
 \renewcommand{\labelenumii}{
     \iftoggle{LIOpen}{\closeItem}{}
     \tagstructbegin{tag=LI}
-    \tagstructbegin{tag=Lbl}\tagmcbegin{tag=Lbl} \roman*. \tagmcend\tagstructend
+    \tagmcbegin{tag=Lbl} \small{\roman*.} \tagmcend
     \tagstructbegin{tag=LBody}\openLBodyContainer
     \global\toggletrue{LIOpen}
 }
