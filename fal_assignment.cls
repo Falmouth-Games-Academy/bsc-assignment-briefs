@@ -295,8 +295,8 @@
             };
             \node[anchor=north east, xshift=-0.5cm, yshift=-0.5cm] at (banner.north east) {
                 \parbox[t]{18cm}{\raggedleft\Huge\color{white}{
-                    \tagstructbegin{tag=H1}
-                        \tagmcbegin{tag=H1, actualtext-o=\@title}
+                    \tagstructbegin{tag=Title}
+                        \tagmcbegin{tag=Title, actualtext-o=\@title}
                             \MakeUppercase{\@title}
                         \tagmcend
                     \tagstructend
@@ -369,7 +369,15 @@
 }
 
 % Inspirational quote in the margin
-\newcommand{\marginquoterule}{{\color{black}\rule{4.5cm}{1pt}}}
+\newcommand{\marginquoterule}{
+\tagmcend \tagstructend
+\marginquoteruleb
+\tagstructbegin{tag=P}\tagmcbegin{tag=P}
+}
+
+\newcommand{\marginquoteruleb}{
+{\color{black}\rule{4.5cm}{1pt}}
+}
 
 % \NewEnviron{marginquote}{%
 %     \begin{tikzpicture}[remember picture, overlay]
@@ -392,10 +400,10 @@
             \node[anchor=west, xshift=1.5cm] at (current page.west) {
                 \parbox[t]{4.5cm}{%
                     \setlength{\parskip}{1em}%
-                    \marginquoterule\par%
+                    \marginquoteruleb\par%
                     \small\centering\em\color{blue!50!black}\p{#1}\par%
                     %\small\centering\emph{\color{blue!50!black}\p{--- #2}}\par%
-                    \marginquoterule%
+                    \marginquoteruleb%
                 }
             };
         \end{tikzpicture}
@@ -418,7 +426,7 @@
                 \tagmcend
                 \tagstructend
                 \par
-                {\footnotesize \tag{P}{#3}}
+                {\footnotesize \tag{Caption}{#3}}
             }
         };
     \end{tikzpicture}
