@@ -59,6 +59,9 @@
 % Fix for pound sterling sign http://tex.stackexchange.com/a/17858
 \usepackage[T1]{fontenc} 
 
+% For UNICODE characters
+\usepackage[utf8]{inputenc}
+
 % For adding todos and coloured boxes
 \usepackage{todonotes}
 
@@ -116,13 +119,12 @@
 \newcounter{NestedEnumDepth}
 \setcounter{NestedEnumDepth}{0}
 
-\iftoggle{LIOpen}{\closeItem}{}
-
-\newcommand{\closeItem}{
-  \closeLBodyContainer %LBody
-  \tagstructend %LBody
-  \tagstructend %LI
-   \global\togglefalse{LIOpen}
+\newcommand{\closeItem}
+{
+        \closeLBodyContainer %LBody
+        \tagstructend %LBody
+        \tagstructend %LI
+        \global\togglefalse{LIOpen}
 }
 
   %
@@ -132,11 +134,13 @@
     {
       \setcounter{NestedEnumDepth}{\value{NestedEnumDepth}+1}
       \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructbegin{tag=L}}{}
+      \ifnumcomp{\value{NestedEnumDepth}}{>}{1}{ \tagstructbegin{tag=L} \tagstructbegin{tag=LI} \tagstructbegin{tag=LBody}}{}
       \originalenumerate
     }{
      \originalendenumerate 
      \iftoggle{LIOpen}{\closeItem}{}
      \ifnumcomp{\value{NestedEnumDepth}}{=}{1}{\tagstructend}{}
+      \ifnumcomp{\value{NestedEnumDepth}}{>}{1}{\tagstructend \tagstructend \tagstructend}{}
      \setcounter{NestedEnumDepth}{\value{NestedEnumDepth}-1}
      }%
 
@@ -156,7 +160,6 @@
 
 \let\originaltheenumi\theenumi%
 \renewcommand{\theenumi}{
-    \iftoggle{LIOpen}{\closeItem}
     \originaltheenumi    
 }
 
