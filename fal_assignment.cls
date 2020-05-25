@@ -59,6 +59,9 @@
 % Fix for pound sterling sign http://tex.stackexchange.com/a/17858
 \usepackage[T1]{fontenc} 
 
+% For UNICODE characters
+\usepackage[utf8]{inputenc}
+
 % For adding todos and coloured boxes
 \usepackage{todonotes}
 
