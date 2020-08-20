@@ -1,16 +1,16 @@
 \documentclass{../../fal_assignment}
 \graphicspath{ {../../} }
 
-\usepackage{enumitem}
-\setlist{nosep} % Make enumerate / itemize lists more closely spaced
-\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
-\usepackage[hyphens]{url}
-\usepackage{todonotes}
+\hypersetup{
+    colorlinks=true, 
+    urlcolor=blue,
+    linkcolor=
+}
 
 \title{Worksheet Tasks}
-\author{Dr Ed Powley}
+\author{Dr Ed Powley, Kate Bergel}
 \module{COMP270}
-\version{1.0}
+\version{1.1}
 
 \begin{document}
 
@@ -19,48 +19,31 @@
 \section*{Introduction}
 
 \begin{marginquote}
-``No matter the language, learning to program will take a very long time, and is often very frustrating. I'm sorry. There is no solution. Just practice. Regular practice.
+``Mathematics obviously has a profound influence on computer science; nearly every branch of mathematical knowledge has been brought to bear somewhere. I recently worked on a problem dealing with discrete objects called 'binary trees', which arise frequently in computer representations of things, and the solution to the problem involved the complex gamma function times the square of  Reimann's zeta function. Thus the results of classical mathematics often turn out to be useful in rather amazing places."
 
-``That's why I always call programming a craft. You spend your life honing your craft, not a weekend.
-
-``You WILL get stuck.
-You WILL get very frustrated.
-You WILL want to quit.
-You WILL think this is all pointless and dumb.
-You WILL look at the things others are doing and think `How the hell am I going to do this?'
-
-``Programming can make you feel empowered.
-Programming can make you feel excited.
-Programming can be a major source of inspiration.
-
-``But it has to come from you. YOU are the driving force here. I and others can only point you in a direction.''
-
-\par --- \'Olafur Waage
+\par --- Donald E. Knuth, Selected Papers on Computer Science
 \end{marginquote}
-%\marginpicture{flavour_pic}{
-%    \emph{SpaceChem} is a puzzle game in which players must apply computational thinking to build circuits which assemble
-%    chemical molecules.
-%}
+\marginpicture{flavour_pic}
 
-In this assignment, you are required to complete a number of programming tasks to accompany your studies of mathematics for 3D worlds and simulations. This assignment is divided into a series of \textbf{worksheets}, each of which requires you to \textbf{implement} mathematical methods and algorithms to solve specified problems.
+In this assignment, you are required to complete a number of programming tasks to accompany your studies of mathematics for 3D worlds and simulations. This assignment is divided into a series of \textbf{worksheets}, each of which requires you to \textbf{implement} mathematical methods and algorithms to solve specified problems in areas such as geometry, physics and lighting.
 
-In order for programmers to communicate with each other regarding the technical aspects of a game development project, they must have good computational thinking skills, a strong foundational knowledge of computing principles, applied knowledge of program design notations and annotations, and a working knowledge of particular programming constructs (often as a result of writing their own versions). Such knowledge and skills take time and a sustained effort to develop. For this reason, you will work consistently across the semester by completing a series of bite-sized worksheets.
+The worlds of mathematics and programming have much in common, with rational thinking for problem solving being a key skill in both, however the translation of mathematical ideas into code is not always direct or intuitive. As with all aspects of programming, becoming familiar with (sometimes obscure) mathematical notation and developing fluency in implementing it takes time and a sustained effort; for this reason, you will work consistently across the semester by completing a series of bite-sized worksheets.
 
 This assignment is formed of \textbf{four} parts: Worksheets A, B, C, and D.
 These focus on the following four topics:
-\begin{enumerate}
-	\item[A] Parametric equations and 2D geometry;
-	\item[B] Newtonian mechanics and numerical control;
-	\item[C] 3D geometry and raycasting;
-	\item[D] Efficiency and optimisation.
+\begin{enumerate}[label=\textbf{\Alph*},align=left]
+	\item Parametric equations and 2D geometry;
+	\item Newtonian mechanics and numerical control;
+	\item 3D geometry and raycasting;
+	\item Introduction to the graphics pipeline and VFX techniques.
 \end{enumerate}
 
 For each part you must:
 \begin{enumerate}[label=(\roman*)]
-    \item \textbf{Read} the instructions in the worksheet or exercise sheet;
+	\item \textbf{Read} the instructions in the worksheet;
 	\item \textbf{Fork} a GitHub repository containing a skeleton implementation;
-    \item \textbf{Complete} the implementation as specified in the worksheet;
-    \item \textbf{Submit} your solution via GitHub pull request, according to the instructions on the worksheet, by the deadline specified on the worksheet.
+	\item \textbf{Complete} the implementation as specified in the worksheet;
+	\item \textbf{Submit} your solution via GitHub pull request by the deadline specified when the worksheet is released (usually the Friday two weeks after the material becomes available).
 \end{enumerate}
 
 \subsection*{Assignment Setup} 
@@ -128,32 +111,37 @@ Nobody learns in a vacuum: you are allowed, and indeed encouraged, to discuss yo
 
 See also individual worksheets.
 
-
+\rubrichead{All submissions and assessment criteria for this assignment are individual.}
 \begin{markingrubric}
+
 	\firstcriterion{Worksheet A}{25\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
 	\gradespan{5}{A reasonable attempt at the worksheet or exercise sheet was submitted by the formative deadline.
 		\par		There is no evidence of academic misconduct.
-		\par		See worksheet for detailed marking criteria.}
-		
+		\par		See worksheet for detailed marking criteria.
+		\vspace{\baselineskip}}
+
 	\criterion{Worksheet B}{25\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
 	\gradespan{5}{A reasonable attempt at the worksheet or exercise sheet was submitted by the formative deadline.
 		\par		There is no evidence of academic misconduct.
-		\par		See worksheet for detailed marking criteria.}
-		
+		\par		See worksheet for detailed marking criteria.
+		\vspace{\baselineskip}}
+
 	\criterion{Worksheet C}{25\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
 	\gradespan{5}{A reasonable attempt at the worksheet or exercise sheet was submitted by the formative deadline.
 		\par		There is no evidence of academic misconduct.
-		\par		See worksheet for detailed marking criteria.}
-		
+		\par		See worksheet for detailed marking criteria.
+		\vspace{\baselineskip}}
+
 	\criterion{Worksheet D}{25\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
 	\gradespan{5}{A reasonable attempt at the worksheet or exercise sheet was submitted by the formative deadline.
 		\par		There is no evidence of academic misconduct.
-		\par		See worksheet for detailed marking criteria.}
-		
+		\par		See worksheet for detailed marking criteria.
+		\vspace{\baselineskip}}
+
 \end{markingrubric}
 
 \end{document}

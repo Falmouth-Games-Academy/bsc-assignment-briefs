@@ -2,11 +2,13 @@
 \graphicspath{ {../../../} }
 
 \usepackage{amsmath}
-\usepackage{enumitem}
-\setlist{nosep} % Make enumerate / itemize lists more closely spaced
-\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
-\usepackage{url}
-\usepackage{todonotes}
+\usepackage{underscore}
+
+\hypersetup{
+    colorlinks=true, 
+    urlcolor=blue,
+    linkcolor=
+}
 
 \usepackage{listings}
 \lstset{
@@ -27,7 +29,7 @@
 \newcommand{\colvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \newcommand{\colxy}[1]{\colvec{x_{#1}}{y_{#1}}}
 
-\title{Worksheet A}
+\title{Worksheet A: B\'ezier Curves}
 \author{Dr Ed Powley}
 \module{COMP270}
 \version{1.0}
@@ -70,7 +72,7 @@ where $0 \leq t \leq 1$. See Figure~\ref{fig:bezier}.
 	\begin{center}
 		\includegraphics[width=0.6\textwidth]{bezier}
 	\end{center}
-	\caption{A cubic B\'ezier curve. Image source: \protect\url{https://commons.wikimedia.org/wiki/File:Bezier_curve.svg}.}
+	\caption{A cubic B\'ezier curve. Image source: \protect\url{https://commons.wikimedia.org/wiki/File:Bezier_curve.svg}}
 	\label{fig:bezier}
 \end{figure}
 
@@ -129,9 +131,11 @@ correspond to a constant distance along the curve.
 \textbf{Modify} the implementation of \lstinline{Application::updateCarPosition} to achieve a more consistent movement speed.
 Figuring out exactly how to achieve this is part of the exercise.
 
+\rubrichead{All submissions and assessment criteria for this assignment are individual.}
 \begin{markingrubric}
 	\firstcriterion{Basic competency threshold}{30\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
+		\vspace{\baselineskip}
 	\gradespan{5}{A reasonable attempt at the worksheet was submitted by the formative deadline.
 		\par		There is no evidence of academic misconduct.}
 		

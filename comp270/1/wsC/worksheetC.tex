@@ -1,19 +1,12 @@
 \documentclass{../../../fal_assignment}
 \graphicspath{ {../../../} }
 
-\usepackage{amsmath}
-\usepackage{enumitem}
-\setlist{nosep} % Make enumerate / itemize lists more closely spaced
-\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
-\usepackage{url}
-\usepackage{todonotes}
-\usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{hyperref}
 
 \hypersetup{
     colorlinks=true, 
     urlcolor=blue,
+    linkcolor=
 }
 
 \usepackage{listings}
@@ -32,10 +25,7 @@
 }
 \lstset{language=C++}
 
-\newcommand{\colvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
-\newcommand{\colxy}[1]{\colvec{x_{#1}}{y_{#1}}}
-
-\title{Worksheet C}
+\title{Worksheet C: Raycasting}
 \author{Kate Bergel}
 \module{COMP270}
 \version{1.0}
@@ -79,25 +69,31 @@ Aside from the first task, which must be completed in order to actually see anyt
 \end{figure}
 
 The provided skeleton project implements a basic raycasting camera setup, as shown in Figure~\ref{fig:scene}.
-The objects - two spheres and a plane - are already in the scene, though they cannot be seen to start with. The camera is initially at the point (0, 0, 20) in world space, facing along the negative $z$-axis, and can be moved in a limited fashion, in directions along the world coordinate axes, with the following key presses:
+The objects - two spheres and a plane - are already in the scene, though they cannot be seen to start with. The camera is initially at the point (0, 0, 20) in world space, facing along the negative \textit{z}-axis, and can be moved in a limited fashion, in directions along the world coordinate axes, with the following key presses:
 
 \begin{itemize}
-	\item \lstinline{a}: translates the camera in the negative $x$ direction ("left")
-	\item \lstinline{d}: translates the camera in the positive $x$ direction ("right")
-	\item \lstinline{s}: translates the camera in the negative $y$ direction ("up")
-	\item \lstinline{w}: translates the camera in the positive $y$ direction ("down")
-	\item \lstinline{q}:  translates the camera in the negative $z$ direction (towards the objects)
-	\item \lstinline{e}:  translates the camera in the positive $z$ direction (away from the objects)
+	\item \lstinline{a}: translates the camera in the negative \textit{x} direction ("left")
+	\item \lstinline{d}: translates the camera in the positive \textit{x} direction ("right")
+	\item \lstinline{s}: translates the camera in the negative \textit{y} direction ("up")
+	\item \lstinline{w}: translates the camera in the positive \textit{y} direction ("down")
+	\item \lstinline{q}:  translates the camera in the negative \textit{z} direction (towards the objects)
+	\item \lstinline{e}:  translates the camera in the positive \textit{z} direction (away from the objects)
 \end{itemize}
 
 In addition, the camera can be "zoomed" in/out by pressing the up/down arrow keys, which moves the view plane away from/towards the camera.
 
 \section*{Task 1: let there be light}
 
+\begin{marginquote}
+``Happiness can be found, even in the darkest of times, if one only remembers to turn on the light."
+
+\par --- Albus Dumbledore
+\end{marginquote}
+
 The camera creates a picture by choosing a colour for each 'pixel' of the view plane based on which object in the scene is visible "through" the pixel's location in the view plane from the camera's position. The visibility test is carried out in \lstinline{Camera::updateScreenBuffer} by finding which objects are encountered by "rays" sent from the camera through the centre of each pixel. The number and directions of the rays will be determined by the view plane properties stored in the \lstinline{Camera::m_viewPlane} struct (\textbf{note}: the view plane distance is measured along the \textit{camera's viewing direction}).
 
 \textbf{Implement} \lstinline{Camera::generateRays} to compute a unit-length \lstinline{Vector3D} direction for each ray and store it at the indices corresponding to the pixel it passes through in \lstinline{Camera::m_pixelRays} - you will need to make sure the data structure is sized appropriately!
-\textbf{Note:} Pixel indices are assumed to correspond to the coordinate frame of the scene, where the $y$ axis points upwards, \textit{not} the SDL screen coordinates.
+\textbf{Note:} Pixel indices are assumed to correspond to the coordinate frame of the scene, where the \textit{y} axis points upwards, \textit{not} the SDL screen coordinates.
 
 Once you've generated the rays, you should be able to see the spheres as in Figure~\ref{fig:spheres}.
 
@@ -125,6 +121,12 @@ Following this, your scene should look like Figure~\ref{fig:plane}.
 
 \section*{Task 3: spinning around}
 
+\begin{marginquote}
+``Unfortunately, no-one can be told what the Matrix is. You have to see it for yourself."
+
+\par --- Morpheus
+\end{marginquote}
+
 Now you can see things, but only in a limited way, as the camera direction is fixed: although holding \texttt{shift} down when pressing the camera control keys modifies the values in \lstinline{Camera::m_rotation}, these values are not used when determining the scene layout relative to the camera. \textbf{Modify} \lstinline{Camera::updateWorldTransform} to compute the transform matrix that will transform the objects into camera space before the ray intersections are performed, and \lstinline{Matrix3D::inverseTransform} so that they can be transformed back again!
 
 \textbf{Note:} there are various ways you in which you can perform the rotation, which may be relative to the camera (as a first person player view) or the world origin/other point of interest (as in a modelling tool such as Maya). Any solution is acceptable, provided it allows reasonably intuitive movement (you may edit the key mappings in \lstinline{Application::processEvent} if it helps) and preserves the proportions of the scene.
@@ -145,9 +147,12 @@ So far, everything is looking rather flat because we're setting all the pixels t
 
 \textbf{Choose} (or \textbf{invent}) and \textbf{implement} a method for giving the scene a "more 3D" look - points will be awarded for creativity as well as adherence to existing techniques! You will almost certainly need to extend the functionality of more than one class; make sure to explain your chosen strategy and/or provide references to source material in the comments.
 
+\rubrichead{All submissions and assessment criteria for this assignment are individual.}
 \begin{markingrubric}
+
 	\firstcriterion{Basic competency threshold}{30\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
+		\vspace{\baselineskip}
 	\gradespan{5}{A reasonable attempt at the worksheet was submitted by the formative deadline.
 		\par		There is no evidence of academic misconduct.}
 		
@@ -157,6 +162,7 @@ So far, everything is looking rather flat because we're setting all the pixels t
 		\grade Task 1 has been successfully completed.
 		\grade Two tasks (including task 1) have been successfully completed.
 		\grade Three tasks (including task 1) have been successfully completed.
+		\vspace{\baselineskip}
 		\grade All four tasks have been successfully completed.
 
     \criterion{Maintainability}{30\%}
