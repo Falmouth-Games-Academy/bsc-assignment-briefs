@@ -532,6 +532,15 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 \newcommand{\rubricyeartwo}{\@rubricgrades}
 \newcommand{\rubricyearthree}{\@rubricgrades}
 
+\newcommand{\rubricmasters}{
+\renewcommand{\@rubricgrades}{
+	\centering \textbf{\small \tag{TH}{Near Pass}} &
+	\centering \textbf{\small \tag{TH}{Pass}} &
+	\centering \textbf{\small \tag{TH}{Merit}} &
+	\centering \textbf{\small \tag{TH}{Distinction}}
+}
+}
+
 % PDF properties for accessibility
 % https://stackoverflow.com/a/3430025
 \makeatletter
