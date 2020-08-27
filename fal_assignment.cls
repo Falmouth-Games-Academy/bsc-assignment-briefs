@@ -103,7 +103,7 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 }
 
 % Structure tagging for accessibility
-\newcommand{\tag}[2]{
+\newcommand{\tagContent}[2]{
     % Create the structure tags
     \tagstructbegin{tag=#1}
         \tagmcbegin{tag=#1}
@@ -114,7 +114,7 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 }
 
 % Shortcut to tag a paragraph
-\newcommand{\p}[1]{\tag{P}{#1}}
+\newcommand{\p}[1]{\tagContent{P}{#1}}
 
 % Overriding list environments with accessibility tagging
 \newtoggle{LIOpen}
@@ -336,9 +336,9 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
     }%
 }%
 
-\newcommand{\originalsectionWithStar}[1]{\originalsection*{\tag{H1}{#1}}}
-\newcommand{\originalsectionWithTwoOption}[2]{\originalsection[#1]{\tag{H1}{#2}}}
-\newcommand{\originalsectionWithOption}[1]{\originalsection{\tag{H1}{#1}}}
+\newcommand{\originalsectionWithStar}[1]{\originalsection*{\tagContent{H1}{#1}}}
+\newcommand{\originalsectionWithTwoOption}[2]{\originalsection[#1]{\tagContent{H1}{#2}}}
+\newcommand{\originalsectionWithOption}[1]{\originalsection{\tagContent{H1}{#1}}}
 
 \let\originalsubsection\subsection%
 \renewcommand{\subsection}{%
@@ -349,9 +349,9 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
     }%
 }%
 
-\newcommand{\originalsubsectionWithStar}[1]{\originalsubsection*{\tag{H2}{#1}}}
-\newcommand{\originalsubsectionWithTwoOption}[2]{\originalsubsection[#1]{\tag{H2}{#2}}}
-\newcommand{\originalsubsectionWithOption}[1]{\originalsubsection{\tag{H2}{#1}}}
+\newcommand{\originalsubsectionWithStar}[1]{\originalsubsection*{\tagContent{H2}{#1}}}
+\newcommand{\originalsubsectionWithTwoOption}[2]{\originalsubsection[#1]{\tagContent{H2}{#2}}}
+\newcommand{\originalsubsectionWithOption}[1]{\originalsubsection{\tagContent{H2}{#1}}}
 
 \let\originalsubsubsection\subsubsection%
 \renewcommand{\subsubsection}{%
@@ -362,9 +362,9 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
     }%
 }%
 
-\newcommand{\originalsubsubsectionWithStar}[1]{\originalsubsubsection*{\tag{H2}{#1}}}
-\newcommand{\originalsubsubsectionWithTwoOption}[2]{\originalsubsubsection[#1]{\tag{H2}{#2}}}
-\newcommand{\originalsubsubsectionWithOption}[1]{\originalsubsubsection{\tag{H2}{#1}}}
+\newcommand{\originalsubsubsectionWithStar}[1]{\originalsubsubsection*{\tagContent{H2}{#1}}}
+\newcommand{\originalsubsubsectionWithTwoOption}[2]{\originalsubsubsection[#1]{\tagContent{H2}{#2}}}
+\newcommand{\originalsubsubsectionWithOption}[1]{\originalsubsubsection{\tagContent{H2}{#1}}}
 
 % Graphics with alt text
 \newcommand{\includegraphicsalt}[3][]{%
@@ -393,7 +393,7 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 %                 \setlength{\parskip}{1em}%
 %                 \marginquoterule\par%
 %                 \small\centering\emph{\color{blue!50!black}%
-%                     \tag{BlockQuote}{\BODY}%
+%                     \tagContent{BlockQuote}{\BODY}%
 %                 }\par%
 %                 \marginquoterule%
 %             }
@@ -433,7 +433,7 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
                 \tagmcend
                 \tagstructend
                 \par
-                {\footnotesize \tag{Caption}{#3}}
+                {\footnotesize \tagContent{Caption}{#3}}
             }
         };
     \end{tikzpicture}
@@ -484,8 +484,8 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
             \setlength\arrayrulewidth{1pt}
             \begin{longtable}{p{2.5cm}p{1.5cm}*{6}{p{3.4cm}}}
                 \hline\\[0.3em]
-                \openCriterion\centering \textbf{\small \tag{TH}{Criterion}} &
-                \centering \textbf{\small \tag{TH}{Weight}} &
+                \openCriterion\centering \textbf{\small \tagContent{TH}{Criterion}} &
+                \centering \textbf{\small \tagContent{TH}{Weight}} &
                 \@rubricgrades \closeCriterion \endhead
                  \hline\\[0.5em]
 }{
@@ -505,12 +505,12 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 % Use firstcriterion for the first criterion, and criterion for subsequent ones
 % The difference is that firstcriterion doesn't start a new table row, because \endhead did that already
 % TODO: Investigate why \hspace is needed
-\newcommand{\firstcriterion}[2]{\strut \openCriterion \hspace{-1.6em} \setlength{\parskip}{0.5em}\raggedright \tag{TD}{#1} & \centering \tag{TD}{#2}}
-\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\setlength{\parskip}{0.8em}\raggedright \hspace{-0.8em} \tag{TD}{#1} & \centering \tag{TD}{#2}}
+\newcommand{\firstcriterion}[2]{\strut \openCriterion \hspace{-1.6em} \setlength{\parskip}{0.5em}\raggedright \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
+\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\setlength{\parskip}{0.8em}\raggedright \hspace{-0.8em} \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
 \newcommand{\grade}{\iftoggle{GradeOpen}{\closeGrade}{} & \openGrade \setlength{\parskip}{0.5em}\raggedright}
 \newcommand{\fail}{}
 \newcommand{\gradespan}[2]{& \multicolumn{#1}{p{3.4cm * #1 + (\tabcolsep * 2 + \arrayrulewidth) * (#1 - 1)}|}%
-    {\setlength{\parskip}{0.5em}\raggedright \tag{TD}{#2}}}
+    {\setlength{\parskip}{0.5em}\raggedright \tagContent{TD}{#2}}}
 
 % Modifiers for title, header and footer of the marking rubric
 % Note that these must be specified *before* \begin{markingrubric}
@@ -522,22 +522,22 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 \newcommand{\rubricfoot}[1]{\renewcommand{\@rubricfoot}{#1}}
 
 \newcommand{\@rubricgrades}{
-	\centering \textbf{\small \tag{TH}{Near Pass}} &
-	\centering \textbf{\small \tag{TH}{Adequate}} &
-	\centering \textbf{\small \tag{TH}{Competent}} &
-	\centering \textbf{\small \tag{TH}{Very Good}} &
-	\centering \textbf{\small \tag{TH}{Excellent}} &
-	\centering \textbf{\small \tag{TH}{Outstanding}}
+	\centering \textbf{\small \tagContent{TH}{Near Pass}} &
+	\centering \textbf{\small \tagContent{TH}{Adequate}} &
+	\centering \textbf{\small \tagContent{TH}{Competent}} &
+	\centering \textbf{\small \tagContent{TH}{Very Good}} &
+	\centering \textbf{\small \tagContent{TH}{Excellent}} &
+	\centering \textbf{\small \tagContent{TH}{Outstanding}}
 }
 \newcommand{\rubricyeartwo}{\@rubricgrades}
 \newcommand{\rubricyearthree}{\@rubricgrades}
 
 \newcommand{\rubricmasters}{
 \renewcommand{\@rubricgrades}{
-	\centering \textbf{\small \tag{TH}{Near Pass}} &
-	\centering \textbf{\small \tag{TH}{Pass}} &
-	\centering \textbf{\small \tag{TH}{Merit}} &
-	\centering \textbf{\small \tag{TH}{Distinction}}
+	\centering \textbf{\small \tagContent{TH}{Near Pass}} &
+	\centering \textbf{\small \tagContent{TH}{Pass}} &
+	\centering \textbf{\small \tagContent{TH}{Merit}} &
+	\centering \textbf{\small \tagContent{TH}{Distinction}}
 }
 }
 
