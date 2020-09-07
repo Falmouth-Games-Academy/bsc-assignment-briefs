@@ -2,11 +2,6 @@
 \graphicspath{ {../../../} }
 
 \usepackage{amsmath}
-\usepackage{enumitem}
-\setlist{nosep} % Make enumerate / itemize lists more closely spaced
-\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
-\usepackage{url}
-\usepackage{todonotes}
 
 \usepackage{listings}
 \lstset{
@@ -24,10 +19,16 @@
 }
 \lstset{language=C++}
 
+\hypersetup{
+	colorlinks=true, 
+	urlcolor=blue,
+	linkcolor=
+}
+
 \newcommand{\colvec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
 \newcommand{\colxy}[1]{\colvec{x_{#1}}{y_{#1}}}
 
-\title{Worksheet B}
+\title{Worksheet B: Newtonian mechanics}
 \author{Dr Ed Powley}
 \module{COMP270}
 \version{1.0}
@@ -128,9 +129,11 @@ You may tackle the cases without height difference or wind first (by changing th
 or you may tackle the general case straight away.
 \textbf{Implement} your formula in \lstinline{Controller::calculateShotAngle}.
 
+\rubrichead{All submissions and assessment criteria for this assignment are individual.}
 \begin{markingrubric}
 	\firstcriterion{Basic competency threshold}{30\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
+		\vspace{\baselineskip}
 	\gradespan{5}{A reasonable attempt at the worksheet was submitted by the formative deadline.
 		\par		There is no evidence of academic misconduct.}
 		
