@@ -25,7 +25,7 @@
 }
 \lstset{language=C++}
 
-\title{Worksheet C: Raycasting}
+\title{Worksheet 3: Raycasting}
 \author{Kate Bergel}
 \module{COMP270}
 \version{1.0}
@@ -38,13 +38,13 @@
 
 In this worksheet you will use 3D vectors and matrices to complete the implementation of a basic ray caster.
 
-Begin by \textbf{forking} the following git repository:
+Begin by \textbf{forking} the following BitBucket repository:
 
 \begin{center}
-	\url{https://github.com/Falmouth-Games-Academy/comp270-worksheet-C}
+	\url{https://gamesgit.falmouth.ac.uk/projects/COMP270/repos/comp270-worksheet-3}
 \end{center}
 
-\textbf{Complete} the tasks described below, remembering to \textbf{commit} your work regularly.
+\textbf{Complete} the \textbf{FOUR} tasks described below, remembering to \textbf{commit} your work regularly.
 To submit your work, open a \textbf{pull request} from your forked repository to the original repository.
 
 \textbf{Note}: The tasks below can be completed by filling in the relevant functions marked in \texttt{Camera.cpp}, \texttt{Object.cpp} and \texttt{Matrix3D.cpp}, however you are welcome (and encouraged) to add helper methods and member data to these classes (and the \texttt{Plane} class, which derives from \texttt{Object}), expecially for Task 4. It should not be necessary to deviate from the main program structure; if you do decide to do so, your reasons should be stated in code comments and/or git commit messages.
@@ -82,13 +82,13 @@ The objects - two spheres and a plane - are already in the scene, though they ca
 
 In addition, the camera can be "zoomed" in/out by pressing the up/down arrow keys, which moves the view plane away from/towards the camera.
 
-\section*{Task 1: let there be light}
-
 \begin{marginquote}
 ``Happiness can be found, even in the darkest of times, if one only remembers to turn on the light."
 
 \par --- Albus Dumbledore
 \end{marginquote}
+
+\section*{Task 1: let there be light}
 
 The camera creates a picture by choosing a colour for each 'pixel' of the view plane based on which object in the scene is visible "through" the pixel's location in the view plane from the camera's position. The visibility test is carried out in \lstinline{Camera::updateScreenBuffer} by finding which objects are encountered by "rays" sent from the camera through the centre of each pixel. The number and directions of the rays will be determined by the view plane properties stored in the \lstinline{Camera::m_viewPlane} struct (\textbf{note}: the view plane distance is measured along the \textit{camera's viewing direction}).
 
@@ -121,12 +121,6 @@ Following this, your scene should look like Figure~\ref{fig:plane}.
 
 \section*{Task 3: spinning around}
 
-\begin{marginquote}
-``Unfortunately, no-one can be told what the Matrix is. You have to see it for yourself."
-
-\par --- Morpheus
-\end{marginquote}
-
 Now you can see things, but only in a limited way, as the camera direction is fixed: although holding \texttt{shift} down when pressing the camera control keys modifies the values in \lstinline{Camera::m_rotation}, these values are not used when determining the scene layout relative to the camera. \textbf{Modify} \lstinline{Camera::updateWorldTransform} to compute the transform matrix that will transform the objects into camera space before the ray intersections are performed, and \lstinline{Matrix3D::inverseTransform} so that they can be transformed back again!
 
 \textbf{Note:} there are various ways you in which you can perform the rotation, which may be relative to the camera (as a first person player view) or the world origin/other point of interest (as in a modelling tool such as Maya). Any solution is acceptable, provided it allows reasonably intuitive movement (you may edit the key mappings in \lstinline{Application::processEvent} if it helps) and preserves the proportions of the scene.
@@ -141,31 +135,34 @@ With rotations in place, you should be able to view the scene from more interest
 	\label{fig:rotate}
 \end{figure}
 
+\begin{marginquote}
+``Unfortunately, no-one can be told what the Matrix is. You have to see it for yourself."
+
+\par --- Morpheus
+\end{marginquote}
+
 \section*{Task 4: round things that look round}
 
 So far, everything is looking rather flat because we're setting all the pixels to the same colour, regardless of "how much" they intersect the object. One way to add depth to a scene is to use \href{https://users.cs.northwestern.edu/~ago820/cs395/Papers/Phong_1975.pdf}{Phong shading}; shadows can also be created by sending rays that intersect an object back to a light source to see if any other objects block their path, and modifying the resulting pixel colour accordingly.
 
 \textbf{Choose} (or \textbf{invent}) and \textbf{implement} a method for giving the scene a "more 3D" look - points will be awarded for creativity as well as adherence to existing techniques! You will almost certainly need to extend the functionality of more than one class; make sure to explain your chosen strategy and/or provide references to source material in the comments.
 
-\rubrichead{All submissions and assessment criteria for this assignment are individual.}
+\rubrichead{All submissions and assessment criteria for this assignment are individual. To \textbf{pass} this assignment (achieve 40\% or more), you must submit a reasonable attempt at the worksheet by the formative deadline stated on LearningSpace.}
 \begin{markingrubric}
 
 	\firstcriterion{Basic competency threshold}{30\%}
 		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
-		\vspace{\baselineskip}
-	\gradespan{5}{A reasonable attempt at the worksheet was submitted by the formative deadline.
-		\par		There is no evidence of academic misconduct.}
+		\par Evidence of breach of academic integrity.
 		
-    \criterion{Functional coherence}{40\%}
+    \criterion{PROCESS:\\Functional coherence}{40\%}
         \grade\fail None of the tasks have been attempted.
 		\grade Task 1 has been attempted and partially completed.
 		\grade Task 1 has been successfully completed.
 		\grade Two tasks (including task 1) have been successfully completed.
 		\grade Three tasks (including task 1) have been successfully completed.
-		\vspace{\baselineskip}
 		\grade All four tasks have been successfully completed.
 
-    \criterion{Maintainability}{30\%}
+    \criterion{PROCESS:\\Maintainability}{30\%}
         \grade \fail The code is only sporadically commented, if at all, or comments are unclear.
             \par Few identifier names are clear or inappropriate.
             \par Code formatting hinders readability.
