@@ -30,8 +30,22 @@
 \pagestyle{empty}
 
 % Set the font
-\usepackage{avant}
-\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{avant}
+%\renewcommand{\familydefault}{\sfdefault}
+
+%\usepackage{lmodern}
+
+%\usepackage[scaled]{helvet}
+%\renewcommand\familydefault{\sfdefault} 
+
+\usepackage{fontspec}
+% \setmainfont{Comic Sans MS}
+\setmainfont{OpenDyslexic-Regular.otf}[
+    Path = ../../ ,
+    BoldFont = OpenDyslexic-Bold.otf,
+    ItalicFont = OpenDyslexic-Italic.otf,
+    BoldItalicFont = OpenDyslexic-BoldItalic.otf
+]
 
 % Put margin notes on the left hand side
 \reversemarginpar
@@ -45,7 +59,7 @@
 \titlespacing{\section}{0cm}{\parskip}{0cm}
 \titlespacing{\subsection}{0cm}{\parskip}{0cm}
 
-\usepackage[pdftex, pdflang={en-GB}, pdfdisplaydoctitle]{hyperref}
+\usepackage[pdflang={en-GB}, pdfdisplaydoctitle]{hyperref}
 
 % Accessibility package is very particular about usepackage order so it goes here
 %\usepackage[tagged, flatstructure]{accessibility}

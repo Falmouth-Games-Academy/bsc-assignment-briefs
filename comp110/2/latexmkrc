@@ -1,0 +1,12 @@
+$pdf_mode = 4;
+
+if ($^O eq "MSWin32")
+{
+    $success_cmd = "cmd /c ..\\..\\qpdf-10.0.1\\bin\\qpdf.exe --linearize --optimize-images %D temp.pdf & move /y temp.pdf %D";
+}
+else
+{
+    $success_cmd = "qpdf --linearize --optimize-images %D temp.pdf; mv -f temp.pdf %D";
+}
+
+$warning_cmd = $success_cmd;
