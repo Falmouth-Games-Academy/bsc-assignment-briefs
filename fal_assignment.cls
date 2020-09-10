@@ -16,6 +16,10 @@
 
 \usepackage[hyphens]{url}
 
+% This is required so that setmainfont works on headings later on
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
 
 %\usepackage[pdftex, pdflang={en-GB}, pdfdisplaydoctitle]{hyperref} % For hyperlinks and also for PDF information
 
@@ -476,7 +480,7 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
    \tagstructbegin{tag=TD}
    \tagmcbegin{tag=TD}
    \global\toggletrue{GradeOpen}
-   \hspace{-0.8em} % I don't know what is causing this offset
+   \hspace{-1.2em} % I don't know what is causing this offset
 }
 
 \newcommand{\closeGrade}{
@@ -519,8 +523,8 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 % Use firstcriterion for the first criterion, and criterion for subsequent ones
 % The difference is that firstcriterion doesn't start a new table row, because \endhead did that already
 % TODO: Investigate why \hspace is needed
-\newcommand{\firstcriterion}[2]{\strut \openCriterion \hspace{-1.6em} \setlength{\parskip}{0.5em}\raggedright \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
-\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\setlength{\parskip}{0.8em}\raggedright \hspace{-0.8em} \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
+\newcommand{\firstcriterion}[2]{\strut \openCriterion \hspace{-2.4em} \setlength{\parskip}{0.5em}\raggedright \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
+\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\setlength{\parskip}{0.8em}\raggedright \hspace{-1.2em} \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
 \newcommand{\grade}{\iftoggle{GradeOpen}{\closeGrade}{} & \openGrade \setlength{\parskip}{0.5em}\raggedright}
 \newcommand{\fail}{}
 \newcommand{\gradespan}[2]{& \multicolumn{#1}{p{3.4cm * #1 + (\tabcolsep * 2 + \arrayrulewidth) * (#1 - 1)}|}%
