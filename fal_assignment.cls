@@ -452,7 +452,7 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 \newcommand{\closeCriterion}{
   \tagstructend %TR
    \global\togglefalse{CriterionOpen}
-
+   \tabularnewline \hline
 }
 
 \newtoggle{GradeOpen}
@@ -468,13 +468,13 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 \newcommand{\closeGrade}{
   \tagmcend %TD
   \tagstructend %TD
-   \global\togglefalse{GradeOpen}
+  \global\togglefalse{GradeOpen}
 }
 
 \newenvironment{markingrubric}{%
     \clearpage
     \newgeometry{margin=1cm}
-    %\renewcommand{\arraystretch}{1.25}
+    \renewcommand{\arraystretch}{1.15}
     \begin{landscape}
         \section*{\@rubrictitle}
         \begingroup\scriptsize
@@ -486,13 +486,11 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
                 \hline\\[0.3em]
                 \openCriterion\centering \textbf{\small \tagContent{TH}{Criterion}} &
                 \centering \textbf{\small \tagContent{TH}{Weight}} &
-                \@rubricgrades \closeCriterion \endhead
-                 \hline\\[0.5em]
+                \@rubricgrades \endhead
+                 \closeCriterion
 }{
                 \iftoggle{GradeOpen}{\closeGrade}{}
-                \iftoggle{CriterionOpen}{\closeCriterion}{}
-                \tabularnewline
-                \hline
+                \tabularnewline \iftoggle{CriterionOpen}{\closeCriterion}{}
             \end{longtable}
             \tagstructend %Table
             \@rubricfoot
@@ -505,8 +503,8 @@ newattribute = {Decimal}{<</O /List /ListNumbering /Decimal>>}}
 % Use firstcriterion for the first criterion, and criterion for subsequent ones
 % The difference is that firstcriterion doesn't start a new table row, because \endhead did that already
 % TODO: Investigate why \hspace is needed
-\newcommand{\firstcriterion}[2]{\strut \openCriterion \hspace{-1.6em} \setlength{\parskip}{0.5em}\raggedright \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
-\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\closeCriterion}{} \openCriterion \tabularnewline\setlength{\parskip}{0.8em}\raggedright \hspace{-0.8em} \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
+\newcommand{\firstcriterion}[2]{\tabularnewline \strut \openCriterion \hspace{-1.6em} \setlength{\parskip}{0.5em}\raggedright \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
+\newcommand{\criterion}[2]{\iftoggle{GradeOpen}{\closeGrade}{} \iftoggle{CriterionOpen}{\tabularnewline \closeCriterion }{} \openCriterion \tabularnewline\setlength{\parskip}{0.8em}\raggedright \hspace{-0.8em} \tagContent{TD}{#1} & \centering \tagContent{TD}{#2}}
 \newcommand{\grade}{\iftoggle{GradeOpen}{\closeGrade}{} & \openGrade \setlength{\parskip}{0.5em}\raggedright}
 \newcommand{\fail}{}
 \newcommand{\gradespan}[2]{& \multicolumn{#1}{p{3.4cm * #1 + (\tabcolsep * 2 + \arrayrulewidth) * (#1 - 1)}|}%
