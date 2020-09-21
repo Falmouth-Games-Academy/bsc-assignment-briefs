@@ -1,0 +1,345 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+% Suppress bibliography title
+% https://tex.stackexchange.com/a/132647
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+% Suppress numbers in bibliography
+% https://tex.stackexchange.com/a/35371
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
+\title{Research Journal --- Computing}
+\author{Dr Ed Powley}
+\module{COMP110}
+\version{4.0}
+
+\begin{document}
+
+\maketitle
+
+\begin{marginquote}
+  ``Computer science is not about machines, in the same way that astronomy is not about telescopes. There is an essential unity of mathematics and computer science.''
+    
+    --- Michael R.\ Fellows
+    
+    \marginquoterule
+    
+    ``The purpose of education is to destroy your confidence in your own knowledge so you will just continuously research and read and double-check and maybe someday claw your way toward a slightly more accurate understanding of the world.''
+    
+    --- Katie Mack
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    Ada Lovelace is considered by some to be the first ever programmer. Lovelace believed that intuition and imagination were critical to effectively applying mathematical and scientific concepts. She valued metaphysics as much as mathematics, viewing both as tools for exploring ``the unseen worlds around us''.
+}
+
+\section*{Introduction}
+
+\paragraph{
+In this assignment, you will produce a journal detailing your research on the principles of computing.
+Your research will focus on a seminal paper in computing,
+exploring the historical context of the paper and its lasting influence on the field.
+}
+
+\paragraph{
+Familiarity with the scientific literature is extremely helpful for the computing professional,
+both to understand the seminal works that lay the foundations of the field,
+and to keep abreast of recent developments at the cutting edge.
+Games technology is a fast-moving field, and keeping up is important.
+However scientific papers are written in a way that is sometimes daunting to newcomers,
+so it is essential to practice the skill of reading and comprehending such papers.
+Keeping a research journal is a useful way to record your thoughts
+(questions, hypotheses, connections, ideas, ...) as you explore the literature.
+}
+
+\paragraph{
+This assignment is formed of several parts:
+}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item \textbf{Write} a draft research journal, of at most 1500 words, that will:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{summarise} the key contributions of \textbf{one} of the papers on the reading list linked below;
+    		\item \textbf{discuss} the context and influence of your chosen paper, with reference to other
+    			papers from the scientific literature;
+    		\item \textbf{list} the papers referenced, including the chosen paper,
+    			in the form of a correctly formatted bibliography in ACM or IEEE style.
+    	\end{enumerate}
+	\item \textbf{Deliver} a brief (maximum 4 minute) presentation, that will:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{summarise} the key contributions of your chosen paper;
+    		\item \textbf{outline} the context and influence of your chosen paper.
+    	\end{enumerate}
+    \item \textbf{Write} the final version of your research journal, of at most 1500 words, that will:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{revise} any issues raised by your tutor and/or your peers following Part~A.
+    	\end{enumerate}
+    \item \textbf{Discuss} your research journal with the tutor in the timetabled viva session.
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+\paragraph{
+This assignment is an \textbf{academic writing task}. Create a copy of the following Overleaf project:
+}
+
+\url{https://www.overleaf.com/read/qdnfdyphtrdt}
+
+\paragraph{Alternatively, fork the following repository:}
+
+\url{https://gamesgit.falmouth.ac.uk/projects/COMP110/repos/comp110-journal/browse}
+
+\paragraph{Use the existing directory structure and, as required, extend this structure with sub-directories.
+Please also ensure that you add any editor-specific files and folders to the \texttt{.gitignore} file.}
+
+\subsection*{Part A}
+
+\paragraph{Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.}
+
+\paragraph{
+To complete Part A, read the papers on the reading list available under this assignment on LearningSpace.
+Choose \textbf{one} of these papers to focus on for your research journal.
+Use this paper as a starting point for further reading in the scientific literature.
+Write a 1500 word document, typeset using LaTeX based on the provided template,
+which summarises your chosen paper and its influence on the field of computing
+with reference to the other papers you have read.
+Your report must include a bibliography of all works cited;
+it is recommended that you typeset this using BibTeX as in the provided template.
+}
+
+\paragraph{
+Bring a draft of your research journal to the timetabled review session,
+where it will be reviewed by your peers.
+}
+
+\paragraph{
+You will receive \textbf{immediate informal feedback}.
+}
+ 
+\subsection*{Part B}
+
+\paragraph{
+Part B consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+}
+
+\paragraph{
+To complete Part B, prepare a brief presentation summarising your research journal.
+The presentation must be \textbf{4 minutes or less}, and if you choose to use slides you must use \textbf{3 slides or fewer}.
+}
+
+\paragraph{
+Attend the timetabled research presentation session, where you will present your work to the tutor and your peers.
+You will receive \textbf{immediate informal feedback}.
+}
+
+\subsection*{Part C}
+
+\paragraph{
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis
+using the criteria listed in the marking rubric at the end of this document.
+}
+
+\paragraph{
+To complete Part C, revise your report from Part~A to take into account any feedback you have received so far.
+}
+
+\paragraph{
+Upload the compiled \texttt{.pdf} version of your journal to LearningSpace.
+Note that LearningSpace will only accept a single \texttt{.pdf} file.
+Please check the \texttt{.pdf} file carefully for errors before submission.
+}
+
+\paragraph{
+You will receive \textbf{formal feedback} three weeks after the final deadline.
+}
+
+\subsection*{Part D}
+
+\paragraph{
+Part D consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.
+}
+
+\paragraph{
+To complete Part D, bring the final version of your research journal to the timetabled viva session.
+Be ready to discuss your work with the tutor.
+}
+
+\paragraph{You will receive \textbf{immediate informal feedback}.}
+
+\section*{Additional Guidance}
+
+\paragraph{
+The papers listed are widely regarded as seminal works in the field of computer science.
+As with all papers, they were influenced by work that came before,
+and have influenced work that came after.
+They are decades old, but all of them have played a significant role in shaping the state of computing
+in \the\year.
+Your task is to develop an understanding of \textit{why} these papers are seminal:
+how they fit into the context of what came before,
+what they contributed to the state-of-the-art at the time they were published,
+and how they have gone on to influence subsequent thinking in the field.
+}
+
+\paragraph{
+As much as possible you should focus your reading on peer-reviewed scholarly sources reporting primary research:
+articles in scientific workshops, conferences, journals, and some books or book chapters.
+Other sources tend to be less rigorous, and should be used only for background information
+or in cases where their use can be convincingly justified.
+It is almost never appropriate to cite Wikipedia and other similar online sources,
+although these are often useful for identifying further scholarly works.
+}
+
+\paragraph{
+A common pitfall is to focus too much on summarising the content of the papers you have read.
+For higher marks you need to demonstrate \textbf{insight} into what you have read:
+forming inferences and analyses beyond what is written in the paper.
+Some questions you might ask yourself are:
+Why is the paper significant and/or influential?
+What is the problem it is trying to solve, and why is that problem important?
+Why did the researchers choose the approach that they did?
+Is there anything counterintuitive or surprising in the paper?
+Do you disagree with any of the assumptions or claims it makes?
+Does the paper suggest any further research questions?
+}
+
+\paragraph{
+A related pitfall is to structure the journal as a sequence of disconnected entries.
+Instead aim to \textbf{synthesise} multiple papers into a cohesive argument,
+drawing connections between works by different authors.
+Understanding individual works is useful, but forming a holistic picture is much more valuable.
+}
+
+\paragraph{
+Most researchers write scientific papers for the intended audience of their fellow researchers.
+Thus some papers can seem impenetrable to the novice reader.
+Don't lose heart!
+Discuss the paper with your peers.
+Follow up the papers it cites to find alternative explanations.
+If all else fails, continue reading the paper --- often a difficult paragraph is clarified by something which appears later.
+}
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+            \item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+            \item 	\textbf{How and when will I receive feedback?} \\ 
+            You will receive informal feedback during the research presentation and peer review sessions.
+            You will receive formal feedback via LearningSpace three weeks after the summative deadline.
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+%\begin{center}
+%    \url{https://learningspace.falmouth.ac.uk/mod/aspirelists/view.php?id=35854}
+%\end{center}
+
+%\section*{Additional Resources}
+%
+%\begin{itemize}
+%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
+%    \item http://agilemanifesto.org/
+%\end{itemize}
+
+\rubrichead{All submissions and assessment criteria for this assignment are individual.
+
+To \textbf{pass} this assignment (achieve 40\% or more), you must demonstrate adequate research and information skills.
+Adequate participation in-class peer-review activities at least at the level of basic competency is required.
+Sources must be cited in an appropriate manner, without any obvious errors.
+There must be no breaches of academic integrity.}
+\begin{markingrubric}
+%
+	\firstcriterion{Basic Competency Threshold}{30\%}
+		\grade\fail At least one part is missing or is unsatisfactory.
+        \par Breach of academic integrity.
+%
+    \criterion{RESEARCH: \\Breadth of reading}{15\%}
+        \grade\fail	None of the articles listed in the reading list are referenced.
+        \par		Fewer than 2 additional sources, not listed in the reading list, are referenced.
+        \grade		One of the articles listed in the reading list is referenced.
+        \par		An additional 2 sources, not listed in the reading list, are referenced.
+        \grade		One of the articles listed in the reading list is referenced.
+        \par		An additional 5 sources, not listed in the reading list, are referenced.
+        \grade		One of the articles listed in the reading list is referenced.
+        \par		An additional 8 sources, not listed in the reading list, are referenced.
+        \grade		One of the articles listed in the reading list is referenced.
+        \par		An additional 12 sources, not listed in the reading list, are referenced.
+        \grade		One of the articles listed in the reading list is referenced.
+        \par		An additional 16 sources, not listed in the reading list, are referenced.
+%
+    \criterion{RESEARCH: \\Depth of insight}{20\%}
+        \grade\fail No insight is demonstrated.
+        \par		Papers are merely paraphrased.
+        \grade		Little insight is demonstrated.
+        \par		Papers are summarised in the student's own words.
+        \grade		Some insight is demonstrated.
+        \par		Attempts are made at discussion beyond summary.
+        \grade		Much insight is demonstrated.
+        \par		Discussion is inferential in nature.
+        \grade		Considerable insight is demonstrated.
+        \par		Discussion is analytical in nature.
+        \grade		Significant insight is demonstrated.
+        \par		Discussion is analytical and evaluative in nature.
+%
+    \criterion{RESEARCH: \\Specificity, verifiability \& accuracy of claims}{10\%}
+        \grade\fail 	No citations to evidence to claims.
+        \par 		Substantial errors and/or misinterpretations.
+        \grade 		Few claims have a clear source of evidence.
+        \par 		Significant errors and/or misinterpretations.
+        \grade 		Some claims have a clear source of evidence.
+        \par 		Many errors and/or misinterpretations.
+        \grade 		Many claims have a clear source of evidence.
+        \par 		Some errors and/or misinterpretations.
+        \grade 		Most claims have a clear source of evidence.
+        \par 		Few errors and/or misinterpretations.
+        \grade 		All claims have a clear source of evidence.
+        \par 		Almost no errors and/or misinterpretations.
+%
+    \criterion{RESEARCH: \\Synthesis}{15\%}
+        \grade\fail No attempt has been made to synthesise information from multiple sources.
+        \grade		A superficial attempt has been made to synthesise information from multiple sources.
+        \grade		A reasonable attempt has been made to synthesise information from multiple sources.
+        \grade		Information from multiple sources is synthesised into a somewhat cohesive whole.
+        \grade		Information from multiple sources is synthesised into a cohesive whole.
+        \par		Connections are analytical in nature.
+        \grade		Information from multiple sources is synthesised into a strongly cohesive whole.
+        \par		Connections are analytical and evaluative in nature.
+%
+    \criterion{RESEARCH: \\Spelling \& grammar}{5\%}
+        \grade\fail 	Substantial spelling and/or grammatical errors.
+        \grade 		Many spelling and/or grammatical errors.
+        \grade 		Some spelling and/or grammatical errors.  
+        \grade 		Few spelling and/or grammatical errors.
+        \grade 		Almost no spelling and/or grammatical errors.
+        \grade 		No spelling or grammatical errors.
+%
+    \criterion{RESEARCH: \\Structure}{5\%}
+        \grade\fail 	There is no structure, or the structure is unclear.
+        \grade 		There is little structure.
+        \grade 		There is some structure.
+        \par 		A few sentences and paragraphs are well constructed.
+        \grade 		There is much structure.
+        \par 		Some sentences and paragraphs are well constructed.
+        \grade 		There is much structure, highlighting the key themes.
+        \par 		Most sentences and paragraphs are well constructed.
+        \grade 		There is much structure, highlighting the key themes.
+        \par 		All sentences and paragraphs are well constructed.
+\end{markingrubric}
+
+\end{document}

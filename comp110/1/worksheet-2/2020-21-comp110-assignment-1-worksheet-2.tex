@@ -1,0 +1,124 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+\title{COMP110 Worksheet 2: Flowcharts and Pseudocode}
+\module{COMP110}
+\author{Ed Powley}
+\version{4.0}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``I'm gonna run some diagnostics while you're tinkering. Take your time.''
+
+--- Nick Valentine, Fallout 4
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    The terminal hacking minigame in \emph{Fallout 4}.
+}
+
+The open-world RPG \textbf{Fallout~4} contains a terminal hacking minigame, in which
+the player must guess a secret $n$-letter word.
+In this worksheet, you will model this minigame using a flowchart and a piece of pseudocode.
+
+In the minigame, the player is given a list of possible $n$-letter words, one of which is the secret word.
+The player chooses one of the words.
+The terminal responds by displaying a \textbf{likeness} score,
+defined as the number of letters which match the secret word (i.e.\ the same letter in the same position).
+For example if the secret word is \texttt{HOUSE} and the guess is \texttt{MOUSE}, the likeness is $4$ out of $5$.
+If the guess is \texttt{HOPES}, the likeness is $2$ out of $5$
+(the letters \texttt{S} and \texttt{E} do not count as they are in the wrong positions).
+The minigame ends when the player guesses correctly, or after four incorrect guesses.
+
+To complete this worksheet:
+\begin{enumerate}[label=(\alph*)]
+	\item \textbf{Draw} a flowchart for the overall minigame.
+	\item \textbf{Write} a piece of pseudocode giving an algorithm for playing the game
+		--- that is, an algorithm that a human or an AI could use to successfully solve the puzzle.
+\end{enumerate}
+
+Note that for part~(b), the baseline is that your algorithm would be able to solve the puzzle given enough guesses (so may fail to solve some instances given the limit on number of guesses).
+Higher marked solutions will avoid making guesses which earlier guesses have ruled out,
+with top marks reserved for solutions that try to solve the puzzle in the fewest guesses possible.
+
+\section*{Submission instructions}
+
+Begin by \textbf{forking} the base repository for this worksheet, the link to which can be found in the Assessments section on LearningSpace.
+
+Write your \textbf{pseudocode} in the \texttt{README.md} file,
+making appropriate use of Markdown formatting to ensure that it displays properly when viewed through the GitHub web interface.
+Also upload your \textbf{flowchart} as an image, and embed it in the \texttt{README.md} file.
+
+You may use any tool you wish to produce your flowchart,
+be it a software tool or pen and paper.
+If you use pen and paper, upload a scan or a photograph of your flowchart,
+ensuring that the resolution and image quality are sufficient for the flowchart to be easily legible.
+
+Open a \textbf{pull request} with your completed work.
+
+Remember that \textbf{it is better to submit incomplete work than to submit nothing at all}.
+Any attempt, even unfinished, at producing a flowchart and a piece of pseudocode will receive a 30\% mark.
+
+\rubrichead{\ }
+\begin{markingrubric}
+	\firstcriterion{Basic competency threshold}{30\%}
+		\grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
+		
+    \criterion{PROCESS: Flowchart quality}{30\%}
+        \grade\fail Flowchart is not present.
+			\par Flowchart is very unclear or almost impossible to follow.
+			\par Presentation is unsatisfactory, with poor or no use of standard symbols.
+        \grade Flowchart is somewhat unclear or difficult to follow.
+			\par Flowchart partially describes the minigame, but with errors or omissions.
+			\par Presentation is adequate, though usage of standard symbols is lacking.
+        \grade Flowchart is reasonably clear and can be followed.
+			\par Flowchart describes the minigame with some errors or omissions.
+			\par Presentation is competent, with good usage of standard symbols.
+        \grade Flowchart is somewhat clear and easy to follow.
+			\par Flowchart mostly correctly describes the minigame.
+			\par Presentation is good, with mostly correct usage of standard symbols.
+        \grade Flowchart is clear and easy to follow.
+			\par Flowchart correctly describes the minigame.
+			\par Presentation is excellent, with correct usage of standard symbols.
+        \grade Flowchart is very clear and easy to follow.
+			\par Flowchart correctly and comprehensively describes the minigame.
+			\par Presentation is outstanding, with correct usage of standard symbols.
+
+    \criterion{PROCESS: Pseudocode quality}{40\%}
+        \grade\fail Pseudocode is not present.
+			\par Pseudocode is very unclear or almost impossible to follow.
+			\par Formatting is unclear or inconsistent.
+			\par The algorithm fails to solve the problem as stated.
+        \grade Pseudocode is somewhat unclear or difficult to follow.
+			\par Pseudocode partially describes the algorithm, but with errors, omissions or ambiguities.
+			\par Formatting is a little unclear or inconsistent.
+			\par The algorithm makes a reasonable attempt at solving the problem.
+        \grade Pseudocode is reasonably clear and can be followed.
+			\par Pseudocode describes the algorithm with some minor errors, omissions or ambiguities.
+			\par Formatting is somewhat clear and consistent.
+			\par The algorithm solves the problem mostly correctly.
+        \grade Pseudocode is somewhat clear and easy to follow.
+			\par Pseudocode mostly describes the algorithm, with only minor ambiguities.
+			\par Formatting is mostly clear and consistent.
+			\par The algorithm solves the problem correctly.
+        \grade Pseudocode is clear and easy to follow.
+			\par Pseudocode correctly describes the algorithm.
+			\par Formatting is clear and consistent throughout.
+			\par The algorithm solves the problem correctly and somewhat efficiently.
+        \grade Pseudocode is very clear and easy to follow.
+			\par Pseudocode correctly and comprehensively describes the algorithm.
+			\par Formatting is very clear and consistent throughout.
+			\par The algorithm solves the problem correctly and efficiently.
+\end{markingrubric}
+
+\end{document}
