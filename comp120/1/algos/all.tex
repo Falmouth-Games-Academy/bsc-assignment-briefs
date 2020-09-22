@@ -1,0 +1,302 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\usepackage[section]{placeins}
+
+\title{Algorithm list}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+	
+	\maketitle
+	\tableofcontents
+
+	\clearpage	
+	\section{This algorithm swaps two colour channels within an image}
+	
+	\begin{algorithm}[ht]
+		\caption{Swap Channel}
+		\label{alg:algorithm}
+		
+		\begin{algorithmic}[1]
+			\Require an image, \textit{image} with channels, $c$ in RGB format
+			\Procedure{swap}{image}
+			\ForAll {$c$ in image}
+			 \State $t \leftarrow c_{1}$
+			 \State $c_{1}  \leftarrow c_{0}$
+			 \State $c_{0} \leftarrow t$
+			\EndFor
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
+
+	\clearpage
+	\section{This algorithm converts an image into a greyscale version}
+
+	\begin{algorithm}[ht]
+	\caption{Greyscale}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+			\Require 
+			\Statex an image, \textit{image}, with $N$ channels, $c$
+			\Statex $0 \leq c_{0..N} \leq 255$
+			\Procedure{greyscale}{image}
+			\For {$x=0$, width, $y=0$,height}
+			\State $c \leftarrow$ pixel($x$, $y$)
+			\State $c_{0..N} \leftarrow \frac{\sum_{i=0}^{N} c_i}{N}$
+			\State pixel($x$, $y$) $\leftarrow$ c
+			\EndFor
+			\EndProcedure
+	\end{algorithmic}
+	
+	\end{algorithm}
+
+	\clearpage
+	\section{This algorithm converts an image into a negative}
+	
+	\begin{algorithm}[ht]
+	\caption{Negative}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+			\Require
+			\Statex an image, \textit{image} with channels, $c$ in RGB format
+			\Ensure The result, $r$, should be within the range \Statex $0 \leq r \leq 255$
+			\Procedure{negative}{image}
+			\For {$x=0$, width, $y=0$,height}
+			\State $c \leftarrow $ pixel(x, y)
+			\State $c_{0..N} \leftarrow 255 - c_{0..N}$
+			\State pixel($x$, $y$) $\leftarrow c$
+			\EndFor
+			\EndProcedure
+	\end{algorithmic}
+	
+	\end{algorithm}
+
+	\clearpage
+	\section{This algorithm copies the top of an image to the bottom}
+	\begin{algorithm}[ht]
+	\caption{Top-Copy}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		   \State $ht \leftarrow \frac{h}{2}$
+			\For {$y = 0, y < ht$, $x=0, x < w$}
+			\State $i \leftarrow ht + y$
+			\State pixel(x, i) $\leftarrow$ pixel(x, y)
+			\EndFor
+	\end{algorithmic}
+	
+\end{algorithm}
+
+	\clearpage
+	\section{This algorithm calculates the distance between two colours}
+	\begin{algorithm}[ht]
+	\caption{Distance between colours}
+	\label{alg:algorithm}
+	
+\begin{algorithmic}[1]
+	\Require 
+	\Statex Two colours defined as a tuple of integers in 8-bit RGB format such that:
+	\Statex $0 \leq r_{0..1} \leq 255$
+	\Statex $0 \leq g_{0..1} \leq 255$
+	\Statex $0 \leq b_{0..1} \leq 255$
+	\Ensure
+	\Statex The distance between the two colours:
+	\Statex \textit{d}
+	
+	\Statex
+	
+	\State $d \leftarrow \sqrt{ (r_1 - r_0)^2 + (g_1 - g_0)^2 + (b_1 - b_0)^2}$
+	\State \Return $d$
+\end{algorithmic}
+	
+\end{algorithm}
+
+	\clearpage
+	\section{This algorithm checks if an existing pixel is close to another in colour}
+	\begin{algorithm}[ht]
+	\caption{Colour Tolerance}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		%\Require
+		\Require
+		\Statex a threshold value,  $0 \leq t \leq 255$
+		\Statex a colour in RGB format,  $0 \leq c_{0..2} \leq 255$
+		\Statex a pixel in RGB format,  $0 \leq p_{0..2} \leq 255$
+		\Function{Tolerance}{color c, pixel p, threshold t}
+		\State $d \leftarrow$ $\sum_{i=0}^{2} ( p_i - c_i) ^2$
+		\If{ $r < t$}
+		\State \Return true
+		\Else
+		\State \Return false
+		\EndIf
+		\EndFunction
+	\end{algorithmic}
+	
+\end{algorithm}
+
+	\clearpage
+	\section{This algorithm reduces the colours within an image. Multiple conditions might be required.}
+\begin{algorithm}[ht]
+\caption{Posterization}
+\label{alg:algorithm}
+
+\begin{algorithmic}[1]
+	\Require
+	\Statex a channel value,  $0 \leq c_{0..2} \leq 255$
+	\Statex a replacement value,  $0 \leq r \leq 255$
+	\Statex a minimum threshold,  $0 \leq t_{min} \leq 255$
+	\Statex a maximum threshold,  $0 \leq t_{max} \leq 255$
+	\Procedure{posterization}{t, c, r}
+	\For {$x=0$, width, $y=0$,height}
+	\State $c \leftarrow$ pixel(x, y)
+	\If{ $t_{min} \leq c_{0} \leq t_{max}$}
+	\State $c_0 \leftarrow $ $r$
+	\State pixel(x, y) $\leftarrow c$
+	\EndIf
+	\EndFor
+	\EndProcedure
+\end{algorithmic}
+
+\end{algorithm}
+
+	\clearpage
+	\section{This algorithm calculates the luminance of a pixel.}
+\begin{algorithm}[ht]
+	\caption{Luminance}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require 
+		\Statex A colour defined as a tuple of integers in 8-bit RGB format such that:
+		\Statex $0 \leq c_{0..2} \leq 255$
+		\Ensure
+		\Statex The luminance:
+		\Statex L
+		\Statex
+		\Statex $ L \leftarrow \frac{\sum_{i=0}^{2}c_i}{3}$
+	\end{algorithmic}
+	
+\end{algorithm}
+
+	\clearpage
+	\section{This algorithm mirrors an image around it's middle.}
+\begin{algorithm}[ht]
+	\caption{Mirroring}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the height of the image, $0 \leq h$
+		\Statex the width of the image, $0 \leq w$
+		\State $ht \leftarrow \frac{h}{2}$
+		\For {$y = 0, y < ht$, $x=0, x < w$}
+		\State $i \leftarrow h -  y - 1$
+		\State pixel(x, i) $\leftarrow$ pixel(x, y)
+		\EndFor
+	\end{algorithmic}
+\end{algorithm}
+
+	\clearpage
+	\section{This algorithm makes edges appear white.}
+\begin{algorithm}[ht]
+	\caption{Edge Detection}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the height of the image, $0 \leq h$
+		\Statex the width of the image, $0 \leq w$
+		\Statex the source image, image
+		\Procedure{edgedetect}{image}
+		\ForAll{$y$ in h}
+		\ForAll{$x$ in w}
+		\State  $p_h \leftarrow$ pixel(x, y)
+		\State $t_h \leftarrow \sum_{i=0}^{3}p_{hi} $
+		\State  $p_r \leftarrow$ pixel(x+1, y)
+		\State $t_r \leftarrow \sum_{i=0}^{3}d_{ri} $
+		\State $p_d \leftarrow$ pixel(x, y+1)
+		\State $t_d \leftarrow \sum_{i=0}^{3}d_{di} $
+		\State
+		\If{ abs( $t_h$ - $t_d$) > 20 and abs($t_h$ - $t_r$) > 20 }
+				\State setPixel(x, y,  255, 255, 255)
+		\Else
+				\State setPixel(x, y,  0, 0, 0)
+		\EndIf
+		\EndFor
+		\EndFor
+		\EndProcedure
+	\end{algorithmic}
+	
+\end{algorithm}
+
+	\clearpage
+	\section{This algorithm replaces one background with another.}
+\begin{algorithm}[ht]
+	\caption{Background Subtraction}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the height of the source image, $0 \leq h$
+		\Statex the width of the source image, $0 \leq w$
+		\Statex the source image, image
+		\Statex the original background image, background
+		\Statex the new background image, newBackground
+		\Procedure{background}{image, background, newBackground}
+		\ForAll{$y$ in h}
+		\ForAll{$x$ in w}
+			\State $p$ $\leftarrow$ pixel(image, $x$, $y$)
+			\State $p_{b}$ $\leftarrow$ pixel(background, $x$, $y$)
+			\If{ distance($p$, $p_b$)  $< t$ }
+				\State pixel(image, $x$, $y$) $\leftarrow$ pixel(newBackground, $x$, $y$)
+			\EndIf
+		\EndFor
+		\EndFor
+		\EndProcedure
+	\end{algorithmic}
+	
+\end{algorithm}
+
+\clearpage
+\section{This algorithm places one image inside another.}
+\begin{algorithm}[ht]
+	\caption{Collage}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the source image, image
+		\Statex the height of the source image, $0 \leq s_h$
+		\Statex the width of the source image, $0 \leq s_w$
+		\Statex the destination image, canvas
+		\Statex the height of the canvas image, $0 \leq c_h$
+		\Statex the width of the canvas image, $0 \leq c_w$
+		\Statex the target location, $0 \leq t_x < s_w$, $0 \leq t_y < s_h$
+		\Procedure{Collage}{source, canvas, $t_x$, $t_y$}
+			\For{y=0, h; x=0, w}
+			\If{ $x \geq t_x$ and y < $s_w$+$t_x$  }
+			\If{ ($y \geq t_y$ and y < $s_h$+$t_y$  }
+			\State Pixel(canvas, x, y)  $\leftarrow$ Pixel(source, x - $t_x$,  y - $t_y$)
+			\EndIf
+			\EndIf
+			\EndFor
+		%	\If {x >= xpos \and y < width1+xpos} 
+			%\if (y>ypos \and y < height1+ypos)
+		%	\State Pixel(canvas, x, y)  $\leftarrow$ Pixel(source, x - xPos, y - yPos)
+			%\Endif
+		%	\EndIf
+	%		\EndFor
+		\EndProcedure
+	\end{algorithmic}
+	
+\end{algorithm}
+	
+\end{document}

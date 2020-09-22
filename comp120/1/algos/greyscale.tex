@@ -1,0 +1,36 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Greyscale}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm converts an image into a greyscale version}
+
+	\begin{algorithm}[ht]
+	\caption{Greyscale}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+			\Require 
+			\Statex an image, \textit{image}, with $N$ channels, $c$
+			\Statex $0 \leq c_{0..N} \leq 255$
+			\Procedure{greyscale}{image}
+			\For {$x=0$, width, $y=0$,height}
+			\State $c \leftarrow$ pixel($x$, $y$)
+			\State $c_{0..N} \leftarrow \frac{\sum_{i=0}^{N} c_i}{N}$
+			\State pixel($x$, $y$) $\leftarrow$ c
+			\EndFor
+			\EndProcedure
+	\end{algorithmic}
+	
+	\end{algorithm}
+
+\end{document}

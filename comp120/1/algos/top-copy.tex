@@ -1,0 +1,30 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Top Copy}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm copies the top of an image to the bottom}
+	\begin{algorithm}[ht]
+	\caption{Top-Copy}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		   \State $ht \leftarrow \frac{h}{2}$
+			\For {$y = 0, y < ht$, $x=0, x < w$}
+			\State $i \leftarrow ht + y$
+			\State pixel(x, i) $\leftarrow$ pixel(x, y)
+			\EndFor
+	\end{algorithmic}
+	
+\end{algorithm}
+
+\end{document}

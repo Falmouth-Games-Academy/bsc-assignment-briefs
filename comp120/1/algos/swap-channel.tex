@@ -1,0 +1,33 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Colour Distance}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm swaps two colour channels within an image}
+	
+	\begin{algorithm}[ht]
+		\caption{Swap Channel}
+		\label{alg:algorithm}
+		
+		\begin{algorithmic}[1]
+			\Require an image, \textit{image} with channels, $c$ in RGB format
+			\Procedure{swap}{image}
+			\ForAll {$c$ in image}
+			 \State $t \leftarrow c_{1}$
+			 \State $c_{1}  \leftarrow c_{0}$
+			 \State $c_{0} \leftarrow t$
+			\EndFor
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
+
+\end{document}

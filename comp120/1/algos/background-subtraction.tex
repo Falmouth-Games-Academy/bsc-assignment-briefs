@@ -1,0 +1,43 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Background Subtraction}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm replaces one background with another.}
+\begin{algorithm}[ht]
+	\caption{Background Subtraction}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the height of the source image, $0 \leq h$
+		\Statex the width of the source image, $0 \leq w$
+		\Statex the source image, image
+		\Statex the original background image, background
+		\Statex the new background image, newBackground
+		\Procedure{background}{image, background, newBackground}
+		\ForAll{$y$ in h}
+		\ForAll{$x$ in w}
+			\State $p$ $\leftarrow$ pixel(image, $x$, $y$)
+			\State $p_{b}$ $\leftarrow$ pixel(background, $x$, $y$)
+			\If{ distance($p$, $p_b$)  $< t$ }
+				\State pixel(image, $x$, $y$) $\leftarrow$ pixel(newBackground, $x$, $y$)
+			\EndIf
+		\EndFor
+		\EndFor
+		\EndProcedure
+	\end{algorithmic}
+	
+\end{algorithm}
+
+
+\end{document}

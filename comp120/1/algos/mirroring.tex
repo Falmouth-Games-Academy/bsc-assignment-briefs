@@ -1,0 +1,32 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Mirroring}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm mirrors an image around it's middle.}
+\begin{algorithm}[ht]
+	\caption{Mirroring}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the height of the image, $0 \leq h$
+		\Statex the width of the image, $0 \leq w$
+		\State $ht \leftarrow \frac{h}{2}$
+		\For {$y = 0, y < ht$, $x=0, x < w$}
+		\State $i \leftarrow h -  y - 1$
+		\State pixel(x, i) $\leftarrow$ pixel(x, y)
+		\EndFor
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Luminance}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm calculates the luminance of a pixel.}
+\begin{algorithm}[ht]
+	\caption{Luminance}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require 
+		\Statex A colour defined as a tuple of integers in 8-bit RGB format such that:
+		\Statex $0 \leq c_{0..2} \leq 255$
+		\Ensure
+		\Statex The luminance:
+		\Statex L
+		\Statex
+		\Statex $ L \leftarrow \frac{\sum_{i=0}^{2}c_i}{3}$
+	\end{algorithmic}
+	
+\end{algorithm}
+
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Posterization}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm reduces the colours within an image. Multiple conditions might be required.}
+\begin{algorithm}[ht]
+\caption{Posterization}
+\label{alg:algorithm}
+
+\begin{algorithmic}[1]
+	\Require
+	\Statex a channel value,  $0 \leq c_{0..2} \leq 255$
+	\Statex a replacement value,  $0 \leq r \leq 255$
+	\Statex a minimum threshold,  $0 \leq t_{min} \leq 255$
+	\Statex a maximum threshold,  $0 \leq t_{max} \leq 255$
+	\Procedure{posterization}{t, c, r}
+	\For {$x=0$, width, $y=0$,height}
+	\State $c \leftarrow$ pixel(x, y)
+	\If{ $t_{min} \leq c_{0} \leq t_{max}$}
+	\State $c_0 \leftarrow $ $r$
+	\State pixel(x, y) $\leftarrow c$
+	\EndIf
+	\EndFor
+	\EndProcedure
+\end{algorithmic}
+
+\end{algorithm}
+
+\end{document}

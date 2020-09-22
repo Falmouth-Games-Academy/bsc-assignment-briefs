@@ -1,0 +1,39 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Colour Distance}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+	
+\paragraph{This algorithm can be used to determine the `distance' between two colours. It is fundamental to a range of other algorithms in media computation. }
+
+\begin{algorithm}[ht]
+	\caption{Calculate Distance Between Two Colours}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require 
+		\Statex Two colours defined as a tuple of integers in 8-bit RGB format such that:
+		\Statex $0 \leq r_{0..1} \leq 255$
+		\Statex $0 \leq g_{0..1} \leq 255$
+		\Statex $0 \leq b_{0..1} \leq 255$
+		\Ensure
+		\Statex The distance between the two colours:
+		\Statex \textit{d}
+		
+		\Statex
+		
+		\State $d \leftarrow \sqrt{ (r_1 - r_0)^2 + (g_1 - g_0)^2 + (b_1 - b_0)^2}$
+		\State return $d$
+	\end{algorithmic}
+	
+\end{algorithm}
+
+\end{document}

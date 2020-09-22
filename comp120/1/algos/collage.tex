@@ -1,0 +1,48 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Collage}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+\section{This algorithm places one image inside another.}
+\begin{algorithm}[ht]
+	\caption{Collage}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the source image, image
+		\Statex the height of the source image, $0 \leq s_h$
+		\Statex the width of the source image, $0 \leq s_w$
+		\Statex the destination image, canvas
+		\Statex the height of the canvas image, $0 \leq c_h$
+		\Statex the width of the canvas image, $0 \leq c_w$
+		\Statex the target location, $0 \leq t_x < s_w$, $0 \leq t_y < s_h$
+		\Procedure{Collage}{source, canvas, $t_x$, $t_y$}
+			\For{y=0, h; x=0, w}
+			\If{ $x \geq t_x$ and y < $s_w$+$t_x$  }
+			\If{ ($y \geq t_y$ and y < $s_h$+$t_y$  }
+			\State Pixel(canvas, x, y)  $\leftarrow$ Pixel(source, x - $t_x$,  y - $t_y$)
+			\EndIf
+			\EndIf
+			\EndFor
+		%	\If {x >= xpos \and y < width1+xpos} 
+			%\if (y>ypos \and y < height1+ypos)
+		%	\State Pixel(canvas, x, y)  $\leftarrow$ Pixel(source, x - xPos, y - yPos)
+			%\Endif
+		%	\EndIf
+	%		\EndFor
+		\EndProcedure
+	\end{algorithmic}
+	
+\end{algorithm}
+
+\end{document}

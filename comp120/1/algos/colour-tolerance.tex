@@ -1,0 +1,38 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Colour Tolerance}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm checks if an existing pixel is close to another in colour}
+	\begin{algorithm}[ht]
+	\caption{Colour Tolerance}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		%\Require
+		\Require
+		\Statex a threshold value,  $0 \leq t \leq 255$
+		\Statex a colour in RGB format,  $0 \leq c_{0..2} \leq 255$
+		\Statex a pixel in RGB format,  $0 \leq p_{0..2} \leq 255$
+		\Function{Tolerance}{color c, pixel p, threshold t}
+		\State $d \leftarrow$ $\sum_{i=0}^{2} ( p_i - c_i) ^2$
+		\If{ $r < t$}
+		\State \Return true
+		\Else
+		\State \Return false
+		\EndIf
+		\EndFunction
+	\end{algorithmic}
+	
+\end{algorithm}
+
+\end{document}

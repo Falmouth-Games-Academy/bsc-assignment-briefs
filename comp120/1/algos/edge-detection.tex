@@ -1,0 +1,47 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\title{Edge detection}
+\author{Dr Michael Scott}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+	\section{This algorithm makes edges appear white.}
+\begin{algorithm}[ht]
+	\caption{Edge Detection}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex the height of the image, $0 \leq h$
+		\Statex the width of the image, $0 \leq w$
+		\Statex the source image, image
+		\Procedure{edgedetect}{image}
+		\ForAll{$y$ in h}
+		\ForAll{$x$ in w}
+		\State  $p_h \leftarrow$ pixel(x, y)
+		\State $t_h \leftarrow \sum_{i=0}^{3}p_{hi} $
+		\State  $p_r \leftarrow$ pixel(x+1, y)
+		\State $t_r \leftarrow \sum_{i=0}^{3}d_{ri} $
+		\State $p_d \leftarrow$ pixel(x, y+1)
+		\State $t_d \leftarrow \sum_{i=0}^{3}d_{di} $
+		\State
+		\If{ abs( $t_h$ - $t_d$) > 20 and abs($t_h$ - $t_r$) > 20 }
+				\State setPixel(x, y,  255, 255, 255)
+		\Else
+				\State setPixel(x, y,  0, 0, 0)
+		\EndIf
+		\EndFor
+		\EndFor
+		\EndProcedure
+	\end{algorithmic}
+	
+\end{algorithm}
+
+\end{document}
