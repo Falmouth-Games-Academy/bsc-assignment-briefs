@@ -1,0 +1,166 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily,
+	frame=single,
+	showstringspaces=false,
+	breaklines=true,
+	prebreak={\space\hbox{\textcolor{gray}{$\hookleftarrow$}}}
+}
+\lstset{
+	commentstyle=\ttfamily\textit,
+	keywordstyle=\ttfamily\textbf,
+	stringstyle=\ttfamily,
+	rulecolor=\color{black}
+}
+\lstset{language=Python}
+
+\title{Worksheet 4: LaTeX Typesetting}
+\module{COMP110}
+\author{Ed Powley}
+\version{1.0}
+
+\begin{document}
+
+\maketitle
+\marginpicture{flavour_pic}{
+	The TeX typesetting system, on which LaTeX is based, was originally developed by Donald Knuth
+	to typeset his seminal series of textbooks, \emph{The Art of Computer Programming}.
+}
+
+\section*{Introduction}
+
+This worksheet gives you practice at typesetting documents in LaTeX.
+You will be using LaTeX to typeset much of your written work during your studies, beginning with your Research Journal
+assignment for this module.
+LaTeX has a steeper learning curve than WYSIWYG systems such as Microsoft Word,
+but when used properly can produce much more professional-looking documents,
+as well as easing the task of managing complex documents with many cross-references and large bibliographies.
+
+This worksheet tasks you with reproducing a given reference document using LaTeX.
+The document in question is based on the paper ``Semi-automated Level Design via Auto-Playtesting for Handheld Casual 
+Game Creation'', which was written by research staff in the Games Academy at Falmouth University in 2016
+and was published in the IEEE Conference on Computational Intelligence in Games (CIG) that year.
+
+To complete this worksheet:
+
+\begin{enumerate}[label=(\alph*)]
+	\item \textbf{Fork} the base repository for this worksheet
+	\item \textbf{Examine} the reference document included in the repository
+	\item \textbf{Edit} the LaTeX source code provided as a template, to produce a document similar in content and layout to the reference document
+\end{enumerate}
+
+\section*{Submission instructions}
+
+Begin by \textbf{forking} the base repository for this worksheet.
+Please see LearningSpace for a link to the repository.
+You will find the following files:
+
+\begin{itemize}
+	\item \textbf{reference.pdf}: the reference document
+	\item \textbf{content.txt}: a text file containing the text of the reference document, for you to copy and paste
+	\item \textbf{images}: a folder containing all the images used in the reference document
+	\item \textbf{worksheet.bib}: a BibTeX file, from which the bibliography can be generated
+	\item \textbf{worksheet.tex}: a template LaTeX document for you to edit
+\end{itemize}
+
+Edit \textbf{worksheet.tex} to produce a document similar in content and layout to \textbf{reference.pdf}.
+You may also add other files to the repository as required, for example if you decide to split the document into multiple .tex files.
+
+The \textbf{content.txt} file contains some instructions marked with asterisks ***.
+In particular, \textbf{***REF***} denotes a cross-reference to a section, figure or table within the document,
+and \textbf{***CITE***} denotes a citation to a source from the bibliography.
+You will need to check the \textbf{reference.pdf} file to find out what these references and citations should point to.
+
+Note that you are \textbf{not} required to replicate the layout of the reference document exactly --- minor differences are fine,
+and improvements will earn you higher marks.
+However you should not alter the content of the document itself.
+Note also that the text of the document is provided for you to copy and paste --- please do not waste time re-typing the text.
+
+Commit your work (source code and compiled PDF) regularly. Once you have finished, open a \textbf{pull request}.
+
+\rubrichead{To \textbf{pass} this assignment (achieve 40\% or more), you must submit a reasonable attempt at the worksheet by the formative deadline stated on LearningSpace.}
+\begin{markingrubric}
+	\firstcriterion{Basic competency threshold}{30\%}
+        \grade\fail	A reasonable attempt at the worksheet was not submitted by the formative deadline.
+        \par Breach of academic integrity.
+    \criterion{Text presentation}{20\%}
+        \grade\fail Document is corrupted or incomplete.
+        \grade There are obvious errors in text formatting, e.g.\ incorrect paragraph breaks.
+			\par Boldface, italics etc are missing.
+			\par Section headings are missing, or are hard-coded using non-standard markup.
+		\grade There are no obvious errors in text formatting.
+			\par Boldface, italics etc are used somewhat correctly.
+			\par Section headings are used somewhat correctly.
+		\grade There are no obvious errors in text formatting.
+			\par Boldface, italics etc are used mostly correctly.
+			\par Section headings are used mostly correctly.
+			\par Mathematical notation is used in some places.
+		\grade Text formatting matches the standard of the reference document.
+			\par Boldface, italics etc are used correctly.
+			\par Section headings are used correctly.
+			\par Mathematical notation is used where appropriate.
+		\grade Text presentation exceeds the standard of the reference document.
+			\par Boldface, italics etc are used correctly.
+			\par Section headings are used correctly.
+			\par Mathematical notation is used where appropriate.
+	\criterion{Cross-referencing and citing}{15\%}
+		\grade\fail Cross-references are entirely missing.
+			\par Citations are entirely missing.
+			\par The bibliography is missing.
+		\grade Cross-references are incorrect, or are hard-coded using non-standard markup.
+			\par Citations are incorrect, or are hard-coded using non-standard markup.
+			\par The bibliography is present but has errors.
+		\grade Cross-references are somewhat correct.
+			\par Citations are somewhat correct.
+			\par The bibliography is present and somewhat correct.
+		\grade Cross-references are mostly correct.
+			\par Citations are mostly correct.
+			\par The bibliography is present and mostly correct.
+		\grade Cross-references are correct.
+			\par Citations are correct.
+			\par The bibliography is present and correct.
+		\grade Cross-references are correct.
+			\par Citations are correct.
+			\par The bibliography is present, correct, and formatted to a higher standard than the reference document.
+	\criterion{Figures and tables}{15\%}
+		\grade\fail One or more figures or tables are missing.
+		\grade Figures are present but are poorly formatted in terms of positioning and sizing.
+			\par The table is present but poorly formatted.
+		\grade Positioning and sizing of figures and tables is good.
+			\par The table is formatted reasonably well.
+		\grade Positioning and sizing of figures and tables is very good.
+			\par The table is formatted well.
+		\grade Positioning and sizing of figures and tables is excellent.
+			\par The table is formatted to the same standard as the reference document.
+		\grade Positioning and sizing of figures and tables is outstanding.
+			\par The table is formatted to a higher standard than the reference document.
+	\criterion{Source code formatting}{20\%}
+		\grade\fail Source code is missing or compiles with errors.
+		\grade Source code compiles without errors.
+			\par Source code is structured and formatted poorly.
+			\par Identifier names for labels etc are poorly chosen.
+		\grade Source code compiles without errors.
+			\par Source code is structured and formatted reasonably well.
+			\par Identifier names for labels etc are reasonably appropriate.
+		\grade Source code compiles without errors and with only minor warnings.
+			\par Source code is structured and formatted well.
+			\par Identifier names for labels etc are appropriate.
+		\grade Source code compiles without errors or warnings.
+			\par Source code is structured and formatted well, with appropriate use of multiple files.
+			\par Identifier names for labels etc are descriptive.
+		\grade Source code compiles without errors or warnings.
+			\par Source code is structured and formatted extremely well, with appropriate use of multiple files.
+			\par Identifier names for labels etc are very descriptive.
+\end{markingrubric}
+
+\end{document}
