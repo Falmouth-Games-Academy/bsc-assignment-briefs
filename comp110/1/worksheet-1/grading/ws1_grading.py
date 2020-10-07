@@ -58,7 +58,7 @@ class SaveFile:
             for level_id, level_name in level_set
         ]
     
-    def get_feedback(self):
+    def get_feedback_and_grades(self):
         feedback_core = "CORE:\n"
         completion = self.check_level_completion(core_levels)
         core_completion_count = sum(1 for (_, _, complete) in completion if complete)
@@ -122,8 +122,9 @@ class SaveFile:
         else:
             feedback_general = "You didn't quite manage to finish all the core levels. Well done for what you did complete, but be sure to seek out help if you get stuck on future tasks!"
         
-        return f"{feedback_general}\n\n{feedback_core}\n{feedback_sa}\n{feedback_sb}\n{feedback_sc}"
-
+        feedback = f"{feedback_general}\n\n{feedback_core}\n{feedback_sa}\n{feedback_sb}\n{feedback_sc}"
+        grades = [core_completion_count, 1 if done_sa else 0, 1 if done_sb else 0, count_sc]
+        return feedback, grades
 
 class OgvDirectory(SaveFile):
     def __init__(self, dir_path):
@@ -148,20 +149,33 @@ class OgvDirectory(SaveFile):
 if __name__ == '__main__':
     base_path = sys.argv[1]
 
+    feedback_file = open("feedback.txt", "wt")
+    grade_file = open("grades.csv", "wt")
+
+    def print_fb(text):
+        feedback_file.write(text)
+        feedback_file.write("\n")
+
     for dir_name in sorted(os.listdir(base_path)):
         dir_path = os.path.join(base_path, dir_name)
         if os.path.isdir(dir_path) and dir_name.endswith("assignsubmission_file_"):
-            print("=" * 60)
-            print(dir_name)
-            print("=" * 60)
+            student_name = dir_name.split('_')[0].title()
+
+            print_fb("=" * 60)
+            print_fb(student_name)
+            print_fb("=" * 60)
             save_file_path = os.path.join(dir_path, "000.user")
+            save_file = None
             if os.path.exists(save_file_path):
                 save_file = SaveFile(save_file_path)
-                print(save_file.get_feedback())
             elif any(glob.glob(os.path.join(dir_path, "*.ogv"))):
                 save_file = OgvDirectory(dir_path)
-                print("NB: you provided videos but did not provide a save file. Please be sure to read submission instructions carefully!\n")
-                print(save_file.get_feedback())
+                print_fb("NB: you provided videos but did not provide a save file. Please be sure to read submission instructions carefully!\n")
             else:
-                print("🚷 Save file not found\n")
+                print_fb("🚷 Save file not found\n")
+
+            if save_file is not None:
+                feedback, grades = save_file.get_feedback_and_grades()
+                print_fb(feedback)
+                grade_file.write(f"{student_name},{','.join(str(g) for g in grades)}\n")
 
