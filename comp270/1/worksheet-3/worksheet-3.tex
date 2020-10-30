@@ -92,7 +92,7 @@ In addition, the camera can be "zoomed" in/out by pressing the up/down arrow key
 ``Happiness can be found, even in the darkest of times, if one only remembers to turn on the light."
 \par --- Albus Dumbledore
 \end{marginquote}
-The camera creates a picture by choosing a colour for each 'pixel' of the view plane based on which object is visible through the pixel from the camera's position. The visibility test is carried out in \lstinline{Camera::updateScreenBuffer} by finding which objects are encountered by 'rays' sent from the camera through the centre of each pixel.
+The camera creates a picture by choosing a colour for each 'pixel' of the view plane based on which object is visible through the pixel from the camera's position, which is determined by sending 'rays' through the centre of each pixel and seeing which objects they intersect (the overall process happens in \lstinline{Camera::updatePixelBuffer}, but you shouldn't need to edit that - for now).
 
 The number and directions of the rays will be determined by the view plane properties stored in the \lstinline{Camera::m_viewPlane} struct, which can be accessed from within \lstinline{Camera} methods as e.g. \lstinline{m_viewPlane.distance}. \textbf{Note} that the view plane \lstinline{distance} is measured along the \textbf{camera's viewing direction}, i.e. the positive $z$ direction in camera space starting from the camera, so that the view plane initially has coordinates (0, 0, 2.5) in camera space and (0, 0, 5) in world space.
 
