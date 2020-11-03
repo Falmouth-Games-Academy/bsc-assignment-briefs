@@ -187,8 +187,11 @@ With rotations in place, you should be able to view the scene from more interest
 	\label{fig:rotate}
 \end{figure}
 
-\section*{Task 4: round things that look round}
+\section*{Task 4: round things that look round - or move round}
 
+For this task, you can complete \textbf{either} option 1 or option 2 below, or a combination thereof for additional marks.
+
+\textbf{Option 1: lighting effects}\\
 So far, everything is looking rather flat because we're setting all the pixels to the same colour, regardless of how far away the object is or how the intersected surface is oriented, when in reality there would be shadows, reflections and a number of other effects adding depth to the scene. There is a variety of methods to simulate these effects, known as \href{https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading}{shading}, with different levels of complexity, including
 \begin{itemize}
 	\item applying a '\href{https://en.wikipedia.org/wiki/Distance_fog}{distance fog}'-like effect to modulate the colour intensity depending on the distance from the camera.
@@ -197,9 +200,21 @@ So far, everything is looking rather flat because we're setting all the pixels t
 	\item applying a standard shading technique, such as \href{https://www.scratchapixel.com/lessons/3d-basic-rendering/phong-shader-BRDF}{Phong} or \href{https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-shading/diffuse-lambertian-shading}{Lambert} shading, to approximate lighting effects more efficiently than with ray tracing.
 \end{itemize}
 
-\textbf{Choose} (or \textbf{invent}) and \textbf{implement} a method for giving the scene a "more 3D" look - points will be awarded for creativity as well as adherence to existing techniques, and for interesting as well as realistic effects!
+\textbf{Choose} (or \textbf{invent}) and \textbf{implement} a method for giving the scene a "more 3D" look - marks will be awarded for creativity as well as adherence to existing techniques, and for interesting as well as realistic effects, with bonus marks awarded for complex or multiple effects.
 
 The colour for a pixel is currently computed in \lstinline{Camera::getColourAtPixel()}, which is supplied with the pixel indices as input arguments, and has access to the closest object to the pixel and the distance to the point of intersection via the \lstinline{ObjectInfo} stored in \lstinline{m_pixelBuf} - you can also retrieve the direction of the ray that intersects the object by calling \lstinline{getRayDirectionThroughPixel(i, j)}, plus all the other members of the \lstinline{Camera} class are of course available. For simple techniques, this may be enough, however you could also extend the functionality by saving additional information from the intersection test (see comments in the code for how).
+
+\textbf{Option 2: dynamic objects}\\
+The objects in the scene don't currently move but could be made to, for instance following the path of a curve (like the car in Worksheet 1) or acting under gravity, like the projectiles in Worksheet 2 or following the Euler integration timestepping outlined in the lectures. The function \lstinline{Application::update()} is a placeholder in which you can implement the code to move dynamic objects, i.e. those with their \lstinline{Object::m_isDynamic} flag is set to true, which is done when the objects are created in \lstinline{Application::setupScene()}. You can use \lstinline{Object::applyTransformation()} to apply a \lstinline{Matrix3D} to an object's world transform, and/or add your own methods to change its position.
+
+\textbf{Implement} a method to animate some of the objects in the scene, displaying \textbf{at least one} of the following:
+\begin{itemize}
+	\item a non-trivial movement calculation, e.g. motion subject to gravity using Euler integration, or along a curve (\textbf{not} a B\'ezier), and/or
+	\item some interaction with other objects in the scene, e.g. collision detection/response (which doesn't have to be a change of motion; it could be some other effect, e.g. colour change), and/or
+	\item an ability to and select and move/interact with objects using mouse or keyboard controls.
+\end{itemize}
+
+Marks will be awarded for creativity as well as adherence to existing techniques, and for interesting as well as realistic effects, with bonus marks awarded for complex or multiple effects.
 
 \rubrichead{All submissions and assessment criteria for this assignment are individual. To \textbf{pass} this assignment (achieve 40\% or more), you must submit a reasonable attempt at the worksheet by the formative deadline stated on LearningSpace.}
 \begin{markingrubric}
