@@ -1,0 +1,38 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\title{White Noise}
+\author{Joseph Walton-Rivers}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+White noise is a randomized sequence of freqencies. $v$ represents the volume of the resultant noise, with 1 being full volume and 0 being silence. The random number generator is assumed to be uniformly distributed over the range of its inputs.
+
+This algorithm depends on the sample rate, $S$, which is used to convert a duration in seconds to a duration in samples.
+
+\begin{algorithm}[ht]
+	\caption{White Noise}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex $0 \le v \le 1$
+		\Statex $1 \le S$ \Comment{Sample Rate}
+		\Ensure
+		\Function{noise}{$t,v$}
+		\State $n\gets$ \Call{list}{}
+		\For{$i=0, i<tS$}
+		\State $n\gets$ \Call{rand}{$-1.0$, $1.0$} $v V$
+		\EndFor
+		\State \Return $n$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}

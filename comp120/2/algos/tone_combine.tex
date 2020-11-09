@@ -1,0 +1,44 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\title{Tone Combine}
+\author{Joseph Walton-Rivers}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+This algorithm is used to combine two tones so they are played at the same time.
+
+This algorithm depends on the sample rate, $S$, which is used to convert a duration in seconds to a duration in samples.
+
+\begin{algorithm}[ht]
+	\caption{Tone Combine}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex $0 \le f_{0...n} \le 22050$ \Comment{frequency}
+		\Statex $1 \le d$ \Comment{Duration (in seconds)}
+		\Statex $S$ \Comment{Sample Rate}
+		\Ensure
+		\Statex A list, $n$, containing the tones corresponding to the frequencies, played for duration, $d$
+		\Function{combine}{$d$, $w$, $f$}
+		\State $n\gets$ \Call{list}{}
+		\For{$i=0,  i < d S$}
+		\State $v\gets 0$
+		\For{$j=0, j<len(f)$}
+		\State $v\gets v +$ \Call{w}{$f_j$, $i$}
+		\EndFor
+		\State $n\gets v$
+		\EndFor
+		\State \Return $n$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\title{Scaling Amplitude}
+\author{Joseph Walton-Rivers}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+	This algorithm can be used to make the amplitude of a given sequence, $s$ by some factor $f$. This could make the sequence louder ( $f \ge 1$ ) or quieter ( $f > 1$ ). If the scaled value is outside of the minimum or maximum permitted value, it is clipped to the minimum or maximum value.
+
+\begin{algorithm}[ht]
+	\caption{Scaling Amplitude}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex $v_{min} \le s_{0..n} \le v_{max}$
+		\Statex $0 \le f$
+		\Ensure
+		\Statex the elements in the list $n$ meet the requirements for $s$.
+		\Function{scale}{$s$, $f$}
+		\State $n\gets$ \Call{list}{}
+		\For{$i=0, i<len(s)$}
+		\State $v\gets s_if$
+		\State $v\gets max(v_{max}, v)$
+		\State $v\gets min(v_{min}, v)$
+		\State $n\gets v$
+		\EndFor
+		\State \Return $n$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}
