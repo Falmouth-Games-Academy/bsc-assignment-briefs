@@ -24,10 +24,10 @@
 }
 \lstset{language=[Sharp]C}
 
-\title{Worksheet 6: Data Structures}
+\title{Worksheet 6: Choosing Data Structures and Algorithms}
 \author{Dr Ed Powley}
 \module{COMP110}
-\version{4.0}
+\version{5.0}
 
 \begin{document}
 
@@ -78,15 +78,14 @@ so please plan your time accordingly.
 
 The skeleton project contains a file \texttt{Program.cs}, which imports your \lstinline{OxoBoard} class
 and uses it to play a game of Noughts and Crosses. You may find this useful when testing your code.
-There is also a unit test project which defines a series of tests using the NUnit\footnote{\url{https://nunit.org}} framework;
-these can be run locally within Visual Studio, and will also be run automatically via TravisCI when you submit a pull request
-on GitHub.
+There is also a unit test project which defines a series of tests using the NUnit\footnote{https://nunit.org} framework;
+if your implementation does not pass all of these tests, then your code has bugs that need to be fixed.
 
 \section*{Submission instructions}
 
-Begin by \textbf{forking} the GitHub repository at the following URL:
+Begin by \textbf{forking} the git repository at the following URL:
 
-\url{https://github.com/Falmouth-Games-Academy/comp110-worksheet-6}
+\url{https://gamesgit.falmouth.ac.uk/projects/COMP110/repos/comp110-ws-oxo/browse}
 
 Edit \texttt{OxoBoard.cs}, implementing the required functions.
 When you have finished, open a \textbf{pull request}.
@@ -95,7 +94,7 @@ When you have finished, open a \textbf{pull request}.
 Doing so will interfere with the automated testing scripts used to check your submission for correctness,
 and as a result may lead to you losing marks.
 
-Upload all material to GitHub and open a pull request by the deadline listed on LearningSpace.
+Upload all material to the git server and open a pull request by the formative deadline listed on LearningSpace.
 
 \section*{Marking criteria}
 
@@ -104,7 +103,7 @@ Remember that \textbf{it is better to submit incomplete work than to submit noth
 Your work will be marked according to the following criteria:
 \begin{itemize}
 	\item \textbf{Functional coherence}. Is your implementation correct?
-		Your code will be run through TravisCI to verify that it gives the correct results for a large sample of input values.
+		The included unit tests will be used to verify that it gives the correct results for a large sample of input values.
 	\item \textbf{Sophistication}. Have you made use of appropriate code structures and data structures?
 		Note the emphasis is on \textbf{appropriate}; extra credit will \textbf{not} be given for unnecessarily complex solutions.
 	\item \textbf{Maintainability: readability}. Is your code well commented? Are your identifier names appropriate and descriptive?
