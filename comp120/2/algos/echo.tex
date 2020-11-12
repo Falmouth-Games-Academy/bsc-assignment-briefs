@@ -1,0 +1,46 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\title{Adding Echos}
+\author{Joseph Walton-Rivers}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+This adds an echo to an input list, $s$, extending the input by $t$ seconds and combining the input list with a delayed copy of itself.
+
+This algorithm depends on the sample rate, $S$, which is used to convert a duration in seconds to a duration in samples.
+
+\begin{algorithm}[ht]
+	\caption{Adding Echos}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex $1 \le t$
+		\Statex $1 \le S$ \Comment{Sample Rate}
+		\Ensure
+		\Function{echo}{$s$,$t$}
+		\State $n\gets$ \Call{list}{}
+		\State $o \gets tS$
+		\For{$i=0, i < len(s) + o$}
+		\State $v \gets 0$
+		\If{$ i < len(sample)$}
+		\State $v \gets v + s_i$
+		\EndIf
+		\If{$ i - o > 0$}
+		\State $v \gets v + s_{i - o}$
+		\EndIf
+		\State $n \gets v$
+		\EndFor
+		\State \Return $n$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}

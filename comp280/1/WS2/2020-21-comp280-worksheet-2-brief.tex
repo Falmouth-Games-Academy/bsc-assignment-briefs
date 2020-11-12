@@ -1,5 +1,5 @@
-\documentclass{../../fal_assignment}
-\graphicspath{ {../../} }
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
 
 \usepackage{amsmath}
 \usepackage{enumitem}
@@ -9,8 +9,8 @@
 \usepackage{todonotes}
 \usepackage{hyperref}
 
-\title{Worksheet 2: Artificial Intelligence with Unreal and Behaviour Trees}
-\author{Ed Powley}
+\title{Worksheet 2: Artificial Intelligence using Behaviour Trees}
+\author{Joseph Walton-Rivers}
 \module{COMP280}
 \version{1.0}
 
@@ -26,27 +26,34 @@
 
 In this worksheet, you will implement a set of AI behaviours for the enemies in a simple game.
 
-Begin by \textbf{forking} the following git repository:
+Begin by \textbf{forking} one of the following git repositories:
 
-\begin{center}
-	\url{https://github.com/Falmouth-Games-Academy/comp280-worksheet-2}
-\end{center}
-
-This repository contains an Unreal project based on the classic arcade game \emph{Pac-Man}.
+This repositories contain a  project based on the classic arcade game \emph{Pac-Man}.
 The player uses the WASD keys to run around a maze collecting pills.
 The maze is also inhabited by four ghosts:
 these will kill the player upon contact, unless a power pill is active, in which case the player kills the ghost.
 In the template project, the ghosts (implemented in the \texttt{GhostCharacter} class) stay still in the centre of the maze;
 your task for this worksheet is to implement suitable AI behaviours.
 
+\subsection*{Unreal}
+\begin{center}
+	\url{https://github.com/Falmouth-Games-Academy/comp280-worksheet-2}
+\end{center}
+
+\subsection*{Unity}
+
+\begin{center}
+	\url{https://gamesgit.falmouth.ac.uk/users/josephwr/repos/comp280-unity-ai/browse}
+\end{center}
+
 To complete this worksheet:
 
 \begin{enumerate}
 	\item \textbf{Fork} the repository linked above.
 	\item \textbf{Implement} a basic Behaviour Tree based AI controller for the ghosts.
-		A good starting tutorial is available at \url{https://wiki.unrealengine.com/Blueprint_Behavior_Tree_Tutorial}.
+		A good starting tutorial is available at \url{https://wiki.unrealengine.com/Blueprint\_Behavior\_Tree\_Tutorial}, Unity users should refer to the tutorial mentioned in the comments and the lecture slides.
 	\item \textbf{Iterate} on your AI to produce suitably complex and engaging behaviours.
-	\item \textbf{Open a pull request} by 22nd November 2019 to receive formative feedback.
+	%\item \textbf{Open a pull request} by 22nd November 2019 to receive formative feedback.
 \end{enumerate}
 
 \section*{Additional guidance}
@@ -57,6 +64,8 @@ however this would not lead to enjoyable gameplay.
 
 The following are some ideas for how you might make your solution more interesting (all of these are optional suggestions):
 
+\subsection*{Unreal}
+
 \begin{itemize}
 	\item Give each of the ghosts its own distinctive behaviour. (Note that if you choose to subclass \texttt{GhostCharacter} to allow for this,
 	you can edit the \texttt{GhostSpawner}s in the level to cause them to spawn instances of your new class.)
@@ -65,8 +74,18 @@ The following are some ideas for how you might make your solution more interesti
 	\item Have the ghosts take the state of the game, e.g.\ locations of pills left, into account.
 \end{itemize}
 
+\subsection*{Unity}
+
+\begin{itemize}
+	\item Give each of the ghosts its own distinctive behaviour. (Note that if you choose to modify \texttt{BtController} to allow for this - for example, swapping the tree based on the name of the agent).
+	\item Have the ghosts behave differently based on whether a power pill is active.
+	\item Give the ghosts limited perception so that they have to find the player.
+	\item Have the ghosts take the state of the game, e.g.\ locations of pills left, into account.
+\end{itemize}
+
 For more guidance, please read the over-arching assignment brief for this assignment on LearningSpace.
 
+\rubrichead{To \textbf{pass} this assignment (achieve 40\% or more), you must submit a reasonable attempt at the worksheet by the formative deadline stated on LearningSpace.}
 \begin{markingrubric}
 	\firstcriterion{Behaviour design}{60\%}
         \grade\fail AI behaviours are non-existent or are extremely basic.

@@ -1,0 +1,41 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\title{Calculate Notes}
+\author{Joseph Walton-Rivers}
+\module{COMP280}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+This algorithm is used to generate a set of notes based on a base frequency and a start and end note. The step is also taken into account when stepping though the notes.
+
+The starting note ($n_s$) should be smaller than the ending node ($s_e$) and a positive non-zero step size ($i$). The algorithm could be altered to support a negative step size. The size of the returned list should be equal to the number of steps required to move from ($n_s$ to $n_e$).
+
+\begin{algorithm}[ht]
+	\caption{Note Calculator}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Require
+		\Statex $0 \le b \le 22050$ \Comment{Base frequency}
+		\Statex $0 \le n_s \le n_e \le 255$ \Comment{Min and Max notes}
+		\Statex $1 \le i \le n_e$ \Comment{The step value}
+		\Ensure
+		\Statex A list, $n$, containing frequencies for each of the required notes
+		\Function{notes}{$b$, $n_s$, $n_e$, $i$}
+		\State $E\gets 2^{\frac{1}{12}}$
+		\State $n\gets$ \Call{list}{}
+		\For{$i=n_s, i<n_e$}
+		\State $n\gets b E^i$
+		\EndFor
+		\State \Return $n$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}

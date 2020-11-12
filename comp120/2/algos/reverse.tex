@@ -1,0 +1,34 @@
+\documentclass{../fal_assignment}
+\graphicspath{ {../} }
+
+\title{Reverse}
+\author{Joseph Walton-Rivers}
+\module{COMP120}
+\version{0.1}
+
+\usepackage{algorithm,algpseudocode}
+
+\begin{document}
+
+\maketitle
+
+This algorithm reverses the order of the elements in a sequence such as the first element becomes the last element, the second element becomes the second from last element and so on. The length and values inside the list should not be altered, only the order is changed.
+
+\begin{algorithm}[ht]
+	\caption{Reverse}
+	\label{alg:algorithm}
+	
+	\begin{algorithmic}[1]
+		\Ensure
+		\Statex  $n$ is a list of the same length as $s$ containing the elements in reverse order
+		\Function{reverse}{$s$}
+		\State $n\gets list()$
+		\For{$i=len(s)-1; i > 0$}
+		\State $n \gets s_i$
+		\EndFor
+		\State \Return $n$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}
