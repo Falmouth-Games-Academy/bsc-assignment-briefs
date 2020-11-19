@@ -1,0 +1,103 @@
+\documentclass{../../../fal_assignment}
+\graphicspath{ {../../../} }
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{hyperref}
+
+\title{Worksheet 3: Optimisation}
+\author{Brian McDonald}
+\module{COMP280}
+\version{1.0}
+
+\begin{document}
+
+\maketitle
+
+
+\section*{Introduction}
+
+In this worksheet, you will carry out an optimisation process for one of your projects. You will log each step you carry out and detail any changes you make to your code base. This should be recorded in a report, a template for which can be found at the repository below.
+
+Begin by \textbf{forking} the following git repository:
+
+\begin{center}
+	\url{https://github.com/Falmouth-Games-Academy/comp280-worksheet-3}
+\end{center}
+
+To complete this worksheet:
+
+\begin{enumerate}
+	\item \textbf{Fork} the repository linked above.
+	\item \textbf{Identify} a project to optimise
+	\item \textbf{Record} a base line for the project
+	\item \textbf{Optimise} the project, record the changes on your codebase and any results
+	\item \textbf{Re-run} the above optimisation step
+	\item \textbf{Open a pull request} by end of week 11 for summative feedback.
+\end{enumerate}
+
+\textbf{Please include a link to the project you are using in the optimisation process}
+
+\section*{Additional guidance}
+
+Optimisation is a very important aspect of Game Development, it is something you should carry out key parts of the project.
+
+In addition the process is very much like running an experiment, you don't make changes because your gut tells you. You have to run the profiler, identify the bottleneck and then make changes to your codebase or the project. We are more interested in how you approach the optimisation process rather than the results you achieve.
+
+You can select any project for the optimisation process, this can be one of the following:
+
+\begin{itemize}
+	\item GAM220/GAM240 Project
+	\item Previous COMP280 Worksheet submission
+	\item COMP140 Project
+	\item Personal Project
+\end{itemize}
+
+Lastly, there is no maximum word or page count for this worksheet. 
+
+For more guidance, please read the over-arching assignment brief for this assignment on LearningSpace.
+
+\begin{markingrubric}
+	\firstcriterion{Optimisation Process}{70\%}
+	\grade\fail Optimisation has been carried out but there is no supporting documentation
+	\grade Optimisation has been carried out with some basic supporting documentation
+	\par The documentation lacks detail and clarity, there is also a lack of figures, charts and tables
+	\grade Optimisation has been carried out with more detailed supporting documentation
+	\par The documentation lacks detail and clarity, but there is evidence of more analytical approach (including diagrams)
+	\grade Optimisation has been carried out and the supporting documentation is of a good level
+	\par The documentation is of a good level of detail and there is evidence of more analytical approach (including diagrams)
+	\grade Optimisation has been carried out and the supporting documentation is of a very good level
+	\par The documentation is of a good level of detail and the commentary on the optimisation process is of a good level of detail
+	\grade Optimisation has been carried out and the supporting documentation is of a excellent level
+	\par The documentation is of a good level of detail and the commentary on the optimisation process is of a excellent level of detail
+	%
+	\criterion{Iteration of Optimisation}{10\%}
+	\grade\fail There is no evidence of iteration of optimisation process
+	\gradespan{5}{There has been additional iterations, mark will be based on number and quality of iterations}
+	%
+	\criterion{Spelling \& grammar}{10\%}
+	\grade\fail 	Substantial spelling and/or grammatical errors.
+	\grade 		Many spelling and/or grammatical errors.
+	\grade 		Some spelling and/or grammatical errors.  
+	\grade 		Few spelling and/or grammatical errors.
+	\grade 		Almost no spelling and/or grammatical errors.
+	\grade 		No spelling or grammatical errors.
+	%
+	\criterion{Structure}{10\%}
+	\grade\fail 	There is no structure, or the structure is unclear.
+	\grade 		There is little structure.
+	\grade 		There is some structure.
+	\par 		A few sentences and paragraphs are well constructed.
+	\grade 		There is much structure.
+	\par 		Some sentences and paragraphs are well constructed.
+	\grade 		There is much structure, highlighting the key themes.
+	\par 		Most sentences and paragraphs are well constructed.
+	\grade 		There is much structure, highlighting the key themes.
+	\par 		All sentences and paragraphs are well constructed.
+\end{markingrubric}
+
+\end{document}
