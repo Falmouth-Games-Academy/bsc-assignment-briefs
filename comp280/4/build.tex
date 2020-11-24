@@ -1,0 +1,128 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\title{Worksheet 4: Interfaces and Interactions}
+\author{ Lucy Stent	}
+\module{COMP280}
+\version{1.0}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``Design is really an act of communication, which means having a deep understanding of the person with whom the designer is communicating.''
+\par --- \'Donald A. Norman
+\end{marginquote}
+%\marginpicture{flavour_pic}{
+ %   \emph{SpaceChem} is a puzzle game in which players must apply computational thinking to build circuits which assemble
+ %   chemical molecules.
+%}
+
+To complete this worksheet, you are expected to rapid prototype a simple user Interface (chosen from the game contract list available from the LearningSpace) in Unreal Engine or Unity. Once complete, the interface will be subject to a heuristic evaluation and then improved upon to accommodate the findings of the evaluation. 
+
+To complete this worksheet: 
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Design} HUDs for a Game Contract using Adobe XD or similar. The HUDs you must create are:
+    \begin{itemize}
+    	\item Pause Menu
+	\item Main Menu
+	\item Game HUD
+	\item Controls window
+	\item \textbf{Stretch Goal} - Game Contract Specific Menu
+    \end{itemize}
+    \item \textbf{implement} the HUDs in Unreal Engine or Unity
+    \item \textbf{carry out} a heuristic evaluation on the HUD 
+    \item \textbf{enhance} the initial HUD using the findings from the heuristic evaluation
+    \item \textbf{STRETCH GOAL: } if you finish this worksheet early, ask a peer to evaluate your interface and use the new results to inform a second iteration of your interface. 
+\end{enumerate}
+
+\subsection*{Assignment Setup} 
+
+Begin by \textbf{forking} the following BitBucket repository: 
+
+\hyperlink{https://gamesgit.falmouth.ac.uk/projects/COMP280/repos/worksheet-4/browse}{https://gamesgit.falmouth.ac.uk/projects/COMP280/repos/worksheet-4/browse} 
+
+Use this repo to track all files related to this worksheet. Once you have completed the worksheet, make a pull request to receive formative feedback. 
+
+To fulfil the requirements of this worksheet you are expected to submit evidence of:
+
+\begin{itemize}
+	\item an initial interface design in the form of interactive prototype;
+	\item screenshots of the first implementation in engine;
+	\item the results from a heuristic evaluation;
+	\item and then screenshots of the final interface with enhancements based on the results from the heuristic evaluation
+\end{itemize}
+
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+			Each worksheet has its own formative deadline, specified on that worksheet and also communicated in class.
+    		Falmouth University policy states that summative deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+	\item 	\textbf{How will I receive feedback on my work?} \\ 
+    		You will be given verbal feedback on your work during the session in which it is marked.
+    		If you require more in-depth feedback or discussion, please book an appointment with your tutor.
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+\rubrichead{Each individual worksheet is marked according to this rubric.}
+\rubricfoot{Each worksheet is worth 11.1\% of the total marks for this assignment.}
+
+\begin{markingrubric}
+	\firstcriterion{Functionality}{30\%}
+		\grade\fail	There is no functioning user interface
+		\grade{There is one user interface with limited functionality}
+		\grade{There is two user interfaces with some functionality}
+		\grade{There is three user interfaces with good functionality}
+		\grade{There is four user interfaces with good functionality}
+		\grade{There is four user interfaces with much functionality}
+
+		
+    \criterion{Heuristic Evaluation}{50\%}
+    		\grade\fail	There is no evidence of an evaluation
+		\grade{There is evidence of a very basic evaluation}
+		\grade{There is evidence of a basic evaluation}
+		\grade{There is evidence of a good evaluation}
+		\grade{There is evidence of a good evaluation with academic references}
+		\grade{There is  evidence of a very good evaluation with many academic references}
+
+\criterion{Depth of insight}{20\%}
+    		\grade\fail	None of the issues identified in the evaluation have been addressed
+		\grade{Few of the issues identified in the evaluation have been addressed}
+		\grade{Some of the issues identified in the evaluation have been addressed}
+		\grade{Many of the issues identified in the evaluation have been addressed}
+		\grade{All of the issues identified in the evaluation have been addressed }
+		\grade{A second iteration of the evaluation process has been carried out}
+
+\end{markingrubric}
+
+% https://www.reddit.com/r/unrealengine/comments/a7w2vq/how_to_design_a_fps_hud/
+% https://www.youtube.com/watch?v=5Gt444eN7Rg&list=PLSlkDq2rO1t5r1tj6gLWD_EesQ8IZtN_h
+
+\end{document}
