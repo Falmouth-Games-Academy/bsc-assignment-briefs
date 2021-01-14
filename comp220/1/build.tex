@@ -8,8 +8,9 @@
 \usepackage{todonotes}
 
 \title{Computing Artefact}
-\author{Brian McDonald}
+\author{Brian McDonald, Kate Bergel}
 \module{COMP220}
+\version{1.1}
 
 \begin{document}
 
@@ -34,37 +35,46 @@
 }
 
 In this assignment, you are required to \textbf{design} and \textbf{implement} a C++ program using SDL and OpenGL or a program where the components could be integrated into your group project.
-This program should demonstrates the type of 3D computer graphics techniques that appear in a modern game engine.
+This program should demonstrate the type of 3D computer graphics techniques that appear in a modern game engine.
 
 Graphics technology is one of the most obvious areas in which innovation has driven gaming technology in recent years.
 Modern gaming PCs and consoles contain powerful graphics processing units (GPUs),
 and gamers expect modern games to push this hardware to its full potential.
 In this assignment you will practice the use of advanced graphical effects.
-Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques. This portfolio piece will be built up using a series of Worksheets, worksheet A and B will give you a foundational framework for
-the rest of the assignment which will be completed in C and D.
+Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques. This portfolio piece will be built up using a series of worksheets: worksheets 1 and 2 will give you a foundational framework for the rest of the assignment, which will be completed in worksheets 3 and 4.
 
 Finally you will have to create a video which captures your graphics demo.
 
-This assignment is formed of several parts:
-\begin{enumerate}[label=(\Alph*)]
-	\item Worksheet A - \textbf{Project Framework}
-	\item Worksheet B - \textbf{Camera \& Basic Scene}
-	\item Worksheet C - \textbf{Demo specific work}
-	\item Worksheet D - \textbf{Demo specific work \& Viva}
+This assignment is formed of \textbf{FOUR worksheets}:
+\begin{enumerate}[label=\arabic*)]
+	\item Project Framework
+	\item Camera \& Basic Scene
+	\item Demo specific work: planning and prototyping
+	\item Demo specific work: optimisation and final implementation
 \end{enumerate}
 
-\subsection*{Assignment Setup}
+\subsection*{Assignment Setup and Submission}
 
-This assignment is a \textbf{programming} task. Fork the GitHub repository at the following URL:
+This assignment is a \textbf{programming} task. The base repository will be given in the first weeksheet; subsequent worksheets will build on the work done for previous ones.
+It is therefore important that you keep up with the formative deadlines to make progress at a consistent pace.
 
-\indent \url{https://github.com/Falmouth-Games-Academy/COMP220-Computing-Artefact}
+This assignment consists of \textbf{four formative submissions}, followed by a \textbf{single summative submission}.
+You will receive \textbf{feedback} after each formative submission.
 
-Use the existing directory structure and, as required, extend this structure with sub-directories.
-Ensure that you maintain the \texttt{readme.md} file.
+At the end of the study block you will be required make a final summative submission of your artefact, comprising all four worksheet solutions.
+Prepare a \textbf{single \texttt{.zip} file} containing:
+\begin{itemize}
+	\item your \textbf{artefact solution},
+	\item a \textbf{link to your version control repository} (which must have the \textbf{appropriate permissions} set to allow your tutor(s) to view it), and
+	\item a \textbf{short (3-5 minutes) video} demonstrating your final artefact (this may be a link to the video hosted on a suitable streaming service, e.g. Microsoft Stream)
+\end{itemize}
+\textbf{Upload the .zip file to the appropriate submission area on LearningSpace}. 
+This submission is for archival purposes only; your work will be marked and you will receive feedback in the viva, and you should \textbf{not} submit any new, unmarked work via LearningSpace unless you have been granted permission to do so by the tutor. You are, however, free (and encouraged) to update your work based on the formative feedback received at any time before the viva/summative deadline (whichever is sooner).
 
-Modify the \texttt{.gitignore} to the defaults for \textbf{Visual Studio}.
-Please, also ensure that you add editor-specific files and folders to \texttt{.gitignore}. 
-
+\paragraph{\todo[inline]{This final submission is subject to the usual university policies regarding late submission or non-submission,
+as detailed in the course handbook ---
+even if you have met all the formative deadlines for individual worksheets,
+\textbf{failure to make a submission via LearningSpace by the summative deadline will be subject to penalties}.}}
 
 \section*{Additional Guidance}
 
@@ -139,24 +149,25 @@ as long as they are available under an appropriate license and are properly attr
     \item \url{http://www.opengl-tutorial.org}
     \item \url{http://gamedev.stackexchange.com/questions/32876/good-resources-for-learning-modern-opengl-3-0-or-later}
     \item \url{https://google.github.io/styleguide/cppguide.html}
+    \item \url{https://www.doxygen.nl/manual/docblocks.html}
 \end{itemize}
 
-\rubricyeartwo
+\rubrichead{All submissions and assessment criteria for this assignment are individual.}
 \begin{markingrubric}
 	%
-	\firstcriterion{Worksheet A}{10\%}
+	\firstcriterion{Worksheet 1}{10\%}
 		\grade\fail No or Late submission of worksheet
 	\gradespan{5}{See worksheet for details}
 	%
-	\criterion{Worksheet B}{15\%}
+	\criterion{Worksheet 2}{15\%}
 		\grade\fail No or Late submission of worksheet
 	\gradespan{5}{See worksheet for details}
 	%
-	\criterion{Worksheet C}{25\%}
+	\criterion{Worksheet 3}{25\%}
 		\grade\fail No or Late submission of worksheet
 	\gradespan{5}{See worksheet for details}
 	%
-	\criterion{Worksheet D}{25\%}
+	\criterion{Worksheet 4}{25\%}
 		\grade\fail No or Late submission of worksheet
 	\gradespan{5}{See worksheet for details}
 	%
@@ -175,7 +186,7 @@ as long as they are available under an appropriate license and are properly attr
 \par Most identifier names are descriptive and appropriate.
 \par Most code adheres to the to code guidelines (Unreal, Google etc).
 \par There is almost no obvious duplication of code or of literal values.   
-\grade The source code is reasonably well commented, with Python doc-strings.
+\grade The source code is reasonably well commented in the doxygen style.
 \par Almost all identifier names are descriptive and appropriate.
 \par Almost all code adheres to the to code guidelines (Unreal, Google etc).
 \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered'' in the source code. 
@@ -185,18 +196,18 @@ as long as they are available under an appropriate license and are properly attr
 \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  	
 	%
 	\criterion{Use of Version Control}{10\%}
-		\grade\fail GitHub has not been used.
-		\grade Source code has rarely been checked into GitHub.
-		\grade Source code  has been checked into GitHub at least once per week.
+		\grade\fail Version Control has not been used.
+		\grade Source code has rarely been checked into Version Control.
+		\grade Source code has been checked into Version Control at least once per week.
 			\par Commit messages are present.
 			\par There is evidence of engagement with peers (e.g.\ code review).
-		\grade Source code  has been checked into GitHub several times per week.
+		\grade Source code has been checked into Version Control several times per week.
 			\par Commit messages are clear, concise and relevant.
 			\par There is evidence of somewhat meaningful engagement with peers (e.g.\ code review).
-		\grade Source code has been checked into GitHub several times per week.
+		\grade Source code has been checked into Version Control several times per week.
 			\par Commit messages are clear, concise and relevant.
 			\par There is evidence of meaningful engagement with peers (e.g.\ code review).
-		\grade Source code has been checked into GitHub several times per week.
+		\grade Source code has been checked into Version Control several times per week.
 			\par Commit messages are clear, concise and relevant.
 			\par There is evidence of effective engagement with peers (e.g.\ code review).
 \end{markingrubric}
