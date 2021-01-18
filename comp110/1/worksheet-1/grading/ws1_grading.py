@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import sys
 import os
@@ -146,10 +147,19 @@ class OgvDirectory(SaveFile):
             return None
 
 
-if __name__ == '__main__':
-    base_path = sys.argv[1]
+def find_file(dir, fileglob):
+    result = []
+    for dirpath, dirnames, filenames in os.walk(dir):
+        result += glob.glob(os.path.join(dir, dirpath, fileglob))
+    return result
 
-    feedback_file = open("feedback.txt", "wt")
+
+if __name__ == '__main__':
+    os.chdir(os.path.dirname(sys.argv[0]))
+    #base_path = sys.argv[1]
+    base_path = r"C:\Users\edpow\Desktop\COMP110 FT S1 (2021)-COMP110 COMPUTER BASED (80%) Worksheet Tasks-98228"
+
+    feedback_file = open("feedback.txt", "wt", encoding="utf-8")
     grade_file = open("grades.csv", "wt")
 
     def print_fb(text):
@@ -164,18 +174,30 @@ if __name__ == '__main__':
             print_fb("=" * 60)
             print_fb(student_name)
             print_fb("=" * 60)
-            save_file_path = os.path.join(dir_path, "000.user")
-            save_file = None
-            if os.path.exists(save_file_path):
-                save_file = SaveFile(save_file_path)
-            elif any(glob.glob(os.path.join(dir_path, "*.ogv"))):
-                save_file = OgvDirectory(dir_path)
-                print_fb("NB: you provided videos but did not provide a save file. Please be sure to read submission instructions carefully!\n")
-            else:
+            #save_file_path = os.path.join(dir_path, "000.user")
+            save_file_paths = find_file(dir_path, "00*.user")
+            if len(save_file_paths) == 0:
                 print_fb("🚷 Save file not found\n")
+            elif len(save_file_paths) > 1:
+                print_fb("🚷 Multiple save paths found\n")
+            else:
+                save_file_path = save_file_paths[0]
+                save_file = None
+                if os.path.exists(save_file_path):
+                    try:
+                        save_file = SaveFile(save_file_path)
+                    except Exception as e:
+                        print_fb(f"💀 Error loading save file {save_file_path}:\n{e}\n")
+                elif any(glob.glob(os.path.join(dir_path, "*.ogv"))):
+                    save_file = OgvDirectory(dir_path)
+                    print_fb("NB: you provided videos but did not provide a save file. Please be sure to read submission instructions carefully!\n")
+                else:
+                    print_fb("🚷 Save file not found\n")
 
-            if save_file is not None:
-                feedback, grades = save_file.get_feedback_and_grades()
-                print_fb(feedback)
-                grade_file.write(f"{student_name},{','.join(str(g) for g in grades)}\n")
-
+                if save_file is not None:
+                    try:
+                        feedback, grades = save_file.get_feedback_and_grades()
+                        print_fb(feedback)
+                        grade_file.write(f"{student_name},{','.join(str(g) for g in grades)}\n")
+                    except Exception as e:
+                        print_fb(f"💀 Error reading save file {save_file_path}:\n{e}\n")
