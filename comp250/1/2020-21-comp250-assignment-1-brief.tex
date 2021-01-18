@@ -7,10 +7,10 @@
 \usepackage[hyphens]{url}
 \usepackage{todonotes}
 
-\title{Portfolio of game engine components --- AI}
+\title{Computing Artefact --- AI}
 \author{Dr Ed Powley}
 \module{COMP250}
-\version{4.1}
+\version{5.0}
 
 \begin{document}
 
@@ -30,9 +30,11 @@
 
 In this assignment, you are required to \textbf{design} and \textbf{implement} a game component
 implementing one or more artificial intelligence (AI) techniques.
-Note that ``component'' here may also include tools to help game designers to author AI behaviours or systems.
+The definition of ``component'' here is intentionally loose --- it could be a subsystem within a game,
+or a standalone tech demo,
+or even a tool (such as an editor plugin) to help game designers to author AI behaviours or systems.
 
-In the interests of managing workload, you are strongly encouraged to integrate your component into your GAM240 group game development project.
+In the interests of managing workload, you may consider integrating your component into your GAM240 group game development project.
 However if this is not appropriate you may integrate it into another of your current or previous development projects, or into a standalone demo application.
 You may use any programming language and game engine you deem appropriate,
 including visual scripting languages such as Blueprints;
@@ -49,6 +51,9 @@ assistive technologies,
 AI ``directors'',
 and many others.
 Your final product will be a portfolio piece, which you can use in future to demonstrate your mastery of these techniques.
+
+The ``Contracts'' section at the end of this document gives some ideas for the type of component you might consider making for this assignment.
+This is not an exhaustive list, but is indicative of the scope and level of sophistication you should be aiming for.
 
 This assignment is formed of several parts:
 \begin{enumerate}[label=(\Alph*)]
@@ -73,9 +78,9 @@ This assignment is formed of several parts:
 \subsection*{Assignment Setup}
 
 This assignment is a \textbf{programming} task.
-There is no template GitHub repository for this assignment;
-you should work within the existing source control repository for your game
-or create a new repository as appropriate.
+There is no template version control repository for this assignment;
+you should work within the existing repository for your game,
+or create a new repository on the Games Academy Git server as appropriate.
 Either way, remember to modify the \texttt{.gitignore} file (or equivalent on other version control systems) to exclude temporary build files
 from the repository.
 
@@ -123,9 +128,8 @@ Optionally, the video may include a voiceover explaining the concept of the comp
 commentating the demonstration, and describing the architecture.
 Advanced video editing is not required --- a screen-captured video recorded using OBS or similar software is fine.
 
-Upload your video file to the submission area on LearningSpace. 
-Alternatively, upload your video to a streaming service such as YouTube and submit the link on LearningSpace.
-You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.
+Upload your video to Microsoft Stream, and submit a link to the submission area on LearningSpace.
+You will receive \textbf{formal feedback} three weeks after the final submission deadline.
 
 \section*{Additional Guidance}
 
@@ -139,13 +143,6 @@ Correspondence to user stories runs both ways:
 implementing features that were not present in the design (``feature creep'')
 is just as bad as neglecting to implement features.
 
-%Unlike your previous assignments,
-%you will be assessed on the \textbf{performance} of your solution.
-%Real-time graphics and simulation are not just about creating aesthetically pleasing effects,
-%but doing so whilst maintaining a smooth and consistent framerate free of any lag or glitches that might frustrate the player.
-%It may be necessary to trade-off the complexity or fidelity of an effect
-%in order to achieve acceptable performance.
-
 Your code will also be assessed on \textbf{sophistication}.
 To succeed on a project of this size and complexity,
 you will need to make use of appropriate algorithms, data structures, libraries, and object oriented programming concepts.
@@ -155,6 +152,16 @@ where something simpler would have sufficed.
 Likewise, if you are using an engine such as Unity or Unreal,
 you should make use of (and build upon) the AI functionality included therein;
 you will \textbf{not} receive extra credit for ``rolling your own'' without good reason to do so.
+
+Use of \textbf{third-party code}, e.g.\ from online tutorials or asset packages,
+is permitted as long as you clearly identify which code is not your own, and clearly identify where it is from.
+Failure to give proper credit, whether deliberate or not, will result in investigation under the university's \textbf{Academic Misconduct} procedure.
+
+Also bear in mind that you will \textbf{not} receive credit for any code that is not your own ---
+it is important to make sure you change or build upon any third-party code in a substantial way,
+and are able to articulate how you did this.
+For example, simply following a tutorial to implement a particular AI system will not result in a high mark;
+however, using a tutorial as a starting point and then making significant contributions of your own will potentially yield much better results.
 
 \textbf{Maintainability} is important in all programming projects,
 but doubly so when working in a team.
@@ -176,13 +183,13 @@ which should be tidy and should make clear the flow of control and data.
 Use \textbf{grouping}, \textbf{macros}, \textbf{functions}, \textbf{routing nodes} etc.\ to achieve this.
 Blueprints which resemble bowls of spaghetti will not achieve high marks!
 
-As with all assignments on this course, you are expected to display a level of
-\textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
-arts institution.
-One approach to promoting creativity is
-\textbf{divergent thinking}: generating ideas by exploring many possible solutions.
-Often the most interesting ideas are \textbf{subversive}: they deliberately go against
-convention or obvious solutions.
+% As with all assignments on this course, you are expected to display a level of
+% \textbf{innovation and creative flair} befitting Falmouth University's reputation as a world-leading
+% arts institution.
+% One approach to promoting creativity is
+% \textbf{divergent thinking}: generating ideas by exploring many possible solutions.
+% Often the most interesting ideas are \textbf{subversive}: they deliberately go against
+% convention or obvious solutions.
 
 %You will \textbf{not} be judged on the quality of your art assets.
 %It is fine to use meshes and textures found online,
@@ -195,24 +202,25 @@ convention or obvious solutions.
     		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
     		
 	\item 	\textbf{What should I do to seek help?} \\ 
-    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
-    		
+            Contact the module leader, via email or Microsoft Teams message. Contact details can be found on LearningSpace.
+    
     	\item 	\textbf{Is this a mistake?} \\ 	
     		If you have discovered an issue with the brief itself, the source files are available at: \\
     		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
     		 Please make a pull request and comment accordingly.
 \end{itemize}
 
-\section*{Additional Resources}
+% \section*{Additional Resources}
 
-\begin{itemize}
-	\item \url{http://aigamedev.com}
-    \item \url{https://docs.unity3d.com/Manual/Navigation.html}
-    \item \url{https://docs.unrealengine.com/latest/INT/Gameplay/AI/}
-    \item \url{https://google.github.io/styleguide/cppguide.html}
-\end{itemize}
+% \begin{itemize}
+% 	\item \url{http://aigamedev.com}
+%     \item \url{https://docs.unity3d.com/Manual/Navigation.html}
+%     \item \url{https://docs.unrealengine.com/latest/INT/Gameplay/AI/}
+%     \item \url{https://google.github.io/styleguide/cppguide.html}
+% \end{itemize}
 
-\rubricyeartwo
+\rubrichead{\ }
+%\rubricyeartwo
 \begin{markingrubric}
 	\firstcriterion{Basic Competency Threshold}{30\%}
 		\grade\fail At least one part is missing or is unsatisfactory.
@@ -279,15 +287,16 @@ convention or obvious solutions.
 Choose \textbf{one} of the following contracts to implement in your component:
 
 \begin{itemize}
-    \item Non-player character behaviour --- note that this must include something more than the basic pathfinding and perception behaviours included in Unity and Unreal
+    \item Non-player character behaviour --- note that this must include something more than the basic pathfinding and perception behaviours included in your chosen game engine
     \item Pathfinding with advanced movement, e.g. physics-based vehicle steering
     \item An authored AI behaviour system based on something other than finite state machines or behaviour trees, e.g. planning or utility-based AI
     \item A solver for a puzzle game
     \item An AI director or adaptive difficulty system
-    \item A procedural content generation system
+    \item A procedural content generation (PCG) system --- either as an in-game system or as an editor tool
+    \item A tool to allow designers to specify AI behaviours in editor
     \item Another AI component of your choice,
         subject to discussion with your tutor
-        and demonstration that you have researched the feasibility of your chosen techniques.
+        and demonstration that you have researched the feasibility of your chosen techniques
 \end{itemize}
 
 \end{document}
