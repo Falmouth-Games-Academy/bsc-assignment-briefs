@@ -8,8 +8,12 @@
 \usepackage{todonotes}
 
 \title{Development Report}
-\author{Brian McDonald and Matt Watkins}
+\author{Brian McDonald \& Matt Watkins}
 \module{COMP140}
+\version{1.2}
+
+\newcommand\ytl[2]{
+\parbox[b]{8em}{\hfill{\color{black}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \parbox[c]{4.5cm}{\vspace{7pt}\color{black}\raggedright\sffamily #2.\\[7pt]}\\[-3pt]}
 
 \begin{document}
 
@@ -29,89 +33,99 @@ Hacker definition: ``A person who enjoys exploring the details of programmable s
 
 In this assignment, you will write a proposal and create a poster. 
 
-This proposal will contain a plan for your creative computing project highlighitng your areas fo research and outlining the features and planned components.	This should be written using a word processor and delivered as a \textbf{PDF} document..
+This proposal will contain a plan for your creative computing project highlighting your areas for research and outlining the features and planned components.	This should be written using a word processor and delivered as a \textbf{PDF} document..
 
-The poster will summarise the report, and will capture some of the key design decisions in the 
-hardware and software development. This should be written in the provided \textbf{Powerpoint} template.
+The poster will summarise your oral report, and will capture some of the key design decisions in the 
+hardware and software development. This should be written in the provided template.
+
 This assignment is formed of several parts:
 
 \begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Write} a \textbf{1 page} proposal for a novel game/experience \textbf{and} controller, this is due in the \textbf{proposal review} sessions in \textbf{Week 3}. 
-	\item \textbf{Write} a \textbf{draft poster} which provides an overview of your game and controller, this is due in the \textbf{Poster Demo} sessions in \textbf{Week 9}. 
-	\item \textbf{Revise} the \textbf{1 page} proposal and poster based on feedback and submit on the \textbf{hand-in} date, this is due for the \textbf{Report Peer Review} in \textbf{Week 10}. 
-	\item \textbf{Present}, as an \textbf{individual} your final poster at the scheduled viva session
+    \item \textbf{Write} a \textbf{short proposal} for your creative computing project
+	\item \textbf{Prepare} a \textbf{draft poster} which provides an overview of your creative computing project
+	\item \textbf{Revise} the \textbf{poster} based on feedback from your tutor and submit to LearningSpace by the deadline on MyFalmouth
+	\item \textbf{Present}, as an \textbf{individual}, your \textbf{final poster} at the scheduled demo session
 \end{enumerate}
 
 
 	\subsection*{Assignment Setup}
 	
-	Fork the GitHub repository at:	
+	Continue to use the GitHub repository for your other assignment on this module, which you can fork at:	
 	\indent \url{https://gamesgit.falmouth.ac.uk/projects/COMP140}
 	
 	Use the existing directory structure and, as required, extend this structure with sub-directories. Ensure that you maintain the \texttt{readme.md} file.
-	
 
 \subsection*{Part A}
 
-Part A is a \textbf{single formative submission} of a \textbf{1 page} proposal for a novel game/experience \textbf{and} controller.  
+Part A is a \textbf{single formative submission} of a \textbf{ONE page} proposal for a creative computing project. This work is individual and will be assessed on formative basis. In order to pass, the poster should:
 
     \begin{enumerate}[label=\roman*.]
-		\item \textbf{describe} the game design that will form the basis for your interface;
-		\item \textbf{illustrate} basic research into electronic component and physical form factors for controllers;
-		\item \textbf{analyse} the design of the controller in detail;
-		\item \textbf{list} the key electronic components of your controller
+		\item \textbf{describe} the context that will form the basis for your project;
+		\item \textbf{illustrate} basic research into electronic components and physical form factors for your project;
+		\item \textbf{analyse} the design of your proposed deliverable in detail;
+		\item \textbf{list} the key electronic components of your controller;
 		\item and \textbf{list} the key user stories.
 	\end{enumerate}
 
-To complete part A, write your proposal and then show this to a tutor at the \textbf{proposal review} sessions in \textbf{Week 3}
+To complete Part A, write your proposal and then show this to a tutor in your tutorial session in \textbf{Week 3}.
 
 You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
 
 \subsection*{Part B}
 
-Part B is a \textbf{single formative submission} of a \textbf{draft digital poster}.
-
-The poster must contain the following
+Part B is a \textbf{single formative submission} of a \textbf{draft digital poster}. This work is individual and will be assessed on formative basis. In order to pass, the poster should detail:
 
 \begin{enumerate}[label=\roman*.]
-	\item Detail the hardware of the control system
-	\item Detail the design of the control system
-	\item Detail the elements of the game/experience
-	\item UML Diagram of the software architecture
+	\item the hardware of the control system
+	\item the design of the control system
+	\item important elements of the user experience
+	\item an appropriate UML Diagram of the software architecture
 \end{enumerate}
 
-This work is individual and will be assessed on a criterion-referenced basis. Please refer to the marking rubric at the end of this document for further detail.
-
-To complete part B, write your draft poster and show this to a tutor at the online \textbf{Poster Demo} session in \textbf{Week 9}
+To complete part B, prepare a draft of your poster and show this to a tutor in your tutorial session in \textbf{Week 8}.
 
 You will receive immediate \textbf{informal feedback} from your \textbf{peers} and your \textbf{tutor}.
 
 \subsection*{Part C}
 
-Part C is a \textbf{single summative submission}. You should commit your files into a \textbf{ 'documentation'} sub folder and push them to your \textbf{repo} it should contain the following:
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis.  Please refer to the marking rubric at the end of this document for further detail.
 
-	\begin{enumerate}
-	\item The project proposal
-	\item The final version of your poster
-	\end{enumerate}
+To complete Part C, update the poster based on the feedback that you received in Part B. Then, upload the poster to \texttt{LearningSpace} by the time/date specified in the list of deadlines available on \href{http://myfalmouth.falmouth.ac.uk}{MyFalmouth}. 
 
-This work is individual and will be assessed on a criterion-referenced basis. Please refer to the marking rubric at the end of this document for further detail.
+You only need to submit the poster itself as a single \texttt{.pdf} file.
+
+You will receive \textbf{formal} feedback from your \textbf{module leader} three weeks after the deadline.
 
 \subsection*{Part D}
 
-	To complete Part D please provide a digital poster (PDF) and present it containing a link to your alternative controller and game/ experience demo video.
-	
-	You should also share your poster with your peers in the \textbf{Report Peer Review} session in \textbf{Week 10}. 
+Part D is a \textbf{single summative submission}. This work is individual and will be assessed on a criterion-referenced basis. Please refer to the marking rubric at the end of this document for further detail. 
 
-	You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
+To complete Part D attend the timetabled poster demo session that is expected to take place in \textbf{Week 9}. Present an oral report of your proposal, design, and your work-in-progress, ideally demonstrating a digital or physical prototype of your work. Use the poster to guide the report, making appropriate reference to technical diagrams.
+	
+You will receive \textbf{immediate informal} feedback from your \textbf{tutor}.
+	
+\todo[inline]{\textbf{Note:} You should keep a digital copy of your poster handy to share with your peers in a future peer review session that forms part of your other assignment on this module.}
+
+\begin{table}[!ht]
+\caption{\textit{Revised} Assignment Timeline}
+\centering
+\begin{minipage}[t]{.7\linewidth}
+\color{black}
+\rule{\linewidth}{1pt}
+\ytl{Week 3}{Show Proposal to Supervisor (Part A)}
+\ytl{Week 8}{Show Draft Poster to Supervisor (Part B)}
+\ytl{Week 8}{Upload Poster to LearningSpace (Part C)}
+\ytl{Week 9}{Present the Poster (Part D)}
+\bigskip
+\rule{\linewidth}{1pt}%
+\end{minipage}%
+\end{table}
 
 \section*{Additional Guidance}
-It is important to keep up with the formative deadlines as receiving and then acting on the feedback 
-will not only enable you to achieve a high grade, it will enable you to make a better project. 
 
-When it comes to the poster, you should endevour to limit the amount of text, 
-you always should favour images over text. If you use text, please ensure the 
-font size is legible on the printed out poster.
+It is important to keep up with the formative deadlines as receiving and then acting on the feedback will not only enable you to achieve a high grade, it will enable you to make a better project. 
+
+When it comes to the poster, you should endeavour to limit the amount of text, you always should favour images over text. If you use text, please ensure the font size is legible on the printed out poster.
 
 \section*{FAQ}
 
