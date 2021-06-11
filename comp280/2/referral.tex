@@ -1,0 +1,152 @@
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{hyperref}
+
+\title{Assignment 2: Cybersecurity Tasks}
+\author{Dr Umaima Haider and Joseph Walton-Rivers}
+\module{COMP280}
+\version{1.0}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+  
+            
+\end{marginquote}
+%\marginpicture{flavour_pic}{}
+
+In this assignment, you are going to produce a brief summary of the most common cyber attacks; and will produce an instruction manual on how to encrypt game data by applying it into your favourite game engine (Unity/Unreal).
+
+This assignment is formed of four parts:
+\begin{enumerate}[label=(\Alph*)]
+ \item \textbf{Identify} the \textbf{ten} most common cyber attacks.
+ \item \textbf{Write} an instruction manual with \textbf{implementation} that demonstate how to encrypt data in your game.
+ \item \textbf{Prepare} and \textbf{Record} (maximum 5 minutes) presentation, that will: \begin{enumerate}
+   \item \textbf{Summarise} the cyber attacks identified in Part A by focusing on \textbf{two} of the identified common cyber attacks;
+   \item \textbf{Outline} the encryption method and game engine used to construct the manual in Part B. \end{enumerate}
+ \item \textbf{Write} the final version of your instructions, taking into account feedback from the original assignment.
+\end{enumerate}
+
+\section*{Assignment Setup}
+This assignment is a combination of data collection and analysis, technical writing and programming tasks.
+
+To write this assignment, you are free to use any word processing software you are comfortable using (Word, Google Docs, \LaTeX{}, etc...) and any referencing style (IEEE, or Falmouth-Harvard), though ensure that you keep to one referencing style throughout the assignment.
+
+\subsection*{Part A}
+In Part A, you will need to identify the \textbf{ten} most common cyber attacks that breach cybersecurity. Note that there may be some disagreement about the exact list (as is the nature of data gathered from different sources). This is fine, but you should be able to \textbf{justify} why these attacks should be consided the most common (eg, stats, methodology, reliable sources) - this need not be rigorous academic argument but should at least have been thought about.
+
+\begin{enumerate}[label=(\roman*)]
+ \item Type of the attack
+ \item Brief summary of the cyber attack, at most 200 words
+ \item Key measures to prevent or mitigate the cyber attack, at most 150 words
+ \item a (very) brief justification of its position on your list.
+\end{enumerate}
+
+As this is a referral submission, there is no scheduled informal feedback session. You can contact your tutor for gudiance if required.
+
+\subsection*{Part B}
+In this part, you are required to write an instruction manual about a data encryption technique in a common game engine (ie, Unreal or Unity).
+
+These kind of briefs often come with a scenario, so for your manual the scenario is:
+
+A new startup, FalGames, has tasked you as a work experiance task to investigate a technique for ensuring that their new game's assets are protected from prying eyes. They are also conserned about being able decrypt the data after your work experiance has ended and therefore have also asked you to produce instructions on how to encrypt and decrypt the data.
+
+You may choose any encryption scheme that you think is suitable. As the data is only intended to be protected from casual (on disk) inspection on the end user's machine they are not worried about strong security but they at least want it to take some effort to extract the data from the game files.
+
+To assist you, they have pointed to some tutorials relating to how some simple encryption systems work. You can choose to use one of these or you can choose to adapt a different (more secure) system if you wish to do so.
+
+To complete Part B, data encryption video links are providedin the resources section below. You can use these to assist you or you can use any other suitable encryption scheme.
+
+\subsection*{Part C}
+In this part, you should prepare a brief (no more than 5 minutes) description of two of the techniques identified in part A, and outline the encryption scheme identified in B. The presentation should have no more than 5 slides - you may prepare your slides in any tool you are comfortable using (e,g, powerpoint, beamer).
+
+This is intended to show understanding of the techniques presented in part A, and identify the encryption scheme presented in part B.
+
+\subsection*{Part D}
+Part D is a single summative submission. This work is indvidual and will be assessed on a criterion-relfected basis using the critera listed in the marking rubric at the end of the document.
+
+To complete this component, you should submit the finalised work created for the above parts on learning space by the deadline listed on myfalmouth. 
+
+Upload the work in \textbf{PDF} format (note: doc or docx is \textbf{not} a PDF document). This is important because formatting in doc and docx is not consistant between different word processors (or even different versions of the same word processor). Learning space will only accept a single document so both should be combined into a single PDF file. Check the PDF for errors before submission.
+
+You will receive formal feedback from your tutor three weeks after the final deadline.
+
+\section*{Additional Gudiance}
+Cybersecurity's importance is on the rise, as the majority of us are working remotely
+during this Covid-19 pandemic situation. Fundamentally, we are more technologically
+reliant than ever before and there is no sign that this trend will slow. It is necessary
+to make yourself aware of potential cyber attacks and how to secure your private and
+confidential electronic data that exist in various form - from password to
+programming code.
+
+To address the cyber attacks identification part of the assignment, you can freely take
+the help of your best friend “Google” with a proper referencing. To perform well at
+this part of the assignment, avoid the copy-paste strategy and try to list the attacks
+in chronological order with its impact on online games at first instance. In order to
+attain a high score in this part, it is highly recommended to report it in a tabular form
+as shown below:
+
+\begin{tabular}{lp{.4\textwidth}p{.4\textwidth}}
+  \textbf{Type of Attack} & \textbf{Summary} & \textbf{Mitigation}\\ \hline
+  SQL injection & This happens when a developer don't check user-provided inputs before inserting them directly into SQL statements, inserting a string terminator (') causes... & Validate user input and escape characters, and/or ensure that prepared statements are used (preferred), this...\\
+\end{tabular}
+
+Good documentation can make the differance between being able to make good use of
+a tool, or spending hours of debugging only to find that the problem is something
+that was not spesificied clearly. Good documentation is key to writing tools and
+programs which are understandable and usable by others (and your future self).
+
+To write up your instruction manual, make sure that you have read the general
+guidelines provided in the resource list below. The manual template should be as
+simple as possible, you can take an idea from the resource list linked below.
+
+This is an individual assignment task so you must run-through the steps provided in
+the data encryption video by yourself. The print screens and code scripts included in
+the manual should be clear and readable, avoid copying it from your fellow students
+as this will be assessed during your presentation.
+
+\textbf{Out of the box} – if you come across any other techniques (beyond the ones 
+taught in your lecture) or interesting video that demonstrates data encryption 
+method in Unity/Unreal game engine. You are free to use that, but you must attain approval
+from your tutor in order to confirm that does it falls within the scope of the
+assignment task before you start working on it. If it met the requirement and you
+were successful in implementing it, you will get 10\% bonus marks in this assignment.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+\section*{Additional Resources}
+
+\begin{itemize}
+    \item Example - Data Encryption in Unity\\ https://www.youtube.com/watch?v=HoEndcK6Bew
+    \item Example - Example -Data Encryption in Unreal\\ https://www.youtube.com/watch?v=15c4r9rRUUo
+    \item General guidelines for instruction manual\\ https://www.userfocus.co.uk/articles/usermanuals.html\#Anchor-General-49575 https://www.techsmith.com/blog/user-documentation/
+    \item Instruction manual templates\\ https://templatelab.com/instruction-manual-templates/
+\end{itemize}
+
+\section*{Marking Rubric}
+Please refer to the original assignment for the rubric.
+
+\end{document}
