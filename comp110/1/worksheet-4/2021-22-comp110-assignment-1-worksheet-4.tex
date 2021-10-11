@@ -27,7 +27,7 @@
 \title{Worksheet 4: LaTeX Typesetting}
 \module{COMP110}
 \author{Ed Powley}
-\version{1.0}
+\version{2.0}
 
 \begin{document}
 
@@ -54,20 +54,20 @@ and was published in the IEEE Conference on Computational Intelligence in Games 
 To complete this worksheet:
 
 \begin{enumerate}[label=(\alph*)]
-	\item \textbf{Fork} the base repository for this worksheet
+	\item \textbf{Fork} the base project for this worksheet, via Overleaf or GitHub
 	\item \textbf{Examine} the reference document included in the repository
 	\item \textbf{Edit} the LaTeX source code provided as a template, to produce a document similar in content and layout to the reference document
 \end{enumerate}
 
 \section*{Submission instructions}
 
-Begin by \textbf{forking} the base repository for this worksheet.
+Begin by \textbf{forking} the base repository for this worksheet, either on Overleaf or on GitHub.
 Please see LearningSpace for a link to the repository.
 You will find the following files:
 
 \begin{itemize}
 	\item \textbf{reference.pdf}: the reference document
-	\item \textbf{content.txt}: a text file containing the text of the reference document, for you to copy and paste
+	\item \textbf{content.md}: a Markdown file containing the text of the reference document, for you to copy and paste
 	\item \textbf{images}: a folder containing all the images used in the reference document
 	\item \textbf{worksheet.bib}: a BibTeX file, from which the bibliography can be generated
 	\item \textbf{worksheet.tex}: a template LaTeX document for you to edit
@@ -76,17 +76,27 @@ You will find the following files:
 Edit \textbf{worksheet.tex} to produce a document similar in content and layout to \textbf{reference.pdf}.
 You may also add other files to the repository as required, for example if you decide to split the document into multiple .tex files.
 
-The \textbf{content.txt} file contains some instructions marked with asterisks ***.
-In particular, \textbf{***REF***} denotes a cross-reference to a section, figure or table within the document,
-and \textbf{***CITE***} denotes a citation to a source from the bibliography.
-You will need to check the \textbf{reference.pdf} file to find out what these references and citations should point to.
+The \textbf{content.md} file contains the text of the paper formatted in Markdown.
+Pay particular attention to the following notation:
+
+\begin{itemize}
+	\item Section headings are underlined with \lstinline{====}, and subsection headings with \lstinline{----}
+	\item Text which should be \emph{emphasised with italics} is surrounded by single asterisks, \lstinline{*like this*}
+	\item Text which should be \textbf{emboldened} is surrounded by double asterisks, \lstinline{**like this**}
+	\item Bulleted lists are formatted with an asterisk \lstinline{*} at the beginning of each line
+	\item Some mathematical notation is already formatted in LaTeX, and is surrounded by \lstinline{$} symbols
+	\item \textbf{***REF***} denotes a cross-reference to a section, figure or table within the document,
+		and \textbf{***CITE***} denotes a citation to a source from the bibliography.
+		You will need to check the \textbf{reference.pdf} file to find out what these references and citations should point to.
+	\item Images are omitted from the Markdown file; you will need to include the appropriate images at the correct points in the document, referring to \textbf{reference.pdf} and the images in the \textbf{images} folder
+\end{itemize}
 
 Note that you are \textbf{not} required to replicate the layout of the reference document exactly --- minor differences are fine,
 and improvements will earn you higher marks.
 However you should not alter the content of the document itself.
 Note also that the text of the document is provided for you to copy and paste --- please do not waste time re-typing the text.
 
-Commit your work (source code and compiled PDF) regularly. Once you have finished, open a \textbf{pull request}.
+Once you have finished, post a \textbf{link} to your project in the formative submission area on LearningSpace.
 
 \rubrichead{To \textbf{pass} this assignment (achieve 40\% or more), you must submit a reasonable attempt at the worksheet by the formative deadline stated on LearningSpace.}
 \begin{markingrubric}
