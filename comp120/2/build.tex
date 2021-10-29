@@ -1,3 +1,7 @@
+\RequirePackage{pdfmanagement-testphase}
+\DeclareDocumentMetadata{
+    pdfversion=1.7,
+}
 \documentclass{../../fal_assignment}
 \graphicspath{ {../../} }
 
@@ -10,7 +14,7 @@
 \title{Tinkering Audio}
 \author{Dr Michael Scott}
 \module{COMP120}
-\version{2.0}
+\version{3.0}
 
 \begin{document}
 
@@ -35,80 +39,125 @@
     Tidal is an algorave language. It allows you to code musical patterns live using text, describing sequences and ways of transforming and combining them, exploring complex interactions.
 }
 
-\paragraph{In this assignment, you are required to write a computer program that will \textit{tinker} with computer generated audio in a creative way.}
+\paragraph{Creative computing encompasses the broad realms of digital media, computer programming, and human-computer interaction. It is important to draw these areas together in an applied way to develop the foundational skills required of all computing professionals. You will, therefore, leverage the principle programming constructs of representation, operation, sequence, branching, iteration, and functional decomposition to exercise your creativity. You will also start to leverage more advanced data structures and object-orientated programming principles. This will prepare you to tackle challenges in many creative domains.}
 
-\paragraph{Creative computing encompasses the broad realms of digital media, computer programming, and human-computer interaction. It is important to draw these areas together in an applied way. You will, therefore, leverage the principles you have learned to exercise your creativity through computer software. This will prepare you to tackle challenges in many creative domains.}
+\paragraph{In this assignment, you are required to complete a series of activities which culminate in a demonstration of a computer program that you have written in \texttt{C\#}. This computer program will address a ``contract'' which will require you to \textit{tinker} with a digital audio in a creative way according to given contextual cues, using the techniques that you have learned through the activities.}
 
 \paragraph{This assignment is formed of several parts:}
 
-\begin{enumerate}[label=(\Alph*)]
-    \item \textbf{Select}, as a \textbf{pair}, \textbf{ONE} of the contracts provided by your tutor and:
-    	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{state} which contract you will work on;
-     		\item \textbf{declare} the terms of your software license;
+\begin{enumerate}
+\setlength{\itemindent}{8pt}
+    \item \textbf{Propose} your response to the contract \textbf{and outline} your goals:
+    	\begin{enumerate}
+    		\item \textbf{setup} an appropriate repo to host the project;
+    		\item \textbf{document} which contract you will work on and \textbf{list} the requirements it implies in a README;
+    		\item \textbf{declare} the terms of your software license in a LICENSE;
+    		\item and \textbf{associate} your repo with this assignment via LearningSpace.
 	\end{enumerate}
-    \item \textbf{Write}, as a \textbf{pair}, a draft computer program in C\# that will:
-    	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{address} the requirements implied by the contract;
-    		\item \textbf{comply} with relevant intellectual property law;
-    		\item and \textbf{implement SEVEN} algorithms for tinkering audio.
+    \item \textbf{Complete} the quizzes:
+    	\begin{enumerate}
+    		\item \textbf{answer} the multiple-choice questions;
+    		\item and \textbf{give} appropriate responses to the code writing exercises.
 	\end{enumerate}
-    \item \textbf{Write}, as an \textbf{pair}, a final computer program in C\# that will:
-    	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{satisfy ONE} contract;
-    		\item and \textbf{revise} any issues raised by your tutor and/or your peers.
+    \item \textbf{Report} your progress with your draft program:
+    	\begin{enumerate}
+    		\item \textbf{outline} the \textbf{FIVE} algorithms you intend to implement;
+    		\item \textbf{suggest} best practices to improve future maintenance;
+    		\item \textbf{justify} the terms of your software license;
+    		\item and \textbf{illustrate} appropriate versioning practices.
 	\end{enumerate}
-    \item \textbf{Present}, as an \textbf{individual}, a practical demo of the computer program to your tutor that will:
-    	\begin{enumerate}[label=\roman*.]
-    		\item \textbf{demonstrate} your academic integrity;
-    		\item as well as \textbf{showcase} your \textbf{individual} programming knowledge.
+    \item \textbf{Review} the draft programs of your peers:
+    	\begin{enumerate}
+    		\item \textbf{share} your draft program for review;
+      		\item \textbf{scrutinise} the work of your peers and \textbf{suggest} improvements;  		
+    		\item \textbf{review} any issues raised by your tutor and/or your peers;
+     		\item and then \textbf{update} your draft program.		
+	\end{enumerate}
+    \item \textbf{Submit and demonstrate} your final program:
+    	\begin{enumerate}
+    		\item \textbf{show} your academic integrity;
+    		\item \textbf{justify} decisions made during the project;
+    		\item as well as \textbf{evidence} your individual programming knowledge.
 	\end{enumerate}
 \end{enumerate}
 
+\vspace{1em}
+
+\todo[inline]{\textbf{Important Note:} Unlike the previous assignment, you will work collaboratively; typically, in a pair or as a small mob. This is to help you to develop your collaborative programming skills. Please carefully review the assessment rubric at the end of this brief.}
+
 \subsection*{Assignment Setup}
 
-\paragraph{This assignment is a \textbf{pair programming task}. Fork the repository at:}
+\paragraph{This assignment is a \textbf{programming task}. Create a repository using the template below. Extend the repository with sub-directories and modify the \textt{.gitignore} as appropriate. Create the \texttt{README.md} and \texttt{LICENSE.md} files.} 
 
-\url{https://gamesgit.falmouth.ac.uk/scm/comp120/comp120-tinkering-audio.git}
+\url{https://github.falmouth.ac.uk/Games-Academy/blank-unity-project}
 
-\paragraph{Extend the repository with sub-directories as appropriate. Ensure that you maintain the \texttt{README.md} and \texttt{LICENSE.md} files. Modify the \texttt{.gitignore} to the defaults for \textbf{C\#} and your development environment of choice.}
+\paragraph{Please note that there should be \textbf{ONE} repository for the group, which you share. You may have to set permissions on your repository to allow other students to push code to your repo.}
+
+\paragraph{Please remember to create in repository in the correct organisational area on our GitHub Enterprise Server (i.e., \texttt{Student-Work}) and to use the appropriate naming convention which includes the module code and your student identification numbers (i.e., \texttt{comp120-2-0001210-0103255}).}
+
+\paragraph{Once the repo has been created, please connect your repository to your assignment by pasting the \texttt{.git} link in the assessment submission area on LearningSpace.}
+
+\paragraph{You \textbf{MUST NOT} add any other text to the submission field.}
+
+\paragraph{You each invidually should check that the repo is correctly associated with this assignment on LearningSpace.}
 
 \subsection*{Part A}
 
 \paragraph{Part A consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis.}
 
-\paragraph{To complete Part A, write about your contract in the relevant LearningSpace activity. Show this to your tutor in your timetabled meeting. You are to select \textbf{ONE} contract to tackle together with your partner and to suggest an appropriate license for your code. If acceptable, this will be signed-off.}
+\paragraph{To complete Part A, follow the assignment setup instructions, and then write about your contract in the relevant LearningSpace activity. You are to select and interpret \textbf{ONE} contract together with your partner and propose your response to it.}
+
+\paragraph{Show this to your tutor in your timetabled tutor meeting. If acceptable, this will be signed-off. Then, start programming.}
 
 \paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.}
 
 \subsection*{Part B}
 
-\paragraph{Part B is a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
+\paragraph{Part B consists of \textbf{multiple} activities on LearningSpace. This work is \textbf{individual} and will be assessed on an \textbf{accumulated} basis.}
+
+\paragraph{Access the quizzes on LearningSpace. Answer all of the multiple-choice questions and give appropriate responses to the code writing exercises.}
+
+\paragraph{Your tutor will offer advice in the timetabled tutor meeting. You will receive immediate \textbf{automated feedback} from the LearningSpace.}
+
+\subsection*{Part C}
+
+\paragraph{Part C consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
+
+\begin{itemize}
+	\item Several algorithms have been selected;
+	\item Suggestions to improve maintainability are appropriate;
+	\item Clear LICENSE and README present;
+	\item Attempt to justify the software license is present;
+	\item Evidence of collaborative programming in the repo.
+\end{itemize}
+
+\paragraph{To complete Part C, complete the online activities on the LearningSpace.}
+
+\paragraph{Firstly, review the pseudocode for the algorithms. You are expected to translate technical notation into executable code. As such, it is anticipated that you incorporate several of the listed algorithms into your solution. Clearly list these algorithms and state where they are implemented in the \texttt{README.md} file. You are welcome to use third-party libraries and resources in your solution, but these will not `count' as translations for assessment purposes. Algorithms you draw from the literature \textit{can} count if there is evidence of translation.}
+
+\paragraph{Then, complete the activities on LearningSpace. These will prompt you to outline how you will work together to improve maintainability, and to more clearly justify the terms of the software license. It is also worthwhile at this stage to review your git log to reflect upon your progress and the extent which you are using version control appropriately. Show these to your tutor in your timetabled meeting.}
+
+\paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.}
+
+\subsection*{Part D}
+
+\paragraph{Part D is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
 
 \begin{itemize}
 	\item Submission is timely;
-	\item A valid software license is declared;
 	\item Enough work is available to conduct a meaningful review;
 	\item A broadly appropriate review of a peer's work is submitted.
 \end{itemize}
 
-\paragraph{To complete Part B, prepare a draft version of the computer program. Ensure that the source code and related assets are pushed to version control and a link is submitted to the peer-review workshop activity on LearningSpace prior to the scheduled peer-review session. You may have to set permissions on your repository to allow other students to review your code. Then, attend the scheduled peer-review session.}
+\paragraph{To complete Part D, prepare a draft version of the computer program. Ensure that the source code and related assets are pushed to version control and a copy is submitted to the peer-review workshop activity on LearningSpace prior to the scheduled peer-review session. Then, attend the scheduled peer-review session.}
 
-\paragraph{You are expected to translate technical notation into executable code. Incorporate \textbf{SEVEN} of the listed algorithms into your solution. Clearly list these algorithms and state where they are implemented in the \texttt{README.md} file. You are welcome to use third-party libraries and resources in your solution, but these will not `count' as translations.}
+\paragraph{Please note you submit and review as individuals for the peer-review.}
 
 \paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{peers}.}
 
-\subsection*{Part C}
+\subsection*{Part E}
 
-\paragraph{Part C is a \textbf{single summative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document for further detail.}
-
-\paragraph{To complete Part C, revise the computer program based on the feedback you have received. Then, push it into version control. Formal submissions are through the LearningSpace, in this case a link to your repository on GamesGIT. Only one of you needs to submit the link to the repository on LearningSpace.}
-
-\paragraph{You will receive \textbf{formal feedback} from your \textbf{tutor} three weeks after the final submission deadline.}
-
-\subsection*{Part D}
-
-\paragraph{Part D is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis.  The following criteria are used to determine a pass or fail:}
+\paragraph{Part E is a \textbf{single summative submission} followed by a \textbf{demonstration}. The initial submission is \textbf{collaborative} whilst the demonstration is \textbf{individual}. These will be assessed, respectively, on a \textbf{criterion-referenced} basis and a \textbf{threshold} basis. Please also refer to the marking rubric at the end of this document for further detail. The following criteria are used to determine a pass or fail:}
 
 \begin{itemize}
 	\item Enough work is available to hold a meaningful discussion;
@@ -116,11 +165,17 @@
 	\item No breaches of academic integrity.
 \end{itemize}
 
-\paragraph{To complete Part D, prepare a practical demonstration of your computer program. Ensure that the source code and related assets are pushed to version control and available to assessors prior to the scheduled viva session. Then, attend the scheduled viva session.}
+\paragraph{To complete Part E, revise the computer program based on the feedback you have received. Then, push it into version control. As a reminder, formal submissions are through the LearningSpace, so please check the link to your repository on Falmouth's GitHub Enterprise server is valid.}
 
-\paragraph{There is a clear expectation that you pair program with your partner. As such, you should \textbf{EACH} be able to explain the solution individually. In the viva you will discuss the key programming constructs used in your solution, the key design decisions made when structuring the code, and how functionality was achieved. This is your opportunity to demonstrate your academic integrity and individual programming knowledge. }
+\paragraph{Then, prepare a practical demonstration of your computer program. Ensure that the source code and related assets are pushed to version control and available to assessors prior to the scheduled viva session. Then, attend the scheduled viva session.}
+
+\paragraph{Please note you attend the viva as an individual.}
+
+\paragraph{There is an expectation that you work with other members of your group as well as other students in your programming tutor group as part of your learning. You have permission to do this. However, you must \textit{understand} the code in your submission and you must \textit{acknowledge} the contributions of peers to your codebase explicitly and in accordance with academic conventions. As such, you should be able to explain \textbf{EACH} section of your solution individually, and place appropriate references in the comments of your source files. In the viva you will discuss the key programming constructs used in your solution, the key design decisions made when structuring the code, and how functionality was achieved. This is your opportunity to demonstrate your academic integrity and individual programming knowledge.}
 
 \paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.}
+
+\paragraph{You will receive \textbf{formal feedback} from your \textbf{tutor} up to three weeks after the final submission deadline.}
 
 \section*{Additional Guidance}
 
@@ -157,83 +212,83 @@
 
 \paragraph{Please review the LearningSpace for additional resources.}
 
-\rubrichead{All submissions and assessment criteria for this assignment are individual.
+\rubrichead{Criteria marked with a $\ddagger$ are shared by the group. All other criteria are individual.
 
 To \textbf{pass} this assignment (achieve 40\% or more), you must demonstrate adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to the set brief. Your work must reflect an adequate, ethically informed, ``real-world'' experience as if you were in a industry/business environment or market. Enough of your work must be available to demonstrate your programming knowledge and allow a meaningful discussion to take place in the viva. You must also have satisfactory participation in all parts of the assignment and have submitted the final deliverable.
 }
+
 \begin{markingrubric}
 %
     \firstcriterion{Basic Competency Threshold}{30\%}
         \grade \fail At least one part is missing, incomplete, or inadequate.
-                   \par Breach of academic integrity.
-                   
-        \grade  %
-        \grade  %
-        \grade  %
-        \grade  %
-        \grade  %
+                   \par Breach of academic integrity.    
+        \grade  All quizzes completed. \par Peer review complete. \par Comments to peers are satisfactory, but may be minimal and/or basic. %x
+        \grade  As per quiz performance. \par Peer reviews are at least diagnostic and reassuring.  %
+        \grade  As per quiz performance.  \par Peer reviews are instructive and encouraging, integrating appropriate insights. %
+        \grade  As per quiz performance.  \par Peer reviews are well-formed and diplomatic, conveying effective advice. %
+        \grade  As per quiz performance.  \par Peer reviews are attentive, apt, pithy, and constructive, conveying critical insight that aids improvement. %
 %
 
-    \criterion{PROCESS: \\Functional Coherence of Code}{5\%}
-        \grade\fail 	There is a reasonable attempt at implementing the algorithms.
-            \par 		The source code does not compile, or might return erroneous results, but would work with minor changes.
-        \grade 		At least \textbf{one} algorithm has been implemented successfully.
+    \criterion{PROCESS: \\Functional Coherence of Code}{5\%$\ddagger$}
+        \grade\fail 	There is an attempt at implementing the algorithms, but without success.
+            \par 		The source code does not compile, or might return erroneous results, but could work with minor changes.
+        \grade 		At least one algorithm has been implemented successfully.
             \par 		There are many obvious logical errors, more than one of which is significant.   
-        \grade 		At least \textbf{three} algorithms have been  implemented successfully.
+        \grade 		At least two algorithms have been  implemented successfully.
             \par 		There are several obvious logical errors, no more than one of which is significant. 
-        \grade 		At least \textbf{five} algorithms have been implemented successfully.
+        \grade 		At least three algorithms have been implemented successfully.
             \par 		There are some obvious logical errors, which are not significant. 
             \par		The brief has been satisfied.
-        \grade 		At least \textbf{six} algorithms have been implemented successfully.
+        \grade 		At least four algorithms have been implemented successfully.
             \par 		There are few obvious logical errors, which are cosmetic and/or superficial.
             \par		The brief has been satisfied.     
-        \grade 		At least \textbf{seven} algorithms have been implemented successfully.
+        \grade 		At least five algorithms have been implemented successfully.
             \par		There are no obvious logical errors.
             \par		The brief has been satisfied.
 %
-    \criterion{PROCESS: \\Sophistication of Code}{15\%}
-        \grade\fail Insight into programming constructs is evident from the source code.
-            \par There is an attempt to structure the program (e.g. not just one monolithic function) but it doesn't include key elements (e.g. functions with arguments).
-        \grade Some insight into the appropriate use of programming constructs is evident from the source code.
-            \par All key elements of program structure (e.g. functions with arguments) are present.
-        \grade Much insight into the appropriate use of programming constructs is evident from the source code.
-            \par Appropriate use of functions with arguments supports a program structure, minimising redundancy
-        \grade Considerable insight into the appropriate use of programming constructs is evident from the source code.
-            \par Appropriate use of a rich mixture of structural elements (e.g. classes) supports an extensible program structure.
-        \grade Significant insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is effective, having a reasonable level of cohesion and coupling.
-        \grade Extensive insight into the appropriate use of programming constructs is evident from the source code.
-            \par The program structure is very effective, demonstrating high cohesion and low coupling.
+    \criterion{PROCESS: \\Sophistication of Code}{15\%$\ddagger$}
+        \grade\fail Insight into programming constructs is evident from the code.
+            \par There is an attempt to structure the program (e.g. not just one monolithic function) but it doesn't include foundational elements.
+        \grade Some insight into the appropriate use of programming constructs is evident from the code.
+            \par All foundational elements of programming (e.g. representation, sequence, operations, branching, iteration, etc.) are present.
+        \grade Much insight into the appropriate use of programming constructs is evident from the code.
+            \par Appropriate use of functions with arguments supports a program structure, minimising redundancy.
+        \grade Considerable insight into the appropriate use of programming constructs is evident from the code.
+            \par Appropriate use of a rich mixture of structural elements (e.g. structs, enums, classes, etc.) supports a more extensible program structure.
+        \grade Significant insight into the appropriate use of programming constructs is evident from the code.
+            \par The program structure is effective, using data structures (e.g., \textit{n}d arrays, hash tables, etc.) and constructs (e.g., delgates, generics, polymorphism, etc.) to better cohesion and coupling.
+        \grade Extensive insight into the appropriate use of a wide repetoir of programming constructs is evident from the code.
+            \par The program structure is highly effective, demonstrating high cohesion and low coupling.
 %
-    \criterion{PROCESS: \\Maintainability of Code}{15\%}
-        \grade\fail Insight into maintainability is evident from the source code, with at least one comment.
+    \criterion{PROCESS: \\Maintainability of Code}{15\% $\ddagger$}
+        \grade\fail Insight into maintainability is evident from the source code.
             \par There is an attempt to make use of sensible variable names.
-            \par There is an attempt to format code.
+            \par There is an attempt to format and comment code.
         \grade The source code is commented sporadically.
             \par Many identifier names are clear and appropriate.
-            \par Code formatting is mostly consistent, but might not aid readability as well as it could.
-        \grade Source code is somewhat well commented.
+            \par Code formatting is mostly consistent.
+        \grade Code is commented somewhat well.
             \par Most identifier names are descriptive and appropriate.
-            \par An attempt has been made to adhere to an appropriate formatting style.
+            \par The formatting style aids readability.
              \par There is little obvious duplication of code or of literal values.           
-        \grade Source code is reasonably well commented.
+        \grade Code is reasonably commented and doc-commented.
             \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to an appropriate formatting style.
-             \par There is almost no obvious duplication of code or of literal values.   
-        \grade Source code is reasonably well commented, with doc-comments.
+            \par Almost all code adheres to a sensible formatting style, enhancing readability.
+             \par There is almost no obvious duplication of code and constants are used appropriately.   
+        \grade Code is well commented and doc-commented.
             \par All identifier names are descriptive and appropriate.
             \par All code adheres to an appropriate formatting style.
-             \par There is no obvious duplication of code or of literal values. Some literal values can be easily ``tinkered'' but might still be in the source code. 
-        \grade Source code is very well commented, with doc-comments.
+             \par Liitle to no obvious duplication of code nor many unneeded literals. Some values can be easily ``tinkered'' but might still be in the code. 
+        \grade Code is very well commented and doc-commented.
             \par All identifier names are descriptive and appropriate.
-            \par All source code adheres to an appropriate formatting style.
-             \par There is no obvious duplication of code or of literal values. Most literal values are, where appropriate, easily ``tinkered'' outside of the source code.  
+            \par All code adheres to an appropriate formatting style.
+             \par There is no obvious duplication of code nor any unneeded literals. All values are, where appropriate, easily ``tinkered'' outside of the code.  
 %
 \end{markingrubric}
 
 \begin{markingrubric}
 %
-    \firstcriterion{INDUSTRY: \\Creative Response to Brief}{10\%}
+    \firstcriterion{INDUSTRY: \\Creative Response to Brief}{5\%$\ddagger$}
         \grade\fail There is something creative, but it is very modest.
             \par The work is a clone of an existing work with mere cosmetic alterations.
         \grade Little creativity.
@@ -247,43 +302,37 @@ To \textbf{pass} this assignment (achieve 40\% or more), you must demonstrate ad
         \grade Significant creativity.
             \par The work is novel, with strong evidence of divergent and/or subversive thinking.
 %
-    \criterion{INDUSTRY: \\Ethically Informed}{10\%}
+    \criterion{INDUSTRY: \\Ethically Informed}{10\%$\ddagger$}
         \grade\fail There is a marginally appropriate license and/or at least partial compliance with intellectual property law.
         \grade There is a somewhat appropriate license.
             \par There is implicit recognition of intellectual property rights.
         \grade There is an appropriate license. 
-            \par There is explicit recognition of intellectual property rights in the \texttt{readme.md}.
+            \par There is explicit recognition of intellectual property rights in the \texttt{README.md}.
             \par Acknowledgements are clearly demarcated in the source code.
         \grade There is a suitable license.
-            \par There is explicit description of intellectual property rights in the \texttt{readme.md}.
+            \par There is explicit description of intellectual property rights in the \texttt{README.md}.
             \par Authorship is demarcated in the source code.
             \par Copyright notices are present.
         \grade There chosen license is suitable. 
-            \par There is explicit explanation of intellectual property rights in the \texttt{readme.md}.
+            \par There is explicit explanation of intellectual property rights in the \texttt{README.md}.
             \par Authorship is accurately declared in the header using appropriate standards and demarcated in the source code.
             \par Copyright notices are present and appropriate.
         \grade There chosen license is suitable.
-            \par There is explicit justification of intellectual property rights in the \texttt{readme.md}.
+            \par There is explicit justification of intellectual property rights in the \texttt{README.md}.
             \par Authorship is accurately declared in the header using appropriate standards and demarcated in the source code.
             \par Copyright notices are accurately declared in the header using appropriate standards. There may be reference to a transfer agreement.
 %
-    \criterion{INDUSTRY: \\Use of Version Control}{15\%}
-        \grade\fail Version control (i.e. GamesGit) has been used only once or twice.
-        \grade Source code has seldom been checked into version control (i.e. GamesGit).
-        \grade Source code has been checked into version control (i.e. GamesGit) at least once per week.
+    \criterion{INDUSTRY: \\Use of Version Control}{20\%}
+        \grade\fail Version control attempted, but not properly used.
+        \grade Source code has seldom been checked into version control.
+        \grade Source code has been checked into version control at least once per week.
             \par Sensible commit messages are present.
-        \grade Source code  has been checked into version control (i.e. GamesGit) several times per week.
+        \grade Source code  has been checked into version control several times per week.
             \par Commit messages are clear, concise and relevant.
-            \par There is evidence of somewhat meaningful engagement with peers (e.g. code review).
-            \par Comments to peers are somewhat constructive and provide some insight.
-        \grade Source code has been checked into version control (i.e. GamesGit) several times per week.
+        \grade Source code has been checked into version control many times per week.
             \par Commit messages are clear, concise and relevant.
-            \par There is evidence of meaningful engagement with peers (e.g. code review).
-            \par Comments to peers are reasonably constructive and provide much insight.
-        \grade Source code has been checked into version control (i.e. GamesGitb) many times per week.
+        \grade Source code has been checked into version control with considerable frequency.
             \par Commit messages are clear, concise and relevant.
-            \par There is evidence of effective engagement with peers (e.g. code review).
-            \par Comments to peers are reasonably constructive and provide considerable insight.
 %
 \end{markingrubric}
 
