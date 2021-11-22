@@ -157,7 +157,7 @@ def find_file(dir, fileglob):
 if __name__ == '__main__':
     os.chdir(os.path.dirname(sys.argv[0]))
     #base_path = sys.argv[1]
-    base_path = r"C:\Users\edpow\Desktop\COMP110 FT S1 (2021)-COMP110 COMPUTER BASED (80%) Worksheet Tasks-98228"
+    base_path = r"C:\Users\edpow\Downloads\COMP110 FT S1 (2122)-A.1.1.3 Worksheet 1 Formative Submission-158888"
 
     feedback_file = open("feedback.txt", "wt", encoding="utf-8")
     grade_file = open("grades.csv", "wt")
