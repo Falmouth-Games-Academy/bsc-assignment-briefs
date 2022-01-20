@@ -157,7 +157,8 @@ def find_file(dir, fileglob):
 if __name__ == '__main__':
     os.chdir(os.path.dirname(sys.argv[0]))
     #base_path = sys.argv[1]
-    base_path = r"C:\Users\edpow\Downloads\COMP110 FT S1 (2122)-A.1.1.3 Worksheet 1 Formative Submission-158888"
+    #base_path = r"C:\Users\edpow\Downloads\COMP110 FT S1 (2122)-A.1.1.3 Worksheet 1 Formative Submission-158888"
+    base_path = r"C:\Users\edpow\Dropbox\Work Falmouth\_Marking 2122\110"
 
     feedback_file = open("feedback.txt", "wt", encoding="utf-8")
     grade_file = open("grades.csv", "wt")
@@ -171,6 +172,8 @@ if __name__ == '__main__':
         if os.path.isdir(dir_path) and dir_name.endswith("assignsubmission_file_"):
             student_name = dir_name.split('_')[0].title()
 
+            print(student_name)
+
             print_fb("=" * 60)
             print_fb(student_name)
             print_fb("=" * 60)
@@ -178,8 +181,12 @@ if __name__ == '__main__':
             save_file_paths = find_file(dir_path, "00*.user")
             if len(save_file_paths) == 0:
                 print_fb("🚷 Save file not found\n")
+                print("  No save found")
             elif len(save_file_paths) > 1:
                 print_fb("🚷 Multiple save paths found\n")
+                print("  Multiple saves found:")
+                for save_file_path in save_file_paths:
+                    print("  ", save_file_path)
             else:
                 save_file_path = save_file_paths[0]
                 save_file = None
@@ -191,6 +198,7 @@ if __name__ == '__main__':
                 elif any(glob.glob(os.path.join(dir_path, "*.ogv"))):
                     save_file = OgvDirectory(dir_path)
                     print_fb("NB: you provided videos but did not provide a save file. Please be sure to read submission instructions carefully!\n")
+                    print("  OGV files found")
                 else:
                     print_fb("🚷 Save file not found\n")
 
