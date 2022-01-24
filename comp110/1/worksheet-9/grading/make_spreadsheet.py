@@ -2,7 +2,8 @@ import os
 import glob
 import sys
 
-ROOT_DIR = r"C:\Users\edpow\Desktop\COMP110 FT S1 (2021)-COMP110 COMPUTER BASED (80%) Worksheet Tasks-98228"
+#ROOT_DIR = r"C:\Users\edpow\Desktop\COMP110 FT S1 (2021)-COMP110 COMPUTER BASED (80%) Worksheet Tasks-98228"
+ROOT_DIR = r"C:\Users\edpow\Dropbox\Work Falmouth\_Marking 2122\110"
 
 def make_row(username, path):
     sys.stdout.write("%s," % username)
