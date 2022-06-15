@@ -158,7 +158,8 @@ if __name__ == '__main__':
     os.chdir(os.path.dirname(sys.argv[0]))
     #base_path = sys.argv[1]
     #base_path = r"C:\Users\edpow\Downloads\COMP110 FT S1 (2122)-A.1.1.3 Worksheet 1 Formative Submission-158888"
-    base_path = r"C:\Users\edpow\Dropbox\Work Falmouth\_Marking 2122\110"
+    #base_path = r"C:\Users\edpow\Dropbox\Work Falmouth\_Marking 2122\110"
+    base_path = r"C:\Users\edpow\Downloads\comp110_refer"
 
     feedback_file = open("feedback.txt", "wt", encoding="utf-8")
     grade_file = open("grades.csv", "wt")
