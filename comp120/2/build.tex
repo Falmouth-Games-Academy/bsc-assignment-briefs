@@ -11,10 +11,12 @@
 \usepackage{url}
 \usepackage{todonotes}
 
-\title{Tinkering Audio}
-\author{Dr Michael Scott}
-\module{COMP120}
-\version{3.1}
+\usepackage[nobiblatex]{xurl}
+
+\title{In-Engine Diorama}
+\author{Assoc. Prof. Michael Scott}
+\module{GAM102}
+\version{1.0}
 
 \begin{document}
 
@@ -25,270 +27,445 @@
 \section*{Introduction}
 
 \begin{marginquote}
-``The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures''
+``Technology, like art, is a soaring exercise of the human imagination.''
 
---- Fred Brookes
-
-\marginquoterule
-
-``Students come into programming classes with a broad range of backgrounds---some have experience in several programming languages, others have never programmed before in their life! Being able to engage with the community and support each other is important.''
-
---- Robert Macredie 
+--- Daniel Bell 
 \end{marginquote}
-\marginpicture{flavour_pic}{
-    Tidal is an algorave language. It allows you to code musical patterns live using text, describing sequences and ways of transforming and combining them, exploring complex interactions.
-}
+\marginpicture[A diorama of an arctic scene in which the crew are recovering cargo from their icebound ship. Located in the Fram Museum of Oslo in Norway. Pictured by Palickap (2018). CC BY-SA 4.0.]{flavour_pic}{Traditionally, a `diorama' is a scene of sculpted figures and details, usually in miniature, arranged to blend with a painted background; or, found enclosed in glass. A digital diorama is a small slice of an imagined world---a cross-section---rendered using a view distance and angle that simulates the scale of its traditional counterpart. They sometimes include audio, animations, and other interactive elements.}
 
-\paragraph{Creative computing encompasses the broad realms of digital media, computer programming, and human-computer interaction. It is important to draw these areas together in an applied way to develop the foundational skills required of all computing professionals. You will, therefore, leverage the principle programming constructs of representation, operation, sequence, branching, iteration, and functional decomposition to exercise your creativity. You will also start to leverage more advanced data structures and object-orientated programming principles. This will prepare you to tackle challenges in many creative domains.}
+\paragraph{Digital creativity encompasses the broad realms of art, design, technology, and the humanities. It is important to draw these together in an applied way to develop the foundational skills you will need to become a professional who can contribute to the digital economy. You will, therefore, leverage digital tools to exercise your creativity and make things. You will explore the notion of authorship, becoming aware of how intellectual property and its licensing relates to creative projects. You will also start to develop comfort using increasingly sophisticated tools and techniques in your creative endeavours. Notably, engines and version control. It may be intimidating at first---and this is normal---but it will prepare you for tackling challenges in the future.}
 
-\paragraph{In this assignment, you are required to complete a series of activities which culminate in a demonstration of a computer program that you have written in \texttt{C\#}. This computer program will address a ``contract'' which will require you to \textit{tinker} with a digital audio in a creative way according to given contextual cues, using the techniques that you have learned through the activities.}
+\paragraph{In this assignment, you will complete a series of tasks which will culminate in the demonstration of an in-engine diorama that you have implemented in \texttt{Unity}. This will address a `challenge' or `opportunity' relevant to your chosen discipline which serves as a prompt to direct your efforts. Throughout, you will consider the way you license third-party material, and select a license under which you will release your own work. You will also make use of the tools and techniques shown to you in your timetabled sessions---most notably, \textit{Git}. You will use a repository for your work, challenging you to version control your project in a way someone in industry would.}
 
 \paragraph{This assignment is formed of several parts:}
 
 \begin{enumerate}
 \setlength{\itemindent}{8pt}
-    \item \textbf{Propose} your response to the contract \textbf{and outline} your goals:
+    \item \textbf{Propose} what you intend to make for your in-engine diorama:
     	\begin{enumerate}
-    		\item \textbf{setup} an appropriate repo to host the project;
-    		\item \textbf{document} which contract you will work on and \textbf{list} the requirements it implies in a README;
-    		\item \textbf{declare} the terms of your software license in a LICENSE;
-    		\item and \textbf{associate} your repo with this assignment via LearningSpace.
+    		\item \textbf{setup} a repository on GitHub Enterprise to host your work;
+    		\item \textbf{choose ONE} challenge, \textbf{creating} a README file in your respository in which you \textbf{describe} your in-engine diorama;
+    		\item and \textbf{submit} the link to your repository to the LearningSpace submission area.
 	\end{enumerate}
-    \item \textbf{Complete} the quizzes:
+    \item \textbf{Implement} a draft version of your in-engine diorama, ensuring you:
     	\begin{enumerate}
-    		\item \textbf{answer} the multiple-choice questions;
-    		\item and \textbf{give} appropriate responses to the code writing exercises.
+    		\item sufficiently \textbf{demonstrate} the skills relevant to your course;
+    		\item \textbf{apply} best practices in getting your work into engine;
+    		\item \textbf{illustrate how} you are using your repository;
+    		\item \textbf{identify} a suitable license under which to release your work, \textbf{creating} a corresponding LICENSE file in your respository;
+    		\item and \textbf{justify} your licensing of third-party content in your README file.
 	\end{enumerate}
-    \item \textbf{Report} your progress with your draft program:
+    \item \textbf{Review} the draft dioramas of your peers, ensuring that you:
     	\begin{enumerate}
-    		\item \textbf{outline} the \textbf{FIVE} algorithms you intend to implement;
-    		\item \textbf{suggest} best practices to improve future maintenance;
-    		\item \textbf{justify} the terms of your software license;
-    		\item and \textbf{illustrate} appropriate versioning practices.
+    	    	\item \textbf{create} a video that outlines your work-in-progress;
+    		\item \textbf{attend} the timetabled peer review session and \textbf{share} your video;  		
+      	\item \textbf{suggest} improvements to your peers;  		
 	\end{enumerate}
-    \item \textbf{Review} the draft programs of your peers:
+    \item \textbf{Finish and demonstrate} your in-engine diorama, ensuring that you:
     	\begin{enumerate}
-    		\item \textbf{share} your draft program for review;
-      		\item \textbf{scrutinise} the work of your peers and \textbf{suggest} improvements;  		
-    		\item \textbf{review} any issues raised by your tutor and/or your peers;
-     		\item and then \textbf{update} your draft program.		
-	\end{enumerate}
-    \item \textbf{Submit and demonstrate} your final program:
-    	\begin{enumerate}
-    		\item \textbf{show} your academic integrity;
-    		\item \textbf{justify} decisions made during the project;
-    		\item as well as \textbf{evidence} your individual programming knowledge.
+    	 	\item \textbf{improve} your in-engine diorama, with reference to the suggestions of your peers and/or tutor;
+  		\item \textbf{attend} the timetabled assesment session and \textbf{show} your work;  
+    		\item \textbf{discuss} key decisions made during the project;
+    		\item \textbf{highlight} your individual knowledge of digital creativity;
+    		\item as well as \textbf{exemplify} your professional integrity.
 	\end{enumerate}
 \end{enumerate}
 
 \vspace{1em}
 
-\todo[inline]{\textbf{Important Note:} Unlike the previous assignment, you will work collaboratively; typically, in a pair or as a small mob. This is to help you to develop your collaborative programming skills. Please carefully review the assessment rubric at the end of this brief.}
-
 \subsection*{Assignment Setup}
 
-\paragraph{This assignment is a \textbf{programming task}. Create a repository using the template below. Extend the repository with sub-directories and modify the \textt{.gitignore} as appropriate. Create the \texttt{README.md} and \texttt{LICENSE.md} files.} 
+\paragraph{Please setup a repository in the student work area of our GitHub Enterprise server. Use the template below:} 
 
 \url{https://github.falmouth.ac.uk/Games-Academy/blank-unity-project}
 
-\paragraph{Please note that there should be \textbf{ONE} repository for the group, which you share. You may have to set permissions on your repository to allow other students to push code to your repo.}
+\paragraph{Please ensure that you attend the relevant timetabled sessions, as they are important. You will be shown how to do this early in the study block.}
 
-\paragraph{Please remember to create in repository in the correct organisational area on our GitHub Enterprise Server (i.e., \texttt{Student-Work}) and to use the appropriate naming convention which includes the module code and your student identification numbers (i.e., \texttt{comp120-2-0001210-0103255}).}
+\paragraph{The repository will need to be setup in the \textbf{Student-Work} organisational area of our GitHub Enterprise Server. Please also name your respository according to the following convention, which includes the module code, assignment number, and your student identification number, separated with dashes. For example: \texttt{gam102-1-0001210}} 
+ 
+\paragraph{This will enable your tutors and assessors to easily find and access your work on the server.}
 
-\paragraph{Once the repo has been created, please connect your repository to your assignment by pasting the \texttt{.git} link in the assessment submission area on LearningSpace.}
+\todo[inline]{\textbf{Important Note:} If you choose not to follow this naming convention, you will be penalised under the INDUSTRY assessment criterion. Please refer to the marking rubric at the end of this document for details.}
 
-\paragraph{You \textbf{MUST NOT} add any other text to the submission field.}
+\paragraph{You should only use this \textbf{ONE} repository individually throughout the entire duration of this module. You are permitted to extend the repository (e.g., with additional folders and features) or revert the repository (i.e., restore a previous version) as you deem neccessary, and to this end may request advice or support from:}
 
-\paragraph{You each invidually should check that the repo is correctly associated with this assignment on LearningSpace.}
+\url{games.support@falmouth.ac.uk}
+
+\paragraph{Once the repository has been created, please link it to your assignment. You do this by pasting the \texttt{.git} link (i.e., the web address) to your repository on the GitHub Enterprise Service into the assessment submission area on LearningSpace. It will look something like this:}
+
+{\small\url{https://github.falmouth.ac.uk/Games-Academy-Student-Work/comp120-1-0001210.git}}
+
+\vspace{-1em}\paragraph{You will be shown how to do this in your first workshop. You \textbf{MUST NOT} add any other text to the submission field. Please provide just the link!}
+
+\todo[inline]{\textbf{Important Note:} You are responsible for ensuring your repository is setup and linked to this assignment. You just need to copy the link from GitHub Enterprise Server and paste it into the formal submission area on LearningSpace. That's it! If you feel lost or confused, ask your tutor in the timetabled tutorials. They can check whether you have done it correctly.}
+
+All of the software you will need is available on the computers in our studios and laboratories.
 
 \subsection*{Part A}
 
-\paragraph{Part A consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis.}
+\paragraph{After following the assignment setup instructions, you will next complete Part A. In this part, you propose what you intend to make for your in-engine diorama. You are to select \textbf{ONE} `challenge or opportunity' based on your course and use it to inform your creative direction.} 
 
-\paragraph{To complete Part A, follow the assignment setup instructions, and then write about your contract in the relevant LearningSpace activity. You are to select and interpret \textbf{ONE} contract together with your partner and propose your response to it.}
+\paragraph{Once you have an idea for your in-engine diorama, please create a new file in your repository called \texttt{README.md}. The \texttt{.md} extension indicates it is a `markdown' file---which is a plain text document format which uses a convenient notation for formatting, and is relatively easier to version using git. GitHub Enterprise will even display the text in the first on the repostiory web pages. You will be shown what this is and how to use it in the timetabled workshops. There is a useful reference guide available here: \url{https://www.markdownguide.org/basic-syntax/}}
 
-\paragraph{Show this to your tutor in your timetabled tutor meeting. If acceptable, this will be signed-off. Then, start programming.}
+\paragraph{In this \texttt{README} file, state which challenge you intend to address and then describe your in-engine diorama, making reference to how it will address your chosen challenge or opportunity. This need only be short, indicately no more than 200 words, and should briefly indicate what you want to make yourself and what you might need to find from a third party.}
 
-\paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.}
+\paragraph{Show this to your tutor in one of your timetabled tutor meeting. If acceptable, they will verbally approve your proposal. Then, you should start making your in-engine diorama!}
+
+\paragraph{This a \textbf{single formative submission}. The work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine whether a proposal is acceptable:}
+
+\begin{itemize}
+	\item You have setup your repository in the Student-Work area of the GitHub Enterprise Server and given it an appropriate name;
+	\item Your choice of challenge or opportunity is appropriate to your course;
+	\item A \texttt{README.md} file is present in your repository and it contains a description of your proposed in-engine diorama;
+	\item Your response to the challenge or opportunity, in terms of what you proposal to make, is sensible and of an appropriate scope;
+	\item You have submitted the link to your GitHub Enterprise Server respository to the LearningSpace submission area.
+\end{itemize}
+
+\paragraph{You will receive immediate \textbf{informal feedback} verbally from your \textbf{tutor}.}
 
 \subsection*{Part B}
 
-\paragraph{Part B consists of \textbf{multiple} activities on LearningSpace. This work is \textbf{individual} and will be assessed on an \textbf{accumulated} basis.}
+\paragraph{After your proposal is approved, you should immediately proceed to Part B. In this part, you will implement a draft version of your in-engine diorama. You will use Unity to make your diorama, versioning everything in your git, but you are permitted to use any tools you desire to create the relevant assets for your diorama. You are expected to incorporate third-party materials beyond the scope of your course, but should clearly acknowledge their inclusion.}
 
-\paragraph{Access the quizzes on LearningSpace. Answer all of the multiple-choice questions and give appropriate responses to the code writing exercises.}
+\paragraph{There will be several timetabled workshops and complementary learning resources on LearningSpace to guide you through the process of doing this. These will help you to apply the course-specific skills you are learning in other modules, as well as how you can get your work and the work of others into the engine. You won't get everything at first, but with effort you will get there eventually.}
 
-\paragraph{Your tutor will offer advice in the timetabled tutor meeting. You will receive immediate \textbf{automated feedback} from the LearningSpace.}
+\todo[inline]{\textbf{Important Note:} For the sake of clarity, the Games Academy expects all students on all courses to become able to work in-engine. Whilst the discipline associated with your particular course may or may not place a particular emphasis on engines and you will likely use different parts of an engine more or less frequently than your peers on other courses, it is critical that everyone on a team pulls their weight. In group projects, you are responsible for getting your own work into the engine. Becoming able to support your peers integrate their work also helps to facilitate teamwork, on the one hand, and manage the workload peaks of the development lifecycle, on the other.}
+
+\paragraph{You will be prompted on several occassions throughout the module to consider your use of intellectual property. You are welcome to use third-party materials (i.e., assets, libraries, resources, etc.). Especially, for things beyond your course. However, they \textbf{MUST} be used lawfully and with acknowledgement. You will be taught about intellectual property law and referencing conventions during the module, but we ask that you exercise caution throughout. It is a topic that will take some time to familiarise yourself with. On this basis, you are expected to update your \texttt{README} file with references to third party materials and include a brief justification why each is used, and under which licence. This will enable you to keep track of what you have used and you learn.}
+
+\paragraph{You will also be prompted to select an appropriate license under which to release your work and to justify why it is appropriate for your context. Create a \texttt{LICENSE.md} file and add the details of your chosen license. There are a few good examples you can compare and choose from here:}
+
+\url{https://choosealicense.com/}
+
+\paragraph{Provide a short written justification for your choice in your \texttt{README.md} file. This should be no more than a single paragraph, indicatively no more than 200 words. The justification should provide rationale for \textit{why} the license is appropriate for your particular context, referencing the merits and drawbacks of the licence terms.}
+
+\todo[inline]{\textbf{Important Note:} Being a student is not a `get-out' clause for unlawful conduct. You will strive conduct yourself professionally throughout the module, and this means complying with intellectual property law in the same way someone in industry would. You \textbf{MUST} comply with copyright at all times. This means only using copyright materials with permission and following the requirements imposed by any licenses under which copyright materials have been released. We do not anticipate any `fair dealings' defenses, but if you think it appropriate for your situation, you will need to justify it with great care and attention to detail. You will be marked on your compliance with intellectual property law as part of the \textit{Advocate} learning outcome and its associated INDUSTRY assessment criteria.}
+
+\paragraph{Show your work-in-progress to your tutor in your timetabled tutor meetings. It will also be worthwhile to also show your repository to your tutor for support and advice on how to improve your use of version control.}
+
+\paragraph{As there are many tutorials, this comprises \textbf{multiple formative submissions}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
+
+\begin{itemize}
+	\item You are making use of your repository for version control;
+	\item You demonstrate progress relevant to your course;
+	\item You can show some of your work in the engine;
+	\item You are using third-party materials as appropriate, given your course;
+	\item You can show some of third-party work in the engine;
+	\item You have a README file with an appropriate description of your intention;
+	\item You are acknowledging any third-party materials in your README file;
+	\item You have a LICENSE file which contains a sensible license; 
+	\item You briefly justify your choice of LICENSE in your README file; 
+\end{itemize}
+
+\paragraph{You will receive immediate \textbf{informal feedback} verbally from your \textbf{tutor}.}
 
 \subsection*{Part C}
 
-\paragraph{Part C consists of a \textbf{single formative submission}. This work is \textbf{collaborative} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
+\paragraph{As you progress into Week 9, you should turn your attention to Part C. In this part, you will prepare a draft version of your work for critique.}
+
+\paragraph{Firstly, ensure that all of your work is inside your repository. Then, record a \textbf{THREE} minute video of your diorama and associated materials, providing a voice-over or similar annotation. You will be shown how to do this in one of your sessions, but there is a useful overview here:}
+
+\url{https://learningspace.falmouth.ac.uk/mod/resource/view.php?id=149968}
+
+\paragraph{The video should demonstrate the in-engine diorama itself within Unity. After showing the diorama running, direct attention towards a few of the tools and techniques that you used to produce your work and get it into engine. Finally, briefly go through your repository, with particular attention to your choice of license as well as your use of any third-party materials and how you've complied with their licenses.}
+
+\paragraph{Upload the video to an appropriate platform (e.g., Microsoft Streams or Microsoft OneDrive) and submit a link to the peer-review workshop activity on LearningSpace. This will need to be done prior to the timetabled peer-review session in Week 10.}
+
+\paragraph{Then, attend the timetabled peer-review session.}
+
+\paragraph{This is a \textbf{single formative submission}. You submit and review as \textbf{individuals} for the peer-review. You will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
 
 \begin{itemize}
-	\item Several algorithms have been selected;
-	\item Suggestions to improve maintainability are appropriate;
-	\item Clear LICENSE and README present;
-	\item Attempt to justify the software license is present;
-	\item Evidence of collaborative programming in the repo.
+	\item You submitted a link to your video to the peer-review activity on LearningSpace before, or at the start of the session;
+	\item Enough work is available to facilitate a meaningful review;
+	\item You submit a broadly appropriate review of peers' work during the timetabled session.
 \end{itemize}
 
-\paragraph{To complete Part C, complete the online activities on the LearningSpace.}
-
-\paragraph{Firstly, review the pseudocode for the algorithms. You are expected to translate technical notation into executable code. As such, it is anticipated that you incorporate several of the listed algorithms into your solution. Clearly list these algorithms and state where they are implemented in the \texttt{README.md} file. You are welcome to use third-party libraries and resources in your solution, but these will not `count' as translations for assessment purposes. Algorithms you draw from the literature \textit{can} count if there is evidence of translation.}
-
-\paragraph{Then, complete the activities on LearningSpace. These will prompt you to outline how you will work together to improve maintainability, and to more clearly justify the terms of the software license. It is also worthwhile at this stage to review your git log to reflect upon your progress and the extent which you are using version control appropriately. Show these to your tutor in your timetabled meeting.}
-
-\paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.}
+\paragraph{You will receive immediate \textbf{informal feedback} in writing from your \textbf{peers}.}
 
 \subsection*{Part D}
 
-\paragraph{Part D is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
+\paragraph{After the peer review, you will next complete Part D. In this part, you will improve your in-engine diorama based on the feedback you have received. This will be the final version of your in-engine diorama that gets marked.}
 
+\paragraph{Ensure all of your work is in your repository. Double-check that the link you submitted to LearningSpace will direct the assessors to the correct repository. Also, double-check everything in the repository is yours or otherwise referenced in the \texttt{README} file. Tidy the README as appropriate. There will be a timetabled directed practice session to support you with these checks. Following this, prepare a demonstration of your in-engine diorama for the timetabled assessment session.}
+
+\paragraph{In the timetabled assessment session, you will show your work and respond to questions. Topics include: pipelines, tools, and techniques; creative practice; the engine; version control; and licensing. This is your opportunity to demonstrate your knowledge, creativity, and professional integrity.}
+
+\todo[inline]{\textbf{Important Note:} If you have an individual learning plan which includes a reasonable adjustment to assessment methods, you will need to email the module leader using your university email account to confirm the arrangements.}
+
+\paragraph{Part D is a \textbf{single summative submission} followed by a \textbf{live demonstration}. These are both \textbf{individual}. They are assessed, respectively, on a \textbf{criterion-referenced} basis. Please refer to the marking rubric at the end of this document.}
+
+\todo[inline]{\textbf{Important Note:} Please carefully review the assessment rubric at the end of this brief. The rubric provides detail on how you will be marked.}
+
+\paragraph{You will receive immediate \textbf{formal feedback} verbally from your \textbf{assessor} in the timetabled assessment session.}
+
+\paragraph{You will receive a \textbf{provisional grade} on your submission from your \textbf{assessor} in writing via LearningSpace up to three weeks after your submission. Your \textbf{final grade} will be confirmed by the Assessment Board when they convene at the end of the academic year and released to you via MyFalmouth.}
+
+
+\section*{Challenges and Opportunities}
+
+\paragraph{You select a `challenge or opportunity' based on the course on which you are enrolled:}
+
+\subsection*{BA(Hons) Game Animation}
+
+Your in-engine diorama is an \textbf{animated character} which can be interacted with in some way. It should include:
 \begin{itemize}
-	\item Submission is timely;
-	\item Enough work is available to conduct a meaningful review;
-	\item A broadly appropriate review of a peer's work is submitted.
+\item A character controller;
+\item Basic locomotion linked to mouse and keyboard controls;
+\item Actions---consider: idle, jump, run, side-step, greet, etc.
 \end{itemize}
-
-\paragraph{To complete Part D, prepare a draft version of the computer program. Ensure that the source code and related assets are pushed to version control and a copy is submitted to the peer-review workshop activity on LearningSpace prior to the scheduled peer-review session. Then, attend the scheduled peer-review session.}
-
-\paragraph{Please note you submit and review as individuals for the peer-review.}
-
-\paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{peers}.}
-
-\subsection*{Part E}
-
-\paragraph{Part E is a \textbf{single summative submission} followed by a \textbf{demonstration}. The initial submission is \textbf{collaborative} whilst the demonstration is \textbf{individual}. These will be assessed, respectively, on a \textbf{criterion-referenced} basis and a \textbf{threshold} basis. Please also refer to the marking rubric at the end of this document for further detail. The following criteria are used to determine a pass or fail:}
-
+\paragraph{Additional elements could include:}
 \begin{itemize}
-	\item Enough work is available to hold a meaningful discussion;
-	\item Clear evidence of programming knowledge;
-	\item No breaches of academic integrity.
+\item Sound effects;
+\item Special effects;
+\item Interactive environmental animation; 
+\item Parkour.
 \end{itemize}
+\paragraph{The animation does not need to be created by yourself. Consider finding something on `Mixamo' and adapting it to your context. Any sort of character and visual style is welcome, but something at least vaguely humanoid would be welcome.}
 
-\paragraph{To complete Part E, revise the computer program based on the feedback you have received. Then, push it into version control. As a reminder, formal submissions are through the LearningSpace, so please check the link to your repository on Falmouth's GitHub Enterprise server is valid.}
+\paragraph{Please don’t overcomplicate your animations. Go for a small set of actions that look good. Strive for the simplicity and elegance of a ‘diorama’.}
 
-\paragraph{Then, prepare a practical demonstration of your computer program. Ensure that the source code and related assets are pushed to version control and available to assessors prior to the scheduled viva session. Then, attend the scheduled viva session.}
+\subsection*{BA(Hons) Game Development: Art}
 
-\paragraph{Please note you attend the viva as an individual.}
+\paragraph{Your in-engine diorama is a \textbf{3D scene} built out of a modular static mesh kit. It should include:}
+\begin{itemize}
+\item At least one architectural structure, assembled of separate modular static mesh pieces;
+\item An organic or natural form---think: forest, rock formation, foliage, etc;
+\item Lighting and staging to support an interesting atmosphere.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Terrain;
+\item Characters;
+\item Props; 
+\item Cyclic Animation.
+\end{itemize}
+\paragraph{You do not need to make the meshes yourself. Asset store content is encouraged. We are keen to see you learn to work with commercial-quality modular kits. Combining kit pieces to make interesting spaces is a vital skill! If you do want to create custom meshes, think about matching visual style and setting up pivot points and good scaling. Any sort of visual style is welcome, from grim horror to cute slice-of-life. See if you can create a consistent and compelling atmosphere.}
 
-\paragraph{There is an expectation that you work with other members of your group as well as other students in your programming tutor group as part of your learning. You have permission to do this. However, you must \textit{understand} the code in your submission and you must \textit{acknowledge} the contributions of peers to your codebase explicitly and in accordance with academic conventions. As such, you should be able to explain \textbf{EACH} section of your solution individually, and place appropriate references in the comments of your source files. In the viva you will discuss the key programming constructs used in your solution, the key design decisions made when structuring the code, and how functionality was achieved. This is your opportunity to demonstrate your academic integrity and individual programming knowledge.}
+\paragraph{Please don’t make your 3D scene enormous. Go for quality and attention to detail. Aim for something small that fits the definition of a ‘diorama’.}
 
-\paragraph{You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.}
+\subsection*{BA(Hons) Game Development: Audio}
 
-\paragraph{You will receive \textbf{formal feedback} from your \textbf{tutor} up to three weeks after the final submission deadline.}
+Your in-engine diorama is an \textbf{interactive soundscape}. It should include:
+\begin{itemize}
+\item Both diagetic and non-diagetic audio elements;
+\item Ambient background atsmosphere; 
+\item Interaction that triggers a sound event or places an effect.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Layered transitions;
+\item Signal processing;
+\item Procedural generation or manipulation; 
+\item Cyclic Animation.
+\end{itemize}
+\paragraph{You should make use of FMOD to implement your audio effects. Any sort of audio style is welcome, from 8-bit chip tunes to baroque. See if you can create a coherent and exciting vibes atmosphere.}
 
+\paragraph{Please don’t overwhelm the audience with many audio sources and avoid being too distracting. Strive for something noticable, pleasant, and gently escalating. Aim for something that might work as a ‘diorama’ at a theme park, common whilst people are queuing to stimulate the mood. Consider manipulating and remixing existing audio rather than doing your own foley work.}
+
+\subsection*{BA(Hons) Game Development: Design \\ BA(Hons) Game Development: Production}
+
+Your in-engine diorama is a \textbf{digital toy} which incorporates a working, dynamic system that someone can play with. It should include:
+\begin{itemize}
+\item Dedicated player point-of-view and interaction scheme (i.e., character controller);
+\item Clearly delineated environment and navigation scheme that shows examples---consider: scrolling/one-screen; 
+\item Dynamic and playfully designed system that responds meaningully to player input.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Graphical user interface;
+\item Puzzles;
+\item Narrative; 
+\item Procedural rhetoric.
+\end{itemize}
+\paragraph{This digital toy should be a navigable environment that shows examples of either creating assets from scratch using Probuilder or the use of a pre-constructed modular prefabs to help customise the environment (which could also be constructed in Probuilder). Any sort of gameplay is welcome, but it may be worth looking to arcade games or mobile apps for inspiration. See if you can create something brief but compelling.}
+
+\paragraph{Please don’t create everything yourself. Use content on the asset store. Keep the scope small---a ‘diorama’ is a mere slice of a world.}
+
+\subsection*{BA(Hons) Game Development: Programming \\ BSc(Hons) Computing for Games}
+
+Your in-engine diorama is a \textbf{digital facinator} which can be interacted with. It should include:
+\begin{itemize}
+\item Scripts, written by yourself, that generate an interesting visual effect;
+\item Means of manipulating the visual effect interactively; 
+\item Algorithms taken from the media computation literature.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Art;
+\item Audio;
+\item Gameplay;
+\item Shaders.
+\end{itemize}
+\paragraph{You can use any assets and libraries you'd like to create your digital facinator, but you should look at the media computation literature for inspiration. There are many algorithms for tinkering graphics and audio which you can leverage to produce an interesting effect. Consider doing something that might fit into an artistic exhibit---look to Artificial Creators and/or Art as Games/Games as Art for inspiration. If you already have experience and are feeling ambitious, look at casual creators and try to replicate one of their games.}
+
+\paragraph{A digital facinator can be game, but if so, it should be a small momentary slice of a game that is intended for momentary engagement. Most facinators will just be an interesting visual effect that responds to the audience in some way. Strive to take an agile approach by creating a working minimum viable as soon as possible, and then iterate and incrementally improve the facinator to help manage scope. If you don't have something you can show off to your peers or tutor within a week or two, then you're probably over-scoping.}
+
+\subsection*{BA(Hons) Game Development: Writing}
+
+Your in-engine diorama is a \textbf{story}. It should include:
+\begin{itemize}
+\item Text---perhaps narration or dialogue;
+\item Environmental storytelling, or other non-verbal storytelling; 
+\item An interface to progress the narrative.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Characters;
+\item Branching narrative, emergent narrative, or another interactive story structure;
+\item A dramatic arc, or other elements related to fiction; 
+\item Machinima.
+\end{itemize}
+\paragraph{You are expected to deliver something in Unity, but can make use of third-party plug-ins to make integrating your story into engine easier. It doesn't have to be as complex and asset rich as a walking simulator, and could be exclusively text-based if you so desire.}
+
+\paragraph{Please keep the scope to something that can be experienced in a few minutes, certainly no more than 10 minutes.}
+
+\subsection*{BSc(Hons) Computer Science \\ BSc(Hons) Data Science}
+
+Your in-engine diorama is a \textbf{3d data visualisation}. It should include:
+\begin{itemize}
+\item Scripts, written by yourself;
+\item Data from a third-party source that has been scraped in real-time via HTTP; 
+\item An interesting visualisation using 3D pre-fabs and other objects.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Data summarisation and analysis;
+\item Algorithms;
+\item Procedural generation or manipulation; 
+\item Cyclic Animation.
+\end{itemize}
+\paragraph{XXX.}
+
+\paragraph{XXX.}
+
+\subsection*{BSc(Hons) Immersive Computing}
+
+Your in-engine diorama is a \textbf{virtual room} experienced through a head-mounted display. It should include:
+\begin{itemize}
+\item Both diagetic and non-diagetic audio elements;
+\item Ambient background atsmosphere; 
+\item Interaction that triggers a sound event or places an effect.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Layered transitions;
+\item Signal processing;
+\item Procedural generation or manipulation; 
+\item Cyclic Animation.
+\end{itemize}
+\paragraph{You should make use of FMOD to implement your audio effects. Any sort of audio style is welcome, from 8-bit chip tunes to baroque. See if you can create a coherent and exciting vibes atmosphere.}
+
+\paragraph{Please don’t overwhelm the audience with many audio sources and avoid being too distracting. Strive for something noticable, pleasant, and gently escalating. Aim for something that might work as a ‘diorama’ at a theme park, common whilst people are queuing to stimulate the mood. Consider manipulating and remixing existing audio rather than doing your own foley work.}
+
+\subsection*{BSc(Hons) Robotics}
+
+Your in-engine diorama is a \textbf{multi-agent simulation}. It should include:
+\begin{itemize}
+\item Both diagetic and non-diagetic audio elements;
+\item Ambient background atsmosphere; 
+\item Interaction that triggers a sound event or places an effect.
+\end{itemize}
+\paragraph{Additional elements could include:}
+\begin{itemize}
+\item Layered transitions;
+\item Signal processing;
+\item Procedural generation or manipulation; 
+\item Cyclic Animation.
+\end{itemize}
+\paragraph{You should make use of FMOD to implement your audio effects. Any sort of audio style is welcome, from 8-bit chip tunes to baroque. See if you can create a coherent and exciting vibes atmosphere.}
+
+\paragraph{Please don’t overwhelm the audience with many audio sources and avoid being too distracting. Strive for something noticable, pleasant, and gently escalating. Aim for something that might work as a ‘diorama’ at a theme park, common whilst people are queuing to stimulate the mood. Consider manipulating and remixing existing audio rather than doing your own foley work.}
+
+\newpage
 \section*{Additional Guidance}
 
-\paragraph{It is critically important that you do not neglect your individual roles in the development process. Programming in pairs means that you work together on the same computer---switching between driver and navigator. It is a great opportunity to develop your technical communication skills and overcome common misconceptions about programming. It should not, however, be treated as a 'free ride'---you will get to review each others' progress.}
+\paragraph{It is critically important that you do not neglect your individual role in the development process.}
 
-\paragraph{You are not only being expected to generate new encodings from primitive input, but also \textit{transform} and \textit{repurpose} encodings that already exist. These could be melodies, sound effects, or other audio clips which you can load into your data structure. Please do load audio files. However, when using audio you have not authored yourself, the source should be noted in your README file and all relevant rights (e.g., copyright, license conditions, etc.) ahered to.}
+\paragraph{We not expect you to be able to do everything on this module, as there are many different disciplines involved in the development of digital products and services---artists, animators, designers, programmers, writers, and so on. This is about getting experience and developing comfort in areas you're \textit{not} specialising in. These could be any kind of asset which you can load into your game engine scene and manipulate. You will work with people from different backgrounds now and in the future, and it is to your benefit to familiarise yourself with these differences so you can work more effectively with people on other courses. However, don't spend a lot of time making things that are beyond the scope of your course. Use and modify third party materials (where permitted) so you can familiarise yourself with the variety of assets you will work with in your team projects.}
 
-\paragraph{You can and should go beyond the techniques introduced in the lectures and the Guzdial book (e.g. researching algorithms for producing or manipulating graphics).}
+\paragraph{When using source materials that you have not authored yourself, this should be noted in your README file and all relevant rights (e.g., copyright, license conditions, etc.) ahered to.}
 
-\paragraph{You are not being assessed on speed or memory performance. Do not worry too much about framerate, etc.}
+\paragraph{A common pitfall on this module is poor planning or time management. It is easy to underestimate how much work is involved in first learning about digital creativity, especially early in your studies. Moreso when you're expected to practically apply tools and techniques that are intimidating. The most important thing to understand is that this type of work is quite unlike many others in that it cannot be crammed into a last minute deluge just before a deadline. It is, of course, healthier begin work early and sustain a consistent pace: little and often. You're expected to put 200 hours into learning this material. Many will learn it in less, but please try not to despair if it's taking a long time, as everyone who dedicates themselves and makes the effort will get there.}
 
-\paragraph{A common pitfall is poor planning or time management. Often, students underestimate how much work is involved in first learning programming concepts and then actually applying them. Programming is quite unlike other subjects in that it cannot be crammed into a last minute deluge just before a deadline. It is, therefore, very important that you begin work early and sustain a consistent pace: little and often.}
+\paragraph{It is very important to make a start on this project so you receive early feedback to give you some direction and to encourage you to practice your discplinary skills across the entire duration of the course. Ideally, you should be working on this project a little every day!}
 
-\paragraph{It is very important to make a start on this project so you receive early feedback to give you some direction and to encourage you to practice your programming skills across the entire duration of the course. Ideally, you should be programming every day!}
+\paragraph{The peer-review component of this work does sometimes raise alarm. However, the only way to learn how to review is by reviewing. The course team will guide you through the process and provide advice. With practice, it will become clear what is satisfactory by discussing the quality of work with your peers during the peer review sessions.} 
 
-\paragraph{The peer-review component of this work does sometimes raise alarm. However, the only way to learn how to review code is by reviewing code. Your tutor will guide you through the process and provide advice. With practice, it will become clear what is satisfactory by discussing the quality of work with your peers and your tutor during the peer review sessions.} 
+\paragraph{You are not being assessed on speed or memory performance. Do not worry too much about framerate, etc. This is something you'll learn about later.}
 
 \section*{FAQ}
 
 \begin{itemize}
 	\item 	\textbf{What is the deadline for this assignment?} \\ 
-    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system. You can find the deadlines there.
     		
 	\item 	\textbf{What should I do to seek help?} \\ 
-    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on GitHub. 
+    		For academic support, you should attend the timetabled tutorial sessions and ask your tutor. For queries relating to the module or it's assignment, please email the module leader.
     		
     	\item 	\textbf{Is this a mistake?} \\ 	
-    		If you have discovered an issue with the brief itself, the source files are available at: \\
-    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
-    		 Please raise an issue and comment accordingly.
+    		If you have discovered an issue with the brief, please email the module leader.
 \end{itemize}
 
 \section*{Additional Resources}
 
 \paragraph{Please review the LearningSpace for additional resources.}
 
-\rubrichead{Criteria marked with a $\ddagger$ are shared by the group. All other criteria are individual.
+\rubrichead{All criteria are individual.
 
-To \textbf{pass} this assignment (achieve 40\% or more), you must demonstrate adequate ability to generate ideas, problem solving, concepts, technical competency and proposals in response to the set brief. Your work must reflect an adequate, ethically informed, ``real-world'' experience as if you were in a industry/business environment or market. Enough of your work must be available to demonstrate your programming knowledge and allow a meaningful discussion to take place in the viva. You must also have satisfactory participation in all parts of the assignment and have submitted the final deliverable.
+To \textbf{pass} this assignment (achieve 40\% or more), you must demonstrate adequate ability to critically engage with and analyse information and formulate reasoned arguments. Your work must reflect an adequate, ethically informed, ``real-world'' experience as if you were in a industry/business environment or market. Enough of your work must be available to demonstrate your disciplinary knowledge alongside your engine and versioning knowledge, allowing a meaningful discussion to take place in the viva. You must also have satisfactory participation in all parts of the assignment and have submitted the final deliverable.
 }
 
 \begin{markingrubric}
 %
-    \firstcriterion{Basic Competency Threshold}{30\%}
+    \firstcriterion{THRESHOLDBasic Competency Threshold}{30\%}
         \grade \fail At least one part is missing, incomplete, or inadequate.
                    \par Breach of academic integrity.    
-        \grade  All quizzes completed. \par Peer review complete. \par Comments to peers are satisfactory, but may be minimal and/or basic. %x
-        \grade  As per quiz performance. \par Peer reviews are at least diagnostic and reassuring.  %
-        \grade  As per quiz performance.  \par Peer reviews are instructive and encouraging, integrating appropriate insights. %
-        \grade  As per quiz performance.  \par Peer reviews are well-formed and diplomatic, conveying effective advice. %
-        \grade  As per quiz performance.  \par Peer reviews are attentive, apt, pithy, and constructive, conveying critical insight that aids improvement. %
+        \grade  All parts completed. \par Enough work is submitted for meaningful critique. \par Clear evidence that the Contextualise and Advocate learning outcomes have been attained. \par Comments to peers in the peer review are satisfactory. \par No breach of academic integrity. %x
+        \grade  
+        \grade  
+        \grade  
+        \grade  
 %
 
-    \criterion{PROCESS: \\Functional Coherence of Code}{5\%$\ddagger$}
-        \grade\fail 	There is an attempt at implementing the algorithms, but without success.
-            \par 		The source code does not compile, or might return erroneous results, but could work with minor changes.
-        \grade 		At least one algorithm has been implemented successfully.
-            \par 		There are many obvious logical errors, more than one of which is significant.   
-        \grade 		At least two algorithms have been  implemented successfully.
-            \par 		There are several obvious logical errors, no more than one of which is significant. 
-        \grade 		At least three algorithms have been implemented successfully.
-            \par 		There are some obvious logical errors, which are not significant. 
-            \par		The brief has been satisfied.
-        \grade 		At least four algorithms have been implemented successfully.
-            \par 		There are few obvious logical errors, which are cosmetic and/or superficial.
-            \par		The brief has been satisfied.     
-        \grade 		At least five algorithms have been implemented successfully.
-            \par		There are no obvious logical errors.
-            \par		The brief has been satisfied.
+    \criterion{ANALYSE: \\Contextualisation of Course-Related Skills}{15\%}
+        \grade\fail 	No successful application of disciplinary skills.
+            \par 		The assets do not exist, or do not compile/build, or return erroneous/distored results when shown.
+        \grade 		There is at least one original course-relevant asset of adequete quality and related to the challegne.
+        \grade 		There are original course-relevant assets of competent quality and relevant to the challenge.
+        \grade 		There are original course-relevant assets of very good quality and relevant to the challenge.
+            \par 		There are no more than several obvious errors, which do not significantly impede functionality.
+            \par		The challenge has been satisfied.
+        \grade 		There are original course-relevant assets of excellent quality and relevant to the challenge.
+            \par 		There are no more than a few obvious errors, which are cosmetic and/or superficial.
+            \par		The challenge has been satisfied.    
+        \grade 		There are original course-relevant assets of outstanding quality and relevant to the challenge.
+            \par		There are no obvious errors.
+            \par		The challenge has been satisfied.
 %
-    \criterion{PROCESS: \\Sophistication of Code}{15\%$\ddagger$}
-        \grade\fail Insight into programming constructs is evident from the code.
-            \par There is an attempt to structure the program (e.g. not just one monolithic function) but it doesn't include foundational elements.
-        \grade Some insight into the appropriate use of programming constructs is evident from the code.
-            \par All foundational elements of programming (e.g. representation, sequence, operations, branching, iteration, etc.) are present.
-        \grade Much insight into the appropriate use of programming constructs is evident from the code.
-            \par Appropriate use of functions with arguments supports a program structure, minimising redundancy.
-        \grade Considerable insight into the appropriate use of programming constructs is evident from the code.
-            \par Appropriate use of a rich mixture of structural elements (e.g. structs, enums, classes, etc.) supports a more extensible program structure.
-        \grade Significant insight into the appropriate use of programming constructs is evident from the code.
-            \par The program structure is effective, using data structures (e.g., \textit{n}d arrays, hash tables, etc.) and constructs (e.g., delgates, generics, polymorphism, etc.) to better cohesion and coupling.
-        \grade Extensive insight into the appropriate use of a wide repetoir of programming constructs is evident from the code.
-            \par The program structure is highly effective, demonstrating high cohesion and low coupling.
-%
-    \criterion{PROCESS: \\Maintainability of Code}{15\% $\ddagger$}
-        \grade\fail Insight into maintainability is evident from the source code.
-            \par There is an attempt to make use of sensible variable names.
-            \par There is an attempt to format and comment code.
-        \grade The source code is commented sporadically.
-            \par Many identifier names are clear and appropriate.
-            \par Code formatting is mostly consistent.
-        \grade Code is commented somewhat well.
-            \par Most identifier names are descriptive and appropriate.
-            \par The formatting style aids readability.
-             \par There is little obvious duplication of code or of literal values.           
-        \grade Code is reasonably commented and doc-commented.
-            \par Almost all identifier names are descriptive and appropriate.
-            \par Almost all code adheres to a sensible formatting style, enhancing readability.
-             \par There is almost no obvious duplication of code and constants are used appropriately.   
-        \grade Code is well commented and doc-commented.
-            \par All identifier names are descriptive and appropriate.
-            \par All code adheres to an appropriate formatting style.
-             \par Liitle to no obvious duplication of code nor many unneeded literals. Some values can be easily ``tinkered'' but might still be in the code. 
-        \grade Code is very well commented and doc-commented.
-            \par All identifier names are descriptive and appropriate.
-            \par All code adheres to an appropriate formatting style.
-             \par There is no obvious duplication of code nor any unneeded literals. All values are, where appropriate, easily ``tinkered'' outside of the code.  
+    \criterion{ANALYSE: \\Creative Pipeline and Use of Unity}{15\%}
+        \grade\fail Insight into Unity is not evident from the work.
+            \par Few to no course-relevant assets have been incorporated into the diorama.
+        \grade Some insight into Unity is evident from the work.
+            \par There is at least one course-relevant asset adequetely incorporated into the diorama.
+        \grade Much insight into Unity is evident from the work.
+            \par Course-relevant assets are competently incorporated into the diorama
+            \par There is a build, external to Unity.
+        \grade Considerable insight into Unity is evident from the work.
+            \par Course-relevant assets are incorporated into the diorama in a very good way.
+            \par There is a build, external to Unity, and it works well.
+        \grade Significant insight into Unity is evident from the work.
+            \par Course-relevant assets are excellently incorporated into the diorama.
+            \par There is a build, external to Unity, and it works very well.
+        \grade Extensive insight into Unity is evident from the work.
+            \par Course-relevant assets are incorporated outstandingly into the diorama.
+            \par There is a build, external to Unity, and it works perfectly.
 %
 \end{markingrubric}
 
 \begin{markingrubric}
 %
-    \firstcriterion{INDUSTRY: \\Creative Response to Brief}{5\%$\ddagger$}
+    \firstcriterion{INDUSTRY: \\Creative Response to Brief}{10\%}
         \grade\fail There is something creative, but it is very modest.
             \par The work is a clone of an existing work with mere cosmetic alterations.
         \grade Little creativity.
@@ -302,36 +479,36 @@ To \textbf{pass} this assignment (achieve 40\% or more), you must demonstrate ad
         \grade Significant creativity.
             \par The work is novel, with strong evidence of divergent and/or subversive thinking.
 %
-    \criterion{INDUSTRY: \\Ethically Informed}{10\%$\ddagger$}
+    \criterion{INDUSTRY: \\Ethically Informed}{10\%}
         \grade\fail There is a marginally appropriate license and/or at least partial compliance with intellectual property law.
         \grade There is a somewhat appropriate license.
             \par There is implicit recognition of intellectual property rights.
         \grade There is an appropriate license. 
             \par There is explicit recognition of intellectual property rights in the \texttt{README.md}.
-            \par Acknowledgements are clearly demarcated in the source code.
+            \par Acknowledgements are clearly demarcated in the source materials.
         \grade There is a suitable license.
             \par There is explicit description of intellectual property rights in the \texttt{README.md}.
-            \par Authorship is demarcated in the source code.
+            \par Authorship is demarcated in the source materials.
             \par Copyright notices are present.
-        \grade There chosen license is suitable. 
+        \grade The chosen license is suitable. 
             \par There is explicit explanation of intellectual property rights in the \texttt{README.md}.
-            \par Authorship is accurately declared in the header using appropriate standards and demarcated in the source code.
+            \par Authorship is accurately declared in the header using appropriate standards and demarcated in the source materials.
             \par Copyright notices are present and appropriate.
-        \grade There chosen license is suitable.
+        \grade The chosen license is suitable.
             \par There is explicit justification of intellectual property rights in the \texttt{README.md}.
-            \par Authorship is accurately declared in the header using appropriate standards and demarcated in the source code.
+            \par Authorship is accurately declared in the header using appropriate standards and demarcated in the source materials.
             \par Copyright notices are accurately declared in the header using appropriate standards. There may be reference to a transfer agreement.
 %
-    \criterion{INDUSTRY: \\Use of Version Control}{20\%}
+    \criterion{INDUSTRY: \\Use of Git Version Control}{20\%}
         \grade\fail Version control attempted, but not properly used.
-        \grade Source code has seldom been checked into version control.
-        \grade Source code has been checked into version control at least once per week.
+        \grade Work has seldom been checked into version control.
+        \grade Work has been checked into version control at least once per week.
             \par Sensible commit messages are present.
-        \grade Source code  has been checked into version control several times per week.
+        \grade Work has been checked into version control several times per week.
             \par Commit messages are clear, concise and relevant.
-        \grade Source code has been checked into version control many times per week.
+        \grade Work has been checked into version control many times per week.
             \par Commit messages are clear, concise and relevant.
-        \grade Source code has been checked into version control with considerable frequency.
+        \grade Work has been checked into version control with considerable frequency.
             \par Commit messages are clear, concise and relevant.
 %
 \end{markingrubric}
