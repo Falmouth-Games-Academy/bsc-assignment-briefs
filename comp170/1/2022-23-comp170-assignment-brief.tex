@@ -1,0 +1,339 @@
+\RequirePackage{pdfmanagement-testphase}
+\DeclareDocumentMetadata{
+    pdfversion=1.7,
+}
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\usepackage{enumitem}
+\setlist{nosep} % Make enumerate / itemize lists more closely spaced
+\usepackage[T1]{fontenc} % http://tex.stackexchange.com/a/17858
+\usepackage{url}
+\usepackage{todonotes}
+
+% Suppress bibliography title
+% https://tex.stackexchange.com/a/132647
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+% Suppress numbers in bibliography
+% https://tex.stackexchange.com/a/35371
+\makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
+
+\title{Data Insights Report}
+\author{Assoc. Prof. Michael Scott}
+\module{COMP170}
+\version{0.1}
+
+\begin{document}
+
+\maketitle
+
+\begin{marginquote}
+    ``The purpose of education is to destroy your confidence in your own knowledge so you will just continuously research and read and double-check and maybe someday claw your way toward a slightly more accurate understanding of the world.''
+    
+    --- Katie Mack
+    
+    \marginquoterule
+    
+  ``An approximate answer to the right problem is worth a good deal more than an exact answer to an approximate problem.''
+    
+    --- John Tukey
+\end{marginquote}
+\marginpicture{flavour_pic}{
+    Ada Lovelace is considered the first ever programmer. Lovelace believed that intuition and imagination were critical to effectively applying mathematical and scientific concepts. She valued metaphysics as much as mathematics, viewing both as tools for exploring ``the unseen worlds around us''.
+}
+
+\section*{Introduction}
+
+\paragraph{
+In this assignment, you will produce a written report. It will detail an investigation you have conducted to help a stakeholder make a decision. The context of your investigation will vary, but will principly involve working with data to ensure that your recommendation not merely an opinion but has been informed by evidence. The report will take the form of an accessible web page prepared using appropriate markup.
+}
+
+\paragraph{
+Professional skills such as written communication and research are highly sought after by employers. Familiarity with the scientific literature and methods of gleaning insights from data, as well as an ability to present analyses convincingly in dynamic and accessible formats, are also extremely helpful for professionals operating across the digital economy. Interpretation of evidence ought to support decision making processes to assure fruitful outcomes. Data-driven approaches are or will soon be critical to solving some of the world's most pressing challenges. Keeping abreast of developments at the cutting edge of data science and visualisation will serve you well in many roles and help you to answer a variety of interesting questions. 
+}
+
+\paragraph{
+This assignment is formed of several parts:
+}
+
+\begin{enumerate}[label=(\Alph*)]
+    \item \textbf{Write} a draft report, of at most 1500 words, that will:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{identify} a decision that a stakeholder needs to make;
+    		\item \textbf{outline} the context of that decision;
+    		\item \textbf{refer} to relevant academic literature \textbf{and} grey literature to convey background information relevant to the decision;
+    		\item \textbf{show how} you obtained and prepared data to support the decision-making process; 
+    		\item \textbf{illustrate how} you conducted statistical analysis of the data in Python; 
+    		\item \textbf{discuss how} insights that you have drawn from those analyses inform decision-making; 
+    		\item and \textbf{recommend} a response to the decision that is grounded in evidence.
+    	\end{enumerate}
+	\item \textbf{Review} the reports of your peers and:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{summarise} their merits and flaws;
+    		\item and \textbf{suggest} changes that will improve them.
+    	\end{enumerate}
+    \item \textbf{Prepare} the final version of your report:
+    	\begin{enumerate}[label=(\roman*)]
+    		\item \textbf{addressing} any issues raised by your tutor and/or your peers.
+    	\end{enumerate}
+\end{enumerate}
+
+\subsection*{Assignment Setup}
+
+\paragraph{
+This assignment is an \textbf{academic writing task}. Fork the following repository:
+}
+
+\url{https://github.falmouth.ac.uk/Games-Academy/comp170-report-template}
+
+\paragraph{Use the existing directory structure and, as required, extend this structure with sub-directories.
+Please also ensure that you add any editor-specific files and folders to the \texttt{.gitignore} file.}
+
+\subsection*{Part A}
+
+\paragraph{
+To complete Part A, investigate the decision your stakeholder needs to make and the context in which they are situated. Obtain a data set and analyse it using python modules including numpy, scipy, pandas, and ggplot. Explore the data and draw insights from it.}
+
+\paragraph{You will be shown how to complete this investigation in your timetabled workshops. Ensure that you attend the mathematics workshops to attain a grounding in data analysis. Also ensure you attend the programming workshops to develop your knowledge of python and the specific python modules that are relevant for analysing data. You also have sessions on data management and on preparing hypertext documents using markup languages which will assist you with the two key stages of this project: investigation and reporting.}
+
+\paragraph{Then, write a 1500-word report in HTML format. Make use of an appropriate editor. The report must identify the decision that the stakeholder needs to make, showing what is is and why it is important with reference to the potential consequences. It ought to outline the context of that decision, providing sufficient motivation for your investigation as well as information for readers about the domain. There should be a review of the scholarly literature and the grey literature to provide background information for readers.  Then, illustrate how you have conducted your data analysis, including code excerpts as well as detail on your methods and intellectual reasoning. Synthesise these insights with information from the literature and your understanding of the stakeholder's context. Then, come to a conclusion regarding the decision.}
+
+\paragraph{There \textbf{MUST} be a clear recommendation that is grounded in the evidence. Reporting mere opinions will fail. The report must also include references and a bibliography in an appropriate referencing style.}
+
+\todo[inline]{\textbf{Important Notice}\\ It is critically important that you familiarise yourself with Falmouth Univerity's policies on academic integrity to ensure that know what you need to do and that you do not engage in any form of academic misconduct.  It is \textit{your} responsibility to do this. Relevant links are available on LearningSpace. If you have queries about plagiarism or referencing styles, book a meeting with the ASK Team.}
+
+\paragraph{
+There are regular timetabled meetings with your tutor. Bring your work-in-progress to these meetings. 
+}
+
+\paragraph{This part consists of \textbf{multiple formative submissions}. The work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
+
+\begin{itemize}
+	\item You engage with your tutor;
+	\item Enough work is available to facilitate a meaningful review.
+\end{itemize}
+
+\paragraph{
+You will receive \textbf{immediate informal feedback} from your tutor in the timetabled tutor meetings.
+ }
+ 
+\subsection*{Part B}
+
+\paragraph{In Part~B, you will prepare a draft version of your work for critique. Firstly, prepare a \texttt{.pdf} version of your draft report. You will be shown how to do this in one of your sessions, but there is a useful overview here:}
+
+\url{https://learningspace.falmouth.ac.uk/mod/resource/view.php?id=149968}
+
+\paragraph{The report should be appropriately structured and close to completion, but may have a few omissions or works-in-progress. If this is the case, a brief bullet-point outline or TODO list would be a welcome addition. }
+
+\paragraph{Upload the report to to the peer-review workshop activity on LearningSpace. This will need to be done prior to the timetabled peer-review session.}
+
+\paragraph{Then, attend the timetabled peer-review session.}
+
+\paragraph{This is a \textbf{single formative submission}. You submit and review as \textbf{individuals} for the peer-review. You will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:}
+
+\begin{itemize}
+	\item You submitted a report to the peer-review activity on LearningSpace before, or at the start of the session;
+	\item Enough work is available to facilitate a meaningful review;
+	\item You submit a broadly appropriate review of peers' work during the timetabled session.
+\end{itemize}
+
+\paragraph{You will receive immediate \textbf{informal feedback} in writing from your \textbf{peers}.}
+
+\subsection*{Part C}
+
+\paragraph{
+Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis using the criteria listed in the marking rubric at the end of this document.
+}
+
+\paragraph{
+To complete Part C, revise your report from Part~B to take into account any feedback you have received so far.
+}
+
+\paragraph{
+Upload a link to your repository containing your report to the LearningSpace. Note that LearningSpace will only accept a single link. Please check your submission carefully for errors before submission.
+}
+
+\paragraph{
+You will receive \textbf{formal feedback} three weeks after the final deadline.
+}
+
+\section*{Additional Guidance}
+
+\paragraph{
+Working with data can seem intimidating to the uninitiated. There is considerable mathematical theory to 
+consider when conducting the analyses, and the interpretation of what the numbers mean can become
+something of an art. It's complex, but do not despair. Take things step-by-step, and seek advice from your
+tutors if there are concepts you don't quite grasph, or alternative interpretations you can't distinguish between
+when parsing your results. However, once you have mastered the fundamentals, you will be empowered to
+investigate a wide variety of phenomena and suggest actions with some authority. 
+}
+
+\paragraph{
+As much as possible, you should ground your investigation by reading and referring to industry reports as 
+well as peer-reviewed scholarly. Sources reporting primary research are critical to utilise since they contain
+up-to-date insight from other researchers: articles in scientific workshops, conferences, journals, and some books or book chapters. 
+Other sources tend to be less rigorous, and should be used only for background information
+or in cases where their use can be convincingly justified.
+It is almost never appropriate to cite Wikipedia, StackOverflow, Quora, and other similar online sources,
+although these are often useful for identifying further scholarly works.
+}
+
+\paragraph{
+A common pitfall is to focus too much on summary and not enough on analysis.
+For higher marks you need to demonstrate \textbf{insight} into what you have read:
+forming inferences and analyses beyond what is immediately obvious.
+}
+
+\paragraph{
+A related pitfall is to structure the journal as a sequence of disconnected ideas or conjectures.
+Instead aim to \textbf{synthesise} multiple articles and data insights into a cohesive argument,
+drawing connections between them. Understanding individual works is useful, but forming a holistic picture is much more valuable.
+}
+
+\paragraph{
+Most researchers write scientific papers for the intended audience of their fellow researchers.
+Thus some papers can seem impenetrable to the novice reader.
+Don't lose heart!
+Discuss the paper with your peers.
+Follow up the papers it cites to find alternative explanations.
+If all else fails, continue reading the paper --- often a difficult paragraph is clarified by something which appears later.
+}
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+            \item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications.
+    		
+            \item 	\textbf{How and when will I receive feedback?} \\ 
+            You will receive informal feedback during the tutor meetings and peer review sessions.
+            You will receive formal feedback via LearningSpace three weeks after the summative deadline.
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		Please email \texttt{michael.scott@falmouth.ac.uk} if any clarifications are needed.
+\end{itemize}
+
+%\begin{center}
+%    \url{https://learningspace.falmouth.ac.uk/mod/aspirelists/view.php?id=35854}
+%\end{center}
+
+%\section*{Additional Resources}
+%
+%\begin{itemize}
+%    \item Keith, C. (2010) Agile Game Development with Scrum. Pearson Education.
+%    \item http://agilemanifesto.org/
+%\end{itemize}
+
+\rubrichead{All submissions and assessment criteria for this assignment are individual.
+
+To \textbf{pass} this assignment (achieve 40\% or more), you must demonstrate adequate research and information skills. Adequate participation in-class peer-review activities at least at the level of basic competency is required. Sources must be cited in an appropriate manner, without any obvious errors. There must be no breaches of academic integrity.}
+\begin{markingrubric}
+%
+	\firstcriterion{Basic Competency Threshold}{30\%}
+		\grade\fail At least one part is missing or is unsatisfactory.
+        \par Breach of academic integrity.
+%
+    \criterion{RESEARCH: \\Literature Review}{15\%}
+        \grade\fail	None of the data sources are used or referenced.
+        \par			Fewer than 2 additional sources, not listed in the reading list, are referenced.
+        \grade		One of data sources listed in the resource list is used and referenced.
+        \par			An additional 2 sources, not listed in the reading list, are referenced.
+        \par			At least one item of academic literature is referenced.
+        \grade		One of data sources listed in the resource list is used and referenced.
+        \par			An additional 5 sources, not listed in the reading list, are referenced.
+        \par			A somewhat appropriate mix of academic and grey literature are referenced.
+        \grade		One of data sources listed in the resource list is used and referenced.
+        \par			An additional 8 sources, not listed in the reading list, are referenced.
+        \par			A reasonable mix of academic and grey literature are referenced.
+        \grade		One of data sources listed in the resource list is used and referenced.
+        \par			An additional 12 sources, not listed in the reading list, are referenced.
+        \par			A suitable mix of academic and grey literature are referenced.
+        \grade		One of data sources listed in the resource list is used and referenced.
+        \par			An additional 16 sources, not listed in the reading list, are referenced.
+        \par			There is an appropriate balance of academic and grey literature.
+        \par			Supplementary data sources have been identified and incorporated.
+%
+    \criterion{RESEARCH: \\Depth of Insight}{15\%}
+        \grade\fail 	No insight is demonstrated.
+        \par			Sources are merely paraphrased.
+        \par 			No attempt has been made to synthesise information from multiple sources.
+        \grade		Little insight is demonstrated.
+        \par			Sources are summarised in the student's own words.
+        \par 			A superficial attempt has been made to synthesise information from multiple sources.
+        \grade		Some insight is demonstrated.
+        \par			Attempts are made at discussion beyond summary.
+        \par 			A reasonable attempt has been made to synthesise information from multiple sources.
+        \grade		Much insight is demonstrated.
+        \par			Discussion is inferential in nature.
+        \par 			Information from multiple sources is synthesised into a somewhat cohesive whole.
+        \grade		Considerable insight is demonstrated.
+        \par			Connections and discussion are analytical in nature.
+        \par 			Information from multiple sources is synthesised into a cohesive whole.
+        \grade		Significant insight is demonstrated.
+        \par			Connections and discussion are both analytical and evaluative in nature.
+        \par 			Information from multiple sources is synthesised into a strongly cohesive whole.
+%
+    \criterion{RESEARCH: \\Data Analysis}{15\%}
+        \grade\fail 	No data analysis is evident.
+        \par 			Substantial errors and/or misinterpretations.
+        \grade 		A reasonable attempt at data analysis is evident.
+        \par 			Analysis methods are described.
+        \grade 		Insights are drawn from the data using descriptive statistics.
+        \par 			Analysis methods are illustrated.
+        \par 			Code excerpts are included in the report.
+        \grade 		Useful insights are drawn from the data using descriptive statistics.
+        \par 			Suitable analysis methods are illustrated.
+        \par 			Annotated code excerpts are included in the report.
+        \grade 		Useful insights are drawn from the data using descriptive statistics.
+        \par 			Suitable analysis methods are illustrated effectively.
+        \par 			Annotated code excerpts are included in the report.
+        \par 			Significant insight into python is evident.
+        \grade 		Useful insights are drawn from the data using descriptive statistics.
+        \par 			Suitable analysis methods are illustrated very effectively.
+        \par 			Annotated code excerpts are included in the report.
+        \par 			Considerable insight into python is evident.
+%
+    \criterion{RESEARCH: \\Informing Decision Making}{15\%}
+        \grade\fail 	There is no clear recommendation.
+        \grade		There is a clear recommendation that is somewhat grounded in evidence.
+        \grade		There is a clear recommendation that is grounded well in the evidence.
+        \grade		There is a clear and sensible recommendation that is grounded well in the evidence.
+        \grade		There is a clear and appropriate recommendation that is grounded well in the evidence.
+        \par 			The way in which the data supports the recommendation is justified.
+        \grade		There is a clear and appropriate recommendation that is grounded well in the evidence.
+        \par 			The way in which the data supports the recommendation is justified very effectively.	
+%
+    \criterion{RESEARCH: \\Quality of Report}{10\%}
+        \grade\fail 	There is no structure, or the structure is unclear.
+        \par			Substantial spelling and/or grammatical errors.
+        \par			No HTML markup.
+        \grade 		There is little structure.
+        \par 			Many spelling and/or grammatical errors.
+        \par			There is a somewhat reasonable attempt to use HTML and CSS markup.
+        \grade 		There is some structure.
+        \par 			A few sentences and paragraphs are well constructed.
+         \par 			Some spelling and/or grammatical errors.
+         \par			There is a reasonable attempt to use HTML and CSS markup.        
+        \grade 		There is much structure.
+        \par 			Some sentences and paragraphs are well constructed.
+         \par 			Few spelling and/or grammatical errors.
+         \par			Use HTML and CSS markup is effective.    
+        \grade 		There is much structure, highlighting the key themes.
+        \par 			Most sentences and paragraphs are well constructed.
+        \par 			Almost no spelling and/or grammatical errors.
+         \par			Use HTML and CSS markup is effective.  
+         \par			Key features of hypertext documents are leveraged.  
+        \grade 		There is much structure, highlighting the key themes.
+        \par 			All sentences and paragraphs are well constructed.
+        \par 			No spelling or grammatical errors.
+         \par			Key features of hypertext documents are leveraged effectively.  
+\end{markingrubric}
+
+\end{document}
