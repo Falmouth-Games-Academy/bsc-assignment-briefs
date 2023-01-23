@@ -1,0 +1,332 @@
+\RequirePackage{pdfmanagement-testphase}
+\DeclareDocumentMetadata{
+    pdfversion=1.7,
+}
+\documentclass{../../fal_assignment}
+\graphicspath{ {../../} }
+
+\title{Individual Specialist Computing Project - Proposal (Technical Report)}
+\author{Assoc. Prof. Michael Scott}
+\module{COMP2x0}
+\version{1.3}
+
+\newcommand\ytl[2]{
+\parbox[b]{8em}{\hfill{\color{black}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \parbox[c]{4.5cm}{\vspace{7pt}\color{black}\raggedright\sffamily #2.\\[7pt]}\\[-3pt]}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+
+\begin{marginquote}
+``A good portfolio is essential for getting your first game industry role, and not just for artists! You will be expected to show examples of your work when applying for roles at a games studio, whether you’re a game artist, programmer, designer, or any other dev role!'\thinspace''
+
+--- Aardvark Swift
+\end{marginquote}
+\marginpicture{flavour_pic_1}{
+    Poster demonstrations are a common way of presenting computing projects and will help
+    you to develop communication skills which are useful in interview contexts, especially when
+    showcasing your portfolio work to potential employers.
+}
+
+For this assignment, you will prepare a 750-word proposal. This will describe an original computing artefact and a form of practice-based research. 
+
+Whether you intend to apply to join the industry or pursue roles further afield, employers will want to know what you can do and what value will you bring
+to them. People care about concrete illustrations of your skills and experience, so it is important to develop comfort by enriching and demonstrating
+your projects. Hence, the proposal and computing artefact assignments frame how you communicate a potential portfolio piece.
+ 
+There is \textbf{ONE} key learning outcomes:
+
+\begin{itemize}
+	\setlength{\itemindent}{1em}
+%	\item[LO3. ] \textbf{Integrate} appropriate data structures and interoperating components into computing systems, with reference to their merits and flaws.
+	\item[LO5. ] \textbf{Develop} an argument on a topic using appropriate research methods, primary and secondary sources, and academic conventions.
+\end{itemize}
+
+As such, you will conduct research. You will need to consider prior art and how this informs the design of your artefact. You will also develop an \textit{argument}. By argument, we mean ``an evidence-based defence of a non-obvious position on a complex issue''. This is \textbf{not} a traditional academic essay. Do not take a formal approach and do not restrict yourself to academic sources. You are laying the foundation for practice-based research. That is ``an original investigation in order to gain new knowledge by means of practice and the outcomes of that practice''. Typically, tinkering with your artefact, experimenting with ways of doing things, and comparing outcomes.
+
+The assignment is formed of these parts:
+
+\begin{enumerate}[label=(\Alph*)]
+	\item \textbf{Prepare} a brief proposal which will:
+		\begin{enumerate}[label=(\roman*)]
+			\item \textbf{outline} the computing artefact you intend to create;
+			\item \textbf{align} the computing artefact with the specialism you have chosen and its sequence of activities;
+			\item \textbf{identify} the broader context and potential application of your computing artefact;
+			\item \textbf{critique} prior art and research related to the artefact;
+			\item \textbf{illustrate} your work plan, concerning milestones;
+			\item \textbf{justify} that the computing artefact is feasible in scope;
+			\item and \textbf{defend how} your work constitutes practice-based research. 
+		\end{enumerate}
+%	\item \textbf{Prepare} a draft poster that will:
+%		\begin{enumerate}[label=(\roman*)]
+%			\item \textbf{describe} your computing artefact;
+%			\item \textbf{illustrate} the architecture of your computing artefact;
+%			\item and \textbf{justify} key development choices and design decisions.
+%		\end{enumerate}
+%	\item \textbf{Present}, as an individual, the final poster:
+%		\begin{enumerate}[label=(\roman*)]
+%			\item \textbf{articulating} your key design decisions \textbf{and} approaches to developing your computing artefact;
+%			\item \textbf{analysing} the merits and flaws of these decisions and approaches;
+%			\item as well as \textbf{explaining} your practice-based research.
+%		\end{enumerate}	
+\end{enumerate}
+
+You should discuss what constitutes appropriate practice-based research with your supervisor. An example of practice-based research is experimenting with and comparing different solutions and techniques to a given problem. This will vary by area of specialisation. For examples, see:
+
+\begin{sloppypar}
+\url{https://snowhydra.wordpress.com/2015/06/01/unity-performance-testing-getcomponent-fields-tags/} 
+
+\href{https://www.gamasutra.com/blogs/JakobRasmussen/20160427/271188/Are_Behavior_Trees_a_Thing_of_the_Past.php}{https://www.gamasutra.com/blogs/JakobRasmussen/20160427/271188/Are-Behavior-Trees-a-Thing-of-the-Past.php}
+\end{sloppypar}
+
+%You will need to discuss your ideas with your tutors to ensure that this aspect of your individual specialist computing project is appropriate.
+
+\subsection*{Assignment Setup}
+
+This assignment is a \textbf{reporting} task. There is no template repository for this assignment; but, you may create one if you wish. You can use any editor of your choice, but you are expected to produce a \textbf{README.md} containing your proposal. You will need to submit a link to the repository containing your proposal to LearningSpace by the deadline shown on MyFalmouth.
+
+\todo[inline]{\textbf{Important:} You will need to submit a single-page \texttt{.pdf} version of your poster to the LearningSpace and also present the poster in the timetabled session in order to pass the assignment. Failing to upload work to the LearningSpace or missing the timetabled poster demonstration will result in a non-submission being recorded, and penalties being applied.} 
+
+\subsection*{Part A}
+
+Part A consists of a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis. Please see the rubric at the end of the assignment brief for details. Answer the following questions to pass:
+
+\begin{itemize}
+	\item What is the high concept of your computing artefact?
+	\item How does your artefact fit into your chosen specialism?
+	\item Why is this artefact needed?
+	\item What related work or prior art already exists?
+	\item How will you manage the research and development process?
+	\item What functionality will your component include and is the scope appropriate for the development time available?
+	\item How will you address the practice-based research requirement?
+\end{itemize}
+
+To complete Part A, prepare your proposal using any word processing tool. Please include supplementary materials including images, diagrams, code excerpts, and animations, as appropriate. Please use version control for your work, creating a README.md file in the root of the repository.
+
+Submit a link to the repository to the LearningSpace by the deadline specified on MyFalmouth.
+
+Then show the proposal to your \textbf{tutor} in the timetabled assessment and discuss the proposal. You will receive immediate \textbf{informal feedback} from your tutor.
+
+You will receive \textbf{formal feedback} from your \textbf{tutor} up to three weeks following the session.
+
+%\subsection*{Part B}
+
+%Part B is a \textbf{single formative submission}. This work is \textbf{individual} and will be assessed on a \textbf{threshold} basis. The following criteria are used to determine a pass or fail:
+
+%\begin{enumerate}[label=(\alph*)]
+%	\item Submission is timely;
+%	\item The computing artefact fits within the scope of the chosen specialism;
+%	\item The computing artefact is appropriate according to the constraints in the assignment brief for the chosen specialism;
+%	\item There is sufficient original computing content to be developed to deliver proposed computing artefact (i.e., it is non-trivial);
+%	\item There is an element of practice-based research;
+%	\item The poster follows the general layout expected (i.e., is a portrait A3 document with all specified sections from the examplar);
+%	\item There is identifying information on the poster (i.e., name and project title);
+%	\item There is at least one UML diagram;
+%	\item The poster clearly illustrates the key system components, design patterns, and/or data structures;
+%	\item Enough work is available to conduct a meaningful review.
+%\end{enumerate}
+
+%To complete Part B, produce an A3 portrait poster. You may use any software to prepare the poster, but you should follow the general layout of the provided \textbf{Powerpoint} examplar template which is available on LearningSpace.  Bring the digital version of the poster to the workshop session in Week 5. Ensure that you refer to the specific assignment brief for your choice of module.
+
+%You will receive immediate \textbf{informal feedback} from your \textbf{tutor}.
+
+%\subsection*{Part C}
+%
+%Part C is a \textbf{single summative submission}. This work is \textbf{individual} and will be assessed on a \textbf{criterion-referenced} basis.  Please refer to the marking rubric at the end of this document for further detail.
+
+%Update the poster based on the feedback that you received in Part B. Then, upload to \texttt{LearningSpace} by the time/date specified in the list of deadlines available on \href{http://myfalmouth.falmouth.ac.uk}{MyFalmouth}. You only need to submit the poster itself. 
+
+%Then, attend the timetabled viva session.
+
+%You will receive immediate \textbf{informal feedback} from your \textbf{tutor} in the viva.
+
+%You will receive \textbf{formal feedback} from your \textbf{module leader} in three weeks.
+
+%\todo[inline]{\textbf{Important:} Please note that you should upload any material relating to your artefact to the appropriate submission queue for the `computing artefact` assignment and \textbf{not} the submission queue for the technical report. Please upload only the poster to the `technical report' submission queue.} 
+
+%\begin{table}[!ht]
+%\caption{Assignment Timeline}
+%\centering
+%\begin{minipage}[t]{.7\linewidth}
+%\color{black}
+%\rule{\linewidth}{1pt}
+%\ytl{Week 2}{Show Proposal to Supervisor}
+%\ytl{Week 5}{Draft Poster Peer- and Tutor-Review}
+%\ytl{Week 5}{Submit Final Poster}
+%\ytl{Week 6}{Present Final Poster}
+%\bigskip
+%\rule{\linewidth}{1pt}%
+%\end{minipage}%
+%\end{table}
+
+%\section*{Additional Guidance}
+
+%It is important to keep up with the formative deadlines as receiving and then
+%acting on the feedback will not only enable you to achieve a high grade, it
+%will enable you to make a better project.
+
+%When it comes to the poster, you should endeavour to limit the amount of text,
+%you always should favour images over text. If you use text, please ensure the
+%font size is legible on the printed out poster.
+
+\section*{FAQ}
+
+\begin{itemize}
+	\item 	\textbf{What is the deadline for this assignment?} \\ 
+    		Falmouth University policy states that deadlines must only be specified on the MyFalmouth system.
+    		
+	\item 	\textbf{What should I do to seek help?} \\ 
+    		You can email your tutor for informal clarifications. For informal feedback, make a pull request on BitBucket. 
+    		
+    	\item 	\textbf{Is this a mistake?} \\ 	
+    		If you have discovered an issue with the brief itself, the source files are available at: \\
+    		\url{https://github.com/Falmouth-Games-Academy/bsc-assignment-briefs}.\\
+    		 Please make a pull request and comment accordingly.
+\end{itemize}
+
+%\rubricyeartwo
+\rubrichead{This rubric applies to the assessment of the proposal itself. This work is invididual. In order to pass (i.e., receive a mark of 40 or more), you must attain the learning outcome; and in doing so, demonstrate adequate research and information skills.}
+\begin{markingrubric}
+	\firstcriterion{Competency Threshold}{30\%}
+		\grade\fail At least one part is missing or is unsatisfactory.
+		\grade{Submission is timely and satisfactory.
+			\par Enough work is available to hold a meaningful discussion.
+			\par No breaches of academic integrity.
+			\par The student demonstrates adequate research and information skills.
+			%\par The student demonstrates adequate ability to critically engage with and analyse information and formulate reasoned arguments. }
+%
+    \criterion{RESEARCH: Description of Computing Artefact}{10\%}
+	\grade\fail No description of the software architecture
+	\par No attempt to describe the design of the software.
+	\grade Little insight into the software architecture.
+%	\par There is a description of the key classes but no insight into the data structures or design patterns used.
+	\grade Some insight into the software architecture.
+	\par There is a description of the key classes.
+%	\par The data structures and design patterns have been described with no context
+	\grade Much insight into the software architecture.
+	\par There is a description of the key classes with reference to their functionality.
+%	\par The data structures and design patterns have been described with context to their application.
+	\grade Considerable insight into the software architecture.
+	\par There is a description of the key classes with reference to their functionality.
+	\par The data structures and design patterns have been described with context to their application.
+%	\par There is some justification for the selection of data structures and design patterns.
+	\grade Significant insight into the software architecture.
+	\par There is significant evidence of software design
+%	\par There is synergy between data structure and design pattern selection.
+%	\par The selection of data structures and design patterns are well justified.
+%
+    \criterion{RESEARCH: Work Plan}{10\%}
+	\grade\fail No work plan.
+	\grade Little insight into software development life-cycles.
+	\grade Some insight into software development life-cycles.
+	\par The proposed development method is somewhat feasible.
+	\grade Much insight into software development life-cycles.
+	\par The proposed development method is feasible.
+	\grade Considerable insight into software development life-cycles.
+	\par The proposed development method is robust.
+	\par Working methods are justified.
+	\grade Significant insight into software development life-cycles.
+	\par The proposed development method is very robust.
+	\par Working methods are justified effectively.
+%
+ %   \criterion{RESEARCH: UML Diagram}{10\%}
+%	\grade\fail No UML Diagrams.
+%	\grade UML Diagrams are incomplete.
+%	\par Non-standard UML notation has been used.
+%	\par Incorrect use of diagram type.
+%	\grade UML Diagrams are mostly complete.
+%	\par The UML notation are mostly correct.
+%	\grade UML Diagrams are appropriate.
+%	\par The choice of diagrams are appropriate.
+%	\par There are only minor issues with the notation.
+%	\grade UML Diagrams are directly linked to the software architecture.
+%	\par There are only minor errors in the diagrams.
+%	\grade UML Diagrams are of a professional standard.
+%	\par All notation is correct.
+%	\par There are no errors in the diagrams.
+%
+    \criterion{RESEARCH: Appropriateness of Design}{10\%}
+	\grade\fail The design is weak and/or inappropriate.
+	\grade Knowledge of system architectures relevant to the specialism is evident, but there are considerable flaws.
+	\grade Knowledge of system architectures relevant to the specialism is evident and have been incorporated into the design, but there might be many flaws.
+	\grade Analysis of system architectures relevant to the specialism is evident and have been incorporated into the design, but there might be several issues to highlight.
+	\grade Analysis of system architectures relevant to the specialism is supported by scholarship and have been incorporated into the design, but there might be a few issues to highlight.
+	\grade Review and synthesis of system architectures relevant to the specialism is supported by scholarship and has been incorporated into the design, and there is little to critique.
+%
+\end{markingrubric}
+
+\begin{markingrubric}
+%
+    \firstcriterion{RESEARCH: Review of Prior Art}{10\%}
+        \grade\fail No proposed context for doing practice-based research.
+        \grade The proposed context for doing practice-based research is broadly appropriate.
+        \grade The proposed context for doing practice-based research is appropriate.
+        \par The proposed research context strives to go beyond analysis of the artefact.
+        \grade The proposed context for doing practice-based research is appropriate, and leverages the computing artefact well.
+        \par The proposed research context strives to go beyond analysis of the computing artefact.
+        \grade The proposed context for doing practice-based research is sound, and is well suited to the computing artefact being developed.
+        \par The proposed research context is somewhat ambitious.
+        \grade The proposed context for doing practice-based research is sound, and the computing artefact being developed served as an ideal platform for its timely completion. 
+        \par The proposed research context is ambitious.
+%
+    \criterion{RESEARCH: \\Defense of Argument}{10\%}
+        \grade\fail There is no argument, or it is not defended.
+        \grade A claim is made on an issue.
+ %           \par There is a little evidence to support the argument.
+        \grade There is a defence of a non-obvious position on an issue, deriving from the practice.
+ %           \par There is some evidence to support the argument.
+        \grade There is a defence of a non-obvious position on a complex issue, deriving from practice.
+%            \par There is much evidence to support the argument.
+        \grade There is a strong defence of a non-obvious position on a complex issue, deriving from practice-based research.
+ %           \par There is much evidence to support the argument, and it is convincing.
+        \grade There is a very strong defence of a non-obvious position on a complex issue, deriving from practice-based research.
+%            \par There is much evidence to support the argument, and it is very convincing.
+%
+    \criterion{RESEARCH: Appropriateness of Practice-Based Research Methods}{10\%}
+        \grade\fail There is no practice-based research.
+        \grade The work implies the application of practice-based research methods, but they are not articulated with sufficient clarity.
+        \grade The work somewhat describes the application of practice-based research methods.
+            \par The choice of methods is broadly appropriate.
+        \grade The work describes the application of several practice-based research methods with clarity.
+            \par The choice of methods is appropriate.
+            \par There is a combination of primary and secondary methods.
+        \grade The work reflects upon the application of several practice-based research methods.
+            \par The choice of methods is appropriate and has some justification.
+            \par There is a combination of primary and secondary methods.
+        \grade The work critically reflects upon the application of several practice-based research methods 
+            \par The choice of methods is appropriate and has much justification.
+            \par There is a combination of primary and secondary methods.
+%
+    \criterion{RESEARCH: Application of Academic Conventions}{10\%}
+        \grade\fail No evidence for partial mastery of academic conventions.
+        \par The reference section is missing.
+        \par There is no structure.
+        \grade 	Some evidence for partial mastery of academic conventions.
+            \par There is a little structure.
+            \par A few sentences and paragraphs are well constructed.
+            \par 	The reference section is incomplete and/or malformed.
+        \grade Much evidence for partial mastery of academic conventions.
+        \par There is some structure.
+            \par Some sentences and paragraphs are well constructed.
+        \par Most in-text citations and quotations are correct.
+        \par The reference section is complete and mostly well-formed in Harvard, ACM or IEEE format.
+        \grade Some evidence for mastery of academic conventions.
+            \par There is much structure, highlighting the argument.
+            \par Most sentences and paragraphs are well constructed, clearly articulating points in the argument.
+        \par All in-text citations and quotations are correct.
+        \par The reference section is complete and entirely well-formed in Harvard, ACM or IEEE format.
+        \grade 	Much evidence for mastery of academic conventions.
+            \par There is considerable structure, bolstering the argument.
+            \par Most sentences and paragraphs are well constructed, clearly articulating and signposting points in the argument.
+        \par All in-text citations and quotations are correct.
+        \par The reference section is complete and entirely well-formed in Harvard, ACM or IEEE format.
+        \grade 	Considerable evidence for mastery of academic conventions.
+            \par There is significant structure, supporting the logical flow of the argument.
+            \par Nearly all sentences and paragraphs are well constructed, emphasising points in the argument.
+        \par All in-text citations and quotations are correct.
+        \par The reference section is complete and entirely well-formed in Harvard, ACM or IEEE format.
+\end{markingrubric}
+
+\end{document}
